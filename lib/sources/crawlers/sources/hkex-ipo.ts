@@ -118,7 +118,7 @@ export class HKEXCrawler extends BaseCrawler {
           url: pdfUrl || url,
           excerpt,
           publishedAt: pubDate,
-          sourceId: "gd-hkex",
+          sourceId: "hkex",
         });
       }
 

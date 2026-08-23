@@ -153,7 +153,7 @@ export class SSEAPICrawler extends BaseCrawler {
           url: detailUrl,
           excerpt: `上交所公告 | ${title} | 日期: ${pubDate}`,
           publishedAt: pubDate,
-          sourceId: "gd-sse",
+          sourceId: "sse",
           region: reg || "nation",
         });
       }

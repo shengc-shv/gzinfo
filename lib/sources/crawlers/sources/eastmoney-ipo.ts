@@ -109,7 +109,7 @@ export class EastMoneyIPOCrawler extends BaseCrawler {
           url: detailUrl,
           excerpt,
           publishedAt: pubDate,
-          sourceId: "gd-em-ipo",
+          sourceId: "em-ipo",
         });
       }
 

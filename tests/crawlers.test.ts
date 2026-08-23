@@ -57,13 +57,13 @@ test("strip: 去标签与空白", () => {
 // ---------- tonghuashun board 路由 ----------
 
 test("boardToSource: 按板块路由到交易所二级标签", () => {
-  assert.equal(boardToSource("创业板"), "gd-szse");
-  assert.equal(boardToSource("深市主板"), "gd-szse");
-  assert.equal(boardToSource("科创板"), "gd-sse");
-  assert.equal(boardToSource("沪市主板"), "gd-sse");
-  assert.equal(boardToSource("北交所"), "gd-bse");
-  assert.equal(boardToSource("主板"), "gd-sse"); // 纯主板默认沪市
-  assert.equal(boardToSource(""), "gd-szse"); // 兜底
+  assert.equal(boardToSource("创业板"), "szse");
+  assert.equal(boardToSource("深市主板"), "szse");
+  assert.equal(boardToSource("科创板"), "sse");
+  assert.equal(boardToSource("沪市主板"), "sse");
+  assert.equal(boardToSource("北交所"), "bse");
+  assert.equal(boardToSource("主板"), "sse"); // 纯主板默认沪市
+  assert.equal(boardToSource(""), "szse"); // 兜底
 });
 
 // ---------- IPO 代码前缀过滤 ----------

@@ -917,6 +917,8 @@ export const THEME_CSS = `
   .tag.t-wealth { color: #7c3aed; background: rgba(124, 58, 237, 0.12); }
   .tag.t-mass { color: #059669; background: rgba(5, 150, 105, 0.12); }
   .tag.t-policy { color: #b45309; background: rgba(180, 83, 9, 0.12); }
+  /* 粤标签（2026-08-23）：广东企业/事件地域标记，招行红描边胶囊，区别于业务线彩底 */
+  .tag.t-gd { color: var(--accent-cmb, #e60012); background: color-mix(in srgb, var(--accent-cmb, #e60012) 8%, transparent); border: 1px solid color-mix(in srgb, var(--accent-cmb, #e60012) 45%, transparent); font-weight: 800; }
 
   /* 单层 tab：横滑不折行（#11） */
   .tabs { position: sticky; top: 0; z-index: 20; display: flex; flex-wrap: nowrap; overflow-x: auto; gap: 0.1rem; margin: 1.4rem 0 0; padding: 0.6rem 0 0; border-bottom: 1px solid var(--rule); background: color-mix(in srgb, var(--bg) 90%, transparent); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }

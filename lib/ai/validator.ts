@@ -28,6 +28,8 @@ export const ALLOWED_TAGS = [
   "跨境",
   "市场",
   "科技金融",
+  // 2026-08-23：广东企业/广东事件的地域标记（AI 分析后打标，替代 sourceId gd- 前缀判定）
+  "粤",
 ] as const;
 export type AllowedTag = (typeof ALLOWED_TAGS)[number];
 

@@ -13,11 +13,11 @@ import { BaseCrawler } from "../base-crawler";
 /** 按板块把每条预披露路由到对应交易所二级标签（导出供测试） */
 export function boardToSource(board: string): string {
   const b = (board || "").trim();
-  if (b.includes("创业") || b.includes("深")) return "gd-szse";
-  if (b.includes("科创") || b.includes("沪")) return "gd-sse";
-  if (b.includes("北交")) return "gd-bse";
-  if (b.includes("主板")) return "gd-sse"; // 纯"主板"无深沪提示时默认沪市
-  return "gd-szse";
+  if (b.includes("创业") || b.includes("深")) return "szse";
+  if (b.includes("科创") || b.includes("沪")) return "sse";
+  if (b.includes("北交")) return "bse";
+  if (b.includes("主板")) return "sse"; // 纯"主板"无深沪提示时默认沪市
+  return "szse";
 }
 
 export class TonghuashunIPOCrawler extends BaseCrawler {

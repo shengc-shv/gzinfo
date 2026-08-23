@@ -82,9 +82,8 @@ function isGuangdong(
   // 2) 股票代码查注册表（结构化）
   const code = a.stockCode ?? parseStockCode(`${a.title} ${a.excerpt || ""}`);
   if (code && registry?.byCode?.[code]) return true;
-  // 3) 旧管线预过滤标记（兼容历史数据）
-  if (a.sourceId.startsWith("gd-")) return true;
-  // 4) 关键词兜底（非首选）
+  // 3) 关键词兜底（非首选；2026-08-23 移除 sourceId gd- 前缀判定——
+  //    前缀与实际覆盖范围脱节曾导致北交所全国公告被误判广东）
   const text = `${a.title} ${a.excerpt || ""} ${a.url || ""}`;
   return GD_REGION_KEYWORDS.test(text);
 }

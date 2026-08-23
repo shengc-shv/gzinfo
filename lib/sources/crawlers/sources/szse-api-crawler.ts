@@ -154,7 +154,7 @@ export class SZSEAPICrawler extends BaseCrawler {
           url: detailUrl,
           excerpt: `深交所公告 | ${title} | 日期: ${pubDate}`,
           publishedAt: pubDate,
-          sourceId: "gd-szse",
+          sourceId: "szse",
           region: reg || "nation",
         });
       }

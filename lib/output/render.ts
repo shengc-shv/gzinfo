@@ -458,6 +458,13 @@ export function groupRaw(
     }
     // 全国IPO/新股：按 sourceId → registry subcategory 归桶（sse/szse/bse 交易所权威源）
     if (a.category === "ipo") {
+      // 2026-08-23：已上市公司资本运作公告（定增/审核问询/购买资产/解禁/回购等）
+      // 不是「IPO 动态」，命中且非 IPO 流程词 → 转财经要点，避免污染 IPO 板块。
+      const ipoText = `${a.title} ${a.excerpt || ""}`;
+      if (IPO_CAPITAL_ACT_RE.test(ipoText) && !IPO_FLOW_RE.test(ipoText)) {
+        financeExtra.push(a);
+        continue;
+      }
       const sub = subcatOf.get(a.sourceId) ?? "sse";
       let b = ipoSubs.get(sub);
       if (!b) {
@@ -541,7 +548,7 @@ export function groupRaw(
     subcatOf.set(sid, "cn-finance");
     const b =
       buckets["finance"].get(sid) ??
-      ({ sourceName: "广东公司公告", items: [] } as Bucket);
+      ({ sourceName: "公司资本运作公告", items: [] } as Bucket);
     b.items.push(...financeExtra);
     buckets["finance"].set(sid, b);
   }
@@ -794,6 +801,7 @@ function tagClsOf(tag: string): string {
   if (/财富|私行/.test(tag)) return "t-wealth";
   if (/代发|客群/.test(tag)) return "t-mass";
   if (/政银|住房|监管|政策/.test(tag)) return "t-policy";
+  if (tag === "粤") return "t-gd";
   return "";
 }
 
@@ -973,6 +981,17 @@ function renderReportExec(report: DailyReport): string {
 const FOREIGN_REGION_RE =
   /上海|北京|深圳|江苏|浙江|南京|苏州|杭州|宁波|成都|重庆|天津|武汉|长沙|合肥|青岛|济南|福州|厦门|昆明|西安|郑州|东莞|佛山|珠海|中山|惠州|汕头|湛江|茂名|肇庆|江门|清远|韶关|梅州|河源|阳江|揭阳|汕尾|潮州|云浮|广东/;
 
+/** 摘要地域一致性兜底（2026-08-23 R3 扩展）：摘要声称「广东/广州…企业」的写法。 */
+const GD_ENTERPRISE_RE =
+  /(广东|广州)(省|市)?[一-鿿]{0,3}(企业|公司|科技|集团)/;
+
+/** 已上市公司资本运作公告词（2026-08-23 IPO 桶分流）：命中且非 IPO 流程 → 转财经要点，
+ *  避免定增/审核问询/购买资产/解禁等「已上市公司公告」污染 IPO 动态板块。 */
+const IPO_CAPITAL_ACT_RE =
+  /(定增|增发|可转债|解禁|限售|回购|减持|增持|特定对象|发行股份购买资产|重大资产重组|资产重组|并购|审核问询|问询函|问询回复|年报|中报|季报|财报|分红|派息|业绩快报|澄清|停牌|复牌|诉讼|质押|担保|员工持股)/i;
+const IPO_FLOW_RE =
+  /(受理|辅导|备案|招股|过会|上市委|注册生效|提交注册|询价|申购|路演|拟登陆|pre-?ipo|新股上市|上市公告|发行结果|中签|已受理)/i;
+
 /**
  * subcategory → 部门中文 tag（历史条目并入渲染时使用，2026-08-21 用户：
  * 「区分零售各部门数据的呈现」——卡片 tag 显示财富/信贷/私行/客群，
@@ -1041,6 +1060,14 @@ export function mergeRollingIntoReport(
         return "tech";
       case "ipo":
       case "gd-ipo":
+        // 2026-08-23：已上市公司资本运作公告（定增/审核问询/购买资产/解禁等）不进 IPO 动态，
+        // 与 PASS1/groupRaw 分流口径一致（诺思兰德「审核问询函」等不再污染 IPO 板块）。
+        if (
+          IPO_CAPITAL_ACT_RE.test(`${title} ${a.excerpt || ""}`) &&
+          !IPO_FLOW_RE.test(`${title} ${a.excerpt || ""}`)
+        ) {
+          return null;
+        }
         return "ipo";
       default:
         return "biz_insight";
@@ -1073,7 +1100,18 @@ export function mergeRollingIntoReport(
       ? `${String(d.getMonth() + 1).padStart(2, "0")}/${String(d.getDate()).padStart(2, "0")}`
       : "";
     const tier = a.tier ?? tierBySource.get(a.sourceId);
-    const summary = (a.summary || (a.excerpt || "").slice(0, 90) || "").trim();
+    // 2026-08-23：历史缓存摘要地域一致性兜底（R3 扩展）——标题无粤地名但摘要声称
+    // 「广东/广州…企业」（如北交所全国公告被模板标成「广东企业」）→ 摘要疑误，
+    // 降级用原文摘录，避免错误地域信息进报告。
+    let summary = (a.summary || "").trim();
+    if (
+      summary &&
+      GD_ENTERPRISE_RE.test(summary) &&
+      !FOREIGN_REGION_RE.test(a.title_cn || a.title || "")
+    ) {
+      summary = (a.excerpt || "").slice(0, 90).trim();
+    }
+    if (!summary) summary = (a.excerpt || "").slice(0, 90).trim();
     if (!summary) continue; // 无摘要且无正文 → 跳过（避免空卡片）
     extra[sec].push({
       url: a.url,

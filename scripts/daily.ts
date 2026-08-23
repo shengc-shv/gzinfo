@@ -359,7 +359,8 @@ async function main() {
   if (localAcq && localAcq.items.length) {
     const recent = filterLocalAcquiredRecent(localAcq.items);
     const isIpoItem = (it: CrawledArticle) =>
-      it.region === "gd" || (it.sourceId ?? "").startsWith("gd-");
+      it.region === "gd" ||
+      ["sse", "szse", "bse", "hkex", "em-ipo"].includes(it.sourceId ?? "");
     const localIpo = recent.filter(isIpoItem);
     const localGz = recent.filter((it) => !isIpoItem(it));
     if (localIpo.length) {

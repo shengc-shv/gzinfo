@@ -217,3 +217,33 @@ test("finance 类但标题含广州锚（如广州市政府批复）→ gz_local
   assert.equal(report.sections.policy_market.length, 1);
   assert.equal(report.sections.policy_market[0].url, "https://h/pol");
 });
+
+test("已上市公司资本运作公告（审核问询/定增）不进 IPO 板块（2026-08-23 分流）", () => {
+  const report = { ...emptyReport, sections: { ...emptyReport.sections, ipo: [] as ReportItem[] } };
+  const rolling: ArticleInput[] = [
+    // 诺思兰德式：北交所已上市公司定增审核问询函 → 资本运作，不进 IPO 动态
+    mkArticle({
+      url: "https://www.bse.cn/disclosure/2026/2026-08-21/63bf157c9fef4af5b5a28f2b7be812cf.pdf",
+      title: "诺思兰德 (920047)",
+      category: "ipo",
+      sourceId: "bse",
+      excerpt: "北交所公告 | [临时公告]诺思兰德:关于收到北京证券交易所《关于北京诺思兰德生物技术股份有限公司向特定对象发行股票申请文件的审核问询函》的公告",
+      summary: "北交所广东企业诺思兰德相关公告，广东企业资本市场活动参考。", // 模板错误摘要（R3 兜底应降级）
+    }),
+    // 真 IPO 流程（受理/过会）→ 仍进 IPO 板块
+    mkArticle({
+      url: "https://h/ipo1",
+      title: "长江存储科创板IPO获受理，拟募资330亿",
+      category: "ipo",
+      sourceId: "bse",
+      excerpt: "上交所受理长江存储科创板IPO申请。",
+      summary: "长江存储科创板IPO已受理。",
+    }),
+  ];
+  mergeRollingIntoReport(report, rolling, tierMap);
+  assert.equal(report.sections.ipo.length, 1, "仅真 IPO 流程条目保留");
+  assert.ok(report.sections.ipo[0].url.includes("ipo1"), "诺思兰德式资本运作公告应被分流");
+  // R3 兜底：诺思兰德若误入，摘要也不该是「广东企业」模板（此处已被分流，直接断言无模板残留）
+  const all = JSON.stringify(report.sections);
+  assert.ok(!all.includes("广东企业"), "模板错误摘要不应进报告");
+});

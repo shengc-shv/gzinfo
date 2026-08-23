@@ -27,11 +27,13 @@ export const CATEGORY_ORDER: Category[] = [
   "gz",
 ];
 
-/** 把爬虫产物的 `gd-` 前缀改写为 `gz-`（仅广州辖区条目）。 */
+/** 把爬虫产物的 sourceId 改写为 gz- 前缀（仅广州辖区条目）。
+ *  兼容历史 `gd-` 前缀源；2026-08-23 起爬虫已去 gd- 前缀（sse/szse/bse…），直接加 gz-。 */
 export function rewriteGzPrefix(sourceId: string): string {
+  if (sourceId.startsWith(GZ_PREFIX)) return sourceId;
   return sourceId.startsWith(GD_PREFIX)
     ? `${GZ_PREFIX}${sourceId.slice(GD_PREFIX.length)}`
-    : sourceId;
+    : `${GZ_PREFIX}${sourceId}`;
 }
 
 /**
@@ -75,13 +77,15 @@ export const SOURCE_ROUTE: Record<string, { category: Category; subcategory?: st
   "gz-bse": { category: "gz", subcategory: "gz-ipo" },
   "gz-hkex": { category: "gz", subcategory: "gz-ipo" },
   "gz-em-ipo": { category: "gz", subcategory: "gz-ipo" },
-  // 广东全省 / 全国 IPO 参考区（gd- 前缀）
-  "gd-local-scraper": { category: "gd-ipo", subcategory: "news" },
-  "gd-szse": { category: "gd-ipo", subcategory: "szse" },
-  "gd-hkex": { category: "gd-ipo", subcategory: "hkex" },
-  "gd-em-ipo": { category: "gd-ipo", subcategory: "ipo-tutoring" },
-  "gd-sse": { category: "gd-ipo", subcategory: "sse" },
-  "gd-bse": { category: "gd-ipo", subcategory: "bse" },
+  // —— 全国 IPO / 新股参考区（2026-08-23 起爬虫去 gd- 前缀，广东识别交给 AI「粤」标签）——
+  // 广东全省/全国 IPO 统一归 ipo（全国参考），广东企业由 AI 分析后打「粤」标签区分；
+  // 不再用 sourceId 前缀判定地域（曾导致北交所全国公告被误标广东企业）。
+  "gd-local-scraper": { category: "ipo", subcategory: "news" },
+  "szse": { category: "ipo", subcategory: "szse" },
+  "hkex": { category: "ipo", subcategory: "hkex" },
+  "em-ipo": { category: "ipo", subcategory: "ipo-tutoring" },
+  "sse": { category: "ipo", subcategory: "sse" },
+  "bse": { category: "ipo", subcategory: "bse" },
 };
 
 /** 爬虫产物源 id 集合（供 dispatch 白名单 / 路由判断）。 */

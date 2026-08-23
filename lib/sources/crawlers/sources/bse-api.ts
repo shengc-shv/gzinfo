@@ -144,7 +144,7 @@ export class BSEAPICrawler extends BaseCrawler {
           url: detailUrl,
           excerpt,
           publishedAt: pubDate,
-          sourceId: "gd-bse",
+          sourceId: "bse",
           region: reg || "nation",
         });
       }
