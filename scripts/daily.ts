@@ -570,37 +570,51 @@ async function main() {
   }
 
   // —— 必读/商机：「今天 + 昨天」2 天窗口（2026-08-23 用户需求）——
-  // 非 SKIP_AI：用 buildTwoDayExecPool 从「今日 PASS2 已富集 sections」+「history 昨日
-  // ai_relevant 有摘要」拼出今昨 2 天 finance/gz 高信号池，generateExecutiveSummary 生成
-  // 必读/商机（带 ①②③ 溯源），覆盖 PASS2 的「本次管线」产出，并 writeStore 持久化，
-  // 供后续 SKIP_AI 重跑 / 发布复用（不再每次只基于本次进入管线的 kept）。
+  // 非 SKIP_AI：
+  //  - 当天已有 store.json（早上 AI 跑已生成 / 手工回填）→ 直接复用，跳过重复 LLM 调用；
+  //  - 缺失才用 buildTwoDayExecPool（今日 PASS2 sections + history 昨日 ai_relevant 有摘要）
+  //    拼出 2 天窗口 finance/gz 池 → generateExecutiveSummary 生成必读/商机/hero_line
+  //    （hero_line 与必读/商机均来自 2 天窗口，不再只基于本次进入管线的 kept），
+  //    覆盖 PASS2 产出并 writeStore 持久化，供 SKIP_AI 重跑 / 发布复用。
   if (!SKIP_AI) {
-    try {
-      const pool = buildTwoDayExecPool({ history, articles, report: mergedReport, today: date });
-      const exec = await generateExecutiveSummary({ date, finance: pool.finance, gz: pool.gz });
-      if (exec && (exec.must_read.length || exec.insights.length)) {
-        mergedReport.hero_line = exec.hero_line || mergedReport.hero_line;
-        const mustRead = exec.must_read
-          .filter((m) => !!m.url)
-          .map((m) => ({ title: m.title, why: m.why, url: m.url as string }));
-        if (mustRead.length) mergedReport.must_read = mustRead;
-        mergedReport.insights = exec.insights.map((it) => ({
-          topic: it.topic,
-          tags: it.tag ?? [],
-          impact: it.impact,
-          action: it.action,
-          ...(it.sources && it.sources.length ? { sources: it.sources } : {}),
-        }));
-        writeStore(date, exec);
-        console.log(
-          `[daily] 🧠 必读/商机(今昨2天窗口)覆盖 PASS2：${exec.must_read.length} 必读 / ${exec.insights.length} 商机（输入 finance ${pool.finance.length} + gz ${pool.gz.length}）`,
-        );
-      } else {
-        console.log(`[daily] ℹ️ 2天窗口执行摘要为空（沿用 PASS2 产出）`);
+    const stored = loadStore(date);
+    if (stored && (stored.hero_line || stored.must_read?.length || stored.insights?.length)) {
+      // 复用：hero_line 独立覆盖（store 为 2 天窗口版本，优先），must_read/insights 走适配回匹配
+      if (stored.hero_line) mergedReport.hero_line = stored.hero_line;
+      mergeStoredExecutive(mergedReport, stored);
+      console.log(
+        `[daily] 🧠 复用 store.json 执行摘要（跳过 LLM 生成）：${stored.must_read?.length ?? 0} 必读 / ${stored.insights?.length ?? 0} 商机`,
+      );
+    } else {
+      try {
+        const pool = buildTwoDayExecPool({ history, articles, report: mergedReport, today: date });
+        const exec = await generateExecutiveSummary({ date, finance: pool.finance, gz: pool.gz });
+        if (exec) {
+          if (exec.hero_line) mergedReport.hero_line = exec.hero_line;
+          const mustRead = exec.must_read
+            .filter((m) => !!m.url)
+            .map((m) => ({ title: m.title, why: m.why, url: m.url as string }));
+          if (mustRead.length) mergedReport.must_read = mustRead;
+          if (exec.insights.length) {
+            mergedReport.insights = exec.insights.map((it) => ({
+              topic: it.topic,
+              tags: it.tag ?? [],
+              impact: it.impact,
+              action: it.action,
+              ...(it.sources && it.sources.length ? { sources: it.sources } : {}),
+            }));
+          }
+          writeStore(date, exec);
+          console.log(
+            `[daily] 🧠 必读/商机(今昨2天窗口)生成：${exec.must_read.length} 必读 / ${exec.insights.length} 商机（输入 finance ${pool.finance.length} + gz ${pool.gz.length}）`,
+          );
+        } else {
+          console.log(`[daily] ℹ️ 2天窗口执行摘要为空（沿用 PASS2 产出）`);
+        }
+      } catch (e) {
+        const msg = e instanceof Error ? e.message : String(e);
+        console.warn(`[daily] ⚠️ 2天窗口执行摘要生成失败（沿用 PASS2）: ${msg}`);
       }
-    } catch (e) {
-      const msg = e instanceof Error ? e.message : String(e);
-      console.warn(`[daily] ⚠️ 2天窗口执行摘要生成失败（沿用 PASS2）: ${msg}`);
     }
   }
 

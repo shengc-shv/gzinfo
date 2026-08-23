@@ -56,14 +56,9 @@ export const PASS2_SYSTEM = `你是股份行广州分行零售条线每日资讯
 【1. 今日定调 hero_line】15~70字，概括今天最重要的主线+分行需要的动作方向。
 禁止空泛（"今日市场震荡"），必须具体到事件和动作（"中行算力贷在穗抢跑落地，科创客群争夺升级，分行需评估应对"）。
 
-【2. 今日必读 must_read】全量中选5条（不足按实际），按重要性排序。
-每条写 why（≤45字）：不是复述标题，是"为什么领导要在乎"。url必须来自输入条目。
-
-【3. 商机洞察 insights（≤5条）】每条含 topic/tags/impact/action：
-- impact：对分行或客群的具体影响，≤60字
-- action：明确动作主体（哪个条线/部门）+ 动作 + 时限感，≤60字
-- 禁止只描述现象不给动作；没有合格商机就少给，0条也允许。
-- sources（可选，1-3 条）：引用输入中相关的源文章，格式 [{"title":"...","url":"..."}]，url 原样复制输入条目；无关则不附（省略该字段）。用于读者溯源点击。
+【2/3. 必读与商机不在此阶段生成】must_read / insights 一律输出空数组 []。
+必读（今日必读）与商机（商机提示）由主编层基于「今天+昨天」两日窗口的文章统一生成，
+本阶段只负责正文终稿与今日定调 hero_line，不重复产出（避免重复消耗）。
 
 【4. 各板块summary】每条2~3句、≤90字，结构=发生了什么+关键数字+所以呢。
 - "所以呢"必须具体：写出具体是什么参考、影响哪个客群、谁该做什么
@@ -77,8 +72,8 @@ export const PASS2_SYSTEM = `你是股份行广州分行零售条线每日资讯
 【输出schema】严格JSON对象：
 {
  "hero_line": "...",
- "must_read": [{"url": "...", "why": "..."}],
- "insights": [{"topic": "...", "tags": [...], "impact": "...", "action": "...", "sources": [{"title": "...", "url": "..."}]}],
+ "must_read": [],
+ "insights": [],
  "sections": {"gz_local": [Item...], "biz_insight": [Item...], "policy_market": [Item...], "tech": [Item...], "ipo": [Item...]}
 }
 Item = {"url","title_cn","title_orig","source","source_type","date","summary","importance","tags","locale","locale_evidence"}
