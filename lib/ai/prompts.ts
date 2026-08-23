@@ -63,6 +63,7 @@ export const PASS2_SYSTEM = `你是股份行广州分行零售条线每日资讯
 - impact：对分行或客群的具体影响，≤60字
 - action：明确动作主体（哪个条线/部门）+ 动作 + 时限感，≤60字
 - 禁止只描述现象不给动作；没有合格商机就少给，0条也允许。
+- sources（可选，1-3 条）：引用输入中相关的源文章，格式 [{"title":"...","url":"..."}]，url 原样复制输入条目；无关则不附（省略该字段）。用于读者溯源点击。
 
 【4. 各板块summary】每条2~3句、≤90字，结构=发生了什么+关键数字+所以呢。
 - "所以呢"必须具体：写出具体是什么参考、影响哪个客群、谁该做什么
@@ -77,7 +78,7 @@ export const PASS2_SYSTEM = `你是股份行广州分行零售条线每日资讯
 {
  "hero_line": "...",
  "must_read": [{"url": "...", "why": "..."}],
- "insights": [{"topic": "...", "tags": [...], "impact": "...", "action": "...", "related_url": "可选，可省略"}],
+ "insights": [{"topic": "...", "tags": [...], "impact": "...", "action": "...", "sources": [{"title": "...", "url": "..."}]}],
  "sections": {"gz_local": [Item...], "biz_insight": [Item...], "policy_market": [Item...], "tech": [Item...], "ipo": [Item...]}
 }
 Item = {"url","title_cn","title_orig","source","source_type","date","summary","importance","tags","locale","locale_evidence"}

@@ -935,18 +935,23 @@ function renderReportExec(report: DailyReport): string {
     })
     .join("");
   const insights = report.insights
-    .map(
-      (it) => `<article class="insight">
+    .map((it) => {
+      const srcMarks = (it.sources && it.sources.length > 0)
+        ? ` <span class="insight-srcs">${it.sources.slice(0, 3).map((s, i) =>
+            `<a class="insight-src" href="${escapeHtml(s.url)}" target="_blank" rel="noopener" title="${escapeHtml(s.title || "来源" + (i + 1))}" aria-label="来源${i + 1}">${["①","②","③","④","⑤"][i]}</a>`
+          ).join("")}</span>`
+        : "";
+      return `<article class="insight">
         ${(it.tags ?? []).length > 0
           ? `<div class="insight-tags">${(it.tags ?? [])
               .map((t) => `<span class="tag ${tagClsOf(t)}">${escapeHtml(t)}</span>`)
               .join("")}</div>`
           : ""}
-        <h3>${escapeHtml(it.topic)}</h3>
+        <h3>${escapeHtml(it.topic)}${srcMarks}</h3>
         ${it.impact ? `<p><b>影响：</b>${escapeHtml(it.impact)}</p>` : ""}
         ${it.action ? `<p><b>建议：</b>${escapeHtml(it.action)}</p>` : ""}
-      </article>`,
-    )
+      </article>`;
+    })
     .join("");
   return `<section class="exec-summary">
     <div class="exec-head">
@@ -1112,9 +1117,13 @@ export function mergeRollingIntoReport(
  * - 违禁词过滤：命中 BANNED_WORDS 的 must_read/insights 丢弃（P0 合规，
  *   store 里「加密资产疯涨」这类旧产物不回流）
  */
+/**
+ * 商机洞察来源回链在 AI 生成阶段完成（executive-summary.ts 的 resolveInsightSources，
+ * 用生成时看到的 inputs 含真实 URL 回链），结果随 store.json 落库复用；本函数仅透传。
+ */
 export function mergeStoredExecutive(
   report: DailyReport,
-  exec: { hero_line?: string; must_read: Array<{ title: string; why: string; url?: string }>; insights: Array<{ topic: string; impact: string; action: string; tag?: string[] }> },
+  exec: { hero_line?: string; must_read: Array<{ title: string; why: string; url?: string }>; insights: Array<{ topic: string; impact: string; action: string; tag?: string[]; sources?: Array<{ title: string; url: string }> }> },
 ): DailyReport {
   const banned = new Set(BANNED_WORDS);
   const bannedIn = (s: string): boolean => banned.has(s) || BANNED_WORDS.some((w) => s.includes(w));
@@ -1150,15 +1159,19 @@ export function mergeStoredExecutive(
   }
   if (must.length > 0) report.must_read = must;
 
-  // insights 回填（tag[] → tags[]，违禁过滤）
+  // insights 回填（tag[] → tags[]，违禁过滤；sources：store 已含（生成时回链），原样透传）
   const insights: ReportInsight[] = [];
   for (const it of exec.insights ?? []) {
     if (!it || !it.topic || bannedIn(JSON.stringify(it))) continue;
+    const sources = Array.isArray(it.sources) && it.sources.length > 0
+      ? it.sources.slice(0, 3).filter((s) => s && s.url).map((s) => ({ title: s.title || "", url: s.url }))
+      : [];
     insights.push({
       topic: it.topic,
       tags: Array.isArray(it.tag) ? it.tag.slice(0, 6) : [],
       impact: it.impact || "",
       action: it.action || "",
+      ...(sources.length > 0 ? { sources } : {}),
     });
   }
   if (insights.length > 0) report.insights = insights;

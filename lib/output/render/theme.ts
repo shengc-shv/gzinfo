@@ -274,6 +274,19 @@ export const THEME_CSS = `
   }
   .insight-topic { margin: 0 0 0.3rem; font-size: 0.85rem; color: var(--c-finance); font-weight: 700; }
   .insight-impact, .insight-action { margin: 0.2rem 0 0; font-size: 0.78rem; color: var(--fg-soft); line-height: 1.55; }
+  /* 商机洞察来源标记 ①/②/③：标题后内联，移动端点击区域加大（≥26px），便于手机点开溯源 */
+  .insight-srcs { display: inline-flex; gap: 0.22rem; margin-left: 0.35rem; vertical-align: middle; }
+  .insight-src {
+    display: inline-flex; align-items: center; justify-content: center;
+    min-width: 1.6rem; min-height: 1.6rem; padding: 0 0.2rem;
+    font-size: 0.95rem; line-height: 1; text-decoration: none;
+    color: var(--c-pol);
+    border: 1px solid color-mix(in srgb, var(--c-pol) 42%, transparent);
+    border-radius: 7px; background: color-mix(in srgb, var(--c-pol) 9%, transparent);
+    -webkit-tap-highlight-color: transparent; transition: background 0.15s ease;
+  }
+  .insight-src:active { background: color-mix(in srgb, var(--c-pol) 24%, transparent); }
+  .insight-src:hover { background: color-mix(in srgb, var(--c-pol) 18%, transparent); }
   .tag {
     display: inline-block; font-size: 0.66rem; font-weight: 700; color: var(--c-finance);
     background: color-mix(in srgb, var(--c-finance) 12%, transparent);

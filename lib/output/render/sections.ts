@@ -172,18 +172,23 @@ export function renderExecutiveSummary(exec: ExecutiveSummary): string {
     })
     .join("");
   const insights = exec.insights
-    .map(
-      (it) => `<article class="insight">
+    .map((it) => {
+      const srcMarks = (it.sources && it.sources.length > 0)
+        ? ` <span class="insight-srcs">${it.sources.slice(0, 3).map((s, i) =>
+            `<a class="insight-src" href="${escapeHtml(s.url)}" target="_blank" rel="noopener" title="${escapeHtml(s.title || "来源" + (i + 1))}" aria-label="来源${i + 1}">${["①","②","③","④","⑤"][i]}</a>`
+          ).join("")}</span>`
+        : "";
+      return `<article class="insight">
         ${(it.tag ?? []).length > 0
           ? `<div class="insight-tags">${(it.tag ?? [])
               .map((t) => `<span class="tag ${tagClsOf(t)}">${escapeHtml(t)}</span>`)
               .join("")}</div>`
           : ""}
-        <h3>${escapeHtml(it.topic)}</h3>
+        <h3>${escapeHtml(it.topic)}${srcMarks}</h3>
         <p><b>影响：</b>${escapeHtml(it.impact)}</p>
         <p><b>建议：</b>${escapeHtml(it.action)}</p>
-      </article>`,
-    )
+      </article>`;
+    })
     .join("");
   return `<section class="exec-summary">
     <div class="exec-head">

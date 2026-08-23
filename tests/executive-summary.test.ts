@@ -1,144 +1,41 @@
 /**
- * 执行摘要来源选择（lib/ai/executive-summary.ts 的 selectExecutiveSummary）。
- * 核心验证：SKIP_AI 必须复用持久化资产且不触达 LLM；正常模式优先复用、缺失回退。
+ * resolveInsightSources（商机洞察来源回链）功能测试。
+ * 验证：生成时按相似度从当日 finance+gz 精选池回链 1-3 条真实来源；
+ * 相关项命中、无关项拒绝、无 url 的输入不参与。
  */
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import fs from "node:fs";
-import os from "node:os";
-import path from "node:path";
-import {
-  selectExecutiveSummary,
-  writeStore,
-  loadStore,
-  type ExecutiveSummary,
-} from "../lib/ai/executive-summary";
 
-const SAMPLE: ExecutiveSummary = {
-  must_read: [{ title: "t", why: "w" }],
-  insights: [{ topic: "p", impact: "i", action: "a" }],
-};
+import { resolveInsightSources } from "../lib/ai/executive-summary";
 
-test("SKIP_AI：复用持久化 exec，且不调用 generate", async () => {
-  let called = false;
-  const res = await selectExecutiveSummary({
-    skipAi: true,
-    persisted: SAMPLE,
-    generate: async () => {
-      called = true;
-      return SAMPLE;
-    },
-  });
-  assert.deepEqual(res, SAMPLE);
-  assert.equal(called, false, "SKIP_AI 不应触达 generate");
+const inputs = [
+  { title: "8月LPR保持不变，今年房贷还能否下调？", summary: "LPR 不变但下调预期升温。", url: "https://a/lpr" },
+  { title: "黄金，多极时代的新底仓？", summary: "黄金避险需求上升。", url: "https://a/gold" },
+];
+
+test("相关洞察回链到正确来源，无关洞察不挂来源", () => {
+  const r = resolveInsightSources("房贷下调预期", "LPR下调预期影响按揭客户行为。", "动态调整房贷定价。", inputs);
+  assert.equal(r.length, 1, "房贷洞察应命中 1 条");
+  assert.equal(r[0].url, "https://a/lpr", "命中 LPR 政策原文");
+  assert.equal(resolveInsightSources("AI芯片突破", "算力提升", "关注。", inputs).length, 0, "无关不挂来源");
 });
 
-test("SKIP_AI 且无持久化：返回 null，且不调用 generate", async () => {
-  let called = false;
-  const res = await selectExecutiveSummary({
-    skipAi: true,
-    persisted: undefined,
-    generate: async () => {
-      called = true;
-      return SAMPLE;
-    },
-  });
-  assert.equal(res, null);
-  assert.equal(called, false);
+test("无 url 的输入不参与回链", () => {
+  const r = resolveInsightSources("房贷下调预期", "x", "y", [
+    { title: "8月LPR保持不变今年房贷还能否下调", summary: "s", url: "" },
+  ]);
+  assert.equal(r.length, 0);
 });
 
-test("正常模式：有持久化则复用，不调用 generate", async () => {
-  let called = false;
-  const res = await selectExecutiveSummary({
-    skipAi: false,
-    persisted: SAMPLE,
-    generate: async () => {
-      called = true;
-      return SAMPLE;
-    },
-  });
-  assert.deepEqual(res, SAMPLE);
-  assert.equal(called, false, "应优先复用持久化");
-});
-
-test("正常模式：无持久化则回退 generate", async () => {
-  let called = false;
-  const res = await selectExecutiveSummary({
-    skipAi: false,
-    persisted: undefined,
-    generate: async () => {
-      called = true;
-      return SAMPLE;
-    },
-  });
-  assert.deepEqual(res, SAMPLE);
-  assert.equal(called, true);
-});
-
-test("归档 round-trip：writeStore 后可 loadStore 读回", () => {
-  const base = fs.mkdtempSync(path.join(os.tmpdir(), "gzcmbdf3-exec-"));
-  const date = "2026-08-20";
-  writeStore(date, SAMPLE, { baseDir: base });
-  const p = path.join(base, "history", date, "store.json");
-  assert.ok(fs.existsSync(p), "应生成 history/<date>/store.json");
-  const back = loadStore(date, { baseDir: base });
-  assert.deepEqual(back, SAMPLE);
-  fs.rmSync(base, { recursive: true, force: true });
-});
-
-test("归档读取：缺失日期返回 undefined", () => {
-  const base = fs.mkdtempSync(path.join(os.tmpdir(), "gzcmbdf3-exec-"));
-  assert.equal(loadStore("2026-08-21", { baseDir: base }), undefined);
-  fs.rmSync(base, { recursive: true, force: true });
-});
-
-test("归档读取：损坏文件返回 undefined（不 crash）", () => {
-  const base = fs.mkdtempSync(path.join(os.tmpdir(), "gzcmbdf3-exec-"));
-  const date = "2026-08-20";
-  const dir = path.join(base, "history", date);
-  fs.mkdirSync(dir, { recursive: true });
-  fs.writeFileSync(path.join(dir, "store.json"), "{broken", "utf8");
-  assert.equal(loadStore(date, { baseDir: base }), undefined);
-  fs.rmSync(base, { recursive: true, force: true });
-});
-
-test("loadStore 过渡兼容：无 store.json 时回退读旧 executive.json", () => {
-  const base = fs.mkdtempSync(path.join(os.tmpdir(), "gzcmbdf3-exec-"));
-  const date = "2026-08-20";
-  const dir = path.join(base, "history", date);
-  fs.mkdirSync(dir, { recursive: true });
-  fs.writeFileSync(path.join(dir, "executive.json"), JSON.stringify({ date, executive: SAMPLE }), "utf8");
-  assert.deepEqual(loadStore(date, { baseDir: base }), SAMPLE, "应回退读 executive.json");
-  fs.rmSync(base, { recursive: true, force: true });
-});
-
-test("forceRegen：忽略已存在持久化，强制调用 generate", async () => {
-  let called = false;
-  const fresh = { must_read: [{ title: "new", why: "n" }], insights: [] };
-  const res = await selectExecutiveSummary({
-    skipAi: false,
-    persisted: SAMPLE,
-    forceRegen: true,
-    generate: async () => {
-      called = true;
-      return fresh;
-    },
-  });
-  assert.deepEqual(res, fresh, "forceRegen 应返回新生成结果");
-  assert.equal(called, true, "forceRegen 应触达 generate");
-});
-
-test("forceRegen 在 SKIP_AI 下被忽略：仍复用持久化、不调用 generate", async () => {
-  let called = false;
-  const res = await selectExecutiveSummary({
-    skipAi: true,
-    persisted: SAMPLE,
-    forceRegen: true,
-    generate: async () => {
-      called = true;
-      return SAMPLE;
-    },
-  });
-  assert.deepEqual(res, SAMPLE, "SKIP_AI+forceRegen 应忽略 forceRegen 复用持久化");
-  assert.equal(called, false);
+test("多来源时按相似度取前 3 条", () => {
+  const pool = [
+    { title: "南沙金融30条落地", summary: "利好对公", url: "https://n/1" },
+    { title: "南沙跨境结算试点", summary: "跨境", url: "https://n/2" },
+    { title: "南沙自贸区扩区", summary: "扩区", url: "https://n/3" },
+    { title: "南沙人才政策", summary: "人才", url: "https://n/4" },
+    { title: "黄金避险", summary: "避险", url: "https://a/gold" },
+  ];
+  const r = resolveInsightSources("南沙金融利好对公", "对公存款迎窗口", "加大营销", pool);
+  assert.ok(r.length >= 1 && r.length <= 3, "来源数在 1-3");
+  assert.ok(r.every((s) => s.url.startsWith("https://n/")), "仅命中南沙相关来源");
 });

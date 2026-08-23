@@ -68,6 +68,8 @@ export interface ReportInsight {
   tags: string[];
   impact: string;
   action: string;
+  /** 来源链接（1-多个）：①/②/③ 标记点击打开。来自 LLM 引源或按相似度回链报告内真实文章 URL。 */
+  sources?: Array<{ title: string; url: string }>;
   related_url?: string;
 }
 

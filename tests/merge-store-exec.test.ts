@@ -134,3 +134,15 @@ test("store 全违禁/全无匹配 → 不污染 report", () => {
   assert.equal(report.must_read.length, 0);
   assert.equal(report.insights.length, 0);
 });
+
+test("insights 的 sources 从 store 原样透传（生成时已回链，不臆造）", () => {
+  // store 无 sources → 不挂来源（避免挂错链接）
+  const r = mergeStoredExecutive(JSON.parse(JSON.stringify(emptyReport)), JSON.parse(JSON.stringify(storeExec)));
+  for (const i of r.insights) assert.equal(i.sources, undefined, "store 无 sources 则不臆造来源");
+  // 显式 sources 透传
+  const explicit = mergeStoredExecutive(
+    JSON.parse(JSON.stringify(emptyReport)),
+    { hero_line: "", must_read: [], insights: [{ topic: "x", impact: "y", action: "z", sources: [{ title: "手填", url: "https://manual/1" }] }] },
+  );
+  assert.equal(explicit.insights[0].sources?.[0].url, "https://manual/1");
+});

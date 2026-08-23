@@ -1,5 +1,6 @@
 import { runLlm } from "./llm";
 import { extractJson } from "./json-util";
+import { titleSimilarityDice } from "../ingest/dedup-similar";
 import fs from "node:fs";
 import path from "node:path";
 
@@ -22,6 +23,8 @@ export interface ExecInsight {
   action: string;
   /** 业务线标签（2026-08-21 重构）：从词表选 1-2 个，如 竞对动态/信贷/代发/私行/政银合作/住房金融/财富/客群 */
   tag?: string[];
+  /** 来源链接（可选，1-3 条）：引用输入中相关源文章（title+url 原样复制），供读者溯源 */
+  sources?: Array<{ title: string; url: string }>;
 }
 
 export interface ExecutiveSummary {
@@ -71,6 +74,43 @@ const RULES = `你是股份行广州分行零售决策简报的主编。系统�
 - 输出 STRICTLY 一个 JSON 对象（无 markdown 代码块）：
 {"hero_line":"...","must_read":[{"title":"...","why":"...","url":"..."}],"insights":[{"topic":"...","impact":"...","action":"...","tag":["..."]}]}
 注意：字符串内引号用单引号或中文引号，禁止裸双引号；url 字段原样复制输入中的链接。`;
+
+/**
+ * 商机洞察回链来源：insights 为 AI 综合而成，未必带 sources 字段。
+ * 用生成时看到的 inputs（finance+gz，每条含真实 url）按「主题+影响+建议」与
+ * 条目标题/摘要的 Dice 相似度，取前 1-3 条命中文章作为 ①/②/③ 溯源入口。
+ * 阈值 0.2：相关项（如「房贷下调预期」↔ LPR 原文 corpusDice≈0.25）命中，无关项（≈0）拒绝；
+ * inputs 仅限当日 finance+gz 精选池，偶发弱匹配也在同主题内。无达标匹配返回空（优雅降级）。
+ * sources 已在生成时落地 store.json 复用。
+ */
+export function resolveInsightSources(
+  topic: string,
+  impact: string,
+  action: string,
+  inputs: Array<{ title: string; summary?: string; url?: string }>,
+): Array<{ title: string; url: string }> {
+  const norm = (s: string): string => s.replace(/[^\p{L}\p{N}]+/gu, "").toLowerCase();
+  const nh = norm(`${topic} ${impact} ${action}`);
+  if (!nh) return [];
+  const scored: Array<{ title: string; url: string; score: number }> = [];
+  for (const it of inputs) {
+    if (!it.url) continue;
+    const t = it.title || "";
+    const corpus = norm(`${t} ${it.summary || ""}`);
+    if (!corpus) continue;
+    const score = Math.max(titleSimilarityDice(nh, norm(t)), titleSimilarityDice(nh, corpus));
+    if (score >= 0.2) scored.push({ title: t, url: it.url, score });
+  }
+  const best = new Map<string, { title: string; url: string; score: number }>();
+  for (const s of scored) {
+    const cur = best.get(s.url);
+    if (!cur || s.score > cur.score) best.set(s.url, s);
+  }
+  return [...best.values()]
+    .sort((a, b) => b.score - a.score)
+    .slice(0, 3)
+    .map(({ title, url }) => ({ title, url }));
+}
 
 export async function generateExecutiveSummary(
   input: ExecSummaryInput,
@@ -122,12 +162,21 @@ export async function generateExecutiveSummary(
         why: m.why,
         url: m.url || resolveUrl(m.title),
       })),
-      insights: parsed.insights.slice(0, 5).map((it) => ({
-        topic: it.topic,
-        impact: it.impact,
-        action: it.action,
-        ...(Array.isArray(it.tag) && it.tag.length > 0 ? { tag: it.tag.slice(0, 2) } : {}),
-      })),
+      insights: parsed.insights.slice(0, 5).map((it) => {
+        // sources：优先用 LLM 显式引源；否则用生成时看到的 inputs（finance+gz，含真实 URL）
+        // 按相似度回链 1-3 条来源，保证「商机洞察」卡片有可信溯源入口（不依赖 LLM 吐 url 格式）。
+        const explicit = Array.isArray(it.sources) && it.sources.length > 0
+          ? it.sources.slice(0, 3).filter((s) => s && s.url).map((s) => ({ title: s.title || "", url: s.url }))
+          : [];
+        const sources = explicit.length > 0 ? explicit : resolveInsightSources(it.topic, it.impact, it.action, [...input.finance, ...input.gz]);
+        return {
+          topic: it.topic,
+          impact: it.impact,
+          action: it.action,
+          ...(Array.isArray(it.tag) && it.tag.length > 0 ? { tag: it.tag.slice(0, 2) } : {}),
+          ...(sources.length > 0 ? { sources } : {}),
+        };
+      }),
     };
   } catch {
     return null;
