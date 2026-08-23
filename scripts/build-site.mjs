@@ -57,6 +57,15 @@ for (const d of dates) {
 }
 console.log(`[build-site] 同步 ${copied} 个日期目录 → ${ROOT}/（共 ${dates.length} 个报告）`);
 
+// --- 分享缩略图：拷贝到发布根（报告 <head> 的 og:image 绝对地址 ${base}/og-image.png 用）---
+const OG_SRC = "assets/og-image.png";
+if (fs.existsSync(OG_SRC)) {
+  fs.copyFileSync(OG_SRC, path.join(ROOT, "og-image.png"));
+  console.log(`[build-site] og-image.png → ${ROOT}/`);
+} else {
+  console.log(`[build-site] ⚠️ 未找到 ${OG_SRC}，分享卡片缩略图将缺失（og:image 失效）`);
+}
+
 // --- index.html = latest report ---
 const latest = dates[0];
 const latestHtml = fs

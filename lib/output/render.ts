@@ -1255,13 +1255,30 @@ export function renderHtml(
     hour12: false,
   }).format(new Date());
   const hero = report.hero_line?.trim();
+  // 微信/QQ/推特 等转发卡片元信息：默认 gh-pages 根，可用 REPORT_BASE_URL 覆盖
+  const shareBase = process.env.REPORT_BASE_URL || "https://shengc-shv.github.io/gzcmbdf3";
+  const shareTitle = `${STR.siteTitle} · ${date}`;
+  const shareDesc = hero
+    ? `今日定调：${hero}`
+    : "广州地区零售业务每日资信简报（个人整理，非本行立场）";
 
   return `<!doctype html>
 <html lang="${REPORT_LOCALE === "en" ? "en" : "zh-CN"}">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>${STR.siteTitle} · ${date}</title>
+<title>${shareTitle}</title>
+<meta name="description" content="${escapeHtml(shareDesc)}">
+<meta property="og:type" content="website">
+<meta property="og:title" content="${escapeHtml(shareTitle)}">
+<meta property="og:description" content="${escapeHtml(shareDesc)}">
+<meta property="og:image" content="${shareBase}/og-image.png">
+<meta property="og:image:width" content="240">
+<meta property="og:image:height" content="240">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="${escapeHtml(shareTitle)}">
+<meta name="twitter:description" content="${escapeHtml(shareDesc)}">
+<meta name="twitter:image" content="${shareBase}/og-image.png">
 <style>
 ${THEME_CSS}
   </style>
