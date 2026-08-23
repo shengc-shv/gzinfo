@@ -298,3 +298,59 @@ test("子标签合并输出：无 L3 信息源 tabs（只到子标签）", () =>
   // merged 流 → 卡片展示来源小字
   assert.ok(html.includes("国务院") && html.includes("央视") && html.includes("新浪"), "来源降级为卡片上的来源标识");
 });
+
+// ---------- 面板级筛选条：业务线动态渲染（2026-08-23）----------
+import { renderFilterBarForPanel } from "../lib/output/render";
+
+function mkDeptItem(tags: string[]): ReportItem {
+  return {
+    url: "https://t/" + tags.join("-"),
+    title_cn: "测试条目",
+    title_orig: "",
+    source: "测试源",
+    source_type: "media",
+    date: "08/23",
+    summary: "摘要",
+    importance: 2,
+    rank: 1,
+    tags,
+    locale: "national",
+  };
+}
+
+test("筛选条：板块无任何部门标签 → 业务线维度不渲染，仅来源维度", () => {
+  const html = renderFilterBarForPanel([mkDeptItem([]), mkDeptItem(["科技金融"])]);
+  assert.ok(html.includes("来源"), "来源维度保留");
+  assert.ok(html.includes("业务线"), "有「其他」数据时业务线维度渲染");
+  assert.ok(html.includes(">其他<"), "无部门标签卡片 → 渲染其他");
+  assert.ok(!html.includes(">客群<"), "客群无数据不渲染");
+  assert.ok(!html.includes(">私行<"), "私行无数据不渲染");
+  assert.ok(!html.includes(">财富<"), "财富无数据不渲染");
+  assert.ok(!html.includes(">信贷<"), "信贷无数据不渲染");
+});
+
+test("筛选条：仅客群+无标签 → 只渲染 客群/其他，不渲染 私行/财富/信贷", () => {
+  const html = renderFilterBarForPanel([mkDeptItem(["客群"]), mkDeptItem([])]);
+  assert.ok(html.includes(">客群<"), "客群有数据则渲染");
+  assert.ok(html.includes(">其他<"), "无标签卡片存在则渲染其他");
+  assert.ok(!html.includes(">私行<"), "私行无数据不渲染");
+  assert.ok(!html.includes(">财富<"), "财富无数据不渲染");
+  assert.ok(!html.includes(">信贷<"), "信贷无数据不渲染");
+});
+
+test("筛选条：客群/财富/信贷 有数据 → 全部渲染且顺序固定，无标签则加其他", () => {
+  const html = renderFilterBarForPanel([
+    mkDeptItem(["信贷"]),
+    mkDeptItem(["财富"]),
+    mkDeptItem(["客群"]),
+    mkDeptItem(["科技金融"]),
+  ]);
+  const gTitle = html.indexOf(">客群<");
+  const pTitle = html.indexOf(">私行<");
+  const wTitle = html.indexOf(">财富<");
+  const cTitle = html.indexOf(">信贷<");
+  assert.ok(gTitle >= 0 && wTitle >= 0 && cTitle >= 0, "客群/财富/信贷渲染");
+  assert.ok(pTitle < 0, "私行无数据不渲染");
+  assert.ok(gTitle < wTitle && wTitle < cTitle, "顺序固定：客群→财富→信贷");
+  assert.ok(html.includes(">其他<"), "含非部门标签卡片则渲染其他");
+});

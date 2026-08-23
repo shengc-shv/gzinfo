@@ -914,6 +914,36 @@ export function renderFilterBar(groups: FilterGroupDef[] = DEFAULT_FILTER_GROUPS
   </div>`;
 }
 
+/**
+ * 面板级筛选条（2026-08-23 用户）：来源维度（官方/媒体）固定保留；
+ * 业务线维度**动态**——只渲染当前面板实际存在数据的部门标签
+ * （客群/私行/财富/信贷 无数据则不出现），有非部门标签或无标签卡片才追加「其他」；
+ * 全无业务线数据时整个业务线维度不渲染。
+ */
+export function renderFilterBarForPanel(items: ReportItem[]): string {
+  const srcChips: FilterChipDef[] = [
+    { label: "官方", value: "official", group: "src" },
+    { label: "媒体", value: "media", group: "src" },
+  ];
+  const presentDepts = new Set<string>();
+  let hasOther = false;
+  for (const it of items) {
+    const tags = it.tags ?? [];
+    const deptHit = tags.find((t) => DEPT_TAGS.has(t));
+    if (deptHit) presentDepts.add(deptHit);
+    else hasOther = true;
+  }
+  const groups: FilterGroupDef[] = [{ title: "来源", chips: srcChips }];
+  const tagChips: FilterChipDef[] = [];
+  // 固定展示顺序：客群 / 私行 / 财富 / 信贷，仅保留有数据的
+  for (const d of ["客群", "私行", "财富", "信贷"]) {
+    if (presentDepts.has(d)) tagChips.push({ label: d, value: d, group: "tag" });
+  }
+  if (hasOther) tagChips.push({ label: "其他", value: "__none__", group: "tag" });
+  if (tagChips.length > 0) groups.push({ title: "业务线", chips: tagChips });
+  return renderFilterBar(groups);
+}
+
 /** 构造 url → 中文标题 映射（供 must_read 回写标题）。 */
 function resolveTitleMap(report: DailyReport): Map<string, string> {
   const m = new Map<string, string>();
@@ -1339,7 +1369,7 @@ ${THEME_CSS}
   </nav>
 
   ${tabs.map((t, i) => `<section class="panel${i === 0 ? " active" : ""}" id="${t.id}">
-    ${renderFilterBar()}
+    ${renderFilterBarForPanel(t.items)}
     ${renderReportCardList(t.items)}
   </section>`).join("")}
 
