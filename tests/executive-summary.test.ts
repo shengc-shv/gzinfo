@@ -39,3 +39,18 @@ test("多来源时按相似度取前 3 条", () => {
   assert.ok(r.length >= 1 && r.length <= 3, "来源数在 1-3");
   assert.ok(r.every((s) => s.url.startsWith("https://n/")), "仅命中南沙相关来源");
 });
+
+test("改写表述的单源洞察也能回链（共享 bigram 门槛接住）", () => {
+  const pool = [
+    { title: "存1年=存2年=存3年，存款利率罕见“持平”", summary: "长期限存款利率出现倒挂后的拉平。", url: "https://a/deposit-flat" },
+    { title: "30个托位、12月龄即可入托！广州南沙普惠托育园", summary: "托育。", url: "https://a/tuoyu" },
+  ];
+  // 「存款利率期限拉平」与「存1年=存2年=存3年，存款利率罕见持平」同主题但措辞改写
+  const hit = resolveInsightSources("存款利率期限拉平", "长期限存款定价趋同", "关注存款流失", pool);
+  assert.equal(hit.length, 1, "应命中存款利率原文（单源）");
+  assert.equal(hit[0].url, "https://a/deposit-flat");
+  // 共享 bigram 门槛必须挡掉完全无关（托育园）的错源
+  const wrong = resolveInsightSources("小微融资协调机制升级", "影响普惠客群", "加大投放", pool);
+  assert.equal(wrong.length, 0, "无任何共享字符片段→不臆造错源");
+});
+

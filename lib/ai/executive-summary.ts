@@ -66,23 +66,35 @@ const RULES = `你是股份行广州分行零售决策简报的主编。系统�
    - impact：对广州分行零售/对公业务的潜在影响（40-60 字）
    - action：建议动作——具体可执行（获客方向/产品配置/风险提示，40-60 字），如"关注消费贷客群、加大理财配置推荐、提示按揭风险"
    - tag：业务线标签数组，从词表选 1-2 个（词表：竞对动态/信贷/代发/私行/政银合作/住房金融/财富/客群/监管/科技金融）
+   - sources：来源链接数组（1-3 条，必填优先）。每条为输入中直接支撑该洞察的源文章，原样复制其 {title,url}（url 从输入对应条目复制，不得编造）。若洞察由多条输入综合得出，列最权威的 1-3 条；若确实无任何输入支撑则该字段省略。
 
 要求：
 - 只基于输入信息，不要编造
 - 广州本地信息（南沙/广州企业/广州政策）优先于泛全国信息
 - 语言精炼，站在分行行长视角，不写空话套话
 - 输出 STRICTLY 一个 JSON 对象（无 markdown 代码块）：
-{"hero_line":"...","must_read":[{"title":"...","why":"...","url":"..."}],"insights":[{"topic":"...","impact":"...","action":"...","tag":["..."]}]}
+{"hero_line":"...","must_read":[{"title":"...","why":"...","url":"..."}],"insights":[{"topic":"...","impact":"...","action":"...","tag":["..."],"sources":[{"title":"...","url":"..."}]}]}
 注意：字符串内引号用单引号或中文引号，禁止裸双引号；url 字段原样复制输入中的链接。`;
 
 /**
  * 商机洞察回链来源：insights 为 AI 综合而成，未必带 sources 字段。
  * 用生成时看到的 inputs（finance+gz，每条含真实 url）按「主题+影响+建议」与
  * 条目标题/摘要的 Dice 相似度，取前 1-3 条命中文章作为 ①/②/③ 溯源入口。
- * 阈值 0.2：相关项（如「房贷下调预期」↔ LPR 原文 corpusDice≈0.25）命中，无关项（≈0）拒绝；
- * inputs 仅限当日 finance+gz 精选池，偶发弱匹配也在同主题内。无达标匹配返回空（优雅降级）。
- * sources 已在生成时落地 store.json 复用。
+ * 双门槛防错链：Dice ≥ 0.16 且 与命中文本共享 ≥ 2 个中文 bigram（有意义字符片段）。
+ *  - Dice 单看易错链改写表述（如「存款利率期限拉平」↔「存1年=存2年=存3年存款利率罕见持平」Dice≈0.18 其实是同主题）；
+ *  - 共享 bigram 门槛挡掉「托育园/券商中考/博览会」这类完全无关却偶发高 Dice 的错源。
+ * 无达标匹配返回空（优雅降级，不臆造）。sources 已在生成时落地 store.json 复用。
  */
+function sharedBigramCount(a: string, b: string): number {
+  const sa = new Set<string>();
+  for (let i = 0; i < a.length - 1; i++) sa.add(a.slice(i, i + 2));
+  let n = 0;
+  for (let i = 0; i < b.length - 1; i++) {
+    if (sa.has(b.slice(i, i + 2))) n++;
+  }
+  return n;
+}
+
 export function resolveInsightSources(
   topic: string,
   impact: string,
@@ -98,8 +110,12 @@ export function resolveInsightSources(
     const t = it.title || "";
     const corpus = norm(`${t} ${it.summary || ""}`);
     if (!corpus) continue;
-    const score = Math.max(titleSimilarityDice(nh, norm(t)), titleSimilarityDice(nh, corpus));
-    if (score >= 0.2) scored.push({ title: t, url: it.url, score });
+    const dt = titleSimilarityDice(nh, norm(t));
+    const dc = titleSimilarityDice(nh, corpus);
+    const useCorpus = dc >= dt;
+    const score = useCorpus ? dc : dt;
+    const shared = useCorpus ? sharedBigramCount(nh, corpus) : sharedBigramCount(nh, norm(t));
+    if (score >= 0.16 && shared >= 2) scored.push({ title: t, url: it.url, score });
   }
   const best = new Map<string, { title: string; url: string; score: number }>();
   for (const s of scored) {
