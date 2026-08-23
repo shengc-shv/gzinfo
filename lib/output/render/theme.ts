@@ -278,19 +278,19 @@ export const THEME_CSS = `
   .insight-srcs { display: inline-flex; gap: 0.22rem; margin-left: 0.35rem; vertical-align: middle; }
   .insight-src {
     display: inline-flex; align-items: center; justify-content: center;
-    min-width: 1.6rem; min-height: 1.6rem; padding: 0 0.2rem;
-    font-size: 0.95rem; line-height: 1; text-decoration: none;
-    color: var(--c-pol);
-    border: 1px solid color-mix(in srgb, var(--c-pol) 42%, transparent);
-    border-radius: 7px; background: color-mix(in srgb, var(--c-pol) 9%, transparent);
-    -webkit-tap-highlight-color: transparent; transition: background 0.15s ease;
+    min-width: 1.65rem; min-height: 1.65rem; padding: 0 0.22rem;
+    font-size: 0.92rem; font-weight: 700; line-height: 1; text-decoration: none;
+    color: var(--accent-cmb);
+    border: 1px solid color-mix(in srgb, var(--accent-cmb) 40%, transparent);
+    border-radius: 7px; background: color-mix(in srgb, var(--accent-cmb) 8%, transparent);
+    -webkit-tap-highlight-color: transparent; transition: background 0.15s ease, border-color 0.15s ease, transform 0.1s ease;
   }
-  .insight-src:active { background: color-mix(in srgb, var(--c-pol) 24%, transparent); }
-  .insight-src:hover { background: color-mix(in srgb, var(--c-pol) 18%, transparent); }
+  .insight-src:active { background: color-mix(in srgb, var(--accent-cmb) 26%, transparent); transform: scale(0.94); }
+  .insight-src:hover { background: color-mix(in srgb, var(--accent-cmb) 16%, transparent); border-color: color-mix(in srgb, var(--accent-cmb) 60%, transparent); }
   .tag {
-    display: inline-block; font-size: 0.66rem; font-weight: 700; color: var(--c-finance);
-    background: color-mix(in srgb, var(--c-finance) 12%, transparent);
-    border-radius: 4px; padding: 0.05rem 0.35rem; margin-right: 0.35rem; vertical-align: 0.08em;
+    display: inline-block; font-size: 0.66rem; font-weight: 700; color: var(--accent-cmb);
+    background: color-mix(in srgb, var(--accent-cmb) 11%, transparent);
+    border-radius: 5px; padding: 0.08rem 0.4rem; margin-right: 0.35rem; vertical-align: 0.08em; letter-spacing: 0.02em;
   }
   .tag-action { color: var(--c-gdipo); background: color-mix(in srgb, var(--c-gdipo) 12%, transparent); }
 
@@ -946,10 +946,10 @@ export const THEME_CSS = `
   .filter-group + .filter-group { padding-left: 0.7rem; margin-left: 0.35rem; border-left: 1px solid var(--rule); }
   .filter-gtitle { font-size: 0.8rem; color: var(--fg-soft, var(--muted)); }
   .filter-chip { border: 1px solid var(--rule); background: var(--bg, var(--card)); color: var(--fg-soft, var(--muted)); border-radius: 999px; padding: 0.28rem 0.8rem; font-size: 0.84rem; cursor: pointer; user-select: none; transition: all 0.15s; font-family: inherit; }
-  .filter-chip:hover { border-color: var(--c-pol); color: var(--c-pol); }
-  .filter-chip.active { background: var(--c-pol); border-color: var(--c-pol); color: #fff; font-weight: 600; box-shadow: 0 1px 4px color-mix(in srgb, var(--c-pol) 45%, transparent); }
+  .filter-chip:hover { border-color: var(--accent-cmb); color: var(--accent-cmb); }
+  .filter-chip.active { background: var(--accent-cmb); border-color: var(--accent-cmb); color: #fff; font-weight: 600; box-shadow: 0 2px 8px color-mix(in srgb, var(--accent-cmb) 38%, transparent); }
   .filter-reset { margin-left: auto; border: 1px solid var(--rule); background: transparent; color: var(--fg-soft, var(--muted)); border-radius: 999px; padding: 0.28rem 0.8rem; font-size: 0.84rem; cursor: pointer; font-family: inherit; }
-  .filter-reset:hover { border-color: var(--c-pol); color: var(--c-pol); }
+  .filter-reset:hover { border-color: var(--accent-cmb); color: var(--accent-cmb); }
   .brief.filtered-out { display: none !important; }
 
   /* 市场总览 bullet（#17/#18/#19） */
