@@ -3892,5 +3892,17 @@
     "publishedAt": "2026-08-23T00:00:00.000Z",
     "firstSeenAt": "2026-08-23T06:06:59.389Z",
     "lastSeenAt": "2026-08-23T06:06:59.389Z"
+  },
+  "https://www.cnfin.com/hg-lb/detail/20260823/4459102_1.html": {
+    "title": "水利部：全国29条河流仍维持超警",
+    "url": "https://www.cnfin.com/hg-lb/detail/20260823/4459102_1.html",
+    "sourceId": "cnfin",
+    "source": "新华财经",
+    "category": "finance",
+    "subcategory": "cn-finance",
+    "excerpt": "",
+    "publishedAt": "2026-08-23T00:00:00.000Z",
+    "firstSeenAt": "2026-08-23T06:18:16.207Z",
+    "lastSeenAt": "2026-08-23T06:18:16.207Z"
   }
 }

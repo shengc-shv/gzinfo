@@ -3609,14 +3609,24 @@
       "title": "男子与保险女业务员建立“不正当关系”，7年投了上千万元保险还贷款缴费，妻子要求全额退保，保险公司回应",
       "url": "https://m.21jingji.com/article/20260823/herald/5a18af1eb1412207e771d5a80906ff67.html",
       "excerpt": "【21财经·金融】男子与保险女业务员建立“不正当关系”，7年投了上千万元保险还贷款缴费，妻子要求全额退保，保险公司回应",
-      "category": "gz",
       "publishedAt": "2026-08-23T00:00:00.000Z",
+      "category": "gz",
       "source": "21世纪经济报道·金融",
-      "tier": "T2",
+      "fetchedToday": true,
+      "subcategory": "cn-finance"
+    },
+    {
+      "sourceId": "cnfin",
+      "source": "新华财经",
+      "title": "水利部：全国29条河流仍维持超警",
+      "url": "https://www.cnfin.com/hg-lb/detail/20260823/4459102_1.html",
+      "excerpt": "",
+      "publishedAt": "2026-08-23T00:00:00.000Z",
+      "category": "finance",
+      "summary": "",
+      "tier": "T1.5",
       "filterBucket": "daily",
-      "filterDimensions": [
-        "wealth_mgmt"
-      ],
+      "filterDimensions": [],
       "fetchedToday": true,
       "subcategory": "cn-finance"
     }
