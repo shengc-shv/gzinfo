@@ -54,7 +54,8 @@ import {
   mergeRollingIntoReport,
   mergeStoredExecutive,
 } from "../lib/output/render";
-import { loadStore } from "../lib/ai/executive-summary";
+import { loadStore, generateExecutiveSummary, writeStore } from "../lib/ai/executive-summary";
+import { buildTwoDayExecPool } from "../lib/ai/exec-pool";
 import { DISPLAY_WINDOW_DAYS, GZ_ANCHOR_RE } from "../lib/output/render/cards";
 import {
   loadHistory,
@@ -566,6 +567,41 @@ async function main() {
     console.log(
       `[daily] 🕘 近7天历史并入: ${totalKept} → ${mergedCount} 条（追加 ${mergedCount - totalKept} 条历史符合要求条目）`,
     );
+  }
+
+  // —— 必读/商机：「今天 + 昨天」2 天窗口（2026-08-23 用户需求）——
+  // 非 SKIP_AI：用 buildTwoDayExecPool 从「今日 PASS2 已富集 sections」+「history 昨日
+  // ai_relevant 有摘要」拼出今昨 2 天 finance/gz 高信号池，generateExecutiveSummary 生成
+  // 必读/商机（带 ①②③ 溯源），覆盖 PASS2 的「本次管线」产出，并 writeStore 持久化，
+  // 供后续 SKIP_AI 重跑 / 发布复用（不再每次只基于本次进入管线的 kept）。
+  if (!SKIP_AI) {
+    try {
+      const pool = buildTwoDayExecPool({ history, articles, report: mergedReport, today: date });
+      const exec = await generateExecutiveSummary({ date, finance: pool.finance, gz: pool.gz });
+      if (exec && (exec.must_read.length || exec.insights.length)) {
+        mergedReport.hero_line = exec.hero_line || mergedReport.hero_line;
+        const mustRead = exec.must_read
+          .filter((m) => !!m.url)
+          .map((m) => ({ title: m.title, why: m.why, url: m.url as string }));
+        if (mustRead.length) mergedReport.must_read = mustRead;
+        mergedReport.insights = exec.insights.map((it) => ({
+          topic: it.topic,
+          tags: it.tag ?? [],
+          impact: it.impact,
+          action: it.action,
+          ...(it.sources && it.sources.length ? { sources: it.sources } : {}),
+        }));
+        writeStore(date, exec);
+        console.log(
+          `[daily] 🧠 必读/商机(今昨2天窗口)覆盖 PASS2：${exec.must_read.length} 必读 / ${exec.insights.length} 商机（输入 finance ${pool.finance.length} + gz ${pool.gz.length}）`,
+        );
+      } else {
+        console.log(`[daily] ℹ️ 2天窗口执行摘要为空（沿用 PASS2 产出）`);
+      }
+    } catch (e) {
+      const msg = e instanceof Error ? e.message : String(e);
+      console.warn(`[daily] ⚠️ 2天窗口执行摘要生成失败（沿用 PASS2）: ${msg}`);
+    }
   }
 
   // —— SKIP_AI 执行摘要回填（2026-08-21 修复：store.json 复用断链）——
