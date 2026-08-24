@@ -4,14 +4,14 @@
  *  - 主用腾讯云语音合成（TTS）TextToVoice：免费资源包 800 万字符，精品女声。
  *    因腾讯 Node SDK 在运行时不导出请求模型类（Models 为空），此处手写
  *    TC3-HMAC-SHA256 签名 + 原生 fetch 调 REST API，零 SDK 依赖、完全可控。
- *  - 腾讯两个特有坑（已在代码内处理）：
- *    1) Text 参数必须 base64 编码后传入，直接传原文会报错；
- *    2) 单次请求上限约 150 字（GBK），口播稿 ~600 字须按句子分片合成，
- *       再用 ffmpeg concat 无缝拼接。
- *  - 编码坑（2026-08-24 实测根因）：腾讯后端收到 base64 解码后按 **GBK** 解读字节。
- *    若按 UTF-8 编码（Buffer.from(t,"utf-8")）再 base64，中文会被拆解成乱码音节，
- *    音频从第一个字开始就是乱码且时长膨胀 ~2.7 倍。必须用 iconv-lite 编码为 GBK
- *    后再 base64（Text 的「150 字（GBK）」上限即按 GBK 字节计）。
+ *  - 腾讯特有坑（2026-08-24 实测 + 官方文档核实，文档 https://cloud.tencent.com/document/api/1073/37995）：
+ *    1) **Text 直接传原文（UTF-8），不要 base64**。官方示例即 `"Text": "你好"`；
+ *       文档「合成语音的源文本，按 UTF-8 编码统一计算」。若传 base64 字符串，
+ *       腾讯会把它当原文念出来 → 从第一个字就是乱码，且时长与 base64 字符串长度
+ *       成正比（UTF-8 base64 179s / GBK base64 113.65s，实测 1.5 倍吻合）。
+ *    2) 单次上限 150 个汉字（文档「中文最大支持150个汉字」），口播稿 ~600 字须按
+ *       句子分片合成，再用 ffmpeg 重编码 concat 拼接（-codec copy 拼 mp3 存在
+ *       位储备/帧对齐边界风险，统一 libmp3lame 重编码，见 mergeMp3）。
  *  - 兜底：腾讯连续失败（3 次重试）自动切换 Piper 本地 onnx 合成，
  *    云 IP 不依赖任何外部 TTS 网关。
  *  - 输出：data/history/reports/<date>/audio/briefing-<date>.mp3
@@ -31,7 +31,6 @@ import path from "node:path";
 import os from "node:os";
 import { spawnSync } from "node:child_process";
 import crypto from "node:crypto";
-import iconv from "iconv-lite";
 
 // ---------- 腾讯云 ----------
 const TCE_SECRET_ID = process.env.TENCENTCLOUD_SECRET_ID || "";
@@ -43,7 +42,7 @@ const TCE_ACTION = "TextToVoice";
 const TCE_VERSION = "2019-08-23";
 const VOICE_TYPE = parseInt(process.env.TTS_VOICE_TYPE || "501001", 10);
 const SPEED = parseInt(process.env.TTS_SPEED || "1", 10);
-const CHUNK_LIMIT = 120; // 腾讯单次上限约 150 字(GBK)，按 120 字分片留余量
+const CHUNK_LIMIT = 120; // 腾讯单次上限 150 个汉字，按 120 字分片留余量
 
 // ---------- Piper 兜底 ----------
 const VOICE = "zh_CN-huayan-medium";
@@ -99,7 +98,7 @@ function splitText(t: string, limit: number): string[] {
   return chunks;
 }
 
-/** ffmpeg concat 拼接多个 mp3 分片（同为腾讯产出，可直接 -codec copy）。 */
+/** ffmpeg concat 拼接多个 mp3 分片：重编码拼接，避免 -codec copy 的位储备/帧对齐边界噪声。 */
 function mergeMp3(parts: Buffer[], outPath: string): void {
   if (parts.length === 1) {
     fs.writeFileSync(outPath, parts[0]);
@@ -118,7 +117,11 @@ function mergeMp3(parts: Buffer[], outPath: string): void {
       lst,
       files.map((f) => `file '${f.replace(/'/g, "'\\''")}'`).join("\n"),
     );
-    const r = spawnSync("ffmpeg", ["-y", "-f", "concat", "-safe", "0", "-i", lst, "-codec", "copy", outPath]);
+    // 解码全部输入后统一重编码为 16k mp3：消除跨文件帧依赖错位
+    const r = spawnSync(
+      "ffmpeg",
+      ["-y", "-f", "concat", "-safe", "0", "-i", lst, "-ar", "16000", "-ac", "1", "-codec:a", "libmp3lame", "-b:a", "48k", outPath],
+    );
     if (r.status !== 0) {
       const err = (r.stderr || Buffer.alloc(0)).toString().slice(0, 300);
       throw new Error(`ffmpeg 拼接失败（exit ${r.status}）：${err}`);
@@ -175,11 +178,12 @@ async function synthTencent(text: string, outPath: string, date: string): Promis
   const parts: Buffer[] = [];
   for (let i = 0; i < chunks.length; i++) {
     const payload = JSON.stringify({
-      // 必须 GBK 编码后再 base64：腾讯后端按 GBK 解读字节，传 UTF-8 会全文乱码（2026-08-24 实测）
-      Text: iconv.encode(chunks[i], "gbk").toString("base64"),
+      // Text 直接传原文（UTF-8），不要 base64（2026-08-24 官方文档核实 + 实测）
+      Text: chunks[i],
       SessionId: `${date}-${i}-${crypto.randomBytes(4).toString("hex")}`,
       VoiceType: VOICE_TYPE,
       Codec: "mp3",
+      SampleRate: 16000,
       Speed: SPEED,
     });
     const audio = await tencentTextToVoice(payload);
