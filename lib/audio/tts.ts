@@ -266,6 +266,28 @@ async function runBackend(
   return false;
 }
 
+/** Piper CLI 是否可用（腾讯包月场景 workflow 不再预装 Piper，仅失败兜底时安装）。 */
+function piperAvailable(): boolean {
+  const r = spawnSync("sh", ["-c", "command -v piper"], { stdio: "ignore" });
+  return r.status === 0;
+}
+
+/** 写 TTS 兜底标记：workflow 检测到后安装 Piper 并跑 scripts/tts-fallback.ts 补合成。 */
+function writeFallbackMarker(date: string): void {
+  try {
+    const dir = path.resolve(process.cwd(), "data", "history", "reports", date);
+    fs.mkdirSync(dir, { recursive: true });
+    fs.writeFileSync(
+      path.join(dir, "tts-fallback-needed.txt"),
+      new Date().toISOString(),
+      "utf8",
+    );
+    console.warn("::warning::已写 tts-fallback-needed.txt（腾讯失败且 Piper 未安装）");
+  } catch (e) {
+    console.warn(`⚠️ 写 fallback 标记失败：${e instanceof Error ? e.message : e}`);
+  }
+}
+
 export async function synthesizeAudio(date: string, script: string): Promise<TtsResult> {
   if (!script || script.trim().length < 20) {
     throw new Error(`口播稿过短（${script?.length ?? 0} 字），中止 TTS`);
@@ -280,12 +302,22 @@ export async function synthesizeAudio(date: string, script: string): Promise<Tts
     if (await runBackend("tencent", (t, o) => synthTencent(t, o, date), script, out)) {
       return { mp3Path: out, durationSec, backend: "tencent" };
     }
-    console.warn("⚠️ 腾讯云连续失败，自动切换 Piper 兜底……");
+    console.warn("⚠️ 腾讯云连续失败，尝试 Piper 兜底（若未安装则写 fallback 标记）……");
   } else {
     console.log("ℹ️ 未配置 TENCENTCLOUD_SECRET_ID/KEY，使用 Piper 本地兜底");
   }
 
-  // —— Piper 兜底 ——
+  // —— Piper 兜底（2026-08-24：仅在腾讯失败/未配置时才走到这里）——
+  // 腾讯包月场景 workflow 不再预装 Piper：若未安装，写标记文件交给 workflow
+  // 安装后补合成（本次不阻断发布，由 daily.ts catch 降级为不出播放器）。
+  if (!piperAvailable()) {
+    if (TCE_SECRET_ID && TCE_SECRET_KEY) {
+      writeFallbackMarker(date);
+      throw new Error("腾讯云失败且 Piper 未安装（已写 tts-fallback-needed 标记，等待 workflow 兜底）");
+    }
+    throw new Error("Piper 未安装（未配置腾讯密钥且无 Piper 兜底）");
+  }
+
   if (await runBackend("piper", synthPiper, script, out)) {
     console.warn("::warning::今日音频由 Piper 兜底生成，请检查腾讯云 TTS 状态与额度");
     return { mp3Path: out, durationSec, backend: "piper" };

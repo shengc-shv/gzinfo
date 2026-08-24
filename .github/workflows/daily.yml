@@ -175,28 +175,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      # ---------- Piper 本地 TTS（2026-08-24 改用，替代 edge-tts）----------
-      # edge-tts 走微软免费网关，对云服务器 IP（GitHub runner）返 403 无法合成；
-      # Piper 为本地 onnx 模型，不依赖任何外部 TTS 网关，云 IP 可用。
-      - name: Setup Python (for Piper TTS)
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.12'
-
-      - name: Cache Piper model
-        uses: actions/cache@v4
-        with:
-          path: ~/.cache/piper
-          key: piper-zh_CN-huayan-medium-v1
-          restore-keys: |
-            piper-zh_CN-huayan-medium-
-
-      - name: Install Piper TTS
-        run: python3 -m pip install --upgrade pip piper-tts
-
-      # ffmpeg 在 ubuntu-latest 上并非总是预装（实测 2026-08-24 缺失），
-      # Piper 合成 WAV 后需 ffmpeg 转 MP3，故显式安装。
-      - name: Install ffmpeg (Piper WAV→MP3)
+      # ---------- ffmpeg（腾讯 concat 重编码 + Piper WAV→MP3 都需要，始终安装）----------
+      # 2026-08-24：腾讯路径 mergeMp3 已改 libmp3lame 重编码拼接，同样依赖 ffmpeg。
+      - name: Install ffmpeg
         run: |
           if command -v ffmpeg >/dev/null 2>&1; then
             echo "ffmpeg already present: $(ffmpeg -version 2>/dev/null | head -1)"
@@ -205,11 +186,30 @@ jobs:
           fi
           command -v ffmpeg >/dev/null 2>&1 || { echo "::error::ffmpeg 安装失败"; exit 1; }
 
-      - name: Verify Piper & ffmpeg
-        run: |
-          command -v piper || { echo "::error::piper 未安装（pip install piper-tts 应已提供）"; exit 1; }
-          command -v ffmpeg >/dev/null 2>&1 || { echo "::error::ffmpeg 未安装"; exit 1; }
-          echo "piper + ffmpeg OK"
+      # ---------- Piper 本地 TTS（2026-08-24 调整：仅两种场景启用）----------
+      # 场景A（主用）：未配置腾讯密钥 → Piper 作为主用，须在 daily 前装好；
+      # 场景B（兜底）：配置了腾讯密钥但腾讯合成失败 → tts.ts 写
+      #   data/history/reports/<date>/tts-fallback-needed.txt 标记，daily 之后
+      #   条件安装 Piper 并跑 scripts/tts-fallback.ts 补合成（见 daily 后步骤）。
+      # 腾讯包月场景（有密钥）日常不再预装 Piper，避免每次运行白装。
+      - name: Setup Python (Piper 主用，无腾讯时)
+        if: ${{ secrets.TENCENTCLOUD_SECRET_ID == '' }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Cache Piper model (主用)
+        if: ${{ secrets.TENCENTCLOUD_SECRET_ID == '' }}
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/piper
+          key: piper-zh_CN-huayan-medium-v1
+          restore-keys: |
+            piper-zh_CN-huayan-medium-
+
+      - name: Install Piper TTS (主用)
+        if: ${{ secrets.TENCENTCLOUD_SECRET_ID == '' }}
+        run: python3 -m pip install --upgrade pip piper-tts
 
       # Bring previous reports into the workspace so they survive each run
       # and so build-site can list them all in the archive.
@@ -285,6 +285,33 @@ jobs:
           TTS_SPEED: ${{ vars.TTS_SPEED }}
           WEB_MODE: 'true'
         run: npm run daily
+
+      # ---------- Piper 兜底（场景B：仅腾讯失败时，2026-08-24）----------
+      # 腾讯密钥已配置但合成失败 → tts.ts 已写 tts-fallback-needed.txt 标记；
+      # 此处才安装 Piper（含模型缓存）并跑 scripts/tts-fallback.ts 补合成，
+      # 保证「Piper 只在腾讯失败时发起」。正常腾讯成功时这 4 步全部跳过。
+      - name: Setup Python (Piper 兜底)
+        if: ${{ secrets.TENCENTCLOUD_SECRET_ID != '' && hashFiles('data/history/reports/*/tts-fallback-needed.txt') != '' }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Cache Piper model (兜底)
+        if: ${{ secrets.TENCENTCLOUD_SECRET_ID != '' && hashFiles('data/history/reports/*/tts-fallback-needed.txt') != '' }}
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/piper
+          key: piper-zh_CN-huayan-medium-v1
+          restore-keys: |
+            piper-zh_CN-huayan-medium-
+
+      - name: Install Piper TTS (兜底)
+        if: ${{ secrets.TENCENTCLOUD_SECRET_ID != '' && hashFiles('data/history/reports/*/tts-fallback-needed.txt') != '' }}
+        run: python3 -m pip install --upgrade pip piper-tts
+
+      - name: Piper fallback synthesis (腾讯失败时)
+        if: ${{ secrets.TENCENTCLOUD_SECRET_ID != '' && hashFiles('data/history/reports/*/tts-fallback-needed.txt') != '' }}
+        run: npm run tts-fallback
 
       # 信息源抓取结果数据包（daily 导出），供本地「预 AI 分析加载」任务拉回比对
       # （识别信息源新增条目，不只爬虫数据）。

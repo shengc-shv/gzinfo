@@ -200,8 +200,12 @@ export async function assembleAudioScript(
     }
   }
   if (ipo) {
-    // 兜底/上游口播稿若已自带「另外，关注…广东IPO…」过渡语，先剥离避免与固定过渡语重复
-    ipo = ipo.replace(/^另外[，,]\s*关注(一条)?广东IP[ＯO]?[^。：:]*[。：:]?\s*/, "").trim();
+    // 兜底/上游口播稿若已自带「另外，关注…广东IPO…」过渡语，先剥离避免与固定过渡语重复。
+    // 上游两种写法都兼容：「另外关注广东IPO：…」「另外，关注一条广东IPO企业动态。…」
+    // （2026-08-24 修复：原正则要求「另外」后必须带逗号，上游无逗号写法不匹配 → 叠加念两次 IPO）
+    ipo = ipo
+      .replace(/^(?:另外[，,]?\s*)?(?:关注(?:一条)?)?广东IP[ＯO]?[^。：:]*[。：:]?\s*/, "")
+      .trim();
     ipo = truncateAtSentence(ipo, AUDIO_SPEAK_LIMITS.ipo);
     parts.push(`${IPO_TRANSITION}${ipo}`);
     partMap.guangdong_ipo = ipo;

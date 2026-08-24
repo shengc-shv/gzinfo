@@ -23,8 +23,8 @@ export interface LocalAcquiredFile {
 
 const DEFAULT_PATH = "data/local-acquired.json";
 
-/** 读取时只采纳最近 N 天的条目（与 7 天滚动历史一致） */
-export const LOCAL_ACQUIRED_DAYS = 7;
+/** 读取时只采纳最近 N 天的条目（2026-08-24 用户拍板：与报告口径一致，全部只取 2 天） */
+export const LOCAL_ACQUIRED_DAYS = 2;
 
 /** 读取本地采集文件（缺失/损坏/结构不符 → null） */
 export function loadLocalAcquired(filePath = DEFAULT_PATH): LocalAcquiredFile | null {
