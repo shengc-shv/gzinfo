@@ -4211,9 +4211,67 @@
     },
     {
       "sourceId": "cnfin",
-      "source": "新华财经",
       "title": "上海：加快推进新型工业化 强化三大先导产业战略引领",
       "url": "https://www.cnfin.com/hg-lb/detail/20260824/4459616_1.html",
+      "excerpt": "",
+      "publishedAt": "2026-08-24T00:00:00.000Z",
+      "category": "finance",
+      "source": "新华财经",
+      "fetchedToday": true,
+      "subcategory": "cn-finance"
+    },
+    {
+      "sourceId": "stcn",
+      "title": "精准呵护流动性！央行将连续出手",
+      "url": "https://www.stcn.com/article/detail/4108550.html",
+      "excerpt": "",
+      "publishedAt": "2026-08-24T00:00:00.000Z",
+      "category": "finance",
+      "source": "证券时报",
+      "fetchedToday": true,
+      "subcategory": "cn-finance"
+    },
+    {
+      "sourceId": "stcn",
+      "title": "拟派现超490亿元！深市上市公司掀中期分红潮",
+      "url": "https://www.stcn.com/article/detail/4108551.html",
+      "excerpt": "",
+      "publishedAt": "2026-08-24T00:00:00.000Z",
+      "category": "finance",
+      "source": "证券时报",
+      "fetchedToday": true,
+      "subcategory": "cn-finance"
+    },
+    {
+      "sourceId": "stcn",
+      "title": "受益AI基建 建滔积层板中期纯利大增209% 7月利润约11亿港元创单月新高",
+      "url": "https://www.stcn.com/article/detail/4108552.html",
+      "excerpt": "",
+      "publishedAt": "2026-08-24T00:00:00.000Z",
+      "category": "finance",
+      "source": "证券时报",
+      "fetchedToday": true,
+      "subcategory": "cn-finance"
+    },
+    {
+      "sourceId": "sina-money",
+      "title": "易方达精债人民币2026-08-21基金净值公告",
+      "url": "https://finance.sina.com.cn/stock/aigc/hkgg/2026-08-24/doc-inipmnpq6049946.shtml",
+      "excerpt": "【财富管理】易方达精债人民币2026-08-21基金净值公告",
+      "category": "gz",
+      "publishedAt": "2026-08-24T00:00:00.000Z",
+      "source": "新浪财经·理财保险",
+      "tier": "T2",
+      "filterBucket": "daily",
+      "filterDimensions": [],
+      "fetchedToday": true,
+      "subcategory": "cn-finance"
+    },
+    {
+      "sourceId": "cnfin",
+      "source": "新华财经",
+      "title": "上半年国内手机出货量超98%支持北斗定位",
+      "url": "https://www.cnfin.com/hg-lb/detail/20260824/4459628_1.html",
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "finance",
@@ -4227,8 +4285,8 @@
     {
       "sourceId": "stcn",
       "source": "证券时报",
-      "title": "精准呵护流动性！央行将连续出手",
-      "url": "https://www.stcn.com/article/detail/4108550.html",
+      "title": "国缆检测2026年上半年净利增长19.22% 推进培育新业务",
+      "url": "https://www.stcn.com/article/detail/4106158.html",
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "finance",
@@ -4242,8 +4300,8 @@
     {
       "sourceId": "stcn",
       "source": "证券时报",
-      "title": "拟派现超490亿元！深市上市公司掀中期分红潮",
-      "url": "https://www.stcn.com/article/detail/4108551.html",
+      "title": "天有为2026年上半年实现营收18.12亿元 智能座舱与海外布局协同推进",
+      "url": "https://www.stcn.com/article/detail/4106290.html",
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "finance",
@@ -4255,19 +4313,34 @@
       "subcategory": "cn-finance"
     },
     {
-      "sourceId": "stcn",
-      "source": "证券时报",
-      "title": "受益AI基建 建滔积层板中期纯利大增209% 7月利润约11亿港元创单月新高",
-      "url": "https://www.stcn.com/article/detail/4108552.html",
+      "sourceId": "dayoo-gz",
+      "source": "广州日报·大洋网",
+      "title": "APEC中小企业部长会议，广州准备好了",
+      "url": "https://news.dayoo.com/guangzhou/202608/24/139995_54994509.htm",
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
-      "category": "finance",
+      "category": "gz",
       "summary": "",
       "tier": "T2",
       "filterBucket": "daily",
       "filterDimensions": [],
       "fetchedToday": true,
-      "subcategory": "cn-finance"
+      "subcategory": "gz-media"
+    },
+    {
+      "sourceId": "dayoo-gz",
+      "source": "广州日报·大洋网",
+      "title": "广州推行“无事不扰”双清单管理机制，已有45656户经营主体纳入“白名单”",
+      "url": "https://news.dayoo.com/guangzhou/202608/24/139995_54994510.htm",
+      "excerpt": "",
+      "publishedAt": "2026-08-24T00:00:00.000Z",
+      "category": "gz",
+      "summary": "",
+      "tier": "T2",
+      "filterBucket": "daily",
+      "filterDimensions": [],
+      "fetchedToday": true,
+      "subcategory": "gz-media"
     }
   ]
 }

@@ -4589,5 +4589,77 @@
     "publishedAt": "2026-08-24T00:00:00.000Z",
     "firstSeenAt": "2026-08-24T11:27:09.229Z",
     "lastSeenAt": "2026-08-24T11:27:09.229Z"
+  },
+  "https://finance.sina.com.cn/stock/aigc/hkgg/2026-08-24/doc-inipmnpq6049946.shtml": {
+    "title": "易方达精债人民币2026-08-21基金净值公告",
+    "url": "https://finance.sina.com.cn/stock/aigc/hkgg/2026-08-24/doc-inipmnpq6049946.shtml",
+    "sourceId": "sina-money",
+    "source": "新浪财经·理财保险",
+    "category": "gz",
+    "subcategory": "cn-finance",
+    "excerpt": "【财富管理】易方达精债人民币2026-08-21基金净值公告",
+    "publishedAt": "2026-08-24T00:00:00.000Z",
+    "firstSeenAt": "2026-08-24T11:38:56.564Z",
+    "lastSeenAt": "2026-08-24T11:38:56.564Z"
+  },
+  "https://www.cnfin.com/hg-lb/detail/20260824/4459628_1.html": {
+    "title": "上半年国内手机出货量超98%支持北斗定位",
+    "url": "https://www.cnfin.com/hg-lb/detail/20260824/4459628_1.html",
+    "sourceId": "cnfin",
+    "source": "新华财经",
+    "category": "finance",
+    "subcategory": "cn-finance",
+    "excerpt": "",
+    "publishedAt": "2026-08-24T00:00:00.000Z",
+    "firstSeenAt": "2026-08-24T11:38:56.564Z",
+    "lastSeenAt": "2026-08-24T11:38:56.564Z"
+  },
+  "https://www.stcn.com/article/detail/4106158.html": {
+    "title": "国缆检测2026年上半年净利增长19.22% 推进培育新业务",
+    "url": "https://www.stcn.com/article/detail/4106158.html",
+    "sourceId": "stcn",
+    "source": "证券时报",
+    "category": "finance",
+    "subcategory": "cn-finance",
+    "excerpt": "",
+    "publishedAt": "2026-08-24T00:00:00.000Z",
+    "firstSeenAt": "2026-08-24T11:38:56.564Z",
+    "lastSeenAt": "2026-08-24T11:38:56.564Z"
+  },
+  "https://www.stcn.com/article/detail/4106290.html": {
+    "title": "天有为2026年上半年实现营收18.12亿元 智能座舱与海外布局协同推进",
+    "url": "https://www.stcn.com/article/detail/4106290.html",
+    "sourceId": "stcn",
+    "source": "证券时报",
+    "category": "finance",
+    "subcategory": "cn-finance",
+    "excerpt": "",
+    "publishedAt": "2026-08-24T00:00:00.000Z",
+    "firstSeenAt": "2026-08-24T11:38:56.564Z",
+    "lastSeenAt": "2026-08-24T11:38:56.564Z"
+  },
+  "https://news.dayoo.com/guangzhou/202608/24/139995_54994509.htm": {
+    "title": "APEC中小企业部长会议，广州准备好了",
+    "url": "https://news.dayoo.com/guangzhou/202608/24/139995_54994509.htm",
+    "sourceId": "dayoo-gz",
+    "source": "广州日报·大洋网",
+    "category": "gz",
+    "subcategory": "gz-media",
+    "excerpt": "",
+    "publishedAt": "2026-08-24T00:00:00.000Z",
+    "firstSeenAt": "2026-08-24T11:38:56.564Z",
+    "lastSeenAt": "2026-08-24T11:38:56.564Z"
+  },
+  "https://news.dayoo.com/guangzhou/202608/24/139995_54994510.htm": {
+    "title": "广州推行“无事不扰”双清单管理机制，已有45656户经营主体纳入“白名单”",
+    "url": "https://news.dayoo.com/guangzhou/202608/24/139995_54994510.htm",
+    "sourceId": "dayoo-gz",
+    "source": "广州日报·大洋网",
+    "category": "gz",
+    "subcategory": "gz-media",
+    "excerpt": "",
+    "publishedAt": "2026-08-24T00:00:00.000Z",
+    "firstSeenAt": "2026-08-24T11:38:56.564Z",
+    "lastSeenAt": "2026-08-24T11:38:56.564Z"
   }
 }
