@@ -2761,5 +2761,65 @@
     "publishedAt": "2026-08-23T00:00:00.000Z",
     "firstSeenAt": "2026-08-24T05:58:19.498Z",
     "lastSeenAt": "2026-08-24T05:58:19.498Z"
+  },
+  "https://arxiv.org/abs/2608.20440": {
+    "title": "Decision Tree and K-Means Analysis of Raman Spectra for Edible Oils: A Physics-Informed AI Approach",
+    "url": "https://arxiv.org/abs/2608.20440",
+    "sourceId": "arxiv-fintech",
+    "source": "arXiv 金融科技论文 (cs.AI·cs.LG·q-fin)",
+    "category": "tech",
+    "subcategory": "overseas-tech",
+    "excerpt": "arXiv:2608.20440v1 Announce Type: new Abstract: Authentication of edible oils in processed foods is important for food quality, fraud prevention, and regulatory compliance. This study establishes an integrated Raman spectroscopy and machine-learning framework that links intrinsic spectral organizati",
+    "publishedAt": "2026-08-24T04:00:00.000Z",
+    "firstSeenAt": "2026-08-24T06:02:22.103Z",
+    "lastSeenAt": "2026-08-24T06:02:22.103Z"
+  },
+  "https://www.stcn.com/article/detail/4105313.html": {
+    "title": "贵州茅台，股价重回1300元之上！种业概念股，逆市上涨",
+    "url": "https://www.stcn.com/article/detail/4105313.html",
+    "sourceId": "stcn",
+    "source": "证券时报",
+    "category": "finance",
+    "subcategory": "cn-finance",
+    "excerpt": "",
+    "publishedAt": "2026-08-24T00:00:00.000Z",
+    "firstSeenAt": "2026-08-24T06:02:22.103Z",
+    "lastSeenAt": "2026-08-24T06:02:22.103Z"
+  },
+  "https://www.stcn.com/article/detail/4105301.html": {
+    "title": "茅台股价大涨",
+    "url": "https://www.stcn.com/article/detail/4105301.html",
+    "sourceId": "stcn",
+    "source": "证券时报",
+    "category": "finance",
+    "subcategory": "cn-finance",
+    "excerpt": "",
+    "publishedAt": "2026-08-24T00:00:00.000Z",
+    "firstSeenAt": "2026-08-24T06:02:22.103Z",
+    "lastSeenAt": "2026-08-24T06:02:22.103Z"
+  },
+  "https://www.stcn.com/article/detail/4105302.html": {
+    "title": "突然变盘！三大巨头集体下跌！重磅“新技术”曝光，影响多大？",
+    "url": "https://www.stcn.com/article/detail/4105302.html",
+    "sourceId": "stcn",
+    "source": "证券时报",
+    "category": "finance",
+    "subcategory": "cn-finance",
+    "excerpt": "",
+    "publishedAt": "2026-08-24T00:00:00.000Z",
+    "firstSeenAt": "2026-08-24T06:02:22.103Z",
+    "lastSeenAt": "2026-08-24T06:02:22.103Z"
+  },
+  "https://www.stcn.com/article/detail/4105289.html": {
+    "title": "中广核风电等在云南楚雄成立新能源公司 注册资本1亿元",
+    "url": "https://www.stcn.com/article/detail/4105289.html",
+    "sourceId": "stcn",
+    "source": "证券时报",
+    "category": "finance",
+    "subcategory": "cn-finance",
+    "excerpt": "",
+    "publishedAt": "2026-08-24T00:00:00.000Z",
+    "firstSeenAt": "2026-08-24T06:02:22.103Z",
+    "lastSeenAt": "2026-08-24T06:02:22.103Z"
   }
 }
