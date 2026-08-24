@@ -900,6 +900,25 @@ export const THEME_CSS = `
   .meta-line { margin: 0.6rem 0 0; font-size: 0.82rem; color: var(--muted); }
   .meta-line .archive { color: var(--muted); }
 
+  /* ===== 语音播报 sticky 播放器（2026-08-24 新增）===== */
+  .player-card {
+    position: sticky; top: 0; z-index: 30;
+    margin: 0 0 1.4rem; padding: 0.85rem 1.05rem;
+    background: color-mix(in srgb, var(--accent-cmb) 7%, var(--bg));
+    border: 1px solid color-mix(in srgb, var(--accent-cmb) 30%, var(--rule));
+    border-radius: var(--r-lg);
+    box-shadow: var(--shadow-sm);
+    backdrop-filter: saturate(180%) blur(8px);
+    -webkit-backdrop-filter: saturate(180%) blur(8px);
+  }
+  .player-title {
+    display: flex; align-items: baseline; gap: 0.5rem;
+    font-weight: 600; font-size: 0.98rem; color: var(--fg);
+  }
+  .player-title .ic { font-size: 1.05rem; }
+  .player-dur { font-weight: 400; font-size: 0.82rem; color: var(--muted); }
+  .player-card audio { width: 100%; margin-top: 0.55rem; }
+
   /* 今日必读字号加大（#7） */
   .must-card strong { font-size: 0.92rem; }
   .must-card .must-why { font-size: 0.85rem; }
@@ -917,7 +936,7 @@ export const THEME_CSS = `
   .tag.t-wealth { color: #7c3aed; background: rgba(124, 58, 237, 0.12); }
   .tag.t-mass { color: #059669; background: rgba(5, 150, 105, 0.12); }
   .tag.t-policy { color: #b45309; background: rgba(180, 83, 9, 0.12); }
-  /* 粤标签（2026-08-23）：广东企业/事件地域标记，招行红描边胶囊，区别于业务线彩底 */
+  /* 粤标签（2026-08-23）：广东企业/事件地域标记，品牌红描边胶囊，区别于业务线彩底 */
   .tag.t-gd { color: var(--accent-cmb, #e60012); background: color-mix(in srgb, var(--accent-cmb, #e60012) 8%, transparent); border: 1px solid color-mix(in srgb, var(--accent-cmb, #e60012) 45%, transparent); font-weight: 800; }
 
   /* 单层 tab：横滑不折行（#11） */

@@ -34,6 +34,7 @@ import {
 } from "./render/sections";
 export type { SourceGroup, SubGroup, RawByCategory } from "./render/cards";
 import { TIER_COLORS, THEME_CSS } from "./render/theme";
+import type { AudioMeta } from "../audio/audio";
 import { getReportTz } from "../utils";
 import type { Category, SourceDef } from "../sources/types";
 import { SOURCE_TIER_LABELS, type SourceTier } from "../sources/tiers";
@@ -1247,6 +1248,7 @@ export function mergeStoredExecutive(
 export function renderHtml(
   report: DailyReport,
   date: string,
+  opts: { audio?: AudioMeta } = {},
 ): string {
   // 跨板块去重（一文一卡）：同一 URL 只展示一次，优先级
   // 广州本地 > 业务启示 > 政策与市场 > 科技前沿 > IPO。
@@ -1334,6 +1336,10 @@ ${THEME_CSS}
 </head>
 <body>
 <main>
+  ${opts.audio ? `<div class="player-card">
+    <div class="player-title"><span class="ic">🎧</span> 今日语音简报 <span class="player-dur">${escapeHtml(opts.audio.duration)}</span></div>
+    <audio controls preload="none" src="${escapeHtml(opts.audio.src)}"></audio>
+  </div>` : ""}
   <!-- 报头：今日定调 + 数据截至 -->
   <header class="masthead">
     <div class="eyebrow">广州地区 · 零售业务每日资信（个人整理，非本行立场）</div>

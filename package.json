@@ -20,6 +20,7 @@
   "dependencies": {
     "@anthropic-ai/sdk": "^0.96.0",
     "cheerio": "^1.2.0",
+    "edge-tts": "^1.0.1",
     "jsonrepair": "^3.15.0",
     "openai": "^6.49.0",
     "rss-parser": "^3.13.0"

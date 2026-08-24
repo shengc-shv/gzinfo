@@ -34,6 +34,14 @@ export interface ExecutiveSummary {
   must_read: Array<{ title: string; why: string; url?: string }>;
   /** 商机提示：对广州分行零售/对公的潜在影响与建议动作 */
   insights: ExecInsight[];
+  /** 口播稿：今日定调（主播解读感：30字完整句，判断+归因，纯口语） */
+  spoken_hero?: string;
+  /** 口播稿：今日必读（主播解读感：2-3句判断+归因，≤90字，不照读，纯口语） */
+  spoken_must_read?: string;
+  /** 口播稿：商机洞察（快讯电报体：3短分句/约25字，多条换行，纯口语） */
+  spoken_insights?: string;
+  /** 广东/广州 IPO 企业动态口播（≤60字）；当日无相关动态时为 null */
+  guangdong_ipo?: { spoken?: string } | null;
 }
 
 export interface ExecSummaryInput {
@@ -43,6 +51,8 @@ export interface ExecSummaryInput {
   gz: Array<{ title: string; summary?: string; subcategory?: string; url?: string }>;
   /** 市场行情总览（AI 点评，可选） */
   marketOverview?: string;
+  /** IPO 板块条目（用于筛广东/广州 IPO 动态口播，可选） */
+  ipo?: Array<{ title?: string; summary?: string; url?: string }>;
   /** 报告日期 YYYY-MM-DD */
   date: string;
 }
@@ -52,14 +62,15 @@ const SYSTEM_PROMPT =
 
 const RULES = `你是股份行广州分行零售决策简报的主编。系统面向分行信息技术部领导和分管零售的行领导，核心诉求：更快掌握宏观经济变化、政府政策变化、市场变化，从而挖掘更多客户、发现更多商机。
 
-基于输入的当日条目（宏观政策 + 广州商机 + 市场总览），输出三部分：
+基于输入的当日条目（宏观政策 + 广州商机 + 市场总览 + IPO），输出四部分：
 
-0. hero_line（今日定调，1 句话）：以"总编辑"视角提炼今天最值得分行领导关注的一件事，50 字以内，一句话讲清"今天主题是什么、对分行意味着什么"。例："中行'算力Token贷'在穗抢跑落地，同业以新风控逻辑圈占科创轻资产客群，分行需尽快评估应对。" 若当日无突出主题可省略（输出空字符串）。
+0. hero_line（今日定调，1 句话）：以"总编辑"视角提炼今天最值得分行领导关注的一件事，50 字以内，一句话讲清"今天主题是什么、对分行意味着什么"。例："中行'算力Token贷'在穗抢跑落地，同业以新风控逻辑圈占科创轻资产客群，分行需尽快评估应对。" 若当日无突出主题可省略（输出空字符串）；并为该定调配套口播稿 spoken_hero（"主播解读感"：30 字左右完整句，先下判断再讲归因，如"六大行贴息集体扩围，信贷价格战升级，分行须抢窗口"，与 hero_line 结论一致；纯口语、无链接/无Markdown/无emoji，可直接朗读，严禁照读 hero_line 原文）。
 
 1. must_read（今日必读，3-5 条）：从输入中挑出对广州分行领导"今天最该知道"的高影响事件（如降准降息、LPR、社融、广州产业政策、广州本地金融动态、重要市场转折）。每条：
    - title：事件标题（15 字内，中文，可精简）
    - why：为什么重要——对广州分行零售/对公意味着什么（30-50 字）
    - url：源链接，从下方输入对应条目的 url 字段原样复制（若对不上可省略，留空）
+   ；并为今日必读整体配套口播稿 spoken_must_read（"主播解读感"：把必读提炼为"判断+归因"式解读，2-3 句、每句 30 字内、总字数≤90 字；挑最关键 1-2 条讲清"意味着什么+为什么"，严禁逐条照读标题与全文，不念链接与来源名）。
 
 2. insights（商机提示，3-5 条）：把当日信息转化为"在广州可落地的商机/风险"，每条：
    - topic：主题（15 字内）
@@ -67,13 +78,17 @@ const RULES = `你是股份行广州分行零售决策简报的主编。系统�
    - action：建议动作——具体可执行（获客方向/产品配置/风险提示，40-60 字），如"关注消费贷客群、加大理财配置推荐、提示按揭风险"
    - tag：业务线标签数组，从词表选 1-2 个（词表：竞对动态/信贷/代发/私行/政银合作/住房金融/财富/客群/监管/科技金融）
    - sources：来源链接数组（1-3 条，必填优先）。每条为输入中直接支撑该洞察的源文章，原样复制其 {title,url}（url 从输入对应条目复制，不得编造）。若洞察由多条输入综合得出，列最权威的 1-3 条；若确实无任何输入支撑则该字段省略。
+   ；并为商机洞察整体配套口播稿 spoken_insights（"快讯电报体"：3 个短分句共约 25 字，短平快、无废话，如"贴息扩围；客群价敏；抢定价窗口"；若有多条洞察，每条各用一行 3 短分句电报体（换行分隔），每条≤25 字，不要铺陈成段落，不念表格）。
+
+3. guangdong_ipo（广东/广州企业 IPO 动态，1 条或 null）：若输入 ipo 条目中存在"广东/广州企业"的 IPO 相关进展（过会、注册生效、申购、招股、上市敲钟等），则产出 guangdong_ipo.spoken（≤60字，说清企业名称、上市板块与最新进展，一两句话）；若无广东/广州 IPO 动态，则 guangdong_ipo 设为 null（不要编造）。
 
 要求：
 - 只基于输入信息，不要编造
 - 广州本地信息（南沙/广州企业/广州政策）优先于泛全国信息
 - 语言精炼，站在分行行长视角，不写空话套话
+- spoken_* 口播稿均为纯文本：无 Markdown、无链接、无 emoji、无 # * | \` 等符号，可直接朗读；口播稿必须是"二次提炼的主播语态"，严禁把 hero_line/must_read/insights 原文整段照读，要浓缩成口语短句（定调/必读用"主播解读感"判断+归因，洞察用"快讯电报体"短分句）
 - 输出 STRICTLY 一个 JSON 对象（无 markdown 代码块）：
-{"hero_line":"...","must_read":[{"title":"...","why":"...","url":"..."}],"insights":[{"topic":"...","impact":"...","action":"...","tag":["..."],"sources":[{"title":"...","url":"..."}]}]}
+{"hero_line":"...","spoken_hero":"...","must_read":[{"title":"...","why":"...","url":"..."}],"spoken_must_read":"...","insights":[{"topic":"...","impact":"...","action":"...","tag":["..."],"sources":[{"title":"...","url":"..."}]}],"spoken_insights":"...","guangdong_ipo":{"spoken":"..."} 或 null}
 注意：字符串内引号用单引号或中文引号，禁止裸双引号；url 字段原样复制输入中的链接。`;
 
 /**
@@ -136,6 +151,11 @@ export async function generateExecutiveSummary(
     market_overview: input.marketOverview ?? "",
     finance: input.finance.slice(0, 12),
     gz: input.gz.slice(0, 12),
+    ipo: (input.ipo ?? []).slice(0, 20).map((it) => ({
+      title: it.title ?? "",
+      summary: it.summary ?? "",
+      url: it.url ?? "",
+    })),
   };
   const userPrompt = [
     RULES,
@@ -143,7 +163,7 @@ export async function generateExecutiveSummary(
     `当日信息（JSON）：`,
     JSON.stringify(payload),
     "",
-    '请输出 {"hero_line": "...", "must_read": [...], "insights": [...]}，hero_line 1 句、must_read 3-5 条、insights 3-5 条。',
+    '请输出 {"hero_line":"...","spoken_hero":"...","must_read":[...],"spoken_must_read":"...","insights":[...],"spoken_insights":"...","guangdong_ipo":{...} 或 null}，hero_line 1 句、must_read 3-5 条、insights 3-5 条；spoken_* 与 guangdong_ipo.spoken 按要求字数返回纯口语文本。',
   ].join("\n");
   try {
     const { text } = await runLlm({ systemPrompt: SYSTEM_PROMPT, userPrompt, timeoutMs: 240_000 }, { stage: "executive" });
@@ -173,11 +193,13 @@ export async function generateExecutiveSummary(
     };
     return {
       hero_line: typeof parsed.hero_line === "string" ? parsed.hero_line : "",
+      spoken_hero: typeof parsed.spoken_hero === "string" && parsed.spoken_hero.trim() ? parsed.spoken_hero.trim() : undefined,
       must_read: parsed.must_read.slice(0, 5).map((m) => ({
         title: m.title,
         why: m.why,
         url: m.url || resolveUrl(m.title),
       })),
+      spoken_must_read: typeof parsed.spoken_must_read === "string" && parsed.spoken_must_read.trim() ? parsed.spoken_must_read.trim() : undefined,
       insights: parsed.insights.slice(0, 5).map((it) => {
         // sources：优先用 LLM 显式引源；否则用生成时看到的 inputs（finance+gz，含真实 URL）
         // 按相似度回链 1-3 条来源，保证「商机洞察」卡片有可信溯源入口（不依赖 LLM 吐 url 格式）。
@@ -193,6 +215,11 @@ export async function generateExecutiveSummary(
           ...(sources.length > 0 ? { sources } : {}),
         };
       }),
+      spoken_insights: typeof parsed.spoken_insights === "string" && parsed.spoken_insights.trim() ? parsed.spoken_insights.trim() : undefined,
+      guangdong_ipo:
+        parsed.guangdong_ipo && typeof parsed.guangdong_ipo === "object" && typeof parsed.guangdong_ipo.spoken === "string" && parsed.guangdong_ipo.spoken.trim()
+          ? { spoken: parsed.guangdong_ipo.spoken.trim() }
+          : null,
     };
   } catch {
     return null;

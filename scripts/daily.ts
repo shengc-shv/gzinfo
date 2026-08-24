@@ -55,6 +55,8 @@ import {
   mergeStoredExecutive,
 } from "../lib/output/render";
 import { loadStore, generateExecutiveSummary, writeStore } from "../lib/ai/executive-summary";
+import { assembleAudioScript, formatDuration, type AudioMeta } from "../lib/audio/audio";
+import { synthesizeAudio } from "../lib/audio/tts";
 import { buildTwoDayExecPool } from "../lib/ai/exec-pool";
 import { DISPLAY_WINDOW_DAYS, GZ_ANCHOR_RE } from "../lib/output/render/cards";
 import {
@@ -655,7 +657,39 @@ async function main() {
   // —— M2-⑤ 存储合并（去双写，2026-08-19 用户确认未上线）——
   // data/history/reports/ 是唯一报告存储；daily_reports/（gh-pages 发布目录）
   // 由 build-site.mjs 在构建时从唯一存储同步，daily.ts 不再写旧目录。
-  const html = renderHtml(mergedReport, date);
+  // —— 语音播报（2026-08-24 新增）：执行摘要融合口播稿 + TTS ——
+  // 读已持久化执行摘要（含 spoken_*）→ 拼装口播稿 → 生成 mp3；
+  // SKIP_TTS 时跳过实际合成，但仍在页面注入播放器占位（指向约定路径）；
+  // 任何失败均不阻断发布（打 warning 继续，失败/缺失时页面不显示播放器）。
+  // 口播稿随 store.json 持久化，故 SKIP_AI 重跑也能复用、照常出语音（决策 #3）。
+  let audio: AudioMeta | undefined;
+  try {
+    const execAudio = loadStore(date);
+    if (execAudio) {
+      const built = await assembleAudioScript(date, execAudio, mergedReport.sections.ipo ?? []);
+      if (built) {
+        if (process.env.SKIP_TTS === "true") {
+          console.log(`[daily] SKIP_TTS：跳过实际音频合成（页面注入播放器占位）`);
+          audio = { src: `audio/briefing-${date}.mp3`, duration: formatDuration(built.durationSec) };
+        } else {
+          try {
+            const tts = await synthesizeAudio(date, built.script);
+            audio = { src: `audio/briefing-${date}.mp3`, duration: formatDuration(tts.durationSec) };
+          } catch (e) {
+            const msg = e instanceof Error ? e.message : String(e);
+            console.warn(`[daily] ⚠️ TTS 合成失败（不阻断发布，页面不出播放器）: ${msg}`);
+          }
+        }
+      }
+    } else {
+      console.warn(`[daily] ⚠️ 无执行摘要（store.json 缺失），跳过语音播报生成`);
+    }
+  } catch (e) {
+    const msg = e instanceof Error ? e.message : String(e);
+    console.warn(`[daily] ⚠️ 语音播报生成失败（不阻断发布）: ${msg}`);
+  }
+
+  const html = renderHtml(mergedReport, date, { audio });
   const md = process.env.OUTPUT_MARKDOWN === "true" ? renderMarkdown(mergedReport, date) : null;
   const writeBundle = (dir: string) => {
     const d = path.join(dir, date);

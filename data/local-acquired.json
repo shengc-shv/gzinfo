@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-23T05:48:21.488Z",
+  "fetchedAt": "2026-08-24T05:49:09.843Z",
   "items": [
     {
       "title": "国家金融监督管理总局吉安监管分局行政处罚信息公开表",
@@ -29,6 +29,14 @@
       "title": "国家金融监督管理总局贵州监管局行政处罚信息公开表\n（贵金罚决字〔2026〕30-31号）",
       "url": "https://www.nfra.gov.cn/cn/view/pages/ItemDetail.html?docId=1268766",
       "excerpt": "国家金融监督管理总局贵州监管局行政处罚信息公开表 （贵金罚决字〔2026〕30-31号）",
+      "publishedAt": "2026-08-21",
+      "sourceId": "nfra",
+      "source": "国家金融监督管理总局"
+    },
+    {
+      "title": "国家金融监督管理总局安庆监管分局\n行政处罚信息公开表",
+      "url": "https://www.nfra.gov.cn/cn/view/pages/ItemDetail.html?docId=1268975",
+      "excerpt": "国家金融监督管理总局安庆监管分局行政处罚信息公开表",
       "publishedAt": "2026-08-21",
       "sourceId": "nfra",
       "source": "国家金融监督管理总局"
@@ -90,58 +98,50 @@
       "source": "国家金融监督管理总局"
     },
     {
-      "title": "国家金融监督管理总局关于实施《保险公司资产负债管理办法》有关事项的通知",
-      "url": "https://www.nfra.gov.cn/cn/view/pages/ItemDetail.html?docId=1268949",
+      "title": "国家金融监督管理总局桂林监管分局行政处罚事先告知书送达公告（夏大文)",
+      "url": "https://www.nfra.gov.cn/cn/view/pages/ItemDetail.html?docId=1269003",
       "excerpt": "",
       "publishedAt": "2026-08-21",
       "sourceId": "nfra",
       "source": "国家金融监督管理总局"
     },
     {
-      "title": "保险公司资产负债管理办法",
-      "url": "https://www.nfra.gov.cn/cn/view/pages/ItemDetail.html?docId=1268952",
+      "title": "国家金融监督管理总局桂林监管分局行政处罚事先告知书送达公告（乔盛清)",
+      "url": "https://www.nfra.gov.cn/cn/view/pages/ItemDetail.html?docId=1269002",
       "excerpt": "",
       "publishedAt": "2026-08-21",
       "sourceId": "nfra",
       "source": "国家金融监督管理总局"
     },
     {
-      "title": "国家金融监督管理总局白山监管分局行政处罚信息公示列表",
-      "url": "https://www.nfra.gov.cn/cn/view/pages/ItemDetail.html?docId=1268872",
-      "excerpt": "",
-      "publishedAt": "2026-08-20",
-      "sourceId": "nfra",
-      "source": "国家金融监督管理总局"
-    },
-    {
-      "title": "常州金融监管分局行政处罚信息公开表",
-      "url": "https://www.nfra.gov.cn/cn/view/pages/ItemDetail.html?docId=1268642",
-      "excerpt": "",
-      "publishedAt": "2026-08-20",
-      "sourceId": "nfra",
-      "source": "国家金融监督管理总局"
-    },
-    {
-      "title": "国家金融监督管理总局办公厅关于印发《非车险综合治理行动方案》的通知",
-      "url": "https://www.nfra.gov.cn/cn/view/pages/ItemDetail.html?docId=1268910",
+      "title": "国家金融监督管理总局桂林监管分局行政处罚事先告知书送达公告（漆楚航)",
+      "url": "https://www.nfra.gov.cn/cn/view/pages/ItemDetail.html?docId=1269001",
       "excerpt": "",
       "publishedAt": "2026-08-21",
       "sourceId": "nfra",
       "source": "国家金融监督管理总局"
     },
     {
-      "title": "泉州金融监管分局行政处罚信息公示表",
-      "url": "https://www.nfra.gov.cn/cn/view/pages/ItemDetail.html?docId=1268629",
+      "title": "国家金融监督管理总局桂林监管分局行政处罚事先告知书送达公告（梁宏铠)",
+      "url": "https://www.nfra.gov.cn/cn/view/pages/ItemDetail.html?docId=1269000",
       "excerpt": "",
-      "publishedAt": "2026-08-19",
+      "publishedAt": "2026-08-21",
       "sourceId": "nfra",
       "source": "国家金融监督管理总局"
     },
     {
-      "title": "丹东金融监管分局行政处罚信息公示列表",
-      "url": "https://www.nfra.gov.cn/cn/view/pages/ItemDetail.html?docId=1268572",
+      "title": "国家金融监督管理总局桂林监管分局行政处罚事先告知书送达公告（郭悦)",
+      "url": "https://www.nfra.gov.cn/cn/view/pages/ItemDetail.html?docId=1268999",
       "excerpt": "",
-      "publishedAt": "2026-08-19",
+      "publishedAt": "2026-08-21",
+      "sourceId": "nfra",
+      "source": "国家金融监督管理总局"
+    },
+    {
+      "title": "国家金融监督管理总局桂林监管分局行政处罚事先告知书送达公告（曹华军)",
+      "url": "https://www.nfra.gov.cn/cn/view/pages/ItemDetail.html?docId=1268994",
+      "excerpt": "",
+      "publishedAt": "2026-08-21",
       "sourceId": "nfra",
       "source": "国家金融监督管理总局"
     },
@@ -162,12 +162,60 @@
       "source": "中国人民银行"
     },
     {
-      "title": "中国人民银行新增8家数字人民币业务运营机构",
-      "url": "https://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026081714114337358/index.html",
-      "excerpt": "",
-      "publishedAt": "2026-08-17",
-      "sourceId": "pbc",
-      "source": "中国人民银行"
+      "title": "国务院国资委召开中央企业6G未来产业推进会",
+      "url": "https://www.cls.cn/detail/2462098",
+      "excerpt": "8月20日，国务院国资委召开中央企业6G未来产业推进会。会议强调，推动6G未来产业发展是中央企业落实国家战略部署、履行战略使命的必然要求，中央企业要主动衔接国家、地方、行业规划，加快实现产业发展目标。",
+      "publishedAt": "2026-08-24",
+      "sourceId": "cls",
+      "source": "财联社"
+    },
+    {
+      "title": "资管周报：53只理财打新宇树科技斩获近亿元浮盈；第三批基准调整正式落地，百家公募密集公告",
+      "url": "https://www.cls.cn/detail/2462072",
+      "excerpt": "把握资管行业脉搏，综览每周市场动向，尽在财联社《资管周报》。",
+      "publishedAt": "2026-08-24",
+      "sourceId": "cls",
+      "source": "财联社"
+    },
+    {
+      "title": "债市公告精选 | 融创地产3家子公司逾期借款合计10.6亿元；新疆北新路桥上半年亏损2.72亿元",
+      "url": "https://www.cls.cn/detail/2462005",
+      "excerpt": "尽享债市公告，把握机会，有效避雷。",
+      "publishedAt": "2026-08-24",
+      "sourceId": "cls",
+      "source": "财联社"
+    },
+    {
+      "title": "黄金、比特币起飞！美债危机正重燃“货币贬值交易”？",
+      "url": "https://www.cls.cn/detail/2461946",
+      "excerpt": "①美国财长贝森特旨在压低美国融资成本的干预，仅让长期美债收益率走低了不到一天；\n②相比之下，更为持久的市场信号却在于——美元走弱，而黄金与比特币同步走高，进一步强化了年初由不断膨胀的美国财政赤字及政策走向隐忧所驱动的“货币贬值交易”叙事。",
+      "publishedAt": "2026-08-24",
+      "sourceId": "cls",
+      "source": "财联社"
+    },
+    {
+      "title": "债市早参8月24日|财政部下半年将及时谋划出台务实管用的增量政策；地方审计揭专项债资金闲置等问题",
+      "url": "https://www.cls.cn/detail/2461848",
+      "excerpt": "把握债市政策脉搏，综览每日市场动向，尽在财联社《债市早参》。",
+      "publishedAt": "2026-08-24",
+      "sourceId": "cls",
+      "source": "财联社"
+    },
+    {
+      "title": "全球央行年会本周召开！贝森特救不动的美债 沃什能救吗？",
+      "url": "https://www.cls.cn/detail/2461879",
+      "excerpt": "①债券投资者本周无疑将把焦点牢牢锁定在美联储主席凯文·沃什于杰克逊霍尔全球央行年会的讲话上；\n②随着美国财长贝森特上周的“救市”行动效果迅速消退，长期美国国债眼下正面临进一步抛售的风险，市场显然将从沃什表态中寻找美联储将如何应对顽固通胀与财政隐忧的蛛丝马迹……",
+      "publishedAt": "2026-08-24",
+      "sourceId": "cls",
+      "source": "财联社"
+    },
+    {
+      "title": "钟才文：上半年经济增长4.7%说明了什么？",
+      "url": "https://www.cls.cn/detail/2461824",
+      "excerpt": "①上半年我国GDP同比增长4.7%，处于全年4.5%—5%的增长预期目标区间，经济延续总体平稳、向新向优的发展态势；\n②上半年我国新动能对经济增长直接贡献超四成，规模以上清洁能源发电量占比36.2%，新能源汽车零售渗透率达54.1%，居民人均可支配收入同比名义增长5.2%。",
+      "publishedAt": "2026-08-24",
+      "sourceId": "cls",
+      "source": "财联社"
     },
     {
       "title": "具身智能涌向工厂一线，产业界竞逐落地“最后一公里” |2026WRC观察",
@@ -189,6 +237,30 @@
       "title": "罕见！贵阳银行取消一款理财产品业绩比较基准，新规倒计时多数机构仍在密集“换锚”",
       "url": "https://www.cls.cn/detail/2461195",
       "excerpt": "①与业内普遍的公式化调整不同，贵阳银行近日选择了一条特殊路径——直接取消旗下“爽银财富—周周宝”产品的业绩比较基准。\n②贵阳银行因无理财公司牌照、产品由自营渠道代销，或是其敢于“吃螃蟹”的关键背景。\n③新规正式实施仅剩最后十天，多家机构仍在密集调整业绩比较基准的表达方式。",
+      "publishedAt": "2026-08-21",
+      "sourceId": "cls",
+      "source": "财联社"
+    },
+    {
+      "title": "火速落实！多家大行披露贷款贴息操作细则，累计贴息上限升至5000元，存量客户给予便利安排",
+      "url": "https://www.cls.cn/detail/2461165",
+      "excerpt": "①相关细则主要还是围绕着《通知》政策要求落地展开，但其中也有一些属于银行自身额外要求和便利安排；\n②农行明确，信用卡分期年贴息比例为1个百分点，同时最高不超过约定的折算年化利率的50%；\n③中行、招行表示，已完成贴息申请的贷款无需重新签署贴息协议，将自动调整适用最新贴息额度。",
+      "publishedAt": "2026-08-21",
+      "sourceId": "cls",
+      "source": "财联社"
+    },
+    {
+      "title": "北京人形机器人创新中心CEO熊友军：行业重复建设问题突出，亟需打造操作系统级基础底座避免“重复造轮子”",
+      "url": "https://www.cls.cn/detail/2461062",
+      "excerpt": "①整个产业已从单纯的“炫技”，开始偏向于工业逻辑与产业逻辑，具身智能已经到了“切入GDP的前夜”。\n②作为国家队平台，创新中心要做的正是那些单家企业未必愿意做、却又是整个行业绕不开的事。",
+      "publishedAt": "2026-08-21",
+      "sourceId": "cls",
+      "source": "财联社"
+    },
+    {
+      "title": "央行发布人民币买卖新规：流通币禁卖 严打炒作误导",
+      "url": "https://www.cls.cn/detail/2461036",
+      "excerpt": "①央行明确人民币可以买卖和不得买卖的具体情形，细化人民币买卖活动的监管要求，现行流通人民币不得买卖，经中国人民银行公告停止流通的人民币可以买卖。\n②普通纪念币和贵金属纪念币可以买卖。",
       "publishedAt": "2026-08-21",
       "sourceId": "cls",
       "source": "财联社"
@@ -570,6 +642,69 @@
       "source": "财联社"
     },
     {
+      "title": "深圳市艺感科技股份有限公司 [创业板] (预先披露更新)",
+      "url": "https://data.10jqka.com.cn/ipo/search/?keyword=%E6%B7%B1%E5%9C%B3%E5%B8%82%E8%89%BA%E6%84%9F%E7%A7%91%E6%8A%80%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8",
+      "excerpt": "同花顺新股预披露 | 板块: 创业板 | 类型: 预先披露更新 | 披露日期: 2026-08-21 | 募资: 9.51亿 | 发行: 1666.67万",
+      "publishedAt": "2026-08-21",
+      "sourceId": "szse"
+    },
+    {
+      "title": "国家金融监督管理总局关于实施《保险公司资产负债管理办法》有关事项的通知",
+      "url": "https://www.nfra.gov.cn/cn/view/pages/ItemDetail.html?docId=1268949",
+      "excerpt": "",
+      "publishedAt": "2026-08-21",
+      "sourceId": "nfra",
+      "source": "国家金融监督管理总局"
+    },
+    {
+      "title": "保险公司资产负债管理办法",
+      "url": "https://www.nfra.gov.cn/cn/view/pages/ItemDetail.html?docId=1268952",
+      "excerpt": "",
+      "publishedAt": "2026-08-21",
+      "sourceId": "nfra",
+      "source": "国家金融监督管理总局"
+    },
+    {
+      "title": "国家金融监督管理总局白山监管分局行政处罚信息公示列表",
+      "url": "https://www.nfra.gov.cn/cn/view/pages/ItemDetail.html?docId=1268872",
+      "excerpt": "",
+      "publishedAt": "2026-08-20",
+      "sourceId": "nfra",
+      "source": "国家金融监督管理总局"
+    },
+    {
+      "title": "常州金融监管分局行政处罚信息公开表",
+      "url": "https://www.nfra.gov.cn/cn/view/pages/ItemDetail.html?docId=1268642",
+      "excerpt": "",
+      "publishedAt": "2026-08-20",
+      "sourceId": "nfra",
+      "source": "国家金融监督管理总局"
+    },
+    {
+      "title": "国家金融监督管理总局办公厅关于印发《非车险综合治理行动方案》的通知",
+      "url": "https://www.nfra.gov.cn/cn/view/pages/ItemDetail.html?docId=1268910",
+      "excerpt": "",
+      "publishedAt": "2026-08-21",
+      "sourceId": "nfra",
+      "source": "国家金融监督管理总局"
+    },
+    {
+      "title": "泉州金融监管分局行政处罚信息公示表",
+      "url": "https://www.nfra.gov.cn/cn/view/pages/ItemDetail.html?docId=1268629",
+      "excerpt": "",
+      "publishedAt": "2026-08-19",
+      "sourceId": "nfra",
+      "source": "国家金融监督管理总局"
+    },
+    {
+      "title": "丹东金融监管分局行政处罚信息公示列表",
+      "url": "https://www.nfra.gov.cn/cn/view/pages/ItemDetail.html?docId=1268572",
+      "excerpt": "",
+      "publishedAt": "2026-08-19",
+      "sourceId": "nfra",
+      "source": "国家金融监督管理总局"
+    },
+    {
       "title": "美债冲击波及亚洲科技股 AI债务风险再引关注",
       "url": "https://www.cls.cn/detail/2458252",
       "excerpt": "①美债冲击波及亚洲科技股，MSCI亚太指数创7月底以来最大跌幅；\n②AI债务风险再引关注，市场担忧哪些利空传导？",
@@ -626,13 +761,6 @@
       "source": "财联社"
     },
     {
-      "title": "深圳市艺感科技股份有限公司 [创业板] (预先披露更新)",
-      "url": "https://data.10jqka.com.cn/ipo/search/?keyword=%E6%B7%B1%E5%9C%B3%E5%B8%82%E8%89%BA%E6%84%9F%E7%A7%91%E6%8A%80%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8",
-      "excerpt": "同花顺新股预披露 | 板块: 创业板 | 类型: 预先披露更新 | 披露日期: 2026-08-21 | 募资: 9.51亿 | 发行: 1666.67万",
-      "publishedAt": "2026-08-21",
-      "sourceId": "szse"
-    },
-    {
       "title": "朱雀归来！多地商业航天行动计划剑指可回收火箭",
       "url": "https://www.cls.cn/detail/2457757",
       "excerpt": "①近期政策端对“可重复使用火箭”的支持力度仍在加码。\n②多款可回收火箭待发。",
@@ -673,22 +801,6 @@
       "source": "国家金融监督管理总局"
     },
     {
-      "title": "国家金融监督管理总局定西监管分局行政处罚信息公示表（定金监罚决〔2026〕3号）",
-      "url": "https://www.nfra.gov.cn/cn/view/pages/ItemDetail.html?docId=1268323",
-      "excerpt": "",
-      "publishedAt": "2026-08-17",
-      "sourceId": "nfra",
-      "source": "国家金融监督管理总局"
-    },
-    {
-      "title": "国家金融监督管理总局定西监管分局行政处罚信息公示表（定金监罚决〔2026〕1号、2号）",
-      "url": "https://www.nfra.gov.cn/cn/view/pages/ItemDetail.html?docId=1268319",
-      "excerpt": "",
-      "publishedAt": "2026-08-17",
-      "sourceId": "nfra",
-      "source": "国家金融监督管理总局"
-    },
-    {
       "title": "债市多头延续，10年期国债期货创历史新高｜机构要评",
       "url": "https://www.cls.cn/detail/2457553",
       "excerpt": "①8月18日债市多头情绪延续，国债期货T合约盘中创历史新高，TL2609收涨0.19%报116.460元；10年期国债活跃券收益率下行0.6BP至1.6715%。\n②多家机构认为债市可保持积极心态，不建议追涨10年期国债，宜沿曲线寻找机会，30年国债仍具较高性价比。",
@@ -719,22 +831,6 @@
       "publishedAt": "2026-08-18",
       "sourceId": "cls",
       "source": "财联社"
-    },
-    {
-      "title": "文山金融监管分局行政处罚信息公示列表",
-      "url": "https://www.nfra.gov.cn/cn/view/pages/ItemDetail.html?docId=1268266",
-      "excerpt": "",
-      "publishedAt": "2026-08-17",
-      "sourceId": "nfra",
-      "source": "国家金融监督管理总局"
-    },
-    {
-      "title": "国家金融监督管理总局包头监管分局\n对马利波行政处罚事先告知书的送达公告",
-      "url": "https://www.nfra.gov.cn/cn/view/pages/ItemDetail.html?docId=1268244",
-      "excerpt": "国家金融监督管理总局包头监管分局对马利波行政处罚事先告知书的送达公告",
-      "publishedAt": "2026-08-17",
-      "sourceId": "nfra",
-      "source": "国家金融监督管理总局"
     },
     {
       "title": "30年美债利率狂飙破5.3%、央企点心债仅2.46%！南向通险资首单锚定离岸人民币资产",
@@ -813,102 +909,6 @@
       "url": "https://www.cls.cn/detail/2456430",
       "excerpt": "把握债市政策脉搏，综览每日市场动向，尽在财联社《债市早参》。",
       "publishedAt": "2026-08-18",
-      "sourceId": "cls",
-      "source": "财联社"
-    },
-    {
-      "title": "数字人民币运营机构年内二度扩容，全国性银行已全面覆盖，中西部地区城商行首次纳入",
-      "url": "https://www.cls.cn/detail/2456395",
-      "excerpt": "①数字人民币运营机构年内迎来第二次扩容，中国人民银行仅时隔4月宣布新增8家银行加入；\n②至此，运营机构总数从此前的22家扩容至30家，全国性银行已全部覆盖；\n③不少特色区域银行成为重要吸纳对象，中西部地区城商行首次被纳入其中。",
-      "publishedAt": "2026-08-17",
-      "sourceId": "cls",
-      "source": "财联社"
-    },
-    {
-      "title": "分红险崛起重塑险资配债棋局：超长债从抢筹到择时，高息信用债升温",
-      "url": "https://www.cls.cn/detail/2456297",
-      "excerpt": "①上半年保险买债力度弱于过去两年同期；\n②长久期债券尤其高票息地方债仍是险资基本盘；\n③银行二永债相比同期限国债仍具性价比；\n④超长债从过往持续超配逐步转向择时择机增配。",
-      "publishedAt": "2026-08-17",
-      "sourceId": "cls",
-      "source": "财联社"
-    },
-    {
-      "title": "险资权益投资再定位：仓位创新高，增配趋理性，赛道转硬核",
-      "url": "https://www.cls.cn/detail/2456269",
-      "excerpt": "①保险资金运用余额突破40万亿元，同比增速达12.7%；\n②权益仓位持续创新高，市场结构分化下增配节奏放缓；\n③险资配置策略将逐步形成红利底仓叠加科技增强的哑铃型配置框架。",
-      "publishedAt": "2026-08-17",
-      "sourceId": "cls",
-      "source": "财联社"
-    },
-    {
-      "title": "从“人找钱”到“钱找人”，农村信用价值如何向全场景跃迁？陆家嘴金融沙龙2026年第二十七期圆满举办",
-      "url": "https://www.cls.cn/detail/2455856",
-      "excerpt": "①本期主题“深耕农村信用体系建设，赋能乡村全面振兴、打造浦东普惠金融新生态”；\n②汇聚了银行机构、基层政府、专业农险、普惠小贷、农业龙头企业的代表，从不同维度分享思考与探索。",
-      "publishedAt": "2026-08-17",
-      "sourceId": "cls",
-      "source": "财联社"
-    },
-    {
-      "title": "海外投资者目光从股转债：今年亚太债券发行规模创下历史新高",
-      "url": "https://www.cls.cn/detail/2456094",
-      "excerpt": "①数据显示，今年前7个月外国借款人发行的澳元袋鼠债券规模约创下历史新高，港元债发行量也创下新高；\n②6月以来亚洲债市迎来七个月最大规模外资净流入，同期亚洲股市遭外资抛售；\n③油价大跌后亚洲多数国家通胀压力放缓叠加人工智能带动估值提升，增强了亚洲债券的吸引力。",
-      "publishedAt": "2026-08-17",
-      "sourceId": "cls",
-      "source": "财联社"
-    },
-    {
-      "title": "债市收盘| 午后走强，10年国债收益率刷新一年新低",
-      "url": "https://www.cls.cn/detail/2456107",
-      "excerpt": "业内人士认为，本周税期叠加地方债发行提速，需关注资金面情况。当前30Y-10Y期限利差较大，47bp左右的利差有继续压缩的空间。",
-      "publishedAt": "2026-08-17",
-      "sourceId": "cls",
-      "source": "财联社"
-    },
-    {
-      "title": "国家统计局：7月份规模以上工业原煤生产同比下降 原油生产由降转增",
-      "url": "https://www.cls.cn/detail/2455949",
-      "excerpt": "",
-      "publishedAt": "2026-08-17",
-      "sourceId": "cls",
-      "source": "财联社"
-    },
-    {
-      "title": "国家统计局：1—7月份全国房地产开发投资43009亿元 同比下降19.2%",
-      "url": "https://www.cls.cn/detail/2455933",
-      "excerpt": "",
-      "publishedAt": "2026-08-17",
-      "sourceId": "cls",
-      "source": "财联社"
-    },
-    {
-      "title": "国家统计局：1—7月份全国固定资产投资(不含农户)260328亿元 同比下降6.7%",
-      "url": "https://www.cls.cn/detail/2455924",
-      "excerpt": "",
-      "publishedAt": "2026-08-17",
-      "sourceId": "cls",
-      "source": "财联社"
-    },
-    {
-      "title": "国家统计局：7月份全国规模以上工业增加值同比增长4.5%",
-      "url": "https://www.cls.cn/detail/2455916",
-      "excerpt": "①7月全国规模以上工业增加值同比增4.5%、环比增0.11%，1—7月累计同比增5.3%；\n②官方解读：工业经济总体平稳新动能贡献持续增强。",
-      "publishedAt": "2026-08-17",
-      "sourceId": "cls",
-      "source": "财联社"
-    },
-    {
-      "title": "国家统计局：7月份一二三线城市商品住宅销售价格同比降幅总体继续收窄",
-      "url": "https://www.cls.cn/detail/2455912",
-      "excerpt": "",
-      "publishedAt": "2026-08-17",
-      "sourceId": "cls",
-      "source": "财联社"
-    },
-    {
-      "title": "国家统计局：1—7月份社会消费品零售总额287744亿元 同比增长1.2%",
-      "url": "https://www.cls.cn/detail/2455925",
-      "excerpt": "①1—7月社会消费品零售总额287744亿元，同比增长1.2%；\n②官方解读：消费市场稳定增长，服务消费需求持续释放。",
-      "publishedAt": "2026-08-17",
       "sourceId": "cls",
       "source": "财联社"
     }

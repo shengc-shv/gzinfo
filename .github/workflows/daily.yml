@@ -237,6 +237,9 @@ jobs:
           REPORT_LOCALE: ${{ vars.REPORT_LOCALE || 'zh' }}
           REPORT_BASE_URL: ${{ vars.REPORT_BASE_URL }}
           REPORT_TZ: ${{ vars.REPORT_TZ }}
+          # 可选：设为 "true" 跳过实际音频合成（仅注入播放器占位，调试用）。
+          # 默认空 → CI 每次正式运行都生成 mp3 并发布。
+          SKIP_TTS: ${{ vars.SKIP_TTS }}
           WEB_MODE: 'true'
         run: npm run daily
 

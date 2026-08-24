@@ -57,6 +57,26 @@ for (const d of dates) {
 }
 console.log(`[build-site] 同步 ${copied} 个日期目录 → ${ROOT}/（共 ${dates.length} 个报告）`);
 
+// --- 音频滚动清理：只保留最近 3 天（报告正文保留 7 天不变）---
+// 报告目录整体拷贝后，删除日期早于「今天-3」的 audio/ 子目录（mp3）。
+const AUDIO_KEEP_DAYS = 3;
+const audioCutoff = new Date();
+audioCutoff.setDate(audioCutoff.getDate() - AUDIO_KEEP_DAYS);
+let audioCleaned = 0;
+for (const d of dates) {
+  const ad = path.join(ROOT, d, "audio");
+  if (!fs.existsSync(ad)) continue;
+  const day = new Date(`${d}T00:00:00`);
+  if (day < audioCutoff) {
+    fs.rmSync(ad, { recursive: true, force: true });
+    audioCleaned++;
+    console.log(`[build-site] 🗑 清理过期音频目录：daily_reports/${d}/audio`);
+  }
+}
+if (audioCleaned === 0) {
+  console.log(`[build-site] 音频滚动清理：无过期（保留最近 ${AUDIO_KEEP_DAYS} 天）`);
+}
+
 // --- 分享缩略图：拷贝到发布根（报告 <head> 的 og:image 绝对地址 ${base}/og-image.png 用）---
 const OG_SRC = "assets/og-image.png";
 if (fs.existsSync(OG_SRC)) {
@@ -70,7 +90,8 @@ if (fs.existsSync(OG_SRC)) {
 const latest = dates[0];
 const latestHtml = fs
   .readFileSync(path.join(ROOT, latest, `${latest}.html`), "utf8")
-  .replace(/href="\.\.\/archive\.html"/g, 'href="./archive.html"');
+  .replace(/href="\.\.\/archive\.html"/g, 'href="./archive.html"')
+  .replace(/src="audio\//g, `src="${latest}/audio/`);
 fs.writeFileSync(path.join(ROOT, "index.html"), latestHtml, "utf8");
 console.log(`[build-site] index.html  ← ${latest}/${latest}.html`);
 
