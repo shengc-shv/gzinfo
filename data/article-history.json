@@ -4435,5 +4435,41 @@
     "publishedAt": "2026-08-24T00:00:00.000Z",
     "firstSeenAt": "2026-08-24T10:59:07.241Z",
     "lastSeenAt": "2026-08-24T10:59:07.241Z"
+  },
+  "https://www.cnfin.com/yw-lb/detail/20260824/4459599_1.html": {
+    "title": "每日机构分析：8月24日",
+    "url": "https://www.cnfin.com/yw-lb/detail/20260824/4459599_1.html",
+    "sourceId": "cnfin",
+    "source": "新华财经",
+    "category": "finance",
+    "subcategory": "cn-finance",
+    "excerpt": "",
+    "publishedAt": "2026-08-24T00:00:00.000Z",
+    "firstSeenAt": "2026-08-24T11:03:50.223Z",
+    "lastSeenAt": "2026-08-24T11:03:50.223Z"
+  },
+  "https://www.stcn.com/article/detail/4106311.html": {
+    "title": "VC/PE角色进阶：从“狩猎人”到“种田人”",
+    "url": "https://www.stcn.com/article/detail/4106311.html",
+    "sourceId": "stcn",
+    "source": "证券时报",
+    "category": "finance",
+    "subcategory": "cn-finance",
+    "excerpt": "",
+    "publishedAt": "2026-08-24T00:00:00.000Z",
+    "firstSeenAt": "2026-08-24T11:03:50.223Z",
+    "lastSeenAt": "2026-08-24T11:03:50.223Z"
+  },
+  "https://www.stcn.com/article/detail/4106312.html": {
+    "title": "直击璞泰来业绩说明会：预计2027年基膜供需环境依然偏紧",
+    "url": "https://www.stcn.com/article/detail/4106312.html",
+    "sourceId": "stcn",
+    "source": "证券时报",
+    "category": "finance",
+    "subcategory": "cn-finance",
+    "excerpt": "",
+    "publishedAt": "2026-08-24T00:00:00.000Z",
+    "firstSeenAt": "2026-08-24T11:03:50.223Z",
+    "lastSeenAt": "2026-08-24T11:03:50.223Z"
   }
 }

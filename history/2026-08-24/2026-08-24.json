@@ -1,120 +1,73 @@
 {
   "date": "2026-08-24",
-  "hero_line": "消费贷贴息扩围、存款定价收窄并存，黄金走强；广州文旅经贸活跃，建议加大消费信贷投放、做厚财富客户避险配置。",
+  "hero_line": "消费贷贴息升级、黄金破千、公积金新政齐发，扩内需与避险配置并存；建议加大消费信贷投放、做厚财富避险配置，抢抓金九银十楼市窗口。",
   "must_read": [
     {
-      "url": "https://finance.cctv.com/2026/08/23/ARTIBtPwU4s3Ra6RRevtxnLZ260823.shtml",
-      "why": "财政贴息上限提至5000元、范围扩大，消费信贷营销窗口开启，分行须统一答疑口径抢抓扩内需红利。",
-      "title": "额度提高、范围扩大！个人消费贷款贴息“红包”升级，多家银行公告答疑"
+      "url": "https://news.southcn.com/node_de9aedeec1/fa7436a025.shtml",
+      "why": "贴息上限提至5000元，消费信贷营销窗口开启，须统一口径抢抓红利。",
+      "title": "消费贷贴息“国补”升级！一年可省5000元利息"
     },
     {
-      "url": "https://finance.sina.com.cn/jjxw/2026-08-23/doc-inipiiqq6695745.shtml",
-      "why": "存款期限溢价收窄，引导客户锁定长期限并转向理财，优化存款结构。",
-      "title": "有银行罕见拉平定存利率 一年期及以上统一1.65%"
+      "url": "https://m.21jingji.com/article/20260824/herald/c62e07db9db9f5e7ae34efc7643ac02b.html",
+      "why": "金价强势，提示客户配置积存金并管控高位波动风险。",
+      "title": "国际金价站上4700美元，多家银行积存金克价破千元"
     },
     {
-      "url": "https://m.21jingji.com/article/20260824/herald/678f17f6ef166874002f17bff3a0e406.html",
-      "why": "金价强势，提示客户配置黄金并管控高位波动风险。",
-      "title": "多家银行积存金克价涨破1000元"
+      "url": "https://m.21jingji.com/article/20260824/herald/d9cbc1444651bddee12bc4e6066d2f5f.html",
+      "why": "公积金贷款额度上调，联动按揭与组合贷营销窗口开启。",
+      "title": "首套房最高可贷款340万元！国管公积金新政来了"
     },
     {
-      "url": "https://www.cls.cn/detail/2462072",
-      "why": "理财打新与基准调整落地，提示财富客户关注产品适配与净值变化。",
-      "title": "资管周报：53只理财打新宇树科技斩获近亿元浮盈；第三批基准调整正式落地，百家公募密集公告"
+      "url": "https://finance.cctv.com/2026/08/24/ARTIVu3TtenlKT3etqJq5jQR260824.shtml",
+      "why": "银行业绩回暖，对标同业检视零售中收与存款成本优化空间。",
+      "title": "上市银行半年报密集披露 业绩回暖折射银行业经营韧性"
     },
     {
-      "url": "https://m.21jingji.com/article/20260823/herald/1da4bec7f1a99dce5307bf0f6abe5f7d.html",
-      "why": "信用卡分期贴息加码、全品类纳入，促消费信贷投放与客群活跃。",
-      "title": "多家银行公布贷款贴息额度上调方案，信用卡全品类纳入优惠"
+      "url": "https://m.21jingji.com/article/20260824/herald/4f5e93f22e2e8ae6ae6d47bf96e30141.html",
+      "why": "零售网点与信用卡条线收缩，提示聚焦高价值客群、优化成本结构。",
+      "title": "银行专营机构缩减提速：4家总行级摘牌，信用卡分中心关停潮延续"
     }
   ],
   "insights": [
     {
-      "topic": "消费信贷贴息扩围",
+      "topic": "消费贷贴息升级",
       "tags": [
-        "信贷",
-        "客群"
+        "信贷"
       ],
-      "impact": "财政贴息上限提至5000元、信用卡全品类纳入，扩内需政策红利兑现，分期客群价格敏感度高。",
-      "action": "广州分行统一贴息办理口径，加大消费贷与信用卡分期营销，本周内上线客户经理答疑指引。",
-      "sources": [
-        {
-          "title": "额度提高、范围扩大！个人消费贷款贴息“红包”升级，多家银行公告答疑",
-          "url": "https://finance.cctv.com/2026/08/23/ARTIBtPwU4s3Ra6RRevtxnLZ260823.shtml"
-        },
-        {
-          "title": "多家银行公布贷款贴息额度上调方案，信用卡全品类纳入优惠",
-          "url": "https://m.21jingji.com/article/20260823/herald/1da4bec7f1a99dce5307bf0f6abe5f7d.html"
-        }
-      ]
+      "impact": "财政贴息上限提至5000元、范围扩大，价格敏感客群营销窗口开启。",
+      "action": "统一答疑口径，加大消费贷与信用卡分期投放，本周上线客户经理指引。"
     },
     {
       "topic": "黄金避险配置升温",
       "tags": [
         "财富"
       ],
-      "impact": "积存金克价破千、美债担忧推升金价，客户避险与旺季需求双升。",
-      "action": "提示财富客户增配积存金与黄金ETF，同步做高位波动风险提示。",
-      "sources": [
-        {
-          "title": "多家银行积存金克价涨破1000元",
-          "url": "https://m.21jingji.com/article/20260824/herald/678f17f6ef166874002f17bff3a0e406.html"
-        },
-        {
-          "title": "黄金消费迎旺季 小克重产品成新宠",
-          "url": "https://www.cnfin.com/hg-lb/detail/20260824/4459197_1.html"
-        }
-      ]
+      "impact": "金价站上4700美元、积存金克价破千，客户避险与配置需求双升。",
+      "action": "主推积存金与黄金ETF，同步做高位波动风险提示，防客户追高。"
     },
     {
-      "topic": "广州文旅经贸客群经营",
-      "tags": [
-        "客群"
-      ],
-      "impact": "沙面活化、广博会意向483亿、汽车公园开园，本地消费场景丰富。",
-      "action": "联动信用卡商圈权益与代发工资，深耕文旅客群与参展企业员工。",
-      "sources": [
-        {
-          "title": "广州沙面历史文化街区保护活化工程报告公示",
-          "url": "https://www.cnr.cn/gd/guangdongyaowen/20260824/t20260824_527788848.shtml"
-        },
-        {
-          "title": "意向合作总额超483亿元！第34届广州博览会闭幕，创新办展成果丰硕",
-          "url": "https://news.dayoo.com/guangzhou/202608/23/139995_54994140.htm"
-        }
-      ]
-    },
-    {
-      "topic": "涉房信贷风险排查",
+      "topic": "公积金新政扩容",
       "tags": [
         "信贷"
       ],
-      "impact": "融创3家子公司逾期10.6亿、湖南银行逾期超71亿，地产链风险延续。",
-      "action": "排查分行涉房信贷敞口，加强资产质量管控与不良处置。",
-      "sources": [
-        {
-          "title": "债市公告精选 | 融创地产3家子公司逾期借款合计10.6亿元；新疆北新路桥上半年亏损2.72亿元",
-          "url": "https://www.cls.cn/detail/2462005"
-        },
-        {
-          "title": "湖南银行半年扩表5%利润增长停滞 逾期贷款超71亿",
-          "url": "https://finance.sina.com.cn/roll/2026-08-24/doc-inipkkzx0079814.shtml"
-        }
-      ]
+      "impact": "首套房最高贷340万，公积金覆盖扩至租房装修，刚需置业需求释放。",
+      "action": "联动公积金中心推组合贷与装修贷，抢抓金九银十窗口。"
     },
     {
-      "topic": "私募监管合规趋严",
+      "topic": "理财基准规范收紧",
       "tags": [
         "财富"
       ],
-      "impact": "多家私募违规被罚、多地自查，募投管全流程成重点。",
-      "action": "强化财富客户私募适当性管理，规范销售合规。",
-      "sources": [
-        {
-          "title": "多家私募违规被罚！多地启动自查工作，募、投、管全流程成监管重点",
-          "url": "https://m.21jingji.com/article/20260823/herald/0529ff23866f1277bc9b1f6db102536d.html"
-        }
-      ]
+      "impact": "单日超200只理财密集调基，业绩基准调整被规范，净值化预期管理加强。",
+      "action": "规范产品宣传口径，引导客户理性看待净值波动，防不当承诺。"
+    },
+    {
+      "topic": "银行专营机构收缩",
+      "tags": [
+        "客群"
+      ],
+      "impact": "总行级专营机构摘牌、信用卡分中心关停延续，零售条线结构重塑。",
+      "action": "评估辖内网点与信用卡效能，聚焦高价值客群，压降低效成本。"
     }
   ],
   "sections": {
@@ -150,6 +103,36 @@
         "locale": "gz"
       },
       {
+        "url": "https://news.dayoo.com/guangzhou/202608/24/139995_54994196.htm",
+        "title_cn": "2026广州医疗与健康产业博览会闭幕 50家三甲医院提交临床合作需求超300条",
+        "source": "广州日报·大洋网",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "08/24",
+        "summary": "2026广州医疗与健康产业博览会闭幕，50家三甲医院提交超300条临床合作需求。健康医疗产业客群活跃，可联动私行/财富深耕医疗健康企业家客群，探索员工体检、养老金融等场景。",
+        "importance": 2,
+        "rank": 3,
+        "tags": [
+          "客群"
+        ],
+        "locale": "gz"
+      },
+      {
+        "url": "https://news.dayoo.com/guangzhou/202608/24/139995_54994460.htm",
+        "title_cn": "前7个月广州规上工业增加值同比增长5.5%",
+        "source": "广州日报·大洋网",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "08/24",
+        "summary": "前7个月广州规上工业增加值同比增长5.5%，广州经济基本面稳健。可增强对本地企业客群与经营信贷投放信心，服务实体经济。",
+        "importance": 2,
+        "rank": 4,
+        "tags": [
+          "客群"
+        ],
+        "locale": "gz"
+      },
+      {
         "url": "https://news.dayoo.com/guangzhou/202608/23/139995_54993883.htm",
         "title_cn": "高性能橡塑密封研发制造基地项目落子广州黄埔",
         "source": "广州日报·大洋网",
@@ -158,7 +141,7 @@
         "date": "08/23",
         "summary": "高性能橡塑密封研发制造基地落子广州黄埔，先进制造项目落地带动区域产业与就业，分行可关注企业开户、代发与产业链金融服务。",
         "importance": 2,
-        "rank": 3,
+        "rank": 5,
         "tags": [
           "客群"
         ],
@@ -173,7 +156,7 @@
         "date": "08/23",
         "summary": "第34届广州博览会意向合作超483亿元，广州经贸活力强。可关注参展企业客群经营、代发工资与普惠金融服务机会。",
         "importance": 2,
-        "rank": 4,
+        "rank": 6,
         "tags": [
           "客群"
         ],
@@ -188,7 +171,7 @@
         "date": "08/23",
         "summary": "广博会汇聚科创与山海好物，广州产业展示平台活跃。可关注参展科创企业客群与科技金融服务机会。",
         "importance": 2,
-        "rank": 5,
+        "rank": 7,
         "tags": [
           "客群"
         ],
@@ -431,6 +414,349 @@
         "locale": "gz"
       },
       {
+        "url": "https://finance.sina.com.cn/money/fund/aiassistant/zcgyd/2026-08-24/doc-inipkvrt0104941.shtml",
+        "title_cn": "星图测控股价跌5.19%，华夏基金旗下1只基金重",
+        "source": "新浪财经·理财保险",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "08/24",
+        "summary": "星图测控股价回调、华夏基金旗下基金重仓，反映卫星应用主题波动。财富线可借市场热点回落做持仓检视，提示客户卫星/军工主题基金波动风险，避免追高。",
+        "importance": 2,
+        "rank": 17,
+        "tags": [
+          "财富"
+        ],
+        "locale": "gz"
+      },
+      {
+        "url": "https://news.southcn.com/node_812903b83a/7044cc7d7b.shtml",
+        "title_cn": "提上限、扩范围，多家银行更新个人消费贷贴息细则",
+        "source": "南方网·经济",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "08/24",
+        "summary": "多家银行更新个人消费贷贴息细则，提上限、扩范围。分行须同步统一答疑口径，加大消费信贷与信用卡分期营销，抢抓扩内需贴息红利窗口。",
+        "importance": 2,
+        "rank": 18,
+        "tags": [
+          "信贷"
+        ],
+        "locale": "gz"
+      },
+      {
+        "url": "https://news.southcn.com/node_de9aedeec1/fa7436a025.shtml",
+        "title_cn": "消费贷贴息“国补”升级！一年可省5000元利息",
+        "source": "南方网·经济",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "08/24",
+        "summary": "消费贷贴息国补升级，一年最高省5000元利息，政策红利显著。分行应加大消费贷与信用卡分期投放，向价格敏感客群精准推送贴息权益。",
+        "importance": 2,
+        "rank": 19,
+        "tags": [
+          "信贷"
+        ],
+        "locale": "gz"
+      },
+      {
+        "url": "https://finance.sina.com.cn/money/fund/etf/2026-08-24/doc-inipkzxw2883612.shtml",
+        "title_cn": "现货黄金连涨三周！站上4600美元！华宝基金：美债变局释放宽松信号，黄金领涨情绪有望外溢！",
+        "source": "新浪财经·理财保险",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "08/24",
+        "summary": "现货黄金连涨三周站上4600美元，美债变局释放宽松信号。财富线应把握黄金配置窗口，向客户推荐积存金、黄金ETF，并做好高位波动风险提示。",
+        "importance": 2,
+        "rank": 20,
+        "tags": [
+          "财富"
+        ],
+        "locale": "gz"
+      },
+      {
+        "url": "https://finance.sina.com.cn/money/nmetal/2026-08-24/doc-inipkzxr0024306.shtml",
+        "title_cn": "黄金最前沿：T+D 黄金Au99 积存金 上下车解析",
+        "source": "新浪财经·理财保险",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "08/24",
+        "summary": "黄金T+D、Au99、积存金上下车解析，实操类内容。财富线可据此指导客户黄金入场/离场节奏，管理高位波动预期，强化积存金长期配置价值。",
+        "importance": 2,
+        "rank": 21,
+        "tags": [
+          "财富"
+        ],
+        "locale": "gz"
+      },
+      {
+        "url": "https://finance.sina.com.cn/money/nmetal/hjzx/2026-08-24/doc-inipkvrt0117450.shtml",
+        "title_cn": "高盛警告：交易商被迫“抬轿”，黄金4900美元“太保守”",
+        "source": "新浪财经·理财保险",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "08/24",
+        "summary": "高盛警告黄金4900美元预测偏保守、交易商被迫抬轿，金价乐观情绪升温。财富线配置黄金同时须提示过热回调风险，防止客户追高。",
+        "importance": 2,
+        "rank": 22,
+        "tags": [
+          "财富"
+        ],
+        "locale": "gz"
+      },
+      {
+        "url": "https://finance.sina.com.cn/jjxw/2026-08-24/doc-inipkzxr0054507.shtml",
+        "title_cn": "机构：美债利率上行叠加全球供给扰动，有色定价中枢或承压重塑",
+        "source": "新浪财经·理财保险",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "08/24",
+        "summary": "美债利率上行叠加全球供给扰动，有色定价中枢或承压。财富线可提示客户关注有色商品波动，调整大宗商品类资产配置预期。",
+        "importance": 2,
+        "rank": 23,
+        "tags": [
+          "财富"
+        ],
+        "locale": "gz"
+      },
+      {
+        "url": "https://finance.sina.com.cn/stock/zqgd/2026-08-24/doc-inipkzxw2931683.shtml",
+        "title_cn": "财中基金发行热点丨机器人ETF博时启动发行，过去",
+        "source": "新浪财经·理财保险",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "08/24",
+        "summary": "机器人ETF博时启动发行，主题ETF新品供给。财富线可结合AI/机器人产业趋势向客户推荐主题基金配置，把握科技成长主线。",
+        "importance": 2,
+        "rank": 24,
+        "tags": [
+          "财富"
+        ],
+        "locale": "gz"
+      },
+      {
+        "url": "https://finance.sina.com.cn/stock/zqgd/2026-08-24/doc-inipkzxu6159073.shtml",
+        "title_cn": "财中基金发行热点丨融通泓安启动发行，同类产品31",
+        "source": "新浪财经·理财保险",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "08/24",
+        "summary": "融通泓安等新品基金启动发行，产品供给扩容。财富线可优选新产品丰富货架，按客户风险等级匹配合适基金。",
+        "importance": 2,
+        "rank": 25,
+        "tags": [
+          "财富"
+        ],
+        "locale": "gz"
+      },
+      {
+        "url": "https://m.21jingji.com/article/20260824/herald/bee5d9ab51a78a4aac4104b2de20d778.html",
+        "title_cn": "客户挂靠居间人分佣金、开户问卷给答案 中金岭南期货两人被采取监管措施",
+        "source": "21世纪经济报道·金融",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "08/24",
+        "summary": "中金岭南期货两名人员因居间人分佣、开户问卷代答被监管处罚。分行须强化销售合规，严禁代客操作与利益输送，守住适当性底线。",
+        "importance": 2,
+        "rank": 26,
+        "tags": [
+          "财富"
+        ],
+        "locale": "gz"
+      },
+      {
+        "url": "https://m.21jingji.com/article/20260824/herald/4f5e93f22e2e8ae6ae6d47bf96e30141.html",
+        "title_cn": "银行专营机构缩减提速：4家总行级摘牌，信用卡分中心关停潮延续",
+        "source": "21世纪经济报道·金融",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "08/24",
+        "summary": "银行专营机构缩减提速，4家总行级摘牌、信用卡分中心关停潮延续。分行应检视零售网点与信用卡条线效能，优化成本结构，聚焦高价值客群。",
+        "importance": 2,
+        "rank": 27,
+        "tags": [
+          "信贷"
+        ],
+        "locale": "gz"
+      },
+      {
+        "url": "https://m.21jingji.com/article/20260824/herald/c62e07db9db9f5e7ae34efc7643ac02b.html",
+        "title_cn": "国际金价站上4700美元，多家银行积存金克价破千元",
+        "source": "21世纪经济报道·金融",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "08/24",
+        "summary": "国际金价站上4700美元、多家银行积存金克价破千，黄金强势延续。财富线应加大积存金与黄金ETF配置引导，同步强化高位波动风险提示。",
+        "importance": 2,
+        "rank": 28,
+        "tags": [
+          "财富"
+        ],
+        "locale": "gz"
+      },
+      {
+        "url": "https://m.21jingji.com/article/20260824/herald/709eee8b465f56a34f6d6fd87c43adf6.html",
+        "title_cn": "公积金30年变局：从买房房贷到租房装修，10万亿资金有了新花法",
+        "source": "21世纪经济报道·金融",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "08/24",
+        "summary": "公积金30年变局：覆盖买房房贷到租房装修，10万亿资金使用范围扩大。分行可关注公积金相关个贷场景，探索租房装修等新消费信贷需求。",
+        "importance": 2,
+        "rank": 29,
+        "tags": [
+          "信贷"
+        ],
+        "locale": "gz"
+      },
+      {
+        "url": "http://tjj.gz.gov.cn/stats_newtjyw/sjfb/content/post_10974641.html",
+        "title_cn": "暑期消费热力涌动  多元发力筑牢基本盘",
+        "source": "广州市统计局",
+        "source_type": "official",
+        "tier": "T1",
+        "date": "08/24",
+        "summary": "广州暑期消费热力涌动、多元发力筑牢基本盘，消费数据向好。零售条线可把握暑期消费旺季余热，强化信用卡与消费贷营销，深耕文旅餐饮客群。",
+        "importance": 2,
+        "rank": 30,
+        "tags": [
+          "客群"
+        ],
+        "locale": "gz"
+      },
+      {
+        "url": "https://m.21jingji.com/article/20260824/herald/eb0666c2da1d12a0d5d763efdad4c83e.html",
+        "title_cn": "金融监管总局党委书记、局长丁向群带队赴吉林调研",
+        "source": "21世纪经济报道·金融",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "08/24",
+        "summary": "金融监管总局党委书记、局长丁向群带队赴吉林调研，监管高层动向。分行应关注监管对小微、普惠等领域的政策导向，及时对齐经营方向。",
+        "importance": 2,
+        "rank": 31,
+        "tags": [],
+        "locale": "gz"
+      },
+      {
+        "url": "https://finance.sina.com.cn/stock/usstock/c/2026-08-24/doc-inipmhfs6045514.shtml",
+        "title_cn": "分析师调查：美联储与英央行今年大概率维持利率不变，欧央行与日央行有加息预期",
+        "source": "新浪财经·理财保险",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "08/24",
+        "summary": "分析师调查：美联储与英央行今年大概率按兵不动、欧央行日央行有加息预期，全球利率分化。财富线可据此管理海外固收与美元资产配置预期。",
+        "importance": 2,
+        "rank": 32,
+        "tags": [
+          "财富"
+        ],
+        "locale": "gz"
+      },
+      {
+        "url": "https://finance.sina.com.cn/trust/roll/2026-08-24/doc-inipmhfq2006286.shtml",
+        "title_cn": "中原再担保集团董事长薛怀宇被查 曾任中原信托副总裁",
+        "source": "新浪财经·理财保险",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "08/24",
+        "summary": "中原再担保集团董事长薛怀宇被查，曾任中原信托副总裁，金融高管落马案例。分行应强化内控合规教育，警惕关联交易与道德风险。",
+        "importance": 2,
+        "rank": 33,
+        "tags": [
+          "财富"
+        ],
+        "locale": "gz"
+      },
+      {
+        "url": "https://finance.sina.com.cn/money/fund/jjzl/2026-08-24/doc-inipmhfs6124883.shtml",
+        "title_cn": "美债困境有望推动市场流动性走向宽松 黄金或仍有上行空间",
+        "source": "新浪财经·理财保险",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "08/24",
+        "summary": "美债困境有望推动流动性宽松、黄金仍有上行空间，机构观点。财富线可据此向客户传导黄金中长期配置逻辑，同时提示节奏管理。",
+        "importance": 2,
+        "rank": 34,
+        "tags": [
+          "财富"
+        ],
+        "locale": "gz"
+      },
+      {
+        "url": "https://video.sina.com.cn/p/finance/2026-08-24/detail-inipmhfs6103373.d.html",
+        "title_cn": "8-24 黄金到达压力位附近，是突破还是冲高回落？",
+        "source": "新浪财经·理财保险",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "08/24",
+        "summary": "黄金到达压力位附近，突破还是冲高回落，技术面分析视频。财富线可用于客户沟通中的金价走势参考，提示关键点位波动风险。",
+        "importance": 2,
+        "rank": 35,
+        "tags": [
+          "财富"
+        ],
+        "locale": "gz"
+      },
+      {
+        "url": "https://video.sina.com.cn/p/finance/2026-08-24/detail-inipmhfq2004533.d.html",
+        "title_cn": "黄金3周暴涨700美元！牛市主升浪来袭！高盛预测金价冲6000美元！黄金要大涨了！",
+        "source": "新浪财经·理财保险",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "08/24",
+        "summary": "黄金3周暴涨700美元、高盛预测冲6000美元，金价高波动行情。财富线配置黄金务必强化风险提示，防止客户情绪化追高。",
+        "importance": 2,
+        "rank": 36,
+        "tags": [
+          "财富"
+        ],
+        "locale": "gz"
+      },
+      {
+        "url": "https://m.21jingji.com/article/20260824/herald/489b89c3bfaa59df0f3f485c4e6afe2f.html",
+        "title_cn": "年收入3万却在银行贷出1480万，河南多名老农遭套路",
+        "source": "21世纪经济报道·金融",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "08/24",
+        "summary": "年收入3万却在银行贷出1480万、河南多名老农遭套路贷，暴露出信贷审核与违规放贷风险。分行应严把授信审查关，强化贷后管理与反欺诈。",
+        "importance": 2,
+        "rank": 37,
+        "tags": [
+          "信贷"
+        ],
+        "locale": "gz"
+      },
+      {
+        "url": "https://m.21jingji.com/article/20260824/herald/d9cbc1444651bddee12bc4e6066d2f5f.html",
+        "title_cn": "首套房最高可贷款340万元！国管公积金新政来了",
+        "source": "21世纪经济报道·金融",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "08/24",
+        "summary": "国管公积金新政首套房最高可贷340万元，贷款额度与覆盖范围扩大。分行可联动公积金中心营销组合贷与装修贷，抢抓刚需置业窗口。",
+        "importance": 2,
+        "rank": 38,
+        "tags": [
+          "信贷"
+        ],
+        "locale": "gz"
+      },
+      {
+        "url": "https://finance.sina.com.cn/money/lcxqs/2026-08-24/doc-inipmhfs6146044.shtml",
+        "title_cn": "“业绩不达标就调基准”，行不通了！单日超200只理财密集“调基”",
+        "source": "新浪财经·理财保险",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "08/24",
+        "summary": "业绩不达标就调基准行不通了，单日超200只理财密集调基，理财业绩比较基准规范收紧。财富线应规范理财产品宣传，引导客户理性看待净值波动。",
+        "importance": 2,
+        "rank": 39,
+        "tags": [
+          "财富"
+        ],
+        "locale": "gz"
+      },
+      {
         "url": "https://finance.sina.com.cn/roll/2026-08-23/doc-iniphnma3761707.shtml",
         "title_cn": "美债抛售刺激金价狂飙，达利欧建议买入黄金！长江存储IPO申请获受理，高手怎么看8月行情？",
         "source": "新浪财经·理财保险",
@@ -439,7 +765,7 @@
         "date": "08/23",
         "summary": "美债抛售推升金价、黄金配置价值凸显，长江存储IPO获受理为资本市场热点，分行可关注黄金代销与科技企业资本市场服务机会。",
         "importance": 2,
-        "rank": 17,
+        "rank": 40,
         "tags": [
           "财富"
         ],
@@ -454,7 +780,7 @@
         "date": "08/23",
         "summary": "金价三连阳逼空走强、黄金多头情绪高涨，避险配置需求旺盛，分行可加大黄金产品供给并提示高位波动风险。",
         "importance": 2,
-        "rank": 18,
+        "rank": 41,
         "tags": [
           "财富"
         ],
@@ -469,7 +795,7 @@
         "date": "08/23",
         "summary": "六大行信用卡分期贴息政策扩围落地，分期成本降低、客户办理意愿上升，分行应跟进定价并推动分期与消费场景结合。",
         "importance": 2,
-        "rank": 19,
+        "rank": 42,
         "tags": [
           "信贷"
         ],
@@ -484,7 +810,7 @@
         "date": "08/23",
         "summary": "工农中建交邮储六大行集体公告更新消费贷/分期贴息政策，行业性扩围落地，分行需对标跟进、抢抓个人信贷获客窗口。",
         "importance": 2,
-        "rank": 20,
+        "rank": 43,
         "tags": [
           "信贷"
         ],
@@ -499,7 +825,7 @@
         "date": "08/23",
         "summary": "美债风暴下人民币资产避风港逻辑受关注，人民币理财与固收产品配置价值凸显，分行可引导客户加大稳健资产配置。",
         "importance": 2,
-        "rank": 21,
+        "rank": 44,
         "tags": [
           "财富"
         ],
@@ -514,7 +840,7 @@
         "date": "08/23",
         "summary": "资管信披新规统一百万亿资管赛道、适当性管理全覆盖，银行理财与代销合规要求提升，分行需对照新规完善销售适当性与信息披露。",
         "importance": 2,
-        "rank": 22,
+        "rank": 45,
         "tags": [
           "财富"
         ],
@@ -529,7 +855,7 @@
         "date": "08/23",
         "summary": "中国探索“算力银行”“算力超市”，算力资产化趋势显现，科技金融新场景涌现，分行可关注算力企业融资与产业客群机会。",
         "importance": 2,
-        "rank": 23,
+        "rank": 46,
         "tags": [
           "客群"
         ],
@@ -544,7 +870,7 @@
         "date": "08/23",
         "summary": "广东以“词元贷”赋能湾区科创企业，创新信贷模式涌现，分行可研究数据/算力资产融资模式，服务科创客群。",
         "importance": 2,
-        "rank": 24,
+        "rank": 47,
         "tags": [
           "信贷"
         ],
@@ -559,7 +885,7 @@
         "date": "08/23",
         "summary": "广博会购销两旺、市井热度与商业锐度交织，本地消费与商贸活跃，分行可结合会展场景推进商户收单与消费金融。",
         "importance": 2,
-        "rank": 25,
+        "rank": 48,
         "tags": [
           "客群"
         ],
@@ -574,7 +900,7 @@
         "date": "08/23",
         "summary": "友邦人寿上半年业绩稳健增长，头部险企经营向好，居民保障与财富配置需求稳定，分行可关注保险代销合作与客户保障配置。",
         "importance": 2,
-        "rank": 26,
+        "rank": 49,
         "tags": [
           "财富"
         ],
@@ -589,7 +915,7 @@
         "date": "08/23",
         "summary": "资管信披新规落地在即、银行理财整改提速，净值化与信息披露要求提升，分行需加快理财产品合规整改与客户沟通。",
         "importance": 2,
-        "rank": 27,
+        "rank": 50,
         "tags": [
           "财富"
         ],
@@ -604,7 +930,7 @@
         "date": "08/23",
         "summary": "金融赋能商业航天渐成合力，商业航天赛道融资需求升温，分行可关注新兴赛道产业客群与投贷联动机会。",
         "importance": 2,
-        "rank": 28,
+        "rank": 51,
         "tags": [
           "客群"
         ],
@@ -619,7 +945,7 @@
         "date": "08/23",
         "summary": "美债担忧再起、贵金属势能上行，行业研究看好黄金配置，避险逻辑延续，分行可加强黄金产品推荐与客户避险配置引导。",
         "importance": 2,
-        "rank": 29,
+        "rank": 52,
         "tags": [
           "财富"
         ],
@@ -634,7 +960,7 @@
         "date": "08/23",
         "summary": "美债大甩卖背景下黄金成配置赢家，金价避险逻辑强化，分行可结合市场热度推进黄金积存与代销并提示波动风险。",
         "importance": 2,
-        "rank": 30,
+        "rank": 53,
         "tags": [
           "财富"
         ],
@@ -649,7 +975,7 @@
         "date": "08/23",
         "summary": "今年以来近300只基金提前结募，资金入场意愿升温。可提示财富客户把握权益产品发行窗口，做好风险适配。",
         "importance": 2,
-        "rank": 31,
+        "rank": 54,
         "tags": [
           "财富"
         ],
@@ -664,7 +990,7 @@
         "date": "08/23",
         "summary": "多家银行信用卡分期优惠加码、最高省5000元。广州分行可加大分期营销，引导消费贷与信用卡联动促投放。",
         "importance": 2,
-        "rank": 32,
+        "rank": 55,
         "tags": [
           "信贷"
         ],
@@ -679,7 +1005,7 @@
         "date": "08/23",
         "summary": "多家银行上调贷款贴息额度、信用卡全品类纳入优惠。可统一客户贴息办理口径，把握扩内需政策红利促消费信贷。",
         "importance": 2,
-        "rank": 33,
+        "rank": 56,
         "tags": [
           "信贷"
         ],
@@ -694,7 +1020,7 @@
         "date": "08/23",
         "summary": "多家私募违规被罚、多地启动自查，监管趋严。可提示财富客户甄别私募产品、强化合规销售与适当性管理。",
         "importance": 2,
-        "rank": 34,
+        "rank": 57,
         "tags": [
           "财富"
         ],
@@ -709,9 +1035,24 @@
         "date": "08/23",
         "summary": "广州“城脉千年”文化展人气爆棚，文旅消费升温。可联动信用卡商圈权益与文旅客群经营。",
         "importance": 2,
-        "rank": 35,
+        "rank": 58,
         "tags": [
           "客群"
+        ],
+        "locale": "gz"
+      },
+      {
+        "url": "https://finance.sina.com.cn/jjxw/2026-08-23/doc-inipiiqq6695893.shtml",
+        "title_cn": "“卷”出来的银行中收数据？ 有基层员工自掏腰包买保险、基金和理财",
+        "source": "新浪财经·理财保险",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "08/23",
+        "summary": "部分银行基层员工自掏腰包买保险基金理财冲中收，暴露考核与合规隐患。分行应检视中收结构质量，杜绝虚假冲量，守住销售适当性底线。",
+        "importance": 2,
+        "rank": 59,
+        "tags": [
+          "财富"
         ],
         "locale": "gz"
       }
@@ -1047,6 +1388,467 @@
         "locale": "national"
       },
       {
+        "url": "https://www.cnfin.com/yw-lb/detail/20260824/4459220_1.html",
+        "title_cn": "【债市观察】隔夜逆回购精细调控流动性 债市收益率“先下后上”保持区间震荡",
+        "source": "新华财经",
+        "source_type": "official",
+        "tier": "T1.5",
+        "date": "08/24",
+        "summary": "央行隔夜逆回购精细调控流动性，债市收益率先下后上区间震荡。财富线可据此提示客户债市震荡格局下的稳健配置思路，利率债短端机会有限。",
+        "importance": 2,
+        "rank": 24,
+        "tags": [],
+        "locale": "national"
+      },
+      {
+        "url": "https://www.stcn.com/article/detail/4104760.html",
+        "title_cn": "广东推动信用服务业扩能提质 落实“一业一策”部署",
+        "source": "证券时报",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "08/24",
+        "summary": "广东推动信用服务业扩能提质、落实一业一策，征信/信用服务产业获政策加持。分行可关注信用服务企业客群，联动对公与零售征信类产品场景。",
+        "importance": 2,
+        "rank": 25,
+        "tags": [],
+        "locale": "national"
+      },
+      {
+        "url": "https://www.stcn.com/article/detail/4105326.html",
+        "title_cn": "阿里巴巴融资800亿股价大跌，市场热议港股“二次探底”",
+        "source": "证券时报",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "08/24",
+        "summary": "阿里巴巴800亿融资落地股价大跌，港股二次探底担忧升温。财富线应关注港美股持仓客户情绪，提示高波动风险，避免恐慌性操作。",
+        "importance": 2,
+        "rank": 26,
+        "tags": [],
+        "locale": "national"
+      },
+      {
+        "url": "https://www.stcn.com/article/detail/4105309.html",
+        "title_cn": "逃离“拥挤赛道”？公募重仓标的显疲态，基金经理审视投资再平衡",
+        "source": "证券时报",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "08/24",
+        "summary": "公募重仓标的显疲态，基金经理审视再平衡，拥挤赛道回调风险显现。财富线可借此提示客户分散持仓、均衡配置，规避抱团拥挤风险。",
+        "importance": 2,
+        "rank": 27,
+        "tags": [
+          "财富"
+        ],
+        "locale": "national"
+      },
+      {
+        "url": "https://www.stcn.com/article/detail/4105308.html",
+        "title_cn": "多只绩优基金放开限购！年内收益居前产品重新“开门迎客”",
+        "source": "证券时报",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "08/24",
+        "summary": "多只绩优基金放开限购、重新开门迎客，绩优产品申购窗口打开。财富线可借机向客户推荐放开限购的绩优基金，补足优质权益配置。",
+        "importance": 2,
+        "rank": 28,
+        "tags": [
+          "财富"
+        ],
+        "locale": "national"
+      },
+      {
+        "url": "https://www.stcn.com/article/detail/4105318.html",
+        "title_cn": "盘中，阿里巴巴一度跌超10%",
+        "source": "证券时报",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "08/24",
+        "summary": "阿里巴巴盘中一度跌超10%，港股个股剧烈波动，财富线需关注港股持仓客户风险提示。",
+        "importance": 2,
+        "rank": 29,
+        "tags": [],
+        "locale": "national"
+      },
+      {
+        "url": "https://finance.cctv.com/2026/08/24/ARTIVu3TtenlKT3etqJq5jQR260824.shtml",
+        "title_cn": "上市银行半年报密集披露 业绩回暖折射银行业经营韧性",
+        "source": "央视财经",
+        "source_type": "official",
+        "tier": "T1.5",
+        "date": "08/24",
+        "summary": "上市银行半年报密集披露、业绩回暖折射经营韧性。分行可对标同业业绩结构，检视零售中收与存款成本优化空间，增强发展信心。",
+        "importance": 2,
+        "rank": 30,
+        "tags": [],
+        "locale": "national"
+      },
+      {
+        "url": "https://finance.cctv.com/2026/08/24/ARTIkMA9efab3NcEVkYiCXBk260824.shtml",
+        "title_cn": "国家首提“算力超市”和“算力银行”，背后藏着一盘算力“大棋”",
+        "source": "央视财经",
+        "source_type": "official",
+        "tier": "T1.5",
+        "date": "08/24",
+        "summary": "国家首提算力超市、算力银行，算力基础设施金融化信号明确。分行可前瞻布局算力产业链客群金融服务，探索算力资产融资与科技金融场景。",
+        "importance": 2,
+        "rank": 31,
+        "tags": [],
+        "locale": "national"
+      },
+      {
+        "url": "https://www.cnfin.com/yw-lb/detail/20260824/4459362_1.html",
+        "title_cn": "阿里配售获近3倍超额认购 主权和长线基金最终认购比例超40%",
+        "source": "新华财经",
+        "source_type": "official",
+        "tier": "T1.5",
+        "date": "08/24",
+        "summary": "阿里配售获近3倍超额认购，主权与长线基金认购超40%，港股募资热度高。财富线可关注港股打新与科技板块配置机会，提示客户关注优质中概回归。",
+        "importance": 2,
+        "rank": 32,
+        "tags": [],
+        "locale": "national"
+      },
+      {
+        "url": "https://www.stcn.com/article/detail/4105374.html",
+        "title_cn": "希音开启全球发售 拟募资131.23亿港元 预计9月1日登陆港交所",
+        "source": "证券时报",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "08/24",
+        "summary": "希音开启全球发售、拟募资131亿港元、9月1日登陆港交所，重磅港股IPO。财富线可提前布局打新与中概消费零售赛道配置，服务高净值客户港股机会。",
+        "importance": 2,
+        "rank": 33,
+        "tags": [],
+        "locale": "national"
+      },
+      {
+        "url": "https://www.stcn.com/article/detail/4105422.html",
+        "title_cn": "一周狂买44.51亿元，这只ETF登顶亚洲周度“吸金”榜",
+        "source": "证券时报",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "08/24",
+        "summary": "单只ETF一周净流入44.51亿元登顶亚洲吸金榜，资金借道ETF布局明显。财富线可借ETF资金流向提示客户把握宽基/主题配置方向，顺势引导定投。",
+        "importance": 2,
+        "rank": 34,
+        "tags": [
+          "财富"
+        ],
+        "locale": "national"
+      },
+      {
+        "url": "https://finance.sina.com.cn/jryx/bank/2026-08-24/doc-inipkzxs2039146.shtml",
+        "title_cn": "央行广东省分行：关于规范使用“支付”“清算”“结算”“征信”“信用评级”等字样的提示",
+        "source": "新浪财经·银行频道",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "08/24",
+        "summary": "央行广东省分行提示规范使用支付、清算、结算、征信、信用评级等字样，监管口径收紧。分行应规范业务宣传与产品命名，防范误导与合规风险。",
+        "importance": 2,
+        "rank": 35,
+        "tags": [],
+        "locale": "national"
+      },
+      {
+        "url": "https://www.cnfin.com/yw-lb/detail/20260824/4459431_1.html",
+        "title_cn": "收评：三大指数放量调整 种业、黄金概念股走强 “易中天”集体下跌",
+        "source": "新华财经",
+        "source_type": "official",
+        "tier": "T1.5",
+        "date": "08/24",
+        "summary": "A股放量调整、种业与黄金概念走强、易中天集体下跌，市场分化行情。财富线应提示客户均衡配置，把握黄金与防御板块机会，控制回撤。",
+        "importance": 2,
+        "rank": 36,
+        "tags": [],
+        "locale": "national"
+      },
+      {
+        "url": "https://www.stcn.com/article/detail/4105405.html",
+        "title_cn": "政策优化加速 一线城市楼市蓄势“金九银十”",
+        "source": "证券时报",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "08/24",
+        "summary": "政策优化加速、一线城市楼市蓄势金九银十，楼市预期回暖。分行可前瞻布局按揭与家装消费贷营销，把握金九银十楼市窗口。",
+        "importance": 2,
+        "rank": 37,
+        "tags": [
+          "信贷"
+        ],
+        "locale": "national"
+      },
+      {
+        "url": "https://www.stcn.com/article/detail/4105492.html",
+        "title_cn": "今年以来新股发行募资1831.54亿元，科创板占比48.51%",
+        "source": "证券时报",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "08/24",
+        "summary": "今年新股发行募资1831.54亿元、科创板占比48.51%，IPO市场活跃。财富线可提示客户关注科创板打新与新股配置机会，把握权益市场供给节奏。",
+        "importance": 2,
+        "rank": 38,
+        "tags": [],
+        "locale": "national"
+      },
+      {
+        "url": "https://www.stcn.com/article/detail/4105488.html",
+        "title_cn": "全球风暴再起！亚太股市，集体回调！贝森特释放关键信号",
+        "source": "证券时报",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "08/24",
+        "summary": "全球风暴再起、亚太股市集体回调，外围市场波动加剧。财富线应及时提示客户海外配置波动风险，做好组合防御与流动性安排。",
+        "importance": 2,
+        "rank": 39,
+        "tags": [],
+        "locale": "national"
+      },
+      {
+        "url": "https://www.cnfin.com/yw-lb/detail/20260824/4459460_1.html",
+        "title_cn": "债市日报：8月24日",
+        "source": "新华财经",
+        "source_type": "official",
+        "tier": "T1.5",
+        "date": "08/24",
+        "summary": "债市日报：资金面与利率走势跟踪，债市动态。财富线可据此管理固收客户收益预期，提示利率区间震荡下的稳健配置。",
+        "importance": 2,
+        "rank": 40,
+        "tags": [],
+        "locale": "national"
+      },
+      {
+        "url": "https://www.stcn.com/article/detail/4105896.html",
+        "title_cn": "阿里巴巴新股配售定价完成 互联网巨头AI竞争进入下半场",
+        "source": "证券时报",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "08/24",
+        "summary": "阿里新股配售定价完成，互联网巨头AI竞争进入下半场，港股科技龙头融资落地。财富线可关注科技龙头配置与港股情绪修复机会。",
+        "importance": 2,
+        "rank": 41,
+        "tags": [],
+        "locale": "national"
+      },
+      {
+        "url": "https://finance.sina.com.cn/jryx/bank/2026-08-24/doc-inipmhfq2039801.shtml",
+        "title_cn": "青农商行：80亿元小微贷款专项金融债发行完毕",
+        "source": "新浪财经·银行频道",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "08/24",
+        "summary": "青农商行80亿元小微贷款专项金融债发行完毕，同业小微资金供给加码。分行可对标扩大小微信贷投放，用好专项债与再贷款工具。",
+        "importance": 2,
+        "rank": 42,
+        "tags": [],
+        "locale": "national"
+      },
+      {
+        "url": "https://finance.sina.com.cn/money/bank/gsdt/2026-08-24/doc-inipmhfq1987471.shtml",
+        "title_cn": "银行股“新高秀”开启！又有两家股价刷新纪录，相关",
+        "source": "新浪财经·银行频道",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "08/24",
+        "summary": "银行股新高秀开启、两家股价刷新纪录，银行板块估值修复行情。财富线可借板块走强提示客户关注银行股配置价值，提振零售信心。",
+        "importance": 2,
+        "rank": 43,
+        "tags": [],
+        "locale": "national"
+      },
+      {
+        "url": "https://finance.sina.com.cn/roll/2026-08-24/doc-inipmhfn9974610.shtml",
+        "title_cn": "内地投资者在港银行不动户核查迎关键节点，资金来",
+        "source": "新浪财经·银行频道",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "08/24",
+        "summary": "内地投资者在港银行不动户核查迎关键节点，跨境资金与账户合规收紧。私行/财富线应提示客户合规处理香港账户，避免账户冻结风险。",
+        "importance": 2,
+        "rank": 44,
+        "tags": [
+          "财富",
+          "私行"
+        ],
+        "locale": "national"
+      },
+      {
+        "url": "https://www.cnfin.com/yw-lb/detail/20260824/4459559_1.html",
+        "title_cn": "小鹏机器人业务完成首轮超9亿美元融资",
+        "source": "新华财经",
+        "source_type": "official",
+        "tier": "T1.5",
+        "date": "08/24",
+        "summary": "小鹏机器人业务完成首轮超9亿美元融资，广东（广州）科技企业重大融资。分行可关注机器人产业链客群，探索科技企业员工与供应链金融服务。",
+        "importance": 2,
+        "rank": 45,
+        "tags": [
+          "客群"
+        ],
+        "locale": "national"
+      },
+      {
+        "url": "https://www.cnfin.com/yw-lb/detail/20260824/4459554_1.html",
+        "title_cn": "新华财经晚报：国管公积金新政 首套房最高可贷款340万元",
+        "source": "新华财经",
+        "source_type": "official",
+        "tier": "T1.5",
+        "date": "08/24",
+        "summary": "国管公积金新政：首套房最高可贷340万元，公积金贷款额度上调。分行可跟进本地公积金政策，加大按揭与公积金组合贷营销。",
+        "importance": 2,
+        "rank": 46,
+        "tags": [
+          "信贷"
+        ],
+        "locale": "national"
+      },
+      {
+        "url": "https://www.stcn.com/article/detail/4106113.html",
+        "title_cn": "极端行情里竟有宝藏基金！它们如何做到年内赚超20%、最大回撤不到10%？",
+        "source": "证券时报",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "08/24",
+        "summary": "极端行情中宝藏基金年内赚超20%、最大回撤不到10%，攻守兼备策略复盘。财富线可借案例向客户推介稳健策略基金，强化回撤控制理念。",
+        "importance": 2,
+        "rank": 47,
+        "tags": [
+          "财富"
+        ],
+        "locale": "national"
+      },
+      {
+        "url": "https://www.nfra.gov.cn/cn/view/pages/ItemDetail.html?docId=1269113",
+        "title_cn": "国家金融监督管理总局德阳监管分局行政处罚信息公开表",
+        "source": "国家金融监督管理总局",
+        "source_type": "official",
+        "tier": "T1",
+        "date": "08/24",
+        "summary": "金融监管总局德阳监管分局行政处罚信息公开，监管处罚案例。分行应引以为戒，检视辖内机构经营合规，防范同类问题。",
+        "importance": 2,
+        "rank": 48,
+        "tags": [],
+        "locale": "national"
+      },
+      {
+        "url": "https://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026082118245286995/index.html",
+        "title_cn": "2026年7月金融市场运行情况",
+        "source": "中国人民银行",
+        "source_type": "official",
+        "tier": "T1",
+        "date": "08/24",
+        "summary": "央行发布2026年7月金融市场运行情况，货币信贷与市场数据。分行可据此研判流动性环境与信贷投放节奏，指导零售资产配置。",
+        "importance": 2,
+        "rank": 49,
+        "tags": [],
+        "locale": "national"
+      },
+      {
+        "url": "https://www.cls.cn/detail/2462564",
+        "title_cn": "对冲万亿供给压力，央行隔夜逆回购实现跨月操作，10年国债击穿1.68%关口，债牛逻辑或未改",
+        "source": "财联社",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "08/24",
+        "summary": "对冲万亿供给压力，央行隔夜逆回购跨月操作、10年国债击穿1.68%，债牛逻辑或未改。财富线可提示客户债市仍具配置价值，把握利率债与固收机会。",
+        "importance": 2,
+        "rank": 50,
+        "tags": [],
+        "locale": "national"
+      },
+      {
+        "url": "https://www.cls.cn/detail/2462405",
+        "title_cn": "从规模扩张转向获得感优先，陆家嘴金融沙龙2026年第二十八期热议投资者陪伴范式转换",
+        "source": "财联社",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "08/24",
+        "summary": "陆家嘴金融沙龙热议投资者陪伴范式转换，行业从规模扩张转向获得感优先。财富线可借鉴投资者陪伴新模式，提升客户服务与留存。",
+        "importance": 2,
+        "rank": 51,
+        "tags": [],
+        "locale": "national"
+      },
+      {
+        "url": "https://www.cls.cn/detail/2462400",
+        "title_cn": "债市收盘|资金面偏紧下长端走强，30年期国债收益率下破2.16%",
+        "source": "财联社",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "08/24",
+        "summary": "债市收盘：资金面偏紧下长端走强、30年期国债收益率下破2.16%，债市走势。财富线可据此管理固收客户预期，提示长端利率下行空间。",
+        "importance": 2,
+        "rank": 52,
+        "tags": [],
+        "locale": "national"
+      },
+      {
+        "url": "https://www.cls.cn/detail/2462340",
+        "title_cn": "9000万月活流量、日均千亿级Token消耗：平安迈入AI驱动的战略协同新模式",
+        "source": "财联社",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "08/24",
+        "summary": "平安AI战略：9000万月活、日均千亿级Token消耗，金融集团AI转型提速。分行可对标头部同业AI应用，探索智能营销与客户经营提效。",
+        "importance": 2,
+        "rank": 53,
+        "tags": [],
+        "locale": "national"
+      },
+      {
+        "url": "https://www.stcn.com/article/detail/4106287.html",
+        "title_cn": "腾讯与中国太保聚焦AI领域全面深化战略合作",
+        "source": "证券时报",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "08/24",
+        "summary": "腾讯与中国太保聚焦AI深化战略合作，保险科技合作深化。可关注AI+保险场景创新，对分行财富与保障产品数字化有参考价值。",
+        "importance": 2,
+        "rank": 54,
+        "tags": [],
+        "locale": "national"
+      },
+      {
+        "url": "https://www.stcn.com/article/detail/4106277.html",
+        "title_cn": "阿里核心高层出手！蔡崇信、吴泳铭增持1.2亿港元股票",
+        "source": "证券时报",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "08/24",
+        "summary": "蔡崇信、吴泳铭增持阿里1.2亿港元，核心高管增持释放信心信号。财富线可借势向客户传导港股科技龙头基本面信心。",
+        "importance": 2,
+        "rank": 55,
+        "tags": [],
+        "locale": "national"
+      },
+      {
+        "url": "https://www.stcn.com/article/detail/4106278.html",
+        "title_cn": "合计107万股，约1.2亿港元！蔡崇信、吴泳铭出手增持阿里巴巴",
+        "source": "证券时报",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "08/24",
+        "summary": "蔡崇信、吴泳铭合计增持阿里107万股约1.2亿港元，高管增持动态，同上为信心信号。",
+        "importance": 2,
+        "rank": 56,
+        "tags": [],
+        "locale": "national"
+      },
+      {
+        "url": "https://news.southcn.com/node_812903b83a/31b4a308f4.shtml",
+        "title_cn": "2026世界机器人大会，广东民企凭何“出圈”？",
+        "source": "南方网·经济",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "08/24",
+        "summary": "世界机器人大会广东民企出圈，广东机器人产业竞争力凸显。分行可深耕机器人产业客群，提供科创金融与产业链员工综合服务。",
+        "importance": 2,
+        "rank": 57,
+        "tags": [
+          "客群"
+        ],
+        "locale": "gz"
+      },
+      {
         "url": "https://www.stcn.com/article/detail/4102702.html",
         "title_cn": "国际金价连涨三周，反弹还是反转？",
         "source": "证券时报",
@@ -1055,7 +1857,7 @@
         "date": "08/23",
         "summary": "国际金价连涨三周，美债担忧与避险需求共振，黄金配置窗口延续，分行可加大黄金/黄金积存产品推荐，服务客户避险配置。",
         "importance": 2,
-        "rank": 24,
+        "rank": 58,
         "tags": [],
         "locale": "national"
       },
@@ -1068,7 +1870,7 @@
         "date": "08/23",
         "summary": "私募规模单月大增超2万亿元、头部机构高仓位押注后市，权益信心回升带动居民财富向权益配置迁移，分行可关注高净值客户私募代销与权益配置需求。",
         "importance": 2,
-        "rank": 25,
+        "rank": 59,
         "tags": [],
         "locale": "national"
       },
@@ -1081,7 +1883,7 @@
         "date": "08/23",
         "summary": "千亿级外资公募总经理变更，头部机构人事调整或影响产品策略与渠道合作，分行代销公募产品时需关注合作机构稳定性。",
         "importance": 2,
-        "rank": 26,
+        "rank": 60,
         "tags": [],
         "locale": "national"
       },
@@ -1094,7 +1896,7 @@
         "date": "08/23",
         "summary": "前7月广东规上工业增加值增长5.7%，区域经济基本面稳健，企业客群经营环境良好，分行可结合区域产业景气推进对公与代发业务。",
         "importance": 2,
-        "rank": 27,
+        "rank": 61,
         "tags": [
           "客群"
         ],
@@ -1109,7 +1911,7 @@
         "date": "08/23",
         "summary": "300MW级F级燃气轮机首台套示范电站项目落地广东，区域能源重大项目推进，对分行对公项目融资与政银合作有参考。",
         "importance": 2,
-        "rank": 28,
+        "rank": 62,
         "tags": [],
         "locale": "national"
       },
@@ -1122,7 +1924,7 @@
         "date": "08/23",
         "summary": "机器人主题剧烈波动、七大公募最新把脉，主题基金波动加大，分行代销权益类产品时应强化投资者适当性与风险提示。",
         "importance": 2,
-        "rank": 29,
+        "rank": 63,
         "tags": [],
         "locale": "national"
       },
@@ -1135,7 +1937,7 @@
         "date": "08/23",
         "summary": "老字号致美斋阳江基地驶入智造赛道、激活县域经济，广东县域产业升级带动企业客群，分行可关注县域代发与产业金融服务。",
         "importance": 2,
-        "rank": 30,
+        "rank": 64,
         "tags": [
           "客群"
         ],
@@ -1150,7 +1952,7 @@
         "date": "08/23",
         "summary": "财政部将消费贷贴息上限提至5000元、范围扩大，多家银行发布办理指引。广州分行可加大消费贷营销并统一做好客户贴息答疑，把握扩内需政策红利。",
         "importance": 2,
-        "rank": 31,
+        "rank": 65,
         "tags": [
           "信贷"
         ],
@@ -1165,15 +1967,66 @@
         "date": "08/23",
         "summary": "有银行罕见拉平定存利率，一年期及以上统一1.65%，存款期限溢价收窄。可提示客户锁定长期限、优化存款结构，引导资金向理财转化。",
         "importance": 2,
-        "rank": 32,
+        "rank": 66,
         "tags": [
           "财富"
+        ],
+        "locale": "national"
+      },
+      {
+        "url": "https://finance.sina.com.cn/money/bank/gsdt/2026-08-23/doc-inipmhfs6087172.shtml",
+        "title_cn": "视频 | 河南多名农民称莫名成企业法人代表“被贷款",
+        "source": "新浪财经·银行频道",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "08/23",
+        "summary": "河南多名农民莫名成企业法人被贷款，视频报道，暴露信贷身份冒用风险。分行须强化身份核验与反欺诈，保护客户征信权益。",
+        "importance": 2,
+        "rank": 67,
+        "tags": [
+          "信贷"
         ],
         "locale": "national"
       }
     ],
     "tech": [],
     "ipo": [
+      {
+        "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0824/2026082401032.pdf",
+        "title_cn": "XPENG-W (09868) — Interim Results Announcement for the Six Months Ended June 30, 2026",
+        "source": "港交所IPO公告",
+        "source_type": "media",
+        "date": "08/24",
+        "summary": "港交所公告 | 代码: 09868 | 公司: XPENG-W | 时间: 24/08/2026 18:30 | 格式: PDF",
+        "importance": 2,
+        "rank": 1,
+        "tags": [],
+        "locale": "national"
+      },
+      {
+        "url": "https://www.bse.cn/disclosure/2026/2026-08-24/d765253d13444856bd0b344d4bd8dbac.pdf",
+        "title_cn": "杰理科技 (920138)",
+        "source": "北交所IPO公告",
+        "source_type": "media",
+        "date": "08/24",
+        "summary": "北交所公告 | [临时公告]杰理科技:以自筹资金预先投入募集资金投资项目和支付发行费用鉴证报告 | 日期: 2026-08-24",
+        "importance": 2,
+        "rank": 2,
+        "tags": [],
+        "locale": "national"
+      },
+      {
+        "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0824/2026082401045.pdf",
+        "title_cn": "XPENG-W (09868) — XPENG Reports Second Quarter 2026 Unaudited Financial Results",
+        "source": "港交所IPO公告",
+        "source_type": "media",
+        "date": "08/24",
+        "summary": "港交所公告 | 代码: 09868 | 公司: XPENG-W | 时间: 24/08/2026 18:36 | 格式: PDF",
+        "importance": 2,
+        "rank": 3,
+        "tags": [],
+        "locale": "national"
+      },
       {
         "url": "https://static.cninfo.com.cn/finalpage/2026-08-24/1225493853.PDF",
         "title_cn": "高凯技术 (688835)",
@@ -1182,7 +2035,7 @@
         "date": "08/23",
         "summary": "高凯技术(688835)科创板上市，属已上市新股。可纳入财富客户打新复盘与新股研究，关注半导体设备赛道机会。",
         "importance": 2,
-        "rank": 1,
+        "rank": 4,
         "tags": [],
         "locale": "national"
       },
@@ -1194,7 +2047,7 @@
         "date": "08/23",
         "summary": "马矿股份(601123)主板新股申购，主营矿用设备。可提示财富客户关注申购，联动打新策略服务。",
         "importance": 2,
-        "rank": 2,
+        "rank": 5,
         "tags": [],
         "locale": "national"
       },
@@ -1206,7 +2059,7 @@
         "date": "08/23",
         "summary": "天博智能(603448)主板新股网上路演，主营智能控制器。可提示财富客户关注申购与产业链机会。",
         "importance": 2,
-        "rank": 3,
+        "rank": 6,
         "tags": [],
         "locale": "national"
       },
@@ -1218,7 +2071,7 @@
         "date": "08/23",
         "summary": "格林生物(301688)创业板新股网下配售结果公告，主营香料。可纳入财富客户新股研究跟踪。",
         "importance": 2,
-        "rank": 4,
+        "rank": 7,
         "tags": [],
         "locale": "national"
       },
@@ -1230,7 +2083,7 @@
         "date": "08/23",
         "summary": "洛轴股份(301699)创业板新股网上路演，主营轴承制造。可提示财富客户关注申购与高端制造机会。",
         "importance": 2,
-        "rank": 5,
+        "rank": 8,
         "tags": [],
         "locale": "national"
       }

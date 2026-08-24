@@ -2168,9 +2168,11 @@
       "excerpt": "【财富管理】星图测控股价跌5.19%，华夏基金旗下1只基金重",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "gz",
+      "summary": "星图测控股价回调、华夏基金旗下基金重仓，反映卫星应用主题波动。财富线可借市场热点回落做持仓检视，提示客户卫星/军工主题基金波动风险，避免追高。",
       "source": "新浪财经·理财保险",
       "fetchedToday": true,
-      "subcategory": "cn-finance"
+      "subcategory": "gz-wealth",
+      "relevant": true
     },
     {
       "sourceId": "cnfin",
@@ -2179,9 +2181,10 @@
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "finance",
+      "summary": "五大信披媒体精华摘要，为当日财经资讯汇总，信息密度低、无单条决策价值，仅作行业信息背景参考。",
       "source": "新华财经",
       "fetchedToday": true,
-      "subcategory": "cn-finance"
+      "relevant": false
     },
     {
       "sourceId": "cnfin",
@@ -2190,9 +2193,11 @@
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "finance",
+      "summary": "央行隔夜逆回购精细调控流动性，债市收益率先下后上区间震荡。财富线可据此提示客户债市震荡格局下的稳健配置思路，利率债短端机会有限。",
       "source": "新华财经",
       "fetchedToday": true,
-      "subcategory": "cn-finance"
+      "subcategory": "cn-finance",
+      "relevant": true
     },
     {
       "sourceId": "cnfin",
@@ -2201,9 +2206,10 @@
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "finance",
+      "summary": "新华财经早报，当日综合资讯汇总，信息分散、无单条零售决策价值，仅作背景参考。",
       "source": "新华财经",
       "fetchedToday": true,
-      "subcategory": "cn-finance"
+      "relevant": false
     },
     {
       "sourceId": "cnfin",
@@ -2212,9 +2218,10 @@
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "finance",
+      "summary": "加拿大民调显示超七成民众支持退出加美贸易谈判，属国际政治动向，与国内银行零售经营无直接关联。",
       "source": "新华财经",
       "fetchedToday": true,
-      "subcategory": "cn-finance"
+      "relevant": false
     },
     {
       "sourceId": "cnfin",
@@ -2223,9 +2230,10 @@
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "finance",
+      "summary": "美财长称美伊战事进入终局，地缘缓和信号，对黄金等避险资产或有边际影响，但不构成零售经营直接决策依据。",
       "source": "新华财经",
       "fetchedToday": true,
-      "subcategory": "cn-finance"
+      "relevant": false
     },
     {
       "sourceId": "cnfin",
@@ -2234,9 +2242,10 @@
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "finance",
+      "summary": "法国今夏溺水事件社会新闻，与银行零售业务无关联，不进入经营参考。",
       "source": "新华财经",
       "fetchedToday": true,
-      "subcategory": "cn-finance"
+      "relevant": false
     },
     {
       "sourceId": "stcn",
@@ -2245,9 +2254,10 @@
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "finance",
+      "summary": "人形机器人从展示走向落地交付，产业加速趋势。可作科技客群经营背景，但暂无零售直接商机，不进业务线。",
       "source": "证券时报",
       "fetchedToday": true,
-      "subcategory": "cn-finance"
+      "relevant": false
     },
     {
       "sourceId": "stcn",
@@ -2256,9 +2266,11 @@
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "finance",
+      "summary": "广东推动信用服务业扩能提质、落实一业一策，征信/信用服务产业获政策加持。分行可关注信用服务企业客群，联动对公与零售征信类产品场景。",
       "source": "证券时报",
       "fetchedToday": true,
-      "subcategory": "cn-finance"
+      "subcategory": "gz-policy",
+      "relevant": true
     },
     {
       "sourceId": "stcn",
@@ -2267,9 +2279,10 @@
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "finance",
+      "summary": "德生科技上半年转型推进、民生AI布局，个股业绩公告，非零售条线决策信息。",
       "source": "证券时报",
       "fetchedToday": true,
-      "subcategory": "cn-finance"
+      "relevant": false
     },
     {
       "sourceId": "stcn",
@@ -2278,9 +2291,10 @@
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "finance",
+      "summary": "万孚生物IVD全品类布局提速、国际化与AI赋能，个股业绩公告，与零售经营无直接关联。",
       "source": "证券时报",
       "fetchedToday": true,
-      "subcategory": "cn-finance"
+      "relevant": false
     },
     {
       "sourceId": "stcn",
@@ -2289,9 +2303,10 @@
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "finance",
+      "summary": "浩云科技上半年减亏46%并拟分红，个股业绩公告，非零售决策信息。",
       "source": "证券时报",
       "fetchedToday": true,
-      "subcategory": "cn-finance"
+      "relevant": false
     },
     {
       "sourceId": "stcn",
@@ -2300,9 +2315,10 @@
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "finance",
+      "summary": "顶固集创上半年净利过亿、投资收益贡献增量，个股业绩公告，与零售经营无直接关联。",
       "source": "证券时报",
       "fetchedToday": true,
-      "subcategory": "cn-finance"
+      "relevant": false
     },
     {
       "sourceId": "dayoo-gz",
@@ -2311,9 +2327,10 @@
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "gz",
+      "summary": "广州新龙镇推进移风易俗，属镇街行政民生新闻，与银行零售经营无关联。",
       "source": "广州日报·大洋网",
       "fetchedToday": true,
-      "subcategory": "gz-media"
+      "relevant": false
     },
     {
       "sourceId": "dayoo-gz",
@@ -2322,9 +2339,10 @@
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "gz",
+      "summary": "广州一商家刷单失信被罚5万元，市场监管案例，可作合规宣传素材，无经营决策价值。",
       "source": "广州日报·大洋网",
       "fetchedToday": true,
-      "subcategory": "gz-media"
+      "relevant": false
     },
     {
       "sourceId": "dayoo-gz",
@@ -2333,9 +2351,10 @@
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "gz",
+      "summary": "广州商铺占道经营扰民曝光，市容管理新闻，与银行零售经营无关联。",
       "source": "广州日报·大洋网",
       "fetchedToday": true,
-      "subcategory": "gz-media"
+      "relevant": false
     },
     {
       "sourceId": "dayoo-gz",
@@ -2344,9 +2363,10 @@
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "gz",
+      "summary": "国家级方志学术盛会在穗举办，文化学术活动新闻，与银行零售经营无关联。",
       "source": "广州日报·大洋网",
       "fetchedToday": true,
-      "subcategory": "gz-media"
+      "relevant": false
     },
     {
       "sourceId": "dayoo-gz",
@@ -2355,9 +2375,11 @@
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "gz",
+      "summary": "2026广州医疗与健康产业博览会闭幕，50家三甲医院提交超300条临床合作需求。健康医疗产业客群活跃，可联动私行/财富深耕医疗健康企业家客群，探索员工体检、养老金融等场景。",
       "source": "广州日报·大洋网",
       "fetchedToday": true,
-      "subcategory": "gz-media"
+      "subcategory": "gz-customer",
+      "relevant": true
     },
     {
       "sourceId": "dayoo-gz",
@@ -2366,9 +2388,10 @@
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "gz",
+      "summary": "首届流行音乐创作大会在广州启幕，文化活动新闻，与银行零售经营无直接关联。",
       "source": "广州日报·大洋网",
       "fetchedToday": true,
-      "subcategory": "gz-media"
+      "relevant": false
     },
     {
       "sourceId": "southcn",
@@ -2377,9 +2400,11 @@
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "gz",
+      "summary": "多家银行更新个人消费贷贴息细则，提上限、扩范围。分行须同步统一答疑口径，加大消费信贷与信用卡分期营销，抢抓扩内需贴息红利窗口。",
       "source": "南方网·经济",
       "fetchedToday": true,
-      "subcategory": "gz-media"
+      "subcategory": "gz-credit",
+      "relevant": true
     },
     {
       "sourceId": "southcn",
@@ -2388,9 +2413,10 @@
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "gz",
+      "summary": "泡泡玛特业绩预期下调、股价大跌，个股消费公司动态，与银行零售经营无直接关联。",
       "source": "南方网·经济",
       "fetchedToday": true,
-      "subcategory": "gz-media"
+      "relevant": false
     },
     {
       "sourceId": "southcn",
@@ -2399,9 +2425,11 @@
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "gz",
+      "summary": "消费贷贴息国补升级，一年最高省5000元利息，政策红利显著。分行应加大消费贷与信用卡分期投放，向价格敏感客群精准推送贴息权益。",
       "source": "南方网·经济",
       "fetchedToday": true,
-      "subcategory": "gz-media"
+      "subcategory": "gz-credit",
+      "relevant": true
     },
     {
       "sourceId": "southcn",
@@ -2410,9 +2438,10 @@
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "gz",
+      "summary": "奶茶店业态观察报道，消费趋势软文，无零售经营决策价值。",
       "source": "南方网·经济",
       "fetchedToday": true,
-      "subcategory": "gz-media"
+      "relevant": false
     },
     {
       "sourceId": "cnfin",
@@ -2421,9 +2450,10 @@
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "finance",
+      "summary": "当周中国LNG进口量约89万吨，能源行业数据，与银行零售经营无关联。",
       "source": "新华财经",
       "fetchedToday": true,
-      "subcategory": "cn-finance"
+      "relevant": false
     },
     {
       "sourceId": "cnfin",
@@ -2432,9 +2462,10 @@
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "finance",
+      "summary": "国内汽柴油批发价格数据，大宗价格信息，与银行零售经营无直接关联。",
       "source": "新华财经",
       "fetchedToday": true,
-      "subcategory": "cn-finance"
+      "relevant": false
     },
     {
       "sourceId": "stcn",
@@ -2443,9 +2474,10 @@
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "finance",
+      "summary": "慧谷新材拟用超募资金投资珠海项目，个股募投公告，与零售经营无直接关联。",
       "source": "证券时报",
       "fetchedToday": true,
-      "subcategory": "cn-finance"
+      "relevant": false
     },
     {
       "sourceId": "stcn",
@@ -2454,9 +2486,10 @@
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "finance",
+      "summary": "松原安全订单储备扩容、全球化推进，个股业绩公告，非零售决策信息。",
       "source": "证券时报",
       "fetchedToday": true,
-      "subcategory": "cn-finance"
+      "relevant": false
     },
     {
       "sourceId": "stcn",
@@ -2465,9 +2498,11 @@
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "finance",
+      "summary": "阿里巴巴800亿融资落地股价大跌，港股二次探底担忧升温。财富线应关注港美股持仓客户情绪，提示高波动风险，避免恐慌性操作。",
       "source": "证券时报",
       "fetchedToday": true,
-      "subcategory": "cn-finance"
+      "subcategory": "cn-finance",
+      "relevant": true
     },
     {
       "sourceId": "stcn",
@@ -2476,9 +2511,11 @@
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "finance",
+      "summary": "公募重仓标的显疲态，基金经理审视再平衡，拥挤赛道回调风险显现。财富线可借此提示客户分散持仓、均衡配置，规避抱团拥挤风险。",
       "source": "证券时报",
       "fetchedToday": true,
-      "subcategory": "cn-finance"
+      "subcategory": "gz-wealth",
+      "relevant": true
     },
     {
       "sourceId": "stcn",
@@ -2487,9 +2524,11 @@
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "finance",
+      "summary": "多只绩优基金放开限购、重新开门迎客，绩优产品申购窗口打开。财富线可借机向客户推荐放开限购的绩优基金，补足优质权益配置。",
       "source": "证券时报",
       "fetchedToday": true,
-      "subcategory": "cn-finance"
+      "subcategory": "gz-wealth",
+      "relevant": true
     },
     {
       "sourceId": "stcn",
@@ -2498,9 +2537,11 @@
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "finance",
+      "summary": "阿里巴巴盘中一度跌超10%，港股个股剧烈波动，财富线需关注港股持仓客户风险提示。",
       "source": "证券时报",
       "fetchedToday": true,
-      "subcategory": "cn-finance"
+      "subcategory": "cn-finance",
+      "relevant": true
     },
     {
       "sourceId": "dayoo-gz",
@@ -2509,9 +2550,10 @@
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "gz",
+      "summary": "广州生意人群体文化报道，商业氛围软文，无零售经营决策价值。",
       "source": "广州日报·大洋网",
       "fetchedToday": true,
-      "subcategory": "gz-media"
+      "relevant": false
     },
     {
       "sourceId": "dayoo-gz",
@@ -2520,9 +2562,10 @@
       "excerpt": "",
       "publishedAt": "2026-08-23T00:00:00.000Z",
       "category": "gz",
+      "summary": "广州文物活化打卡活动报道，文化民生新闻，与银行零售经营无关联。",
       "source": "广州日报·大洋网",
       "fetchedToday": true,
-      "subcategory": "gz-media"
+      "relevant": false
     },
     {
       "sourceId": "dayoo-gz",
@@ -2531,9 +2574,10 @@
       "excerpt": "",
       "publishedAt": "2026-08-23T00:00:00.000Z",
       "category": "gz",
+      "summary": "千年渔港开渔季报道，民生文化新闻，与银行零售经营无直接关联。",
       "source": "广州日报·大洋网",
       "fetchedToday": true,
-      "subcategory": "gz-media"
+      "relevant": false
     },
     {
       "sourceId": "dayoo-gz",
@@ -2542,9 +2586,10 @@
       "excerpt": "",
       "publishedAt": "2026-08-23T00:00:00.000Z",
       "category": "gz",
+      "summary": "处暑节气文化报道，生活资讯，无经营决策价值。",
       "source": "广州日报·大洋网",
       "fetchedToday": true,
-      "subcategory": "gz-media"
+      "relevant": false
     },
     {
       "sourceId": "arxiv-fintech",
@@ -2553,9 +2598,10 @@
       "excerpt": "arXiv:2608.20440v1 Announce Type: new Abstract: Authentication of edible oils in processed foods is important for food quality, fraud prevention, and regulatory compliance. This study establishes an integrated Raman spectroscopy and machine-learning framework that links intrinsic spectral organizati",
       "publishedAt": "2026-08-24T04:00:00.000Z",
       "category": "tech",
+      "summary": "arXiv食用油光谱检测AI论文，学术论文，与银行零售业务无关，不入经营参考。",
       "source": "arXiv 金融科技论文 (cs.AI·cs.LG·q-fin)",
       "fetchedToday": true,
-      "subcategory": "overseas-tech"
+      "relevant": false
     },
     {
       "sourceId": "stcn",
@@ -2564,9 +2610,10 @@
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "finance",
+      "summary": "茅台股价重回1300元上方、种业概念逆市上涨，A股板块行情，财富线可作白酒板块客户持仓参考，决策价值有限。",
       "source": "证券时报",
       "fetchedToday": true,
-      "subcategory": "cn-finance"
+      "relevant": false
     },
     {
       "sourceId": "stcn",
@@ -2575,9 +2622,10 @@
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "finance",
+      "summary": "茅台股价大涨，个股行情快讯，无零售经营决策价值。",
       "source": "证券时报",
       "fetchedToday": true,
-      "subcategory": "cn-finance"
+      "relevant": false
     },
     {
       "sourceId": "stcn",
@@ -2586,9 +2634,10 @@
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "finance",
+      "summary": "三大巨头集体下跌、新技术题材扰动市场，A股短线行情新闻，财富线需做好波动预期管理，无独立商机。",
       "source": "证券时报",
       "fetchedToday": true,
-      "subcategory": "cn-finance"
+      "relevant": false
     },
     {
       "sourceId": "stcn",
@@ -2597,9 +2646,10 @@
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "finance",
+      "summary": "中广核风电等在云南楚雄成立新能源公司，对公产业投资动态，与零售经营无直接关联。",
       "source": "证券时报",
       "fetchedToday": true,
-      "subcategory": "cn-finance"
+      "relevant": false
     },
     {
       "sourceId": "cctv-finance",
@@ -2607,9 +2657,11 @@
       "url": "https://finance.cctv.com/2026/08/24/ARTIVu3TtenlKT3etqJq5jQR260824.shtml",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "finance",
+      "summary": "上市银行半年报密集披露、业绩回暖折射经营韧性。分行可对标同业业绩结构，检视零售中收与存款成本优化空间，增强发展信心。",
       "source": "央视财经",
       "fetchedToday": true,
-      "subcategory": "cn-finance"
+      "subcategory": "cn-finance",
+      "relevant": true
     },
     {
       "sourceId": "cctv-finance",
@@ -2617,9 +2669,11 @@
       "url": "https://finance.cctv.com/2026/08/24/ARTIkMA9efab3NcEVkYiCXBk260824.shtml",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "finance",
+      "summary": "国家首提算力超市、算力银行，算力基础设施金融化信号明确。分行可前瞻布局算力产业链客群金融服务，探索算力资产融资与科技金融场景。",
       "source": "央视财经",
       "fetchedToday": true,
-      "subcategory": "cn-finance"
+      "subcategory": "cn-policy",
+      "relevant": true
     },
     {
       "sourceId": "sina-money",
@@ -2628,9 +2682,11 @@
       "excerpt": "【财富管理】现货黄金连涨三周！站上4600美元！华宝基金：美债变局释放宽松信号，黄金领涨情绪有望外溢！",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "gz",
+      "summary": "现货黄金连涨三周站上4600美元，美债变局释放宽松信号。财富线应把握黄金配置窗口，向客户推荐积存金、黄金ETF，并做好高位波动风险提示。",
       "source": "新浪财经·理财保险",
       "fetchedToday": true,
-      "subcategory": "cn-finance"
+      "subcategory": "gz-wealth",
+      "relevant": true
     },
     {
       "sourceId": "sina-money",
@@ -2639,9 +2695,11 @@
       "excerpt": "【财富管理】黄金最前沿：T+D 黄金Au99 积存金 上下车解析",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "gz",
+      "summary": "黄金T+D、Au99、积存金上下车解析，实操类内容。财富线可据此指导客户黄金入场/离场节奏，管理高位波动预期，强化积存金长期配置价值。",
       "source": "新浪财经·理财保险",
       "fetchedToday": true,
-      "subcategory": "cn-finance"
+      "subcategory": "gz-wealth",
+      "relevant": true
     },
     {
       "sourceId": "sina-money",
@@ -2650,9 +2708,11 @@
       "excerpt": "【财富管理】高盛警告：交易商被迫“抬轿”，黄金4900美元“太保守”",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "gz",
+      "summary": "高盛警告黄金4900美元预测偏保守、交易商被迫抬轿，金价乐观情绪升温。财富线配置黄金同时须提示过热回调风险，防止客户追高。",
       "source": "新浪财经·理财保险",
       "fetchedToday": true,
-      "subcategory": "cn-finance"
+      "subcategory": "gz-wealth",
+      "relevant": true
     },
     {
       "sourceId": "sina-money",
@@ -2661,9 +2721,11 @@
       "excerpt": "【财富管理】“卷”出来的银行中收数据？ 有基层员工自掏腰包买保险、基金和理财",
       "publishedAt": "2026-08-23T00:00:00.000Z",
       "category": "gz",
+      "summary": "部分银行基层员工自掏腰包买保险基金理财冲中收，暴露考核与合规隐患。分行应检视中收结构质量，杜绝虚假冲量，守住销售适当性底线。",
       "source": "新浪财经·理财保险",
       "fetchedToday": true,
-      "subcategory": "cn-finance"
+      "subcategory": "gz-wealth",
+      "relevant": true
     },
     {
       "sourceId": "cnfin",
@@ -2672,9 +2734,10 @@
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "finance",
+      "summary": "国资委召开中央企业6G未来产业推进会，产业政策动态，与银行零售经营无直接关联。",
       "source": "新华财经",
       "fetchedToday": true,
-      "subcategory": "cn-finance"
+      "relevant": false
     },
     {
       "sourceId": "cnfin",
@@ -2683,9 +2746,11 @@
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "finance",
+      "summary": "阿里配售获近3倍超额认购，主权与长线基金认购超40%，港股募资热度高。财富线可关注港股打新与科技板块配置机会，提示客户关注优质中概回归。",
       "source": "新华财经",
       "fetchedToday": true,
-      "subcategory": "cn-finance"
+      "subcategory": "cn-finance",
+      "relevant": true
     },
     {
       "sourceId": "cnfin",
@@ -2694,9 +2759,10 @@
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "finance",
+      "summary": "上海发布大宗商品贸易真实性规则指引，对公贸易金融监管细化，与零售经营无直接关联。",
       "source": "新华财经",
       "fetchedToday": true,
-      "subcategory": "cn-finance"
+      "relevant": false
     },
     {
       "sourceId": "cnfin",
@@ -2705,9 +2771,10 @@
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "finance",
+      "summary": "民间资本加码新动能投资，宏观投资结构动态，非零售经营直接决策信息。",
       "source": "新华财经",
       "fetchedToday": true,
-      "subcategory": "cn-finance"
+      "relevant": false
     },
     {
       "sourceId": "cnfin",
@@ -2716,9 +2783,10 @@
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "finance",
+      "summary": "菲律宾拖船沉没，国际突发新闻，与银行零售业务无关联。",
       "source": "新华财经",
       "fetchedToday": true,
-      "subcategory": "cn-finance"
+      "relevant": false
     },
     {
       "sourceId": "cnfin",
@@ -2727,9 +2795,10 @@
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "finance",
+      "summary": "德国出口回暖但顺差收窄，国际经贸结构性动态，与国内零售经营无直接关联。",
       "source": "新华财经",
       "fetchedToday": true,
-      "subcategory": "cn-finance"
+      "relevant": false
     },
     {
       "sourceId": "stcn",
@@ -2738,9 +2807,11 @@
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "finance",
+      "summary": "希音开启全球发售、拟募资131亿港元、9月1日登陆港交所，重磅港股IPO。财富线可提前布局打新与中概消费零售赛道配置，服务高净值客户港股机会。",
       "source": "证券时报",
       "fetchedToday": true,
-      "subcategory": "cn-finance"
+      "subcategory": "cn-finance",
+      "relevant": true
     },
     {
       "sourceId": "stcn",
@@ -2749,9 +2820,10 @@
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "finance",
+      "summary": "AI能否替科学家提出原创问题，科技评论文章，无零售经营决策价值。",
       "source": "证券时报",
       "fetchedToday": true,
-      "subcategory": "cn-finance"
+      "relevant": false
     },
     {
       "sourceId": "stcn",
@@ -2760,9 +2832,10 @@
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "finance",
+      "summary": "智光电气上半年扭亏、储能放量，广州企业个股业绩，与零售经营无直接关联。",
       "source": "证券时报",
       "fetchedToday": true,
-      "subcategory": "cn-finance"
+      "relevant": false
     },
     {
       "sourceId": "stcn",
@@ -2771,9 +2844,10 @@
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "finance",
+      "summary": "国家电投在广东成立燃机技术服务公司，对公产业投资动态，非零售决策信息。",
       "source": "证券时报",
       "fetchedToday": true,
-      "subcategory": "cn-finance"
+      "relevant": false
     },
     {
       "sourceId": "stcn",
@@ -2782,9 +2856,11 @@
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "finance",
+      "summary": "单只ETF一周净流入44.51亿元登顶亚洲吸金榜，资金借道ETF布局明显。财富线可借ETF资金流向提示客户把握宽基/主题配置方向，顺势引导定投。",
       "source": "证券时报",
       "fetchedToday": true,
-      "subcategory": "cn-finance"
+      "subcategory": "gz-wealth",
+      "relevant": true
     },
     {
       "sourceId": "stcn",
@@ -2793,9 +2869,10 @@
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "finance",
+      "summary": "货拉拉研学营活动收官，企业CSR新闻，与银行零售经营无关联。",
       "source": "证券时报",
       "fetchedToday": true,
-      "subcategory": "cn-finance"
+      "relevant": false
     },
     {
       "sourceId": "dayoo-gz",
@@ -2804,9 +2881,10 @@
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "gz",
+      "summary": "花都秀全街安全宣传与非遗活动，区街民生新闻，与银行零售经营无关联。",
       "source": "广州日报·大洋网",
       "fetchedToday": true,
-      "subcategory": "gz-media"
+      "relevant": false
     },
     {
       "sourceId": "dayoo-gz",
@@ -2815,9 +2893,10 @@
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "gz",
+      "summary": "猎德人家夏令营结营非遗展演，社区文化新闻，与银行零售经营无关联。",
       "source": "广州日报·大洋网",
       "fetchedToday": true,
-      "subcategory": "gz-media"
+      "relevant": false
     },
     {
       "sourceId": "dayoo-gz",
@@ -2826,9 +2905,10 @@
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "gz",
+      "summary": "花都读者分享会活动新闻，文化民生资讯，无经营决策价值。",
       "source": "广州日报·大洋网",
       "fetchedToday": true,
-      "subcategory": "gz-media"
+      "relevant": false
     },
     {
       "sourceId": "dayoo-gz",
@@ -2837,9 +2917,10 @@
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "gz",
+      "summary": "南沙街区道路系统优化工程，市政建设新闻，与银行零售经营无关联。",
       "source": "广州日报·大洋网",
       "fetchedToday": true,
-      "subcategory": "gz-media"
+      "relevant": false
     },
     {
       "sourceId": "dayoo-gz",
@@ -2848,9 +2929,10 @@
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "gz",
+      "summary": "广州840路公交进驻云溪花园，公共交通新闻，与银行零售经营无直接关联。",
       "source": "广州日报·大洋网",
       "fetchedToday": true,
-      "subcategory": "gz-media"
+      "relevant": false
     },
     {
       "sourceId": "dayoo-gz",
@@ -2859,9 +2941,10 @@
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "gz",
+      "summary": "广州海珠携73家帮扶地企业亮相广博会，区域产业协作动态，可作对公与客群经营背景，零售决策价值有限。",
       "source": "广州日报·大洋网",
       "fetchedToday": true,
-      "subcategory": "gz-media"
+      "relevant": false
     },
     {
       "sourceId": "cctv-finance",
@@ -2869,9 +2952,10 @@
       "url": "https://finance.cctv.com/2026/08/24/ARTIJD9I7cVWzln11MSXbgBs260824.shtml",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "finance",
+      "summary": "427万辆汽车召回事件报道，消费行业新闻，与银行零售经营无直接关联。",
       "source": "央视财经",
       "fetchedToday": true,
-      "subcategory": "cn-finance"
+      "relevant": false
     },
     {
       "sourceId": "sina-money",
@@ -2880,9 +2964,11 @@
       "excerpt": "【财富管理】机构：美债利率上行叠加全球供给扰动，有色定价中枢或承压重塑",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "gz",
+      "summary": "美债利率上行叠加全球供给扰动，有色定价中枢或承压。财富线可提示客户关注有色商品波动，调整大宗商品类资产配置预期。",
       "source": "新浪财经·理财保险",
       "fetchedToday": true,
-      "subcategory": "cn-finance"
+      "subcategory": "gz-wealth",
+      "relevant": true
     },
     {
       "sourceId": "sina-money",
@@ -2891,9 +2977,11 @@
       "excerpt": "【财富管理】财中基金发行热点丨机器人ETF博时启动发行，过去",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "gz",
+      "summary": "机器人ETF博时启动发行，主题ETF新品供给。财富线可结合AI/机器人产业趋势向客户推荐主题基金配置，把握科技成长主线。",
       "source": "新浪财经·理财保险",
       "fetchedToday": true,
-      "subcategory": "cn-finance"
+      "subcategory": "gz-wealth",
+      "relevant": true
     },
     {
       "sourceId": "sina-money",
@@ -2902,9 +2990,11 @@
       "excerpt": "【财富管理】财中基金发行热点丨融通泓安启动发行，同类产品31",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "gz",
+      "summary": "融通泓安等新品基金启动发行，产品供给扩容。财富线可优选新产品丰富货架，按客户风险等级匹配合适基金。",
       "source": "新浪财经·理财保险",
       "fetchedToday": true,
-      "subcategory": "cn-finance"
+      "subcategory": "gz-wealth",
+      "relevant": true
     },
     {
       "sourceId": "21jingji-finance",
@@ -2913,9 +3003,11 @@
       "excerpt": "【21财经·金融】客户挂靠居间人分佣金、开户问卷给答案 中金岭南期货两人被采取监管措施",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "gz",
+      "summary": "中金岭南期货两名人员因居间人分佣、开户问卷代答被监管处罚。分行须强化销售合规，严禁代客操作与利益输送，守住适当性底线。",
       "source": "21世纪经济报道·金融",
       "fetchedToday": true,
-      "subcategory": "cn-finance"
+      "subcategory": "gz-wealth",
+      "relevant": true
     },
     {
       "sourceId": "21jingji-finance",
@@ -2924,9 +3016,15 @@
       "excerpt": "【21财经·金融】银行专营机构缩减提速：4家总行级摘牌，信用卡分中心关停潮延续",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "gz",
+      "summary": "银行专营机构缩减提速，4家总行级摘牌、信用卡分中心关停潮延续。分行应检视零售网点与信用卡条线效能，优化成本结构，聚焦高价值客群。",
       "source": "21世纪经济报道·金融",
       "fetchedToday": true,
-      "subcategory": "cn-finance"
+      "subcategory": "gz-credit",
+      "subcategories": [
+        "gz-credit",
+        "cn-finance"
+      ],
+      "relevant": true
     },
     {
       "sourceId": "21jingji-finance",
@@ -2935,9 +3033,11 @@
       "excerpt": "【21财经·金融】国际金价站上4700美元，多家银行积存金克价破千元",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "gz",
+      "summary": "国际金价站上4700美元、多家银行积存金克价破千，黄金强势延续。财富线应加大积存金与黄金ETF配置引导，同步强化高位波动风险提示。",
       "source": "21世纪经济报道·金融",
       "fetchedToday": true,
-      "subcategory": "cn-finance"
+      "subcategory": "gz-wealth",
+      "relevant": true
     },
     {
       "sourceId": "21jingji-finance",
@@ -2946,9 +3046,11 @@
       "excerpt": "【21财经·金融】公积金30年变局：从买房房贷到租房装修，10万亿资金有了新花法",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "gz",
+      "summary": "公积金30年变局：覆盖买房房贷到租房装修，10万亿资金使用范围扩大。分行可关注公积金相关个贷场景，探索租房装修等新消费信贷需求。",
       "source": "21世纪经济报道·金融",
       "fetchedToday": true,
-      "subcategory": "cn-finance"
+      "subcategory": "gz-credit",
+      "relevant": true
     },
     {
       "sourceId": "gz-stats",
@@ -2957,9 +3059,11 @@
       "excerpt": "【广州统计局】暑期消费热力涌动  多元发力筑牢基本盘",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "gz",
+      "summary": "广州暑期消费热力涌动、多元发力筑牢基本盘，消费数据向好。零售条线可把握暑期消费旺季余热，强化信用卡与消费贷营销，深耕文旅餐饮客群。",
       "source": "广州市统计局",
       "fetchedToday": true,
-      "subcategory": "gz-customer"
+      "subcategory": "gz-customer",
+      "relevant": true
     },
     {
       "sourceId": "gz-stats",
@@ -2968,9 +3072,10 @@
       "excerpt": "【广州统计局】暑运前半程广州运力拉满  客流量持续高位",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "gz",
+      "summary": "暑运前半程广州运力拉满、客流量高位，交通运行数据，客群经营参考价值有限。",
       "source": "广州市统计局",
       "fetchedToday": true,
-      "subcategory": "gz-customer"
+      "relevant": false
     },
     {
       "sourceId": "sina-bank",
@@ -2979,9 +3084,11 @@
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "finance",
+      "summary": "央行广东省分行提示规范使用支付、清算、结算、征信、信用评级等字样，监管口径收紧。分行应规范业务宣传与产品命名，防范误导与合规风险。",
       "source": "新浪财经·银行频道",
       "fetchedToday": true,
-      "subcategory": "cn-finance"
+      "subcategory": "gz-policy",
+      "relevant": true
     },
     {
       "sourceId": "cnfin",
@@ -2990,9 +3097,11 @@
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "finance",
+      "summary": "A股放量调整、种业与黄金概念走强、易中天集体下跌，市场分化行情。财富线应提示客户均衡配置，把握黄金与防御板块机会，控制回撤。",
       "source": "新华财经",
       "fetchedToday": true,
-      "subcategory": "cn-finance"
+      "subcategory": "cn-finance",
+      "relevant": true
     },
     {
       "sourceId": "cnfin",
@@ -3001,9 +3110,10 @@
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "finance",
+      "summary": "工信部将印发时空信息终端供需适配行动计划，产业政策动态，与银行零售经营无直接关联。",
       "source": "新华财经",
       "fetchedToday": true,
-      "subcategory": "cn-finance"
+      "relevant": false
     },
     {
       "sourceId": "cnfin",
@@ -3012,9 +3122,10 @@
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "finance",
+      "summary": "多家药企中报增长、创新比拼国际化AI化，医药行业业绩动态，非零售经营直接决策信息。",
       "source": "新华财经",
       "fetchedToday": true,
-      "subcategory": "cn-finance"
+      "relevant": false
     },
     {
       "sourceId": "cnfin",
@@ -3023,9 +3134,10 @@
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "finance",
+      "summary": "新华500指数跌1.35%，指数行情快讯，无零售经营决策价值。",
       "source": "新华财经",
       "fetchedToday": true,
-      "subcategory": "cn-finance"
+      "relevant": false
     },
     {
       "sourceId": "cnfin",
@@ -3034,9 +3146,10 @@
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "finance",
+      "summary": "全国电动汽车充电桩达2368.3万个，产业数据，与银行零售经营无直接关联。",
       "source": "新华财经",
       "fetchedToday": true,
-      "subcategory": "cn-finance"
+      "relevant": false
     },
     {
       "sourceId": "cnfin",
@@ -3045,9 +3158,10 @@
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "finance",
+      "summary": "AI重塑商业、信任决定未来，商业评论文章，无零售经营直接决策价值。",
       "source": "新华财经",
       "fetchedToday": true,
-      "subcategory": "cn-finance"
+      "relevant": false
     },
     {
       "sourceId": "stcn",
@@ -3056,9 +3170,11 @@
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "finance",
+      "summary": "政策优化加速、一线城市楼市蓄势金九银十，楼市预期回暖。分行可前瞻布局按揭与家装消费贷营销，把握金九银十楼市窗口。",
       "source": "证券时报",
       "fetchedToday": true,
-      "subcategory": "cn-finance"
+      "subcategory": "gz-credit",
+      "relevant": true
     },
     {
       "sourceId": "stcn",
@@ -3067,9 +3183,10 @@
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "finance",
+      "summary": "广晟控股澄清与7家企业无股权关系，上市公司澄清公告，与零售经营无关联。",
       "source": "证券时报",
       "fetchedToday": true,
-      "subcategory": "cn-finance"
+      "relevant": false
     },
     {
       "sourceId": "stcn",
@@ -3078,9 +3195,10 @@
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "finance",
+      "summary": "新基药目录施行倒计时，医药政策动态，与银行零售经营无直接关联。",
       "source": "证券时报",
       "fetchedToday": true,
-      "subcategory": "cn-finance"
+      "relevant": false
     },
     {
       "sourceId": "stcn",
@@ -3089,9 +3207,11 @@
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "finance",
+      "summary": "今年新股发行募资1831.54亿元、科创板占比48.51%，IPO市场活跃。财富线可提示客户关注科创板打新与新股配置机会，把握权益市场供给节奏。",
       "source": "证券时报",
       "fetchedToday": true,
-      "subcategory": "cn-finance"
+      "subcategory": "cn-finance",
+      "relevant": true
     },
     {
       "sourceId": "stcn",
@@ -3100,9 +3220,10 @@
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "finance",
+      "summary": "同程旅行中秋国庆提前订热度大增，出行消费公司动态，可作消费趋势背景，零售决策价值有限。",
       "source": "证券时报",
       "fetchedToday": true,
-      "subcategory": "cn-finance"
+      "relevant": false
     },
     {
       "sourceId": "stcn",
@@ -3111,9 +3232,11 @@
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "finance",
+      "summary": "全球风暴再起、亚太股市集体回调，外围市场波动加剧。财富线应及时提示客户海外配置波动风险，做好组合防御与流动性安排。",
       "source": "证券时报",
       "fetchedToday": true,
-      "subcategory": "cn-finance"
+      "subcategory": "cn-finance",
+      "relevant": true
     },
     {
       "sourceId": "dayoo-gz",
@@ -3122,9 +3245,10 @@
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "gz",
+      "summary": "广州地铁十二号线中段轨行区进入运营调试，市政交通新闻，与银行零售经营无关联。",
       "source": "广州日报·大洋网",
       "fetchedToday": true,
-      "subcategory": "gz-media"
+      "relevant": false
     },
     {
       "sourceId": "dayoo-gz",
@@ -3133,9 +3257,10 @@
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "gz",
+      "summary": "广州9月启用一批移动电子眼，交管新闻，与银行零售经营无关联。",
       "source": "广州日报·大洋网",
       "fetchedToday": true,
-      "subcategory": "gz-media"
+      "relevant": false
     },
     {
       "sourceId": "sina-money",
@@ -3144,9 +3269,10 @@
       "excerpt": "【财富管理】华夏精选固定收益配置基金2026-08-21基金",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "gz",
+      "summary": "华夏精选固收配置基金净值披露，例行产品净值公告，客户持仓参考信息，无独立商机。",
       "source": "新浪财经·理财保险",
       "fetchedToday": true,
-      "subcategory": "cn-finance"
+      "relevant": false
     },
     {
       "sourceId": "sina-money",
@@ -3155,9 +3281,10 @@
       "excerpt": "【财富管理】东亚联丰亚洲策略债券2026-08-21基金净值",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "gz",
+      "summary": "东亚联丰亚洲策略债券基金净值披露，海外债基净值公告，例行披露，无独立决策价值。",
       "source": "新浪财经·理财保险",
       "fetchedToday": true,
-      "subcategory": "cn-finance"
+      "relevant": false
     },
     {
       "sourceId": "21jingji-finance",
@@ -3166,9 +3293,11 @@
       "excerpt": "【21财经·金融】金融监管总局党委书记、局长丁向群带队赴吉林调研",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "gz",
+      "summary": "金融监管总局党委书记、局长丁向群带队赴吉林调研，监管高层动向。分行应关注监管对小微、普惠等领域的政策导向，及时对齐经营方向。",
       "source": "21世纪经济报道·金融",
       "fetchedToday": true,
-      "subcategory": "cn-finance"
+      "subcategory": "cn-policy",
+      "relevant": true
     },
     {
       "sourceId": "hkex",
@@ -3177,9 +3306,10 @@
       "excerpt": "港交所公告 | 代码: 01536 | 公司: YUK WING GP | 时间: 24/08/2026 16:32 | 格式: PDF",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "ipo",
+      "summary": "港企YUK WING GP供股及配售安排，境外上市公司资本运作公告，与广东零售经营无关联。",
       "source": "港交所IPO公告",
       "fetchedToday": true,
-      "subcategory": "hkex"
+      "relevant": false
     },
     {
       "sourceId": "cnfin",
@@ -3188,9 +3318,11 @@
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "finance",
+      "summary": "债市日报：资金面与利率走势跟踪，债市动态。财富线可据此管理固收客户收益预期，提示利率区间震荡下的稳健配置。",
       "source": "新华财经",
       "fetchedToday": true,
-      "subcategory": "cn-finance"
+      "subcategory": "cn-finance",
+      "relevant": true
     },
     {
       "sourceId": "cnfin",
@@ -3199,9 +3331,10 @@
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "finance",
+      "summary": "激光技术新突破助力光子计算，前沿科技新闻，与银行零售经营无直接关联。",
       "source": "新华财经",
       "fetchedToday": true,
-      "subcategory": "cn-finance"
+      "relevant": false
     },
     {
       "sourceId": "cnfin",
@@ -3210,9 +3343,10 @@
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "finance",
+      "summary": "山东港口原油价格指数环比上涨，大宗商品价格数据，与零售经营无直接关联。",
       "source": "新华财经",
       "fetchedToday": true,
-      "subcategory": "cn-finance"
+      "relevant": false
     },
     {
       "sourceId": "cnfin",
@@ -3221,9 +3355,10 @@
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "finance",
+      "summary": "广西电网绿电赋能探索，能源行业报道，与银行零售经营无关联。",
       "source": "新华财经",
       "fetchedToday": true,
-      "subcategory": "cn-finance"
+      "relevant": false
     },
     {
       "sourceId": "stcn",
@@ -3232,9 +3367,10 @@
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "finance",
+      "summary": "莱克电气发行江苏首单上市民企绿色超短融，对公融资动态，非零售决策信息。",
       "source": "证券时报",
       "fetchedToday": true,
-      "subcategory": "cn-finance"
+      "relevant": false
     },
     {
       "sourceId": "stcn",
@@ -3243,9 +3379,10 @@
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "finance",
+      "summary": "顺鑫农业转型实践报道，个股经营动态，与零售经营无直接关联。",
       "source": "证券时报",
       "fetchedToday": true,
-      "subcategory": "cn-finance"
+      "relevant": false
     },
     {
       "sourceId": "sina-money",
@@ -3254,9 +3391,11 @@
       "excerpt": "【财富管理】分析师调查：美联储与英央行今年大概率维持利率不变，欧央行与日央行有加息预期",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "gz",
+      "summary": "分析师调查：美联储与英央行今年大概率按兵不动、欧央行日央行有加息预期，全球利率分化。财富线可据此管理海外固收与美元资产配置预期。",
       "source": "新浪财经·理财保险",
       "fetchedToday": true,
-      "subcategory": "cn-finance"
+      "subcategory": "gz-wealth",
+      "relevant": true
     },
     {
       "sourceId": "sina-money",
@@ -3265,9 +3404,10 @@
       "excerpt": "【财富管理】惠理价值系列基金披露8月21日份额净值",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "gz",
+      "summary": "惠理价值系列基金净值披露，例行公告，无独立决策价值。",
       "source": "新浪财经·理财保险",
       "fetchedToday": true,
-      "subcategory": "cn-finance"
+      "relevant": false
     },
     {
       "sourceId": "stcn",
@@ -3276,375 +3416,707 @@
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "finance",
+      "summary": "阿里新股配售定价完成，互联网巨头AI竞争进入下半场，港股科技龙头融资落地。财富线可关注科技龙头配置与港股情绪修复机会。",
       "source": "证券时报",
       "fetchedToday": true,
-      "subcategory": "cn-finance"
+      "subcategory": "cn-finance",
+      "relevant": true
     },
     {
       "sourceId": "sina-money",
       "title": "中原再担保集团董事长薛怀宇被查 曾任中原信托副总裁",
       "url": "https://finance.sina.com.cn/trust/roll/2026-08-24/doc-inipmhfq2006286.shtml",
       "excerpt": "【财富管理】中原再担保集团董事长薛怀宇被查 曾任中原信托副总裁",
-      "category": "gz",
       "publishedAt": "2026-08-24T00:00:00.000Z",
+      "category": "gz",
+      "summary": "中原再担保集团董事长薛怀宇被查，曾任中原信托副总裁，金融高管落马案例。分行应强化内控合规教育，警惕关联交易与道德风险。",
       "source": "新浪财经·理财保险",
-      "tier": "T2",
-      "filterBucket": "daily",
-      "filterDimensions": [],
       "fetchedToday": true,
-      "subcategory": "cn-finance"
+      "subcategory": "gz-wealth",
+      "relevant": true
     },
     {
       "sourceId": "sina-money",
       "title": "美债困境有望推动市场流动性走向宽松 黄金或仍有上行空间",
       "url": "https://finance.sina.com.cn/money/fund/jjzl/2026-08-24/doc-inipmhfs6124883.shtml",
       "excerpt": "【财富管理】美债困境有望推动市场流动性走向宽松 黄金或仍有上行空间",
-      "category": "gz",
       "publishedAt": "2026-08-24T00:00:00.000Z",
+      "category": "gz",
+      "summary": "美债困境有望推动流动性宽松、黄金仍有上行空间，机构观点。财富线可据此向客户传导黄金中长期配置逻辑，同时提示节奏管理。",
       "source": "新浪财经·理财保险",
-      "tier": "T2",
-      "filterBucket": "daily",
-      "filterDimensions": [
-        "wealth_mgmt"
-      ],
       "fetchedToday": true,
-      "subcategory": "cn-finance"
+      "subcategory": "gz-wealth",
+      "relevant": true
     },
     {
       "sourceId": "sina-money",
       "title": "8-24 黄金到达压力位附近，是突破还是冲高回落？",
       "url": "https://video.sina.com.cn/p/finance/2026-08-24/detail-inipmhfs6103373.d.html",
       "excerpt": "【财富管理】8-24 黄金到达压力位附近，是突破还是冲高回落？",
-      "category": "gz",
       "publishedAt": "2026-08-24T00:00:00.000Z",
+      "category": "gz",
+      "summary": "黄金到达压力位附近，突破还是冲高回落，技术面分析视频。财富线可用于客户沟通中的金价走势参考，提示关键点位波动风险。",
       "source": "新浪财经·理财保险",
-      "tier": "T2",
-      "filterBucket": "daily",
-      "filterDimensions": [
-        "wealth_mgmt"
-      ],
       "fetchedToday": true,
-      "subcategory": "cn-finance"
+      "subcategory": "gz-wealth",
+      "relevant": true
     },
     {
       "sourceId": "sina-money",
       "title": "黄金3周暴涨700美元！牛市主升浪来袭！高盛预测金价冲6000美元！黄金要大涨了！",
       "url": "https://video.sina.com.cn/p/finance/2026-08-24/detail-inipmhfq2004533.d.html",
       "excerpt": "【财富管理】黄金3周暴涨700美元！牛市主升浪来袭！高盛预测金价冲6000美元！黄金要大涨了！",
-      "category": "gz",
       "publishedAt": "2026-08-24T00:00:00.000Z",
+      "category": "gz",
+      "summary": "黄金3周暴涨700美元、高盛预测冲6000美元，金价高波动行情。财富线配置黄金务必强化风险提示，防止客户情绪化追高。",
       "source": "新浪财经·理财保险",
-      "tier": "T2",
-      "filterBucket": "daily",
-      "filterDimensions": [
-        "wealth_mgmt"
-      ],
       "fetchedToday": true,
-      "subcategory": "cn-finance"
+      "subcategory": "gz-wealth",
+      "relevant": true
     },
     {
       "sourceId": "21jingji-finance",
       "title": "年收入3万却在银行贷出1480万，河南多名老农遭套路",
       "url": "https://m.21jingji.com/article/20260824/herald/489b89c3bfaa59df0f3f485c4e6afe2f.html",
       "excerpt": "【21财经·金融】年收入3万却在银行贷出1480万，河南多名老农遭套路",
-      "category": "gz",
       "publishedAt": "2026-08-24T00:00:00.000Z",
+      "category": "gz",
+      "summary": "年收入3万却在银行贷出1480万、河南多名老农遭套路贷，暴露出信贷审核与违规放贷风险。分行应严把授信审查关，强化贷后管理与反欺诈。",
       "source": "21世纪经济报道·金融",
-      "tier": "T2",
-      "filterBucket": "daily",
-      "filterDimensions": [],
       "fetchedToday": true,
-      "subcategory": "cn-finance"
+      "subcategory": "gz-credit",
+      "relevant": true
     },
     {
       "sourceId": "hkex",
-      "source": "港交所IPO公告",
       "title": "XPENG-W (09868) — Interim Results Announcement for the Six Months Ended June 30, 2026",
       "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0824/2026082401032.pdf",
       "excerpt": "港交所公告 | 代码: 09868 | 公司: XPENG-W | 时间: 24/08/2026 18:30 | 格式: PDF",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "ipo",
-      "summary": "",
-      "filterBucket": "daily",
-      "filterDimensions": [],
+      "summary": "小鹏汽车（广东企业）公布2026中期业绩，港股车企财报。可作广东头部企业动态跟踪，零售条线关注小鹏员工与车主客群的经营机会。",
+      "source": "港交所IPO公告",
       "fetchedToday": true,
-      "subcategory": "hkex"
+      "subcategory": "hkex",
+      "relevant": true
     },
     {
       "sourceId": "hkex",
-      "source": "港交所IPO公告",
       "title": "XPENG-W (09868) — DISCLOSEABLE TRANSACTION AND CONNECTED TRANSACTION IN RELATION TO THE SUBSCRIPTION, THE GRANT OF THE REDEMPTION RIGHTS AND THE ADOPTION OF THE DOGOTIX 2026 EQUITY INCENTIVE PLAN",
       "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0824/2026082400642.pdf",
       "excerpt": "港交所公告 | 代码: 09868 | 公司: XPENG-W | 时间: 24/08/2026 17:05 | 格式: PDF",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "ipo",
-      "summary": "",
-      "filterBucket": "daily",
-      "filterDimensions": [],
+      "summary": "小鹏披露认购、赎回权及Dogotix股权激励计划，公司治理公告，与零售经营直接关联有限。",
+      "source": "港交所IPO公告",
       "fetchedToday": true,
-      "subcategory": "hkex"
+      "relevant": false
     },
     {
       "sourceId": "bse",
-      "source": "北交所IPO公告",
       "title": "杰理科技 (920138)",
       "url": "https://www.bse.cn/disclosure/2026/2026-08-24/d765253d13444856bd0b344d4bd8dbac.pdf",
       "excerpt": "北交所公告 | [临时公告]杰理科技:以自筹资金预先投入募集资金投资项目和支付发行费用鉴证报告 | 日期: 2026-08-24",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "ipo",
-      "summary": "",
-      "filterBucket": "daily",
-      "filterDimensions": [],
+      "summary": "杰理科技（珠海，广东企业）北交所披露募集资金使用鉴证报告，广东企业北交所上市进展。可跟踪广东北交所企业，探索中小企业金融服务场景。",
+      "source": "北交所IPO公告",
       "fetchedToday": true,
-      "subcategory": "bse"
+      "subcategory": "bse",
+      "relevant": true
     },
     {
       "sourceId": "sina-bank",
-      "source": "新浪财经·银行频道",
       "title": "青农商行：80亿元小微贷款专项金融债发行完毕",
       "url": "https://finance.sina.com.cn/jryx/bank/2026-08-24/doc-inipmhfq2039801.shtml",
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "finance",
-      "summary": "",
-      "tier": "T2",
-      "filterBucket": "daily",
-      "filterDimensions": [],
+      "summary": "青农商行80亿元小微贷款专项金融债发行完毕，同业小微资金供给加码。分行可对标扩大小微信贷投放，用好专项债与再贷款工具。",
+      "source": "新浪财经·银行频道",
       "fetchedToday": true,
-      "subcategory": "cn-finance"
+      "subcategory": "cn-finance",
+      "relevant": true
     },
     {
       "sourceId": "sina-bank",
-      "source": "新浪财经·银行频道",
       "title": "苏州银行：30亿元二级资本债券发行完毕",
       "url": "https://finance.sina.com.cn/jryx/bank/2026-08-24/doc-inipmhfq2034935.shtml",
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "finance",
-      "summary": "",
-      "tier": "T2",
-      "filterBucket": "daily",
-      "filterDimensions": [],
+      "summary": "苏州银行30亿元二级资本债发行完毕，同业资本补充动态，与零售经营无直接关联。",
+      "source": "新浪财经·银行频道",
       "fetchedToday": true,
-      "subcategory": "cn-finance"
+      "relevant": false
     },
     {
       "sourceId": "sina-bank",
-      "source": "新浪财经·银行频道",
       "title": "青岛银行：职工董事刘晓曙任职资格获监管机构核准",
       "url": "https://finance.sina.com.cn/jryx/bank/2026-08-24/doc-inipmhfq2031222.shtml",
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "finance",
-      "summary": "",
-      "tier": "T2",
-      "filterBucket": "daily",
-      "filterDimensions": [],
+      "summary": "青岛银行职工董事任职资格获核准，同业人事公告，非零售决策信息。",
+      "source": "新浪财经·银行频道",
       "fetchedToday": true,
-      "subcategory": "cn-finance"
+      "relevant": false
     },
     {
       "sourceId": "sina-bank",
-      "source": "新浪财经·银行频道",
       "title": "瑞丰银行发布中期利润分配方案：拟每10股派发现金股利人民币1元（含税）",
       "url": "https://finance.sina.com.cn/jryx/bank/2026-08-24/doc-inipmhfu2906352.shtml",
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "finance",
-      "summary": "",
-      "tier": "T2",
-      "filterBucket": "daily",
-      "filterDimensions": [],
+      "summary": "瑞丰银行拟每10股派1元中期分红，同业分红动态，可作股东回报参考，零售决策价值有限。",
+      "source": "新浪财经·银行频道",
       "fetchedToday": true,
-      "subcategory": "cn-finance"
+      "relevant": false
     },
     {
       "sourceId": "sina-bank",
-      "source": "新浪财经·银行频道",
       "title": "瑞丰银行：上半年实现营业收入22.14亿元，同比下降1.96%",
       "url": "https://finance.sina.com.cn/jryx/bank/2026-08-24/doc-inipmhfs6129732.shtml",
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "finance",
-      "summary": "",
-      "tier": "T2",
-      "filterBucket": "daily",
-      "filterDimensions": [],
+      "summary": "瑞丰银行上半年营收22.14亿元、同比下降1.96%，同业半年报，可对标经营趋势，非零售直接决策信息。",
+      "source": "新浪财经·银行频道",
       "fetchedToday": true,
-      "subcategory": "cn-finance"
+      "relevant": false
     },
     {
       "sourceId": "sina-bank",
-      "source": "新浪财经·银行频道",
       "title": "银行股“新高秀”开启！又有两家股价刷新纪录，相关",
       "url": "https://finance.sina.com.cn/money/bank/gsdt/2026-08-24/doc-inipmhfq1987471.shtml",
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "finance",
-      "summary": "",
-      "tier": "T2",
-      "filterBucket": "daily",
-      "filterDimensions": [],
+      "summary": "银行股新高秀开启、两家股价刷新纪录，银行板块估值修复行情。财富线可借板块走强提示客户关注银行股配置价值，提振零售信心。",
+      "source": "新浪财经·银行频道",
       "fetchedToday": true,
-      "subcategory": "cn-finance"
+      "subcategory": "cn-finance",
+      "relevant": true
     },
     {
       "sourceId": "sina-bank",
-      "source": "新浪财经·银行频道",
       "title": "视频 | 河南多名农民称莫名成企业法人代表“被贷款",
       "url": "https://finance.sina.com.cn/money/bank/gsdt/2026-08-23/doc-inipmhfs6087172.shtml",
       "excerpt": "",
       "publishedAt": "2026-08-23T00:00:00.000Z",
       "category": "finance",
-      "summary": "",
-      "tier": "T2",
-      "filterBucket": "daily",
-      "filterDimensions": [],
+      "summary": "河南多名农民莫名成企业法人被贷款，视频报道，暴露信贷身份冒用风险。分行须强化身份核验与反欺诈，保护客户征信权益。",
+      "source": "新浪财经·银行频道",
       "fetchedToday": true,
-      "subcategory": "cn-finance"
+      "subcategory": "gz-credit",
+      "relevant": true
     },
     {
       "sourceId": "sina-bank",
-      "source": "新浪财经·银行频道",
       "title": "内地投资者在港银行不动户核查迎关键节点，资金来",
       "url": "https://finance.sina.com.cn/roll/2026-08-24/doc-inipmhfn9974610.shtml",
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "finance",
-      "summary": "",
-      "tier": "T2",
-      "filterBucket": "daily",
-      "filterDimensions": [],
+      "summary": "内地投资者在港银行不动户核查迎关键节点，跨境资金与账户合规收紧。私行/财富线应提示客户合规处理香港账户，避免账户冻结风险。",
+      "source": "新浪财经·银行频道",
       "fetchedToday": true,
-      "subcategory": "cn-finance"
+      "subcategory": "gz-wealth",
+      "subcategories": [
+        "gz-wealth",
+        "gz-private"
+      ],
+      "relevant": true
     },
     {
       "sourceId": "dayoo-gz",
-      "source": "广州日报·大洋网",
       "title": "前7个月广州规上工业增加值同比增长5.5%",
       "url": "https://news.dayoo.com/guangzhou/202608/24/139995_54994460.htm",
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "gz",
-      "summary": "",
-      "tier": "T2",
-      "filterBucket": "daily",
-      "filterDimensions": [],
+      "summary": "前7个月广州规上工业增加值同比增长5.5%，广州经济基本面稳健。可增强对本地企业客群与经营信贷投放信心，服务实体经济。",
+      "source": "广州日报·大洋网",
       "fetchedToday": true,
-      "subcategory": "gz-media"
+      "subcategory": "gz-customer",
+      "relevant": true
     },
     {
       "sourceId": "dayoo-gz",
-      "source": "广州日报·大洋网",
       "title": "2026年“广府共绣”工作营开营，为广州老建筑活化出点子",
       "url": "https://news.dayoo.com/guangzhou/202608/24/139995_54994472.htm",
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "gz",
-      "summary": "",
-      "tier": "T2",
-      "filterBucket": "daily",
-      "filterDimensions": [],
+      "summary": "广府共绣工作营为广州老建筑活化出点子，城市更新文化活动，与零售经营无直接关联。",
+      "source": "广州日报·大洋网",
       "fetchedToday": true,
-      "subcategory": "gz-media"
+      "relevant": false
     },
     {
       "sourceId": "dayoo-gz",
-      "source": "广州日报·大洋网",
       "title": "广州白鹅潭第二高楼效果图曝光",
       "url": "https://news.dayoo.com/guangzhou/202608/24/139995_54994402.htm",
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "gz",
-      "summary": "",
-      "tier": "T2",
-      "filterBucket": "daily",
-      "filterDimensions": [],
+      "summary": "广州白鹅潭第二高楼效果图曝光，城市建设新闻，与银行零售经营无直接关联。",
+      "source": "广州日报·大洋网",
       "fetchedToday": true,
-      "subcategory": "gz-media"
+      "relevant": false
     },
     {
       "sourceId": "cnfin",
-      "source": "新华财经",
       "title": "石头科技第二季度扣非后净利润同比增长111.02%至5.45亿元",
       "url": "https://www.cnfin.com/yw-lb/detail/20260824/4459568_1.html",
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "finance",
-      "summary": "",
-      "tier": "T1.5",
-      "filterBucket": "daily",
-      "filterDimensions": [],
+      "summary": "石头科技Q2扣非净利同比增长111%，个股业绩公告，非零售决策信息。",
+      "source": "新华财经",
       "fetchedToday": true,
-      "subcategory": "cn-finance"
+      "relevant": false
     },
     {
       "sourceId": "cnfin",
-      "source": "新华财经",
       "title": "小鹏机器人业务完成首轮超9亿美元融资",
       "url": "https://www.cnfin.com/yw-lb/detail/20260824/4459559_1.html",
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "finance",
-      "summary": "",
-      "tier": "T1.5",
-      "filterBucket": "daily",
-      "filterDimensions": [],
+      "summary": "小鹏机器人业务完成首轮超9亿美元融资，广东（广州）科技企业重大融资。分行可关注机器人产业链客群，探索科技企业员工与供应链金融服务。",
+      "source": "新华财经",
       "fetchedToday": true,
-      "subcategory": "cn-finance"
+      "subcategory": "gz-customer",
+      "relevant": true
     },
     {
       "sourceId": "cnfin",
-      "source": "新华财经",
       "title": "商品日报（8月24日）：集运欧线乙二醇双双涨超4% 现货提涨焦炭刷新近两年新高",
       "url": "https://www.cnfin.com/yw-lb/detail/20260824/4459555_1.html",
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "finance",
-      "summary": "",
-      "tier": "T1.5",
-      "filterBucket": "daily",
-      "filterDimensions": [],
+      "summary": "商品日报：集运欧线乙二醇涨超4%、焦炭刷新两年新高，大宗商品行情，与零售经营无直接关联。",
+      "source": "新华财经",
       "fetchedToday": true,
-      "subcategory": "cn-finance"
+      "relevant": false
     },
     {
       "sourceId": "cnfin",
-      "source": "新华财经",
       "title": "新华财经晚报：国管公积金新政 首套房最高可贷款340万元",
       "url": "https://www.cnfin.com/yw-lb/detail/20260824/4459554_1.html",
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "finance",
-      "summary": "",
-      "tier": "T1.5",
-      "filterBucket": "daily",
-      "filterDimensions": [
-        "macro_policy"
-      ],
+      "summary": "国管公积金新政：首套房最高可贷340万元，公积金贷款额度上调。分行可跟进本地公积金政策，加大按揭与公积金组合贷营销。",
+      "source": "新华财经",
       "fetchedToday": true,
-      "subcategory": "cn-finance"
+      "subcategory": "gz-credit",
+      "relevant": true
     },
     {
       "sourceId": "cnfin",
-      "source": "新华财经",
       "title": "满格电力让“泉州智造”行稳致远",
       "url": "https://www.cnfin.com/cy-lb/detail/20260824/4459564_1.html",
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "finance",
-      "summary": "",
-      "tier": "T1.5",
-      "filterBucket": "daily",
-      "filterDimensions": [],
+      "summary": "泉州智造电力保障报道，区域产业新闻，与银行零售经营无关联。",
+      "source": "新华财经",
+      "fetchedToday": true,
+      "relevant": false
+    },
+    {
+      "sourceId": "cnfin",
+      "title": "新华指数监测：8月24日中国能化现货估价指数环比上涨0.67%",
+      "url": "https://www.cnfin.com/cy-lb/detail/20260824/4459537_1.html",
+      "excerpt": "",
+      "publishedAt": "2026-08-24T00:00:00.000Z",
+      "category": "finance",
+      "summary": "中国能化现货估价指数环比上涨，大宗指数数据，非零售决策信息。",
+      "source": "新华财经",
+      "fetchedToday": true,
+      "relevant": false
+    },
+    {
+      "sourceId": "stcn",
+      "title": "月内最多涨超20%！这一品种火了，相关股票爆发",
+      "url": "https://www.stcn.com/article/detail/4105946.html",
+      "excerpt": "",
+      "publishedAt": "2026-08-24T00:00:00.000Z",
+      "category": "finance",
+      "summary": "月内涨超20%的品种受关注、相关股票爆发，行情快讯，无零售经营决策价值。",
+      "source": "证券时报",
+      "fetchedToday": true,
+      "relevant": false
+    },
+    {
+      "sourceId": "stcn",
+      "title": "极端行情里竟有宝藏基金！它们如何做到年内赚超20%、最大回撤不到10%？",
+      "url": "https://www.stcn.com/article/detail/4106113.html",
+      "excerpt": "",
+      "publishedAt": "2026-08-24T00:00:00.000Z",
+      "category": "finance",
+      "summary": "极端行情中宝藏基金年内赚超20%、最大回撤不到10%，攻守兼备策略复盘。财富线可借案例向客户推介稳健策略基金，强化回撤控制理念。",
+      "source": "证券时报",
+      "fetchedToday": true,
+      "subcategory": "gz-wealth",
+      "relevant": true
+    },
+    {
+      "sourceId": "stcn",
+      "title": "悦达投资：转型成效加速兑现 高质量发展迈出坚实步伐",
+      "url": "https://www.stcn.com/article/detail/4105803.html",
+      "excerpt": "",
+      "publishedAt": "2026-08-24T00:00:00.000Z",
+      "category": "finance",
+      "summary": "悦达投资转型成效兑现，个股业绩公告，与零售经营无直接关联。",
+      "source": "证券时报",
+      "fetchedToday": true,
+      "relevant": false
+    },
+    {
+      "sourceId": "stcn",
+      "title": "拟分红超2.5亿元！康冠科技半年报：海外基本盘稳固，创新类显示业务高速增长",
+      "url": "https://www.stcn.com/article/detail/4106040.html",
+      "excerpt": "",
+      "publishedAt": "2026-08-24T00:00:00.000Z",
+      "category": "finance",
+      "summary": "康冠科技半年报拟分红超2.5亿元，个股业绩公告，非零售决策信息。",
+      "source": "证券时报",
+      "fetchedToday": true,
+      "relevant": false
+    },
+    {
+      "sourceId": "stcn",
+      "title": "零跑汽车上半年营收381.1亿元创同期历史新高 连续三个半年度盈利",
+      "url": "https://www.stcn.com/article/detail/4106199.html",
+      "excerpt": "",
+      "publishedAt": "2026-08-24T00:00:00.000Z",
+      "category": "finance",
+      "summary": "零跑汽车上半年营收381.1亿元创同期新高，个股业绩公告，与零售经营无直接关联。",
+      "source": "证券时报",
+      "fetchedToday": true,
+      "relevant": false
+    },
+    {
+      "sourceId": "stcn",
+      "title": "Keep发布2026年中期业绩：上半年亏损大幅收窄 AI应用落地提速",
+      "url": "https://www.stcn.com/article/detail/4105997.html",
+      "excerpt": "",
+      "publishedAt": "2026-08-24T00:00:00.000Z",
+      "category": "finance",
+      "summary": "Keep中期业绩亏损收窄、AI应用提速，个股业绩公告，非零售决策信息。",
+      "source": "证券时报",
+      "fetchedToday": true,
+      "relevant": false
+    },
+    {
+      "sourceId": "southcn",
+      "title": "广州企业如何走稳专精特新之路？",
+      "url": "https://news.southcn.com/node_812903b83a/720110c5da.shtml",
+      "excerpt": "",
+      "publishedAt": "2026-08-24T00:00:00.000Z",
+      "category": "gz",
+      "summary": "广州企业专精特新之路观察，本地科创企业成长动态。分行可聚焦专精特新客群，提供科技金融与企业家私行综合服务。",
+      "source": "南方网·经济",
+      "fetchedToday": true,
+      "subcategory": "gz-customer",
+      "relevant": true
+    },
+    {
+      "sourceId": "21jingji-finance",
+      "title": "首套房最高可贷款340万元！国管公积金新政来了",
+      "url": "https://m.21jingji.com/article/20260824/herald/d9cbc1444651bddee12bc4e6066d2f5f.html",
+      "excerpt": "【21财经·金融】首套房最高可贷款340万元！国管公积金新政来了",
+      "publishedAt": "2026-08-24T00:00:00.000Z",
+      "category": "gz",
+      "summary": "国管公积金新政首套房最高可贷340万元，贷款额度与覆盖范围扩大。分行可联动公积金中心营销组合贷与装修贷，抢抓刚需置业窗口。",
+      "source": "21世纪经济报道·金融",
+      "fetchedToday": true,
+      "subcategory": "gz-credit",
+      "relevant": true
+    },
+    {
+      "sourceId": "sina-money",
+      "title": "“业绩不达标就调基准”，行不通了！单日超200只理财密集“调基”",
+      "url": "https://finance.sina.com.cn/money/lcxqs/2026-08-24/doc-inipmhfs6146044.shtml",
+      "excerpt": "【财富管理】“业绩不达标就调基准”，行不通了！单日超200只理财密集“调基”",
+      "publishedAt": "2026-08-24T00:00:00.000Z",
+      "category": "gz",
+      "summary": "业绩不达标就调基准行不通了，单日超200只理财密集调基，理财业绩比较基准规范收紧。财富线应规范理财产品宣传，引导客户理性看待净值波动。",
+      "source": "新浪财经·理财保险",
+      "fetchedToday": true,
+      "subcategory": "gz-wealth",
+      "relevant": true
+    },
+    {
+      "sourceId": "hkex",
+      "title": "XPENG-W (09868) — XPENG Reports Second Quarter 2026 Unaudited Financial Results",
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0824/2026082401045.pdf",
+      "excerpt": "港交所公告 | 代码: 09868 | 公司: XPENG-W | 时间: 24/08/2026 18:36 | 格式: PDF",
+      "publishedAt": "2026-08-24T00:00:00.000Z",
+      "category": "ipo",
+      "summary": "小鹏汽车（广东企业）发布2026年二季度未经审计业绩，港股财报。可作广东头部车企经营跟踪，关注员工、车主及供应链客群经营。",
+      "source": "港交所IPO公告",
+      "fetchedToday": true,
+      "subcategory": "hkex",
+      "relevant": true
+    },
+    {
+      "sourceId": "sina-bank",
+      "title": "瑞丰银行披露关联授信：对金柯桥集团旗下多家文旅主体续授，关联授信总额69150万元",
+      "url": "https://finance.sina.com.cn/jryx/bank/2026-08-24/doc-inipmnpq6030852.shtml",
+      "excerpt": "",
+      "publishedAt": "2026-08-24T00:00:00.000Z",
+      "category": "finance",
+      "summary": "瑞丰银行对金柯桥集团关联授信续授6.9亿元，同业关联授信披露，与零售经营无直接关联。",
+      "source": "新浪财经·银行频道",
+      "fetchedToday": true,
+      "relevant": false
+    },
+    {
+      "sourceId": "sina-bank",
+      "title": "浦发银行：2026年第一期绿色金融债券发行完毕，总规模150亿元",
+      "url": "https://finance.sina.com.cn/jryx/bank/2026-08-24/doc-inipmhfq2043631.shtml",
+      "excerpt": "",
+      "publishedAt": "2026-08-24T00:00:00.000Z",
+      "category": "finance",
+      "summary": "浦发银行发行150亿元绿色金融债券，同业资本工具动态，与零售经营无直接关联。",
+      "source": "新浪财经·银行频道",
+      "fetchedToday": true,
+      "relevant": false
+    },
+    {
+      "sourceId": "nfra",
+      "title": "国家金融监督管理总局德阳监管分局行政处罚信息公开表",
+      "url": "https://www.nfra.gov.cn/cn/view/pages/ItemDetail.html?docId=1269113",
+      "excerpt": "",
+      "publishedAt": "2026-08-24T00:00:00.000Z",
+      "category": "finance",
+      "summary": "金融监管总局德阳监管分局行政处罚信息公开，监管处罚案例。分行应引以为戒，检视辖内机构经营合规，防范同类问题。",
+      "source": "国家金融监督管理总局",
+      "fetchedToday": true,
+      "subcategory": "cn-policy",
+      "relevant": true
+    },
+    {
+      "sourceId": "pbc",
+      "title": "2026年7月金融市场运行情况",
+      "url": "https://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026082118245286995/index.html",
+      "excerpt": "",
+      "publishedAt": "2026-08-24T00:00:00.000Z",
+      "category": "finance",
+      "summary": "央行发布2026年7月金融市场运行情况，货币信贷与市场数据。分行可据此研判流动性环境与信贷投放节奏，指导零售资产配置。",
+      "source": "中国人民银行",
+      "fetchedToday": true,
+      "subcategory": "cn-policy",
+      "relevant": true
+    },
+    {
+      "sourceId": "cls",
+      "title": "对冲万亿供给压力，央行隔夜逆回购实现跨月操作，10年国债击穿1.68%关口，债牛逻辑或未改",
+      "url": "https://www.cls.cn/detail/2462564",
+      "excerpt": "本周政府债计划发行6577亿元、净缴款近8000亿元创2025年以来单周新高，央行后续将开展隔夜逆回购跨月操作，8月25日MLF续作5000亿元、较到期6000亿元缩量。",
+      "publishedAt": "2026-08-24T00:00:00.000Z",
+      "category": "finance",
+      "summary": "对冲万亿供给压力，央行隔夜逆回购跨月操作、10年国债击穿1.68%，债牛逻辑或未改。财富线可提示客户债市仍具配置价值，把握利率债与固收机会。",
+      "source": "财联社",
+      "fetchedToday": true,
+      "subcategory": "cn-finance",
+      "relevant": true
+    },
+    {
+      "sourceId": "cls",
+      "title": "从规模扩张转向获得感优先，陆家嘴金融沙龙2026年第二十八期热议投资者陪伴范式转换",
+      "url": "https://www.cls.cn/detail/2462405",
+      "excerpt": "①8月22日，陆家嘴金融沙龙2026年第二十八期活动圆满举办；\n②本期沙龙以《践行投资者为本理念 引导资本市场理性投资》为主题，汇聚投保机构、公募基金、期货公司、券商等多方视角。",
+      "publishedAt": "2026-08-24T00:00:00.000Z",
+      "category": "finance",
+      "summary": "陆家嘴金融沙龙热议投资者陪伴范式转换，行业从规模扩张转向获得感优先。财富线可借鉴投资者陪伴新模式，提升客户服务与留存。",
+      "source": "财联社",
+      "fetchedToday": true,
+      "subcategory": "cn-finance",
+      "relevant": true
+    },
+    {
+      "sourceId": "cls",
+      "title": "为资管标杆打call！财联社2026“金榛子”资管卓越案例征集网络投票启动",
+      "url": "https://www.cls.cn/detail/2462388",
+      "excerpt": "网络投票结束后，组委会将综合初评、专家评审和网络投票结果，确定入围名单，9月中旬正式揭晓。",
+      "publishedAt": "2026-08-24T00:00:00.000Z",
+      "category": "finance",
+      "summary": "财联社金榛子资管卓越案例征集网络投票启动，行业评选活动宣传，无零售经营决策价值。",
+      "source": "财联社",
+      "fetchedToday": true,
+      "relevant": false
+    },
+    {
+      "sourceId": "cls",
+      "title": "债市收盘|资金面偏紧下长端走强，30年期国债收益率下破2.16%",
+      "url": "https://www.cls.cn/detail/2462400",
+      "excerpt": "关注明天MLF续作情况。",
+      "publishedAt": "2026-08-24T00:00:00.000Z",
+      "category": "finance",
+      "summary": "债市收盘：资金面偏紧下长端走强、30年期国债收益率下破2.16%，债市走势。财富线可据此管理固收客户预期，提示长端利率下行空间。",
+      "source": "财联社",
+      "fetchedToday": true,
+      "subcategory": "cn-finance",
+      "relevant": true
+    },
+    {
+      "sourceId": "cls",
+      "title": "9000万月活流量、日均千亿级Token消耗：平安迈入AI驱动的战略协同新模式",
+      "url": "https://www.cls.cn/detail/2462340",
+      "excerpt": "平安2026年的这份中期报告，除了市场关注的业绩指标之外，把一组更常见于互联网和科技公司的运行指标公之于众：集团APP矩阵月活达9000万，8月份日均Token消耗量达2100亿，AI智能体辅助实现销售额573.13亿元。",
+      "publishedAt": "2026-08-24T00:00:00.000Z",
+      "category": "finance",
+      "summary": "平安AI战略：9000万月活、日均千亿级Token消耗，金融集团AI转型提速。分行可对标头部同业AI应用，探索智能营销与客户经营提效。",
+      "source": "财联社",
+      "fetchedToday": true,
+      "subcategory": "cn-finance",
+      "relevant": true
+    },
+    {
+      "sourceId": "cnfin",
+      "title": "新华指数监测：8月24日山东港口石油焦现货交易价格环比上涨9元/吨",
+      "url": "https://www.cnfin.com/cy-lb/detail/20260824/4459527_1.html",
+      "excerpt": "",
+      "publishedAt": "2026-08-24T00:00:00.000Z",
+      "category": "finance",
+      "summary": "山东港口石油焦现货价格环比上涨9元/吨，大宗数据，非零售决策信息。",
+      "source": "新华财经",
+      "fetchedToday": true,
+      "relevant": false
+    },
+    {
+      "sourceId": "cnfin",
+      "title": "新华指数监测：8月24日山东港口大商中心钢坯、热轧C料价格小幅上涨",
+      "url": "https://www.cnfin.com/cy-lb/detail/20260824/4459515_1.html",
+      "excerpt": "",
+      "publishedAt": "2026-08-24T00:00:00.000Z",
+      "category": "finance",
+      "summary": "山东港口钢坯热轧C料价格小幅上涨，大宗数据，非零售决策信息。",
+      "source": "新华财经",
+      "fetchedToday": true,
+      "relevant": false
+    },
+    {
+      "sourceId": "stcn",
+      "title": "腾讯与中国太保聚焦AI领域全面深化战略合作",
+      "url": "https://www.stcn.com/article/detail/4106287.html",
+      "excerpt": "",
+      "publishedAt": "2026-08-24T00:00:00.000Z",
+      "category": "finance",
+      "summary": "腾讯与中国太保聚焦AI深化战略合作，保险科技合作深化。可关注AI+保险场景创新，对分行财富与保障产品数字化有参考价值。",
+      "source": "证券时报",
+      "fetchedToday": true,
+      "subcategory": "cn-finance",
+      "relevant": true
+    },
+    {
+      "sourceId": "stcn",
+      "title": "黄山谷捷：上半年收入增长35.32% 募投项目稳步推进",
+      "url": "https://www.stcn.com/article/detail/4106086.html",
+      "excerpt": "",
+      "publishedAt": "2026-08-24T00:00:00.000Z",
+      "category": "finance",
+      "summary": "黄山谷捷上半年收入增35%、募投推进，个股业绩公告，非零售决策信息。",
+      "source": "证券时报",
+      "fetchedToday": true,
+      "relevant": false
+    },
+    {
+      "sourceId": "stcn",
+      "title": "3D打印设备全球爆单，融资客加仓这些股",
+      "url": "https://www.stcn.com/article/detail/4106275.html",
+      "excerpt": "",
+      "publishedAt": "2026-08-24T00:00:00.000Z",
+      "category": "finance",
+      "summary": "3D打印设备全球爆单、融资客加仓，产业行情快讯，与零售经营无直接关联。",
+      "source": "证券时报",
+      "fetchedToday": true,
+      "relevant": false
+    },
+    {
+      "sourceId": "stcn",
+      "title": "阿里核心高层出手！蔡崇信、吴泳铭增持1.2亿港元股票",
+      "url": "https://www.stcn.com/article/detail/4106277.html",
+      "excerpt": "",
+      "publishedAt": "2026-08-24T00:00:00.000Z",
+      "category": "finance",
+      "summary": "蔡崇信、吴泳铭增持阿里1.2亿港元，核心高管增持释放信心信号。财富线可借势向客户传导港股科技龙头基本面信心。",
+      "source": "证券时报",
+      "fetchedToday": true,
+      "subcategory": "cn-finance",
+      "relevant": true
+    },
+    {
+      "sourceId": "stcn",
+      "title": "合计107万股，约1.2亿港元！蔡崇信、吴泳铭出手增持阿里巴巴",
+      "url": "https://www.stcn.com/article/detail/4106278.html",
+      "excerpt": "",
+      "publishedAt": "2026-08-24T00:00:00.000Z",
+      "category": "finance",
+      "summary": "蔡崇信、吴泳铭合计增持阿里107万股约1.2亿港元，高管增持动态，同上为信心信号。",
+      "source": "证券时报",
+      "fetchedToday": true,
+      "subcategory": "cn-finance",
+      "relevant": true
+    },
+    {
+      "sourceId": "southcn",
+      "title": "2026世界机器人大会，广东民企凭何“出圈”？",
+      "url": "https://news.southcn.com/node_812903b83a/31b4a308f4.shtml",
+      "excerpt": "",
+      "publishedAt": "2026-08-24T00:00:00.000Z",
+      "category": "gz",
+      "summary": "世界机器人大会广东民企出圈，广东机器人产业竞争力凸显。分行可深耕机器人产业客群，提供科创金融与产业链员工综合服务。",
+      "source": "南方网·经济",
+      "fetchedToday": true,
+      "subcategory": "gz-customer",
+      "relevant": true
+    },
+    {
+      "sourceId": "cnfin",
+      "title": "世卫组织：刚果（金）埃博拉疫情进入“决定性时刻”",
+      "url": "https://www.cnfin.com/hg-lb/detail/20260824/4459591_1.html",
+      "excerpt": "",
+      "publishedAt": "2026-08-24T00:00:00.000Z",
+      "category": "finance",
+      "source": "新华财经",
+      "fetchedToday": true,
+      "subcategory": "cn-finance"
+    },
+    {
+      "sourceId": "cnfin",
+      "title": "日本核污染水排放三年累计超17万吨",
+      "url": "https://www.cnfin.com/hg-lb/detail/20260824/4459590_1.html",
+      "excerpt": "",
+      "publishedAt": "2026-08-24T00:00:00.000Z",
+      "category": "finance",
+      "source": "新华财经",
+      "fetchedToday": true,
+      "subcategory": "cn-finance"
+    },
+    {
+      "sourceId": "stcn",
+      "title": "全球供应缺口拉大，炼化板块受市场关注",
+      "url": "https://www.stcn.com/article/detail/4106294.html",
+      "excerpt": "",
+      "publishedAt": "2026-08-24T00:00:00.000Z",
+      "category": "finance",
+      "source": "证券时报",
       "fetchedToday": true,
       "subcategory": "cn-finance"
     },
     {
       "sourceId": "cnfin",
       "source": "新华财经",
-      "title": "新华指数监测：8月24日中国能化现货估价指数环比上涨0.67%",
-      "url": "https://www.cnfin.com/cy-lb/detail/20260824/4459537_1.html",
+      "title": "每日机构分析：8月24日",
+      "url": "https://www.cnfin.com/yw-lb/detail/20260824/4459599_1.html",
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "finance",
@@ -3658,8 +4130,8 @@
     {
       "sourceId": "stcn",
       "source": "证券时报",
-      "title": "月内最多涨超20%！这一品种火了，相关股票爆发",
-      "url": "https://www.stcn.com/article/detail/4105946.html",
+      "title": "VC/PE角色进阶：从“狩猎人”到“种田人”",
+      "url": "https://www.stcn.com/article/detail/4106311.html",
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "finance",
@@ -3673,8 +4145,8 @@
     {
       "sourceId": "stcn",
       "source": "证券时报",
-      "title": "极端行情里竟有宝藏基金！它们如何做到年内赚超20%、最大回撤不到10%？",
-      "url": "https://www.stcn.com/article/detail/4106113.html",
+      "title": "直击璞泰来业绩说明会：预计2027年基膜供需环境依然偏紧",
+      "url": "https://www.stcn.com/article/detail/4106312.html",
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "finance",
@@ -3684,95 +4156,6 @@
       "filterDimensions": [],
       "fetchedToday": true,
       "subcategory": "cn-finance"
-    },
-    {
-      "sourceId": "stcn",
-      "source": "证券时报",
-      "title": "悦达投资：转型成效加速兑现 高质量发展迈出坚实步伐",
-      "url": "https://www.stcn.com/article/detail/4105803.html",
-      "excerpt": "",
-      "publishedAt": "2026-08-24T00:00:00.000Z",
-      "category": "finance",
-      "summary": "",
-      "tier": "T2",
-      "filterBucket": "daily",
-      "filterDimensions": [],
-      "fetchedToday": true,
-      "subcategory": "cn-finance"
-    },
-    {
-      "sourceId": "stcn",
-      "source": "证券时报",
-      "title": "拟分红超2.5亿元！康冠科技半年报：海外基本盘稳固，创新类显示业务高速增长",
-      "url": "https://www.stcn.com/article/detail/4106040.html",
-      "excerpt": "",
-      "publishedAt": "2026-08-24T00:00:00.000Z",
-      "category": "finance",
-      "summary": "",
-      "tier": "T2",
-      "filterBucket": "daily",
-      "filterDimensions": [],
-      "fetchedToday": true,
-      "subcategory": "cn-finance"
-    },
-    {
-      "sourceId": "stcn",
-      "source": "证券时报",
-      "title": "零跑汽车上半年营收381.1亿元创同期历史新高 连续三个半年度盈利",
-      "url": "https://www.stcn.com/article/detail/4106199.html",
-      "excerpt": "",
-      "publishedAt": "2026-08-24T00:00:00.000Z",
-      "category": "finance",
-      "summary": "",
-      "tier": "T2",
-      "filterBucket": "daily",
-      "filterDimensions": [],
-      "fetchedToday": true,
-      "subcategory": "cn-finance"
-    },
-    {
-      "sourceId": "stcn",
-      "source": "证券时报",
-      "title": "Keep发布2026年中期业绩：上半年亏损大幅收窄 AI应用落地提速",
-      "url": "https://www.stcn.com/article/detail/4105997.html",
-      "excerpt": "",
-      "publishedAt": "2026-08-24T00:00:00.000Z",
-      "category": "finance",
-      "summary": "",
-      "tier": "T2",
-      "filterBucket": "daily",
-      "filterDimensions": [],
-      "fetchedToday": true,
-      "subcategory": "cn-finance"
-    },
-    {
-      "sourceId": "southcn",
-      "source": "南方网·经济",
-      "title": "广州企业如何走稳专精特新之路？",
-      "url": "https://news.southcn.com/node_812903b83a/720110c5da.shtml",
-      "excerpt": "",
-      "publishedAt": "2026-08-24T00:00:00.000Z",
-      "category": "gz",
-      "summary": "",
-      "tier": "T2",
-      "filterBucket": "opportunity",
-      "filterDimensions": [],
-      "filterOpportunities": [
-        {
-          "tracker": "industry_policy",
-          "priority": "B",
-          "label": "产业与人才政策商机",
-          "fields": [
-            "政策名称",
-            "覆盖范围",
-            "申报窗口",
-            "企业名单来源"
-          ],
-          "action": "分析政策惠企名单，批量触达优质代发企业"
-        }
-      ],
-      "fetchedToday": true,
-      "subcategory": "gz-media"
     }
   ]
 }
