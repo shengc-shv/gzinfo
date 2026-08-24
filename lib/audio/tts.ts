@@ -295,7 +295,7 @@ export async function synthesizeAudio(date: string, script: string): Promise<Tts
   const dir = path.resolve(process.cwd(), "data", "history", "reports", date, "audio");
   fs.mkdirSync(dir, { recursive: true });
   const out = path.join(dir, `briefing-${date}.mp3`);
-  const durationSec = Math.max(1, Math.round(script.length / 4.6));
+  const durationSec = Math.max(1, Math.round(script.length / 5.2)); // 与 audio.ts CHARS_PER_SEC 对齐（腾讯 Speed=1 实测 ~5.3 字/秒）
 
   // —— 主用腾讯云 ——
   if (TCE_SECRET_ID && TCE_SECRET_KEY) {
