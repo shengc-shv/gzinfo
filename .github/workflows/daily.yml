@@ -175,6 +175,31 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      # ---------- Piper 本地 TTS（2026-08-24 改用，替代 edge-tts）----------
+      # edge-tts 走微软免费网关，对云服务器 IP（GitHub runner）返 403 无法合成；
+      # Piper 为本地 onnx 模型，不依赖任何外部 TTS 网关，云 IP 可用。
+      - name: Setup Python (for Piper TTS)
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Cache Piper model
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/piper
+          key: piper-zh_CN-huayan-medium-v1
+          restore-keys: |
+            piper-zh_CN-huayan-medium-
+
+      - name: Install Piper TTS
+        run: python3 -m pip install --upgrade pip piper-tts
+
+      - name: Verify Piper & ffmpeg
+        run: |
+          command -v piper || { echo "::error::piper 未安装（pip install piper-tts 应已提供）"; exit 1; }
+          command -v ffmpeg >/dev/null 2>&1 || { echo "::error::ffmpeg 未安装（ubuntu-latest 应预装）"; exit 1; }
+          echo "piper + ffmpeg OK"
+
       # Bring previous reports into the workspace so they survive each run
       # and so build-site can list them all in the archive.
       # 2026-08-19 修复：原 `git --work-tree=daily_reports checkout origin/gh-pages -- .`
