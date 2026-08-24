@@ -194,10 +194,21 @@ jobs:
       - name: Install Piper TTS
         run: python3 -m pip install --upgrade pip piper-tts
 
+      # ffmpeg 在 ubuntu-latest 上并非总是预装（实测 2026-08-24 缺失），
+      # Piper 合成 WAV 后需 ffmpeg 转 MP3，故显式安装。
+      - name: Install ffmpeg (Piper WAV→MP3)
+        run: |
+          if command -v ffmpeg >/dev/null 2>&1; then
+            echo "ffmpeg already present: $(ffmpeg -version 2>/dev/null | head -1)"
+          else
+            sudo apt-get update && sudo apt-get install -y ffmpeg
+          fi
+          command -v ffmpeg >/dev/null 2>&1 || { echo "::error::ffmpeg 安装失败"; exit 1; }
+
       - name: Verify Piper & ffmpeg
         run: |
           command -v piper || { echo "::error::piper 未安装（pip install piper-tts 应已提供）"; exit 1; }
-          command -v ffmpeg >/dev/null 2>&1 || { echo "::error::ffmpeg 未安装（ubuntu-latest 应预装）"; exit 1; }
+          command -v ffmpeg >/dev/null 2>&1 || { echo "::error::ffmpeg 未安装"; exit 1; }
           echo "piper + ffmpeg OK"
 
       # Bring previous reports into the workspace so they survive each run
