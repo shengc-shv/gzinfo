@@ -56,6 +56,8 @@ export interface TtsResult {
   mp3Path: string;
   /** 估算时长（秒）；避免引入 mp3 解析依赖，使用字数估算 */
   durationSec: number;
+  /** 合成后端：tencent=腾讯云合成，piper=开源 Piper 本地兜底 */
+  backend: "tencent" | "piper";
 }
 
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
@@ -266,7 +268,7 @@ export async function synthesizeAudio(date: string, script: string): Promise<Tts
   // —— 主用腾讯云 ——
   if (TCE_SECRET_ID && TCE_SECRET_KEY) {
     if (await runBackend("tencent", (t, o) => synthTencent(t, o, date), script, out)) {
-      return { mp3Path: out, durationSec };
+      return { mp3Path: out, durationSec, backend: "tencent" };
     }
     console.warn("⚠️ 腾讯云连续失败，自动切换 Piper 兜底……");
   } else {
@@ -276,7 +278,7 @@ export async function synthesizeAudio(date: string, script: string): Promise<Tts
   // —— Piper 兜底 ——
   if (await runBackend("piper", synthPiper, script, out)) {
     console.warn("::warning::今日音频由 Piper 兜底生成，请检查腾讯云 TTS 状态与额度");
-    return { mp3Path: out, durationSec };
+    return { mp3Path: out, durationSec, backend: "piper" };
   }
 
   throw new Error("所有 TTS 后端均失败");

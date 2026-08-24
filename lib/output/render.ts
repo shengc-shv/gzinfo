@@ -1337,7 +1337,7 @@ ${THEME_CSS}
 <body>
 <main>
   ${opts.audio ? `<div class="player-card">
-    <div class="player-title"><span class="ic">🎧</span> 今日语音简报 <span class="player-dur">${escapeHtml(opts.audio.duration)}</span></div>
+    <div class="player-title"><span class="ic">🎧</span> 今日语音简报 <span class="player-dur">${escapeHtml(opts.audio.duration)}</span>${opts.audio.backend ? `<span class="player-badge player-badge-${opts.audio.backend}">${opts.audio.backend === "tencent" ? "腾讯合成" : "开源合成"}</span>` : ""}</div>
     <audio controls preload="none" src="${escapeHtml(opts.audio.src)}"></audio>
   </div>` : ""}
   <!-- 报头：今日定调 + 数据截至 -->

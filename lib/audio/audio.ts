@@ -23,6 +23,8 @@ export interface AudioMeta {
   src: string;
   /** 展示用时长文案（如「约 2 分 0 秒」） */
   duration: string;
+  /** 合成后端：tencent=腾讯云合成，piper=开源 Piper 本地合成；缺省为占位（未实际合成） */
+  backend?: "tencent" | "piper";
 }
 
 /** 各章节口播字数上限（2026-08-24 语态收紧：主播解读感/快讯电报体后总量更短，总目标 ≤500 字）。 */
