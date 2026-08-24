@@ -30,8 +30,8 @@ export interface AudioMeta {
 /** 各章节口播字数上限（2026-08-24 用户拍板：口播要"事件+应对建议"，总时长约 2 分钟 → 总字数 ~600）。 */
 export const AUDIO_SPEAK_LIMITS = {
   hero: 80,
-  must_read: 300,
-  insights: 250,
+  must_read: 320,
+  insights: 280,
   ipo: 60,
 } as const;
 
