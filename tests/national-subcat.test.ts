@@ -51,18 +51,16 @@ test("#33 渲染契约：cn-* 标签名保留（全国财富/全国零售信贷/
   assert.equal(SUBCATEGORY_LABELS["cn-private"], "全国私行");
 });
 
-test("#33 LLM 候选清单：RULES 含全国三项业务线标签 + 更新口诀", () => {
-  assert.ok(RULES.includes("cn-wealth"), "LLM 候选应包含 全国财富");
-  assert.ok(RULES.includes("cn-credit"), "LLM 候选应包含 全国零售信贷");
-  assert.ok(RULES.includes("cn-private"), "LLM 候选应包含 全国私行");
+test("#33 LLM 候选清单：RULES 已移除全国三项业务线子标签（2026-08-24 用户：来源路由名不合适）", () => {
+  assert.ok(!RULES.includes("cn-wealth"), "LLM 候选应已移除 全国财富（过期指令）");
+  assert.ok(!RULES.includes("cn-credit"), "LLM 候选应已移除 全国零售信贷（过期指令）");
+  assert.ok(!RULES.includes("cn-private"), "LLM 候选应已移除 全国私行（过期指令）");
   assert.ok(
-    RULES.includes("cn-wealth/cn-credit/cn-private"),
-    "口诀应引导全国性报道按业务线细分",
+    !RULES.includes("cn-wealth/cn-credit/cn-private"),
+    "口诀不应再引导全国性报道按业务线细分归 cn-*",
   );
-  assert.ok(
-    !RULES.includes("全国性报道一律 cn-finance/news/cn-policy"),
-    "旧口诀（一律 cn-finance）应已移除",
-  );
+  assert.ok(RULES.includes("cn-finance"), "RULES 仍应保留 cn-finance（全国综合财经）");
+  assert.ok(RULES.includes("gz-"), "RULES 仍应保留 gz-* 广州本地业务线");
 });
 
 test("#33/#9 端到端：gz_local 文章进广州本地、biz_insight 文章进业务启示（新 schema 渲染契约）", () => {

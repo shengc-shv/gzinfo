@@ -7,6 +7,7 @@
  * 并把采集分类映射到新管线的五个渲染板块。与 pipeline.ts 的 categoryToSection 保持一致。
  */
 import type { ArticleInput, DailyReport, ReportItem, ReportSectionKey } from "../types";
+import { rollUpTags } from "../classify/tag-rollup";
 
 /** 旧采集分类 → 新管线渲染板块（无 AI 兜底映射）。 */
 export function categoryToSection(cat?: string): ReportSectionKey {
@@ -56,7 +57,7 @@ export function buildNoAiReport(articles: ArticleInput[]): DailyReport {
       summary,
       importance: 2,
       rank: ++rank,
-      tags: [],
+      tags: rollUpTags(a),
       locale: "national",
     };
     sections[sec].push(item);

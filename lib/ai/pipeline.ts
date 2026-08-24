@@ -6,6 +6,7 @@
  */
 import { runPass1, type LlmRunner, type Pass1Input } from "./pass1";
 import { runPass2, ensureSchema, finalizeRanks } from "./pass2";
+import { rollUpTags } from "../classify/tag-rollup";
 import {
   validateReport,
   ALLOWED_TAGS,
@@ -92,7 +93,7 @@ export function makeSkipAiRunner(
             source_type: "media",
             locale: it.gz_hint ? "gz" : "national",
             locale_evidence: it.gz_hint ? (it.title || "").slice(0, 40) : "",
-            tags: [],
+            tags: rollUpTags(it),
             title_cn: it.title || "",
             title_orig: "",
             importance_candidate: 2,

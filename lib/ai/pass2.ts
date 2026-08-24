@@ -12,6 +12,7 @@ import { runLlm } from "./llm";
 import { extractJson } from "./json-util";
 import { ALLOWED_TAGS, SECTIONS } from "./validator";
 import { buildPass2User, PASS2_SYSTEM } from "./prompts";
+import { rollUpTags } from "../classify/tag-rollup";
 import { type LlmRunner } from "./pass1";
 import type {
   DailyReport,
@@ -54,7 +55,7 @@ function assembleItem(kept: KeptLookup, ai: any): ReportItem {
     summary: (ai?.summary || "").trim(),
     importance: normalizeImportance(ai?.importance),
     rank: 0,
-    tags: normalizeTags(ai?.tags ?? base.tags),
+    tags: rollUpTags({ tags: normalizeTags(ai?.tags ?? base.tags) }),
     locale: base.locale,
     locale_evidence: base.locale_evidence,
   };

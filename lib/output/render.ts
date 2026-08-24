@@ -11,6 +11,7 @@ import type { WatchlistPick } from "../ai/trading-commentary";
 import { REPORT_LOCALE,loadAllSources  } from "../sources/registry";
 import { STR, SUBCATEGORY_ORDER, SUBCATEGORY_LABELS } from "./render/i18n";
 import { SECTIONS, BANNED_WORDS } from "../ai/validator";
+import { rollUpTags } from "../classify/tag-rollup";
 import { titleSimilarityDice } from "../ingest/dedup-similar";
 import {
   renderRawCategoryPanel,
@@ -1023,30 +1024,10 @@ const IPO_FLOW_RE =
   /(受理|辅导|备案|招股|过会|上市委|注册生效|提交注册|询价|申购|路演|拟登陆|pre-?ipo|新股上市|上市公告|发行结果|中签|已受理)/i;
 
 /**
- * subcategory → 部门中文 tag（历史条目并入渲染时使用，2026-08-21 用户：
- * 「区分零售各部门数据的呈现」——卡片 tag 显示财富/信贷/私行/客群，
- * 不再外露 gz-wealth 这类原始字段）。
+ * subcategory → 部门中文 tag 的双标构造已统一移至 lib/classify/tag-rollup.ts 的
+ * rollUpTags()（2026-08-24）：同时消费 subcategory 与自由标签，确保每张卡必带 ≥1 个
+ * 业务线部门标签。下方 mergeRollingIntoReport 的标签即调用 rollUpTags。
  */
-const SUB_TO_TAG: Record<string, string> = {
-  "gz-wealth": "财富",
-  "cn-wealth": "财富",
-  "gz-credit": "信贷",
-  "cn-credit": "信贷",
-  "gz-private": "私行",
-  "cn-private": "私行",
-  "gz-customer": "客群",
-  "cn-customer": "客群",
-};
-
-/** 由条目级 subcategory 推导部门中文 tag（无则空数组）。 */
-function deptTagsOf(a: ArticleInput): string[] {
-  const subs = a.subcategories && a.subcategories.length > 0
-    ? a.subcategories
-    : a.subcategory
-      ? [a.subcategory]
-      : [];
-  return Array.from(new Set(subs.map((s) => SUB_TO_TAG[s]).filter((t): t is string => Boolean(t))));
-}
 
 /**
  * 把滚动历史（近 7 天，buildRolling 产物）中「符合要求」的条目并入 report.sections，
@@ -1154,7 +1135,7 @@ export function mergeRollingIntoReport(
       summary,
       importance: 2,
       rank: 0,
-      tags: deptTagsOf(a),
+      tags: rollUpTags(a),
       locale: a.category === "gz" ? "gz" : "national",
     });
     rankKey.set(a.url, (a.publishedAt ?? a.fetchedAt)?.getTime() ?? 0);
