@@ -175,6 +175,18 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      # 探测腾讯密钥是否配置（step 级 if 不支持 secrets 上下文，先转成输出再判断）
+      - name: Detect Tencent TTS secret
+        id: tencent-check
+        env:
+          TENCENTCLOUD_SECRET_ID: ${{ secrets.TENCENTCLOUD_SECRET_ID }}
+        run: |
+          if [ -n "${TENCENTCLOUD_SECRET_ID}" ]; then
+            echo "has=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "has=false" >> "$GITHUB_OUTPUT"
+          fi
+
       # ---------- ffmpeg（腾讯 concat 重编码 + Piper WAV→MP3 都需要，始终安装）----------
       # 2026-08-24：腾讯路径 mergeMp3 已改 libmp3lame 重编码拼接，同样依赖 ffmpeg。
       - name: Install ffmpeg
@@ -193,13 +205,13 @@ jobs:
       #   条件安装 Piper 并跑 scripts/tts-fallback.ts 补合成（见 daily 后步骤）。
       # 腾讯包月场景（有密钥）日常不再预装 Piper，避免每次运行白装。
       - name: Setup Python (Piper 主用，无腾讯时)
-        if: ${{ secrets.TENCENTCLOUD_SECRET_ID == '' }}
+        if: ${{ steps.tencent-check.outputs.has == 'false' }}
         uses: actions/setup-python@v5
         with:
           python-version: '3.12'
 
       - name: Cache Piper model (主用)
-        if: ${{ secrets.TENCENTCLOUD_SECRET_ID == '' }}
+        if: ${{ steps.tencent-check.outputs.has == 'false' }}
         uses: actions/cache@v4
         with:
           path: ~/.cache/piper
@@ -208,7 +220,7 @@ jobs:
             piper-zh_CN-huayan-medium-
 
       - name: Install Piper TTS (主用)
-        if: ${{ secrets.TENCENTCLOUD_SECRET_ID == '' }}
+        if: ${{ steps.tencent-check.outputs.has == 'false' }}
         run: python3 -m pip install --upgrade pip piper-tts
 
       # Bring previous reports into the workspace so they survive each run
@@ -291,13 +303,13 @@ jobs:
       # 此处才安装 Piper（含模型缓存）并跑 scripts/tts-fallback.ts 补合成，
       # 保证「Piper 只在腾讯失败时发起」。正常腾讯成功时这 4 步全部跳过。
       - name: Setup Python (Piper 兜底)
-        if: ${{ secrets.TENCENTCLOUD_SECRET_ID != '' && hashFiles('data/history/reports/*/tts-fallback-needed.txt') != '' }}
+        if: ${{ steps.tencent-check.outputs.has == 'true' && hashFiles('data/history/reports/*/tts-fallback-needed.txt') != '' }}
         uses: actions/setup-python@v5
         with:
           python-version: '3.12'
 
       - name: Cache Piper model (兜底)
-        if: ${{ secrets.TENCENTCLOUD_SECRET_ID != '' && hashFiles('data/history/reports/*/tts-fallback-needed.txt') != '' }}
+        if: ${{ steps.tencent-check.outputs.has == 'true' && hashFiles('data/history/reports/*/tts-fallback-needed.txt') != '' }}
         uses: actions/cache@v4
         with:
           path: ~/.cache/piper
@@ -306,11 +318,11 @@ jobs:
             piper-zh_CN-huayan-medium-
 
       - name: Install Piper TTS (兜底)
-        if: ${{ secrets.TENCENTCLOUD_SECRET_ID != '' && hashFiles('data/history/reports/*/tts-fallback-needed.txt') != '' }}
+        if: ${{ steps.tencent-check.outputs.has == 'true' && hashFiles('data/history/reports/*/tts-fallback-needed.txt') != '' }}
         run: python3 -m pip install --upgrade pip piper-tts
 
       - name: Piper fallback synthesis (腾讯失败时)
-        if: ${{ secrets.TENCENTCLOUD_SECRET_ID != '' && hashFiles('data/history/reports/*/tts-fallback-needed.txt') != '' }}
+        if: ${{ steps.tencent-check.outputs.has == 'true' && hashFiles('data/history/reports/*/tts-fallback-needed.txt') != '' }}
         run: npm run tts-fallback
 
       # 信息源抓取结果数据包（daily 导出），供本地「预 AI 分析加载」任务拉回比对
