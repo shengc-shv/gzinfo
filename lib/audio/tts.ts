@@ -8,6 +8,10 @@
  *    1) Text 参数必须 base64 编码后传入，直接传原文会报错；
  *    2) 单次请求上限约 150 字（GBK），口播稿 ~600 字须按句子分片合成，
  *       再用 ffmpeg concat 无缝拼接。
+ *  - 编码坑（2026-08-24 实测根因）：腾讯后端收到 base64 解码后按 **GBK** 解读字节。
+ *    若按 UTF-8 编码（Buffer.from(t,"utf-8")）再 base64，中文会被拆解成乱码音节，
+ *    音频从第一个字开始就是乱码且时长膨胀 ~2.7 倍。必须用 iconv-lite 编码为 GBK
+ *    后再 base64（Text 的「150 字（GBK）」上限即按 GBK 字节计）。
  *  - 兜底：腾讯连续失败（3 次重试）自动切换 Piper 本地 onnx 合成，
  *    云 IP 不依赖任何外部 TTS 网关。
  *  - 输出：data/history/reports/<date>/audio/briefing-<date>.mp3
@@ -27,6 +31,7 @@ import path from "node:path";
 import os from "node:os";
 import { spawnSync } from "node:child_process";
 import crypto from "node:crypto";
+import iconv from "iconv-lite";
 
 // ---------- 腾讯云 ----------
 const TCE_SECRET_ID = process.env.TENCENTCLOUD_SECRET_ID || "";
@@ -170,7 +175,8 @@ async function synthTencent(text: string, outPath: string, date: string): Promis
   const parts: Buffer[] = [];
   for (let i = 0; i < chunks.length; i++) {
     const payload = JSON.stringify({
-      Text: Buffer.from(chunks[i], "utf-8").toString("base64"),
+      // 必须 GBK 编码后再 base64：腾讯后端按 GBK 解读字节，传 UTF-8 会全文乱码（2026-08-24 实测）
+      Text: iconv.encode(chunks[i], "gbk").toString("base64"),
       SessionId: `${date}-${i}-${crypto.randomBytes(4).toString("hex")}`,
       VoiceType: VOICE_TYPE,
       Codec: "mp3",
