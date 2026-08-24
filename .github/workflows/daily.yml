@@ -276,6 +276,13 @@ jobs:
           # 可选：设为 "true" 跳过实际音频合成（仅注入播放器占位，调试用）。
           # 默认空 → CI 每次正式运行都生成 mp3 并发布。
           SKIP_TTS: ${{ vars.SKIP_TTS }}
+          # 腾讯云 TTS（主用）：密钥来自 Secrets；未配置则 tts.ts 自动走 Piper 兜底。
+          # 区域/音色/语速来自 Variables（带默认 ap-guangzhou / 501001 智瑜 / 1）。
+          TENCENTCLOUD_SECRET_ID: ${{ secrets.TENCENTCLOUD_SECRET_ID }}
+          TENCENTCLOUD_SECRET_KEY: ${{ secrets.TENCENTCLOUD_SECRET_KEY }}
+          TENCENTCLOUD_REGION: ${{ vars.TENCENTCLOUD_REGION }}
+          TTS_VOICE_TYPE: ${{ vars.TTS_VOICE_TYPE }}
+          TTS_SPEED: ${{ vars.TTS_SPEED }}
           WEB_MODE: 'true'
         run: npm run daily
 
