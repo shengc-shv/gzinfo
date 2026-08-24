@@ -1,18 +1,4 @@
 {
-  "https://www.infoq.cn/article/fPGPEF2hwCKtz3PTg69C?utm_source=rss&utm_medium=article": {
-    "title": "npm 终于动手了：默认封杀 postinstall 脚本",
-    "url": "https://www.infoq.cn/article/fPGPEF2hwCKtz3PTg69C?utm_source=rss&utm_medium=article",
-    "sourceId": "infoq-cn",
-    "source": "InfoQ 中国",
-    "category": "tech",
-    "subcategory": "cn-finance",
-    "excerpt": "点击查看原文>",
-    "publishedAt": "2026-08-22T11:05:00.000Z",
-    "firstSeenAt": "2026-08-22T03:09:34.422Z",
-    "lastSeenAt": "2026-08-22T03:09:34.422Z",
-    "ai_relevant": false,
-    "summary": "npm 终于动手了：默认封杀 postinstall 脚本。对广州分行研判市场与同业动态具参考"
-  },
   "https://www.stcn.com/article/detail/4102621.html": {
     "title": "交易所出手！十余组账户被处罚，涉及这些违规行为",
     "url": "https://www.stcn.com/article/detail/4102621.html",
@@ -4471,5 +4457,89 @@
     "publishedAt": "2026-08-24T00:00:00.000Z",
     "firstSeenAt": "2026-08-24T11:03:50.223Z",
     "lastSeenAt": "2026-08-24T11:03:50.223Z"
+  },
+  "https://finance.sina.com.cn/money/fund/jjzl/2026-08-24/doc-inipmnpq6042874.shtml": {
+    "title": "聚焦黄金｜国际黄金反弹加速，聚焦杰克逊霍尔央行年",
+    "url": "https://finance.sina.com.cn/money/fund/jjzl/2026-08-24/doc-inipmnpq6042874.shtml",
+    "sourceId": "sina-money",
+    "source": "新浪财经·理财保险",
+    "category": "gz",
+    "subcategory": "cn-finance",
+    "excerpt": "【财富管理】聚焦黄金｜国际黄金反弹加速，聚焦杰克逊霍尔央行年",
+    "publishedAt": "2026-08-24T00:00:00.000Z",
+    "firstSeenAt": "2026-08-24T11:23:37.307Z",
+    "lastSeenAt": "2026-08-24T11:23:37.307Z"
+  },
+  "https://www.bse.cn/disclosure/2026/2026-08-24/4f0fffd62c944da6a542f0514cd4fe3b.pdf": {
+    "title": "泰德股份 (920378)",
+    "url": "https://www.bse.cn/disclosure/2026/2026-08-24/4f0fffd62c944da6a542f0514cd4fe3b.pdf",
+    "sourceId": "bse",
+    "source": "北交所IPO公告",
+    "category": "ipo",
+    "subcategory": "bse",
+    "excerpt": "北交所公告 | [临时公告]泰德股份:关于拟减少注册资本暨修订公司章程公告 | 日期: 2026-08-24",
+    "publishedAt": "2026-08-24T00:00:00.000Z",
+    "firstSeenAt": "2026-08-24T11:23:37.307Z",
+    "lastSeenAt": "2026-08-24T11:23:37.307Z"
+  },
+  "https://finance.sina.com.cn/jryx/bank/2026-08-24/doc-inipmnpn1949757.shtml": {
+    "title": "中国支付清算协会印发《智能体支付应用自律公约》",
+    "url": "https://finance.sina.com.cn/jryx/bank/2026-08-24/doc-inipmnpn1949757.shtml",
+    "sourceId": "sina-bank",
+    "source": "新浪财经·银行频道",
+    "category": "finance",
+    "subcategory": "cn-finance",
+    "excerpt": "",
+    "publishedAt": "2026-08-24T00:00:00.000Z",
+    "firstSeenAt": "2026-08-24T11:23:37.307Z",
+    "lastSeenAt": "2026-08-24T11:23:37.307Z"
+  },
+  "https://www.stcn.com/article/detail/4108535.html": {
+    "title": "小鹏机器人业务首轮融资超9亿美元",
+    "url": "https://www.stcn.com/article/detail/4108535.html",
+    "sourceId": "stcn",
+    "source": "证券时报",
+    "category": "finance",
+    "subcategory": "cn-finance",
+    "excerpt": "",
+    "publishedAt": "2026-08-24T00:00:00.000Z",
+    "firstSeenAt": "2026-08-24T11:23:37.307Z",
+    "lastSeenAt": "2026-08-24T11:23:37.307Z"
+  },
+  "https://www.stcn.com/article/detail/4108544.html": {
+    "title": "鸣鸣很忙上半年营收近450亿元 同比增长60%",
+    "url": "https://www.stcn.com/article/detail/4108544.html",
+    "sourceId": "stcn",
+    "source": "证券时报",
+    "category": "finance",
+    "subcategory": "cn-finance",
+    "excerpt": "",
+    "publishedAt": "2026-08-24T00:00:00.000Z",
+    "firstSeenAt": "2026-08-24T11:23:37.307Z",
+    "lastSeenAt": "2026-08-24T11:23:37.307Z"
+  },
+  "https://www.cnfin.com/yw-lb/detail/20260824/4459607_1.html": {
+    "title": "看好AI前景 阿里董事长及CEO增持公司股票",
+    "url": "https://www.cnfin.com/yw-lb/detail/20260824/4459607_1.html",
+    "sourceId": "cnfin",
+    "source": "新华财经",
+    "category": "finance",
+    "subcategory": "cn-finance",
+    "excerpt": "",
+    "publishedAt": "2026-08-24T00:00:00.000Z",
+    "firstSeenAt": "2026-08-24T11:23:37.307Z",
+    "lastSeenAt": "2026-08-24T11:23:37.307Z"
+  },
+  "https://www.cnfin.com/hg-lb/detail/20260824/4459611_1.html": {
+    "title": "【环球财经】刚果（金）加快职业培训改革 重点支撑矿业和基建本地用工",
+    "url": "https://www.cnfin.com/hg-lb/detail/20260824/4459611_1.html",
+    "sourceId": "cnfin",
+    "source": "新华财经",
+    "category": "finance",
+    "subcategory": "cn-finance",
+    "excerpt": "",
+    "publishedAt": "2026-08-24T00:00:00.000Z",
+    "firstSeenAt": "2026-08-24T11:23:37.307Z",
+    "lastSeenAt": "2026-08-24T11:23:37.307Z"
   }
 }
