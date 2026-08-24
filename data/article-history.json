@@ -3526,5 +3526,41 @@
     "publishedAt": "2026-08-24T00:00:00.000Z",
     "firstSeenAt": "2026-08-24T08:34:58.777Z",
     "lastSeenAt": "2026-08-24T08:34:58.777Z"
+  },
+  "https://finance.sina.com.cn/stock/usstock/c/2026-08-24/doc-inipmhfs6045514.shtml": {
+    "title": "分析师调查：美联储与英央行今年大概率维持利率不变，欧央行与日央行有加息预期",
+    "url": "https://finance.sina.com.cn/stock/usstock/c/2026-08-24/doc-inipmhfs6045514.shtml",
+    "sourceId": "sina-money",
+    "source": "新浪财经·理财保险",
+    "category": "gz",
+    "subcategory": "cn-finance",
+    "excerpt": "【财富管理】分析师调查：美联储与英央行今年大概率维持利率不变，欧央行与日央行有加息预期",
+    "publishedAt": "2026-08-24T00:00:00.000Z",
+    "firstSeenAt": "2026-08-24T08:59:39.066Z",
+    "lastSeenAt": "2026-08-24T08:59:39.066Z"
+  },
+  "https://finance.sina.com.cn/stock/aigc/hkgg/2026-08-24/doc-inipmhfu2823965.shtml": {
+    "title": "惠理价值系列基金披露8月21日份额净值",
+    "url": "https://finance.sina.com.cn/stock/aigc/hkgg/2026-08-24/doc-inipmhfu2823965.shtml",
+    "sourceId": "sina-money",
+    "source": "新浪财经·理财保险",
+    "category": "gz",
+    "subcategory": "cn-finance",
+    "excerpt": "【财富管理】惠理价值系列基金披露8月21日份额净值",
+    "publishedAt": "2026-08-24T00:00:00.000Z",
+    "firstSeenAt": "2026-08-24T08:59:39.066Z",
+    "lastSeenAt": "2026-08-24T08:59:39.066Z"
+  },
+  "https://www.stcn.com/article/detail/4105896.html": {
+    "title": "阿里巴巴新股配售定价完成 互联网巨头AI竞争进入下半场",
+    "url": "https://www.stcn.com/article/detail/4105896.html",
+    "sourceId": "stcn",
+    "source": "证券时报",
+    "category": "finance",
+    "subcategory": "cn-finance",
+    "excerpt": "",
+    "publishedAt": "2026-08-24T00:00:00.000Z",
+    "firstSeenAt": "2026-08-24T08:59:39.066Z",
+    "lastSeenAt": "2026-08-24T08:59:39.066Z"
   }
 }
