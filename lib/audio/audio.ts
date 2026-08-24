@@ -27,19 +27,19 @@ export interface AudioMeta {
   backend?: "tencent" | "piper";
 }
 
-/** 各章节口播字数上限（2026-08-24 语态收紧：主播解读感/快讯电报体后总量更短，总目标 ≤500 字）。 */
+/** 各章节口播字数上限（2026-08-24 用户拍板：口播要"事件+应对建议"，总时长约 2 分钟 → 总字数 ~600）。 */
 export const AUDIO_SPEAK_LIMITS = {
-  hero: 60,
-  must_read: 120,
-  insights: 150,
+  hero: 80,
+  must_read: 300,
+  insights: 250,
   ipo: 60,
 } as const;
 
 const OPENER = "早上好，以下是今日简报。";
 const CLOSER = "详细内容请查看下方图文。";
 const IPO_TRANSITION = "另外，关注一条广东IPO企业动态。";
-/** 中文 TTS 语速 +15% 下约 4.6 字/秒（估算用，避免引入 mp3 解析依赖）。 */
-const CHARS_PER_SEC = 4.6;
+/** 中文 TTS 语速估算（字/秒）：腾讯 Speed=1（1.2 倍）实测约 5.3 字/秒，取 5.2 便于徽标时长贴近实际（2026-08-24 校准）。 */
+const CHARS_PER_SEC = 5.2;
 
 export interface AudioBuildResult {
   /** 拼装后的完整口播稿（纯文本，≤630 字） */
@@ -215,8 +215,8 @@ export async function assembleAudioScript(
   const script = parts.join("\n");
   const durationSec = estimateDurationSec(script.length);
 
-  if (script.length > 630) {
-    console.warn(`::warning:: 口播稿 ${script.length} 字，超出 600 字目标`);
+  if (script.length > 750) {
+    console.warn(`::warning:: 口播稿 ${script.length} 字，超出 700 字目标`);
   }
   if (durationSec < 60 || durationSec > 150) {
     console.warn(`::warning:: 估算音频时长 ${durationSec}s 超出 75~150s 目标窗口，请检查口播稿字数`);
