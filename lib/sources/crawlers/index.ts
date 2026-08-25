@@ -59,15 +59,10 @@ function dedupeByUrl<T extends { url?: string }>(items: T[]): T[] {
 }
 
 export async function fetchCrawledArticles(): Promise<CrawledBundle> {
-  // —— IPO / 新股（五源）→ 走 toGzcmbdf3Format（带 sourceId/region）——
-  // 注：同花顺（TonghuashunIPOCrawler）已本地化停用（WAF 拦国外 IP），由本地 skill 采集
-  const ipoCrawlers: BaseCrawler[] = [
-    new HKEXCrawler(),
-    new SSEAPICrawler(),
-    new SZSEAPICrawler(),
-    new BSEAPICrawler(),
-    new EastMoneyIPOCrawler(),
-  ];
+  // —— IPO / 新股（2026-08-25 用户决定：全部 IPO 功能废弃，明天重新设计；代码保留）——
+  // 停用 HKEXCrawler / SSEAPICrawler / SZSEAPICrawler / BSEAPICrawler / EastMoneyIPOCrawler
+  // 2026-08-25 用户红线：IPO 相关功能全部废弃（数据太老/方案要重设计），不抓取、不渲染
+  const ipoCrawlers: BaseCrawler[] = [];
 
   const ipo: CrawledArticle[] = [];
   for (const crawler of ipoCrawlers) {
@@ -83,9 +78,10 @@ export async function fetchCrawledArticles(): Promise<CrawledBundle> {
   // 注：nfra/pbc/cls（国家金融监督管理总局/中国人民银行/财联社）被 WAF 拦国外 IP，
   // 已本地化停用（本地 skill local-acquire → data/local-acquired.json → daily 读取并入）；
   // 其 SOURCE_ROUTE（finance/cn-policy、finance/cn-finance）仍保留供 local-acquired 路由。
+  // 2026-08-25 用户决定：废弃广州市政府 gz-gov / 广州统计局 gz-stats（数据太老，无用），代码保留
   const gzCrawlers: BaseCrawler[] = [
-    new GzStatsCrawler(),
-    new GzGovCrawler(),
+    // new GzStatsCrawler(),  // 2026-08-25 废弃：数据太老
+    // new GzGovCrawler(),    // 2026-08-25 废弃：数据太老
     new CnfinCrawler(),
     new StcnCrawler(),
     new SinaBankCrawler(),

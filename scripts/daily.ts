@@ -18,6 +18,7 @@ import {
   filterLocalAcquiredRecent,
 } from "../lib/sources/local-acquired";
 import { applyKeywordFilter } from "../lib/filters/keyword-filter";
+import { filterSingleInstitution } from "../lib/filters/single-institution";
 import {
   keywordFilterEnabled,
   keywordFilterFallbackEnabled,
@@ -436,6 +437,18 @@ async function main() {
   if (articles.length !== preW) {
     console.log(
       `[daily] 🧹 源层前置窗口过滤: ${preW} → ${articles.length} 条（移除 ${preW - articles.length} 条超 ${FETCH_WINDOW_DAYS} 天旧文）`,
+    );
+  }
+
+  // —— 单机构新闻过滤（2026-08-25 用户决定，永久生效）：采集后、LLM 分析前 ——
+  // 新闻只提到 1 家金融机构（银行/保险/证券/基金/理财/信托等）且不在白名单
+  // （六大国有行 + 广州银行）→ 不进入 LLM 分析（单机构新闻无参考意义）。
+  // 提到 ≥2 家或 0 家机构 → 保留（宏观/同业对比有价值）。
+  const preSi = articles.length;
+  articles = filterSingleInstitution(articles);
+  if (articles.length !== preSi) {
+    console.log(
+      `[daily] 🏛️ 单机构过滤: ${preSi} → ${articles.length} 条（移除 ${preSi - articles.length} 条非白名单单机构新闻）`,
     );
   }
 

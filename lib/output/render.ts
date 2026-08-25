@@ -1413,10 +1413,11 @@ export function renderHtml(
     { id: "p-biz", label: "业务启示", cls: "var(--c-biz)", count: bizInsight.length, items: bizInsight },
     { id: "p-pol", label: "政策与市场", cls: "var(--c-pol)", count: policyMarket.length, items: policyMarket },
     { id: "p-tech", label: "科技前沿", cls: "var(--c-tech)", count: techAll.length, items: techAll },
-    { id: "p-ipo", label: "IPO动态", cls: "var(--c-ipo)", count: ipoAll.length, items: ipoAll },
+    // 2026-08-25 用户决定：IPO 功能全部废弃（明天重新设计方案），tab 隐藏（代码保留）
+    // { id: "p-ipo", label: "IPO动态", cls: "var(--c-ipo)", count: ipoAll.length, items: ipoAll },
   ].filter((t) => t.count > 0);
 
-  const totalItems = gzLocal.length + bizInsight.length + policyMarket.length + techAll.length + ipoAll.length;
+  const totalItems = gzLocal.length + bizInsight.length + policyMarket.length + techAll.length;
   // 数据截止时间用北京时间（Asia/Shanghai，UTC+8 无夏令时）。此前 toTimeString()
   // 在 CI（ubuntu=UTC）下显示 UTC 时间（如 11:14 实为北京 19:14），误导读者。
   const nowHm = new Intl.DateTimeFormat("en-GB", {
