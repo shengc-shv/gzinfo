@@ -71,18 +71,30 @@ function toPayloadItems(items: StockItem[]): Array<{ title: string; summary: str
   }));
 }
 
-/** 卡脚小字备注：来源网站（首个源名）+ 交叉验证网站（第二源名）+ 数据时间（条目最新日期）。
- *  全部取自输入条目的真实字段，非 LLM 生成；交叉验证源 = 该市场第二个独立源（如 A股=东方财富→新浪财经）。 */
-function buildMeta(items: StockItem[]): { source: string; date: string; crossCheck: string } {
-  const srcs = [...new Set(items.map((i) => (i.source ?? "").trim()).filter(Boolean))];
+/** 公告流源（无恒指/板块等综合盘面数据，不能充当股市解读主源或交叉验证源，仅作补充）。
+ *  2026-08-25 用户拍板：披露易是公司级公告流，不应出现在卡脚 source/crossCheck 主位。 */
+const ANNOUNCEMENT_SOURCES = ["港交所披露易"];
+
+/** 卡脚小字备注：来源网站（新闻综合主源）+ 交叉验证网站（指数核验源）+ 数据时间（条目最新日期）。
+ *  - source：取首个「非公告流」源（真正贡献盘面解读素材的综合新闻源，如港股=新浪港股）；
+ *  - crossCheck：统一取指数核验源 indexChannel（= 新浪行情 API，恒指/道指等点位由它独立核验）；
+ *  - 全部取自真实字段，非 LLM 生成。 */
+function buildMeta(
+  items: StockItem[],
+  indexChannel?: string,
+): { source: string; date: string; crossCheck: string } {
+  const allSrcs = [...new Set(items.map((i) => (i.source ?? "").trim()).filter(Boolean))];
+  const newsSrcs = allSrcs.filter((s) => !ANNOUNCEMENT_SOURCES.includes(s));
   const dates = items
     .map((i) => i.publishedAt ?? "")
     .filter((d) => /^\d{4}-\d{2}-\d{2}/.test(d))
     .sort()
     .reverse();
   return {
-    source: srcs[0] ?? "",
-    crossCheck: srcs[1] ?? "",
+    // 优先取新闻综合主源；若该市场只有公告流（极端），fallback 取首个源，避免空白
+    source: newsSrcs[0] ?? allSrcs[0] ?? "",
+    // 交叉验证 = 指数核验源（新浪行情）；无行情兜底时退回「第二个新闻源」保持旧行为
+    crossCheck: indexChannel ?? newsSrcs[1] ?? allSrcs[1] ?? "",
     date: dates[0] ?? "",
   };
 }
@@ -134,9 +146,10 @@ export async function generateStockRecap(
       hk: normalizeCard(parsed.hk),
     };
     // 附带卡脚小字备注（来源网站/交叉验证网站/数据时间取自输入条目真实字段，非 LLM 臆造；SKIP_AI 复用 store 时一并带回）
-    recap.us.meta = buildMeta(input.us);
-    recap.aShare.meta = buildMeta(input.aShare);
-    recap.hk.meta = buildMeta(input.hk);
+    // crossCheck 统一为指数核验源「新浪行情」（quotes.channel），披露易等公告流不进主位
+    recap.us.meta = buildMeta(input.us, quotes?.channel);
+    recap.aShare.meta = buildMeta(input.aShare, quotes?.channel);
+    recap.hk.meta = buildMeta(input.hk, quotes?.channel);
     // 行情指数（新浪行情 API，非 LLM）：挂到三卡 + 顶层来源/取值日，随 store 持久化、SKIP_AI 复用
     if (quotes) {
       recap.aShare.indices = quotes.quotes.aShare;
