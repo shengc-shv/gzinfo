@@ -8,7 +8,7 @@
       "excerpt": "【财富管理】阿里新股配售，中东、欧洲、亚洲主要主权基金积极认购",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "gz",
-      "summary": "阿里新股配售获全球主权基金踊跃认购，港股IPO热度升温。可提示财富客户关注打新与中概配置机会。",
+      "summary": "",
       "source": "新浪财经·理财保险",
       "fetchedToday": false,
       "subcategory": "cn-finance",
@@ -255,11 +255,11 @@
       "excerpt": "【财富管理】药明康德股价跌5.01%，创金合信基金旗下2只基",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "gz",
-      "summary": "药明康德跌5.01%，创金合信旗下2只基金持仓承压。可提示相关理财/基金客户关注净值波动，做好持仓沟通与再平衡建议。",
+      "summary": "（单机构新闻已过滤：非六大行/广州银行的单机构动态无参考意义）",
       "source": "新浪财经·理财保险",
       "fetchedToday": false,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "21jingji-finance",
@@ -385,11 +385,11 @@
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "finance",
-      "summary": "湖南银行扩表5%但利润停滞、逾期贷款超71亿，资产质量承压。可提示分行加强信贷风险排查与不良资产处置。",
+      "summary": "（单机构新闻已过滤：非六大行/广州银行的单机构动态无参考意义）",
       "source": "新浪财经·银行频道",
       "fetchedToday": false,
       "subcategory": "gz-credit",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "cls",
@@ -606,7 +606,7 @@
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "finance",
-      "summary": "多家城商行理财规模冷暖不一，行业分化加剧。可提示财富客户关注理财净值与规模变化，优化产品货架。",
+      "summary": "",
       "source": "证券时报",
       "fetchedToday": false,
       "subcategory": "cn-finance",
@@ -1087,7 +1087,7 @@
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "finance",
-      "summary": "多只绩优基金放开限购、重新开门迎客，绩优产品申购窗口打开。财富线可借机向客户推荐放开限购的绩优基金，补足优质权益配置。",
+      "summary": "",
       "source": "证券时报",
       "fetchedToday": false,
       "subcategory": "cn-finance",
@@ -1201,7 +1201,7 @@
       "url": "https://finance.cctv.com/2026/08/24/ARTIkMA9efab3NcEVkYiCXBk260824.shtml",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "finance",
-      "summary": "国家首提算力超市、算力银行，算力基础设施金融化信号明确。分行可前瞻布局算力产业链客群金融服务，探索算力资产融资与科技金融场景。",
+      "summary": "",
       "source": "央视财经",
       "fetchedToday": false,
       "subcategory": "cn-policy",
@@ -1214,11 +1214,11 @@
       "excerpt": "【财富管理】现货黄金连涨三周！站上4600美元！华宝基金：美债变局释放宽松信号，黄金领涨情绪有望外溢！",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "gz",
-      "summary": "现货黄金连涨三周站上4600美元，美债变局释放宽松信号。财富线应把握黄金配置窗口，向客户推荐积存金、黄金ETF，并做好高位波动风险提示。",
+      "summary": "（单机构新闻已过滤：非六大行/广州银行的单机构动态无参考意义）",
       "source": "新浪财经·理财保险",
       "fetchedToday": false,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-money",
@@ -1266,7 +1266,7 @@
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "finance",
-      "summary": "阿里配售获近3倍超额认购，主权与长线基金认购超40%，港股募资热度高。财富线可关注港股打新与科技板块配置机会，提示客户关注优质中概回归。",
+      "summary": "",
       "source": "新华财经",
       "fetchedToday": false,
       "subcategory": "cn-finance",
@@ -1512,7 +1512,7 @@
       "excerpt": "【财富管理】财中基金发行热点丨机器人ETF博时启动发行，过去",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "gz",
-      "summary": "机器人ETF博时启动发行，主题ETF新品供给。财富线可结合AI/机器人产业趋势向客户推荐主题基金配置，把握科技成长主线。",
+      "summary": "",
       "source": "新浪财经·理财保险",
       "fetchedToday": false,
       "subcategory": "cn-finance",
@@ -1525,7 +1525,7 @@
       "excerpt": "【财富管理】财中基金发行热点丨融通泓安启动发行，同类产品31",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "gz",
-      "summary": "融通泓安等新品基金启动发行，产品供给扩容。财富线可优选新产品丰富货架，按客户风险等级匹配合适基金。",
+      "summary": "",
       "source": "新浪财经·理财保险",
       "fetchedToday": false,
       "subcategory": "cn-finance",
@@ -1828,7 +1828,7 @@
       "excerpt": "【财富管理】东亚联丰亚洲策略债券2026-08-21基金净值",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "gz",
-      "summary": "东亚联丰亚洲策略债券基金净值披露，海外债基净值公告，例行披露，无独立决策价值。",
+      "summary": "",
       "source": "新浪财经·理财保险",
       "fetchedToday": false,
       "subcategory": "cn-finance",
@@ -1958,11 +1958,11 @@
       "excerpt": "【财富管理】惠理价值系列基金披露8月21日份额净值",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "gz",
-      "summary": "惠理价值系列基金净值披露，例行公告，无独立决策价值。",
+      "summary": "（单机构新闻已过滤：非六大行/广州银行的单机构动态无参考意义）",
       "source": "新浪财经·理财保险",
       "fetchedToday": false,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "stcn",
@@ -2036,11 +2036,11 @@
       "excerpt": "【21财经·金融】年收入3万却在银行贷出1480万，河南多名老农遭套路",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "gz",
-      "summary": "年收入3万却在银行贷出1480万、河南多名老农遭套路贷，暴露出信贷审核与违规放贷风险。分行应严把授信审查关，强化贷后管理与反欺诈。",
+      "summary": "（单机构新闻已过滤：非六大行/广州银行的单机构动态无参考意义）",
       "source": "21世纪经济报道·金融",
       "fetchedToday": false,
       "subcategory": "gz-credit",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "hkex",
@@ -2101,11 +2101,11 @@
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "finance",
-      "summary": "苏州银行30亿元二级资本债发行完毕，同业资本补充动态，与零售经营无直接关联。",
+      "summary": "（单机构新闻已过滤：非六大行/广州银行的单机构动态无参考意义）",
       "source": "新浪财经·银行频道",
       "fetchedToday": false,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-bank",
@@ -2114,11 +2114,11 @@
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "finance",
-      "summary": "青岛银行职工董事任职资格获核准，同业人事公告，非零售决策信息。",
+      "summary": "（单机构新闻已过滤：非六大行/广州银行的单机构动态无参考意义）",
       "source": "新浪财经·银行频道",
       "fetchedToday": false,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-bank",
@@ -2127,11 +2127,11 @@
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "finance",
-      "summary": "瑞丰银行拟每10股派1元中期分红，同业分红动态，可作股东回报参考，零售决策价值有限。",
+      "summary": "（单机构新闻已过滤：非六大行/广州银行的单机构动态无参考意义）",
       "source": "新浪财经·银行频道",
       "fetchedToday": false,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-bank",
@@ -2140,11 +2140,11 @@
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "finance",
-      "summary": "瑞丰银行上半年营收22.14亿元、同比下降1.96%，同业半年报，可对标经营趋势，非零售直接决策信息。",
+      "summary": "（单机构新闻已过滤：非六大行/广州银行的单机构动态无参考意义）",
       "source": "新浪财经·银行频道",
       "fetchedToday": false,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-bank",
@@ -2166,7 +2166,7 @@
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "finance",
-      "summary": "内地投资者在港银行不动户核查迎关键节点，跨境资金与账户合规收紧。私行/财富线应提示客户合规处理香港账户，避免账户冻结风险。",
+      "summary": "",
       "source": "新浪财经·银行频道",
       "fetchedToday": false,
       "subcategory": "cn-finance",
@@ -2313,11 +2313,11 @@
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "finance",
-      "summary": "极端行情中宝藏基金年内赚超20%、最大回撤不到10%，攻守兼备策略复盘。财富线可借案例向客户推介稳健策略基金，强化回撤控制理念。",
+      "summary": "（单机构新闻已过滤：非六大行/广州银行的单机构动态无参考意义）",
       "source": "证券时报",
       "fetchedToday": false,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "stcn",
@@ -2404,11 +2404,11 @@
       "excerpt": "【财富管理】“业绩不达标就调基准”，行不通了！单日超200只理财密集“调基”",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "gz",
-      "summary": "业绩不达标就调基准行不通了，单日超200只理财密集调基，理财业绩比较基准规范收紧。财富线应规范理财产品宣传，引导客户理性看待净值波动。",
+      "summary": "（单机构新闻已过滤：非六大行/广州银行的单机构动态无参考意义）",
       "source": "新浪财经·理财保险",
       "fetchedToday": false,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "hkex",
@@ -2430,11 +2430,11 @@
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "finance",
-      "summary": "瑞丰银行对金柯桥集团关联授信续授6.9亿元，同业关联授信披露，与零售经营无直接关联。",
+      "summary": "（单机构新闻已过滤：非六大行/广州银行的单机构动态无参考意义）",
       "source": "新浪财经·银行频道",
       "fetchedToday": false,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-bank",
@@ -2443,11 +2443,11 @@
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "finance",
-      "summary": "浦发银行发行150亿元绿色金融债券，同业资本工具动态，与零售经营无直接关联。",
+      "summary": "（单机构新闻已过滤：非六大行/广州银行的单机构动态无参考意义）",
       "source": "新浪财经·银行频道",
       "fetchedToday": false,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "nfra",
@@ -2872,7 +2872,7 @@
       "excerpt": "【财富管理】易方达精债人民币2026-08-21基金净值公告",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "gz",
-      "summary": "易方达精债人民币2026-08-21基金净值公告；对分行财富/信贷/客群业务有宏观参考",
+      "summary": "",
       "source": "新浪财经·理财保险",
       "fetchedToday": false,
       "subcategory": "cn-finance",
@@ -2976,11 +2976,11 @@
       "excerpt": "【财富管理】国民信托获批增资至40亿元，不涉及新增股东引入，助贷业务规模已压降",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "gz",
-      "summary": "国民信托获批增资至40亿元，不涉及新增股东引入，助贷业务规模已压降；对分行财富/信贷/客群业务有宏观参考",
+      "summary": "（单机构新闻已过滤：非六大行/广州银行的单机构动态无参考意义）",
       "source": "新浪财经·理财保险",
       "fetchedToday": false,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-money",
@@ -2989,11 +2989,11 @@
       "excerpt": "【财富管理】【协会动态】养老信托专业委员会就 养老信托创新模式开展京沪深三地调研",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "gz",
-      "summary": "养老信托专业委员会就 养老信托创新模式开展京沪深三地调研；对分行财富/信贷/客群业务有宏观参考",
+      "summary": "（单机构新闻已过滤：非六大行/广州银行的单机构动态无参考意义）",
       "source": "新浪财经·理财保险",
       "fetchedToday": false,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-money",
@@ -3002,11 +3002,11 @@
       "excerpt": "【财富管理】贝森特出手强压美债利率 城堡证券警告：搞“金融抑制”恐伤美元",
       "publishedAt": "2026-08-25T00:00:00.000Z",
       "category": "gz",
-      "summary": "贝森特出手强压美债利率 城堡证券警告：搞“金融抑制”恐伤美元；对分行财富/信贷/客群业务有宏观参考",
+      "summary": "（单机构新闻已过滤：非六大行/广州银行的单机构动态无参考意义）",
       "source": "新浪财经·理财保险",
       "fetchedToday": false,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-money",
@@ -3028,11 +3028,11 @@
       "excerpt": "【财富管理】多位知名基金经理调仓 半导体投资有了“新审美”",
       "publishedAt": "2026-08-25T00:00:00.000Z",
       "category": "gz",
-      "summary": "多位知名基金经理调仓 半导体投资有了“新审美”；对分行财富/信贷/客群业务有宏观参考",
+      "summary": "（单机构新闻已过滤：非六大行/广州银行的单机构动态无参考意义）",
       "source": "新浪财经·理财保险",
       "fetchedToday": false,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "21jingji-finance",
@@ -3054,11 +3054,11 @@
       "excerpt": "【21财经·金融】人民银行：7月同业拆借日均成交3232.9亿元 同比减少24.3%",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "gz",
-      "summary": "人民银行：7月同业拆借日均成交3232.9亿元 同比减少24.3%；对分行财富/信贷/客群业务有宏观参考",
+      "summary": "（单机构新闻已过滤：非六大行/广州银行的单机构动态无参考意义）",
       "source": "21世纪经济报道·金融",
       "fetchedToday": false,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "21jingji-finance",
@@ -3080,11 +3080,11 @@
       "excerpt": "【21财经·金融】透视银行中报｜净息差终结四年连降，银行的好日子回来了吗？",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "gz",
-      "summary": "透视银行中报｜净息差终结四年连降，银行的好日子回来了吗？；对分行财富/信贷/客群业务有宏观参考",
+      "summary": "（单机构新闻已过滤：非六大行/广州银行的单机构动态无参考意义）",
       "source": "21世纪经济报道·金融",
       "fetchedToday": false,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "21jingji-finance",
@@ -3249,11 +3249,11 @@
       "excerpt": "",
       "publishedAt": "2026-08-25T00:00:00.000Z",
       "category": "finance",
-      "summary": "股票指增基金业绩透视：逾八成年内跑赢基准 易方达、汇添富基金产品表现靠前；对分行财富/信贷/客群业务有宏观参考",
+      "summary": "（单机构新闻已过滤：非六大行/广州银行的单机构动态无参考意义）",
       "source": "新华财经",
       "fetchedToday": false,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "cnfin",
@@ -3587,11 +3587,11 @@
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "finance",
-      "summary": "渤海银行“母子”被罚6245万 考验70后新任董事长；对分行财富/信贷/客群业务有宏观参考",
+      "summary": "（单机构新闻已过滤：非六大行/广州银行的单机构动态无参考意义）",
       "source": "新浪财经·银行频道",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-bank",
@@ -3600,11 +3600,11 @@
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "finance",
-      "summary": "万亿关口波动、利润降两成 平安理财半年考不理想；对分行财富/信贷/客群业务有宏观参考",
+      "summary": "（单机构新闻已过滤：非六大行/广州银行的单机构动态无参考意义）",
       "source": "新浪财经·银行频道",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-bank",
@@ -3613,11 +3613,11 @@
       "excerpt": "",
       "publishedAt": "2026-08-25T00:00:00.000Z",
       "category": "finance",
-      "summary": "贵阳银行旗下一款理财产品罕见取消业绩比较基准；对分行财富/信贷/客群业务有宏观参考",
+      "summary": "（单机构新闻已过滤：非六大行/广州银行的单机构动态无参考意义）",
       "source": "新浪财经·银行频道",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-bank",
@@ -3626,11 +3626,11 @@
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "finance",
-      "summary": "瑞丰银行上半年投资收益下降拖累营收微降近2%，净；对分行财富/信贷/客群业务有宏观参考",
+      "summary": "（单机构新闻已过滤：非六大行/广州银行的单机构动态无参考意义）",
       "source": "新浪财经·银行频道",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "eastmoney-stock",
@@ -3743,11 +3743,11 @@
       "excerpt": "",
       "publishedAt": "2026-08-25T00:00:00.000Z",
       "category": "stocks",
-      "summary": "中信证券：保险重塑行业经营逻辑大公司持续巩固优势地位；A股市场动态",
+      "summary": "（单机构新闻已过滤：非六大行/广州银行的单机构动态无参考意义）",
       "source": "东方财富",
       "fetchedToday": true,
       "subcategory": "a-share",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "eastmoney-stock",
@@ -3756,11 +3756,11 @@
       "excerpt": "",
       "publishedAt": "2026-08-25T00:00:00.000Z",
       "category": "stocks",
-      "summary": "中信证券：当前美股半导体设备板块配置价值进一步凸显；A股市场动态",
+      "summary": "（单机构新闻已过滤：非六大行/广州银行的单机构动态无参考意义）",
       "source": "东方财富",
       "fetchedToday": true,
       "subcategory": "a-share",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "eastmoney-stock",
@@ -3769,11 +3769,11 @@
       "excerpt": "",
       "publishedAt": "2026-08-25T00:00:00.000Z",
       "category": "stocks",
-      "summary": "中信证券：银行中报信号积极绝对收益空间料将延续；A股市场动态",
+      "summary": "（单机构新闻已过滤：非六大行/广州银行的单机构动态无参考意义）",
       "source": "东方财富",
       "fetchedToday": true,
       "subcategory": "a-share",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "eastmoney-stock",
@@ -4406,11 +4406,11 @@
       "excerpt": "【财富管理】美债收益率走高压制流动性预期，南方基金旗下港股通创新药ETF南方(159297)标的指数昨日调整2.00%",
       "publishedAt": "2026-08-25T00:00:00.000Z",
       "category": "gz",
-      "summary": "美债收益率走高压制流动性预期，南方基金旗下港股通创新药ETF南方(159297)…；对分行财富/信贷/客群业务有宏观参考",
+      "summary": "（单机构新闻已过滤：非六大行/广州银行的单机构动态无参考意义）",
       "source": "新浪财经·理财保险",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-money",
@@ -4419,11 +4419,11 @@
       "excerpt": "【财富管理】增发落地扰动短线，南方基金旗下恒生科技ETF南方(520570)回调布局窗口备受关注",
       "publishedAt": "2026-08-25T00:00:00.000Z",
       "category": "gz",
-      "summary": "增发落地扰动短线，南方基金旗下恒生科技ETF南方(520570)回调布局窗口备受…；对分行财富/信贷/客群业务有宏观参考",
+      "summary": "（单机构新闻已过滤：非六大行/广州银行的单机构动态无参考意义）",
       "source": "新浪财经·理财保险",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sse",
@@ -4523,11 +4523,11 @@
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "finance",
-      "summary": "10万亿浦发银行外引两位“大厂”首席科学家 阿里系；对分行财富/信贷/客群业务有宏观参考",
+      "summary": "（单机构新闻已过滤：非六大行/广州银行的单机构动态无参考意义）",
       "source": "新浪财经·银行频道",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-bank",
@@ -4536,11 +4536,11 @@
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "finance",
-      "summary": "1.1万亿重庆银行应付短期薪酬同比骤增75%，人工成；对分行财富/信贷/客群业务有宏观参考",
+      "summary": "（单机构新闻已过滤：非六大行/广州银行的单机构动态无参考意义）",
       "source": "新浪财经·银行频道",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-hk-stock",
@@ -4601,11 +4601,11 @@
       "excerpt": "",
       "publishedAt": "2026-08-25T00:00:00.000Z",
       "category": "stocks",
-      "summary": "金融街物业(01502)转仓市值总计2068.37万港元 占比10.07% 从花…；港股市场动态",
+      "summary": "（单机构新闻已过滤：非六大行/广州银行的单机构动态无参考意义）",
       "source": "新浪财经·港股",
       "fetchedToday": true,
       "subcategory": "hk",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-hk-stock",
@@ -4627,11 +4627,11 @@
       "excerpt": "",
       "publishedAt": "2026-08-25T00:00:00.000Z",
       "category": "stocks",
-      "summary": "GOLDWAY EDU(08160)股东将股票存入昌利证券 存仓市值478.08…；港股市场动态",
+      "summary": "（单机构新闻已过滤：非六大行/广州银行的单机构动态无参考意义）",
       "source": "新浪财经·港股",
       "fetchedToday": true,
       "subcategory": "hk",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-hk-stock",
@@ -4666,11 +4666,11 @@
       "excerpt": "",
       "publishedAt": "2026-08-25T00:00:00.000Z",
       "category": "stocks",
-      "summary": "英恒科技(01760)转仓市值9424.63万港元 占比6.99% 从法国巴黎银…；港股市场动态",
+      "summary": "（单机构新闻已过滤：非六大行/广州银行的单机构动态无参考意义）",
       "source": "新浪财经·港股",
       "fetchedToday": true,
       "subcategory": "hk",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-hk-stock",
@@ -5277,11 +5277,11 @@
       "excerpt": "【财富管理】精测电子股价跌5.17%，新疆前海联合基金旗下1",
       "publishedAt": "2026-08-25T00:00:00.000Z",
       "category": "gz",
-      "summary": "精测电子股价跌5.17%，新疆前海联合基金旗下1；对分行财富/信贷/客群业务有宏观参考",
+      "summary": "（单机构新闻已过滤：非六大行/广州银行的单机构动态无参考意义）",
       "source": "新浪财经·理财保险",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "eastmoney-stock",
@@ -5822,11 +5822,11 @@
       "excerpt": "",
       "publishedAt": "2026-08-25T00:00:00.000Z",
       "category": "finance",
-      "summary": "核心一级资本充足率较低？重庆银行副行长侯曦蒙：坚持多渠道、多方式补充资本；对分行财富/信贷/客群业务有宏观参考",
+      "summary": "（单机构新闻已过滤：非六大行/广州银行的单机构动态无参考意义）",
       "source": "新浪财经·银行频道",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-bank",
@@ -5835,11 +5835,11 @@
       "excerpt": "",
       "publishedAt": "2026-08-25T00:00:00.000Z",
       "category": "finance",
-      "summary": "重庆银行曾宏：将持续优化营收结构，不断挖掘更多潜在收益机会；对分行财富/信贷/客群业务有宏观参考",
+      "summary": "（单机构新闻已过滤：非六大行/广州银行的单机构动态无参考意义）",
       "source": "新浪财经·银行频道",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-bank",
@@ -5848,11 +5848,11 @@
       "excerpt": "",
       "publishedAt": "2026-08-25T00:00:00.000Z",
       "category": "finance",
-      "summary": "重庆银行独立董事曾宏：预计全年净息差延续同比回升趋势；对分行财富/信贷/客群业务有宏观参考",
+      "summary": "（单机构新闻已过滤：非六大行/广州银行的单机构动态无参考意义）",
       "source": "新浪财经·银行频道",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-bank",
@@ -6030,11 +6030,11 @@
       "excerpt": "",
       "publishedAt": "2026-08-25T00:00:00.000Z",
       "category": "stocks",
-      "summary": "煤炭板块怎么走，冠军基金经理发声；A股市场动态",
+      "summary": "（单机构新闻已过滤：非六大行/广州银行的单机构动态无参考意义）",
       "source": "新浪财经·A股",
       "fetchedToday": true,
       "subcategory": "a-share",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-a-stock",
@@ -8253,11 +8253,11 @@
       "excerpt": "【财富管理】国民信托3倍增资 年内多家信托公司获批增资",
       "publishedAt": "2026-08-25T00:00:00.000Z",
       "category": "gz",
-      "summary": "国民信托3倍增资 年内多家信托公司获批增资；对分行财富/信贷/客群业务有宏观参考",
+      "summary": "（单机构新闻已过滤：非六大行/广州银行的单机构动态无参考意义）",
       "source": "新浪财经·理财保险",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-money",
@@ -8565,11 +8565,11 @@
       "excerpt": "【财富管理】同泰基金旗下两只产品率先披露半年报 盈利投资者占",
       "publishedAt": "2026-08-25T00:00:00.000Z",
       "category": "gz",
-      "summary": "同泰基金旗下两只产品率先披露半年报 盈利投资者占；对分行财富/信贷/客群业务有宏观参考",
+      "summary": "（单机构新闻已过滤：非六大行/广州银行的单机构动态无参考意义）",
       "source": "新浪财经·理财保险",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-a-stock",
@@ -8810,11 +8810,11 @@
       "url": "https://finance.cctv.com/2026/08/25/ARTIbG7swOD2u1LZqIe9NUNU260825.shtml",
       "publishedAt": "2026-08-25T00:00:00.000Z",
       "category": "finance",
-      "summary": "银行定存利率持续下行，分红型保险成银行主推替代品；分行财富业务需加快保险代销能力建设，应对存款搬家趋势。",
+      "summary": "（单机构新闻已过滤：非六大行/广州银行的单机构动态无参考意义）",
       "source": "央视财经",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "cctv-finance",
@@ -8861,11 +8861,11 @@
       "excerpt": "【财富管理】近四分之一含权理财押注打新、优先股！部分收益超22%，策略“撞脸”引关注",
       "publishedAt": "2026-08-25T00:00:00.000Z",
       "category": "gz",
-      "summary": "近四分之一含权理财押注打新/优先股策略，部分年化超22%；固收+策略赛道化加剧，分行理财代销需加强产品风险评级与客户适配。",
+      "summary": "（单机构新闻已过滤：非六大行/广州银行的单机构动态无参考意义）",
       "source": "新浪财经·理财保险",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-money",
@@ -8874,11 +8874,11 @@
       "excerpt": "【财富管理】十七年来首次资本扩充 国民信托注册资本翻至四倍",
       "publishedAt": "2026-08-25T00:00:00.000Z",
       "category": "gz",
-      "summary": "国民信托17年来首次资本扩充，注册资本翻4倍；信托业增资潮延续，分行私行/财富客户信托配置标的池进一步丰富。",
+      "summary": "（单机构新闻已过滤：非六大行/广州银行的单机构动态无参考意义）",
       "source": "新浪财经·理财保险",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-money",
@@ -8926,11 +8926,11 @@
       "excerpt": "【21财经·金融】中关村银行迎来首位女行长 何存任职资格正式获批",
       "publishedAt": "2026-08-25T00:00:00.000Z",
       "category": "gz",
-      "summary": "中关村银行迎来首位女行长，中小银行高管调整持续；分行可关注属地城商行竞争策略变化与同业合作机会。",
+      "summary": "（单机构新闻已过滤：非六大行/广州银行的单机构动态无参考意义）",
       "source": "21世纪经济报道·金融",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "21jingji-finance",
@@ -8952,11 +8952,11 @@
       "excerpt": "【21财经·金融】光大银行深圳景田支行开展“金融反诈进社区”主题宣传活动",
       "publishedAt": "2026-08-25T00:00:00.000Z",
       "category": "gz",
-      "summary": "光大银行深圳支行开展金融反诈进社区；分行可借鉴社区联动模式加强零售客户反诈宣传与账户安全管控。",
+      "summary": "（单机构新闻已过滤：非六大行/广州银行的单机构动态无参考意义）",
       "source": "21世纪经济报道·金融",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "hkex",
@@ -9043,11 +9043,11 @@
       "excerpt": "",
       "publishedAt": "2026-08-25T00:00:00.000Z",
       "category": "finance",
-      "summary": "成都银行选举职工董事；城商行治理结构持续完善，分行可关注西部区域城商行投行/债承合作。",
+      "summary": "（单机构新闻已过滤：非六大行/广州银行的单机构动态无参考意义）",
       "source": "新浪财经·银行频道",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-bank",
@@ -9069,11 +9069,11 @@
       "excerpt": "",
       "publishedAt": "2026-08-25T00:00:00.000Z",
       "category": "finance",
-      "summary": "江浙三家城商行中报：江苏银行净息差降幅最大，南京银行中收\"拖后腿\"；区域银行盈利分化，分行个贷定价需因地施策。",
+      "summary": "（单机构新闻已过滤：非六大行/广州银行的单机构动态无参考意义）",
       "source": "新浪财经·银行频道",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-bank",
@@ -9082,11 +9082,11 @@
       "excerpt": "",
       "publishedAt": "2026-08-25T00:00:00.000Z",
       "category": "finance",
-      "summary": "上海银行5年亏25.57亿港元后收购上银国际补血；城商行海外/投行扩张受挫，分行跨境业务需严控风险。",
+      "summary": "（单机构新闻已过滤：非六大行/广州银行的单机构动态无参考意义）",
       "source": "新浪财经·银行频道",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "guancha",
@@ -9277,11 +9277,11 @@
       "excerpt": "",
       "publishedAt": "2026-08-25T00:00:00.000Z",
       "category": "stocks",
-      "summary": "汇添富基金管理股份有限公司减持石药集团(01093)3912.4万股 每股作价约…；港股市场动态",
+      "summary": "（单机构新闻已过滤：非六大行/广州银行的单机构动态无参考意义）",
       "source": "新浪财经·港股",
       "fetchedToday": true,
       "subcategory": "hk",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-hk-stock",
@@ -9303,11 +9303,11 @@
       "excerpt": "",
       "publishedAt": "2026-08-25T00:00:00.000Z",
       "category": "stocks",
-      "summary": "富国基金减持广合科技(01989)33.19万股 每股作价约125.07港元；港股市场动态",
+      "summary": "（单机构新闻已过滤：非六大行/广州银行的单机构动态无参考意义）",
       "source": "新浪财经·港股",
       "fetchedToday": true,
       "subcategory": "hk",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-hk-stock",
@@ -10367,10 +10367,11 @@
       "excerpt": "【财富管理】摩根亚洲股票高息基金2026-08-24基金净值",
       "publishedAt": "2026-08-25T00:00:00.000Z",
       "category": "gz",
+      "summary": "（单机构新闻已过滤：非六大行/广州银行的单机构动态无参考意义）",
       "source": "新浪财经·理财保险",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "21jingji-finance",
@@ -10823,10 +10824,11 @@
       "excerpt": "【财富管理】摩根资管：美联储9月不应加息",
       "publishedAt": "2026-08-25T00:00:00.000Z",
       "category": "gz",
+      "summary": "（单机构新闻已过滤：非六大行/广州银行的单机构动态无参考意义）",
       "source": "新浪财经·理财保险",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "21jingji-finance",
@@ -11252,12 +11254,9 @@
       "excerpt": "Zach Witkoff, CEO of Trump-linked World Liberty Financial, said conflict-of-interest concerns related to the Trump family are misplaced.",
       "publishedAt": "2026-08-25T14:27:42.000Z",
       "category": "stocks",
-      "subcategory": "us",
       "source": "CNBC Top Stories",
-      "tier": "T2",
-      "filterBucket": "daily",
-      "filterDimensions": [],
-      "fetchedToday": true
+      "fetchedToday": true,
+      "subcategory": "us"
     },
     {
       "sourceId": "investing-news",
@@ -11266,12 +11265,9 @@
       "excerpt": "",
       "publishedAt": "2026-08-25T14:38:46.000Z",
       "category": "stocks",
-      "subcategory": "us",
       "source": "Investing.com News",
-      "tier": "T2",
-      "filterBucket": "daily",
-      "filterDimensions": [],
-      "fetchedToday": true
+      "fetchedToday": true,
+      "subcategory": "us"
     },
     {
       "sourceId": "investing-news",
@@ -11280,12 +11276,9 @@
       "excerpt": "",
       "publishedAt": "2026-08-25T14:36:31.000Z",
       "category": "stocks",
-      "subcategory": "us",
       "source": "Investing.com News",
-      "tier": "T2",
-      "filterBucket": "daily",
-      "filterDimensions": [],
-      "fetchedToday": true
+      "fetchedToday": true,
+      "subcategory": "us"
     },
     {
       "sourceId": "investing-news",
@@ -11294,12 +11287,9 @@
       "excerpt": "",
       "publishedAt": "2026-08-25T14:36:29.000Z",
       "category": "stocks",
-      "subcategory": "us",
       "source": "Investing.com News",
-      "tier": "T2",
-      "filterBucket": "daily",
-      "filterDimensions": [],
-      "fetchedToday": true
+      "fetchedToday": true,
+      "subcategory": "us"
     },
     {
       "sourceId": "investing-news",
@@ -11308,12 +11298,9 @@
       "excerpt": "",
       "publishedAt": "2026-08-25T14:35:01.000Z",
       "category": "stocks",
-      "subcategory": "us",
       "source": "Investing.com News",
-      "tier": "T2",
-      "filterBucket": "daily",
-      "filterDimensions": [],
-      "fetchedToday": true
+      "fetchedToday": true,
+      "subcategory": "us"
     },
     {
       "sourceId": "investing-news",
@@ -11322,12 +11309,9 @@
       "excerpt": "",
       "publishedAt": "2026-08-25T14:35:00.000Z",
       "category": "stocks",
-      "subcategory": "us",
       "source": "Investing.com News",
-      "tier": "T2",
-      "filterBucket": "daily",
-      "filterDimensions": [],
-      "fetchedToday": true
+      "fetchedToday": true,
+      "subcategory": "us"
     },
     {
       "sourceId": "investing-news",
@@ -11336,26 +11320,18 @@
       "excerpt": "",
       "publishedAt": "2026-08-25T14:33:55.000Z",
       "category": "stocks",
-      "subcategory": "us",
       "source": "Investing.com News",
-      "tier": "T2",
-      "filterBucket": "daily",
-      "filterDimensions": [],
-      "fetchedToday": true
+      "fetchedToday": true,
+      "subcategory": "us"
     },
     {
       "sourceId": "sina-money",
       "title": "美国7月新屋销售降至6个月低点，高房贷利率持续压制需求",
       "url": "https://finance.sina.com.cn/stock/bxjj/2026-08-25/doc-inipqaan2273800.shtml",
       "excerpt": "【财富管理】美国7月新屋销售降至6个月低点，高房贷利率持续压制需求",
-      "category": "gz",
       "publishedAt": "2026-08-25T00:00:00.000Z",
+      "category": "gz",
       "source": "新浪财经·理财保险",
-      "tier": "T2",
-      "filterBucket": "daily",
-      "filterDimensions": [
-        "personal_credit"
-      ],
       "fetchedToday": true,
       "subcategory": "cn-finance"
     },
@@ -11364,149 +11340,108 @@
       "title": "【西街观察】美债跌倒，黄金“吃饱”",
       "url": "https://finance.sina.com.cn/jjxw/2026-08-25/doc-inipqaan2274543.shtml",
       "excerpt": "【财富管理】【西街观察】美债跌倒，黄金“吃饱”",
-      "category": "gz",
       "publishedAt": "2026-08-25T00:00:00.000Z",
+      "category": "gz",
       "source": "新浪财经·理财保险",
-      "tier": "T2",
-      "filterBucket": "daily",
-      "filterDimensions": [
-        "wealth_mgmt"
-      ],
       "fetchedToday": true,
       "subcategory": "cn-finance"
     },
     {
       "sourceId": "sina-a-stock",
-      "source": "新浪财经·A股",
       "title": "千亿营收分红25亿！MDI风口造就巨头万华化学百",
       "url": "https://finance.sina.com.cn/jjxw/2026-08-25/doc-inipqaah1470126.shtml",
       "excerpt": "",
       "publishedAt": "2026-08-25T00:00:00.000Z",
       "category": "stocks",
-      "summary": "",
-      "tier": "T2",
-      "filterBucket": "daily",
-      "filterDimensions": [],
+      "source": "新浪财经·A股",
       "fetchedToday": true,
       "subcategory": "a-share"
     },
     {
       "sourceId": "sina-a-stock",
-      "source": "新浪财经·A股",
       "title": "人福医药：半年报归母与扣非净利双增超14% 盈",
       "url": "https://finance.sina.com.cn/roll/2026-08-25/doc-inipqaah1469691.shtml",
       "excerpt": "",
       "publishedAt": "2026-08-25T00:00:00.000Z",
       "category": "stocks",
-      "summary": "",
-      "tier": "T2",
-      "filterBucket": "daily",
-      "filterDimensions": [],
+      "source": "新浪财经·A股",
       "fetchedToday": true,
       "subcategory": "a-share"
     },
     {
       "sourceId": "stcn",
-      "source": "证券时报",
       "title": "汉朔科技：业绩稳健增长 AI布局持续深化",
       "url": "https://www.stcn.com/article/detail/4120726.html",
       "excerpt": "",
       "publishedAt": "2026-08-25T22:40:00.000Z",
       "category": "finance",
-      "summary": "",
-      "tier": "T2",
-      "filterBucket": "daily",
-      "filterDimensions": [],
+      "source": "证券时报",
       "fetchedToday": true,
       "subcategory": "cn-finance"
     },
     {
       "sourceId": "stcn",
-      "source": "证券时报",
       "title": "“酱油第一股”重回增长轨道 ST加加上半年业绩大增397.40%",
       "url": "https://www.stcn.com/article/detail/4120988.html",
       "excerpt": "",
       "publishedAt": "2026-08-25T22:36:00.000Z",
       "category": "finance",
-      "summary": "",
-      "tier": "T2",
-      "filterBucket": "daily",
-      "filterDimensions": [],
+      "source": "证券时报",
       "fetchedToday": true,
       "subcategory": "cn-finance"
     },
     {
       "sourceId": "stcn",
-      "source": "证券时报",
       "title": "联芸科技上半年净利增长825.54% 存储主控芯片出货量稳步增长",
       "url": "https://www.stcn.com/article/detail/4120983.html",
       "excerpt": "",
       "publishedAt": "2026-08-25T22:11:00.000Z",
       "category": "finance",
-      "summary": "",
-      "tier": "T2",
-      "filterBucket": "daily",
-      "filterDimensions": [],
+      "source": "证券时报",
       "fetchedToday": true,
       "subcategory": "cn-finance"
     },
     {
       "sourceId": "stcn",
-      "source": "证券时报",
       "title": "欢乐家上半年净利同比增长25.22% 经营现金流改善",
       "url": "https://www.stcn.com/article/detail/4120976.html",
       "excerpt": "",
       "publishedAt": "2026-08-25T22:05:00.000Z",
       "category": "finance",
-      "summary": "",
-      "tier": "T2",
-      "filterBucket": "daily",
-      "filterDimensions": [],
+      "source": "证券时报",
       "fetchedToday": true,
       "subcategory": "cn-finance"
     },
     {
       "sourceId": "dayoo-gz",
-      "source": "广州日报·大洋网",
       "title": "削峰填谷、智能巡检！广州两公交站场开启数智供电新模式",
       "url": "https://news.dayoo.com/guangzhou/202608/25/139995_54995077.htm",
       "excerpt": "",
       "publishedAt": "2026-08-25T00:00:00.000Z",
       "category": "gz",
-      "summary": "",
-      "tier": "T2",
-      "filterBucket": "daily",
-      "filterDimensions": [],
+      "source": "广州日报·大洋网",
       "fetchedToday": true,
       "subcategory": "gz-media"
     },
     {
       "sourceId": "dayoo-gz",
-      "source": "广州日报·大洋网",
       "title": "越秀区上线全国首个政企共建公益海外商标注册实务规则查询平台",
       "url": "https://news.dayoo.com/guangzhou/202608/25/139995_54995076.htm",
       "excerpt": "",
       "publishedAt": "2026-08-25T00:00:00.000Z",
       "category": "gz",
-      "summary": "",
-      "tier": "T2",
-      "filterBucket": "daily",
-      "filterDimensions": [],
+      "source": "广州日报·大洋网",
       "fetchedToday": true,
       "subcategory": "gz-media"
     },
     {
       "sourceId": "dayoo-gz",
-      "source": "广州日报·大洋网",
       "title": "广州多举措盘活“沉睡”停车资源，官方解读来了",
       "url": "https://news.dayoo.com/guangzhou/202608/25/139995_54995073.htm",
       "excerpt": "",
       "publishedAt": "2026-08-25T00:00:00.000Z",
       "category": "gz",
-      "summary": "",
-      "tier": "T2",
-      "filterBucket": "daily",
-      "filterDimensions": [],
+      "source": "广州日报·大洋网",
       "fetchedToday": true,
       "subcategory": "gz-media"
     }
