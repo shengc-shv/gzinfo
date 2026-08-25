@@ -844,6 +844,44 @@ async function main() {
   saveAiAssets(aiAssets);
   console.log(`[daily] AI 资产账本已更新: ${Object.keys(aiAssets).length} 键`);
 
+  // —— 展示层限额（2026-08-25 用户指令：行长每天最多看 5 分钟，几百条无意义）——
+  // ① sections 每源 ≤10 条（含滚动合并的历史条目，修复"新浪财经·A股 25 条"）；
+  // ② 每板块总量 ≤ N（gz ≤15 / biz ≤30 / policy ≤30）；
+  // ③ 股市新闻面板每市场 ≤5（三张解读卡已有板块总结，下面不堆几十条）。
+  // 展示窗口仍为 2 天（buildRolling FETCH_WINDOW_DAYS=2），此处只控"量"。
+  {
+    const capSrc = (items: ReportItem[], perSrc: number, maxTotal: number): ReportItem[] => {
+      const bySrc = new Map<string, ReportItem[]>();
+      for (const it of items) {
+        const s = it.source || "?";
+        if (!bySrc.has(s)) bySrc.set(s, []);
+        bySrc.get(s)!.push(it);
+      }
+      const capped: ReportItem[] = [];
+      for (const list of bySrc.values()) capped.push(...list.slice(0, perSrc));
+      return capped.slice(0, maxTotal);
+    };
+    const sec = mergedReport.sections as unknown as Record<string, ReportItem[]>;
+    sec.gz_local = capSrc(sec.gz_local ?? [], 10, 15);
+    sec.biz_insight = capSrc(sec.biz_insight ?? [], 10, 30);
+    sec.policy_market = capSrc(sec.policy_market ?? [], 10, 30);
+    // 股市新闻面板：每市场 ≤5
+    if (Array.isArray(mergedReport.stock_news)) {
+      const byMkt = new Map<string, typeof mergedReport.stock_news>();
+      for (const n of mergedReport.stock_news) {
+        const m = n.market || "?";
+        if (!byMkt.has(m)) byMkt.set(m, []);
+        byMkt.get(m)!.push(n);
+      }
+      const cappedNews: typeof mergedReport.stock_news = [];
+      for (const list of byMkt.values()) cappedNews.push(...list.slice(0, 5));
+      mergedReport.stock_news = cappedNews;
+    }
+    console.log(
+      `[daily] 📉 展示限额: gz ${sec.gz_local.length} / biz ${sec.biz_insight.length} / policy ${sec.policy_market.length} / stock_news ${mergedReport.stock_news?.length ?? 0}`,
+    );
+  }
+
   // —— M2-⑤ 存储合并（去双写，2026-08-19 用户确认未上线）——
   // data/history/reports/ 是唯一报告存储；daily_reports/（gh-pages 发布目录）
   // 由 build-site.mjs 在构建时从唯一存储同步，daily.ts 不再写旧目录。
