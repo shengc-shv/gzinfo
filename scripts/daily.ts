@@ -320,6 +320,10 @@ async function main() {
   const date = todayKey();
   console.log(`[daily] ${date} — fetching sources…\n`);
   let articles = await fetchAll();
+  // 保留 fetchAll 原始快照（未被后续 2 天窗口过滤），供「股市解读」美股输入使用：
+  // 美股复盘要取「抓取日当日凌晨」的美股收盘（恰为上一美股交易日，北京时间周末/周一距抓取日 3 个日历日），
+  // 若用已被 FETCH/DISPLAY_WINDOW_DAYS=2 过滤后的 articles，周一跑会误删正确的周五美股复盘。
+  const rawArticles = articles;
   console.log(`\n[daily] total articles: ${articles.length}`);
 
   // —— 归一化（边界②）：采集产物汇合 + URL 去重 + region 分流（gd-→gz- 前缀改写）——
@@ -681,9 +685,12 @@ async function main() {
       url: it.url || "",
       source: it.source || "",
     });
-    const usItems: StockItem[] = articles
-      .filter((a) => a.category === "stocks" && a.subcategory === "us")
-      .map((a) => toItem(a));
+    // 美股：用 fetchAll 原始快照（未受全局 2 天窗口过滤），本地 4 天窗口兜底防陈旧。
+    // 保证周一/节后首跑也能取到「上一美股交易日」的收盘复盘（北京时间抓取日凌晨发布）。
+    const usItems: StockItem[] = filterByWindow(
+      rawArticles.filter((a) => a.category === "stocks" && a.subcategory === "us"),
+      4,
+    ).map((a) => toItem(a));
     const aShareItems: StockItem[] = crawled.stocks
       .filter((a) => a.subcategory === "a-share")
       .map((a) => toItem(a));

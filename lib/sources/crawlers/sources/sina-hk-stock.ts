@@ -51,8 +51,10 @@ function validDate(raw: string): string {
 }
 
 export class SinaHkStockCrawler extends BaseCrawler {
-  /** 只保留最近 N 天（与项目 stocks 2 天窗口一致，避免陈旧项泄漏） */
-  windowDays = 2;
+  /** 只保留最近 N 天（复盘卡要取「抓取日-1」港股收盘数据）。
+   *  用 3 天而非 2 天：CI 多在周一/节后首跑，上一港股交易日是周五（距抓取日 3 个日历日），
+   *  2 天窗口会误删正确的周五数据；3 天扛住周末缺口，多余旧文由复盘 LLM 按日期取最新忽略。 */
+  windowDays = 3;
   /** 单次最多保留条数 */
   maxItems = 40;
 

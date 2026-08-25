@@ -27,24 +27,26 @@ export interface AudioMeta {
   backend?: "tencent" | "piper";
 }
 
-/** 各章节口播字数上限（2026-08-24 用户拍板：口播要"事件+应对建议"，总时长约 2 分钟 → 总字数 ~600）。 */
+/** 各章节口播字数上限（2026-08-25 用户拍板：股市解读入口播 + 总时长 ≤3 分钟 → 全稿 ≤~900 字）。
+ *  重平衡：必读/洞察适度压缩腾出股市解读段（正文上限合计 830 + 过场语 ~65 ≈ 895 字 ≈ 2.9 分钟）。 */
 export const AUDIO_SPEAK_LIMITS = {
   hero: 80,
-  must_read: 320,
-  insights: 280,
-  ipo: 60,
+  must_read: 280,
+  insights: 200,
+  ipo: 50,
   stock: 220,
 } as const;
 
 const OPENER = "早上好，以下是今日简报。";
 const CLOSER = "详细内容请查看下方图文。";
 const IPO_TRANSITION = "另外，关注一条广东IPO企业动态。";
-const STOCK_TRANSITION = "最后是昨日股市解读。";
+/** 股市解读段：语气与「今日必读」同风格（客观、精炼、陈述式），过场语与必读/洞察并列。 */
+const STOCK_TRANSITION = "股市解读。";
 /** 中文 TTS 语速估算（字/秒）：腾讯 Speed=1（1.2 倍）实测约 5.3 字/秒，取 5.2 便于徽标时长贴近实际（2026-08-24 校准）。 */
 const CHARS_PER_SEC = 5.2;
 
 export interface AudioBuildResult {
-  /** 拼装后的完整口播稿（纯文本，≤630 字） */
+  /** 拼装后的完整口播稿（纯文本，≤~900 字 ≈ 3 分钟） */
   script: string;
   /** 各语块（用于调试 / 复用 / audio_parts.json） */
   parts: Record<string, string>;
@@ -187,7 +189,10 @@ export async function assembleAudioScript(
     const segs: string[] = [];
     const pushSeg = (label: string, card: { spoken?: string }) => {
       const s = sanitize(card.spoken ?? "");
-      if (s) segs.push(`${label}：${truncateAtSentence(s, Math.floor(AUDIO_SPEAK_LIMITS.stock / 3))}`);
+      if (!s) return;
+      // spoken 开头已含市场名（如"美股三大指数…"）时不重复加标签，避免"美股：美股"
+      const prefixed = s.startsWith(label) ? s : `${label}：${s}`;
+      segs.push(truncateAtSentence(prefixed, Math.floor(AUDIO_SPEAK_LIMITS.stock / 3)));
     };
     pushSeg("美股", stockRecap.us);
     pushSeg("A股", stockRecap.aShare);
@@ -238,11 +243,11 @@ export async function assembleAudioScript(
   const script = parts.join("\n");
   const durationSec = estimateDurationSec(script.length);
 
-  if (script.length > 750) {
-    console.warn(`::warning:: 口播稿 ${script.length} 字，超出 700 字目标`);
+  if (script.length > 900) {
+    console.warn(`::warning:: 口播稿 ${script.length} 字，超出 900 字目标（约 3 分钟上限）`);
   }
-  if (durationSec < 60 || durationSec > 150) {
-    console.warn(`::warning:: 估算音频时长 ${durationSec}s 超出 75~150s 目标窗口，请检查口播稿字数`);
+  if (durationSec < 60 || durationSec > 180) {
+    console.warn(`::warning:: 估算音频时长 ${durationSec}s 超出 60~180s 目标窗口（3 分钟上限），请检查口播稿字数`);
   }
 
   // 落盘：与报告同目录（build-site 会整体拷贝到发布目录）
@@ -265,7 +270,7 @@ export async function assembleAudioScript(
   }
 
   console.log(
-    `✅ 口播稿拼装完毕：${script.length} 字，${found}/3 章节，广东IPO=${ipo ? "有" : "无"}，估算时长≈${durationSec}s`,
+    `✅ 口播稿拼装完毕：${script.length} 字，${parts.length - 2} 个内容段（定调/必读/洞察/股市解读/IPO），广东IPO=${ipo ? "有" : "无"}，估算时长≈${durationSec}s`,
   );
   return { script, parts: partMap, durationSec };
 }

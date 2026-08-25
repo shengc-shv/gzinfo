@@ -12,6 +12,12 @@ const LINK_RE =
   /<a[^>]*href="(https:\/\/finance\.eastmoney\.com\/a\/\d{18}\.html)"[^>]*>([^<]{8,80})<\/a>/g;
 
 export class EastMoneyStockCrawler extends BaseCrawler {
+  /**
+   * 日期窗口（天）：A股复盘卡要取「抓取日-1」最近交易日收盘数据。
+   * 用 3 天而非 2 天：CI 多在周一/节后首跑，上一交易日是周五（距抓取日 3 个日历日），
+   * 2 天窗口会把正确的周五数据误删；3 天可扛住周末/单休缺口，且多余旧文由复盘 LLM 按日期取最新忽略。
+   */
+  windowDays = 3;
   constructor() {
     super({
       name: "东方财富·A股股市新闻",
@@ -47,6 +53,13 @@ export class EastMoneyStockCrawler extends BaseCrawler {
       let publishedAt: string | undefined;
       if (d) {
         publishedAt = `${d[1].slice(0, 4)}-${d[1].slice(4, 6)}-${d[1].slice(6, 8)}`;
+      }
+      // 窗口过滤：无日期者保留（宁可保留），有日期且早于 cutoff 跳过，避免陈旧项泄漏
+      if (publishedAt) {
+        const cutoff = new Date();
+        cutoff.setDate(cutoff.getDate() - this.windowDays);
+        const pd = new Date(publishedAt);
+        if (!Number.isNaN(pd.getTime()) && pd < cutoff) continue;
       }
       articles.push({
         sourceId: "eastmoney-stock",
