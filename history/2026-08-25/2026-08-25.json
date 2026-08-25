@@ -1669,93 +1669,146 @@
   },
   "stock_news": [
     {
-      "url": "https://finance.eastmoney.com/a/202608253852581455.html",
-      "title_cn": "集体跳水！一宗大额交易突然刷屏！黄金白银陡增变数",
+      "url": "https://finance.eastmoney.com/a/202608253851925411.html",
+      "title_cn": "中信证券：保险重塑行业经营逻辑大公司持续巩固优势地位",
       "source": "东方财富",
       "source_type": "media",
       "date": "08/25",
-      "summary": "集体跳水！一宗大额交易突然刷屏！黄金白银陡增变数",
+      "summary": "中信证券研报认为保险业经营逻辑正在重塑，大型险企有望持续巩固竞争优势。",
       "importance": 2,
       "rank": 0,
-      "tags": [],
+      "tags": [
+        "保险",
+        "研报"
+      ],
       "locale": "national",
       "market": "a-share"
     },
     {
-      "url": "https://finance.eastmoney.com/a/202608243851381467.html",
-      "title_cn": "8月24日晚间沪深上市公司重大事项公告最新快递",
-      "source": "东方财富",
-      "source_type": "media",
-      "date": "08/24",
-      "summary": "8月24日晚间沪深上市公司重大事项公告最新快递",
-      "importance": 2,
-      "rank": 0,
-      "tags": [],
-      "locale": "national",
-      "market": "a-share"
-    },
-    {
-      "url": "https://finance.eastmoney.com/a/202608243851550618.html",
-      "title_cn": "葛卫东投资新动向曝光！整体呈现“重仓坚守、分化操作”特征",
-      "source": "东方财富",
-      "source_type": "media",
-      "date": "08/24",
-      "summary": "葛卫东投资新动向曝光！整体呈现“重仓坚守、分化操作”特征",
-      "importance": 2,
-      "rank": 0,
-      "tags": [],
-      "locale": "national",
-      "market": "a-share"
-    },
-    {
-      "url": "https://finance.eastmoney.com/a/202608243851263587.html",
-      "title_cn": "交易所收紧IPO？求证：要求券商从源头提升申报质量",
-      "source": "东方财富",
-      "source_type": "media",
-      "date": "08/24",
-      "summary": "交易所收紧IPO？求证：要求券商从源头提升申报质量",
-      "importance": 2,
-      "rank": 0,
-      "tags": [],
-      "locale": "national",
-      "market": "a-share"
-    },
-    {
-      "url": "https://finance.eastmoney.com/a/202608243851083568.html",
-      "title_cn": "外交部回应美方威胁对伊朗贸易伙伴实施二级制裁",
-      "source": "东方财富",
-      "source_type": "media",
-      "date": "08/24",
-      "summary": "外交部回应美方威胁对伊朗贸易伙伴实施二级制裁",
-      "importance": 2,
-      "rank": 0,
-      "tags": [],
-      "locale": "national",
-      "market": "a-share"
-    },
-    {
-      "url": "https://finance.eastmoney.com/a/202608243851088192.html",
-      "title_cn": "亚洲市场全线跳水大跌！背后发生了什么？",
-      "source": "东方财富",
-      "source_type": "media",
-      "date": "08/24",
-      "summary": "亚洲市场全线跳水大跌！背后发生了什么？",
-      "importance": 2,
-      "rank": 0,
-      "tags": [],
-      "locale": "national",
-      "market": "a-share"
-    },
-    {
-      "url": "https://finance.eastmoney.com/a/202608253852349815.html",
-      "title_cn": "工信部定调脑机接口标准化发展路线图多只概念股业绩有望倍增(名单)",
+      "url": "https://finance.eastmoney.com/a/202608253851924330.html",
+      "title_cn": "中信证券：当前美股半导体设备板块配置价值进一步凸显",
       "source": "东方财富",
       "source_type": "media",
       "date": "08/25",
-      "summary": "工信部定调脑机接口标准化发展路线图多只概念股业绩有望倍增(名单)",
+      "summary": "中信证券指出当前美股半导体设备板块配置价值凸显，引发市场关注。",
       "importance": 2,
       "rank": 0,
-      "tags": [],
+      "tags": [
+        "半导体",
+        "研报"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202608253851924249.html",
+      "title_cn": "中信证券：银行中报信号积极绝对收益空间料将延续",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "08/25",
+      "summary": "中信证券研报称银行中报信号积极，绝对收益空间料将延续。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "银行",
+        "中报"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202608253851887688.html",
+      "title_cn": "中金：继续看好AI算力成长主线建议关注两大机会",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "08/25",
+      "summary": "中金公司继续看好AI算力成长主线，建议关注相关投资机会。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "AI",
+        "算力"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202608253851863762.html",
+      "title_cn": "中信建投：AI应用与云业务共振继续看好算力产业链",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "08/25",
+      "summary": "中信建投认为AI应用与云业务形成共振，继续看好算力产业链。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "AI",
+        "云计算"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202608253851713861.html",
+      "title_cn": "连续4天人民日报刊发钟才文署名文章",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "08/25",
+      "summary": "人民日报连续4天刊发钟才文署名文章，宏观政策信号引发市场关注。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "政策",
+        "人民日报"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202608253851771313.html",
+      "title_cn": "美国重大宣布：对伊朗实施“经济孤立”新措施！伊朗强硬回应",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "08/25",
+      "summary": "美国宣布对伊朗实施经济孤立新措施，伊朗强硬回应，地缘局势升温。",
+      "importance": 3,
+      "rank": 0,
+      "tags": [
+        "地缘",
+        "制裁"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202608253851875349.html",
+      "title_cn": "央企6G推进会召开产业链加速落地在即多股获资金关注(名单)",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "08/25",
+      "summary": "央企6G推进会召开，产业链加速落地在即，多股获资金关注。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "6G",
+        "央企"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202608253851688934.html",
+      "title_cn": "全球市场：美股三大指数涨跌不一存储、光通信板块下挫国际金价延续涨势",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "08/25",
+      "summary": "隔夜美股三大指数涨跌不一，存储、光通信板块下挫，国际金价延续涨势。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "美股",
+        "黄金"
+      ],
       "locale": "national",
       "market": "a-share"
     },
@@ -1765,220 +1818,429 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/25",
-      "summary": "美加贸易战进一步升级！特朗普：明年将加拿大汽车、钢铁等品类关税提高至50%",
-      "importance": 2,
+      "summary": "美加贸易战进一步升级，特朗普称明年将加拿大汽车、钢铁等品类关税提高至50%。",
+      "importance": 3,
       "rank": 0,
-      "tags": [],
+      "tags": [
+        "贸易战",
+        "关税"
+      ],
       "locale": "national",
       "market": "a-share"
     },
     {
-      "url": "https://finance.eastmoney.com/a/202608243851515350.html",
-      "title_cn": "国产GPU四小龙之一燧原科技申购时间定了",
-      "source": "东方财富",
+      "url": "https://www.cls.cn/detail/2461879",
+      "title_cn": "全球央行年会本周召开！贝森特救不动的美债 沃什能救吗？",
+      "source": "财联社",
       "source_type": "media",
       "date": "08/24",
-      "summary": "国产GPU四小龙之一燧原科技申购时间定了",
+      "summary": "美财长贝森特表示加码长债回购尚未开始，暂无意调整债券标售规模。",
       "importance": 2,
       "rank": 0,
-      "tags": [],
+      "tags": [
+        "美债",
+        "财政"
+      ],
       "locale": "national",
       "market": "a-share"
     },
     {
-      "url": "https://finance.eastmoney.com/a/202608243851349959.html",
-      "title_cn": "“国产GPU四小龙”之一燧原科技9月2日申购",
+      "url": "https://finance.eastmoney.com/a/202608253852572287.html",
+      "title_cn": "多重利好共振！旅游酒店集体走强2026业绩高增长个股来了",
       "source": "东方财富",
+      "source_type": "media",
+      "date": "08/25",
+      "summary": "多重利好共振，旅游酒店板块集体走强，市场关注高增长个股。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "旅游",
+        "消费"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.sina.com.cn/stock/t/2026-08-25/doc-inipncma9904991.shtml",
+      "title_cn": "阿里官宣800亿配售全押AI次日，蔡崇信、吴泳铭增持1.2亿港元“护盘”",
+      "source": "新浪财经·港股",
+      "source_type": "media",
+      "date": "08/25",
+      "summary": "阿里官宣800亿港元配售全部押注AI，次日蔡崇信、吴泳铭增持1.2亿港元护盘。",
+      "importance": 3,
+      "rank": 0,
+      "tags": [
+        "阿里",
+        "配售",
+        "AI"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://finance.sina.com.cn/stock/hkstock/2026-08-25/doc-inipnuhy5591365.shtml",
+      "title_cn": "狂烧100亿美元！阿里利润暴跌75%却闪电融资800亿港元，港股最大抽血豪赌AI",
+      "source": "新浪财经·港股",
+      "source_type": "media",
+      "date": "08/25",
+      "summary": "阿里利润暴跌75%却闪电融资800亿港元，被市场视为港股最大规模AI豪赌。",
+      "importance": 3,
+      "rank": 0,
+      "tags": [
+        "阿里",
+        "财报",
+        "AI"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://finance.sina.com.cn/stock/hkstock/ggscyd/2026-08-25/doc-inipnuhy5576595.shtml",
+      "title_cn": "乐动机器人获纳入恒生综合指数成份股",
+      "source": "新浪财经·港股",
+      "source_type": "media",
+      "date": "08/25",
+      "summary": "乐动机器人获纳入恒生综合指数成份股。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "恒指",
+        "机器人"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://finance.sina.com.cn/stock/hkstock/marketalerts/2026-08-25/doc-inipnuhu9651555.shtml",
+      "title_cn": "麦科医药-B(02335)存仓市值总计5.21亿港元 股东将1773.41万股股票存入Merrill Lynch Far East",
+      "source": "新浪财经·港股",
+      "source_type": "media",
+      "date": "08/25",
+      "summary": "麦科医药-B股东将1773.41万股存入美林，存仓市值总计5.21亿港元。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "医药",
+        "存仓"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://finance.sina.com.cn/stock/hkstock/marketalerts/2026-08-25/doc-inipnuhu9646814.shtml",
+      "title_cn": "金融街物业(01502)转仓市值总计2068.37万港元 占比10.07% 从花旗银行转出1035.70万股",
+      "source": "新浪财经·港股",
+      "source_type": "media",
+      "date": "08/25",
+      "summary": "金融街物业从花旗银行转出1035.7万股，转仓市值2068.37万港元、占比10.07%。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "物业",
+        "转仓"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://finance.sina.com.cn/stock/hkstock/marketalerts/2026-08-25/doc-inipnpyw9769498.shtml",
+      "title_cn": "智通港股沽空统计|8月25日",
+      "source": "新浪财经·港股",
+      "source_type": "media",
+      "date": "08/25",
+      "summary": "智通财经发布8月25日港股沽空统计。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "沽空"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://finance.sina.com.cn/stock/hkstock/hkgg/2026-08-24/doc-inipmhfq1960420.shtml",
+      "title_cn": "高盛：恒指季检 被动资金净流入最多六股料为携程集团-S(09961)等",
+      "source": "新浪财经·港股",
       "source_type": "media",
       "date": "08/24",
-      "summary": "“国产GPU四小龙”之一燧原科技9月2日申购",
+      "summary": "高盛预计恒指季检被动资金净流入最多六股，携程集团-S等获关注。",
       "importance": 2,
       "rank": 0,
-      "tags": [],
-      "locale": "national",
-      "market": "a-share"
-    },
-    {
-      "url": "https://finance.eastmoney.com/a/202608253852583279.html",
-      "title_cn": "大摩：油价飙升是美股头号风险恐进一步推高美债收益率",
-      "source": "东方财富",
-      "source_type": "media",
-      "date": "08/25",
-      "summary": "大摩：油价飙升是美股头号风险恐进一步推高美债收益率",
-      "importance": 2,
-      "rank": 0,
-      "tags": [],
-      "locale": "national",
-      "market": "a-share"
-    },
-    {
-      "url": "https://finance.eastmoney.com/a/202608253852648651.html",
-      "title_cn": "高盛上调预测：2030年中国芯片业资本开支将达820亿美元",
-      "source": "东方财富",
-      "source_type": "media",
-      "date": "08/25",
-      "summary": "高盛上调预测：2030年中国芯片业资本开支将达820亿美元",
-      "importance": 2,
-      "rank": 0,
-      "tags": [],
-      "locale": "national",
-      "market": "a-share"
-    },
-    {
-      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0825/2026082500265.pdf",
-      "title_cn": "Financial Statements/ESG Information - [Interim/Half-Year Report]",
-      "source": "港交所披露易",
-      "source_type": "media",
-      "date": "08/25",
-      "summary": "Financial Statements/ESG Information - [Interim/Half-Year Report]",
-      "importance": 2,
-      "rank": 0,
-      "tags": [],
+      "tags": [
+        "恒指",
+        "高盛"
+      ],
       "locale": "national",
       "market": "hk"
     },
     {
-      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0825/2026082500249.pdf",
-      "title_cn": "Announcements and Notices - [Inside Information]",
-      "source": "港交所披露易",
+      "url": "https://finance.sina.com.cn/stock/hkstock/marketalerts/2026-08-25/doc-inipnpze2457594.shtml",
+      "title_cn": "英恒科技(01760)转仓市值9424.63万港元 占比6.99% 从法国巴黎银行转出7502万股",
+      "source": "新浪财经·港股",
       "source_type": "media",
       "date": "08/25",
-      "summary": "Announcements and Notices - [Inside Information]",
-      "importance": 2,
+      "summary": "英恒科技从法国巴黎银行转出7502万股，转仓市值9424.63万港元、占比6.99%。",
+      "importance": 1,
       "rank": 0,
-      "tags": [],
+      "tags": [
+        "转仓",
+        "汽车电子"
+      ],
       "locale": "national",
       "market": "hk"
     },
     {
-      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0825/2026082500241.pdf",
-      "title_cn": "Announcements and Notices - [Profit Warning / Inside Information]",
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0825/2026082500111.pdf",
+      "title_cn": "Announcements and Notices - [Overseas Regulatory Announcement - Other]",
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/25",
-      "summary": "Announcements and Notices - [Profit Warning / Inside Information]",
-      "importance": 2,
+      "summary": "港交所披露某上市公司海外监管公告。",
+      "importance": 1,
       "rank": 0,
-      "tags": [],
+      "tags": [
+        "公告"
+      ],
       "locale": "national",
       "market": "hk"
     },
     {
-      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0825/2026082500239.pdf",
-      "title_cn": "Announcements and Notices - [Dividend or Distribution (Announcement Form)]",
-      "source": "港交所披露易",
-      "source_type": "media",
-      "date": "08/25",
-      "summary": "Announcements and Notices - [Dividend or Distribution (Announcement Form)]",
-      "importance": 2,
-      "rank": 0,
-      "tags": [],
-      "locale": "national",
-      "market": "hk"
-    },
-    {
-      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0825/2026082500237.pdf",
-      "title_cn": "Announcements and Notices - [Interim Results]",
-      "source": "港交所披露易",
-      "source_type": "media",
-      "date": "08/25",
-      "summary": "Announcements and Notices - [Interim Results]",
-      "importance": 2,
-      "rank": 0,
-      "tags": [],
-      "locale": "national",
-      "market": "hk"
-    },
-    {
-      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0825/2026082500235.pdf",
-      "title_cn": "Announcements and Notices - [Interim Results / Dividend or Distribution / Closure of Books or Change of Book Closure Period]",
-      "source": "港交所披露易",
-      "source_type": "media",
-      "date": "08/25",
-      "summary": "Announcements and Notices - [Interim Results / Dividend or Distribution / Closure of Books",
-      "importance": 2,
-      "rank": 0,
-      "tags": [],
-      "locale": "national",
-      "market": "hk"
-    },
-    {
-      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0825/2026082500233.pdf",
-      "title_cn": "Next Day Disclosure Returns - [Share Buyback]",
-      "source": "港交所披露易",
-      "source_type": "media",
-      "date": "08/25",
-      "summary": "Next Day Disclosure Returns - [Share Buyback]",
-      "importance": 2,
-      "rank": 0,
-      "tags": [],
-      "locale": "national",
-      "market": "hk"
-    },
-    {
-      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0825/2026082500231.pdf",
-      "title_cn": "Announcements and Notices - [Interim Results]",
-      "source": "港交所披露易",
-      "source_type": "media",
-      "date": "08/25",
-      "summary": "Announcements and Notices - [Interim Results]",
-      "importance": 2,
-      "rank": 0,
-      "tags": [],
-      "locale": "national",
-      "market": "hk"
-    },
-    {
-      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0825/2026082500229.pdf",
-      "title_cn": "Announcements and Notices - [Interim Results]",
-      "source": "港交所披露易",
-      "source_type": "media",
-      "date": "08/25",
-      "summary": "Announcements and Notices - [Interim Results]",
-      "importance": 2,
-      "rank": 0,
-      "tags": [],
-      "locale": "national",
-      "market": "hk"
-    },
-    {
-      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0825/2026082500221.pdf",
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0825/2026082500063.pdf",
       "title_cn": "Circulars - [Other]",
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/25",
-      "summary": "Circulars - [Other]",
-      "importance": 2,
+      "summary": "港交所披露上市公司通函。",
+      "importance": 1,
       "rank": 0,
-      "tags": [],
+      "tags": [
+        "公告"
+      ],
       "locale": "national",
       "market": "hk"
     },
     {
-      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0825/2026082500219.pdf",
-      "title_cn": "Announcements and Notices - [Interim Results]",
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0825/2026082500065.pdf",
+      "title_cn": "Announcements and Notices - [Inside Information / Other - Business Update / Quarterly Results]",
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/25",
-      "summary": "Announcements and Notices - [Interim Results]",
+      "summary": "港交所披露内幕消息/业务更新及季度业绩公告。",
       "importance": 2,
       "rank": 0,
-      "tags": [],
+      "tags": [
+        "公告",
+        "业绩"
+      ],
       "locale": "national",
       "market": "hk"
     },
     {
-      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0825/2026082500215.pdf",
-      "title_cn": "Announcements and Notices - [Interim Results]",
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0825/2026082500057.pdf",
+      "title_cn": "Announcements and Notices - [Discloseable Transaction]",
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/25",
-      "summary": "Announcements and Notices - [Interim Results]",
+      "summary": "港交所披露须予披露交易公告。",
       "importance": 2,
       "rank": 0,
-      "tags": [],
+      "tags": [
+        "公告",
+        "交易"
+      ],
       "locale": "national",
       "market": "hk"
+    },
+    {
+      "url": "https://www.investing.com/news/company-news/vistry-secures-350m-affordable-housing-grant-from-government-93CH-4874532",
+      "title_cn": "Vistry secures £350m affordable housing grant from government",
+      "source": "Investing.com News",
+      "source_type": "media",
+      "date": "08/25",
+      "summary": "英国建筑商Vistry获政府3.5亿英镑保障房建设补助。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "地产",
+        "英国"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.investing.com/news/stock-market-news/us-treasury-buybacks-a-mistake-costing-credibility-says-druckenmiller-4874531",
+      "title_cn": "US Treasury buybacks a ’mistake’ costing credibility, says Druckenmiller",
+      "source": "Investing.com News",
+      "source_type": "media",
+      "date": "08/25",
+      "summary": "传奇投资人德鲁肯米勒批评美债回购政策，称其损害美国信誉。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "美债",
+        "宏观"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.investing.com/news/stock-market-news/why-is-hanmi-pharm-stock-sliding-today-93CH-4874529",
+      "title_cn": "Why is Hanmi Pharm stock sliding today?",
+      "source": "Investing.com News",
+      "source_type": "media",
+      "date": "08/25",
+      "summary": "韩美药业(美股)股价当日下跌，市场关注其业绩与前景。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "医药"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.investing.com/news/stock-market-news/siemens-energy-hires-goldman-for-steam-turbine-unit-stake-sale-stock-up-premarket-4874527",
+      "title_cn": "Siemens Energy hires Goldman for steam turbine unit stake sale; stock up premarket",
+      "source": "Investing.com News",
+      "source_type": "media",
+      "date": "08/25",
+      "summary": "西门子能源聘请高盛出售汽轮机业务股权，股价受消息提振。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "能源",
+        "并购"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.investing.com/news/stock-market-news/leonardo-maria-del-vecchio-quits-essilux-management-roles-4874524",
+      "title_cn": "Leonardo Maria Del Vecchio quits EssiLux management roles",
+      "source": "Investing.com News",
+      "source_type": "media",
+      "date": "08/25",
+      "summary": "EssiLux集团管理层人事变动，德尔·维奇奥辞任管理职务。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "奢侈品",
+        "人事"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.investing.com/news/stock-market-news/sheins-up-to-18-billion-hong-kong-ipo-order-book-covered-sources-say-4874486",
+      "title_cn": "Shein’s up to $1.8 billion Hong Kong IPO order book covered, sources say",
+      "source": "Investing.com News",
+      "source_type": "media",
+      "date": "08/25",
+      "summary": "消息称Shein港股IPO订单簿已获足额认购，最高融资18亿美元。",
+      "importance": 3,
+      "rank": 0,
+      "tags": [
+        "IPO",
+        "中概股"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.investing.com/news/company-news/80-miles-italian-biodiesel-plant-gets-sustainability-certifications-93CH-4874519",
+      "title_cn": "80 Mile’s Italian biodiesel plant gets sustainability certifications",
+      "source": "Investing.com News",
+      "source_type": "media",
+      "date": "08/25",
+      "summary": "80 Mile旗下意大利生物柴油工厂获可持续认证。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "新能源",
+        "生物燃料"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.investing.com/news/commodities-news/new-sinopec-boss-presses-reset-for-worlds-biggest-oil-refiner-4874518",
+      "title_cn": "New Sinopec boss presses reset for world’s biggest oil refiner",
+      "source": "Investing.com News",
+      "source_type": "media",
+      "date": "08/25",
+      "summary": "中石化新任掌门推动全球最大炼油商战略重置，引发市场关注。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "能源",
+        "中概股"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.investing.com/news/forex-news/asia-fx-dips-as-dollar-rebounds-slightly-iran-sanctions-treasury-yields-in-focus-4874467",
+      "title_cn": "Dollar rebounds slightly with Iran sanctions, Treasury yields in focus",
+      "source": "Investing.com News",
+      "source_type": "media",
+      "date": "08/25",
+      "summary": "美元小幅反弹，市场聚焦伊朗制裁与美债收益率走向。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "汇率",
+        "地缘"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.investing.com/news/company-news/gkn-aerospace-sets-100m-fund-for-california-evacuation-claims-93CH-4874514",
+      "title_cn": "GKN Aerospace sets $100m fund for California evacuation claims",
+      "source": "Investing.com News",
+      "source_type": "media",
+      "date": "08/25",
+      "summary": "GKN Aerospace设立1亿美元基金应对加州撤离相关索赔。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "航空",
+        "法律"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/08/25/us-iran-secondary-sanctions-china-india-uae-hormuz-trade-.html",
+      "title_cn": "Trump targets Iran’s trade lifelines — here are the countries most exposed",
+      "source": "CNBC Top Stories",
+      "source_type": "media",
+      "date": "08/25",
+      "summary": "特朗普将制裁伊朗贸易生命线，多国或受影响。",
+      "importance": 3,
+      "rank": 0,
+      "tags": [
+        "地缘",
+        "制裁"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/08/25/xpeng-shares-robot-valuation-china.html",
+      "title_cn": "Xpeng shares sink as weak delivery forecast overshadows $6.3 billion robot unit valuation",
+      "source": "CNBC Top Stories",
+      "source_type": "media",
+      "date": "08/25",
+      "summary": "小鹏汽车交付指引疲弱，盖过63亿美元融资利好，股价下挫。",
+      "importance": 3,
+      "rank": 0,
+      "tags": [
+        "新能源车",
+        "中概股"
+      ],
+      "locale": "overseas",
+      "market": "us"
     }
   ]
 }

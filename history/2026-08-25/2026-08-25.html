@@ -1081,6 +1081,11 @@
   .src-badge { font-size: 0.66rem; font-weight: 700; border-radius: 4px; padding: 0.06rem 0.35rem; }
   .src-official { color: #b45309; background: rgba(217, 119, 6, 0.14); }
   .src-media { color: #4f46e5; background: rgba(79, 70, 229, 0.12); }
+  /* 股市动态面板：市场徽标（A股/港股/美股，2026-08-25 用户：卡片打标市场） */
+  .mkt-badge { font-size: 0.66rem; font-weight: 700; border-radius: 4px; padding: 0.06rem 0.35rem; }
+  .mkt-a { color: #dc2626; background: rgba(220, 38, 38, 0.12); }
+  .mkt-hk { color: #0d9488; background: rgba(13, 148, 136, 0.12); }
+  .mkt-us { color: #7c3aed; background: rgba(124, 58, 237, 0.12); }
   .brief h3 { margin: 0; font-size: 0.98rem; line-height: 1.5; }
   .brief .sum { margin: 0.35rem 0 0; font-size: 0.92rem; color: var(--fg-soft); line-height: 1.65; }
   .brief .sum b { color: var(--fg); }
@@ -1121,7 +1126,7 @@
     <div class="eyebrow">广州地区 · 零售业务每日资信（个人整理，非本行立场）</div>
     <h1>8月25日 星期二</h1>
     <p class="hero-line">今日定调：六大行贷款贴息细则火速落地，消费贷政策扩围进入执行期，分行须立即优化本地流程抢抓客群。</p>
-    <p class="meta-line">数据截至 15:37 · 去重后资讯 103 条 · 商机 4 条 · <a class="archive" href="../archive.html">← 历史归档</a></p>
+    <p class="meta-line">数据截至 16:04 · 去重后资讯 103 条 · 商机 4 条 · <a class="archive" href="../archive.html">← 历史归档</a></p>
   </header>
 
   <section class="exec-summary">
@@ -1181,7 +1186,7 @@
 
   <!-- 板块导航：单层 tab，移动端横滑不折行 -->
   <nav class="tabs">
-    <button class="tab active" data-target="p-gz" style="--cat:var(--c-gz)">广州本地<span class="n">4</span></button><button class="tab" data-target="p-stock" style="--cat:var(--c-trading)">股市动态<span class="n">24</span></button><button class="tab" data-target="p-biz" style="--cat:var(--c-biz)">业务启示<span class="n">39</span></button><button class="tab" data-target="p-pol" style="--cat:var(--c-pol)">政策与市场<span class="n">57</span></button><button class="tab" data-target="p-ipo" style="--cat:var(--c-ipo)">IPO动态<span class="n">3</span></button>
+    <button class="tab active" data-target="p-gz" style="--cat:var(--c-gz)">广州本地<span class="n">4</span></button><button class="tab" data-target="p-stock" style="--cat:var(--c-trading)">股市动态<span class="n">36</span></button><button class="tab" data-target="p-biz" style="--cat:var(--c-biz)">业务启示<span class="n">39</span></button><button class="tab" data-target="p-pol" style="--cat:var(--c-pol)">政策与市场<span class="n">57</span></button><button class="tab" data-target="p-ipo" style="--cat:var(--c-ipo)">IPO动态<span class="n">3</span></button>
   </nav>
 
   <section class="panel active" id="p-gz">
@@ -1226,149 +1231,221 @@
     <button type="button" class="filter-chip" data-group="market" data-filter="a-share">A股</button><button type="button" class="filter-chip" data-group="market" data-filter="hk">港股</button><button type="button" class="filter-chip" data-group="market" data-filter="us">美股</button>
     <button type="button" class="filter-reset">重置</button>
   </div>
-    <article class="brief" data-source="media" data-tags="" data-market="a-share">
-  <div class="bm"><span class="src-badge src-media">媒体</span><span>东方财富</span><span>08/25</span></div>
-  <h3><a href="https://finance.eastmoney.com/a/202608253852581455.html" target="_blank" rel="noopener noreferrer">集体跳水！一宗大额交易突然刷屏！黄金白银陡增变数</a></h3>
-  <p class="sum">集体跳水！一宗大额交易突然刷屏！黄金白银陡增变数</p>
-  
+    <article class="brief" data-source="media" data-tags="保险 研报" data-market="a-share">
+  <div class="bm"><span class="mkt-badge mkt-a">A股</span><span class="src-badge src-media">媒体</span><span>东方财富</span><span>08/25</span></div>
+  <h3><a href="https://finance.eastmoney.com/a/202608253851925411.html" target="_blank" rel="noopener noreferrer">中信证券：保险重塑行业经营逻辑大公司持续巩固优势地位</a></h3>
+  <p class="sum">中信证券研报认为保险业经营逻辑正在重塑，大型险企有望持续巩固竞争优势。</p>
+  <div class="tags"><span class="tag ">保险</span><span class="tag ">研报</span></div>
 </article>
-<article class="brief" data-source="media" data-tags="" data-market="a-share">
-  <div class="bm"><span class="src-badge src-media">媒体</span><span>东方财富</span><span>08/24</span></div>
-  <h3><a href="https://finance.eastmoney.com/a/202608243851381467.html" target="_blank" rel="noopener noreferrer">8月24日晚间沪深上市公司重大事项公告最新快递</a></h3>
-  <p class="sum">8月24日晚间沪深上市公司重大事项公告最新快递</p>
-  
+<article class="brief" data-source="media" data-tags="半导体 研报" data-market="a-share">
+  <div class="bm"><span class="mkt-badge mkt-a">A股</span><span class="src-badge src-media">媒体</span><span>东方财富</span><span>08/25</span></div>
+  <h3><a href="https://finance.eastmoney.com/a/202608253851924330.html" target="_blank" rel="noopener noreferrer">中信证券：当前美股半导体设备板块配置价值进一步凸显</a></h3>
+  <p class="sum">中信证券指出当前美股半导体设备板块配置价值凸显，引发市场关注。</p>
+  <div class="tags"><span class="tag ">半导体</span><span class="tag ">研报</span></div>
 </article>
-<article class="brief" data-source="media" data-tags="" data-market="a-share">
-  <div class="bm"><span class="src-badge src-media">媒体</span><span>东方财富</span><span>08/24</span></div>
-  <h3><a href="https://finance.eastmoney.com/a/202608243851550618.html" target="_blank" rel="noopener noreferrer">葛卫东投资新动向曝光！整体呈现“重仓坚守、分化操作”特征</a></h3>
-  <p class="sum">葛卫东投资新动向曝光！整体呈现“重仓坚守、分化操作”特征</p>
-  
+<article class="brief" data-source="media" data-tags="银行 中报" data-market="a-share">
+  <div class="bm"><span class="mkt-badge mkt-a">A股</span><span class="src-badge src-media">媒体</span><span>东方财富</span><span>08/25</span></div>
+  <h3><a href="https://finance.eastmoney.com/a/202608253851924249.html" target="_blank" rel="noopener noreferrer">中信证券：银行中报信号积极绝对收益空间料将延续</a></h3>
+  <p class="sum">中信证券研报称银行中报信号积极，绝对收益空间料将延续。</p>
+  <div class="tags"><span class="tag ">银行</span><span class="tag ">中报</span></div>
 </article>
-<article class="brief" data-source="media" data-tags="" data-market="a-share">
-  <div class="bm"><span class="src-badge src-media">媒体</span><span>东方财富</span><span>08/24</span></div>
-  <h3><a href="https://finance.eastmoney.com/a/202608243851263587.html" target="_blank" rel="noopener noreferrer">交易所收紧IPO？求证：要求券商从源头提升申报质量</a></h3>
-  <p class="sum">交易所收紧IPO？求证：要求券商从源头提升申报质量</p>
-  
+<article class="brief" data-source="media" data-tags="AI 算力" data-market="a-share">
+  <div class="bm"><span class="mkt-badge mkt-a">A股</span><span class="src-badge src-media">媒体</span><span>东方财富</span><span>08/25</span></div>
+  <h3><a href="https://finance.eastmoney.com/a/202608253851887688.html" target="_blank" rel="noopener noreferrer">中金：继续看好AI算力成长主线建议关注两大机会</a></h3>
+  <p class="sum">中金公司继续看好AI算力成长主线，建议关注相关投资机会。</p>
+  <div class="tags"><span class="tag ">AI</span><span class="tag ">算力</span></div>
 </article>
-<article class="brief" data-source="media" data-tags="" data-market="a-share">
-  <div class="bm"><span class="src-badge src-media">媒体</span><span>东方财富</span><span>08/24</span></div>
-  <h3><a href="https://finance.eastmoney.com/a/202608243851083568.html" target="_blank" rel="noopener noreferrer">外交部回应美方威胁对伊朗贸易伙伴实施二级制裁</a></h3>
-  <p class="sum">外交部回应美方威胁对伊朗贸易伙伴实施二级制裁</p>
-  
-</article><article class="brief more" data-source="media" data-tags="" data-market="a-share">
-  <div class="bm"><span class="src-badge src-media">媒体</span><span>东方财富</span><span>08/24</span></div>
-  <h3><a href="https://finance.eastmoney.com/a/202608243851088192.html" target="_blank" rel="noopener noreferrer">亚洲市场全线跳水大跌！背后发生了什么？</a></h3>
-  <p class="sum">亚洲市场全线跳水大跌！背后发生了什么？</p>
-  
+<article class="brief" data-source="media" data-tags="AI 云计算" data-market="a-share">
+  <div class="bm"><span class="mkt-badge mkt-a">A股</span><span class="src-badge src-media">媒体</span><span>东方财富</span><span>08/25</span></div>
+  <h3><a href="https://finance.eastmoney.com/a/202608253851863762.html" target="_blank" rel="noopener noreferrer">中信建投：AI应用与云业务共振继续看好算力产业链</a></h3>
+  <p class="sum">中信建投认为AI应用与云业务形成共振，继续看好算力产业链。</p>
+  <div class="tags"><span class="tag ">AI</span><span class="tag ">云计算</span></div>
+</article><article class="brief more" data-source="media" data-tags="政策 人民日报" data-market="a-share">
+  <div class="bm"><span class="mkt-badge mkt-a">A股</span><span class="src-badge src-media">媒体</span><span>东方财富</span><span>08/25</span></div>
+  <h3><a href="https://finance.eastmoney.com/a/202608253851713861.html" target="_blank" rel="noopener noreferrer">连续4天人民日报刊发钟才文署名文章</a></h3>
+  <p class="sum">人民日报连续4天刊发钟才文署名文章，宏观政策信号引发市场关注。</p>
+  <div class="tags"><span class="tag t-policy">政策</span><span class="tag ">人民日报</span></div>
 </article>
-<article class="brief more" data-source="media" data-tags="" data-market="a-share">
-  <div class="bm"><span class="src-badge src-media">媒体</span><span>东方财富</span><span>08/25</span></div>
-  <h3><a href="https://finance.eastmoney.com/a/202608253852349815.html" target="_blank" rel="noopener noreferrer">工信部定调脑机接口标准化发展路线图多只概念股业绩有望倍增(名单)</a></h3>
-  <p class="sum">工信部定调脑机接口标准化发展路线图多只概念股业绩有望倍增(名单)</p>
-  
+<article class="brief more must" data-source="media" data-tags="地缘 制裁" data-market="a-share">
+  <div class="bm"><span class="mkt-badge mkt-a">A股</span><span class="src-badge src-media">媒体</span><span>东方财富</span><span>08/25</span><span class="imp-badge">必知</span></div>
+  <h3><a href="https://finance.eastmoney.com/a/202608253851771313.html" target="_blank" rel="noopener noreferrer">美国重大宣布：对伊朗实施“经济孤立”新措施！伊朗强硬回应</a></h3>
+  <p class="sum">美国宣布对伊朗实施经济孤立新措施，伊朗强硬回应，地缘局势升温。</p>
+  <div class="tags"><span class="tag ">地缘</span><span class="tag ">制裁</span></div>
 </article>
-<article class="brief more" data-source="media" data-tags="" data-market="a-share">
-  <div class="bm"><span class="src-badge src-media">媒体</span><span>东方财富</span><span>08/25</span></div>
+<article class="brief more" data-source="media" data-tags="6G 央企" data-market="a-share">
+  <div class="bm"><span class="mkt-badge mkt-a">A股</span><span class="src-badge src-media">媒体</span><span>东方财富</span><span>08/25</span></div>
+  <h3><a href="https://finance.eastmoney.com/a/202608253851875349.html" target="_blank" rel="noopener noreferrer">央企6G推进会召开产业链加速落地在即多股获资金关注(名单)</a></h3>
+  <p class="sum">央企6G推进会召开，产业链加速落地在即，多股获资金关注。</p>
+  <div class="tags"><span class="tag ">6G</span><span class="tag ">央企</span></div>
+</article>
+<article class="brief more" data-source="media" data-tags="美股 黄金" data-market="a-share">
+  <div class="bm"><span class="mkt-badge mkt-a">A股</span><span class="src-badge src-media">媒体</span><span>东方财富</span><span>08/25</span></div>
+  <h3><a href="https://finance.eastmoney.com/a/202608253851688934.html" target="_blank" rel="noopener noreferrer">全球市场：美股三大指数涨跌不一存储、光通信板块下挫国际金价延续涨势</a></h3>
+  <p class="sum">隔夜美股三大指数涨跌不一，存储、光通信板块下挫，国际金价延续涨势。</p>
+  <div class="tags"><span class="tag ">美股</span><span class="tag ">黄金</span></div>
+</article>
+<article class="brief more must" data-source="media" data-tags="贸易战 关税" data-market="a-share">
+  <div class="bm"><span class="mkt-badge mkt-a">A股</span><span class="src-badge src-media">媒体</span><span>东方财富</span><span>08/25</span><span class="imp-badge">必知</span></div>
   <h3><a href="https://finance.eastmoney.com/a/202608253851651217.html" target="_blank" rel="noopener noreferrer">美加贸易战进一步升级！特朗普：明年将加拿大汽车、钢铁等品类关税提高至50%</a></h3>
-  <p class="sum">美加贸易战进一步升级！特朗普：明年将加拿大汽车、钢铁等品类关税提高至50%</p>
-  
+  <p class="sum">美加贸易战进一步升级，特朗普称明年将加拿大汽车、钢铁等品类关税提高至50%。</p>
+  <div class="tags"><span class="tag ">贸易战</span><span class="tag ">关税</span></div>
 </article>
-<article class="brief more" data-source="media" data-tags="" data-market="a-share">
-  <div class="bm"><span class="src-badge src-media">媒体</span><span>东方财富</span><span>08/24</span></div>
-  <h3><a href="https://finance.eastmoney.com/a/202608243851515350.html" target="_blank" rel="noopener noreferrer">国产GPU四小龙之一燧原科技申购时间定了</a></h3>
-  <p class="sum">国产GPU四小龙之一燧原科技申购时间定了</p>
-  
+<article class="brief more" data-source="media" data-tags="美债 财政" data-market="a-share">
+  <div class="bm"><span class="mkt-badge mkt-a">A股</span><span class="src-badge src-media">媒体</span><span>财联社</span><span>08/24</span></div>
+  <h3><a href="https://www.cls.cn/detail/2461879" target="_blank" rel="noopener noreferrer">全球央行年会本周召开！贝森特救不动的美债 沃什能救吗？</a></h3>
+  <p class="sum">美财长贝森特表示加码长债回购尚未开始，暂无意调整债券标售规模。</p>
+  <div class="tags"><span class="tag ">美债</span><span class="tag ">财政</span></div>
 </article>
-<article class="brief more" data-source="media" data-tags="" data-market="a-share">
-  <div class="bm"><span class="src-badge src-media">媒体</span><span>东方财富</span><span>08/24</span></div>
-  <h3><a href="https://finance.eastmoney.com/a/202608243851349959.html" target="_blank" rel="noopener noreferrer">“国产GPU四小龙”之一燧原科技9月2日申购</a></h3>
-  <p class="sum">“国产GPU四小龙”之一燧原科技9月2日申购</p>
-  
+<article class="brief more" data-source="media" data-tags="旅游 消费" data-market="a-share">
+  <div class="bm"><span class="mkt-badge mkt-a">A股</span><span class="src-badge src-media">媒体</span><span>东方财富</span><span>08/25</span></div>
+  <h3><a href="https://finance.eastmoney.com/a/202608253852572287.html" target="_blank" rel="noopener noreferrer">多重利好共振！旅游酒店集体走强2026业绩高增长个股来了</a></h3>
+  <p class="sum">多重利好共振，旅游酒店板块集体走强，市场关注高增长个股。</p>
+  <div class="tags"><span class="tag ">旅游</span><span class="tag ">消费</span></div>
 </article>
-<article class="brief more" data-source="media" data-tags="" data-market="a-share">
-  <div class="bm"><span class="src-badge src-media">媒体</span><span>东方财富</span><span>08/25</span></div>
-  <h3><a href="https://finance.eastmoney.com/a/202608253852583279.html" target="_blank" rel="noopener noreferrer">大摩：油价飙升是美股头号风险恐进一步推高美债收益率</a></h3>
-  <p class="sum">大摩：油价飙升是美股头号风险恐进一步推高美债收益率</p>
-  
+<article class="brief more must" data-source="media" data-tags="阿里 配售 AI" data-market="hk">
+  <div class="bm"><span class="mkt-badge mkt-hk">港股</span><span class="src-badge src-media">媒体</span><span>新浪财经·港股</span><span>08/25</span><span class="imp-badge">必知</span></div>
+  <h3><a href="https://finance.sina.com.cn/stock/t/2026-08-25/doc-inipncma9904991.shtml" target="_blank" rel="noopener noreferrer">阿里官宣800亿配售全押AI次日，蔡崇信、吴泳铭增持1.2亿港元“护盘”</a></h3>
+  <p class="sum">阿里官宣800亿港元配售全部押注AI，次日蔡崇信、吴泳铭增持1.2亿港元护盘。</p>
+  <div class="tags"><span class="tag ">阿里</span><span class="tag ">配售</span><span class="tag ">AI</span></div>
 </article>
-<article class="brief more" data-source="media" data-tags="" data-market="a-share">
-  <div class="bm"><span class="src-badge src-media">媒体</span><span>东方财富</span><span>08/25</span></div>
-  <h3><a href="https://finance.eastmoney.com/a/202608253852648651.html" target="_blank" rel="noopener noreferrer">高盛上调预测：2030年中国芯片业资本开支将达820亿美元</a></h3>
-  <p class="sum">高盛上调预测：2030年中国芯片业资本开支将达820亿美元</p>
-  
+<article class="brief more must" data-source="media" data-tags="阿里 财报 AI" data-market="hk">
+  <div class="bm"><span class="mkt-badge mkt-hk">港股</span><span class="src-badge src-media">媒体</span><span>新浪财经·港股</span><span>08/25</span><span class="imp-badge">必知</span></div>
+  <h3><a href="https://finance.sina.com.cn/stock/hkstock/2026-08-25/doc-inipnuhy5591365.shtml" target="_blank" rel="noopener noreferrer">狂烧100亿美元！阿里利润暴跌75%却闪电融资800亿港元，港股最大抽血豪赌AI</a></h3>
+  <p class="sum">阿里利润暴跌75%却闪电融资800亿港元，被市场视为港股最大规模AI豪赌。</p>
+  <div class="tags"><span class="tag ">阿里</span><span class="tag ">财报</span><span class="tag ">AI</span></div>
 </article>
-<article class="brief more" data-source="media" data-tags="" data-market="hk">
-  <div class="bm"><span class="src-badge src-media">媒体</span><span>港交所披露易</span><span>08/25</span></div>
-  <h3><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0825/2026082500265.pdf" target="_blank" rel="noopener noreferrer">Financial Statements/ESG Information - [Interim/Half-Year Report]</a></h3>
-  <p class="sum">Financial Statements/ESG Information - [Interim/Half-Year Report]</p>
-  
+<article class="brief more" data-source="media" data-tags="恒指 机器人" data-market="hk">
+  <div class="bm"><span class="mkt-badge mkt-hk">港股</span><span class="src-badge src-media">媒体</span><span>新浪财经·港股</span><span>08/25</span></div>
+  <h3><a href="https://finance.sina.com.cn/stock/hkstock/ggscyd/2026-08-25/doc-inipnuhy5576595.shtml" target="_blank" rel="noopener noreferrer">乐动机器人获纳入恒生综合指数成份股</a></h3>
+  <p class="sum">乐动机器人获纳入恒生综合指数成份股。</p>
+  <div class="tags"><span class="tag ">恒指</span><span class="tag ">机器人</span></div>
 </article>
-<article class="brief more" data-source="media" data-tags="" data-market="hk">
-  <div class="bm"><span class="src-badge src-media">媒体</span><span>港交所披露易</span><span>08/25</span></div>
-  <h3><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0825/2026082500249.pdf" target="_blank" rel="noopener noreferrer">Announcements and Notices - [Inside Information]</a></h3>
-  <p class="sum">Announcements and Notices - [Inside Information]</p>
-  
+<article class="brief more" data-source="media" data-tags="医药 存仓" data-market="hk">
+  <div class="bm"><span class="mkt-badge mkt-hk">港股</span><span class="src-badge src-media">媒体</span><span>新浪财经·港股</span><span>08/25</span></div>
+  <h3><a href="https://finance.sina.com.cn/stock/hkstock/marketalerts/2026-08-25/doc-inipnuhu9651555.shtml" target="_blank" rel="noopener noreferrer">麦科医药-B(02335)存仓市值总计5.21亿港元 股东将1773.41万股股票存入Merrill Lynch Far East</a></h3>
+  <p class="sum">麦科医药-B股东将1773.41万股存入美林，存仓市值总计5.21亿港元。</p>
+  <div class="tags"><span class="tag ">医药</span><span class="tag ">存仓</span></div>
 </article>
-<article class="brief more" data-source="media" data-tags="" data-market="hk">
-  <div class="bm"><span class="src-badge src-media">媒体</span><span>港交所披露易</span><span>08/25</span></div>
-  <h3><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0825/2026082500241.pdf" target="_blank" rel="noopener noreferrer">Announcements and Notices - [Profit Warning / Inside Information]</a></h3>
-  <p class="sum">Announcements and Notices - [Profit Warning / Inside Information]</p>
-  
+<article class="brief more" data-source="media" data-tags="物业 转仓" data-market="hk">
+  <div class="bm"><span class="mkt-badge mkt-hk">港股</span><span class="src-badge src-media">媒体</span><span>新浪财经·港股</span><span>08/25</span></div>
+  <h3><a href="https://finance.sina.com.cn/stock/hkstock/marketalerts/2026-08-25/doc-inipnuhu9646814.shtml" target="_blank" rel="noopener noreferrer">金融街物业(01502)转仓市值总计2068.37万港元 占比10.07% 从花旗银行转出1035.70万股</a></h3>
+  <p class="sum">金融街物业从花旗银行转出1035.7万股，转仓市值2068.37万港元、占比10.07%。</p>
+  <div class="tags"><span class="tag ">物业</span><span class="tag ">转仓</span></div>
 </article>
-<article class="brief more" data-source="media" data-tags="" data-market="hk">
-  <div class="bm"><span class="src-badge src-media">媒体</span><span>港交所披露易</span><span>08/25</span></div>
-  <h3><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0825/2026082500239.pdf" target="_blank" rel="noopener noreferrer">Announcements and Notices - [Dividend or Distribution (Announcement Form)]</a></h3>
-  <p class="sum">Announcements and Notices - [Dividend or Distribution (Announcement Form)]</p>
-  
+<article class="brief more" data-source="media" data-tags="沽空" data-market="hk">
+  <div class="bm"><span class="mkt-badge mkt-hk">港股</span><span class="src-badge src-media">媒体</span><span>新浪财经·港股</span><span>08/25</span></div>
+  <h3><a href="https://finance.sina.com.cn/stock/hkstock/marketalerts/2026-08-25/doc-inipnpyw9769498.shtml" target="_blank" rel="noopener noreferrer">智通港股沽空统计|8月25日</a></h3>
+  <p class="sum">智通财经发布8月25日港股沽空统计。</p>
+  <div class="tags"><span class="tag ">沽空</span></div>
 </article>
-<article class="brief more" data-source="media" data-tags="" data-market="hk">
-  <div class="bm"><span class="src-badge src-media">媒体</span><span>港交所披露易</span><span>08/25</span></div>
-  <h3><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0825/2026082500237.pdf" target="_blank" rel="noopener noreferrer">Announcements and Notices - [Interim Results]</a></h3>
-  <p class="sum">Announcements and Notices - [Interim Results]</p>
-  
+<article class="brief more" data-source="media" data-tags="恒指 高盛" data-market="hk">
+  <div class="bm"><span class="mkt-badge mkt-hk">港股</span><span class="src-badge src-media">媒体</span><span>新浪财经·港股</span><span>08/24</span></div>
+  <h3><a href="https://finance.sina.com.cn/stock/hkstock/hkgg/2026-08-24/doc-inipmhfq1960420.shtml" target="_blank" rel="noopener noreferrer">高盛：恒指季检 被动资金净流入最多六股料为携程集团-S(09961)等</a></h3>
+  <p class="sum">高盛预计恒指季检被动资金净流入最多六股，携程集团-S等获关注。</p>
+  <div class="tags"><span class="tag ">恒指</span><span class="tag ">高盛</span></div>
 </article>
-<article class="brief more" data-source="media" data-tags="" data-market="hk">
-  <div class="bm"><span class="src-badge src-media">媒体</span><span>港交所披露易</span><span>08/25</span></div>
-  <h3><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0825/2026082500235.pdf" target="_blank" rel="noopener noreferrer">Announcements and Notices - [Interim Results / Dividend or Distribution / Closure of Books or Change of Book Closure Period]</a></h3>
-  <p class="sum">Announcements and Notices - [Interim Results / Dividend or Distribution / Closure of Books</p>
-  
+<article class="brief more" data-source="media" data-tags="转仓 汽车电子" data-market="hk">
+  <div class="bm"><span class="mkt-badge mkt-hk">港股</span><span class="src-badge src-media">媒体</span><span>新浪财经·港股</span><span>08/25</span></div>
+  <h3><a href="https://finance.sina.com.cn/stock/hkstock/marketalerts/2026-08-25/doc-inipnpze2457594.shtml" target="_blank" rel="noopener noreferrer">英恒科技(01760)转仓市值9424.63万港元 占比6.99% 从法国巴黎银行转出7502万股</a></h3>
+  <p class="sum">英恒科技从法国巴黎银行转出7502万股，转仓市值9424.63万港元、占比6.99%。</p>
+  <div class="tags"><span class="tag ">转仓</span><span class="tag ">汽车电子</span></div>
 </article>
-<article class="brief more" data-source="media" data-tags="" data-market="hk">
-  <div class="bm"><span class="src-badge src-media">媒体</span><span>港交所披露易</span><span>08/25</span></div>
-  <h3><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0825/2026082500233.pdf" target="_blank" rel="noopener noreferrer">Next Day Disclosure Returns - [Share Buyback]</a></h3>
-  <p class="sum">Next Day Disclosure Returns - [Share Buyback]</p>
-  
+<article class="brief more" data-source="media" data-tags="公告" data-market="hk">
+  <div class="bm"><span class="mkt-badge mkt-hk">港股</span><span class="src-badge src-media">媒体</span><span>港交所披露易</span><span>08/25</span></div>
+  <h3><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0825/2026082500111.pdf" target="_blank" rel="noopener noreferrer">Announcements and Notices - [Overseas Regulatory Announcement - Other]</a></h3>
+  <p class="sum">港交所披露某上市公司海外监管公告。</p>
+  <div class="tags"><span class="tag ">公告</span></div>
 </article>
-<article class="brief more" data-source="media" data-tags="" data-market="hk">
-  <div class="bm"><span class="src-badge src-media">媒体</span><span>港交所披露易</span><span>08/25</span></div>
-  <h3><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0825/2026082500231.pdf" target="_blank" rel="noopener noreferrer">Announcements and Notices - [Interim Results]</a></h3>
-  <p class="sum">Announcements and Notices - [Interim Results]</p>
-  
+<article class="brief more" data-source="media" data-tags="公告" data-market="hk">
+  <div class="bm"><span class="mkt-badge mkt-hk">港股</span><span class="src-badge src-media">媒体</span><span>港交所披露易</span><span>08/25</span></div>
+  <h3><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0825/2026082500063.pdf" target="_blank" rel="noopener noreferrer">Circulars - [Other]</a></h3>
+  <p class="sum">港交所披露上市公司通函。</p>
+  <div class="tags"><span class="tag ">公告</span></div>
 </article>
-<article class="brief more" data-source="media" data-tags="" data-market="hk">
-  <div class="bm"><span class="src-badge src-media">媒体</span><span>港交所披露易</span><span>08/25</span></div>
-  <h3><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0825/2026082500229.pdf" target="_blank" rel="noopener noreferrer">Announcements and Notices - [Interim Results]</a></h3>
-  <p class="sum">Announcements and Notices - [Interim Results]</p>
-  
+<article class="brief more" data-source="media" data-tags="公告 业绩" data-market="hk">
+  <div class="bm"><span class="mkt-badge mkt-hk">港股</span><span class="src-badge src-media">媒体</span><span>港交所披露易</span><span>08/25</span></div>
+  <h3><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0825/2026082500065.pdf" target="_blank" rel="noopener noreferrer">Announcements and Notices - [Inside Information / Other - Business Update / Quarterly Results]</a></h3>
+  <p class="sum">港交所披露内幕消息/业务更新及季度业绩公告。</p>
+  <div class="tags"><span class="tag ">公告</span><span class="tag ">业绩</span></div>
 </article>
-<article class="brief more" data-source="media" data-tags="" data-market="hk">
-  <div class="bm"><span class="src-badge src-media">媒体</span><span>港交所披露易</span><span>08/25</span></div>
-  <h3><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0825/2026082500221.pdf" target="_blank" rel="noopener noreferrer">Circulars - [Other]</a></h3>
-  <p class="sum">Circulars - [Other]</p>
-  
+<article class="brief more" data-source="media" data-tags="公告 交易" data-market="hk">
+  <div class="bm"><span class="mkt-badge mkt-hk">港股</span><span class="src-badge src-media">媒体</span><span>港交所披露易</span><span>08/25</span></div>
+  <h3><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0825/2026082500057.pdf" target="_blank" rel="noopener noreferrer">Announcements and Notices - [Discloseable Transaction]</a></h3>
+  <p class="sum">港交所披露须予披露交易公告。</p>
+  <div class="tags"><span class="tag ">公告</span><span class="tag ">交易</span></div>
 </article>
-<article class="brief more" data-source="media" data-tags="" data-market="hk">
-  <div class="bm"><span class="src-badge src-media">媒体</span><span>港交所披露易</span><span>08/25</span></div>
-  <h3><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0825/2026082500219.pdf" target="_blank" rel="noopener noreferrer">Announcements and Notices - [Interim Results]</a></h3>
-  <p class="sum">Announcements and Notices - [Interim Results]</p>
-  
+<article class="brief more" data-source="media" data-tags="地产 英国" data-market="us">
+  <div class="bm"><span class="mkt-badge mkt-us">美股</span><span class="src-badge src-media">媒体</span><span>Investing.com News</span><span>08/25</span></div>
+  <h3><a href="https://www.investing.com/news/company-news/vistry-secures-350m-affordable-housing-grant-from-government-93CH-4874532" target="_blank" rel="noopener noreferrer">Vistry secures £350m affordable housing grant from government</a></h3>
+  <p class="sum">英国建筑商Vistry获政府3.5亿英镑保障房建设补助。</p>
+  <div class="tags"><span class="tag ">地产</span><span class="tag ">英国</span></div>
 </article>
-<article class="brief more" data-source="media" data-tags="" data-market="hk">
-  <div class="bm"><span class="src-badge src-media">媒体</span><span>港交所披露易</span><span>08/25</span></div>
-  <h3><a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0825/2026082500215.pdf" target="_blank" rel="noopener noreferrer">Announcements and Notices - [Interim Results]</a></h3>
-  <p class="sum">Announcements and Notices - [Interim Results]</p>
-  
-</article><button class="expand-btn" type="button">展开其余 19 条</button>
+<article class="brief more" data-source="media" data-tags="美债 宏观" data-market="us">
+  <div class="bm"><span class="mkt-badge mkt-us">美股</span><span class="src-badge src-media">媒体</span><span>Investing.com News</span><span>08/25</span></div>
+  <h3><a href="https://www.investing.com/news/stock-market-news/us-treasury-buybacks-a-mistake-costing-credibility-says-druckenmiller-4874531" target="_blank" rel="noopener noreferrer">US Treasury buybacks a ’mistake’ costing credibility, says Druckenmiller</a></h3>
+  <p class="sum">传奇投资人德鲁肯米勒批评美债回购政策，称其损害美国信誉。</p>
+  <div class="tags"><span class="tag ">美债</span><span class="tag ">宏观</span></div>
+</article>
+<article class="brief more" data-source="media" data-tags="医药" data-market="us">
+  <div class="bm"><span class="mkt-badge mkt-us">美股</span><span class="src-badge src-media">媒体</span><span>Investing.com News</span><span>08/25</span></div>
+  <h3><a href="https://www.investing.com/news/stock-market-news/why-is-hanmi-pharm-stock-sliding-today-93CH-4874529" target="_blank" rel="noopener noreferrer">Why is Hanmi Pharm stock sliding today?</a></h3>
+  <p class="sum">韩美药业(美股)股价当日下跌，市场关注其业绩与前景。</p>
+  <div class="tags"><span class="tag ">医药</span></div>
+</article>
+<article class="brief more" data-source="media" data-tags="能源 并购" data-market="us">
+  <div class="bm"><span class="mkt-badge mkt-us">美股</span><span class="src-badge src-media">媒体</span><span>Investing.com News</span><span>08/25</span></div>
+  <h3><a href="https://www.investing.com/news/stock-market-news/siemens-energy-hires-goldman-for-steam-turbine-unit-stake-sale-stock-up-premarket-4874527" target="_blank" rel="noopener noreferrer">Siemens Energy hires Goldman for steam turbine unit stake sale; stock up premarket</a></h3>
+  <p class="sum">西门子能源聘请高盛出售汽轮机业务股权，股价受消息提振。</p>
+  <div class="tags"><span class="tag ">能源</span><span class="tag ">并购</span></div>
+</article>
+<article class="brief more" data-source="media" data-tags="奢侈品 人事" data-market="us">
+  <div class="bm"><span class="mkt-badge mkt-us">美股</span><span class="src-badge src-media">媒体</span><span>Investing.com News</span><span>08/25</span></div>
+  <h3><a href="https://www.investing.com/news/stock-market-news/leonardo-maria-del-vecchio-quits-essilux-management-roles-4874524" target="_blank" rel="noopener noreferrer">Leonardo Maria Del Vecchio quits EssiLux management roles</a></h3>
+  <p class="sum">EssiLux集团管理层人事变动，德尔·维奇奥辞任管理职务。</p>
+  <div class="tags"><span class="tag ">奢侈品</span><span class="tag ">人事</span></div>
+</article>
+<article class="brief more must" data-source="media" data-tags="IPO 中概股" data-market="us">
+  <div class="bm"><span class="mkt-badge mkt-us">美股</span><span class="src-badge src-media">媒体</span><span>Investing.com News</span><span>08/25</span><span class="imp-badge">必知</span></div>
+  <h3><a href="https://www.investing.com/news/stock-market-news/sheins-up-to-18-billion-hong-kong-ipo-order-book-covered-sources-say-4874486" target="_blank" rel="noopener noreferrer">Shein’s up to $1.8 billion Hong Kong IPO order book covered, sources say</a></h3>
+  <p class="sum">消息称Shein港股IPO订单簿已获足额认购，最高融资18亿美元。</p>
+  <div class="tags"><span class="tag ">IPO</span><span class="tag ">中概股</span></div>
+</article>
+<article class="brief more" data-source="media" data-tags="新能源 生物燃料" data-market="us">
+  <div class="bm"><span class="mkt-badge mkt-us">美股</span><span class="src-badge src-media">媒体</span><span>Investing.com News</span><span>08/25</span></div>
+  <h3><a href="https://www.investing.com/news/company-news/80-miles-italian-biodiesel-plant-gets-sustainability-certifications-93CH-4874519" target="_blank" rel="noopener noreferrer">80 Mile’s Italian biodiesel plant gets sustainability certifications</a></h3>
+  <p class="sum">80 Mile旗下意大利生物柴油工厂获可持续认证。</p>
+  <div class="tags"><span class="tag ">新能源</span><span class="tag ">生物燃料</span></div>
+</article>
+<article class="brief more" data-source="media" data-tags="能源 中概股" data-market="us">
+  <div class="bm"><span class="mkt-badge mkt-us">美股</span><span class="src-badge src-media">媒体</span><span>Investing.com News</span><span>08/25</span></div>
+  <h3><a href="https://www.investing.com/news/commodities-news/new-sinopec-boss-presses-reset-for-worlds-biggest-oil-refiner-4874518" target="_blank" rel="noopener noreferrer">New Sinopec boss presses reset for world’s biggest oil refiner</a></h3>
+  <p class="sum">中石化新任掌门推动全球最大炼油商战略重置，引发市场关注。</p>
+  <div class="tags"><span class="tag ">能源</span><span class="tag ">中概股</span></div>
+</article>
+<article class="brief more" data-source="media" data-tags="汇率 地缘" data-market="us">
+  <div class="bm"><span class="mkt-badge mkt-us">美股</span><span class="src-badge src-media">媒体</span><span>Investing.com News</span><span>08/25</span></div>
+  <h3><a href="https://www.investing.com/news/forex-news/asia-fx-dips-as-dollar-rebounds-slightly-iran-sanctions-treasury-yields-in-focus-4874467" target="_blank" rel="noopener noreferrer">Dollar rebounds slightly with Iran sanctions, Treasury yields in focus</a></h3>
+  <p class="sum">美元小幅反弹，市场聚焦伊朗制裁与美债收益率走向。</p>
+  <div class="tags"><span class="tag ">汇率</span><span class="tag ">地缘</span></div>
+</article>
+<article class="brief more" data-source="media" data-tags="航空 法律" data-market="us">
+  <div class="bm"><span class="mkt-badge mkt-us">美股</span><span class="src-badge src-media">媒体</span><span>Investing.com News</span><span>08/25</span></div>
+  <h3><a href="https://www.investing.com/news/company-news/gkn-aerospace-sets-100m-fund-for-california-evacuation-claims-93CH-4874514" target="_blank" rel="noopener noreferrer">GKN Aerospace sets $100m fund for California evacuation claims</a></h3>
+  <p class="sum">GKN Aerospace设立1亿美元基金应对加州撤离相关索赔。</p>
+  <div class="tags"><span class="tag ">航空</span><span class="tag ">法律</span></div>
+</article>
+<article class="brief more must" data-source="media" data-tags="地缘 制裁" data-market="us">
+  <div class="bm"><span class="mkt-badge mkt-us">美股</span><span class="src-badge src-media">媒体</span><span>CNBC Top Stories</span><span>08/25</span><span class="imp-badge">必知</span></div>
+  <h3><a href="https://www.cnbc.com/2026/08/25/us-iran-secondary-sanctions-china-india-uae-hormuz-trade-.html" target="_blank" rel="noopener noreferrer">Trump targets Iran’s trade lifelines — here are the countries most exposed</a></h3>
+  <p class="sum">特朗普将制裁伊朗贸易生命线，多国或受影响。</p>
+  <div class="tags"><span class="tag ">地缘</span><span class="tag ">制裁</span></div>
+</article>
+<article class="brief more must" data-source="media" data-tags="新能源车 中概股" data-market="us">
+  <div class="bm"><span class="mkt-badge mkt-us">美股</span><span class="src-badge src-media">媒体</span><span>CNBC Top Stories</span><span>08/25</span><span class="imp-badge">必知</span></div>
+  <h3><a href="https://www.cnbc.com/2026/08/25/xpeng-shares-robot-valuation-china.html" target="_blank" rel="noopener noreferrer">Xpeng shares sink as weak delivery forecast overshadows $6.3 billion robot unit valuation</a></h3>
+  <p class="sum">小鹏汽车交付指引疲弱，盖过63亿美元融资利好，股价下挫。</p>
+  <div class="tags"><span class="tag ">新能源车</span><span class="tag ">中概股</span></div>
+</article><button class="expand-btn" type="button">展开其余 31 条</button>
   </section><section class="panel" id="p-biz">
     <div class="filter-bar">
     <span class="filter-label">筛选</span>
