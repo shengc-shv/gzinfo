@@ -3990,8 +3990,8 @@
     "publishedAt": "2026-08-24T00:00:00.000Z",
     "firstSeenAt": "2026-08-25T01:09:40.109Z",
     "lastSeenAt": "2026-08-25T01:09:40.109Z",
-    "summary": "宇树科技较首日开盘蒸发2000亿市值；A股市场动态",
-    "ai_relevant": true
+    "summary": "（单股新闻已过滤：非巨头/非广州本地大企业）",
+    "ai_relevant": false
   },
   "https://finance.eastmoney.com/a/202608243851058815.html": {
     "title": "被反超！宇树科技跌至全球人形机器人市值榜第二",
@@ -4004,8 +4004,8 @@
     "publishedAt": "2026-08-24T00:00:00.000Z",
     "firstSeenAt": "2026-08-25T01:09:40.109Z",
     "lastSeenAt": "2026-08-25T01:09:40.109Z",
-    "summary": "被反超！宇树科技跌至全球人形机器人市值榜第二；A股市场动态",
-    "ai_relevant": true
+    "summary": "（单股新闻已过滤：非巨头/非广州本地大企业）",
+    "ai_relevant": false
   },
   "https://finance.eastmoney.com/a/202608243851088192.html": {
     "title": "亚洲市场全线跳水大跌！背后发生了什么？",
@@ -4942,8 +4942,8 @@
     "publishedAt": "2026-08-25T00:00:00.000Z",
     "firstSeenAt": "2026-08-25T01:33:56.347Z",
     "lastSeenAt": "2026-08-25T01:33:56.347Z",
-    "summary": "麦科医药-B(02335)存仓市值总计5.21亿港元 股东将1773.41万股股…；港股市场动态",
-    "ai_relevant": true
+    "summary": "（单股新闻已过滤：非巨头/非广州本地大企业）",
+    "ai_relevant": false
   },
   "https://finance.sina.com.cn/stock/hkstock/marketalerts/2026-08-25/doc-inipnuhu9646814.shtml": {
     "title": "金融街物业(01502)转仓市值总计2068.37万港元 占比10.07% 从花旗银行转出1035.70万股",
@@ -5124,8 +5124,8 @@
     "publishedAt": "2026-08-24T00:00:00.000Z",
     "firstSeenAt": "2026-08-25T01:33:56.347Z",
     "lastSeenAt": "2026-08-25T01:33:56.347Z",
-    "summary": "里昂：升瑞声科技(02018)目标价至54.4港元 维持“高度确信跑赢大市”评级；港股市场动态",
-    "ai_relevant": true
+    "summary": "（单股新闻已过滤：非巨头/非广州本地大企业）",
+    "ai_relevant": false
   },
   "https://finance.sina.com.cn/stock/hkstock/hkgg/2026-08-24/doc-inipkzxr0070640.shtml": {
     "title": "安本投资：对中资科技股中期仍审慎乐观 美国长债息高企对港股影响可控",
@@ -6313,8 +6313,8 @@
     "publishedAt": "2026-08-25T00:00:00.000Z",
     "firstSeenAt": "2026-08-25T04:52:06.949Z",
     "lastSeenAt": "2026-08-25T04:52:06.949Z",
-    "summary": "重庆银行公司银行部总经理王翔：零售贷款资产质量有望得到持续改善；对分行财富/信贷/客群业务有宏观参考",
-    "ai_relevant": true
+    "summary": "（单机构新闻已过滤：非六大行/广州银行的单机构动态无参考意义）",
+    "ai_relevant": false
   },
   "https://finance.eastmoney.com/a/202608243851550618.html": {
     "title": "葛卫东投资新动向曝光！整体呈现“重仓坚守、分化操作”特征",
@@ -8427,8 +8427,8 @@
     "publishedAt": "2026-08-25T00:00:00.000Z",
     "firstSeenAt": "2026-08-25T07:37:49.953Z",
     "lastSeenAt": "2026-08-25T07:37:49.953Z",
-    "summary": "净利润暴增46 %，石头科技20cm涨停！科创人工；A股市场动态",
-    "ai_relevant": true
+    "summary": "（单股新闻已过滤：非巨头/非广州本地大企业）",
+    "ai_relevant": false
   },
   "https://finance.sina.com.cn/jjxw/2026-08-25/doc-inippmeu2234782.shtml": {
     "title": "A股午后回暖，三大股指涨跌互现：农林牧渔、医药板块走强，两市成交1.8万亿",
@@ -8469,8 +8469,8 @@
     "publishedAt": "2026-08-25T00:00:00.000Z",
     "firstSeenAt": "2026-08-25T07:37:49.953Z",
     "lastSeenAt": "2026-08-25T07:37:49.953Z",
-    "summary": "富瑞：上调瑞声科技(02018)目标价至43港元 重申“持有”评级；港股市场动态",
-    "ai_relevant": true
+    "summary": "（单股新闻已过滤：非巨头/非广州本地大企业）",
+    "ai_relevant": false
   },
   "https://finance.sina.com.cn/stock/hkstock/hkgg/2026-08-25/doc-inippmeq1581041.shtml": {
     "title": "高盛：鸣鸣很忙(01768)上半年经调整净利润远胜预期 重申“买入”评级",
@@ -9950,8 +9950,8 @@
     "publishedAt": "2026-08-25T00:00:00.000Z",
     "firstSeenAt": "2026-08-25T12:32:07.216Z",
     "lastSeenAt": "2026-08-25T12:32:07.216Z",
-    "summary": "晨星下调华润建材科技合理估值至1.10港元，H1收入下滑15%；建材周期承压，分行基建/工程贷客户需关注下游需求。",
-    "ai_relevant": true
+    "summary": "（单股新闻已过滤：非巨头/非广州本地大企业）",
+    "ai_relevant": false
   },
   "https://finance.sina.com.cn/stock/hkstock/hkgg/2026-08-25/doc-inippmen9728543.shtml": {
     "title": "交银国际：维持小鹏集团-W(09868)“买入”评级 下调目标价至76.7港元",
@@ -12336,5 +12336,53 @@
     "publishedAt": "2026-08-25T00:00:00.000Z",
     "firstSeenAt": "2026-08-25T14:52:13.122Z",
     "lastSeenAt": "2026-08-25T14:52:13.122Z"
+  },
+  "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0825/2026082502355.pdf": {
+    "title": "Announcements and Notices - [Interim Results / Modified Report by Auditors]",
+    "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0825/2026082502355.pdf",
+    "sourceId": "hkex-stock",
+    "source": "港交所披露易",
+    "category": "stocks",
+    "subcategory": "hk",
+    "excerpt": "Announcements and Notices - [Interim Results / Modified Report by Auditors]",
+    "publishedAt": "2026-08-25T00:00:00.000Z",
+    "firstSeenAt": "2026-08-25T15:04:19.125Z",
+    "lastSeenAt": "2026-08-25T15:04:19.125Z"
+  },
+  "https://www.stcn.com/article/detail/4121043.html": {
+    "title": "300498，上半年净利润亏损超43亿元",
+    "url": "https://www.stcn.com/article/detail/4121043.html",
+    "sourceId": "stcn",
+    "source": "证券时报",
+    "category": "finance",
+    "subcategory": "cn-finance",
+    "excerpt": "",
+    "publishedAt": "2026-08-25T14:59:00.000Z",
+    "firstSeenAt": "2026-08-25T15:04:19.125Z",
+    "lastSeenAt": "2026-08-25T15:04:19.125Z"
+  },
+  "https://www.stcn.com/article/detail/4121044.html": {
+    "title": "深夜，油价大跌，黄金跳水！美半导体股拉升！霍尔木兹海峡，大消息",
+    "url": "https://www.stcn.com/article/detail/4121044.html",
+    "sourceId": "stcn",
+    "source": "证券时报",
+    "category": "finance",
+    "subcategory": "cn-finance",
+    "excerpt": "",
+    "publishedAt": "2026-08-25T14:56:00.000Z",
+    "firstSeenAt": "2026-08-25T15:04:19.125Z",
+    "lastSeenAt": "2026-08-25T15:04:19.125Z"
+  },
+  "https://www.stcn.com/article/detail/4121045.html": {
+    "title": "葛卫东旗下期货公司炒股大赚！净利同比增长7188.06%",
+    "url": "https://www.stcn.com/article/detail/4121045.html",
+    "sourceId": "stcn",
+    "source": "证券时报",
+    "category": "finance",
+    "subcategory": "cn-finance",
+    "excerpt": "",
+    "publishedAt": "2026-08-25T14:55:00.000Z",
+    "firstSeenAt": "2026-08-25T15:04:19.125Z",
+    "lastSeenAt": "2026-08-25T15:04:19.125Z"
   }
 }

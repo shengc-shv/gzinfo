@@ -84,6 +84,19 @@ const GENERIC_PATTERNS = [
   /银行利率/g,
   /银行息差/g,
   /银行中收/g,
+  // 2026-08-25 修复：XX银行部（公司银行部/零售银行部/私人银行部）是部门名非机构
+  /公司银行部/g,
+  /零售银行部/g,
+  /私人银行部/g,
+  /个人银行部/g,
+  /机构银行部/g,
+  /金融市场部/g,
+  /银行部/g,
+  /公司银行/g,
+  /零售银行/g,
+  /私人银行/g,
+  /银行资本/g,
+  /银行治理/g,
   /保险公司/g,
   /保险业/g,
   /保险产品/g,
@@ -164,6 +177,7 @@ function extractInstitutions(text: string): string[] {
 function normalize(name: string): string {
   let n = name;
   for (const [re, canon] of NORMALIZE) {
+    re.lastIndex = 0; // 防 lastIndex 残留
     if (re.test(n)) {
       n = canon;
       break;

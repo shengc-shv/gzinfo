@@ -19,6 +19,7 @@ import {
 } from "../lib/sources/local-acquired";
 import { applyKeywordFilter } from "../lib/filters/keyword-filter";
 import { filterSingleInstitution } from "../lib/filters/single-institution";
+import { filterStockNews } from "../lib/filters/stock-single";
 import {
   keywordFilterEnabled,
   keywordFilterFallbackEnabled,
@@ -449,6 +450,17 @@ async function main() {
   if (articles.length !== preSi) {
     console.log(
       `[daily] 🏛️ 单机构过滤: ${preSi} → ${articles.length} 条（移除 ${preSi - articles.length} 条非白名单单机构新闻）`,
+    );
+  }
+
+  // —— 股市单股过滤（2026-08-25 用户决定，永久生效）：仅 stocks 类 ——
+  // 只保留巨头企业（阿里/京东/腾讯/苹果/英伟达等）+ 广州本地大企业（小鹏/广汽/唯品会等）
+  // + 宏观/指数/板块级内容；其他单股新闻（单一公司股价/财报/评级等）→ 过滤。
+  const preSs = articles.length;
+  articles = filterStockNews(articles);
+  if (articles.length !== preSs) {
+    console.log(
+      `[daily] 📈 股市单股过滤: ${preSs} → ${articles.length} 条（移除 ${preSs - articles.length} 条非巨头/非广州本地单股新闻）`,
     );
   }
 

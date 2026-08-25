@@ -1,0 +1,98 @@
+/**
+ * 股市单股过滤（2026-08-25 用户决定，永久生效）
+ *
+ * 位置：采集汇合 + 窗口过滤 + 单机构过滤之后，仅对 category=stocks（A股/港股/美股）生效。
+ *
+ * 规则：股市新闻只保留
+ *  - 巨头企业（阿里巴巴/京东/腾讯/苹果/英伟达等能影响板块的巨头）
+ *  - 广州本地大型企业（小鹏/广汽/唯品会/白云山等）
+ *  - 宏观/指数/板块级内容（大盘/指数/板块/资金/政策/大宗商品）
+ * 其他单股新闻（单一公司股价/财报/评级/增减持等）→ 过滤（无参考意义）。
+ */
+
+/** 巨头企业（能影响板块）——中概/港股 + 美股 + A股龙头 */
+const MEGA_CORPS = [
+  "阿里巴巴", "阿里", "京东", "腾讯", "美团", "小米", "百度", "拼多多", "网易",
+  "哔哩哔哩", "B站", "快手", "携程", "比亚迪", "宁德时代", "隆基", "中芯国际",
+  "苹果", "微软", "谷歌", "Alphabet", "亚马逊", "英伟达", "Nvidia", "NVIDIA",
+  "特斯拉", "Tesla", "Meta", "奈飞", "Netflix", "台积电", "英特尔", "Intel",
+  "AMD", "博通", "Broadcom", "甲骨文", "Oracle", "Salesforce", "微软",
+  "伯克希尔", "Berkshire", "摩根大通", "JPMorgan", "高盛", "Goldman", "花旗",
+  "美银", "富国", "工商银行", "建设银行", "农业银行", "中国银行", "招商银行",
+  "中国平安", "中国人寿", "中石油", "中石化", "中海油", "中国移动", "中国电信",
+  "汇丰", "渣打",
+];
+
+/** 广州本地大型企业 */
+const GZ_CORPS = [
+  "小鹏", "XPeng", "广汽", "唯品会", "白云山", "广药", "金发科技", "海大集团",
+  "珠江啤酒", "广州酒家", "岭南集团", "广百", "广电运通", "中望软件", "极飞",
+  "亿航", "EHang", "希音", "SHEIN", "名创优品", "MINISO", "网易", "微信",
+  "广发证券", "广发银行", "南方电网", "广东电力", "粤电力", "岭南控股",
+  "三七互娱", "网易游戏", "虎牙", "YY",
+];
+
+/** 宏观/指数/板块级特征词（命中即保留） */
+/** 宏观/指数/板块级特征词（命中即保留；test 用，不带 /g 避免 lastIndex 残留） */
+const MACRO_PATTERNS = [
+  /大盘|沪指|深成|创业板指|创业板|科创板|北证|恒指|纳指|标普|道指|日经|上证|深证/,
+  /板块|概念股|行业轮动|资金流向|北向|南向|成交额|成交量|两融|融资融券/,
+  /A股|港股|美股|中概|新股|IPO|打新|破发|涨停潮|跌停潮|牛市|熊市|震荡市/,
+  /ETF|REITs|指数基金|QDII|FOF/,
+  /央行|美联储|降息|加息|关税|CPI|PPI|PMI|社融|M2|LPR|汇率|美元|美债|人民币/,
+  /财报季|业绩预告|半年报季|季报季|分红季/,
+  /原油|黄金|白银|铜|大宗商品|期货|油价|金价/,
+  /市场情绪|投资者|机构|主力|散户|市盈率|市净率/,
+  /国务院|证监会|交易所|监管|政策|新规|意见稿|指引/,
+];
+
+/** 单股特征词（命中 + 无白名单公司 → 过滤；test 用，不带 /g） */
+const SINGLE_STOCK_PATTERNS = [
+  /股价|财报|中报|年报|季报|业绩|评级|目标价|增持|减持|回购|市值|涨停|跌停/,
+  /大涨|暴涨|暴跌|大跌|腰斩|重挫|飙升|跳水|创新高|创新低|历史新低/,
+  /配售|定增|解禁|质押|商誉|爆雷|退市|ST|摘帽/,
+  /H1|H2|Q1|Q2|Q3|Q4|营收|净利|净利润|亏损|盈利|由盈转亏/,
+  /估值|下调|上调|维持|入选|专项行动|调出|调入/,
+  /earnings|shares|stock price|target price|rating|upgrade|downgrade|buyback/,
+  /market cap|revenue|profit|loss|guidance|forecast/,
+  /report|misses|beats|warns|cuts|raises/,
+];
+
+/** 股票代码（如 (688801) (00700) (9988.HK) (AAPL)） */
+const STOCK_CODE_RE = /\(\d{4,6}(?:\.\w+)?\)|\([A-Z]{2,5}\.[A-Z]{2}\)/;
+
+export function shouldKeepStockNews(title: string): boolean {
+  if (!title) return true;
+  const t = title;
+
+  // 白名单巨头/广州本地大企业 → 保留
+  for (const c of MEGA_CORPS) {
+    if (t.includes(c)) return true;
+  }
+  for (const c of GZ_CORPS) {
+    if (t.includes(c)) return true;
+  }
+
+  // 宏观/指数/板块级 → 保留
+  for (const p of MACRO_PATTERNS) {
+    if (p.test(t)) return true;
+  }
+
+  // 单股特征（股票代码 或 个股词）且无白名单公司 → 过滤
+  if (STOCK_CODE_RE.test(t)) return false;
+  for (const p of SINGLE_STOCK_PATTERNS) {
+    if (p.test(t)) return false;
+  }
+
+  // 无特征：保留（避免误伤解读/市场类新闻）
+  return true;
+}
+
+/** 批量过滤 stocks 类条目 */
+export function filterStockNews<T extends { title?: string; category?: string }>(
+  items: T[],
+): T[] {
+  return items.filter(
+    (a) => a.category !== "stocks" || shouldKeepStockNews(a.title ?? ""),
+  );
+}
