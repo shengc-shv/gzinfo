@@ -639,8 +639,8 @@
     "publishedAt": "2026-08-24T00:00:00.000Z",
     "firstSeenAt": "2026-08-24T05:50:15.629Z",
     "lastSeenAt": "2026-08-24T05:50:15.629Z",
-    "summary": "科学探索奖50位青年获奖，属科技奖励。与分行零售业务无直接关联。",
-    "ai_relevant": true,
+    "summary": "（业务相关性红线：与客群/财富/私行/信贷无直接挂钩，且非国家省市一级商机政策）",
+    "ai_relevant": false,
     "subcategory": "cn-finance"
   },
   "https://www.stcn.com/article/detail/4105146.html": {
@@ -667,8 +667,8 @@
     "publishedAt": "2026-08-24T00:00:00.000Z",
     "firstSeenAt": "2026-08-24T05:50:15.629Z",
     "lastSeenAt": "2026-08-24T05:50:15.629Z",
-    "summary": "中国机器人受欧洲市场欢迎，属出口产业动态。与分行零售业务关联弱。",
-    "ai_relevant": true,
+    "summary": "（业务相关性红线：与客群/财富/私行/信贷无直接挂钩，且非国家省市一级商机政策）",
+    "ai_relevant": false,
     "subcategory": "cn-finance"
   },
   "https://www.stcn.com/article/detail/4104907.html": {
@@ -3724,8 +3724,8 @@
     "publishedAt": "2026-08-24T00:00:00.000Z",
     "firstSeenAt": "2026-08-24T23:37:01.191Z",
     "lastSeenAt": "2026-08-24T23:37:01.191Z",
-    "summary": "2026广东智慧物业产业博览会在穗启幕 助力物业行业提质升级；广州市政策动向，分行需关注落地机会",
-    "ai_relevant": true
+    "summary": "（业务相关性红线：与客群/财富/私行/信贷无直接挂钩，且非国家省市一级商机政策）",
+    "ai_relevant": false
   },
   "https://www.investing.com/news/company-news/tyro-fy26-slides-cash-flow-surges-50-banking-adoption-accelerates-93CH-4874338": {
     "title": "Tyro FY26 slides: cash flow surges 50%, banking adoption accelerates",
@@ -7979,8 +7979,8 @@
     "publishedAt": "2026-08-25T00:00:00.000Z",
     "firstSeenAt": "2026-08-25T07:11:31.892Z",
     "lastSeenAt": "2026-08-25T07:11:31.892Z",
-    "summary": "“第一批已经发货去法国”，中国人形机器人进入海外工厂“打工”；对分行财富/信贷/客群业务有宏观参考",
-    "ai_relevant": true
+    "summary": "（业务相关性红线：与客群/财富/私行/信贷无直接挂钩，且非国家省市一级商机政策）",
+    "ai_relevant": false
   },
   "https://www.stcn.com/article/detail/4115750.html": {
     "title": "企业速看！劳务派遣差额征税大调整",
