@@ -39,9 +39,9 @@ export const AUDIO_SPEAK_LIMITS = {
 
 const OPENER = "早上好，以下是今日简报。";
 const CLOSER = "详细内容请查看下方图文。";
-const IPO_TRANSITION = "另外，关注一条广东IPO企业动态。";
+const IPO_TRANSITION = "接下去关注广东IPO企业动态。";
 /** 股市解读段：语气与「今日必读」同风格（客观、精炼、陈述式），过场语与必读/洞察并列。 */
-const STOCK_TRANSITION = "股市解读。";
+const STOCK_TRANSITION = "接下去是股市解读。";
 /** 中文 TTS 语速估算（字/秒）：腾讯 Speed=1（1.2 倍）实测约 5.3 字/秒，取 5.2 便于徽标时长贴近实际（2026-08-24 校准）。 */
 const CHARS_PER_SEC = 5.2;
 
@@ -167,7 +167,7 @@ export async function assembleAudioScript(
   const mr = sanitize(exec.spoken_must_read ?? "");
   if (mr) {
     const t = truncateAtSentence(mr, AUDIO_SPEAK_LIMITS.must_read);
-    parts.push(`今日必读。${t}`);
+    parts.push(`接下去看今日必读。${t}`);
     partMap.must_read = t;
     found++;
   } else {
@@ -177,7 +177,7 @@ export async function assembleAudioScript(
   const ins = sanitize(exec.spoken_insights ?? "");
   if (ins) {
     const t = truncateAtSentence(ins, AUDIO_SPEAK_LIMITS.insights);
-    parts.push(`最后是商机洞察。${t}`);
+    parts.push(`接下去是商机洞察。${t}`);
     partMap.insights = t;
     found++;
   } else {
@@ -191,7 +191,8 @@ export async function assembleAudioScript(
       const s = sanitize(card.spoken ?? "");
       if (!s) return;
       // spoken 开头已含市场名（如"美股三大指数…"）时不重复加标签，避免"美股：美股"
-      const prefixed = s.startsWith(label) ? s : `${label}：${s}`;
+      // 去尾部句号：三市场以"。"join 拼接，避免段间双句号
+      const prefixed = (s.startsWith(label) ? s : `${label}：${s}`).replace(/[。.]+$/, "");
       segs.push(truncateAtSentence(prefixed, Math.floor(AUDIO_SPEAK_LIMITS.stock / 3)));
     };
     pushSeg("美股", stockRecap.us);
