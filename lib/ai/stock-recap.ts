@@ -67,6 +67,20 @@ function toPayloadItems(items: StockItem[]): Array<{ title: string; summary: str
   }));
 }
 
+/** 从原始输入条目抽取可点击来源（去重、至多 3 条），供卡片「溯源」按钮使用。 */
+function toSources(items: StockItem[]): { url: string; title: string }[] {
+  const seen = new Set<string>();
+  const out: { url: string; title: string }[] = [];
+  for (const it of items) {
+    const url = (it.url ?? "").trim();
+    if (!url || seen.has(url)) continue;
+    seen.add(url);
+    out.push({ url, title: (it.title ?? "").trim() || url });
+    if (out.length >= 3) break;
+  }
+  return out;
+}
+
 function normalizeCard(parsed: unknown): MarketCard {
   const p = (parsed ?? {}) as Partial<MarketCard>;
   const overview = typeof p.overview === "string" ? p.overview.trim() : "";
@@ -110,6 +124,10 @@ export async function generateStockRecap(input: StockRecapInput): Promise<StockR
       aShare: normalizeCard(parsed.aShare),
       hk: normalizeCard(parsed.hk),
     };
+    // 附带真实来源链接（来源来自原始输入条目，非 LLM 臆造；SKIP_AI 复用 store 时一并带回）
+    recap.us.sources = toSources(input.us);
+    recap.aShare.sources = toSources(input.aShare);
+    recap.hk.sources = toSources(input.hk);
     // 三卡全空（极少：三市场均无输入）→ 视为生成失败，页面不渲染该区
     const empty =
       !recap.us.overview && !recap.us.spoken && recap.us.sectors.length === 0 &&

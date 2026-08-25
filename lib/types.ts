@@ -96,6 +96,8 @@ export interface MarketCard {
   sectors: string[];
   /** 口播稿（纯口语）：涨跌概况+关键板块浓缩，≤120 字，可直接朗读。 */
   spoken?: string;
+  /** 信息来源链接（点击可跳转溯源），至多 3 条；由 daily.ts 从原始输入条目附带，非 LLM 生成。 */
+  sources?: { url: string; title: string }[];
 }
 
 /** 昨日股市复盘三卡（美股 / A股 / 港股）。 */
