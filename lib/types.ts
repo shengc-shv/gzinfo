@@ -61,6 +61,8 @@ export interface ReportItem {
   locale_evidence?: string;
   /** 源权威等级（T1/T1.5/T2），由 mergeRollingIntoReport 透传，供同权威等级标题去重。 */
   tier?: SourceTier;
+  /** 股市消息清单维度（底部「股市动态」面板用）：a-share / hk / us，供筛选条过滤。 */
+  market?: "a-share" | "hk" | "us";
 }
 
 export interface ReportInsight {
@@ -119,6 +121,13 @@ export interface StockRecap {
   quoteDate?: string;
 }
 
+/** 股市消息清单单条（底部「股市动态」面板，按 A股/港股/美股 过滤）。
+ *  由 raw 抓取条目直接转换，非 AI 生成；承载「具体的板块细节与细节新闻」下沉到消息卡片清单。 */
+export interface StockNewsItem extends ReportItem {
+  /** 市场维度：a-share | hk | us，供筛选条过滤。 */
+  market: "a-share" | "hk" | "us";
+}
+
 export interface DailyReport {
   date: string;
   /** 今日定调一句话，15~70字，必填（为空时由管线兜底）。 */
@@ -130,6 +139,8 @@ export interface DailyReport {
   trading?: TradingSection;
   /** Optional 昨日股市复盘三卡（美股/A股/港股），由 lib/ai/stock-recap.ts 生成。 */
   stock_recap?: StockRecap;
+  /** Optional 股市消息清单（底部「股市动态」面板）：三市场原始新闻条目，按 A股/港股/美股 过滤。非 AI 生成。 */
+  stock_news?: StockNewsItem[];
 }
 
 export interface TradingSection {

@@ -251,29 +251,41 @@ export const THEME_CSS = `
     .must-hint-inline { display: none; }
   }
 
-  /* 商机提示：默认折叠，点击展开 */
-  .exec-insights { margin-top: 0.2rem; }
-  .insight-toggle {
-    display: inline-flex; align-items: center; justify-content: space-between; gap: 0.3rem;
-    width: 100%; box-sizing: border-box;
-    background: color-mix(in srgb, var(--accent-cmb) 8%, var(--bg));
-    border: 1px solid color-mix(in srgb, var(--accent-cmb) 22%, transparent);
-    color: var(--accent-cmb); font-weight: 600; font-size: 0.84rem;
-    border-radius: 10px; padding: 0.55rem 0.8rem; cursor: pointer;
-    font-family: inherit;
+  /* 商机洞察：横向滑动卡片（与「今日必读」「昨日股市」同款），桌面转网格 */
+  .exec-insights { position: relative; margin-top: 0.2rem; }
+  .insight-hint-inline {
+    display: inline-block; margin-left: 0.45rem; vertical-align: middle;
+    font-size: 0.68rem; font-weight: 500; color: var(--accent-cmb);
+    white-space: nowrap;
   }
-  .insight-caret { transition: transform 0.2s ease; font-size: 0.8rem; }
-  .insight-toggle[aria-expanded="true"] .insight-caret { transform: rotate(180deg); }
-  .insight-collapse { display: none; margin-top: 0.6rem; }
-  .insight-collapse.is-open { display: block; }
-
-  .insight-grid { display: flex; flex-direction: column; gap: 0.5rem; }
-  .insight-card {
-    border: 1px solid var(--rule); border-radius: 10px; padding: 0.55rem 0.7rem;
-    background: var(--bg);
+  .insight-hint-inline .hint-arrow { display: inline-block; animation: nudge 1.1s ease-in-out infinite; }
+  .insight-scroller {
+    display: flex; flex-direction: row; gap: 0.5rem;
+    overflow-x: auto; -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: thin; scrollbar-color: var(--rule) transparent;
+    padding: 0 0.75rem 0.5rem 0;
+  }
+  .insight-scroller::-webkit-scrollbar { height: 5px; }
+  .insight-scroller::-webkit-scrollbar-thumb { background: var(--rule); border-radius: 4px; }
+  .insight-scroller .insight {
+    flex: 0 0 auto; width: 82vw; max-width: 320px;
+    box-sizing: border-box;
+  }
+  /* 移动端横向滑动提示：右侧渐隐遮罩，暗示右侧还有更多商机卡片 */
+  .exec-insights::after {
+    content: ""; position: absolute; top: 1.7rem; right: 0; bottom: 0.5rem;
+    width: 3.25rem; pointer-events: none; z-index: 3;
+    background: linear-gradient(to left, color-mix(in srgb, var(--accent-cmb) 16%, var(--bg)) 0%, color-mix(in srgb, var(--accent-cmb) 4%, transparent) 55%, transparent 100%);
   }
   .insight-topic { margin: 0 0 0.3rem; font-size: 0.85rem; color: var(--c-finance); font-weight: 700; }
   .insight-impact, .insight-action { margin: 0.2rem 0 0; font-size: 0.78rem; color: var(--fg-soft); line-height: 1.55; }
+  @media (min-width: 720px) {
+    .insight-scroller { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); overflow: visible; padding-bottom: 0; padding-right: 0; scroll-snap-type: none; }
+    .insight-scroller .insight { width: auto; max-width: none; }
+    .exec-insights::after { display: none; }
+    .insight-hint-inline { display: none; }
+  }
 
   /* —— 昨日股市复盘三卡（参考区）：横向滑动卡片，与「今日必读」同款 —— */
   .stock-recap { margin-top: 0.5rem; }
@@ -1037,10 +1049,7 @@ export const THEME_CSS = `
   .must-card strong { font-size: 0.92rem; }
   .must-card .must-why { font-size: 0.85rem; }
 
-  /* 商机洞察默认展开 + tag 中文（#5/#6）：桌面端双列网格压缩高度，
-     避免 5 条洞察单列纵向堆叠把执行摘要区撑高（与必读不足 5 条时一起失衡）。 */
-  .exec-insights .insight-collapse { display: block; }
-  .insight-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 0.55rem; }
+  /* 商机洞察卡片（横向滑动，桌面转网格；tag 中文见下方） */
   .insight-card, .insight { background: var(--card); border: 1px solid var(--rule); border-radius: 10px; padding: 0.7rem 0.85rem; }
   .insight h3 { margin: 0.3rem 0 0.35rem; font-size: 0.98rem; line-height: 1.45; }
   .insight p { margin: 0.25rem 0 0; font-size: 0.9rem; color: var(--fg-soft); line-height: 1.6; }

@@ -820,7 +820,7 @@ export function renderReportItemHtml(item: ReportItem, showSource = true): strin
   const tags = (item.tags ?? [])
     .map((t) => `<span class="tag ${tagClsOf(t)}">${escapeHtml(t)}</span>`)
     .join("");
-  return `<article class="brief${item.importance === 3 ? " must" : ""}" data-source="${item.source_type}" data-tags="${(item.tags ?? []).join(" ")}">
+  return `<article class="brief${item.importance === 3 ? " must" : ""}" data-source="${item.source_type}" data-tags="${(item.tags ?? []).join(" ")}" data-market="${escapeHtml(item.market ?? "")}">
   <div class="bm"><span class="src-badge ${badge.cls}">${badge.label}</span>${showSource && item.source ? `<span>${escapeHtml(item.source)}</span>` : ""}${time ? `<span>${time}</span>` : ""}${item.importance === 3 ? `<span class="imp-badge">必知</span>` : ""}</div>
   <h3><a href="${url}" target="_blank" rel="noopener noreferrer">${title}</a></h3>
   ${summary ? `<p class="sum">${summary}</p>` : ""}
@@ -949,6 +949,28 @@ export function renderFilterBarForPanel(items: ReportItem[]): string {
   return renderFilterBar(groups);
 }
 
+/**
+ * 股市动态面板筛选条（2026-08-25 用户）：单一「市场」维度，按 A股 / 港股 / 美股 过滤。
+ * 维度内 OR（选中多个市场取并集）；全选或全不选 → 全部显示（复用 renderFilterBar 交互）。
+ */
+export function renderStockFilterBar(): string {
+  const chips = [
+    { label: "A股", value: "a-share" },
+    { label: "港股", value: "hk" },
+    { label: "美股", value: "us" },
+  ]
+    .map(
+      (c) =>
+        `<button type="button" class="filter-chip" data-group="market" data-filter="${c.value}">${c.label}</button>`,
+    )
+    .join("");
+  return `<div class="filter-bar">
+    <span class="filter-label">市场</span>
+    ${chips}
+    <button type="button" class="filter-reset">重置</button>
+  </div>`;
+}
+
 /** 构造 url → 中文标题 映射（供 must_read 回写标题）。 */
 function resolveTitleMap(report: DailyReport): Map<string, string> {
   const m = new Map<string, string>();
@@ -1002,7 +1024,7 @@ function renderReportExec(report: DailyReport): string {
       <span class="exec-sub">今日必读 · 商机洞察（AI 生成）</span>
     </div>
     ${must ? `<div class="exec-must"><h3 class="exec-col-title">📌 今日必读<span class="must-hint-inline" aria-hidden="true">← 左右滑动查看 →</span></h3><ul class="must-scroller">${must}</ul></div>` : ""}
-    ${insights ? `<div class="exec-insights"><h3 class="exec-col-title">💡 商机洞察（默认展开）</h3><div class="insight-grid">${insights}</div></div>` : ""}
+    ${insights ? `<div class="exec-insights"><h3 class="exec-col-title">💡 商机洞察<span class="insight-hint-inline" aria-hidden="true">← 左右滑动查看 →</span></h3><div class="insight-scroller">${insights}</div></div>` : ""}
   </section>`;
 }
 
@@ -1062,15 +1084,18 @@ function renderStockRecap(report: DailyReport): string {
         return `<li class="stock-card stock-card--${cls}"><header class="stock-card-head">${label}</header><p class="stock-empty">暂无数据</p>${indices}${meta}</li>`;
       }
       const overview = card.overview || card.spoken || "";
+      // 关键板块总结：最多取 3 条，避免「具体的板块细节」挤占顶部复盘卡
+      // （细节下沉到底部「股市动态」消息清单，2026-08-25 用户要求）
       const sectors = card.sectors.length
-        ? `<div class="stock-sectors"><span class="stock-sec-label">关键板块</span><ul>${card.sectors
+        ? `<div class="stock-sectors"><span class="stock-sec-label">关键板块总结</span><ul>${card.sectors
+            .slice(0, 3)
             .map((s) => `<li>${escapeHtml(s)}</li>`)
             .join("")}</ul></div>`
         : "";
       return `<li class="stock-card stock-card--${cls}">
         <header class="stock-card-head">${label}</header>
         ${indices}
-        ${overview ? `<p class="stock-overview">${escapeHtml(overview)}</p>` : ""}
+        ${overview ? `<p class="stock-overview"><span class="stock-sec-label">大盘一句话总结</span>${escapeHtml(overview)}</p>` : ""}
         ${sectors}
         ${meta}
       </li>`;
@@ -1361,6 +1386,8 @@ export function renderHtml(
   const policyMarket = dedupe(report.sections?.policy_market ?? []);
   const techAll = dedupe(report.sections?.tech ?? []);
   const ipoAll = dedupe(report.sections?.ipo ?? []);
+  // 股市动态（底部消息清单，非 AI 生成）：直接来自 report.stock_news（三市场原始新闻）
+  const stockNews = (report.stock_news ?? []).filter((it) => it.url);
 
   // 中文日期「8月22日 星期六」：用 UTC 解析避免 CI(UTC) runner 的本地时区偏移
   // 导致 getDay() 算错一天（例：2026-08-22 在 UTC 下被当作 8/21 星期五）。
@@ -1372,6 +1399,7 @@ export function renderHtml(
 
   const tabs = [
     { id: "p-gz", label: "广州本地", cls: "var(--c-gz)", count: gzLocal.length, items: gzLocal },
+    { id: "p-stock", label: "股市动态", cls: "var(--c-trading)", count: stockNews.length, items: stockNews },
     { id: "p-biz", label: "业务启示", cls: "var(--c-biz)", count: bizInsight.length, items: bizInsight },
     { id: "p-pol", label: "政策与市场", cls: "var(--c-pol)", count: policyMarket.length, items: policyMarket },
     { id: "p-tech", label: "科技前沿", cls: "var(--c-tech)", count: techAll.length, items: techAll },
@@ -1440,7 +1468,7 @@ ${THEME_CSS}
   </nav>
 
   ${tabs.map((t, i) => `<section class="panel${i === 0 ? " active" : ""}" id="${t.id}">
-    ${renderFilterBarForPanel(t.items)}
+    ${t.id === "p-stock" ? renderStockFilterBar() : renderFilterBarForPanel(t.items)}
     ${renderReportCardList(t.items)}
   </section>`).join("")}
 
@@ -1515,12 +1543,16 @@ ${THEME_CSS}
     panel.querySelectorAll('.brief').forEach(function (card) {
       var src = card.getAttribute('data-source');
       var tags = (card.getAttribute('data-tags') || '').split(' ').filter(Boolean);
+      var market = card.getAttribute('data-market');
       var ok = true;
       for (var g in selByGroup) {
         var sel = selByGroup[g];
         if (g === 'src') {
           // 维度内 OR：命中官方 / 媒体 其一即满足
           if (sel.indexOf(src) < 0) { ok = false; break; }
+        } else if (g === 'market') {
+          // 股市动态面板：按 A股 / 港股 / 美股 过滤（维度内 OR）
+          if (sel.indexOf(market) < 0) { ok = false; break; }
         } else {
           // 维度内 OR：命中业务线其一即满足；「__none__」（其他）命中空标签卡片
           var hit = sel.some(function (f) {

@@ -35,6 +35,7 @@ import {
   type ArticleInput,
   type DailyReport,
   type ReportItem,
+  type StockNewsItem,
 } from "../lib/types";
 import { validateBackendCredentials } from "../lib/ai/llm";
 import { generateDaily, makeSkipAiRunner } from "../lib/ai/pipeline";
@@ -736,6 +737,58 @@ async function main() {
     } catch (e) {
       const msg = e instanceof Error ? e.message : String(e);
       console.warn(`[daily] ⚠️ 股市复盘生成失败（继续）: ${msg}`);
+    }
+  }
+
+  // —— 股市消息清单（底部「股市动态」面板）：三市场原始新闻条目，按 A股/港股/美股 过滤展示。
+  //  承载用户 2026-08-25 要求：把「具体的板块细节与细节新闻」从顶部三卡下沉到底部消息卡片清单。
+  //  非 AI 生成，直接从 crawled/rawArticles 转换；SKIP_AI 模式也照常构建（crawled 在 SKIP_AI 下仍抓取）。
+  {
+    const toNews = (
+      a: { title?: string; summary?: string; url?: string; source?: string; publishedAt?: Date | string },
+      market: "a-share" | "hk" | "us",
+    ): StockNewsItem => {
+      const pub =
+        a.publishedAt !== undefined
+          ? typeof a.publishedAt === "string"
+            ? a.publishedAt
+            : new Date(a.publishedAt).toISOString()
+          : "";
+      const mmdd = pub ? `${pub.slice(5, 7)}/${pub.slice(8, 10)}` : "";
+      const summary = (a.summary || a.title || "").slice(0, 90).trim();
+      return {
+        url: a.url || "",
+        title_cn: a.title || "无标题",
+        source: a.source || "",
+        source_type: "media",
+        date: mmdd,
+        summary: summary || (a.title || "无标题"),
+        importance: 2,
+        rank: 0,
+        tags: [],
+        locale: market === "us" ? "overseas" : "national",
+        market,
+      };
+    };
+    const PER_MARKET_CAP = 12;
+    const collect = (
+      items: Array<{ title?: string; summary?: string; url?: string; source?: string; publishedAt?: Date | string }>,
+      market: "a-share" | "hk" | "us",
+      win: number,
+    ): StockNewsItem[] =>
+      filterByWindow(items as Array<{ publishedAt?: Date | string; fetchedAt?: Date }>, win)
+        .map((a) => toNews(a, market))
+        .slice(0, PER_MARKET_CAP);
+    const news: StockNewsItem[] = [
+      ...collect(crawled.stocks.filter((a) => a.subcategory === "a-share"), "a-share", 3),
+      ...collect(crawled.stocks.filter((a) => a.subcategory === "hk"), "hk", 3),
+      ...collect(rawArticles.filter((a) => a.category === "stocks" && a.subcategory === "us"), "us", 4),
+    ];
+    if (news.length) {
+      mergedReport.stock_news = news;
+      console.log(
+        `[daily] 📋 股市消息清单构建：${news.filter((n) => n.market === "a-share").length} A股 / ${news.filter((n) => n.market === "hk").length} 港股 / ${news.filter((n) => n.market === "us").length} 美股`,
+      );
     }
   }
 
