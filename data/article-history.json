@@ -220,7 +220,7 @@
     "firstSeenAt": "2026-08-23T23:41:36.815Z",
     "lastSeenAt": "2026-08-23T23:41:36.815Z",
     "summary": "宏观解读：中国是世界经济增长稳定锚，基本面韧性强。可关注经济回升对零售信贷与财富管理的支撑。",
-    "ai_relevant": false,
+    "ai_relevant": true,
     "subcategory": "gz-media"
   },
   "https://finance.sina.com.cn/jjxw/2026-08-24/doc-inipkmaa6265702.shtml": {
@@ -515,7 +515,7 @@
     "firstSeenAt": "2026-08-24T05:50:15.629Z",
     "lastSeenAt": "2026-08-24T05:50:15.629Z",
     "summary": "广州沙面历史文化街区保护活化工程公示，文旅商圈升级。可联动信用卡消费场景与财富客户文旅权益，深耕本地客群。",
-    "ai_relevant": false
+    "ai_relevant": true
   },
   "https://www.cnr.cn/gd/guangdongyaowen/20260824/t20260824_527788766.shtml": {
     "title": "广东省第十七届运动会圆满收官",
@@ -528,7 +528,7 @@
     "firstSeenAt": "2026-08-24T05:50:15.629Z",
     "lastSeenAt": "2026-08-24T05:50:15.629Z",
     "summary": "广东省第十七届运动会收官，大型赛事带动城市消费与客流。与分行具体业务关联弱，作本地活动资讯。",
-    "ai_relevant": false,
+    "ai_relevant": true,
     "subcategory": "gz-media"
   },
   "https://www.cnr.cn/gd/guangdonglueying/20260824/t20260824_527788777.shtml": {
@@ -542,7 +542,7 @@
     "firstSeenAt": "2026-08-24T05:50:15.629Z",
     "lastSeenAt": "2026-08-24T05:50:15.629Z",
     "summary": "粤产机器人亮相世界人形机器人运动会，广东智能制造领先。可关注机器人产业链企业金融需求，储备科技金融服务。",
-    "ai_relevant": false,
+    "ai_relevant": true,
     "subcategory": "gz-media"
   },
   "https://www.cnr.cn/gd/meiliguangdong/20260824/t20260824_527789242.shtml": {
@@ -556,7 +556,7 @@
     "firstSeenAt": "2026-08-24T05:50:15.629Z",
     "lastSeenAt": "2026-08-24T05:50:15.629Z",
     "summary": "广州“扫黄打非+文明实践”空间亮相，属公益宣传阵地。与零售业务无直接关联。",
-    "ai_relevant": false,
+    "ai_relevant": true,
     "subcategory": "gz-media"
   },
   "https://www.cnfin.com/yw-lb/detail/20260824/4459311_1.html": {
@@ -752,7 +752,7 @@
     "firstSeenAt": "2026-08-24T05:50:15.629Z",
     "lastSeenAt": "2026-08-24T05:50:15.629Z",
     "summary": "从化举办青少年摩托夜赛，属本地文体活动。与分行业务关联弱。",
-    "ai_relevant": false,
+    "ai_relevant": true,
     "subcategory": "gz-media"
   },
   "https://news.dayoo.com/guangzhou/202608/24/139995_54994206.htm": {
@@ -766,7 +766,7 @@
     "firstSeenAt": "2026-08-24T05:50:15.629Z",
     "lastSeenAt": "2026-08-24T05:50:15.629Z",
     "summary": "广州推动生态文明宣传，属公益科普。与零售业务无直接关联。",
-    "ai_relevant": false,
+    "ai_relevant": true,
     "subcategory": "gz-media"
   },
   "https://news.dayoo.com/guangzhou/202608/24/139995_54994205.htm": {
@@ -794,7 +794,7 @@
     "firstSeenAt": "2026-08-24T05:50:15.629Z",
     "lastSeenAt": "2026-08-24T05:50:15.629Z",
     "summary": "荔湾白云以数智赋能城市治理，属政务数字化。与零售业务无直接关联。",
-    "ai_relevant": false,
+    "ai_relevant": true,
     "subcategory": "gz-media"
   },
   "https://news.dayoo.com/guangzhou/202608/24/139995_54994203.htm": {
@@ -808,7 +808,7 @@
     "firstSeenAt": "2026-08-24T05:50:15.629Z",
     "lastSeenAt": "2026-08-24T05:50:15.629Z",
     "summary": "广州援疆教师事迹，属正能量宣传。与零售业务无直接关联。",
-    "ai_relevant": false,
+    "ai_relevant": true,
     "subcategory": "gz-media"
   },
   "https://news.southcn.com/node_812903b83a/6ab55256bf.shtml": {
@@ -822,7 +822,7 @@
     "firstSeenAt": "2026-08-24T05:50:15.629Z",
     "lastSeenAt": "2026-08-24T05:50:15.629Z",
     "summary": "上半年GDP增4.7%，经济延续回升。可关注宏观回暖对零售信贷与财富管理的支撑，把握扩内需政策窗口。",
-    "ai_relevant": false,
+    "ai_relevant": true,
     "subcategory": "gz-media"
   },
   "https://finance.sina.com.cn/money/fund/aiassistant/zcgyd/2026-08-24/doc-inipkvrt0104941.shtml": {
@@ -1018,7 +1018,7 @@
     "firstSeenAt": "2026-08-24T05:56:57.246Z",
     "lastSeenAt": "2026-08-24T05:56:57.246Z",
     "summary": "广州新龙镇推进移风易俗，属镇街行政民生新闻，与银行零售经营无关联。",
-    "ai_relevant": false,
+    "ai_relevant": true,
     "subcategory": "gz-media"
   },
   "https://news.dayoo.com/guangzhou/202608/24/139995_54994201.htm": {
@@ -1032,7 +1032,7 @@
     "firstSeenAt": "2026-08-24T05:56:57.246Z",
     "lastSeenAt": "2026-08-24T05:56:57.246Z",
     "summary": "广州一商家刷单失信被罚5万元，市场监管案例，可作合规宣传素材，无经营决策价值。",
-    "ai_relevant": false,
+    "ai_relevant": true,
     "subcategory": "gz-media"
   },
   "https://news.dayoo.com/guangzhou/202608/24/139995_54994200.htm": {
@@ -1046,7 +1046,7 @@
     "firstSeenAt": "2026-08-24T05:56:57.246Z",
     "lastSeenAt": "2026-08-24T05:56:57.246Z",
     "summary": "广州商铺占道经营扰民曝光，市容管理新闻，与银行零售经营无关联。",
-    "ai_relevant": false,
+    "ai_relevant": true,
     "subcategory": "gz-media"
   },
   "https://news.dayoo.com/guangzhou/202608/24/139995_54994199.htm": {
@@ -1060,7 +1060,7 @@
     "firstSeenAt": "2026-08-24T05:56:57.246Z",
     "lastSeenAt": "2026-08-24T05:56:57.246Z",
     "summary": "国家级方志学术盛会在穗举办，文化学术活动新闻，与银行零售经营无关联。",
-    "ai_relevant": false,
+    "ai_relevant": true,
     "subcategory": "gz-media"
   },
   "https://news.dayoo.com/guangzhou/202608/24/139995_54994196.htm": {
@@ -1075,7 +1075,7 @@
     "firstSeenAt": "2026-08-24T05:56:57.246Z",
     "lastSeenAt": "2026-08-24T05:56:57.246Z",
     "summary": "2026广州医疗与健康产业博览会闭幕，50家三甲医院提交超300条临床合作需求。健康医疗产业客群活跃，可联动私行/财富深耕医疗健康企业家客群，探索员工体检、养老金融等场景。",
-    "ai_relevant": false
+    "ai_relevant": true
   },
   "https://news.dayoo.com/guangzhou/202608/24/139995_54994178.htm": {
     "title": "首届流行音乐创作大会明日在广州启幕",
@@ -1088,7 +1088,7 @@
     "firstSeenAt": "2026-08-24T05:56:57.246Z",
     "lastSeenAt": "2026-08-24T05:56:57.246Z",
     "summary": "首届流行音乐创作大会在广州启幕，文化活动新闻，与银行零售经营无直接关联。",
-    "ai_relevant": false,
+    "ai_relevant": true,
     "subcategory": "gz-media"
   },
   "https://news.southcn.com/node_812903b83a/7044cc7d7b.shtml": {
@@ -1116,7 +1116,7 @@
     "firstSeenAt": "2026-08-24T05:56:57.246Z",
     "lastSeenAt": "2026-08-24T05:56:57.246Z",
     "summary": "泡泡玛特业绩预期下调、股价大跌，个股消费公司动态，与银行零售经营无直接关联。",
-    "ai_relevant": false,
+    "ai_relevant": true,
     "subcategory": "gz-media"
   },
   "https://news.southcn.com/node_de9aedeec1/fa7436a025.shtml": {
@@ -1144,7 +1144,7 @@
     "firstSeenAt": "2026-08-24T05:56:57.246Z",
     "lastSeenAt": "2026-08-24T05:56:57.246Z",
     "summary": "奶茶店业态观察报道，消费趋势软文，无零售经营决策价值。",
-    "ai_relevant": false,
+    "ai_relevant": true,
     "subcategory": "gz-media"
   },
   "https://www.cnfin.com/cy-lb/detail/20260824/4459289_1.html": {
@@ -1270,7 +1270,7 @@
     "firstSeenAt": "2026-08-24T05:58:19.498Z",
     "lastSeenAt": "2026-08-24T05:58:19.498Z",
     "summary": "广州生意人群体文化报道，商业氛围软文，无零售经营决策价值。",
-    "ai_relevant": false,
+    "ai_relevant": true,
     "subcategory": "gz-media"
   },
   "https://arxiv.org/abs/2608.20440": {
@@ -1589,7 +1589,7 @@
     "firstSeenAt": "2026-08-24T07:13:33.590Z",
     "lastSeenAt": "2026-08-24T07:13:33.590Z",
     "summary": "花都秀全街安全宣传与非遗活动，区街民生新闻，与银行零售经营无关联。",
-    "ai_relevant": false,
+    "ai_relevant": true,
     "subcategory": "gz-media"
   },
   "https://news.dayoo.com/guangzhou/202608/24/139995_54994359.htm": {
@@ -1617,7 +1617,7 @@
     "firstSeenAt": "2026-08-24T07:13:33.590Z",
     "lastSeenAt": "2026-08-24T07:13:33.590Z",
     "summary": "花都读者分享会活动新闻，文化民生资讯，无经营决策价值。",
-    "ai_relevant": false,
+    "ai_relevant": true,
     "subcategory": "gz-media"
   },
   "https://news.dayoo.com/guangzhou/202608/24/139995_54994357.htm": {
@@ -1631,7 +1631,7 @@
     "firstSeenAt": "2026-08-24T07:13:33.590Z",
     "lastSeenAt": "2026-08-24T07:13:33.590Z",
     "summary": "南沙街区道路系统优化工程，市政建设新闻，与银行零售经营无关联。",
-    "ai_relevant": false,
+    "ai_relevant": true,
     "subcategory": "gz-media"
   },
   "https://news.dayoo.com/guangzhou/202608/24/139995_54994356.htm": {
@@ -1659,7 +1659,7 @@
     "firstSeenAt": "2026-08-24T07:13:33.590Z",
     "lastSeenAt": "2026-08-24T07:13:33.590Z",
     "summary": "广州海珠携73家帮扶地企业亮相广博会，区域产业协作动态，可作对公与客群经营背景，零售决策价值有限。",
-    "ai_relevant": false,
+    "ai_relevant": true,
     "subcategory": "gz-media"
   },
   "https://finance.cctv.com/2026/08/24/ARTIJD9I7cVWzln11MSXbgBs260824.shtml": {
@@ -1789,7 +1789,7 @@
     "firstSeenAt": "2026-08-24T08:26:12.411Z",
     "lastSeenAt": "2026-08-24T08:26:12.411Z",
     "summary": "广州暑期消费热力涌动、多元发力筑牢基本盘，消费数据向好。零售条线可把握暑期消费旺季余热，强化信用卡与消费贷营销，深耕文旅餐饮客群。",
-    "ai_relevant": false
+    "ai_relevant": true
   },
   "http://tjj.gz.gov.cn/stats_newtjyw/sjfb/content/post_10974624.html": {
     "title": "暑运前半程广州运力拉满  客流量持续高位",
@@ -1802,7 +1802,7 @@
     "firstSeenAt": "2026-08-24T08:26:12.411Z",
     "lastSeenAt": "2026-08-24T08:26:12.411Z",
     "summary": "暑运前半程广州运力拉满、客流量高位，交通运行数据，客群经营参考价值有限。",
-    "ai_relevant": false,
+    "ai_relevant": true,
     "subcategory": "gz-customer"
   },
   "https://finance.sina.com.cn/jryx/bank/2026-08-24/doc-inipkzxs2039146.shtml": {
@@ -2423,7 +2423,7 @@
     "firstSeenAt": "2026-08-24T10:38:00.578Z",
     "lastSeenAt": "2026-08-24T10:38:00.578Z",
     "summary": "前7个月广州规上工业增加值同比增长5.5%，广州经济基本面稳健。可增强对本地企业客群与经营信贷投放信心，服务实体经济。",
-    "ai_relevant": false
+    "ai_relevant": true
   },
   "https://news.dayoo.com/guangzhou/202608/24/139995_54994472.htm": {
     "title": "2026年“广府共绣”工作营开营，为广州老建筑活化出点子",
@@ -2436,7 +2436,7 @@
     "firstSeenAt": "2026-08-24T10:38:00.578Z",
     "lastSeenAt": "2026-08-24T10:38:00.578Z",
     "summary": "广府共绣工作营为广州老建筑活化出点子，城市更新文化活动，与零售经营无直接关联。",
-    "ai_relevant": false,
+    "ai_relevant": true,
     "subcategory": "gz-media"
   },
   "https://news.dayoo.com/guangzhou/202608/24/139995_54994402.htm": {
@@ -2450,7 +2450,7 @@
     "firstSeenAt": "2026-08-24T10:38:00.578Z",
     "lastSeenAt": "2026-08-24T10:38:00.578Z",
     "summary": "广州白鹅潭第二高楼效果图曝光，城市建设新闻，与银行零售经营无直接关联。",
-    "ai_relevant": false,
+    "ai_relevant": true,
     "subcategory": "gz-media"
   },
   "https://www.cnfin.com/yw-lb/detail/20260824/4459568_1.html": {
@@ -2633,7 +2633,7 @@
     "firstSeenAt": "2026-08-24T10:38:00.578Z",
     "lastSeenAt": "2026-08-24T10:38:00.578Z",
     "summary": "广州企业专精特新之路观察，本地科创企业成长动态。分行可聚焦专精特新客群，提供科技金融与企业家私行综合服务。",
-    "ai_relevant": false
+    "ai_relevant": true
   },
   "https://m.21jingji.com/article/20260824/herald/d9cbc1444651bddee12bc4e6066d2f5f.html": {
     "title": "首套房最高可贷款340万元！国管公积金新政来了",
@@ -2913,7 +2913,7 @@
     "firstSeenAt": "2026-08-24T10:55:22.731Z",
     "lastSeenAt": "2026-08-24T10:55:22.731Z",
     "summary": "世界机器人大会广东民企出圈，广东机器人产业竞争力凸显。分行可深耕机器人产业客群，提供科创金融与产业链员工综合服务。",
-    "ai_relevant": false
+    "ai_relevant": true
   },
   "https://www.cnfin.com/hg-lb/detail/20260824/4459591_1.html": {
     "title": "世卫组织：刚果（金）埃博拉疫情进入“决定性时刻”",
@@ -3221,7 +3221,7 @@
     "firstSeenAt": "2026-08-24T11:38:56.564Z",
     "lastSeenAt": "2026-08-24T11:38:56.564Z",
     "summary": "APEC中小企业部长会议，广州准备好了；广州市政策动向，分行需关注落地机会",
-    "ai_relevant": false
+    "ai_relevant": true
   },
   "https://news.dayoo.com/guangzhou/202608/24/139995_54994510.htm": {
     "title": "广州推行“无事不扰”双清单管理机制，已有45656户经营主体纳入“白名单”",
@@ -3235,7 +3235,7 @@
     "firstSeenAt": "2026-08-24T11:38:56.564Z",
     "lastSeenAt": "2026-08-24T11:38:56.564Z",
     "summary": "广州推行“无事不扰”双清单管理机制，已有45656户经营主体纳入“白名单”（与银行零售业务关联弱）",
-    "ai_relevant": false
+    "ai_relevant": true
   },
   "https://finance.sina.com.cn/wm/2026-08-24/doc-inipmsvn5984786.shtml": {
     "title": "国产GPU四小龙之一燧原科技，申购时间定了",
@@ -3711,7 +3711,7 @@
     "firstSeenAt": "2026-08-24T23:37:01.191Z",
     "lastSeenAt": "2026-08-24T23:37:01.191Z",
     "summary": "广州中山纪念堂孙中山铜像即将“保养”，预计11月初完工（与银行零售业务关联弱）",
-    "ai_relevant": false
+    "ai_relevant": true
   },
   "https://news.dayoo.com/guangzhou/202608/24/139995_54994610.htm": {
     "title": "办大事、闯远洋、挑大梁：广州中小企业的“能”与“势”",
@@ -3725,7 +3725,7 @@
     "firstSeenAt": "2026-08-24T23:37:01.191Z",
     "lastSeenAt": "2026-08-24T23:37:01.191Z",
     "summary": "办大事、闯远洋、挑大梁：广州中小企业的“能”与“势”；广州市政策动向，分行需关注落地机会",
-    "ai_relevant": false
+    "ai_relevant": true
   },
   "https://news.dayoo.com/guangzhou/202608/24/139995_54994597.htm": {
     "title": "全国首批市场采购出口化妆品试点落地广州一周年 出口化妆品货值超4900万元",
@@ -3739,7 +3739,7 @@
     "firstSeenAt": "2026-08-24T23:37:01.191Z",
     "lastSeenAt": "2026-08-24T23:37:01.191Z",
     "summary": "全国首批市场采购出口化妆品试点落地广州一周年 出口化妆品货值超4900万元（与银行零售业务关联弱）",
-    "ai_relevant": false
+    "ai_relevant": true
   },
   "https://news.dayoo.com/guangzhou/202608/24/139995_54994563.htm": {
     "title": "广州推动快递骑手加入基层应急队伍，130余名骑手解锁急救技能",
@@ -3753,7 +3753,7 @@
     "firstSeenAt": "2026-08-24T23:37:01.191Z",
     "lastSeenAt": "2026-08-24T23:37:01.191Z",
     "summary": "广州推动快递骑手加入基层应急队伍，130余名骑手解锁急救技能（与银行零售业务关联弱）",
-    "ai_relevant": false
+    "ai_relevant": true
   },
   "https://news.dayoo.com/guangzhou/202608/24/139995_54994544.htm": {
     "title": "南沙区居民注意！你家水费有变",
@@ -3795,7 +3795,7 @@
     "firstSeenAt": "2026-08-24T23:37:01.191Z",
     "lastSeenAt": "2026-08-24T23:37:01.191Z",
     "summary": "2026广东智慧物业产业博览会在穗启幕 助力物业行业提质升级；广州市政策动向，分行需关注落地机会",
-    "ai_relevant": false
+    "ai_relevant": true
   },
   "https://www.investing.com/news/company-news/tyro-fy26-slides-cash-flow-surges-50-banking-adoption-accelerates-93CH-4874338": {
     "title": "Tyro FY26 slides: cash flow surges 50%, banking adoption accelerates",
@@ -4579,7 +4579,7 @@
     "firstSeenAt": "2026-08-25T01:09:40.109Z",
     "lastSeenAt": "2026-08-25T01:09:40.109Z",
     "summary": "夜里雨来，广州多区发布雷雨大风预警（与银行零售业务关联弱）",
-    "ai_relevant": false
+    "ai_relevant": true
   },
   "https://news.dayoo.com/guangzhou/202608/24/139995_54994545.htm": {
     "title": "广州将推动符合条件的国家机关停车场向社会开放",
@@ -4593,7 +4593,7 @@
     "firstSeenAt": "2026-08-25T01:09:40.109Z",
     "lastSeenAt": "2026-08-25T01:09:40.109Z",
     "summary": "广州将推动符合条件的国家机关停车场向社会开放；广州市政策动向，分行需关注落地机会",
-    "ai_relevant": false
+    "ai_relevant": true
   },
   "https://news.dayoo.com/guangzhou/202608/24/139995_54994556.htm": {
     "title": "广州发布2026上半年出租汽车行业运行监测信息以及风险提示",
@@ -4607,7 +4607,7 @@
     "firstSeenAt": "2026-08-25T01:09:40.109Z",
     "lastSeenAt": "2026-08-25T01:09:40.109Z",
     "summary": "广州发布2026上半年出租汽车行业运行监测信息以及风险提示；广州市政策动向，分行需关注落地机会",
-    "ai_relevant": false
+    "ai_relevant": true
   },
   "https://news.dayoo.com/guangzhou/202608/24/139995_54994534.htm": {
     "title": "2026南国书香节广州分会场多点开花 打造“家门口”的阅读嘉年华",
@@ -4621,7 +4621,7 @@
     "firstSeenAt": "2026-08-25T01:09:40.109Z",
     "lastSeenAt": "2026-08-25T01:09:40.109Z",
     "summary": "2026南国书香节广州分会场多点开花 打造“家门口”的阅读嘉年华（与银行零售业务关联弱）",
-    "ai_relevant": false
+    "ai_relevant": true
   },
   "https://www.cnr.cn/gd/guangdongyaowen/20260825/t20260825_527790345.shtml": {
     "title": "花都支撑农村供水“三同五化”工程深入实施",
@@ -4635,7 +4635,7 @@
     "firstSeenAt": "2026-08-25T01:09:40.109Z",
     "lastSeenAt": "2026-08-25T01:09:40.109Z",
     "summary": "花都支撑农村供水“三同五化”工程深入实施；广州市政策动向，分行需关注落地机会",
-    "ai_relevant": false
+    "ai_relevant": true
   },
   "https://www.cnr.cn/gd/guangdonglueying/20260825/t20260825_527790368.shtml": {
     "title": "广州市城规公司项目入选省级创新案例",
@@ -4649,7 +4649,7 @@
     "firstSeenAt": "2026-08-25T01:09:40.109Z",
     "lastSeenAt": "2026-08-25T01:09:40.109Z",
     "summary": "广州市城规公司项目入选省级创新案例；广州市政策动向，分行需关注落地机会",
-    "ai_relevant": false
+    "ai_relevant": true
   },
   "https://www.cnr.cn/gd/meiliguangdong/20260825/t20260825_527790353.shtml": {
     "title": "文脉赓续古村落 数字赋能乡土情",
@@ -4663,7 +4663,7 @@
     "firstSeenAt": "2026-08-25T01:09:40.109Z",
     "lastSeenAt": "2026-08-25T01:09:40.109Z",
     "summary": "文脉赓续古村落 数字赋能乡土情；广州市政策动向，分行需关注落地机会",
-    "ai_relevant": false
+    "ai_relevant": true
   },
   "https://www.investing.com/news/company-news/arb-fy26-slides-margin-recovery-lifts-h2-profit-despite-sales-decline-93CH-4874375": {
     "title": "ARB FY26 slides: margin recovery lifts H2 profit despite sales decline",
@@ -5419,7 +5419,7 @@
     "firstSeenAt": "2026-08-25T01:33:56.347Z",
     "lastSeenAt": "2026-08-25T01:33:56.347Z",
     "summary": "水库移民政策实施二十年 广州水库移民实现幸福跨越；广州市政策动向，分行需关注落地机会",
-    "ai_relevant": false
+    "ai_relevant": true
   },
   "https://economy.southcn.com/node_71505a4d28/de38af5865.shtml": {
     "title": "科创者（KCZ）品牌战略升维：从“高端智能窗帘”到“全屋AI智能窗帘专家”",
@@ -5433,7 +5433,7 @@
     "firstSeenAt": "2026-08-25T01:33:56.347Z",
     "lastSeenAt": "2026-08-25T01:33:56.347Z",
     "summary": "科创者（KCZ）品牌战略升维：从“高端智能窗帘”到“全屋AI智能窗帘专家”；广州市政策动向，分行需关注落地机会",
-    "ai_relevant": false
+    "ai_relevant": true
   },
   "https://economy.southcn.com/node_c41bb0e5e3/9f162f3814.shtml": {
     "title": "友邦人寿2026年上半年业绩稳健增长，多项核心能力持续提升",
@@ -5447,7 +5447,7 @@
     "firstSeenAt": "2026-08-25T01:33:56.347Z",
     "lastSeenAt": "2026-08-25T01:33:56.347Z",
     "summary": "友邦人寿2026年上半年业绩稳健增长，多项核心能力持续提升；广州市政策动向，分行需关注落地机会",
-    "ai_relevant": false
+    "ai_relevant": true
   },
   "https://news.southcn.com/node_810c33d731/a22199607f.shtml": {
     "title": "中国牛，特别牛！中国奶牛“能力值”高起来了",
@@ -5461,7 +5461,7 @@
     "firstSeenAt": "2026-08-25T01:33:56.347Z",
     "lastSeenAt": "2026-08-25T01:33:56.347Z",
     "summary": "中国牛，特别牛！中国奶牛“能力值”高起来了；广州市政策动向，分行需关注落地机会",
-    "ai_relevant": false
+    "ai_relevant": true
   },
   "https://economy.southcn.com/node_c41bb0e5e3/b8fc1a5b0e.shtml": {
     "title": "唯品会年度特卖大会高潮期开幕：限量爆款低至85折，大牌狂秒年度低价",
@@ -5475,7 +5475,7 @@
     "firstSeenAt": "2026-08-25T01:33:56.347Z",
     "lastSeenAt": "2026-08-25T01:33:56.347Z",
     "summary": "唯品会年度特卖大会高潮期开幕：限量爆款低至85折，大牌狂秒年度低价；广州市政策动向，分行需关注落地机会",
-    "ai_relevant": false
+    "ai_relevant": true
   },
   "https://news.southcn.com/node_54a44f01a2/ff6c901b40.shtml": {
     "title": "249项标准，39张认证，广州书写粤港澳大湾区“软联通”新篇章",
@@ -5489,7 +5489,7 @@
     "firstSeenAt": "2026-08-25T01:33:56.347Z",
     "lastSeenAt": "2026-08-25T01:33:56.347Z",
     "summary": "249项标准，39张认证，广州书写粤港澳大湾区“软联通”新篇章；广州市政策动向，分行需关注落地机会",
-    "ai_relevant": false
+    "ai_relevant": true
   },
   "https://news.southcn.com/node_52c906c8ec/c943bcf5d4.shtml": {
     "title": "助力粤港澳大湾区清洁能源建设 国内最大换流站导管架发运",
@@ -5503,7 +5503,7 @@
     "firstSeenAt": "2026-08-25T01:33:56.347Z",
     "lastSeenAt": "2026-08-25T01:33:56.347Z",
     "summary": "助力粤港澳大湾区清洁能源建设 国内最大换流站导管架发运；广州市政策动向，分行需关注落地机会",
-    "ai_relevant": false
+    "ai_relevant": true
   },
   "https://www.cnbc.com/2026/08/24/trump-iran-economy-sanctions-china-bessent.html": {
     "title": "Trump admin unveils anti-Iran global sanctions plan, signals China not exempt",
@@ -5923,7 +5923,7 @@
     "firstSeenAt": "2026-08-25T01:46:06.393Z",
     "lastSeenAt": "2026-08-25T01:46:06.393Z",
     "summary": "粤港澳大湾区“一城一策”自然教育“各展所长”；广州市政策动向，分行需关注落地机会",
-    "ai_relevant": false
+    "ai_relevant": true
   },
   "https://news.southcn.com/node_54a44f01a2/daf9d061cd.shtml": {
     "title": "4月25日截止！2026年粤港澳大湾区律师执业考试即将开始报名",
@@ -5951,7 +5951,7 @@
     "firstSeenAt": "2026-08-25T01:46:06.393Z",
     "lastSeenAt": "2026-08-25T01:46:06.393Z",
     "summary": "评论｜新能源渗透率突破65%之后，必须正视两个问题；广州市政策动向，分行需关注落地机会",
-    "ai_relevant": false
+    "ai_relevant": true
   },
   "https://economy.southcn.com/node_b416e11004/6d3b1d1687.shtml": {
     "title": "荣耀Robot Phone 9999元起售，全球首款机器人手机落地",
@@ -5965,7 +5965,7 @@
     "firstSeenAt": "2026-08-25T01:46:06.393Z",
     "lastSeenAt": "2026-08-25T01:46:06.393Z",
     "summary": "荣耀Robot Phone 9999元起售，全球首款机器人手机落地；广州市政策动向，分行需关注落地机会",
-    "ai_relevant": false
+    "ai_relevant": true
   },
   "https://economy.southcn.com/node_b416e11004/3b69f6215a.shtml": {
     "title": "评论｜造车，技术可以快，品质必须稳",
@@ -5979,7 +5979,7 @@
     "firstSeenAt": "2026-08-25T01:46:06.393Z",
     "lastSeenAt": "2026-08-25T01:46:06.393Z",
     "summary": "评论｜造车，技术可以快，品质必须稳；广州市政策动向，分行需关注落地机会",
-    "ai_relevant": false
+    "ai_relevant": true
   },
   "https://news.southcn.com/node_812903b83a/ca7522351b.shtml": {
     "title": "WAIC 2026今天落幕，AI走向物理世界，汽车成核心试验场",
@@ -5993,7 +5993,7 @@
     "firstSeenAt": "2026-08-25T01:46:06.393Z",
     "lastSeenAt": "2026-08-25T01:46:06.393Z",
     "summary": "WAIC 2026今天落幕，AI走向物理世界，汽车成核心试验场；广州市政策动向，分行需关注落地机会",
-    "ai_relevant": false
+    "ai_relevant": true
   },
   "https://www.gz.gov.cn/zwgk/zcjd/zcjdhz/mtfbhjd/content/post_10977094.html": {
     "title": "【媒体解读】盘活“沉睡”车位 破解停车难题——广州将推动符合条件的国家机关停车场向社会开放",
@@ -6007,7 +6007,7 @@
     "firstSeenAt": "2026-08-25T04:52:06.949Z",
     "lastSeenAt": "2026-08-25T04:52:06.949Z",
     "summary": "盘活“沉睡”车位 破解停车难题——广州将推动符合条件的国家机关停车场向社会开放；广州市政策动向，分行需关注落地机会",
-    "ai_relevant": false
+    "ai_relevant": true
   },
   "https://www.cnbc.com/2026/08/25/gold-hits-over-three-month-high-on-dollar-weakness-treasury-bond-buyback-plans.html": {
     "title": "Gold hits over three-month high on dollar weakness, Treasury bond buyback plans",
@@ -7196,7 +7196,7 @@
     "firstSeenAt": "2026-08-25T04:52:06.949Z",
     "lastSeenAt": "2026-08-25T04:52:06.949Z",
     "summary": "科技周刊 | 广州科学家，在南海“种”珊瑚（与银行零售业务关联弱）",
-    "ai_relevant": false
+    "ai_relevant": true
   },
   "https://news.dayoo.com/guangzhou/202608/25/139995_54994637.htm": {
     "title": "珍宝汇聚广州“城脉千年”专题展，丝缕玉衣故宫精品等你来",
@@ -7224,7 +7224,7 @@
     "firstSeenAt": "2026-08-25T04:52:06.949Z",
     "lastSeenAt": "2026-08-25T04:52:06.949Z",
     "summary": "珠三角区域（广州）退役军人就业联盟提供跨区域就业服务（与银行零售业务关联弱）",
-    "ai_relevant": false
+    "ai_relevant": true
   },
   "https://news.dayoo.com/guangzhou/202608/25/139995_54994641.htm": {
     "title": "2026全球高校校媒精英特训营开幕 开启深度走读与创作之旅",
@@ -7238,7 +7238,7 @@
     "firstSeenAt": "2026-08-25T04:52:06.949Z",
     "lastSeenAt": "2026-08-25T04:52:06.949Z",
     "summary": "2026全球高校校媒精英特训营开幕 开启深度走读与创作之旅；广州市政策动向，分行需关注落地机会",
-    "ai_relevant": false
+    "ai_relevant": true
   },
   "https://economy.southcn.com/node_b416e11004/991c84c009.shtml": {
     "title": "领航眼健康 点亮新“视”代丨岭南眼健康生态港首层耀世启航",
@@ -7252,7 +7252,7 @@
     "firstSeenAt": "2026-08-25T04:52:06.949Z",
     "lastSeenAt": "2026-08-25T04:52:06.949Z",
     "summary": "领航眼健康 点亮新“视”代丨岭南眼健康生态港首层耀世启航；广州市政策动向，分行需关注落地机会",
-    "ai_relevant": false
+    "ai_relevant": true
   },
   "https://economy.southcn.com/node_b416e11004/171f672515.shtml": {
     "title": "以“换挡”蓄能，在春耕时节向下深耕——广百股份2026年一季报解读",
@@ -7266,7 +7266,7 @@
     "firstSeenAt": "2026-08-25T04:52:06.949Z",
     "lastSeenAt": "2026-08-25T04:52:06.949Z",
     "summary": "以“换挡”蓄能，在春耕时节向下深耕——广百股份2026年一季报解读；广州市政策动向，分行需关注落地机会",
-    "ai_relevant": false
+    "ai_relevant": true
   },
   "https://economy.southcn.com/node_b416e11004/7a0437cd0f.shtml": {
     "title": "美的置业：重组后首年实现营收净利双增",
@@ -7280,7 +7280,7 @@
     "firstSeenAt": "2026-08-25T04:52:06.949Z",
     "lastSeenAt": "2026-08-25T04:52:06.949Z",
     "summary": "美的置业：重组后首年实现营收净利双增；广州市政策动向，分行需关注落地机会",
-    "ai_relevant": false
+    "ai_relevant": true
   },
   "https://economy.southcn.com/node_d5a62a3867/ba9d0f595d.shtml": {
     "title": "多学科权威齐聚广州 共绘抗衰老研究产学研创新蓝图",
@@ -7294,7 +7294,7 @@
     "firstSeenAt": "2026-08-25T04:52:06.949Z",
     "lastSeenAt": "2026-08-25T04:52:06.949Z",
     "summary": "多学科权威齐聚广州 共绘抗衰老研究产学研创新蓝图；广州市政策动向，分行需关注落地机会",
-    "ai_relevant": false
+    "ai_relevant": true
   },
   "https://economy.southcn.com/node_d5a62a3867/1776ae6677.shtml": {
     "title": "中西合璧绘就健康蓝图 2025 ZAODX早筛大会在穗举行",
@@ -7308,7 +7308,7 @@
     "firstSeenAt": "2026-08-25T04:52:06.949Z",
     "lastSeenAt": "2026-08-25T04:52:06.949Z",
     "summary": "中西合璧绘就健康蓝图 2025 ZAODX早筛大会在穗举行；广州市政策动向，分行需关注落地机会",
-    "ai_relevant": false
+    "ai_relevant": true
   },
   "https://economy.southcn.com/node_d5a62a3867/99b93e520a.shtml": {
     "title": "破解珠江流域碳循环季节密码 为筑牢湾区生态屏障提供新策略",
@@ -7322,7 +7322,7 @@
     "firstSeenAt": "2026-08-25T04:52:06.949Z",
     "lastSeenAt": "2026-08-25T04:52:06.949Z",
     "summary": "破解珠江流域碳循环季节密码 为筑牢湾区生态屏障提供新策略；广州市政策动向，分行需关注落地机会",
-    "ai_relevant": false
+    "ai_relevant": true
   },
   "https://www.cnr.cn/gd/fxgz/20260825/t20260825_527790858.shtml": {
     "title": "第十届广州老博会规模与实效双创新高",
@@ -7336,7 +7336,7 @@
     "firstSeenAt": "2026-08-25T04:52:06.949Z",
     "lastSeenAt": "2026-08-25T04:52:06.949Z",
     "summary": "第十届广州老博会规模与实效双创新高；广州市政策动向，分行需关注落地机会",
-    "ai_relevant": false
+    "ai_relevant": true
   },
   "https://www.cnbc.com/2026/08/25/us-iran-secondary-sanctions-china-india-uae-hormuz-trade-.html": {
     "title": "Trump targets Iran’s trade lifelines — here are the countries most exposed",
@@ -8134,7 +8134,7 @@
     "firstSeenAt": "2026-08-25T07:11:31.892Z",
     "lastSeenAt": "2026-08-25T07:11:31.892Z",
     "summary": "首届流行音乐创作大赛正式发布，将评选产生46首歌曲；广州市政策动向，分行需关注落地机会",
-    "ai_relevant": false
+    "ai_relevant": true
   },
   "https://news.dayoo.com/guangzhou/202608/25/139995_54994648.htm": {
     "title": "涵盖八大维度 广州发布推动音乐产业高质量发展的若干措施",
@@ -8148,7 +8148,7 @@
     "firstSeenAt": "2026-08-25T07:11:31.892Z",
     "lastSeenAt": "2026-08-25T07:11:31.892Z",
     "summary": "涵盖八大维度 广州发布推动音乐产业高质量发展的若干措施（与银行零售业务关联弱）",
-    "ai_relevant": false
+    "ai_relevant": true
   },
   "https://news.dayoo.com/guangzhou/202608/25/139995_54994650.htm": {
     "title": "均衡编班结果如何查询？广州市教育局回应",
@@ -8162,7 +8162,7 @@
     "firstSeenAt": "2026-08-25T07:11:31.892Z",
     "lastSeenAt": "2026-08-25T07:11:31.892Z",
     "summary": "均衡编班结果如何查询？广州市教育局回应（与银行零售业务关联弱）",
-    "ai_relevant": false
+    "ai_relevant": true
   },
   "https://news.dayoo.com/guangzhou/202608/25/139995_54994642.htm": {
     "title": "地铁可直达！广州音乐公园今天开园",
@@ -8190,7 +8190,7 @@
     "firstSeenAt": "2026-08-25T07:11:31.892Z",
     "lastSeenAt": "2026-08-25T07:11:31.892Z",
     "summary": "荣耀CEO李健：打通“三个闭环”，让AI走进生活；广州市政策动向，分行需关注落地机会",
-    "ai_relevant": false
+    "ai_relevant": true
   },
   "https://economy.southcn.com/node_d5a62a3867/a2b19372c2.shtml": {
     "title": "“应用场景支持企业库”首批入库单位完成签约，助力“无废湾区”建设",
@@ -8204,7 +8204,7 @@
     "firstSeenAt": "2026-08-25T07:11:31.892Z",
     "lastSeenAt": "2026-08-25T07:11:31.892Z",
     "summary": "“应用场景支持企业库”首批入库单位完成签约，助力“无废湾区”建设；广州市政策动向，分行需关注落地机会",
-    "ai_relevant": false
+    "ai_relevant": true
   },
   "https://economy.southcn.com/node_17f55ea8c0/727baa1e49.shtml": {
     "title": "“赶集”新花样！这群技工学子太会“整活”了",
@@ -8218,7 +8218,7 @@
     "firstSeenAt": "2026-08-25T07:11:31.892Z",
     "lastSeenAt": "2026-08-25T07:11:31.892Z",
     "summary": "“赶集”新花样！这群技工学子太会“整活”了；广州市政策动向，分行需关注落地机会",
-    "ai_relevant": false
+    "ai_relevant": true
   },
   "https://economy.southcn.com/node_17f55ea8c0/c30523ec8c.shtml": {
     "title": "佛山“十四五” | 数读成绩单，亮点满满！",
@@ -8232,7 +8232,7 @@
     "firstSeenAt": "2026-08-25T07:11:31.892Z",
     "lastSeenAt": "2026-08-25T07:11:31.892Z",
     "summary": "佛山“十四五” | 数读成绩单，亮点满满！；广州市政策动向，分行需关注落地机会",
-    "ai_relevant": false
+    "ai_relevant": true
   },
   "https://economy.southcn.com/node_17f55ea8c0/0855bdfc55.shtml": {
     "title": "国企担当·“百千万工程”之岭南答卷｜从田间到餐桌：消费帮扶如何用“一碗好面”打通乡村振兴之路",
@@ -8246,7 +8246,7 @@
     "firstSeenAt": "2026-08-25T07:11:31.892Z",
     "lastSeenAt": "2026-08-25T07:11:31.892Z",
     "summary": "国企担当·“百千万工程”之岭南答卷｜从田间到餐桌：消费帮扶如何用“一碗好面”打通…；分行零售客群经营相关",
-    "ai_relevant": false
+    "ai_relevant": true
   },
   "https://economy.southcn.com/node_17f55ea8c0/f059d34116.shtml": {
     "title": "国企担当·“百千万工程”之岭南答卷｜四百余年老字号驶入智造新赛道，致美斋阳江基地激活县域发展新动能",
@@ -8260,7 +8260,7 @@
     "firstSeenAt": "2026-08-25T07:11:31.892Z",
     "lastSeenAt": "2026-08-25T07:11:31.892Z",
     "summary": "国企担当·“百千万工程”之岭南答卷｜四百余年老字号驶入智造新赛道，致美斋阳江基地…；广州市政策动向，分行需关注落地机会",
-    "ai_relevant": false
+    "ai_relevant": true
   },
   "https://finance.sina.com.cn/roll/2026-08-25/doc-inippmen9648677.shtml": {
     "title": "高凯技术登陆科创板 系精密流体控制领域研发商",
@@ -9741,7 +9741,7 @@
     "firstSeenAt": "2026-08-25T12:32:07.216Z",
     "lastSeenAt": "2026-08-25T12:32:07.216Z",
     "summary": "广州市政府批复国际商业港首开区控制性详细规划；广州商业地产新增长极，分行可跟进片区开发贷与商业体按揭业务。",
-    "ai_relevant": false
+    "ai_relevant": true
   },
   "https://www.gz.gov.cn/zwgk/zcjd/ytddzc/content/post_10978312.html": {
     "title": "【一图读懂】一图读懂16届130次市政府常务会议",
@@ -10581,7 +10581,7 @@
     "firstSeenAt": "2026-08-25T12:32:07.216Z",
     "lastSeenAt": "2026-08-25T12:32:07.216Z",
     "summary": "华南首座SKP效果图亮相马场顶奢商场；广州高端消费再升级，分行私行可关注高端商圈信用卡/财富客户拓展机会。",
-    "ai_relevant": false
+    "ai_relevant": true
   },
   "https://news.dayoo.com/guangzhou/202608/25/139995_54995045.htm": {
     "title": "超燃！直击广州公安巡特警实战练兵现场",
@@ -10679,7 +10679,7 @@
     "firstSeenAt": "2026-08-25T12:32:07.216Z",
     "lastSeenAt": "2026-08-25T12:32:07.216Z",
     "summary": "1-7月我国全行业对外直接投资6845.1亿元；企业出海规模扩张，分行跨境投行/外汇业务空间持续打开。",
-    "ai_relevant": false
+    "ai_relevant": true
   },
   "https://www.investing.com/news/stock-market-news/raymond-james-upgrades-amd-sees-201-billion-server-cpu-market-by-2030-4875253": {
     "title": "Raymond James upgrades AMD, sees $201 billion server CPU market by 2030",
@@ -11043,7 +11043,7 @@
     "publishedAt": "2026-08-25T00:00:00.000Z",
     "firstSeenAt": "2026-08-25T12:41:45.612Z",
     "lastSeenAt": "2026-08-25T12:41:45.612Z",
-    "ai_relevant": false
+    "ai_relevant": true
   },
   "https://news.dayoo.com/guangzhou/202608/25/139995_54994988.htm": {
     "title": "港澳媒体走访穗企，探寻“十五五”协同机遇",
@@ -11056,7 +11056,7 @@
     "publishedAt": "2026-08-25T00:00:00.000Z",
     "firstSeenAt": "2026-08-25T12:41:45.612Z",
     "lastSeenAt": "2026-08-25T12:41:45.612Z",
-    "ai_relevant": false
+    "ai_relevant": true
   },
   "https://news.dayoo.com/guangzhou/202608/25/139995_54994962.htm": {
     "title": "官宣！广州国际商业港首开区北地块正式挂牌",
@@ -11069,7 +11069,7 @@
     "publishedAt": "2026-08-25T00:00:00.000Z",
     "firstSeenAt": "2026-08-25T12:41:45.612Z",
     "lastSeenAt": "2026-08-25T12:41:45.612Z",
-    "ai_relevant": false
+    "ai_relevant": true
   },
   "https://news.dayoo.com/guangzhou/202608/25/139995_54994960.htm": {
     "title": "“甲醛白菜”风波追踪：广州江南市场未发现问题白菜",
@@ -11082,7 +11082,7 @@
     "publishedAt": "2026-08-25T00:00:00.000Z",
     "firstSeenAt": "2026-08-25T12:41:45.612Z",
     "lastSeenAt": "2026-08-25T12:41:45.612Z",
-    "ai_relevant": false
+    "ai_relevant": true
   },
   "https://news.dayoo.com/guangzhou/202608/25/139995_54994946.htm": {
     "title": "广州音乐公园今日开园！建设运营规划发布：赋能万亿级音乐产业",
