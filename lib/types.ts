@@ -96,8 +96,15 @@ export interface MarketCard {
   sectors: string[];
   /** 口播稿（纯口语）：涨跌概况+关键板块浓缩，≤120 字，可直接朗读。 */
   spoken?: string;
-  /** 信息来源链接（点击可跳转溯源），至多 3 条；由 daily.ts 从原始输入条目附带，非 LLM 生成。 */
-  sources?: { url: string; title: string }[];
+  /** 卡脚小字备注（2026-08-25 用户拍板，替代来源链接按钮）：信息来源网站 + 数据时间 + 交叉验证网站。 */
+  meta?: {
+    /** 信息来源网站（该市场主源名，取自输入条目 source，非 LLM 生成） */
+    source: string;
+    /** 数据时间（该市场输入条目最新日期 YYYY-MM-DD） */
+    date: string;
+    /** 交叉验证网站（该市场第二独立源名） */
+    crossCheck: string;
+  };
 }
 
 /** 昨日股市复盘三卡（美股 / A股 / 港股）。 */

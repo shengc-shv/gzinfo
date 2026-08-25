@@ -20,12 +20,14 @@ import type { MarketCard, StockRecap } from "../types";
  * 的 stock_recap 字段（与 executive 共存于同一文件），SKIP_AI 重跑/发布复用零 LLM。
  */
 
-/** 单条市场输入（标题 + 摘要 + 源链接）。 */
+/** 单条市场输入（标题 + 摘要 + 源链接 + 发布日期）。 */
 export interface StockItem {
   title: string;
   summary?: string;
   url?: string;
   source?: string;
+  /** 发布日期 YYYY-MM-DD（A股/港股=爬虫标注；美股=RSS pubDate 归一化） */
+  publishedAt?: string;
 }
 
 export interface StockRecapInput {
@@ -68,24 +70,20 @@ function toPayloadItems(items: StockItem[]): Array<{ title: string; summary: str
   }));
 }
 
-/** 从原始输入条目抽取可点击来源（去重、至多 3 条），供卡片「溯源」按钮使用。
- *  每源至多 2 条：保证交叉验证的两个源（如 A股=东财+新浪）在按钮上都可见，
- *  避免单个源条目多时把另一源挤掉。 */
-function toSources(items: StockItem[]): { url: string; title: string }[] {
-  const seen = new Set<string>();
-  const perSource = new Map<string, number>();
-  const out: { url: string; title: string }[] = [];
-  for (const it of items) {
-    const url = (it.url ?? "").trim();
-    if (!url || seen.has(url)) continue;
-    const src = (it.source ?? "未知").trim() || "未知";
-    if ((perSource.get(src) ?? 0) >= 2) continue;
-    seen.add(url);
-    perSource.set(src, (perSource.get(src) ?? 0) + 1);
-    out.push({ url, title: (it.title ?? "").trim() || url });
-    if (out.length >= 3) break;
-  }
-  return out;
+/** 卡脚小字备注：来源网站（首个源名）+ 交叉验证网站（第二源名）+ 数据时间（条目最新日期）。
+ *  全部取自输入条目的真实字段，非 LLM 生成；交叉验证源 = 该市场第二个独立源（如 A股=东方财富→新浪财经）。 */
+function buildMeta(items: StockItem[]): { source: string; date: string; crossCheck: string } {
+  const srcs = [...new Set(items.map((i) => (i.source ?? "").trim()).filter(Boolean))];
+  const dates = items
+    .map((i) => i.publishedAt ?? "")
+    .filter((d) => /^\d{4}-\d{2}-\d{2}/.test(d))
+    .sort()
+    .reverse();
+  return {
+    source: srcs[0] ?? "",
+    crossCheck: srcs[1] ?? "",
+    date: dates[0] ?? "",
+  };
 }
 
 function normalizeCard(parsed: unknown): MarketCard {
@@ -131,10 +129,10 @@ export async function generateStockRecap(input: StockRecapInput): Promise<StockR
       aShare: normalizeCard(parsed.aShare),
       hk: normalizeCard(parsed.hk),
     };
-    // 附带真实来源链接（来源来自原始输入条目，非 LLM 臆造；SKIP_AI 复用 store 时一并带回）
-    recap.us.sources = toSources(input.us);
-    recap.aShare.sources = toSources(input.aShare);
-    recap.hk.sources = toSources(input.hk);
+    // 附带卡脚小字备注（来源网站/交叉验证网站/数据时间取自输入条目真实字段，非 LLM 臆造；SKIP_AI 复用 store 时一并带回）
+    recap.us.meta = buildMeta(input.us);
+    recap.aShare.meta = buildMeta(input.aShare);
+    recap.hk.meta = buildMeta(input.hk);
     // 三卡全空（极少：三市场均无输入）→ 视为生成失败，页面不渲染该区
     const empty =
       !recap.us.overview && !recap.us.spoken && recap.us.sectors.length === 0 &&

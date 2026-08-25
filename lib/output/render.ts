@@ -1021,18 +1021,19 @@ function renderStockRecap(report: DailyReport): string {
   const cardHtml = cards
     .map(({ label, cls, card }) => {
       const empty = !card.overview && !card.spoken && card.sectors.length === 0;
-      const srcMarks =
-        card.sources && card.sources.length > 0
-          ? ` <span class="insight-srcs">${card.sources
-              .slice(0, 3)
-              .map(
-                (s, i) =>
-                  `<a class="insight-src" href="${escapeHtml(s.url)}" target="_blank" rel="noopener" title="${escapeHtml(s.title || "来源" + (i + 1))}" aria-label="来源${i + 1}">${["①", "②", "③", "④", "⑤"][i]}</a>`,
-              )
-              .join("")}</span>`
+      // 卡脚小字备注：来源网站 + 数据时间 + 交叉验证网站（2026-08-25 用户拍板替代来源链接按钮）
+      const meta =
+        card.meta && (card.meta.source || card.meta.date || card.meta.crossCheck)
+          ? `<p class="stock-meta">${[
+              card.meta.source ? `来源：${escapeHtml(card.meta.source)}` : "",
+              card.meta.date ? escapeHtml(card.meta.date) : "",
+              card.meta.crossCheck ? `交叉验证：${escapeHtml(card.meta.crossCheck)}` : "",
+            ]
+              .filter(Boolean)
+              .join(" · ")}</p>`
           : "";
       if (empty) {
-        return `<li class="stock-card stock-card--${cls}"><header class="stock-card-head">${label}${srcMarks}</header><p class="stock-empty">暂无数据</p></li>`;
+        return `<li class="stock-card stock-card--${cls}"><header class="stock-card-head">${label}</header><p class="stock-empty">暂无数据</p>${meta}</li>`;
       }
       const overview = card.overview || card.spoken || "";
       const sectors = card.sectors.length
@@ -1041,9 +1042,10 @@ function renderStockRecap(report: DailyReport): string {
             .join("")}</ul></div>`
         : "";
       return `<li class="stock-card stock-card--${cls}">
-        <header class="stock-card-head">${label}${srcMarks}</header>
+        <header class="stock-card-head">${label}</header>
         ${overview ? `<p class="stock-overview">${escapeHtml(overview)}</p>` : ""}
         ${sectors}
+        ${meta}
       </li>`;
     })
     .join("");

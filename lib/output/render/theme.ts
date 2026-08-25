@@ -325,6 +325,12 @@ export const THEME_CSS = `
     border-radius: 2px; background: color-mix(in srgb, var(--c-trading) 55%, var(--muted));
   }
   .stock-empty { margin: 0; font-size: 0.76rem; color: var(--muted); }
+  /* 卡脚小字备注：来源网站 + 数据时间 + 交叉验证网站（2026-08-25 替代来源链接按钮） */
+  .stock-meta {
+    margin: 0.2rem 0 0; font-size: 0.66rem; color: var(--muted);
+    line-height: 1.5; letter-spacing: 0.01em;
+    border-top: 1px dashed var(--rule); padding-top: 0.35rem;
+  }
   /* 右侧渐隐遮罩：暗示右侧还有更多卡片（移动端横滑时可见） */
   .stock-must::after {
     content: ""; position: absolute; top: 1.7rem; right: 0; bottom: 0.5rem;

@@ -679,11 +679,22 @@ async function main() {
   // 非 SKIP_AI：合并三市场输入 → generateStockRecap → 写 store.json（stock_recap 字段）；
   // SKIP_AI：仅从 store.json 复用，零 LLM。失败均优雅降级（页面不渲染该区）。
   {
-    const toItem = (it: { title?: string; summary?: string; url?: string; source?: string }): StockItem => ({
+    const toItem = (it: {
+      title?: string;
+      summary?: string;
+      url?: string;
+      source?: string;
+      publishedAt?: Date | string;
+    }): StockItem => ({
       title: it.title || "无标题",
       summary: it.summary || "",
       url: it.url || "",
       source: it.source || "",
+      publishedAt: it.publishedAt
+        ? typeof it.publishedAt === "string"
+          ? it.publishedAt.slice(0, 10)
+          : new Date(it.publishedAt).toISOString().slice(0, 10)
+        : undefined,
     });
     // 美股：用 fetchAll 原始快照（未受全局 2 天窗口过滤），本地 4 天窗口兜底防陈旧。
     // 保证周一/节后首跑也能取到「上一美股交易日」的收盘复盘（北京时间抓取日凌晨发布）。
