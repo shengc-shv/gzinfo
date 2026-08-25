@@ -12384,5 +12384,53 @@
     "publishedAt": "2026-08-25T14:55:00.000Z",
     "firstSeenAt": "2026-08-25T15:04:19.125Z",
     "lastSeenAt": "2026-08-25T15:04:19.125Z"
+  },
+  "https://www.investing.com/news/company-news/abcellera-biologics-stock-hits-52week-high-at-1215-usd-93CH-4875665": {
+    "title": "Abcellera Biologics stock hits 52-week high at 12.15 USD",
+    "url": "https://www.investing.com/news/company-news/abcellera-biologics-stock-hits-52week-high-at-1215-usd-93CH-4875665",
+    "sourceId": "investing-news",
+    "source": "Investing.com News",
+    "category": "stocks",
+    "subcategory": "us",
+    "excerpt": "",
+    "publishedAt": "2026-08-25T15:01:29.000Z",
+    "firstSeenAt": "2026-08-25T15:06:29.775Z",
+    "lastSeenAt": "2026-08-25T15:06:29.775Z"
+  },
+  "https://www.investing.com/news/insider-trading-news/japan-post-holdings-a-10-owner-sells-15m-in-aflac-stock-93CH-4875661": {
+    "title": "Japan Post Holdings, a 10% owner, sells $1.5m in Aflac stock",
+    "url": "https://www.investing.com/news/insider-trading-news/japan-post-holdings-a-10-owner-sells-15m-in-aflac-stock-93CH-4875661",
+    "sourceId": "investing-news",
+    "source": "Investing.com News",
+    "category": "stocks",
+    "subcategory": "us",
+    "excerpt": "",
+    "publishedAt": "2026-08-25T15:01:06.000Z",
+    "firstSeenAt": "2026-08-25T15:06:29.775Z",
+    "lastSeenAt": "2026-08-25T15:06:29.775Z"
+  },
+  "https://www.investing.com/news/stock-market-news/norway-stocks-higher-at-close-of-trade-oslo-obx-up-031-4875656": {
+    "title": "Norway stocks higher at close of trade; Oslo OBX up 0.31%",
+    "url": "https://www.investing.com/news/stock-market-news/norway-stocks-higher-at-close-of-trade-oslo-obx-up-031-4875656",
+    "sourceId": "investing-news",
+    "source": "Investing.com News",
+    "category": "stocks",
+    "subcategory": "us",
+    "excerpt": "",
+    "publishedAt": "2026-08-25T14:55:32.000Z",
+    "firstSeenAt": "2026-08-25T15:06:29.775Z",
+    "lastSeenAt": "2026-08-25T15:06:29.775Z"
+  },
+  "https://finance.eastmoney.com/a/202608253853407744.html": {
+    "title": "加拿大将美国钢铁产品的关税从25%提高到50%",
+    "url": "https://finance.eastmoney.com/a/202608253853407744.html",
+    "sourceId": "eastmoney-stock",
+    "source": "东方财富",
+    "category": "stocks",
+    "subcategory": "a-share",
+    "excerpt": "",
+    "publishedAt": "2026-08-25T00:00:00.000Z",
+    "firstSeenAt": "2026-08-25T15:06:29.775Z",
+    "lastSeenAt": "2026-08-25T15:06:29.775Z"
   }
 }

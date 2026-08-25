@@ -3704,11 +3704,11 @@
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "stocks",
-      "summary": "宇树科技较首日开盘蒸发2000亿市值；A股市场动态",
+      "summary": "（单股新闻已过滤：非巨头/非广州本地大企业）",
       "source": "东方财富",
       "fetchedToday": true,
       "subcategory": "a-share",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "eastmoney-stock",
@@ -3717,11 +3717,11 @@
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "stocks",
-      "summary": "被反超！宇树科技跌至全球人形机器人市值榜第二；A股市场动态",
+      "summary": "（单股新闻已过滤：非巨头/非广州本地大企业）",
       "source": "东方财富",
       "fetchedToday": true,
       "subcategory": "a-share",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "eastmoney-stock",
@@ -4588,11 +4588,11 @@
       "excerpt": "",
       "publishedAt": "2026-08-25T00:00:00.000Z",
       "category": "stocks",
-      "summary": "麦科医药-B(02335)存仓市值总计5.21亿港元 股东将1773.41万股股…；港股市场动态",
+      "summary": "（单股新闻已过滤：非巨头/非广州本地大企业）",
       "source": "新浪财经·港股",
       "fetchedToday": true,
       "subcategory": "hk",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-hk-stock",
@@ -4757,11 +4757,11 @@
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "stocks",
-      "summary": "里昂：升瑞声科技(02018)目标价至54.4港元 维持“高度确信跑赢大市”评级；港股市场动态",
+      "summary": "（单股新闻已过滤：非巨头/非广州本地大企业）",
       "source": "新浪财经·港股",
       "fetchedToday": true,
       "subcategory": "hk",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-hk-stock",
@@ -5861,11 +5861,11 @@
       "excerpt": "",
       "publishedAt": "2026-08-25T00:00:00.000Z",
       "category": "finance",
-      "summary": "重庆银行公司银行部总经理王翔：零售贷款资产质量有望得到持续改善；对分行财富/信贷/客群业务有宏观参考",
+      "summary": "（单机构新闻已过滤：非六大行/广州银行的单机构动态无参考意义）",
       "source": "新浪财经·银行频道",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "eastmoney-stock",
@@ -7824,11 +7824,11 @@
       "excerpt": "",
       "publishedAt": "2026-08-25T00:00:00.000Z",
       "category": "stocks",
-      "summary": "净利润暴增46 %，石头科技20cm涨停！科创人工；A股市场动态",
+      "summary": "（单股新闻已过滤：非巨头/非广州本地大企业）",
       "source": "新浪财经·A股",
       "fetchedToday": true,
       "subcategory": "a-share",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-a-stock",
@@ -7863,11 +7863,11 @@
       "excerpt": "",
       "publishedAt": "2026-08-25T00:00:00.000Z",
       "category": "stocks",
-      "summary": "富瑞：上调瑞声科技(02018)目标价至43港元 重申“持有”评级；港股市场动态",
+      "summary": "（单股新闻已过滤：非巨头/非广州本地大企业）",
       "source": "新浪财经·港股",
       "fetchedToday": true,
       "subcategory": "hk",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-hk-stock",
@@ -9238,11 +9238,11 @@
       "excerpt": "",
       "publishedAt": "2026-08-25T00:00:00.000Z",
       "category": "stocks",
-      "summary": "晨星下调华润建材科技合理估值至1.10港元，H1收入下滑15%；建材周期承压，分行基建/工程贷客户需关注下游需求。",
+      "summary": "（单股新闻已过滤：非巨头/非广州本地大企业）",
       "source": "新浪财经·港股",
       "fetchedToday": true,
       "subcategory": "hk",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-hk-stock",
@@ -11444,6 +11444,107 @@
       "source": "广州日报·大洋网",
       "fetchedToday": true,
       "subcategory": "gz-media"
+    },
+    {
+      "sourceId": "hkex-stock",
+      "title": "Announcements and Notices - [Interim Results / Modified Report by Auditors]",
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0825/2026082502355.pdf",
+      "excerpt": "Announcements and Notices - [Interim Results / Modified Report by Auditors]",
+      "publishedAt": "2026-08-25T00:00:00.000Z",
+      "category": "stocks",
+      "source": "港交所披露易",
+      "fetchedToday": true,
+      "subcategory": "hk"
+    },
+    {
+      "sourceId": "stcn",
+      "title": "300498，上半年净利润亏损超43亿元",
+      "url": "https://www.stcn.com/article/detail/4121043.html",
+      "excerpt": "",
+      "publishedAt": "2026-08-25T14:59:00.000Z",
+      "category": "finance",
+      "source": "证券时报",
+      "fetchedToday": true,
+      "subcategory": "cn-finance"
+    },
+    {
+      "sourceId": "stcn",
+      "title": "深夜，油价大跌，黄金跳水！美半导体股拉升！霍尔木兹海峡，大消息",
+      "url": "https://www.stcn.com/article/detail/4121044.html",
+      "excerpt": "",
+      "publishedAt": "2026-08-25T14:56:00.000Z",
+      "category": "finance",
+      "source": "证券时报",
+      "fetchedToday": true,
+      "subcategory": "cn-finance"
+    },
+    {
+      "sourceId": "stcn",
+      "title": "葛卫东旗下期货公司炒股大赚！净利同比增长7188.06%",
+      "url": "https://www.stcn.com/article/detail/4121045.html",
+      "excerpt": "",
+      "publishedAt": "2026-08-25T14:55:00.000Z",
+      "category": "finance",
+      "source": "证券时报",
+      "fetchedToday": true,
+      "subcategory": "cn-finance"
+    },
+    {
+      "sourceId": "investing-news",
+      "title": "Abcellera Biologics stock hits 52-week high at 12.15 USD",
+      "url": "https://www.investing.com/news/company-news/abcellera-biologics-stock-hits-52week-high-at-1215-usd-93CH-4875665",
+      "excerpt": "",
+      "publishedAt": "2026-08-25T15:01:29.000Z",
+      "category": "stocks",
+      "subcategory": "us",
+      "source": "Investing.com News",
+      "tier": "T2",
+      "filterBucket": "daily",
+      "filterDimensions": [],
+      "fetchedToday": true
+    },
+    {
+      "sourceId": "investing-news",
+      "title": "Japan Post Holdings, a 10% owner, sells $1.5m in Aflac stock",
+      "url": "https://www.investing.com/news/insider-trading-news/japan-post-holdings-a-10-owner-sells-15m-in-aflac-stock-93CH-4875661",
+      "excerpt": "",
+      "publishedAt": "2026-08-25T15:01:06.000Z",
+      "category": "stocks",
+      "subcategory": "us",
+      "source": "Investing.com News",
+      "tier": "T2",
+      "filterBucket": "daily",
+      "filterDimensions": [],
+      "fetchedToday": true
+    },
+    {
+      "sourceId": "investing-news",
+      "title": "Norway stocks higher at close of trade; Oslo OBX up 0.31%",
+      "url": "https://www.investing.com/news/stock-market-news/norway-stocks-higher-at-close-of-trade-oslo-obx-up-031-4875656",
+      "excerpt": "",
+      "publishedAt": "2026-08-25T14:55:32.000Z",
+      "category": "stocks",
+      "subcategory": "us",
+      "source": "Investing.com News",
+      "tier": "T2",
+      "filterBucket": "daily",
+      "filterDimensions": [],
+      "fetchedToday": true
+    },
+    {
+      "sourceId": "eastmoney-stock",
+      "source": "东方财富",
+      "title": "加拿大将美国钢铁产品的关税从25%提高到50%",
+      "url": "https://finance.eastmoney.com/a/202608253853407744.html",
+      "excerpt": "",
+      "publishedAt": "2026-08-25T00:00:00.000Z",
+      "category": "stocks",
+      "summary": "",
+      "tier": "T2",
+      "filterBucket": "daily",
+      "filterDimensions": [],
+      "fetchedToday": true,
+      "subcategory": "a-share"
     }
   ]
 }
