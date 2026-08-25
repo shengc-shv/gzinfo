@@ -57,14 +57,24 @@ const QUOTE_API = "http://hq.sinajs.cn/list=";
 const KLINE_API =
   "https://money.finance.sina.com.cn/quotes_service/api/json_v2.php/CN_MarketData.getKLineData";
 
-/** 上一交易日（跳过周末；不含法定节假日，足够日常使用）。 */
+/** 本地格式化年月日（避免 toISOString 的 UTC 偏移导致跨时区少算一天）。 */
+function fmtLocal(d: Date): string {
+  const y = d.getFullYear();
+  const m = String(d.getMonth() + 1).padStart(2, "0");
+  const day = String(d.getDate()).padStart(2, "0");
+  return `${y}-${m}-${day}`;
+}
+
+/** 上一交易日（跳过周末；不含法定节假日，足够日常使用）。
+ *  用本地构造 + 本地格式化，规避 toISOString() 在 GMT+8 下少算一天（曾导致取值日错成周日、A股涨跌幅缺失）。 */
 export function prevTradingDay(dateStr: string): string {
-  const d = new Date(dateStr + "T00:00:00");
-  if (Number.isNaN(d.getTime())) return dateStr;
+  const [y, m, d] = dateStr.split("-").map(Number);
+  if (!y || !m || !d) return dateStr;
+  const dt = new Date(y, m - 1, d);
   do {
-    d.setDate(d.getDate() - 1);
-  } while (d.getDay() === 0 || d.getDay() === 6);
-  return d.toISOString().slice(0, 10);
+    dt.setDate(dt.getDate() - 1);
+  } while (dt.getDay() === 0 || dt.getDay() === 6);
+  return fmtLocal(dt);
 }
 
 function fmtNum(v: string): string {
