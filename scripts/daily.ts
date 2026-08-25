@@ -844,12 +844,23 @@ async function main() {
   saveAiAssets(aiAssets);
   console.log(`[daily] AI 资产账本已更新: ${Object.keys(aiAssets).length} 键`);
 
-  // —— 展示层限额（2026-08-25 用户指令：行长每天最多看 5 分钟，几百条无意义）——
-  // ① sections 每源 ≤10 条（含滚动合并的历史条目，修复"新浪财经·A股 25 条"）；
+  // —— 展示层限额（2026-08-25 用户指令：行长每天最多看 5 分钟，几百条无意义；
+  //  以客户为中心展示最有价值的，最多 10 条/源，不是机械按时间取前 N）——
+  // ① 每源 ≤10 条，但**按价值排序选取**（importance 必知>默认>折叠 + 广州本地 + 业务线挂钩 优先），
+  //   再按板块 rank 恢复顺序；
   // ② 每板块总量 ≤ N（gz ≤15 / biz ≤30 / policy ≤30）；
   // ③ 股市新闻面板每市场 ≤5（三张解读卡已有板块总结，下面不堆几十条）。
-  // 展示窗口仍为 2 天（buildRolling FETCH_WINDOW_DAYS=2），此处只控"量"。
+  // 展示窗口仍为 2 天（buildRolling FETCH_WINDOW_DAYS=2），此处只控"量"与"价值"。
   {
+    // 价值评分（以客户为中心）：importance 权重最高，其次广州本地、业务线挂钩
+    const BIZ_TAGS = new Set(["财富", "信贷", "私行", "客群", "贵金属", "保险", "对公", "财富管理"]);
+    const valueScore = (it: ReportItem): number => {
+      let s = 0;
+      s += (it.importance ?? 2) * 10; // 3=今日必知 30 / 2=默认 20 / 1=折叠 10
+      if (it.locale === "gz") s += 5; // 广州本地优先
+      if ((it.tags ?? []).some((t) => BIZ_TAGS.has(t))) s += 3; // 与零售业务线挂钩
+      return s;
+    };
     const capSrc = (items: ReportItem[], perSrc: number, maxTotal: number): ReportItem[] => {
       const bySrc = new Map<string, ReportItem[]>();
       for (const it of items) {
@@ -857,9 +868,15 @@ async function main() {
         if (!bySrc.has(s)) bySrc.set(s, []);
         bySrc.get(s)!.push(it);
       }
-      const capped: ReportItem[] = [];
-      for (const list of bySrc.values()) capped.push(...list.slice(0, perSrc));
-      return capped.slice(0, maxTotal);
+      const selected: ReportItem[] = [];
+      for (const list of bySrc.values()) {
+        const ranked = [...list].sort((a, b) => valueScore(b) - valueScore(a));
+        selected.push(...ranked.slice(0, perSrc)); // 每源取价值最高的 ≤perSrc 条
+      }
+      // 恢复板块内 rank 顺序后，整体取 maxTotal
+      return selected
+        .sort((a, b) => (a.rank ?? 0) - (b.rank ?? 0))
+        .slice(0, maxTotal);
     };
     const sec = mergedReport.sections as unknown as Record<string, ReportItem[]>;
     sec.gz_local = capSrc(sec.gz_local ?? [], 10, 15);
@@ -878,7 +895,7 @@ async function main() {
       mergedReport.stock_news = cappedNews;
     }
     console.log(
-      `[daily] 📉 展示限额: gz ${sec.gz_local.length} / biz ${sec.biz_insight.length} / policy ${sec.policy_market.length} / stock_news ${mergedReport.stock_news?.length ?? 0}`,
+      `[daily] 📉 展示限额(价值排序): gz ${sec.gz_local.length} / biz ${sec.biz_insight.length} / policy ${sec.policy_market.length} / stock_news ${mergedReport.stock_news?.length ?? 0}`,
     );
   }
 
