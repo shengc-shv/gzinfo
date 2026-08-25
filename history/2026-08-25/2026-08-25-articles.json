@@ -1646,11 +1646,11 @@
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "finance",
-      "summary": "工信部将印发时空信息终端供需适配行动计划，产业政策动态，与银行零售经营无直接关联。",
+      "summary": "（业务相关性红线：立法草案/产业政策动态，与客群/财富/私行/信贷无直接挂钩）",
       "source": "新华财经",
       "fetchedToday": false,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "cnfin",
@@ -5316,11 +5316,11 @@
       "excerpt": "",
       "publishedAt": "2026-08-25T00:00:00.000Z",
       "category": "stocks",
-      "summary": "港股异动 | 小鹏集团-W(09868)低开逾8% 二季度亏损同比扩大近1.8倍…；港股市场动态",
+      "summary": "（异动快讯已过滤：XX异动| 格式无参考价值）",
       "source": "新浪财经·港股",
       "fetchedToday": true,
       "subcategory": "hk",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "cnfin",
@@ -6381,11 +6381,11 @@
       "excerpt": "",
       "publishedAt": "2026-08-25T00:00:00.000Z",
       "category": "stocks",
-      "summary": "港股异动 | 海清智元(01392)再涨近9% 近期股价已实现翻倍 下月有望进入…；港股市场动态",
+      "summary": "（单股新闻已过滤：非巨头/非广州本地大企业）",
       "source": "新浪财经·港股",
       "fetchedToday": true,
       "subcategory": "hk",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-hk-stock",
@@ -6394,11 +6394,11 @@
       "excerpt": "",
       "publishedAt": "2026-08-25T00:00:00.000Z",
       "category": "stocks",
-      "summary": "港股异动 | 华润建材科技(01313)午前跌近3% 上半年业绩同比盈转亏 水泥…；港股市场动态",
+      "summary": "（单股新闻已过滤：非巨头/非广州本地大企业）",
       "source": "新浪财经·港股",
       "fetchedToday": true,
       "subcategory": "hk",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-hk-stock",
@@ -6407,11 +6407,11 @@
       "excerpt": "",
       "publishedAt": "2026-08-25T00:00:00.000Z",
       "category": "stocks",
-      "summary": "港股异动 | 诺诚健华(09969)涨超4% 商业化产品强劲增长叠加BD兑现 上…；港股市场动态",
+      "summary": "（单股新闻已过滤：非巨头/非广州本地大企业）",
       "source": "新浪财经·港股",
       "fetchedToday": true,
       "subcategory": "hk",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-hk-stock",
@@ -6420,11 +6420,11 @@
       "excerpt": "",
       "publishedAt": "2026-08-25T00:00:00.000Z",
       "category": "stocks",
-      "summary": "港股异动 | 融创中国(01918)早盘涨超9% 官宣转型“资产管理+资产运营”…；港股市场动态",
+      "summary": "（异动快讯已过滤：XX异动| 格式无参考价值）",
       "source": "新浪财经·港股",
       "fetchedToday": true,
       "subcategory": "hk",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-hk-stock",
@@ -7239,11 +7239,11 @@
       "excerpt": "",
       "publishedAt": "2026-08-25T00:00:00.000Z",
       "category": "stocks",
-      "summary": "港股异动 | 兆易创新(03986)涨超5% 二季度业绩快速增长 预计DRAM价…；港股市场动态",
+      "summary": "（单股新闻已过滤：非巨头/非广州本地大企业）",
       "source": "新浪财经·港股",
       "fetchedToday": true,
       "subcategory": "hk",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-hk-stock",
@@ -7252,11 +7252,11 @@
       "excerpt": "",
       "publishedAt": "2026-08-25T00:00:00.000Z",
       "category": "stocks",
-      "summary": "港股异动 | 联想集团(00992)午后涨超4% ISG表现远超预期 有望推动未…；港股市场动态",
+      "summary": "（单股新闻已过滤：非巨头/非广州本地大企业）",
       "source": "新浪财经·港股",
       "fetchedToday": true,
       "subcategory": "hk",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-hk-stock",
@@ -7265,11 +7265,11 @@
       "excerpt": "",
       "publishedAt": "2026-08-25T00:00:00.000Z",
       "category": "stocks",
-      "summary": "港股异动 | 保利物业(06049)涨超4% 上半年纯利同比增长4.8% 公司物…；港股市场动态",
+      "summary": "（异动快讯已过滤：XX异动| 格式无参考价值）",
       "source": "新浪财经·港股",
       "fetchedToday": true,
       "subcategory": "hk",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-hk-stock",
@@ -7278,11 +7278,11 @@
       "excerpt": "",
       "publishedAt": "2026-08-25T00:00:00.000Z",
       "category": "stocks",
-      "summary": "港股异动 | SENASIC琻捷(06675)再涨超6% 公司获纳入恒生综合指数…；港股市场动态",
+      "summary": "（单股新闻已过滤：非巨头/非广州本地大企业）",
       "source": "新浪财经·港股",
       "fetchedToday": true,
       "subcategory": "hk",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-hk-stock",
@@ -7291,11 +7291,11 @@
       "excerpt": "",
       "publishedAt": "2026-08-25T00:00:00.000Z",
       "category": "stocks",
-      "summary": "港股异动 | 俊知集团(01300)涨近6% 预期中期溢利同比增超7.35倍 相…；港股市场动态",
+      "summary": "（单股新闻已过滤：非巨头/非广州本地大企业）",
       "source": "新浪财经·港股",
       "fetchedToday": true,
       "subcategory": "hk",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-hk-stock",
@@ -7304,11 +7304,11 @@
       "excerpt": "",
       "publishedAt": "2026-08-25T00:00:00.000Z",
       "category": "stocks",
-      "summary": "港股异动 | 丽珠医药(01513)续跌超3% 二季度归母净利同比降四成 化学制…；港股市场动态",
+      "summary": "（单股新闻已过滤：非巨头/非广州本地大企业）",
       "source": "新浪财经·港股",
       "fetchedToday": true,
       "subcategory": "hk",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-hk-stock",
@@ -7317,11 +7317,11 @@
       "excerpt": "",
       "publishedAt": "2026-08-25T00:00:00.000Z",
       "category": "stocks",
-      "summary": "港股异动 | 大族数控(03200)午后涨近7% Q2净利率创单季度新高 机构看…；港股市场动态",
+      "summary": "（单股新闻已过滤：非巨头/非广州本地大企业）",
       "source": "新浪财经·港股",
       "fetchedToday": true,
       "subcategory": "hk",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "cnfin",
@@ -7889,11 +7889,11 @@
       "excerpt": "",
       "publishedAt": "2026-08-25T00:00:00.000Z",
       "category": "stocks",
-      "summary": "港股异动 | 鲟龙科技(06715)涨超5% 上半年经调整净利润同比增加15.7…；港股市场动态",
+      "summary": "（单股新闻已过滤：非巨头/非广州本地大企业）",
       "source": "新浪财经·港股",
       "fetchedToday": true,
       "subcategory": "hk",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-hk-stock",
@@ -7902,11 +7902,11 @@
       "excerpt": "",
       "publishedAt": "2026-08-25T00:00:00.000Z",
       "category": "stocks",
-      "summary": "港股异动 | 津上机床中国(01651)尾盘涨超4% 公司进入恒生综合指数 花旗…；港股市场动态",
+      "summary": "（异动快讯已过滤：XX异动| 格式无参考价值）",
       "source": "新浪财经·港股",
       "fetchedToday": true,
       "subcategory": "hk",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-hk-stock",
@@ -7915,11 +7915,11 @@
       "excerpt": "",
       "publishedAt": "2026-08-25T00:00:00.000Z",
       "category": "stocks",
-      "summary": "港股异动 | 丘钛科技(01478)再跌超3% 上半年业绩低于预期 花旗下调公司…；港股市场动态",
+      "summary": "（异动快讯已过滤：XX异动| 格式无参考价值）",
       "source": "新浪财经·港股",
       "fetchedToday": true,
       "subcategory": "hk",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-hk-stock",
@@ -7928,11 +7928,11 @@
       "excerpt": "",
       "publishedAt": "2026-08-25T00:00:00.000Z",
       "category": "stocks",
-      "summary": "港股异动 | 亚博科技控股(08279)再涨超6% 港金所新交易系统预计2027…；港股市场动态",
+      "summary": "（单股新闻已过滤：非巨头/非广州本地大企业）",
       "source": "新浪财经·港股",
       "fetchedToday": true,
       "subcategory": "hk",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-hk-stock",
@@ -7941,11 +7941,11 @@
       "excerpt": "",
       "publishedAt": "2026-08-25T00:00:00.000Z",
       "category": "stocks",
-      "summary": "港股异动 | 礼邦医药-B(09637)涨超6% 公司入通预期与业绩窗口有望形成…；港股市场动态",
+      "summary": "（单股新闻已过滤：非巨头/非广州本地大企业）",
       "source": "新浪财经·港股",
       "fetchedToday": true,
       "subcategory": "hk",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "cnfin",
@@ -8006,11 +8006,11 @@
       "excerpt": "",
       "publishedAt": "2026-08-25T00:00:00.000Z",
       "category": "finance",
-      "summary": "耕地保护和质量提升法草案三审稿增加多方面规定；对分行财富/信贷/客群业务有宏观参考",
+      "summary": "（业务相关性红线：立法草案/产业政策动态，与客群/财富/私行/信贷无直接挂钩）",
       "source": "新华财经",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "cnfin",
@@ -8318,11 +8318,11 @@
       "excerpt": "",
       "publishedAt": "2026-08-25T00:00:00.000Z",
       "category": "stocks",
-      "summary": "港股异动 | 博彩股集体走低 花旗进一步下调8月赌收预测 预计同比增长约2%；港股市场动态",
+      "summary": "（异动快讯已过滤：XX异动| 格式无参考价值）",
       "source": "新浪财经·港股",
       "fetchedToday": true,
       "subcategory": "hk",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-hk-stock",
@@ -8331,11 +8331,11 @@
       "excerpt": "",
       "publishedAt": "2026-08-25T00:00:00.000Z",
       "category": "stocks",
-      "summary": "港股异动 | 非凡领越(00933)涨超7% 中期权益持有人应占溢利同比增长48…；港股市场动态",
+      "summary": "（单股新闻已过滤：非巨头/非广州本地大企业）",
       "source": "新浪财经·港股",
       "fetchedToday": true,
       "subcategory": "hk",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-hk-stock",
@@ -8344,11 +8344,11 @@
       "excerpt": "",
       "publishedAt": "2026-08-25T00:00:00.000Z",
       "category": "stocks",
-      "summary": "港股异动 | 力勤资源(02245)涨近7% Obi项目全面达产将推动盈利能提稳…；港股市场动态",
+      "summary": "（单股新闻已过滤：非巨头/非广州本地大企业）",
       "source": "新浪财经·港股",
       "fetchedToday": true,
       "subcategory": "hk",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "cnfin",
@@ -11570,33 +11570,159 @@
     },
     {
       "sourceId": "dayoo-gz",
-      "source": "广州日报·大洋网",
       "title": "广州音乐公园“湾区流行音乐夜”人气拉满",
       "url": "https://news.dayoo.com/guangzhou/202608/25/139995_54995123.htm",
       "excerpt": "",
       "publishedAt": "2026-08-25T00:00:00.000Z",
       "category": "gz",
-      "summary": "",
-      "tier": "T2",
-      "filterBucket": "daily",
-      "filterDimensions": [],
+      "source": "广州日报·大洋网",
       "fetchedToday": true,
       "subcategory": "gz-media"
     },
     {
       "sourceId": "dayoo-gz",
-      "source": "广州日报·大洋网",
       "title": "特写｜社区书记为8个娃当了五天大厨",
       "url": "https://news.dayoo.com/guangzhou/202608/25/139995_54995122.htm",
       "excerpt": "",
       "publishedAt": "2026-08-25T00:00:00.000Z",
       "category": "gz",
+      "source": "广州日报·大洋网",
+      "fetchedToday": true,
+      "subcategory": "gz-media"
+    },
+    {
+      "sourceId": "cnfin",
+      "title": "1至7月全国主要港口货物吞吐量突破百亿吨，沿海区域表现分化",
+      "url": "https://www.cnfin.com/hg-lb/detail/20260825/4460327_1.html",
+      "excerpt": "",
+      "publishedAt": "2026-08-25T00:00:00.000Z",
+      "category": "finance",
+      "source": "新华财经",
+      "fetchedToday": true,
+      "subcategory": "cn-finance"
+    },
+    {
+      "sourceId": "stcn",
+      "title": "双林股份：上半年现金流保持稳健 机器人及智能角模块业务产业化提速",
+      "url": "https://www.stcn.com/article/detail/4120975.html",
+      "excerpt": "",
+      "publishedAt": "2026-08-25T15:22:00.000Z",
+      "category": "finance",
+      "source": "证券时报",
+      "fetchedToday": true,
+      "subcategory": "cn-finance"
+    },
+    {
+      "sourceId": "dayoo-gz",
+      "title": "“紫檀”“沙德尔”远程送雨，广州降雨几乎无缝衔接",
+      "url": "https://news.dayoo.com/guangzhou/202608/25/139995_54995074.htm",
+      "excerpt": "",
+      "publishedAt": "2026-08-25T00:00:00.000Z",
+      "category": "gz",
+      "source": "广州日报·大洋网",
+      "fetchedToday": true,
+      "subcategory": "gz-media"
+    },
+    {
+      "sourceId": "investing-news",
+      "title": "US rates need to rise soon absent evidence of ongoing drop in inflation, Fed’s Collins says",
+      "url": "https://www.investing.com/news/economy-news/us-rates-need-to-rise-soon-absent-evidence-of-ongoing-drop-in-inflation-feds-collins-says-4875680",
+      "excerpt": "",
+      "publishedAt": "2026-08-25T15:13:36.000Z",
+      "category": "stocks",
+      "subcategory": "us",
+      "source": "Investing.com News",
+      "tier": "T2",
+      "filterBucket": "daily",
+      "filterDimensions": [],
+      "fetchedToday": true
+    },
+    {
+      "sourceId": "investing-news",
+      "title": "X-Energy options activity points to major volatility play ahead of September expiration",
+      "url": "https://www.investing.com/news/stock-market-news/xenergy-options-activity-points-to-major-volatility-play-ahead-of-september-expiration-93CH-4875675",
+      "excerpt": "",
+      "publishedAt": "2026-08-25T15:07:41.000Z",
+      "category": "stocks",
+      "subcategory": "us",
+      "source": "Investing.com News",
+      "tier": "T2",
+      "filterBucket": "daily",
+      "filterDimensions": [],
+      "fetchedToday": true
+    },
+    {
+      "sourceId": "investing-news",
+      "title": "Analysis-US tariff threat upends copper surplus as prices test all-time peak",
+      "url": "https://www.investing.com/news/commodities-news/analysisus-tariff-threat-upends-copper-surplus-as-prices-test-alltime-peak-4875674",
+      "excerpt": "",
+      "publishedAt": "2026-08-25T15:07:40.000Z",
+      "category": "stocks",
+      "subcategory": "us",
+      "source": "Investing.com News",
+      "tier": "T2",
+      "filterBucket": "daily",
+      "filterDimensions": [],
+      "fetchedToday": true
+    },
+    {
+      "sourceId": "investing-news",
+      "title": "Honda says it may not build new plant in North America without trade deal extension",
+      "url": "https://www.investing.com/news/stock-market-news/honda-says-it-may-not-build-new-plant-in-north-america-without-trade-deal-extension-4875672",
+      "excerpt": "",
+      "publishedAt": "2026-08-25T15:07:18.000Z",
+      "category": "stocks",
+      "subcategory": "us",
+      "source": "Investing.com News",
+      "tier": "T2",
+      "filterBucket": "daily",
+      "filterDimensions": [],
+      "fetchedToday": true
+    },
+    {
+      "sourceId": "stcn",
+      "source": "证券时报",
+      "title": "广电网络与中国铁塔陕西省分公司签署战略合作协议 擘画数智陕西新图景",
+      "url": "https://www.stcn.com/article/detail/4120736.html",
+      "excerpt": "",
+      "publishedAt": "2026-08-25T23:25:00.000Z",
+      "category": "finance",
       "summary": "",
       "tier": "T2",
       "filterBucket": "daily",
       "filterDimensions": [],
       "fetchedToday": true,
-      "subcategory": "gz-media"
+      "subcategory": "cn-finance"
+    },
+    {
+      "sourceId": "stcn",
+      "source": "证券时报",
+      "title": "浙商中拓2026年半年报：锚定“十五五”规划 上半年高质量发展取得成效",
+      "url": "https://www.stcn.com/article/detail/4120985.html",
+      "excerpt": "",
+      "publishedAt": "2026-08-25T23:24:00.000Z",
+      "category": "finance",
+      "summary": "",
+      "tier": "T2",
+      "filterBucket": "daily",
+      "filterDimensions": [],
+      "fetchedToday": true,
+      "subcategory": "cn-finance"
+    },
+    {
+      "sourceId": "stcn",
+      "source": "证券时报",
+      "title": "中国医药：创新驱动多点突破，全产业链建设成果丰硕",
+      "url": "https://www.stcn.com/article/detail/4120981.html",
+      "excerpt": "",
+      "publishedAt": "2026-08-25T23:23:00.000Z",
+      "category": "finance",
+      "summary": "",
+      "tier": "T2",
+      "filterBucket": "daily",
+      "filterDimensions": [],
+      "fetchedToday": true,
+      "subcategory": "cn-finance"
     }
   ]
 }
