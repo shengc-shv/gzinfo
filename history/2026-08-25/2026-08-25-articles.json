@@ -197,19 +197,6 @@
       "relevant": false
     },
     {
-      "sourceId": "southcn",
-      "title": "钟才文：中国是世界经济增长的积极贡献者和强大稳定锚",
-      "url": "https://news.southcn.com/node_812903b83a/42ad42082e.shtml",
-      "excerpt": "",
-      "publishedAt": "2026-08-24T00:00:00.000Z",
-      "category": "gz",
-      "summary": "宏观解读：中国是世界经济增长稳定锚，基本面韧性强。可关注经济回升对零售信贷与财富管理的支撑。",
-      "source": "南方网·经济",
-      "fetchedToday": false,
-      "subcategory": "gz-media",
-      "relevant": true
-    },
-    {
       "sourceId": "sina-money",
       "title": "IPO周报｜本周4只新股申购，国内轴承制造龙头来了",
       "url": "https://finance.sina.com.cn/jjxw/2026-08-24/doc-inipkmaa6265702.shtml",
@@ -887,19 +874,6 @@
     },
     {
       "sourceId": "stcn",
-      "title": "德生科技：2026上半年转型稳步推进 民生AI布局打开成长新空间",
-      "url": "https://www.stcn.com/article/detail/4103719.html",
-      "excerpt": "",
-      "publishedAt": "2026-08-24T00:00:00.000Z",
-      "category": "finance",
-      "summary": "德生科技上半年转型推进、民生AI布局，个股业绩公告，非零售条线决策信息。",
-      "source": "证券时报",
-      "fetchedToday": false,
-      "subcategory": "cn-finance",
-      "relevant": true
-    },
-    {
-      "sourceId": "stcn",
       "title": "万孚生物：深化价值驱动型变革，IVD全品类布局提速，国际化与AI赋能并进",
       "url": "https://www.stcn.com/article/detail/4103699.html",
       "excerpt": "",
@@ -910,32 +884,6 @@
       "fetchedToday": false,
       "subcategory": "cn-finance",
       "relevant": false
-    },
-    {
-      "sourceId": "stcn",
-      "title": "浩云科技：2026年上半年归母净利减亏46%，拟10派0.15元",
-      "url": "https://www.stcn.com/article/detail/4103692.html",
-      "excerpt": "",
-      "publishedAt": "2026-08-24T00:00:00.000Z",
-      "category": "finance",
-      "summary": "浩云科技上半年减亏46%并拟分红，个股业绩公告，非零售决策信息。",
-      "source": "证券时报",
-      "fetchedToday": false,
-      "subcategory": "cn-finance",
-      "relevant": true
-    },
-    {
-      "sourceId": "stcn",
-      "title": "顶固集创：上半年净利过亿 投资航聚科技贡献主要增量",
-      "url": "https://www.stcn.com/article/detail/4103688.html",
-      "excerpt": "",
-      "publishedAt": "2026-08-24T00:00:00.000Z",
-      "category": "finance",
-      "summary": "顶固集创上半年净利过亿、投资收益贡献增量，个股业绩公告，与零售经营无直接关联。",
-      "source": "证券时报",
-      "fetchedToday": false,
-      "subcategory": "cn-finance",
-      "relevant": true
     },
     {
       "sourceId": "dayoo-gz",
@@ -1022,11 +970,11 @@
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "gz",
-      "summary": "多家银行更新个人消费贷贴息细则，提上限、扩范围。分行须同步统一答疑口径，加大消费信贷与信用卡分期营销，抢抓扩内需贴息红利窗口。",
+      "summary": "（旧闻已废弃：真实发布 2026-08-22）",
       "source": "南方网·经济",
       "fetchedToday": false,
       "subcategory": "gz-credit",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "southcn",
@@ -1048,11 +996,11 @@
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "gz",
-      "summary": "消费贷贴息国补升级，一年最高省5000元利息，政策红利显著。分行应加大消费贷与信用卡分期投放，向价格敏感客群精准推送贴息权益。",
+      "summary": "（旧闻已废弃：真实发布 2026-08-22）",
       "source": "南方网·经济",
       "fetchedToday": false,
       "subcategory": "gz-credit",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "southcn",
@@ -1092,19 +1040,6 @@
       "fetchedToday": false,
       "subcategory": "cn-finance",
       "relevant": false
-    },
-    {
-      "sourceId": "stcn",
-      "title": "慧谷新材：拟使用超募资金投资建设珠海慧谷功能性材料建设项目（一期）",
-      "url": "https://www.stcn.com/article/detail/4103243.html",
-      "excerpt": "",
-      "publishedAt": "2026-08-24T00:00:00.000Z",
-      "category": "finance",
-      "summary": "慧谷新材拟用超募资金投资珠海项目，个股募投公告，与零售经营无直接关联。",
-      "source": "证券时报",
-      "fetchedToday": false,
-      "subcategory": "cn-finance",
-      "relevant": true
     },
     {
       "sourceId": "stcn",
@@ -3520,7 +3455,7 @@
       "title": "2026广东智慧物业产业博览会在穗启幕 助力物业行业提质升级",
       "url": "https://news.southcn.com/node_812903b83a/255621a284.shtml",
       "excerpt": "",
-      "publishedAt": "2026-08-25T00:00:00.000Z",
+      "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "gz",
       "summary": "2026广东智慧物业产业博览会在穗启幕 助力物业行业提质升级；广州市政策动向，分行需关注落地机会",
       "source": "南方网·经济",
@@ -5537,11 +5472,11 @@
       "excerpt": "",
       "publishedAt": "2026-08-25T00:00:00.000Z",
       "category": "gz",
-      "summary": "荣耀Robot Phone 9999元起售，全球首款机器人手机落地；广州市政策动向，分行需关注落地机会",
+      "summary": "（旧闻已废弃：真实发布 2026-08-13）",
       "source": "南方网·经济",
       "fetchedToday": true,
       "subcategory": "gz-media",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "southcn",
@@ -6771,11 +6706,11 @@
       "excerpt": "",
       "publishedAt": "2026-08-25T00:00:00.000Z",
       "category": "gz",
-      "summary": "多学科权威齐聚广州 共绘抗衰老研究产学研创新蓝图；广州市政策动向，分行需关注落地机会",
+      "summary": "（旧闻已废弃：真实发布 2026-01-20）",
       "source": "南方网·经济",
       "fetchedToday": true,
       "subcategory": "gz-media",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "southcn",
@@ -7616,11 +7551,11 @@
       "excerpt": "",
       "publishedAt": "2026-08-25T00:00:00.000Z",
       "category": "gz",
-      "summary": "“应用场景支持企业库”首批入库单位完成签约，助力“无废湾区”建设；广州市政策动向，分行需关注落地机会",
+      "summary": "（旧闻已废弃：真实发布 2025-06-13）",
       "source": "南方网·经济",
       "fetchedToday": true,
       "subcategory": "gz-media",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "southcn",
@@ -7655,11 +7590,11 @@
       "excerpt": "",
       "publishedAt": "2026-08-25T00:00:00.000Z",
       "category": "gz",
-      "summary": "国企担当·“百千万工程”之岭南答卷｜从田间到餐桌：消费帮扶如何用“一碗好面”打通…；分行零售客群经营相关",
+      "summary": "（旧闻已废弃：真实发布 2025-12-16）",
       "source": "南方网·经济",
       "fetchedToday": true,
       "subcategory": "gz-media",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "southcn",
@@ -7668,11 +7603,11 @@
       "excerpt": "",
       "publishedAt": "2026-08-25T00:00:00.000Z",
       "category": "gz",
-      "summary": "国企担当·“百千万工程”之岭南答卷｜四百余年老字号驶入智造新赛道，致美斋阳江基地…；广州市政策动向，分行需关注落地机会",
+      "summary": "（旧闻已废弃：真实发布 2025-12-12）",
       "source": "南方网·经济",
       "fetchedToday": true,
       "subcategory": "gz-media",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-a-stock",
@@ -11020,12 +10955,9 @@
       "excerpt": "",
       "publishedAt": "2026-08-25T13:18:33.000Z",
       "category": "stocks",
-      "subcategory": "us",
       "source": "Investing.com News",
-      "tier": "T2",
-      "filterBucket": "daily",
-      "filterDimensions": [],
-      "fetchedToday": true
+      "fetchedToday": true,
+      "subcategory": "us"
     },
     {
       "sourceId": "investing-news",
@@ -11034,12 +10966,9 @@
       "excerpt": "",
       "publishedAt": "2026-08-25T13:17:19.000Z",
       "category": "stocks",
-      "subcategory": "us",
       "source": "Investing.com News",
-      "tier": "T2",
-      "filterBucket": "daily",
-      "filterDimensions": [],
-      "fetchedToday": true
+      "fetchedToday": true,
+      "subcategory": "us"
     },
     {
       "sourceId": "investing-news",
@@ -11047,6 +10976,160 @@
       "url": "https://www.investing.com/news/economy-news/canada-to-announce-retaliatory-tariffs-on-us-goods-today-4875422",
       "excerpt": "",
       "publishedAt": "2026-08-25T13:04:11.000Z",
+      "category": "stocks",
+      "source": "Investing.com News",
+      "fetchedToday": true,
+      "subcategory": "us"
+    },
+    {
+      "sourceId": "eastmoney-stock",
+      "title": "美股三大指数集体上涨存储芯片板块普涨",
+      "url": "https://finance.eastmoney.com/a/202608253853312037.html",
+      "excerpt": "",
+      "publishedAt": "2026-08-25T00:00:00.000Z",
+      "category": "stocks",
+      "source": "东方财富",
+      "fetchedToday": true,
+      "subcategory": "a-share"
+    },
+    {
+      "sourceId": "stcn",
+      "title": "期货资管深度洗牌：规模半年缩水近800亿，提高“含期量”成明牌",
+      "url": "https://www.stcn.com/article/detail/4120713.html",
+      "excerpt": "",
+      "publishedAt": "2026-08-25T00:00:00.000Z",
+      "category": "finance",
+      "source": "证券时报",
+      "fetchedToday": true,
+      "subcategory": "cn-finance"
+    },
+    {
+      "sourceId": "stcn",
+      "title": "公积金新政密集出圈！成都首创“首付15%+利息补贴”模式",
+      "url": "https://www.stcn.com/article/detail/4120714.html",
+      "excerpt": "",
+      "publishedAt": "2026-08-25T00:00:00.000Z",
+      "category": "finance",
+      "source": "证券时报",
+      "fetchedToday": true,
+      "subcategory": "cn-finance"
+    },
+    {
+      "sourceId": "stcn",
+      "title": "深高速上半年净利9.19亿元 多个工程项目进展顺利",
+      "url": "https://www.stcn.com/article/detail/4120332.html",
+      "excerpt": "",
+      "publishedAt": "2026-08-25T00:00:00.000Z",
+      "category": "finance",
+      "source": "证券时报",
+      "fetchedToday": true,
+      "subcategory": "cn-finance"
+    },
+    {
+      "sourceId": "stcn",
+      "title": "福瑞达上半年化妆品收入增近两成 新品牌珂谧营收翻六倍",
+      "url": "https://www.stcn.com/article/detail/4120324.html",
+      "excerpt": "",
+      "publishedAt": "2026-08-25T00:00:00.000Z",
+      "category": "finance",
+      "source": "证券时报",
+      "fetchedToday": true,
+      "subcategory": "cn-finance"
+    },
+    {
+      "sourceId": "sina-money",
+      "title": "万国黄金集团(03939)完成发行于2027年到期的55亿港元0.75%可换股债券",
+      "url": "https://finance.sina.com.cn/stock/hkstock/ggscyd/2026-08-25/doc-inippvun5578799.shtml",
+      "excerpt": "【财富管理】万国黄金集团(03939)完成发行于2027年到期的55亿港元0.75%可换股债券",
+      "publishedAt": "2026-08-25T00:00:00.000Z",
+      "category": "gz",
+      "source": "新浪财经·理财保险",
+      "fetchedToday": true,
+      "subcategory": "cn-finance"
+    },
+    {
+      "sourceId": "21jingji-finance",
+      "title": "多家银行股价创历史新高，板块估值逻辑正在发生哪些变化？",
+      "url": "https://m.21jingji.com/article/20260825/herald/8113505a576a431fde4ef50d22c5320c.html",
+      "excerpt": "【21财经·金融】多家银行股价创历史新高，板块估值逻辑正在发生哪些变化？",
+      "publishedAt": "2026-08-25T00:00:00.000Z",
+      "category": "gz",
+      "source": "21世纪经济报道·金融",
+      "fetchedToday": true,
+      "subcategory": "cn-finance"
+    },
+    {
+      "sourceId": "sina-a-stock",
+      "title": "A股连续迎来大肉签！月内16只新股平均浮盈8万",
+      "url": "https://finance.sina.com.cn/stock/wbstock/2026-08-25/doc-inippvun5562452.shtml",
+      "excerpt": "",
+      "publishedAt": "2026-08-25T00:00:00.000Z",
+      "category": "stocks",
+      "source": "新浪财经·A股",
+      "fetchedToday": true,
+      "subcategory": "a-share"
+    },
+    {
+      "sourceId": "sina-a-stock",
+      "title": "存量出清下的中游之痛！华纺股份半年报透视：",
+      "url": "https://finance.sina.com.cn/wm/2026-08-25/doc-inippvuq2348773.shtml",
+      "excerpt": "",
+      "publishedAt": "2026-08-25T00:00:00.000Z",
+      "category": "stocks",
+      "source": "新浪财经·A股",
+      "fetchedToday": true,
+      "subcategory": "a-share"
+    },
+    {
+      "sourceId": "hkex-stock",
+      "title": "Announcements and Notices - [Issue of Convertible Securities / Issue of Shares under a General Mandate]",
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0825/2026082501883.pdf",
+      "excerpt": "Announcements and Notices - [Issue of Convertible Securities / Issue of Shares under a General Mandate]",
+      "publishedAt": "2026-08-25T00:00:00.000Z",
+      "category": "stocks",
+      "source": "港交所披露易",
+      "fetchedToday": true,
+      "subcategory": "hk"
+    },
+    {
+      "sourceId": "cnfin",
+      "title": "二季度评级机构共对58家债券发行人进行62次评级调整 其中负面调整42家",
+      "url": "https://www.cnfin.com/yw-lb/detail/20260825/4460325_1.html",
+      "excerpt": "",
+      "publishedAt": "2026-08-25T00:00:00.000Z",
+      "category": "finance",
+      "source": "新华财经",
+      "fetchedToday": true,
+      "subcategory": "cn-finance"
+    },
+    {
+      "sourceId": "stcn",
+      "title": "因赛集团：上半年营收同比增长14.25% AI营销驱动业务模式迭代",
+      "url": "https://www.stcn.com/article/detail/4120614.html",
+      "excerpt": "",
+      "publishedAt": "2026-08-25T13:48:00.000Z",
+      "category": "finance",
+      "source": "证券时报",
+      "fetchedToday": true,
+      "subcategory": "cn-finance"
+    },
+    {
+      "sourceId": "cnr-gd",
+      "title": "产业链上聚合力 联农带农惠民生",
+      "url": "https://www.cnr.cn/gd/guangdongyaowen/20260825/t20260825_527791776.shtml",
+      "excerpt": "",
+      "publishedAt": "2026-08-25T00:00:00.000Z",
+      "category": "gz",
+      "source": "央广网·广东",
+      "fetchedToday": true,
+      "subcategory": "gz-media"
+    },
+    {
+      "sourceId": "investing-news",
+      "title": "Dick’s Sporting Goods plunges on guidance cut, Q2 miss",
+      "url": "https://www.investing.com/news/earnings/dicks-sporting-goods-tumbles-on-guidance-cut-q2-miss-4875067",
+      "excerpt": "",
+      "publishedAt": "2026-08-25T13:47:01.000Z",
       "category": "stocks",
       "subcategory": "us",
       "source": "Investing.com News",
@@ -11056,10 +11139,81 @@
       "fetchedToday": true
     },
     {
-      "sourceId": "eastmoney-stock",
-      "source": "东方财富",
-      "title": "美股三大指数集体上涨存储芯片板块普涨",
-      "url": "https://finance.eastmoney.com/a/202608253853312037.html",
+      "sourceId": "investing-news",
+      "title": "WestJet cabin crew approve proposed deal after strike",
+      "url": "https://www.investing.com/news/stock-market-news/westjet-cabin-crew-approve-proposed-deal-after-strike-4874176",
+      "excerpt": "",
+      "publishedAt": "2026-08-25T13:37:22.000Z",
+      "category": "stocks",
+      "subcategory": "us",
+      "source": "Investing.com News",
+      "tier": "T2",
+      "filterBucket": "daily",
+      "filterDimensions": [],
+      "fetchedToday": true
+    },
+    {
+      "sourceId": "investing-news",
+      "title": "Wall St opens higher as tech stocks rebound before Nvidia results, data",
+      "url": "https://www.investing.com/news/stock-market-news/wall-st-opens-higher-as-tech-stocks-rebound-before-nvidia-results-data-4875525",
+      "excerpt": "",
+      "publishedAt": "2026-08-25T13:37:04.000Z",
+      "category": "stocks",
+      "subcategory": "us",
+      "source": "Investing.com News",
+      "tier": "T2",
+      "filterBucket": "daily",
+      "filterDimensions": [],
+      "fetchedToday": true
+    },
+    {
+      "sourceId": "investing-news",
+      "title": "Alternative Income REIT receives minimal acceptances for Glenstone offer",
+      "url": "https://www.investing.com/news/company-news/alternative-income-reit-receives-minimal-acceptances-for-glenstone-offer-93CH-4875524",
+      "excerpt": "",
+      "publishedAt": "2026-08-25T13:36:37.000Z",
+      "category": "stocks",
+      "subcategory": "us",
+      "source": "Investing.com News",
+      "tier": "T2",
+      "filterBucket": "daily",
+      "filterDimensions": [],
+      "fetchedToday": true
+    },
+    {
+      "sourceId": "investing-news",
+      "title": "DICK’S Q2 2026 slides show growth ambitions amid Foot Locker drag",
+      "url": "https://www.investing.com/news/company-news/dicks-q2-2026-slides-show-growth-ambitions-amid-foot-locker-drag-93CH-4875518",
+      "excerpt": "",
+      "publishedAt": "2026-08-25T13:35:21.000Z",
+      "category": "stocks",
+      "subcategory": "us",
+      "source": "Investing.com News",
+      "tier": "T2",
+      "filterBucket": "daily",
+      "filterDimensions": [],
+      "fetchedToday": true
+    },
+    {
+      "sourceId": "sina-bank",
+      "source": "新浪财经·银行频道",
+      "title": "泸州银行：上半年实现归母净利润10.01亿元 同比增加10.96%",
+      "url": "https://finance.sina.com.cn/jryx/bank/2026-08-25/doc-inippvuk1578661.shtml",
+      "excerpt": "",
+      "publishedAt": "2026-08-25T00:00:00.000Z",
+      "category": "finance",
+      "summary": "",
+      "tier": "T2",
+      "filterBucket": "daily",
+      "filterDimensions": [],
+      "fetchedToday": true,
+      "subcategory": "cn-finance"
+    },
+    {
+      "sourceId": "sina-a-stock",
+      "source": "新浪财经·A股",
+      "title": "8月25日增减持汇总：和邦生物等6股拟减持，当日暂无A股公司增持（表）",
+      "url": "https://finance.sina.com.cn/jjxw/2026-08-25/doc-inippvuh9626680.shtml",
       "excerpt": "",
       "publishedAt": "2026-08-25T00:00:00.000Z",
       "category": "stocks",
@@ -11069,68 +11223,6 @@
       "filterDimensions": [],
       "fetchedToday": true,
       "subcategory": "a-share"
-    },
-    {
-      "sourceId": "stcn",
-      "source": "证券时报",
-      "title": "期货资管深度洗牌：规模半年缩水近800亿，提高“含期量”成明牌",
-      "url": "https://www.stcn.com/article/detail/4120713.html",
-      "excerpt": "",
-      "publishedAt": "2026-08-25T00:00:00.000Z",
-      "category": "finance",
-      "summary": "",
-      "tier": "T2",
-      "filterBucket": "daily",
-      "filterDimensions": [],
-      "fetchedToday": true,
-      "subcategory": "cn-finance"
-    },
-    {
-      "sourceId": "stcn",
-      "source": "证券时报",
-      "title": "公积金新政密集出圈！成都首创“首付15%+利息补贴”模式",
-      "url": "https://www.stcn.com/article/detail/4120714.html",
-      "excerpt": "",
-      "publishedAt": "2026-08-25T00:00:00.000Z",
-      "category": "finance",
-      "summary": "",
-      "tier": "T2",
-      "filterBucket": "daily",
-      "filterDimensions": [
-        "macro_policy"
-      ],
-      "fetchedToday": true,
-      "subcategory": "cn-finance"
-    },
-    {
-      "sourceId": "stcn",
-      "source": "证券时报",
-      "title": "深高速上半年净利9.19亿元 多个工程项目进展顺利",
-      "url": "https://www.stcn.com/article/detail/4120332.html",
-      "excerpt": "",
-      "publishedAt": "2026-08-25T00:00:00.000Z",
-      "category": "finance",
-      "summary": "",
-      "tier": "T2",
-      "filterBucket": "daily",
-      "filterDimensions": [],
-      "fetchedToday": true,
-      "subcategory": "cn-finance"
-    },
-    {
-      "sourceId": "stcn",
-      "source": "证券时报",
-      "title": "福瑞达上半年化妆品收入增近两成 新品牌珂谧营收翻六倍",
-      "url": "https://www.stcn.com/article/detail/4120324.html",
-      "excerpt": "",
-      "publishedAt": "2026-08-25T00:00:00.000Z",
-      "category": "finance",
-      "summary": "",
-      "tier": "T2",
-      "filterBucket": "daily",
-      "filterDimensions": [],
-      "fetchedToday": true,
-      "subcategory": "cn-finance"
     }
   ]
 }
