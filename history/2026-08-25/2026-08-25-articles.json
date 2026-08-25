@@ -541,11 +541,11 @@
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "finance",
-      "summary": "中际旭创澄清产品价格降幅理性、订单强劲，股价仍跌超6%。可提示相关持仓客户关注光模块龙头波动，做好沟通。",
+      "summary": "（单股新闻已过滤：非巨头/非广州本地大企业）",
       "source": "新华财经",
       "fetchedToday": false,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "cnfin",
@@ -2222,11 +2222,11 @@
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "finance",
-      "summary": "石头科技Q2扣非净利同比增长111%，个股业绩公告，非零售决策信息。",
+      "summary": "（单股新闻已过滤：非巨头/非广州本地大企业）",
       "source": "新华财经",
       "fetchedToday": false,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "cnfin",
@@ -2339,11 +2339,11 @@
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "finance",
-      "summary": "康冠科技半年报拟分红超2.5亿元，个股业绩公告，非零售决策信息。",
+      "summary": "（单股新闻已过滤：非巨头/非广州本地大企业）",
       "source": "证券时报",
       "fetchedToday": false,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "stcn",
@@ -4250,11 +4250,11 @@
       "excerpt": "",
       "publishedAt": "2026-08-25T00:00:00.000Z",
       "category": "gz",
-      "summary": "广州市城规公司项目入选省级创新案例；广州市政策动向，分行需关注落地机会",
+      "summary": "（单股新闻已过滤：非巨头/非广州本地大企业）",
       "source": "央广网·广东",
       "fetchedToday": true,
       "subcategory": "gz-media",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "cnr-gd",
@@ -5368,11 +5368,11 @@
       "excerpt": "",
       "publishedAt": "2026-08-25T00:00:00.000Z",
       "category": "finance",
-      "summary": "遥望科技上半年净利1.53亿元；对分行财富/信贷/客群业务有宏观参考",
+      "summary": "（单股新闻已过滤：非巨头/非广州本地大企业）",
       "source": "证券时报",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "stcn",
@@ -6745,11 +6745,11 @@
       "excerpt": "",
       "publishedAt": "2026-08-25T00:00:00.000Z",
       "category": "gz",
-      "summary": "第十届广州老博会规模与实效双创新高；广州市政策动向，分行需关注落地机会",
+      "summary": "（单股新闻已过滤：非巨头/非广州本地大企业）",
       "source": "央广网·广东",
       "fetchedToday": true,
       "subcategory": "gz-media",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "cnbc-top",
@@ -8396,11 +8396,11 @@
       "excerpt": "",
       "publishedAt": "2026-08-25T00:00:00.000Z",
       "category": "finance",
-      "summary": "生益科技业绩会：高端产品占比显著提升；对分行财富/信贷/客群业务有宏观参考",
+      "summary": "（单股新闻已过滤：非巨头/非广州本地大企业）",
       "source": "证券时报",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "stcn",
@@ -8656,11 +8656,11 @@
       "excerpt": "",
       "publishedAt": "2026-08-25T00:00:00.000Z",
       "category": "finance",
-      "summary": "迅策科技上半年营收增长389% Token业务模式引关注；对分行财富/信贷/客群业务有宏观参考",
+      "summary": "（单股新闻已过滤：非巨头/非广州本地大企业）",
       "source": "证券时报",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "stcn",
@@ -9654,11 +9654,11 @@
       "excerpt": "",
       "publishedAt": "2026-08-25T00:00:00.000Z",
       "category": "finance",
-      "summary": "盛洋科技2026H1营收同比近五成增长，通信产业布局深化；通信制造企业高速增长，分行可研究5G/光通信产业链授信。",
+      "summary": "（单股新闻已过滤：非巨头/非广州本地大企业）",
       "source": "新华财经",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "cnfin",
@@ -10572,10 +10572,11 @@
       "excerpt": "",
       "publishedAt": "2026-08-25T00:00:00.000Z",
       "category": "finance",
+      "summary": "（单股新闻已过滤：非巨头/非广州本地大企业）",
       "source": "证券时报",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "stcn",
@@ -10596,10 +10597,11 @@
       "excerpt": "",
       "publishedAt": "2026-08-25T00:00:00.000Z",
       "category": "finance",
+      "summary": "（单股新闻已过滤：非巨头/非广州本地大企业）",
       "source": "证券时报",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "investing-news",
@@ -11524,16 +11526,12 @@
     },
     {
       "sourceId": "eastmoney-stock",
-      "source": "东方财富",
       "title": "加拿大宣布自9月8日起对美国商品加征报复性关税",
       "url": "https://finance.eastmoney.com/a/202608253853407744.html",
       "excerpt": "",
       "publishedAt": "2026-08-25T00:00:00.000Z",
       "category": "stocks",
-      "summary": "",
-      "tier": "T2",
-      "filterBucket": "daily",
-      "filterDimensions": [],
+      "source": "东方财富",
       "fetchedToday": true,
       "subcategory": "a-share"
     },
@@ -11544,27 +11542,35 @@
       "excerpt": "",
       "publishedAt": "2026-08-25T14:53:13.000Z",
       "category": "stocks",
-      "subcategory": "us",
       "source": "Investing.com News",
-      "tier": "T2",
-      "filterBucket": "daily",
-      "filterDimensions": [],
-      "fetchedToday": true
+      "fetchedToday": true,
+      "subcategory": "us"
     },
     {
       "sourceId": "stcn",
-      "source": "证券时报",
       "title": "联合化学：上半年营收2.62亿元 半导体板块部分产品迈入验证期",
       "url": "https://www.stcn.com/article/detail/4120728.html",
       "excerpt": "",
       "publishedAt": "2026-08-25T23:08:00.000Z",
       "category": "finance",
+      "source": "证券时报",
+      "fetchedToday": true,
+      "subcategory": "cn-finance"
+    },
+    {
+      "sourceId": "dayoo-gz",
+      "source": "广州日报·大洋网",
+      "title": "广州首个旧村改造项目重整成功案例：从预重整到获批仅94天，全面复工续建",
+      "url": "https://news.dayoo.com/guangzhou/202608/25/139995_54995124.htm",
+      "excerpt": "",
+      "publishedAt": "2026-08-25T00:00:00.000Z",
+      "category": "gz",
       "summary": "",
       "tier": "T2",
       "filterBucket": "daily",
       "filterDimensions": [],
       "fetchedToday": true,
-      "subcategory": "cn-finance"
+      "subcategory": "gz-media"
     }
   ]
 }
