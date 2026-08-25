@@ -235,7 +235,7 @@
     "firstSeenAt": "2026-08-24T05:50:15.629Z",
     "lastSeenAt": "2026-08-24T05:50:15.629Z",
     "summary": "本周4只新股申购，含国内轴承制造龙头。可提示财富客户关注打新机会，联动券商资管与固收+产品承接打新闲置资金。",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://finance.sina.com.cn/money/future/fmnews/2026-08-24/doc-inipkvry2971642.shtml": {
     "title": "美元承压风偏回暖 贵金属铜维持阶段性反弹",
@@ -249,7 +249,7 @@
     "firstSeenAt": "2026-08-24T05:50:15.629Z",
     "lastSeenAt": "2026-08-24T05:50:15.629Z",
     "summary": "美元走弱带动贵金属与铜阶段性反弹。可提示客户关注商品类资产配置与黄金避险敞口，优化组合抗波动能力。",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://finance.sina.com.cn/roll/2026-08-24/doc-inipkriv0059958.shtml": {
     "title": "黄金、比特币起飞！美债危机正重燃“货币贬值交易”？",
@@ -263,7 +263,7 @@
     "firstSeenAt": "2026-08-24T05:50:15.629Z",
     "lastSeenAt": "2026-08-24T05:50:15.629Z",
     "summary": "美债担忧重燃“货币贬值交易”，黄金走强、避险情绪升温（比特币属高波动另类资产，不作零售推荐）。可提示客户增配黄金等避险资产。",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://finance.sina.com.cn/money/future/fmnews/2026-08-24/doc-inipkkzy2100233.shtml": {
     "title": "光大期货0824黄金点评：黄金创三个月新高 本周关注杰克逊霍尔央行年会",
@@ -319,7 +319,7 @@
     "firstSeenAt": "2026-08-24T05:50:15.629Z",
     "lastSeenAt": "2026-08-24T05:50:15.629Z",
     "summary": "港股科技“易中天”跌超7%、恒生科技半日跌3.84%。可提示权益持仓客户关注科技板块波动，做好风险揭示与资产再平衡。",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://m.21jingji.com/article/20260824/herald/0d30f9a8823acb7994781d812e268329.html": {
     "title": "【招银研究|策略快评】海外长债风暴再袭——超长端利率为何上行？",
@@ -444,7 +444,7 @@
     "firstSeenAt": "2026-08-24T05:50:15.629Z",
     "lastSeenAt": "2026-08-24T05:50:15.629Z",
     "summary": "国资委召开6G未来产业推进会，央企牵头布局。可关注6G产业链投融资与科技金融机会，储备广东相关制造企业服务。",
-    "ai_relevant": true,
+    "ai_relevant": false,
     "subcategory": "cn-finance"
   },
   "https://www.cls.cn/detail/2462072": {
@@ -473,7 +473,7 @@
     "firstSeenAt": "2026-08-24T05:50:15.629Z",
     "lastSeenAt": "2026-08-24T05:50:15.629Z",
     "summary": "融创3家子公司逾期10.6亿、北新路桥亏损，地产链信用风险延续。可提示分行排查涉房信贷敞口，加强资产质量管控。",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://www.cls.cn/detail/2461848": {
     "title": "债市早参8月24日|财政部下半年将及时谋划出台务实管用的增量政策；地方审计揭专项债资金闲置等问题",
@@ -486,7 +486,7 @@
     "firstSeenAt": "2026-08-24T05:50:15.629Z",
     "lastSeenAt": "2026-08-24T05:50:15.629Z",
     "summary": "财政部称下半年谋划增量政策，地方专项债资金闲置待盘活。可关注后续财政发力对基建与消费信贷的拉动。",
-    "ai_relevant": true,
+    "ai_relevant": false,
     "subcategory": "cn-finance"
   },
   "https://www.cls.cn/detail/2461879": {
@@ -515,7 +515,7 @@
     "firstSeenAt": "2026-08-24T05:50:15.629Z",
     "lastSeenAt": "2026-08-24T05:50:15.629Z",
     "summary": "广州沙面历史文化街区保护活化工程公示，文旅商圈升级。可联动信用卡消费场景与财富客户文旅权益，深耕本地客群。",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://www.cnr.cn/gd/guangdongyaowen/20260824/t20260824_527788766.shtml": {
     "title": "广东省第十七届运动会圆满收官",
@@ -528,7 +528,7 @@
     "firstSeenAt": "2026-08-24T05:50:15.629Z",
     "lastSeenAt": "2026-08-24T05:50:15.629Z",
     "summary": "广东省第十七届运动会收官，大型赛事带动城市消费与客流。与分行具体业务关联弱，作本地活动资讯。",
-    "ai_relevant": true,
+    "ai_relevant": false,
     "subcategory": "gz-media"
   },
   "https://www.cnr.cn/gd/guangdonglueying/20260824/t20260824_527788777.shtml": {
@@ -542,7 +542,7 @@
     "firstSeenAt": "2026-08-24T05:50:15.629Z",
     "lastSeenAt": "2026-08-24T05:50:15.629Z",
     "summary": "粤产机器人亮相世界人形机器人运动会，广东智能制造领先。可关注机器人产业链企业金融需求，储备科技金融服务。",
-    "ai_relevant": true,
+    "ai_relevant": false,
     "subcategory": "gz-media"
   },
   "https://www.cnr.cn/gd/meiliguangdong/20260824/t20260824_527789242.shtml": {
@@ -556,7 +556,7 @@
     "firstSeenAt": "2026-08-24T05:50:15.629Z",
     "lastSeenAt": "2026-08-24T05:50:15.629Z",
     "summary": "广州“扫黄打非+文明实践”空间亮相，属公益宣传阵地。与零售业务无直接关联。",
-    "ai_relevant": true,
+    "ai_relevant": false,
     "subcategory": "gz-media"
   },
   "https://www.cnfin.com/yw-lb/detail/20260824/4459311_1.html": {
@@ -599,7 +599,7 @@
     "firstSeenAt": "2026-08-24T05:50:15.629Z",
     "lastSeenAt": "2026-08-24T05:50:15.629Z",
     "summary": "中际旭创澄清产品价格降幅理性、订单强劲，股价仍跌超6%。可提示相关持仓客户关注光模块龙头波动，做好沟通。",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://www.cnfin.com/yw-lb/detail/20260824/4459268_1.html": {
     "title": "“六张网”新机遇·上市公司在行动|通达股份：线缆“老将”搭起新型电网桥梁",
@@ -612,7 +612,7 @@
     "firstSeenAt": "2026-08-24T05:50:15.629Z",
     "lastSeenAt": "2026-08-24T05:50:15.629Z",
     "summary": "通达股份借“六张网”布局新型电网。属电网设备企业动态，与分行零售业务关联弱。",
-    "ai_relevant": true,
+    "ai_relevant": false,
     "subcategory": "cn-finance"
   },
   "https://www.cnfin.com/yw-lb/detail/20260824/4459260_1.html": {
@@ -752,7 +752,7 @@
     "firstSeenAt": "2026-08-24T05:50:15.629Z",
     "lastSeenAt": "2026-08-24T05:50:15.629Z",
     "summary": "从化举办青少年摩托夜赛，属本地文体活动。与分行业务关联弱。",
-    "ai_relevant": true,
+    "ai_relevant": false,
     "subcategory": "gz-media"
   },
   "https://news.dayoo.com/guangzhou/202608/24/139995_54994206.htm": {
@@ -766,7 +766,7 @@
     "firstSeenAt": "2026-08-24T05:50:15.629Z",
     "lastSeenAt": "2026-08-24T05:50:15.629Z",
     "summary": "广州推动生态文明宣传，属公益科普。与零售业务无直接关联。",
-    "ai_relevant": true,
+    "ai_relevant": false,
     "subcategory": "gz-media"
   },
   "https://news.dayoo.com/guangzhou/202608/24/139995_54994205.htm": {
@@ -808,7 +808,7 @@
     "firstSeenAt": "2026-08-24T05:50:15.629Z",
     "lastSeenAt": "2026-08-24T05:50:15.629Z",
     "summary": "广州援疆教师事迹，属正能量宣传。与零售业务无直接关联。",
-    "ai_relevant": true,
+    "ai_relevant": false,
     "subcategory": "gz-media"
   },
   "https://news.southcn.com/node_812903b83a/6ab55256bf.shtml": {
@@ -865,7 +865,7 @@
     "firstSeenAt": "2026-08-24T05:56:57.246Z",
     "lastSeenAt": "2026-08-24T05:56:57.246Z",
     "summary": "央行隔夜逆回购精细调控流动性，债市收益率先下后上区间震荡。财富线可据此提示客户债市震荡格局下的稳健配置思路，利率债短端机会有限。",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://www.cnfin.com/yw-lb/detail/20260824/4459211_1.html": {
     "title": "新华财经早报：8月24日",
@@ -892,7 +892,7 @@
     "firstSeenAt": "2026-08-24T05:56:57.246Z",
     "lastSeenAt": "2026-08-24T05:56:57.246Z",
     "summary": "加拿大民调显示超七成民众支持退出加美贸易谈判，属国际政治动向，与国内银行零售经营无直接关联。",
-    "ai_relevant": true,
+    "ai_relevant": false,
     "subcategory": "cn-finance"
   },
   "https://www.cnfin.com/hg-lb/detail/20260824/4459320_1.html": {
@@ -1018,7 +1018,7 @@
     "firstSeenAt": "2026-08-24T05:56:57.246Z",
     "lastSeenAt": "2026-08-24T05:56:57.246Z",
     "summary": "广州新龙镇推进移风易俗，属镇街行政民生新闻，与银行零售经营无关联。",
-    "ai_relevant": true,
+    "ai_relevant": false,
     "subcategory": "gz-media"
   },
   "https://news.dayoo.com/guangzhou/202608/24/139995_54994201.htm": {
@@ -1032,7 +1032,7 @@
     "firstSeenAt": "2026-08-24T05:56:57.246Z",
     "lastSeenAt": "2026-08-24T05:56:57.246Z",
     "summary": "广州一商家刷单失信被罚5万元，市场监管案例，可作合规宣传素材，无经营决策价值。",
-    "ai_relevant": true,
+    "ai_relevant": false,
     "subcategory": "gz-media"
   },
   "https://news.dayoo.com/guangzhou/202608/24/139995_54994200.htm": {
@@ -1046,7 +1046,7 @@
     "firstSeenAt": "2026-08-24T05:56:57.246Z",
     "lastSeenAt": "2026-08-24T05:56:57.246Z",
     "summary": "广州商铺占道经营扰民曝光，市容管理新闻，与银行零售经营无关联。",
-    "ai_relevant": true,
+    "ai_relevant": false,
     "subcategory": "gz-media"
   },
   "https://news.dayoo.com/guangzhou/202608/24/139995_54994199.htm": {
@@ -1060,7 +1060,7 @@
     "firstSeenAt": "2026-08-24T05:56:57.246Z",
     "lastSeenAt": "2026-08-24T05:56:57.246Z",
     "summary": "国家级方志学术盛会在穗举办，文化学术活动新闻，与银行零售经营无关联。",
-    "ai_relevant": true,
+    "ai_relevant": false,
     "subcategory": "gz-media"
   },
   "https://news.dayoo.com/guangzhou/202608/24/139995_54994196.htm": {
@@ -1075,7 +1075,7 @@
     "firstSeenAt": "2026-08-24T05:56:57.246Z",
     "lastSeenAt": "2026-08-24T05:56:57.246Z",
     "summary": "2026广州医疗与健康产业博览会闭幕，50家三甲医院提交超300条临床合作需求。健康医疗产业客群活跃，可联动私行/财富深耕医疗健康企业家客群，探索员工体检、养老金融等场景。",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://news.dayoo.com/guangzhou/202608/24/139995_54994178.htm": {
     "title": "首届流行音乐创作大会明日在广州启幕",
@@ -1088,7 +1088,7 @@
     "firstSeenAt": "2026-08-24T05:56:57.246Z",
     "lastSeenAt": "2026-08-24T05:56:57.246Z",
     "summary": "首届流行音乐创作大会在广州启幕，文化活动新闻，与银行零售经营无直接关联。",
-    "ai_relevant": true,
+    "ai_relevant": false,
     "subcategory": "gz-media"
   },
   "https://news.southcn.com/node_812903b83a/7044cc7d7b.shtml": {
@@ -1116,7 +1116,7 @@
     "firstSeenAt": "2026-08-24T05:56:57.246Z",
     "lastSeenAt": "2026-08-24T05:56:57.246Z",
     "summary": "泡泡玛特业绩预期下调、股价大跌，个股消费公司动态，与银行零售经营无直接关联。",
-    "ai_relevant": true,
+    "ai_relevant": false,
     "subcategory": "gz-media"
   },
   "https://news.southcn.com/node_de9aedeec1/fa7436a025.shtml": {
@@ -1144,7 +1144,7 @@
     "firstSeenAt": "2026-08-24T05:56:57.246Z",
     "lastSeenAt": "2026-08-24T05:56:57.246Z",
     "summary": "奶茶店业态观察报道，消费趋势软文，无零售经营决策价值。",
-    "ai_relevant": true,
+    "ai_relevant": false,
     "subcategory": "gz-media"
   },
   "https://www.cnfin.com/cy-lb/detail/20260824/4459289_1.html": {
@@ -1215,7 +1215,7 @@
     "firstSeenAt": "2026-08-24T05:58:19.498Z",
     "lastSeenAt": "2026-08-24T05:58:19.498Z",
     "summary": "阿里巴巴800亿融资落地股价大跌，港股二次探底担忧升温。财富线应关注港美股持仓客户情绪，提示高波动风险，避免恐慌性操作。",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://www.stcn.com/article/detail/4105309.html": {
     "title": "逃离“拥挤赛道”？公募重仓标的显疲态，基金经理审视投资再平衡",
@@ -1270,7 +1270,7 @@
     "firstSeenAt": "2026-08-24T05:58:19.498Z",
     "lastSeenAt": "2026-08-24T05:58:19.498Z",
     "summary": "广州生意人群体文化报道，商业氛围软文，无零售经营决策价值。",
-    "ai_relevant": true,
+    "ai_relevant": false,
     "subcategory": "gz-media"
   },
   "https://arxiv.org/abs/2608.20440": {
@@ -1297,7 +1297,7 @@
     "firstSeenAt": "2026-08-24T06:02:22.103Z",
     "lastSeenAt": "2026-08-24T06:02:22.103Z",
     "summary": "茅台股价重回1300元上方、种业概念逆市上涨，A股板块行情，财富线可作白酒板块客户持仓参考，决策价值有限。",
-    "ai_relevant": true,
+    "ai_relevant": false,
     "subcategory": "cn-finance"
   },
   "https://www.stcn.com/article/detail/4105301.html": {
@@ -1311,7 +1311,7 @@
     "firstSeenAt": "2026-08-24T06:02:22.103Z",
     "lastSeenAt": "2026-08-24T06:02:22.103Z",
     "summary": "茅台股价大涨，个股行情快讯，无零售经营决策价值。",
-    "ai_relevant": true,
+    "ai_relevant": false,
     "subcategory": "cn-finance"
   },
   "https://www.stcn.com/article/detail/4105302.html": {
@@ -1408,7 +1408,7 @@
     "firstSeenAt": "2026-08-24T07:13:33.590Z",
     "lastSeenAt": "2026-08-24T07:13:33.590Z",
     "summary": "高盛警告黄金4900美元预测偏保守、交易商被迫抬轿，金价乐观情绪升温。财富线配置黄金同时须提示过热回调风险，防止客户追高。",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://www.cnfin.com/hg-lb/detail/20260824/4459342_1.html": {
     "title": "国务院国资委召开中央企业6G未来产业推进会",
@@ -1421,7 +1421,7 @@
     "firstSeenAt": "2026-08-24T07:13:33.590Z",
     "lastSeenAt": "2026-08-24T07:13:33.590Z",
     "summary": "国资委召开中央企业6G未来产业推进会，产业政策动态，与银行零售经营无直接关联。",
-    "ai_relevant": true,
+    "ai_relevant": false,
     "subcategory": "cn-finance"
   },
   "https://www.cnfin.com/yw-lb/detail/20260824/4459362_1.html": {
@@ -1449,7 +1449,7 @@
     "firstSeenAt": "2026-08-24T07:13:33.590Z",
     "lastSeenAt": "2026-08-24T07:13:33.590Z",
     "summary": "上海发布大宗商品贸易真实性规则指引，对公贸易金融监管细化，与零售经营无直接关联。",
-    "ai_relevant": true,
+    "ai_relevant": false,
     "subcategory": "cn-finance"
   },
   "https://www.cnfin.com/hg-lb/detail/20260824/4459357_1.html": {
@@ -1562,7 +1562,7 @@
     "firstSeenAt": "2026-08-24T07:13:33.590Z",
     "lastSeenAt": "2026-08-24T07:13:33.590Z",
     "summary": "单只ETF一周净流入44.51亿元登顶亚洲吸金榜，资金借道ETF布局明显。财富线可借ETF资金流向提示客户把握宽基/主题配置方向，顺势引导定投。",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://www.stcn.com/article/detail/4105394.html": {
     "title": "​货拉拉2026“拉风少年”研学营收官，活动覆盖各类新就业群体家庭",
@@ -1589,7 +1589,7 @@
     "firstSeenAt": "2026-08-24T07:13:33.590Z",
     "lastSeenAt": "2026-08-24T07:13:33.590Z",
     "summary": "花都秀全街安全宣传与非遗活动，区街民生新闻，与银行零售经营无关联。",
-    "ai_relevant": true,
+    "ai_relevant": false,
     "subcategory": "gz-media"
   },
   "https://news.dayoo.com/guangzhou/202608/24/139995_54994359.htm": {
@@ -1617,7 +1617,7 @@
     "firstSeenAt": "2026-08-24T07:13:33.590Z",
     "lastSeenAt": "2026-08-24T07:13:33.590Z",
     "summary": "花都读者分享会活动新闻，文化民生资讯，无经营决策价值。",
-    "ai_relevant": true,
+    "ai_relevant": false,
     "subcategory": "gz-media"
   },
   "https://news.dayoo.com/guangzhou/202608/24/139995_54994357.htm": {
@@ -1659,7 +1659,7 @@
     "firstSeenAt": "2026-08-24T07:13:33.590Z",
     "lastSeenAt": "2026-08-24T07:13:33.590Z",
     "summary": "广州海珠携73家帮扶地企业亮相广博会，区域产业协作动态，可作对公与客群经营背景，零售决策价值有限。",
-    "ai_relevant": true,
+    "ai_relevant": false,
     "subcategory": "gz-media"
   },
   "https://finance.cctv.com/2026/08/24/ARTIJD9I7cVWzln11MSXbgBs260824.shtml": {
@@ -1802,7 +1802,7 @@
     "firstSeenAt": "2026-08-24T08:26:12.411Z",
     "lastSeenAt": "2026-08-24T08:26:12.411Z",
     "summary": "暑运前半程广州运力拉满、客流量高位，交通运行数据，客群经营参考价值有限。",
-    "ai_relevant": true,
+    "ai_relevant": false,
     "subcategory": "gz-customer"
   },
   "https://finance.sina.com.cn/jryx/bank/2026-08-24/doc-inipkzxs2039146.shtml": {
@@ -1831,7 +1831,7 @@
     "firstSeenAt": "2026-08-24T08:26:12.411Z",
     "lastSeenAt": "2026-08-24T08:26:12.411Z",
     "summary": "A股放量调整、种业与黄金概念走强、易中天集体下跌，市场分化行情。财富线应提示客户均衡配置，把握黄金与防御板块机会，控制回撤。",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://www.cnfin.com/yw-lb/detail/20260824/4459422_1.html": {
     "title": "工信部：今年计划印发实施《关于加强时空信息终端供需适配 促进融合应用的行动计划》",
@@ -1844,7 +1844,7 @@
     "firstSeenAt": "2026-08-24T08:26:12.411Z",
     "lastSeenAt": "2026-08-24T08:26:12.411Z",
     "summary": "工信部将印发时空信息终端供需适配行动计划，产业政策动态，与银行零售经营无直接关联。",
-    "ai_relevant": true,
+    "ai_relevant": false,
     "subcategory": "cn-finance"
   },
   "https://www.cnfin.com/yw-lb/detail/20260824/4459407_1.html": {
@@ -1872,7 +1872,7 @@
     "firstSeenAt": "2026-08-24T08:26:12.411Z",
     "lastSeenAt": "2026-08-24T08:26:12.411Z",
     "summary": "新华500指数跌1.35%，指数行情快讯，无零售经营决策价值。",
-    "ai_relevant": true,
+    "ai_relevant": false,
     "subcategory": "cn-finance"
   },
   "https://www.cnfin.com/hg-lb/detail/20260824/4459448_1.html": {
@@ -1957,7 +1957,7 @@
     "firstSeenAt": "2026-08-24T08:26:12.411Z",
     "lastSeenAt": "2026-08-24T08:26:12.411Z",
     "summary": "今年新股发行募资1831.54亿元、科创板占比48.51%，IPO市场活跃。财富线可提示客户关注科创板打新与新股配置机会，把握权益市场供给节奏。",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://www.stcn.com/article/detail/4105733.html": {
     "title": "同程旅行：中秋国庆旅行产品“提前订”热度大增",
@@ -1985,7 +1985,7 @@
     "firstSeenAt": "2026-08-24T08:26:12.411Z",
     "lastSeenAt": "2026-08-24T08:26:12.411Z",
     "summary": "全球风暴再起、亚太股市集体回调，外围市场波动加剧。财富线应及时提示客户海外配置波动风险，做好组合防御与流动性安排。",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://news.dayoo.com/guangzhou/202608/24/139995_54994313.htm": {
     "title": "广州地铁十二号线中段轨行区进入运营调试",
@@ -2083,7 +2083,7 @@
     "firstSeenAt": "2026-08-24T08:34:58.777Z",
     "lastSeenAt": "2026-08-24T08:34:58.777Z",
     "summary": "债市日报：资金面与利率走势跟踪，债市动态。财富线可据此管理固收客户收益预期，提示利率区间震荡下的稳健配置。",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://www.cnfin.com/hg-lb/detail/20260824/4459411_1.html": {
     "title": "激光技术新突破有望助力光子计算发展",
@@ -2110,7 +2110,7 @@
     "firstSeenAt": "2026-08-24T08:34:58.777Z",
     "lastSeenAt": "2026-08-24T08:34:58.777Z",
     "summary": "山东港口原油价格指数环比上涨，大宗商品价格数据，与零售经营无直接关联。",
-    "ai_relevant": true,
+    "ai_relevant": false,
     "subcategory": "cn-finance"
   },
   "https://www.cnfin.com/cy-lb/detail/20260824/4459364_1.html": {
@@ -2138,7 +2138,7 @@
     "firstSeenAt": "2026-08-24T08:34:58.777Z",
     "lastSeenAt": "2026-08-24T08:34:58.777Z",
     "summary": "莱克电气发行江苏首单上市民企绿色超短融，对公融资动态，非零售决策信息。",
-    "ai_relevant": true,
+    "ai_relevant": false,
     "subcategory": "cn-finance"
   },
   "https://www.stcn.com/article/detail/4105412.html": {
@@ -2223,7 +2223,7 @@
     "firstSeenAt": "2026-08-24T10:38:00.578Z",
     "lastSeenAt": "2026-08-24T10:38:00.578Z",
     "summary": "美债困境有望推动流动性宽松、黄金仍有上行空间，机构观点。财富线可据此向客户传导黄金中长期配置逻辑，同时提示节奏管理。",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://video.sina.com.cn/p/finance/2026-08-24/detail-inipmhfs6103373.d.html": {
     "title": "8-24 黄金到达压力位附近，是突破还是冲高回落？",
@@ -2251,7 +2251,7 @@
     "firstSeenAt": "2026-08-24T10:38:00.578Z",
     "lastSeenAt": "2026-08-24T10:38:00.578Z",
     "summary": "黄金3周暴涨700美元、高盛预测冲6000美元，金价高波动行情。财富线配置黄金务必强化风险提示，防止客户情绪化追高。",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://m.21jingji.com/article/20260824/herald/489b89c3bfaa59df0f3f485c4e6afe2f.html": {
     "title": "年收入3万却在银行贷出1480万，河南多名老农遭套路",
@@ -2423,7 +2423,7 @@
     "firstSeenAt": "2026-08-24T10:38:00.578Z",
     "lastSeenAt": "2026-08-24T10:38:00.578Z",
     "summary": "前7个月广州规上工业增加值同比增长5.5%，广州经济基本面稳健。可增强对本地企业客群与经营信贷投放信心，服务实体经济。",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://news.dayoo.com/guangzhou/202608/24/139995_54994472.htm": {
     "title": "2026年“广府共绣”工作营开营，为广州老建筑活化出点子",
@@ -2436,7 +2436,7 @@
     "firstSeenAt": "2026-08-24T10:38:00.578Z",
     "lastSeenAt": "2026-08-24T10:38:00.578Z",
     "summary": "广府共绣工作营为广州老建筑活化出点子，城市更新文化活动，与零售经营无直接关联。",
-    "ai_relevant": true,
+    "ai_relevant": false,
     "subcategory": "gz-media"
   },
   "https://news.dayoo.com/guangzhou/202608/24/139995_54994402.htm": {
@@ -2450,7 +2450,7 @@
     "firstSeenAt": "2026-08-24T10:38:00.578Z",
     "lastSeenAt": "2026-08-24T10:38:00.578Z",
     "summary": "广州白鹅潭第二高楼效果图曝光，城市建设新闻，与银行零售经营无直接关联。",
-    "ai_relevant": true,
+    "ai_relevant": false,
     "subcategory": "gz-media"
   },
   "https://www.cnfin.com/yw-lb/detail/20260824/4459568_1.html": {
@@ -2479,7 +2479,7 @@
     "firstSeenAt": "2026-08-24T10:38:00.578Z",
     "lastSeenAt": "2026-08-24T10:38:00.578Z",
     "summary": "小鹏机器人业务完成首轮超9亿美元融资，广东（广州）科技企业重大融资。分行可关注机器人产业链客群，探索科技企业员工与供应链金融服务。",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://www.cnfin.com/yw-lb/detail/20260824/4459555_1.html": {
     "title": "商品日报（8月24日）：集运欧线乙二醇双双涨超4% 现货提涨焦炭刷新近两年新高",
@@ -2534,7 +2534,7 @@
     "firstSeenAt": "2026-08-24T10:38:00.578Z",
     "lastSeenAt": "2026-08-24T10:38:00.578Z",
     "summary": "中国能化现货估价指数环比上涨，大宗指数数据，非零售决策信息。",
-    "ai_relevant": true,
+    "ai_relevant": false,
     "subcategory": "cn-finance"
   },
   "https://www.stcn.com/article/detail/4105946.html": {
@@ -2548,7 +2548,7 @@
     "firstSeenAt": "2026-08-24T10:38:00.578Z",
     "lastSeenAt": "2026-08-24T10:38:00.578Z",
     "summary": "月内涨超20%的品种受关注、相关股票爆发，行情快讯，无零售经营决策价值。",
-    "ai_relevant": true,
+    "ai_relevant": false,
     "subcategory": "cn-finance"
   },
   "https://www.stcn.com/article/detail/4106113.html": {
@@ -2787,7 +2787,7 @@
     "firstSeenAt": "2026-08-24T10:55:22.731Z",
     "lastSeenAt": "2026-08-24T10:55:22.731Z",
     "summary": "债市收盘：资金面偏紧下长端走强、30年期国债收益率下破2.16%，债市走势。财富线可据此管理固收客户预期，提示长端利率下行空间。",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://www.cls.cn/detail/2462340": {
     "title": "9000万月活流量、日均千亿级Token消耗：平安迈入AI驱动的战略协同新模式",
@@ -2814,7 +2814,7 @@
     "firstSeenAt": "2026-08-24T10:55:22.731Z",
     "lastSeenAt": "2026-08-24T10:55:22.731Z",
     "summary": "山东港口石油焦现货价格环比上涨9元/吨，大宗数据，非零售决策信息。",
-    "ai_relevant": true,
+    "ai_relevant": false,
     "subcategory": "cn-finance"
   },
   "https://www.cnfin.com/cy-lb/detail/20260824/4459515_1.html": {
@@ -2828,7 +2828,7 @@
     "firstSeenAt": "2026-08-24T10:55:22.731Z",
     "lastSeenAt": "2026-08-24T10:55:22.731Z",
     "summary": "山东港口钢坯热轧C料价格小幅上涨，大宗数据，非零售决策信息。",
-    "ai_relevant": true,
+    "ai_relevant": false,
     "subcategory": "cn-finance"
   },
   "https://www.stcn.com/article/detail/4106287.html": {
@@ -2885,7 +2885,7 @@
     "firstSeenAt": "2026-08-24T10:55:22.731Z",
     "lastSeenAt": "2026-08-24T10:55:22.731Z",
     "summary": "蔡崇信、吴泳铭增持阿里1.2亿港元，核心高管增持释放信心信号。财富线可借势向客户传导港股科技龙头基本面信心。",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://www.stcn.com/article/detail/4106278.html": {
     "title": "合计107万股，约1.2亿港元！蔡崇信、吴泳铭出手增持阿里巴巴",
@@ -3053,7 +3053,7 @@
     "firstSeenAt": "2026-08-24T11:23:37.307Z",
     "lastSeenAt": "2026-08-24T11:23:37.307Z",
     "summary": "小鹏机器人业务首轮融资超9亿美元；对分行财富/信贷/客群业务有宏观参考",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://www.stcn.com/article/detail/4108544.html": {
     "title": "鸣鸣很忙上半年营收近450亿元 同比增长60%",
@@ -3081,7 +3081,7 @@
     "firstSeenAt": "2026-08-24T11:23:37.307Z",
     "lastSeenAt": "2026-08-24T11:23:37.307Z",
     "summary": "看好AI前景 阿里董事长及CEO增持公司股票；对分行财富/信贷/客群业务有宏观参考",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://www.cnfin.com/hg-lb/detail/20260824/4459611_1.html": {
     "title": "【环球财经】刚果（金）加快职业培训改革 重点支撑矿业和基建本地用工",
@@ -3095,7 +3095,7 @@
     "firstSeenAt": "2026-08-24T11:23:37.307Z",
     "lastSeenAt": "2026-08-24T11:23:37.307Z",
     "summary": "刚果（金）加快职业培训改革 重点支撑矿业和基建本地用工；对分行财富/信贷/客群业务有宏观参考",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://www.cnfin.com/hg-lb/detail/20260824/4459616_1.html": {
     "title": "上海：加快推进新型工业化 强化三大先导产业战略引领",
@@ -3137,7 +3137,7 @@
     "firstSeenAt": "2026-08-24T11:27:09.229Z",
     "lastSeenAt": "2026-08-24T11:27:09.229Z",
     "summary": "拟派现超490亿元！深市上市公司掀中期分红潮；对分行财富/信贷/客群业务有宏观参考",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://www.stcn.com/article/detail/4108552.html": {
     "title": "受益AI基建 建滔积层板中期纯利大增209% 7月利润约11亿港元创单月新高",
@@ -3151,7 +3151,7 @@
     "firstSeenAt": "2026-08-24T11:27:09.229Z",
     "lastSeenAt": "2026-08-24T11:27:09.229Z",
     "summary": "受益AI基建 建滔积层板中期纯利大增209% 7月利润约11亿港元创单月新高；对分行财富/信贷/客群业务有宏观参考",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://finance.sina.com.cn/stock/aigc/hkgg/2026-08-24/doc-inipmnpq6049946.shtml": {
     "title": "易方达精债人民币2026-08-21基金净值公告",
@@ -3221,7 +3221,7 @@
     "firstSeenAt": "2026-08-24T11:38:56.564Z",
     "lastSeenAt": "2026-08-24T11:38:56.564Z",
     "summary": "APEC中小企业部长会议，广州准备好了；广州市政策动向，分行需关注落地机会",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://news.dayoo.com/guangzhou/202608/24/139995_54994510.htm": {
     "title": "广州推行“无事不扰”双清单管理机制，已有45656户经营主体纳入“白名单”",
@@ -3347,7 +3347,7 @@
     "firstSeenAt": "2026-08-24T23:37:01.191Z",
     "lastSeenAt": "2026-08-24T23:37:01.191Z",
     "summary": "财政部等三部门发文 优化完善财政金融协同促内需政策；对分行财富/信贷/客群业务有宏观参考",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://m.21jingji.com/article/20260824/herald/d45dea1e4c2765d6fd1ced292b91a350.html": {
     "title": "人民银行：7月同业拆借日均成交3232.9亿元 同比减少24.3%",
@@ -3641,7 +3641,7 @@
     "firstSeenAt": "2026-08-24T23:37:01.191Z",
     "lastSeenAt": "2026-08-24T23:37:01.191Z",
     "summary": "工信部将印发行动计划 北斗规模应用提速迈向万亿级市场；对分行财富/信贷/客群业务有宏观参考",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://www.stcn.com/article/detail/4115095.html": {
     "title": "爆款电影背后的影视金融新逻辑",
@@ -3711,7 +3711,7 @@
     "firstSeenAt": "2026-08-24T23:37:01.191Z",
     "lastSeenAt": "2026-08-24T23:37:01.191Z",
     "summary": "广州中山纪念堂孙中山铜像即将“保养”，预计11月初完工（与银行零售业务关联弱）",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://news.dayoo.com/guangzhou/202608/24/139995_54994610.htm": {
     "title": "办大事、闯远洋、挑大梁：广州中小企业的“能”与“势”",
@@ -3725,7 +3725,7 @@
     "firstSeenAt": "2026-08-24T23:37:01.191Z",
     "lastSeenAt": "2026-08-24T23:37:01.191Z",
     "summary": "办大事、闯远洋、挑大梁：广州中小企业的“能”与“势”；广州市政策动向，分行需关注落地机会",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://news.dayoo.com/guangzhou/202608/24/139995_54994597.htm": {
     "title": "全国首批市场采购出口化妆品试点落地广州一周年 出口化妆品货值超4900万元",
@@ -3739,7 +3739,7 @@
     "firstSeenAt": "2026-08-24T23:37:01.191Z",
     "lastSeenAt": "2026-08-24T23:37:01.191Z",
     "summary": "全国首批市场采购出口化妆品试点落地广州一周年 出口化妆品货值超4900万元（与银行零售业务关联弱）",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://news.dayoo.com/guangzhou/202608/24/139995_54994563.htm": {
     "title": "广州推动快递骑手加入基层应急队伍，130余名骑手解锁急救技能",
@@ -3753,7 +3753,7 @@
     "firstSeenAt": "2026-08-24T23:37:01.191Z",
     "lastSeenAt": "2026-08-24T23:37:01.191Z",
     "summary": "广州推动快递骑手加入基层应急队伍，130余名骑手解锁急救技能（与银行零售业务关联弱）",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://news.dayoo.com/guangzhou/202608/24/139995_54994544.htm": {
     "title": "南沙区居民注意！你家水费有变",
@@ -3837,7 +3837,7 @@
     "firstSeenAt": "2026-08-25T01:09:40.109Z",
     "lastSeenAt": "2026-08-25T01:09:40.109Z",
     "summary": "ETF资金榜|黄金ETF、十年国债ETF、30年；对分行财富/信贷/客群业务有宏观参考",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://static.cninfo.com.cn/finalpage/2026-08-25/1225500108.PDF": {
     "title": "燧原科技 (688801)",
@@ -3991,7 +3991,7 @@
     "firstSeenAt": "2026-08-25T01:09:40.109Z",
     "lastSeenAt": "2026-08-25T01:09:40.109Z",
     "summary": "英伟达财报即将登场！高盛：若不释放这三大利好股价恐仍将下行；A股市场动态",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://finance.eastmoney.com/a/202608243851044114.html": {
     "title": "A股三大指数集体收跌贵金属与煤炭板块逆市走强",
@@ -4005,7 +4005,7 @@
     "firstSeenAt": "2026-08-25T01:09:40.109Z",
     "lastSeenAt": "2026-08-25T01:09:40.109Z",
     "summary": "A股三大指数集体收跌贵金属与煤炭板块逆市走强；A股市场动态",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://finance.eastmoney.com/a/202608243851381467.html": {
     "title": "8月24日晚间沪深上市公司重大事项公告最新快递",
@@ -4019,7 +4019,7 @@
     "firstSeenAt": "2026-08-25T01:09:40.109Z",
     "lastSeenAt": "2026-08-25T01:09:40.109Z",
     "summary": "8月24日晚间沪深上市公司重大事项公告最新快递；A股市场动态",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://finance.eastmoney.com/a/202608243851263587.html": {
     "title": "交易所收紧IPO？求证：要求券商从源头提升申报质量",
@@ -4033,7 +4033,7 @@
     "firstSeenAt": "2026-08-25T01:09:40.109Z",
     "lastSeenAt": "2026-08-25T01:09:40.109Z",
     "summary": "交易所收紧IPO？求证：要求券商从源头提升申报质量；A股市场动态",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://finance.eastmoney.com/a/202608243851083568.html": {
     "title": "外交部回应美方威胁对伊朗贸易伙伴实施二级制裁",
@@ -4047,7 +4047,7 @@
     "firstSeenAt": "2026-08-25T01:09:40.109Z",
     "lastSeenAt": "2026-08-25T01:09:40.109Z",
     "summary": "外交部回应美方威胁对伊朗贸易伙伴实施二级制裁；A股市场动态",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://finance.eastmoney.com/a/202608243850837771.html": {
     "title": "宇树科技较首日开盘蒸发2000亿市值",
@@ -4117,7 +4117,7 @@
     "firstSeenAt": "2026-08-25T01:09:40.109Z",
     "lastSeenAt": "2026-08-25T01:09:40.109Z",
     "summary": "中信证券：当前美股半导体设备板块配置价值进一步凸显；A股市场动态",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://finance.eastmoney.com/a/202608253851924249.html": {
     "title": "中信证券：银行中报信号积极绝对收益空间料将延续",
@@ -4215,7 +4215,7 @@
     "firstSeenAt": "2026-08-25T01:09:40.109Z",
     "lastSeenAt": "2026-08-25T01:09:40.109Z",
     "summary": "全球市场：美股三大指数涨跌不一存储、光通信板块下挫国际金价延续涨势；A股市场动态",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://finance.eastmoney.com/a/202608253851651217.html": {
     "title": "美加贸易战进一步升级！特朗普：明年将加拿大汽车、钢铁等品类关税提高至50%",
@@ -4229,7 +4229,7 @@
     "firstSeenAt": "2026-08-25T01:09:40.109Z",
     "lastSeenAt": "2026-08-25T01:09:40.109Z",
     "summary": "美加贸易战进一步升级！特朗普：明年将加拿大汽车、钢铁等品类关税提高至50%；A股市场动态",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0825/2026082500111.pdf": {
     "title": "Announcements and Notices - [Overseas Regulatory Announcement - Other]",
@@ -4425,7 +4425,7 @@
     "firstSeenAt": "2026-08-25T01:09:40.109Z",
     "lastSeenAt": "2026-08-25T01:09:40.109Z",
     "summary": "国资委：孵化场景业态 加快实现6G商业闭环；对分行财富/信贷/客群业务有宏观参考",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://www.stcn.com/article/detail/4115160.html": {
     "title": "国家人形机器人产业标准体系建设指南公开征求意见",
@@ -4579,7 +4579,7 @@
     "firstSeenAt": "2026-08-25T01:09:40.109Z",
     "lastSeenAt": "2026-08-25T01:09:40.109Z",
     "summary": "夜里雨来，广州多区发布雷雨大风预警（与银行零售业务关联弱）",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://news.dayoo.com/guangzhou/202608/24/139995_54994545.htm": {
     "title": "广州将推动符合条件的国家机关停车场向社会开放",
@@ -4593,7 +4593,7 @@
     "firstSeenAt": "2026-08-25T01:09:40.109Z",
     "lastSeenAt": "2026-08-25T01:09:40.109Z",
     "summary": "广州将推动符合条件的国家机关停车场向社会开放；广州市政策动向，分行需关注落地机会",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://news.dayoo.com/guangzhou/202608/24/139995_54994556.htm": {
     "title": "广州发布2026上半年出租汽车行业运行监测信息以及风险提示",
@@ -4607,7 +4607,7 @@
     "firstSeenAt": "2026-08-25T01:09:40.109Z",
     "lastSeenAt": "2026-08-25T01:09:40.109Z",
     "summary": "广州发布2026上半年出租汽车行业运行监测信息以及风险提示；广州市政策动向，分行需关注落地机会",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://news.dayoo.com/guangzhou/202608/24/139995_54994534.htm": {
     "title": "2026南国书香节广州分会场多点开花 打造“家门口”的阅读嘉年华",
@@ -4621,7 +4621,7 @@
     "firstSeenAt": "2026-08-25T01:09:40.109Z",
     "lastSeenAt": "2026-08-25T01:09:40.109Z",
     "summary": "2026南国书香节广州分会场多点开花 打造“家门口”的阅读嘉年华（与银行零售业务关联弱）",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://www.cnr.cn/gd/guangdongyaowen/20260825/t20260825_527790345.shtml": {
     "title": "花都支撑农村供水“三同五化”工程深入实施",
@@ -4663,7 +4663,7 @@
     "firstSeenAt": "2026-08-25T01:09:40.109Z",
     "lastSeenAt": "2026-08-25T01:09:40.109Z",
     "summary": "文脉赓续古村落 数字赋能乡土情；广州市政策动向，分行需关注落地机会",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://www.investing.com/news/company-news/arb-fy26-slides-margin-recovery-lifts-h2-profit-despite-sales-decline-93CH-4874375": {
     "title": "ARB FY26 slides: margin recovery lifts H2 profit despite sales decline",
@@ -4985,7 +4985,7 @@
     "firstSeenAt": "2026-08-25T01:33:56.347Z",
     "lastSeenAt": "2026-08-25T01:33:56.347Z",
     "summary": "狂烧100亿美元！阿里利润暴跌75%却闪电融资800亿港元，港股最大抽血豪赌AI；港股市场动态",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://finance.sina.com.cn/stock/hkstock/ggscyd/2026-08-25/doc-inipnuhy5576595.shtml": {
     "title": "乐动机器人获纳入恒生综合指数成份股",
@@ -4999,7 +4999,7 @@
     "firstSeenAt": "2026-08-25T01:33:56.347Z",
     "lastSeenAt": "2026-08-25T01:33:56.347Z",
     "summary": "乐动机器人获纳入恒生综合指数成份股；港股市场动态",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://finance.sina.com.cn/stock/hkstock/marketalerts/2026-08-25/doc-inipnuhu9651555.shtml": {
     "title": "麦科医药-B(02335)存仓市值总计5.21亿港元 股东将1773.41万股股票存入Merrill Lynch Far East",
@@ -5013,7 +5013,7 @@
     "firstSeenAt": "2026-08-25T01:33:56.347Z",
     "lastSeenAt": "2026-08-25T01:33:56.347Z",
     "summary": "麦科医药-B(02335)存仓市值总计5.21亿港元 股东将1773.41万股股…；港股市场动态",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://finance.sina.com.cn/stock/hkstock/marketalerts/2026-08-25/doc-inipnuhu9646814.shtml": {
     "title": "金融街物业(01502)转仓市值总计2068.37万港元 占比10.07% 从花旗银行转出1035.70万股",
@@ -5041,7 +5041,7 @@
     "firstSeenAt": "2026-08-25T01:33:56.347Z",
     "lastSeenAt": "2026-08-25T01:33:56.347Z",
     "summary": "智通港股沽空统计|8月25日；港股市场动态",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://finance.sina.com.cn/stock/hkstock/marketalerts/2026-08-25/doc-inipnuia2329998.shtml": {
     "title": "GOLDWAY EDU(08160)股东将股票存入昌利证券 存仓市值478.08万港元",
@@ -5055,7 +5055,7 @@
     "firstSeenAt": "2026-08-25T01:33:56.347Z",
     "lastSeenAt": "2026-08-25T01:33:56.347Z",
     "summary": "GOLDWAY EDU(08160)股东将股票存入昌利证券 存仓市值478.08…；港股市场动态",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://finance.sina.com.cn/stock/hkstock/marketalerts/2026-08-25/doc-inipnpze2457564.shtml": {
     "title": "同景新能源(08326)转仓市值930.65万港元 占比5.42% 从瑞城证券公司转出4990万股",
@@ -5125,7 +5125,7 @@
     "firstSeenAt": "2026-08-25T01:33:56.347Z",
     "lastSeenAt": "2026-08-25T01:33:56.347Z",
     "summary": "高盛：恒指季检 被动资金净流入最多六股料为携程集团-S(09961)等；港股市场动态",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://finance.sina.com.cn/stock/hkstock/hkgg/2026-08-24/doc-inipmhfq1922316.shtml": {
     "title": "花旗：升贝壳-W(02423)目标价至75.4港元 重申为首选股",
@@ -5209,7 +5209,7 @@
     "firstSeenAt": "2026-08-25T01:33:56.347Z",
     "lastSeenAt": "2026-08-25T01:33:56.347Z",
     "summary": "安本投资：对中资科技股中期仍审慎乐观 美国长债息高企对港股影响可控；港股市场动态",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://finance.sina.com.cn/stock/hkstock/hkgg/2026-08-24/doc-inipkzxs2021306.shtml": {
     "title": "东方汇理私银赵颖妍：港股处于健康调整期 预期资金出现轮动利好高息股",
@@ -5223,7 +5223,7 @@
     "firstSeenAt": "2026-08-25T01:33:56.347Z",
     "lastSeenAt": "2026-08-25T01:33:56.347Z",
     "summary": "东方汇理私银赵颖妍：港股处于健康调整期 预期资金出现轮动利好高息股；港股市场动态",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://finance.sina.com.cn/stock/hkstock/marketalerts/2026-08-24/doc-inipmnpn1977708.shtml": {
     "title": "Norges Bank减持凯莱英(06821)24.62万股 每股作价约136.52港元",
@@ -5265,7 +5265,7 @@
     "firstSeenAt": "2026-08-25T01:33:56.347Z",
     "lastSeenAt": "2026-08-25T01:33:56.347Z",
     "summary": "8月25日，人民币对美元中间价报6.7852，调降11个基点。前一交易日中间价报…；对分行财富/信贷/客群业务有宏观参考",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://www.cnfin.com/hg-lb/detail/20260825/4459860_1.html": {
     "title": "市场监管总局征求2027年食品安全抽检计划意见建议",
@@ -5433,7 +5433,7 @@
     "firstSeenAt": "2026-08-25T01:33:56.347Z",
     "lastSeenAt": "2026-08-25T01:33:56.347Z",
     "summary": "科创者（KCZ）品牌战略升维：从“高端智能窗帘”到“全屋AI智能窗帘专家”；广州市政策动向，分行需关注落地机会",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://economy.southcn.com/node_c41bb0e5e3/9f162f3814.shtml": {
     "title": "友邦人寿2026年上半年业绩稳健增长，多项核心能力持续提升",
@@ -5447,7 +5447,7 @@
     "firstSeenAt": "2026-08-25T01:33:56.347Z",
     "lastSeenAt": "2026-08-25T01:33:56.347Z",
     "summary": "友邦人寿2026年上半年业绩稳健增长，多项核心能力持续提升；广州市政策动向，分行需关注落地机会",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://news.southcn.com/node_810c33d731/a22199607f.shtml": {
     "title": "中国牛，特别牛！中国奶牛“能力值”高起来了",
@@ -5461,7 +5461,7 @@
     "firstSeenAt": "2026-08-25T01:33:56.347Z",
     "lastSeenAt": "2026-08-25T01:33:56.347Z",
     "summary": "中国牛，特别牛！中国奶牛“能力值”高起来了；广州市政策动向，分行需关注落地机会",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://economy.southcn.com/node_c41bb0e5e3/b8fc1a5b0e.shtml": {
     "title": "唯品会年度特卖大会高潮期开幕：限量爆款低至85折，大牌狂秒年度低价",
@@ -5475,7 +5475,7 @@
     "firstSeenAt": "2026-08-25T01:33:56.347Z",
     "lastSeenAt": "2026-08-25T01:33:56.347Z",
     "summary": "唯品会年度特卖大会高潮期开幕：限量爆款低至85折，大牌狂秒年度低价；广州市政策动向，分行需关注落地机会",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://news.southcn.com/node_54a44f01a2/ff6c901b40.shtml": {
     "title": "249项标准，39张认证，广州书写粤港澳大湾区“软联通”新篇章",
@@ -5489,7 +5489,7 @@
     "firstSeenAt": "2026-08-25T01:33:56.347Z",
     "lastSeenAt": "2026-08-25T01:33:56.347Z",
     "summary": "249项标准，39张认证，广州书写粤港澳大湾区“软联通”新篇章；广州市政策动向，分行需关注落地机会",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://news.southcn.com/node_52c906c8ec/c943bcf5d4.shtml": {
     "title": "助力粤港澳大湾区清洁能源建设 国内最大换流站导管架发运",
@@ -5503,7 +5503,7 @@
     "firstSeenAt": "2026-08-25T01:33:56.347Z",
     "lastSeenAt": "2026-08-25T01:33:56.347Z",
     "summary": "助力粤港澳大湾区清洁能源建设 国内最大换流站导管架发运；广州市政策动向，分行需关注落地机会",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://www.cnbc.com/2026/08/24/trump-iran-economy-sanctions-china-bessent.html": {
     "title": "Trump admin unveils anti-Iran global sanctions plan, signals China not exempt",
@@ -5741,7 +5741,7 @@
     "firstSeenAt": "2026-08-25T01:46:06.393Z",
     "lastSeenAt": "2026-08-25T01:46:06.393Z",
     "summary": "财中ETF风向标｜美债回购加码提振贵金属，资源品迎宏观产业共振｜周期资源早参；对分行财富/信贷/客群业务有宏观参考",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://finance.sina.com.cn/money/fund/aiassistant/zcgyd/2026-08-25/doc-inipnuhw1658257.shtml": {
     "title": "精测电子股价跌5.17%，新疆前海联合基金旗下1",
@@ -5783,7 +5783,7 @@
     "firstSeenAt": "2026-08-25T01:46:06.393Z",
     "lastSeenAt": "2026-08-25T01:46:06.393Z",
     "summary": "快讯：恒指高开0.46% 科指涨0.18% 科网股、黄金股活跃 存储概念股下挫 …；港股市场动态",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://finance.sina.com.cn/stock/hkstock/marketalerts/2026-08-25/doc-inipnuhu9696619.shtml": {
     "title": "港股异动 | 小鹏集团-W(09868)低开逾8% 二季度亏损同比扩大近1.8倍 三季度指引低于市场预期",
@@ -5797,7 +5797,7 @@
     "firstSeenAt": "2026-08-25T01:46:06.393Z",
     "lastSeenAt": "2026-08-25T01:46:06.393Z",
     "summary": "港股异动 | 小鹏集团-W(09868)低开逾8% 二季度亏损同比扩大近1.8倍…；港股市场动态",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://www.cnfin.com/yw-lb/detail/20260824/4459680_1.html": {
     "title": "道通科技上半年营业收入26.60亿元 AI行业应用收入增加170.81%",
@@ -5923,7 +5923,7 @@
     "firstSeenAt": "2026-08-25T01:46:06.393Z",
     "lastSeenAt": "2026-08-25T01:46:06.393Z",
     "summary": "粤港澳大湾区“一城一策”自然教育“各展所长”；广州市政策动向，分行需关注落地机会",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://news.southcn.com/node_54a44f01a2/daf9d061cd.shtml": {
     "title": "4月25日截止！2026年粤港澳大湾区律师执业考试即将开始报名",
@@ -5951,7 +5951,7 @@
     "firstSeenAt": "2026-08-25T01:46:06.393Z",
     "lastSeenAt": "2026-08-25T01:46:06.393Z",
     "summary": "评论｜新能源渗透率突破65%之后，必须正视两个问题；广州市政策动向，分行需关注落地机会",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://economy.southcn.com/node_b416e11004/6d3b1d1687.shtml": {
     "title": "荣耀Robot Phone 9999元起售，全球首款机器人手机落地",
@@ -5979,7 +5979,7 @@
     "firstSeenAt": "2026-08-25T01:46:06.393Z",
     "lastSeenAt": "2026-08-25T01:46:06.393Z",
     "summary": "评论｜造车，技术可以快，品质必须稳；广州市政策动向，分行需关注落地机会",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://news.southcn.com/node_812903b83a/ca7522351b.shtml": {
     "title": "WAIC 2026今天落幕，AI走向物理世界，汽车成核心试验场",
@@ -5993,7 +5993,7 @@
     "firstSeenAt": "2026-08-25T01:46:06.393Z",
     "lastSeenAt": "2026-08-25T01:46:06.393Z",
     "summary": "WAIC 2026今天落幕，AI走向物理世界，汽车成核心试验场；广州市政策动向，分行需关注落地机会",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://www.gz.gov.cn/zwgk/zcjd/zcjdhz/mtfbhjd/content/post_10977094.html": {
     "title": "【媒体解读】盘活“沉睡”车位 破解停车难题——广州将推动符合条件的国家机关停车场向社会开放",
@@ -6007,7 +6007,7 @@
     "firstSeenAt": "2026-08-25T04:52:06.949Z",
     "lastSeenAt": "2026-08-25T04:52:06.949Z",
     "summary": "盘活“沉睡”车位 破解停车难题——广州将推动符合条件的国家机关停车场向社会开放；广州市政策动向，分行需关注落地机会",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://www.cnbc.com/2026/08/25/gold-hits-over-three-month-high-on-dollar-weakness-treasury-bond-buyback-plans.html": {
     "title": "Gold hits over three-month high on dollar weakness, Treasury bond buyback plans",
@@ -6216,7 +6216,7 @@
     "firstSeenAt": "2026-08-25T04:52:06.949Z",
     "lastSeenAt": "2026-08-25T04:52:06.949Z",
     "summary": "美财政部购债干预收益率引爆贬值交易，黄金满血复活但风险仍存；对分行财富/信贷/客群业务有宏观参考",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://finance.sina.com.cn/money/forex/hbfx/2026-08-25/doc-inipnyqs9688706.shtml": {
     "title": "一张图：2026年8月25日黄金原油外汇股指“枢纽点+多空持仓信号”一览",
@@ -6230,7 +6230,7 @@
     "firstSeenAt": "2026-08-25T04:52:06.949Z",
     "lastSeenAt": "2026-08-25T04:52:06.949Z",
     "summary": "一张图：2026年8月25日黄金原油外汇股指“枢纽点+多空持仓信号”一览；对分行财富/信贷/客群业务有宏观参考",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://m.21jingji.com/article/20260825/herald/005d819bd0d71dcfa95c6095eb3da9f1.html": {
     "title": "中国邮政储蓄银行关于中小微企业贷款财政贴息政策客户关注问题解答",
@@ -6496,7 +6496,7 @@
     "firstSeenAt": "2026-08-25T04:52:06.949Z",
     "lastSeenAt": "2026-08-25T04:52:06.949Z",
     "summary": "资金逢跌猛攻！创业板人工智能ETF（159363）单日净流入超7000万元，近4…；A股市场动态",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://finance.sina.com.cn/money/gzqh/futuresyspzx/2026-08-25/doc-inipnpyy1680085.shtml": {
     "title": "外资机构密集调研A股公司 集体唱多中国资产",
@@ -6510,7 +6510,7 @@
     "firstSeenAt": "2026-08-25T04:52:06.949Z",
     "lastSeenAt": "2026-08-25T04:52:06.949Z",
     "summary": "外资机构密集调研A股公司 集体唱多中国资产；A股市场动态",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://finance.sina.com.cn/jjxw/2026-08-25/doc-inipnpze2420686.shtml": {
     "title": "A股半年报密集披露",
@@ -6524,7 +6524,7 @@
     "firstSeenAt": "2026-08-25T04:52:06.949Z",
     "lastSeenAt": "2026-08-25T04:52:06.949Z",
     "summary": "A股半年报密集披露；A股市场动态",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://finance.sina.com.cn/jjxw/2026-08-25/doc-inipnpyy1660840.shtml": {
     "title": "近六成公司半年报净利增长 401家拟实施中期分红",
@@ -6552,7 +6552,7 @@
     "firstSeenAt": "2026-08-25T04:52:06.949Z",
     "lastSeenAt": "2026-08-25T04:52:06.949Z",
     "summary": "拟募资330亿元 长存控股科创板IPO获受理；A股市场动态",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://finance.sina.com.cn/wm/2026-08-25/doc-inipnuhw1597562.shtml": {
     "title": "煤炭板块怎么走，冠军基金经理发声",
@@ -6580,7 +6580,7 @@
     "firstSeenAt": "2026-08-25T04:52:06.949Z",
     "lastSeenAt": "2026-08-25T04:52:06.949Z",
     "summary": "年内A股超200起并购项目中途折戟 加速优质重组标的筛选；A股市场动态",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://finance.sina.com.cn/jjxw/2026-08-25/doc-inipnyqu1675728.shtml": {
     "title": "半导体板块再添“猛将” 高凯技术首秀暴涨314%",
@@ -6608,7 +6608,7 @@
     "firstSeenAt": "2026-08-25T04:52:06.949Z",
     "lastSeenAt": "2026-08-25T04:52:06.949Z",
     "summary": "股市午报：A股创业板指跌超1%！黄金，快速跳水；A股市场动态",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://finance.sina.com.cn/jjxw/2026-08-25/doc-inipnyqu1659459.shtml": {
     "title": "午评：创业板指半日跌1.43% 农业板块逆势走强",
@@ -6622,7 +6622,7 @@
     "firstSeenAt": "2026-08-25T04:52:06.949Z",
     "lastSeenAt": "2026-08-25T04:52:06.949Z",
     "summary": "午评：创业板指半日跌1.43% 农业板块逆势走强；A股市场动态",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://finance.sina.com.cn/stock/ggzz/2026-08-25/doc-inipmxce9959433.shtml": {
     "title": "华安证券公布半年报 上半年净利增加102...",
@@ -6776,7 +6776,7 @@
     "firstSeenAt": "2026-08-25T04:52:06.949Z",
     "lastSeenAt": "2026-08-25T04:52:06.949Z",
     "summary": "光模块三巨头集体重挫，机构：9月迎决胜窗口，优质硬科技有望引领修复！这只高“光”…；A股市场动态",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://finance.sina.com.cn/stock/observe/2026-08-24/doc-inipkvrt0059885.shtml": {
     "title": "中信证券半年报：总资产、净资本、国内收入皆低于国泰海通 多项细分指标丢掉“一哥”宝座",
@@ -6804,7 +6804,7 @@
     "firstSeenAt": "2026-08-25T04:52:06.949Z",
     "lastSeenAt": "2026-08-25T04:52:06.949Z",
     "summary": "股海导航_2026年8月24日_沪深股市；A股市场动态",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0825/2026082500235.pdf": {
     "title": "Announcements and Notices - [Interim Results / Dividend or Distribution / Closure of Books or Change of Book Closure Period]",
@@ -6944,7 +6944,7 @@
     "firstSeenAt": "2026-08-25T04:52:06.949Z",
     "lastSeenAt": "2026-08-25T04:52:06.949Z",
     "summary": "港股异动 | 海清智元(01392)再涨近9% 近期股价已实现翻倍 下月有望进入…；港股市场动态",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://finance.sina.com.cn/stock/hkstock/marketalerts/2026-08-25/doc-inipnyqs9700263.shtml": {
     "title": "港股异动 | 华润建材科技(01313)午前跌近3% 上半年业绩同比盈转亏 水泥产品销量有所下滑",
@@ -6958,7 +6958,7 @@
     "firstSeenAt": "2026-08-25T04:52:06.949Z",
     "lastSeenAt": "2026-08-25T04:52:06.949Z",
     "summary": "港股异动 | 华润建材科技(01313)午前跌近3% 上半年业绩同比盈转亏 水泥…；港股市场动态",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://finance.sina.com.cn/stock/hkstock/marketalerts/2026-08-25/doc-inipnyqw5573300.shtml": {
     "title": "港股异动 | 诺诚健华(09969)涨超4% 商业化产品强劲增长叠加BD兑现 上半年同比扭亏为盈",
@@ -6972,7 +6972,7 @@
     "firstSeenAt": "2026-08-25T04:52:06.949Z",
     "lastSeenAt": "2026-08-25T04:52:06.949Z",
     "summary": "港股异动 | 诺诚健华(09969)涨超4% 商业化产品强劲增长叠加BD兑现 上…；港股市场动态",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://finance.sina.com.cn/stock/hkstock/marketalerts/2026-08-25/doc-inipnyqu1645640.shtml": {
     "title": "港股异动 | 融创中国(01918)早盘涨超9% 官宣转型“资产管理+资产运营” 收购而今管理全部股权",
@@ -6986,7 +6986,7 @@
     "firstSeenAt": "2026-08-25T04:52:06.949Z",
     "lastSeenAt": "2026-08-25T04:52:06.949Z",
     "summary": "港股异动 | 融创中国(01918)早盘涨超9% 官宣转型“资产管理+资产运营”…；港股市场动态",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://finance.sina.com.cn/stock/hkstock/hkzmt/2026-08-25/doc-inipnyqu1617642.shtml": {
     "title": "君正股份正式登陆港交所，市值514亿港元，北京AI视觉芯片龙头",
@@ -7042,7 +7042,7 @@
     "firstSeenAt": "2026-08-25T04:52:06.949Z",
     "lastSeenAt": "2026-08-25T04:52:06.949Z",
     "summary": "精密流体控制领域龙头登陆科创板 高凯技术涨超300%；对分行财富/信贷/客群业务有宏观参考",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://www.cnfin.com/yw-lb/detail/20260825/4459914_1.html": {
     "title": "道路交通安全法修订草案提请审议",
@@ -7154,7 +7154,7 @@
     "firstSeenAt": "2026-08-25T04:52:06.949Z",
     "lastSeenAt": "2026-08-25T04:52:06.949Z",
     "summary": "江龙船艇：签订8700万美元40米工作船建造合同，金额占公司2025年度经审计营…；对分行财富/信贷/客群业务有宏观参考",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://www.stcn.com/article/detail/4115519.html": {
     "title": "广药集团在新加坡召开全球招商大会 达成多项国际合作",
@@ -7224,7 +7224,7 @@
     "firstSeenAt": "2026-08-25T04:52:06.949Z",
     "lastSeenAt": "2026-08-25T04:52:06.949Z",
     "summary": "珠三角区域（广州）退役军人就业联盟提供跨区域就业服务（与银行零售业务关联弱）",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://news.dayoo.com/guangzhou/202608/25/139995_54994641.htm": {
     "title": "2026全球高校校媒精英特训营开幕 开启深度走读与创作之旅",
@@ -7238,7 +7238,7 @@
     "firstSeenAt": "2026-08-25T04:52:06.949Z",
     "lastSeenAt": "2026-08-25T04:52:06.949Z",
     "summary": "2026全球高校校媒精英特训营开幕 开启深度走读与创作之旅；广州市政策动向，分行需关注落地机会",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://economy.southcn.com/node_b416e11004/991c84c009.shtml": {
     "title": "领航眼健康 点亮新“视”代丨岭南眼健康生态港首层耀世启航",
@@ -7252,7 +7252,7 @@
     "firstSeenAt": "2026-08-25T04:52:06.949Z",
     "lastSeenAt": "2026-08-25T04:52:06.949Z",
     "summary": "领航眼健康 点亮新“视”代丨岭南眼健康生态港首层耀世启航；广州市政策动向，分行需关注落地机会",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://economy.southcn.com/node_b416e11004/171f672515.shtml": {
     "title": "以“换挡”蓄能，在春耕时节向下深耕——广百股份2026年一季报解读",
@@ -7266,7 +7266,7 @@
     "firstSeenAt": "2026-08-25T04:52:06.949Z",
     "lastSeenAt": "2026-08-25T04:52:06.949Z",
     "summary": "以“换挡”蓄能，在春耕时节向下深耕——广百股份2026年一季报解读；广州市政策动向，分行需关注落地机会",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://economy.southcn.com/node_b416e11004/7a0437cd0f.shtml": {
     "title": "美的置业：重组后首年实现营收净利双增",
@@ -7280,7 +7280,7 @@
     "firstSeenAt": "2026-08-25T04:52:06.949Z",
     "lastSeenAt": "2026-08-25T04:52:06.949Z",
     "summary": "美的置业：重组后首年实现营收净利双增；广州市政策动向，分行需关注落地机会",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://economy.southcn.com/node_d5a62a3867/ba9d0f595d.shtml": {
     "title": "多学科权威齐聚广州 共绘抗衰老研究产学研创新蓝图",
@@ -7308,7 +7308,7 @@
     "firstSeenAt": "2026-08-25T04:52:06.949Z",
     "lastSeenAt": "2026-08-25T04:52:06.949Z",
     "summary": "中西合璧绘就健康蓝图 2025 ZAODX早筛大会在穗举行；广州市政策动向，分行需关注落地机会",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://economy.southcn.com/node_d5a62a3867/99b93e520a.shtml": {
     "title": "破解珠江流域碳循环季节密码 为筑牢湾区生态屏障提供新策略",
@@ -7322,7 +7322,7 @@
     "firstSeenAt": "2026-08-25T04:52:06.949Z",
     "lastSeenAt": "2026-08-25T04:52:06.949Z",
     "summary": "破解珠江流域碳循环季节密码 为筑牢湾区生态屏障提供新策略；广州市政策动向，分行需关注落地机会",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://www.cnr.cn/gd/fxgz/20260825/t20260825_527790858.shtml": {
     "title": "第十届广州老博会规模与实效双创新高",
@@ -7434,7 +7434,7 @@
     "firstSeenAt": "2026-08-25T07:11:31.892Z",
     "lastSeenAt": "2026-08-25T07:11:31.892Z",
     "summary": "Shein’s up to $1.8 billion Hong Kong IPO…；美股市场动态",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://www.investing.com/news/company-news/80-miles-italian-biodiesel-plant-gets-sustainability-certifications-93CH-4874519": {
     "title": "80 Mile’s Italian biodiesel plant gets sustainability certifications",
@@ -7560,7 +7560,7 @@
     "firstSeenAt": "2026-08-25T07:11:31.892Z",
     "lastSeenAt": "2026-08-25T07:11:31.892Z",
     "summary": "工信部定调脑机接口标准化发展路线图多只概念股业绩有望倍增(名单)；A股市场动态",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://finance.eastmoney.com/a/202608253852583279.html": {
     "title": "大摩：油价飙升是美股头号风险恐进一步推高美债收益率",
@@ -7574,7 +7574,7 @@
     "firstSeenAt": "2026-08-25T07:11:31.892Z",
     "lastSeenAt": "2026-08-25T07:11:31.892Z",
     "summary": "大摩：油价飙升是美股头号风险恐进一步推高美债收益率；A股市场动态",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://finance.eastmoney.com/a/202608253852648651.html": {
     "title": "高盛上调预测：2030年中国芯片业资本开支将达820亿美元",
@@ -7588,7 +7588,7 @@
     "firstSeenAt": "2026-08-25T07:11:31.892Z",
     "lastSeenAt": "2026-08-25T07:11:31.892Z",
     "summary": "高盛上调预测：2030年中国芯片业资本开支将达820亿美元；A股市场动态",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://finance.eastmoney.com/a/202608253852752533.html": {
     "title": "A股三大指数涨跌不一成交额不足1.9万亿逾4200只股上涨",
@@ -7602,7 +7602,7 @@
     "firstSeenAt": "2026-08-25T07:11:31.892Z",
     "lastSeenAt": "2026-08-25T07:11:31.892Z",
     "summary": "A股三大指数涨跌不一成交额不足1.9万亿逾4200只股上涨；A股市场动态",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://finance.eastmoney.com/a/202608253852752781.html": {
     "title": "中国商业航天企业首次面向东南亚整星出口！银河航天三颗卫星发射成功SAR双星与泰国卫星同步入轨",
@@ -7644,7 +7644,7 @@
     "firstSeenAt": "2026-08-25T07:11:31.892Z",
     "lastSeenAt": "2026-08-25T07:11:31.892Z",
     "summary": "石头科技绩后20CM涨停！国产GPU四小龙之一燧原科技IPO新进展，上海印发芯片…；A股市场动态",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://finance.sina.com.cn/jjxw/2026-08-25/doc-inippewu5560568.shtml": {
     "title": "短线回调之后，机器人板块又抬头了",
@@ -7756,7 +7756,7 @@
     "firstSeenAt": "2026-08-25T07:11:31.892Z",
     "lastSeenAt": "2026-08-25T07:11:31.892Z",
     "summary": "港股午评：恒指跌0.25% 科指跌0.75% 黄金股、汽车股普跌 PCB概念股逆…；港股市场动态",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://finance.sina.com.cn/stock/hkstock/hkgg/2026-08-25/doc-inippewq9746972.shtml": {
     "title": "高盛：微降嘉里建设(00683)目标价至25港元 评级维持“中性”",
@@ -7868,7 +7868,7 @@
     "firstSeenAt": "2026-08-25T07:11:31.892Z",
     "lastSeenAt": "2026-08-25T07:11:31.892Z",
     "summary": "港股异动 | 兆易创新(03986)涨超5% 二季度业绩快速增长 预计DRAM价…；港股市场动态",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://finance.sina.com.cn/stock/hkstock/marketalerts/2026-08-25/doc-inippeww2339912.shtml": {
     "title": "港股异动 | 联想集团(00992)午后涨超4% ISG表现远超预期 有望推动未来数季盈利按季改善",
@@ -7882,7 +7882,7 @@
     "firstSeenAt": "2026-08-25T07:11:31.892Z",
     "lastSeenAt": "2026-08-25T07:11:31.892Z",
     "summary": "港股异动 | 联想集团(00992)午后涨超4% ISG表现远超预期 有望推动未…；港股市场动态",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://finance.sina.com.cn/stock/hkstock/marketalerts/2026-08-25/doc-inippews1678388.shtml": {
     "title": "港股异动 | 保利物业(06049)涨超4% 上半年纯利同比增长4.8% 公司物管业务经营稳健",
@@ -7896,7 +7896,7 @@
     "firstSeenAt": "2026-08-25T07:11:31.892Z",
     "lastSeenAt": "2026-08-25T07:11:31.892Z",
     "summary": "港股异动 | 保利物业(06049)涨超4% 上半年纯利同比增长4.8% 公司物…；港股市场动态",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://finance.sina.com.cn/stock/hkstock/marketalerts/2026-08-25/doc-inippewu5559472.shtml": {
     "title": "港股异动 | SENASIC琻捷(06675)再涨超6% 公司获纳入恒生综合指数 后续有望进入港股通名单",
@@ -7910,7 +7910,7 @@
     "firstSeenAt": "2026-08-25T07:11:31.892Z",
     "lastSeenAt": "2026-08-25T07:11:31.892Z",
     "summary": "港股异动 | SENASIC琻捷(06675)再涨超6% 公司获纳入恒生综合指数…；港股市场动态",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://finance.sina.com.cn/stock/hkstock/marketalerts/2026-08-25/doc-inippewu5563661.shtml": {
     "title": "港股异动 | 俊知集团(01300)涨近6% 预期中期溢利同比增超7.35倍 相关主力产品在AIDC领域逐步获客户认可",
@@ -7924,7 +7924,7 @@
     "firstSeenAt": "2026-08-25T07:11:31.892Z",
     "lastSeenAt": "2026-08-25T07:11:31.892Z",
     "summary": "港股异动 | 俊知集团(01300)涨近6% 预期中期溢利同比增超7.35倍 相…；港股市场动态",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://finance.sina.com.cn/stock/hkstock/marketalerts/2026-08-25/doc-inippews1669129.shtml": {
     "title": "港股异动 | 丽珠医药(01513)续跌超3% 二季度归母净利同比降四成 化学制剂与中药板块明显下滑",
@@ -7938,7 +7938,7 @@
     "firstSeenAt": "2026-08-25T07:11:31.892Z",
     "lastSeenAt": "2026-08-25T07:11:31.892Z",
     "summary": "港股异动 | 丽珠医药(01513)续跌超3% 二季度归母净利同比降四成 化学制…；港股市场动态",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://finance.sina.com.cn/stock/hkstock/marketalerts/2026-08-25/doc-inippews1664210.shtml": {
     "title": "港股异动 | 大族数控(03200)午后涨近7% Q2净利率创单季度新高 机构看好业绩持续超预期兑现",
@@ -7994,7 +7994,7 @@
     "firstSeenAt": "2026-08-25T07:11:31.892Z",
     "lastSeenAt": "2026-08-25T07:11:31.892Z",
     "summary": "中央结算公司：全额免除国际债券（熊猫债）发行登记服务费；对分行财富/信贷/客群业务有宏观参考",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://www.cnfin.com/yw-lb/detail/20260825/4460006_1.html": {
     "title": "新华财经看浙江｜深耕浙江沃土 财通资本全周期护航科创企业成长",
@@ -8134,7 +8134,7 @@
     "firstSeenAt": "2026-08-25T07:11:31.892Z",
     "lastSeenAt": "2026-08-25T07:11:31.892Z",
     "summary": "首届流行音乐创作大赛正式发布，将评选产生46首歌曲；广州市政策动向，分行需关注落地机会",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://news.dayoo.com/guangzhou/202608/25/139995_54994648.htm": {
     "title": "涵盖八大维度 广州发布推动音乐产业高质量发展的若干措施",
@@ -8162,7 +8162,7 @@
     "firstSeenAt": "2026-08-25T07:11:31.892Z",
     "lastSeenAt": "2026-08-25T07:11:31.892Z",
     "summary": "均衡编班结果如何查询？广州市教育局回应（与银行零售业务关联弱）",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://news.dayoo.com/guangzhou/202608/25/139995_54994642.htm": {
     "title": "地铁可直达！广州音乐公园今天开园",
@@ -8190,7 +8190,7 @@
     "firstSeenAt": "2026-08-25T07:11:31.892Z",
     "lastSeenAt": "2026-08-25T07:11:31.892Z",
     "summary": "荣耀CEO李健：打通“三个闭环”，让AI走进生活；广州市政策动向，分行需关注落地机会",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://economy.southcn.com/node_d5a62a3867/a2b19372c2.shtml": {
     "title": "“应用场景支持企业库”首批入库单位完成签约，助力“无废湾区”建设",
@@ -8218,7 +8218,7 @@
     "firstSeenAt": "2026-08-25T07:11:31.892Z",
     "lastSeenAt": "2026-08-25T07:11:31.892Z",
     "summary": "“赶集”新花样！这群技工学子太会“整活”了；广州市政策动向，分行需关注落地机会",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://economy.southcn.com/node_17f55ea8c0/c30523ec8c.shtml": {
     "title": "佛山“十四五” | 数读成绩单，亮点满满！",
@@ -8232,7 +8232,7 @@
     "firstSeenAt": "2026-08-25T07:11:31.892Z",
     "lastSeenAt": "2026-08-25T07:11:31.892Z",
     "summary": "佛山“十四五” | 数读成绩单，亮点满满！；广州市政策动向，分行需关注落地机会",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://economy.southcn.com/node_17f55ea8c0/0855bdfc55.shtml": {
     "title": "国企担当·“百千万工程”之岭南答卷｜从田间到餐桌：消费帮扶如何用“一碗好面”打通乡村振兴之路",
@@ -8274,7 +8274,7 @@
     "firstSeenAt": "2026-08-25T07:37:49.953Z",
     "lastSeenAt": "2026-08-25T07:37:49.953Z",
     "summary": "高凯技术登陆科创板 系精密流体控制领域研发商；A股市场动态",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://www.investing.com/news/company-news/tungsten-west-grants-share-options-to-executives-93CH-4874564": {
     "title": "Tungsten West grants share options to executives",
@@ -8442,7 +8442,7 @@
     "firstSeenAt": "2026-08-25T07:37:49.953Z",
     "lastSeenAt": "2026-08-25T07:37:49.953Z",
     "summary": "图解：A股成交额年内第10次不足2万亿元；A股市场动态",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://finance.sina.com.cn/tob/2026-08-25/doc-inippmes5459835.shtml": {
     "title": "8月25日沪深两市涨停分析：汉森制药5连板",
@@ -8470,7 +8470,7 @@
     "firstSeenAt": "2026-08-25T07:37:49.953Z",
     "lastSeenAt": "2026-08-25T07:37:49.953Z",
     "summary": "收评：沪指探底回升涨0.19% 两市成交额仅1.83万亿元；A股市场动态",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://finance.sina.com.cn/roll/2026-08-25/doc-inippmeu2239743.shtml": {
     "title": "科创板收盘播报：科创综指基本收平 高凯技术较",
@@ -8484,7 +8484,7 @@
     "firstSeenAt": "2026-08-25T07:37:49.953Z",
     "lastSeenAt": "2026-08-25T07:37:49.953Z",
     "summary": "科创板收盘播报：科创综指基本收平 高凯技术较；A股市场动态",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://finance.sina.com.cn/jjxw/2026-08-25/doc-inippmeu2231041.shtml": {
     "title": "净利润暴增46 %，石头科技20cm涨停！科创人工",
@@ -8512,7 +8512,7 @@
     "firstSeenAt": "2026-08-25T07:37:49.953Z",
     "lastSeenAt": "2026-08-25T07:37:49.953Z",
     "summary": "A股午后回暖，三大股指涨跌互现：农林牧渔、医药板块走强，两市成交1.8万亿；A股市场动态",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0825/2026082500265.pdf": {
     "title": "Financial Statements/ESG Information - [Interim/Half-Year Report]",
@@ -8568,7 +8568,7 @@
     "firstSeenAt": "2026-08-25T07:37:49.953Z",
     "lastSeenAt": "2026-08-25T07:37:49.953Z",
     "summary": "港股异动 | 鲟龙科技(06715)涨超5% 上半年经调整净利润同比增加15.7…；港股市场动态",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://finance.sina.com.cn/stock/hkstock/marketalerts/2026-08-25/doc-inippmen9638175.shtml": {
     "title": "港股异动 | 津上机床中国(01651)尾盘涨超4% 公司进入恒生综合指数 花旗指入通或成短期正面催化剂",
@@ -8582,7 +8582,7 @@
     "firstSeenAt": "2026-08-25T07:37:49.953Z",
     "lastSeenAt": "2026-08-25T07:37:49.953Z",
     "summary": "港股异动 | 津上机床中国(01651)尾盘涨超4% 公司进入恒生综合指数 花旗…；港股市场动态",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://finance.sina.com.cn/stock/hkstock/marketalerts/2026-08-25/doc-inippmeu2225352.shtml": {
     "title": "港股异动 | 丘钛科技(01478)再跌超3% 上半年业绩低于预期 花旗下调公司盈测及目标价",
@@ -8596,7 +8596,7 @@
     "firstSeenAt": "2026-08-25T07:37:49.953Z",
     "lastSeenAt": "2026-08-25T07:37:49.953Z",
     "summary": "港股异动 | 丘钛科技(01478)再跌超3% 上半年业绩低于预期 花旗下调公司…；港股市场动态",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://finance.sina.com.cn/stock/hkstock/marketalerts/2026-08-25/doc-inippmes5458494.shtml": {
     "title": "港股异动 | 亚博科技控股(08279)再涨超6% 港金所新交易系统预计2027年首季度试运营",
@@ -8610,7 +8610,7 @@
     "firstSeenAt": "2026-08-25T07:37:49.953Z",
     "lastSeenAt": "2026-08-25T07:37:49.953Z",
     "summary": "港股异动 | 亚博科技控股(08279)再涨超6% 港金所新交易系统预计2027…；港股市场动态",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://finance.sina.com.cn/stock/hkstock/marketalerts/2026-08-25/doc-inippmeq1574167.shtml": {
     "title": "港股异动 | 礼邦医药-B(09637)涨超6% 公司入通预期与业绩窗口有望形成双重催化 美信罗商业化放量可期",
@@ -8624,7 +8624,7 @@
     "firstSeenAt": "2026-08-25T07:37:49.953Z",
     "lastSeenAt": "2026-08-25T07:37:49.953Z",
     "summary": "港股异动 | 礼邦医药-B(09637)涨超6% 公司入通预期与业绩窗口有望形成…；港股市场动态",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://www.cnfin.com/yw-lb/detail/20260825/4460058_1.html": {
     "title": "【新华解读】风险管理范式持续升级 非集中清算衍生品交易保证金业务有望释放制度红利",
@@ -8736,7 +8736,7 @@
     "firstSeenAt": "2026-08-25T07:37:49.953Z",
     "lastSeenAt": "2026-08-25T07:37:49.953Z",
     "summary": "合肥加码词元经济基建 国产算力加速从“能用”向“好用”跃迁；对分行财富/信贷/客群业务有宏观参考",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://www.stcn.com/article/detail/4115364.html": {
     "title": "宝莱特携手威固信息 卡位边缘特种AI存储赛道",
@@ -8974,7 +8974,7 @@
     "firstSeenAt": "2026-08-25T08:04:05.056Z",
     "lastSeenAt": "2026-08-25T08:04:05.056Z",
     "summary": "黄金从4700美元附近高位回落，地缘风险与通胀预期“双轮驱动”，金价的下一站在哪…；对分行财富/信贷/客群业务有宏观参考",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://finance.sina.com.cn/money/forex/hbfx/2026-08-25/doc-inippeww2317709.shtml": {
     "title": "金价看涨押注连增三周，美银调查称黄金被低估，5000美元进入市场视野",
@@ -8988,7 +8988,7 @@
     "firstSeenAt": "2026-08-25T08:04:05.056Z",
     "lastSeenAt": "2026-08-25T08:04:05.056Z",
     "summary": "金价看涨押注连增三周，美银调查称黄金被低估，5000美元进入市场视野；对分行财富/信贷/客群业务有宏观参考",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://finance.eastmoney.com/a/202608243851632919.html": {
     "title": "“牛散”章建平大幅减仓西部材料同步大举调仓AI算力龙头",
@@ -9016,7 +9016,7 @@
     "firstSeenAt": "2026-08-25T08:04:05.056Z",
     "lastSeenAt": "2026-08-25T08:04:05.056Z",
     "summary": "A股成交额，下半年新低！三大指数午后一度翻红，调整已近尾声？；A股市场动态",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://finance.sina.com.cn/stock/hkstock/marketalerts/2026-08-25/doc-inippmeu2249207.shtml": {
     "title": "港股异动 | 博彩股集体走低 花旗进一步下调8月赌收预测 预计同比增长约2%",
@@ -9030,7 +9030,7 @@
     "firstSeenAt": "2026-08-25T08:04:05.056Z",
     "lastSeenAt": "2026-08-25T08:04:05.056Z",
     "summary": "港股异动 | 博彩股集体走低 花旗进一步下调8月赌收预测 预计同比增长约2%；港股市场动态",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://finance.sina.com.cn/stock/hkstock/marketalerts/2026-08-25/doc-inippmen9658208.shtml": {
     "title": "港股异动 | 非凡领越(00933)涨超7% 中期权益持有人应占溢利同比增长48.1% 优化海外主要市场产品定价",
@@ -9044,7 +9044,7 @@
     "firstSeenAt": "2026-08-25T08:04:05.056Z",
     "lastSeenAt": "2026-08-25T08:04:05.056Z",
     "summary": "港股异动 | 非凡领越(00933)涨超7% 中期权益持有人应占溢利同比增长48…；港股市场动态",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://finance.sina.com.cn/stock/hkstock/marketalerts/2026-08-25/doc-inippmes5476692.shtml": {
     "title": "港股异动 | 力勤资源(02245)涨近7% Obi项目全面达产将推动盈利能提稳步提升 本周四披露中期业绩",
@@ -9058,7 +9058,7 @@
     "firstSeenAt": "2026-08-25T08:04:05.056Z",
     "lastSeenAt": "2026-08-25T08:04:05.056Z",
     "summary": "港股异动 | 力勤资源(02245)涨近7% Obi项目全面达产将推动盈利能提稳…；港股市场动态",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://www.cnfin.com/yw-lb/detail/20260825/4460088_1.html": {
     "title": "收评：三大指数走势分化 成交额再次跌破两万亿 装修装饰、粮食股走强",
@@ -9072,7 +9072,7 @@
     "firstSeenAt": "2026-08-25T08:04:05.056Z",
     "lastSeenAt": "2026-08-25T08:04:05.056Z",
     "summary": "收评：三大指数走势分化 成交额再次跌破两万亿 装修装饰、粮食股走强；对分行财富/信贷/客群业务有宏观参考",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://www.cnfin.com/cy-lb/detail/20260825/4459932_1.html": {
     "title": "内蒙古超高压供电公司：新建500千伏庆古一、二线验收工作圆满完成",
@@ -9310,7 +9310,7 @@
     "firstSeenAt": "2026-08-25T08:31:57.772Z",
     "lastSeenAt": "2026-08-25T08:31:57.772Z",
     "summary": "今天A股，沪指反弹！超4200股上涨！；A股市场动态",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://finance.sina.com.cn/wm/2026-08-25/doc-inippmeq1623911.shtml": {
     "title": "创业板跳水创新药独红 这波逆势行情反弹还是验",
@@ -9324,7 +9324,7 @@
     "firstSeenAt": "2026-08-25T08:31:57.772Z",
     "lastSeenAt": "2026-08-25T08:31:57.772Z",
     "summary": "创业板跳水创新药独红 这波逆势行情反弹还是验；A股市场动态",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://finance.sina.com.cn/stock/hkstock/marketalerts/2026-08-25/doc-inippmen9679870.shtml": {
     "title": "港股收评：恒指跌0.02% 科指跌0.12% 黄金股普跌 芯片股午后拉升 小鹏集团跌超9%",
@@ -9338,7 +9338,7 @@
     "firstSeenAt": "2026-08-25T08:31:57.772Z",
     "lastSeenAt": "2026-08-25T08:31:57.772Z",
     "summary": "港股收评：恒指跌0.02% 科指跌0.12% 黄金股普跌 芯片股午后拉升 小鹏集…；港股市场动态",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://finance.sina.com.cn/stock/hkstock/hkgg/2026-08-25/doc-inippmes5494144.shtml": {
     "title": "瑞银：升建滔积层板(01888)目标价至66港元 今年至后年盈测上调最多36%",
@@ -9643,7 +9643,7 @@
     "firstSeenAt": "2026-08-25T12:32:07.216Z",
     "lastSeenAt": "2026-08-25T12:32:07.216Z",
     "summary": "美国\"压债\"政策推动黄金冲上4700美元/盎司，科技股背离明显；分行私行客户黄金配置占比可适度提升，对冲主权信用风险。",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://finance.sina.com.cn/money/nmetal/hjzx/2026-08-25/doc-inipprnk9667916.shtml": {
     "title": "美债突破40万亿，世界更需要黄金了？",
@@ -9657,7 +9657,7 @@
     "firstSeenAt": "2026-08-25T12:32:07.216Z",
     "lastSeenAt": "2026-08-25T12:32:07.216Z",
     "summary": "美债规模突破40万亿美元，全球央行/机构对黄金储备需求上升；分行跨境客户/外贸企业汇率与利率避险需求增加。",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://video.sina.com.cn/p/finance/2026-08-25/detail-inipprnq5482502.d.html": {
     "title": "8-25 黄金早盘冲高回落.今天怎么看？",
@@ -9881,7 +9881,7 @@
     "firstSeenAt": "2026-08-25T12:32:07.216Z",
     "lastSeenAt": "2026-08-25T12:32:07.216Z",
     "summary": "美伊关系现利好信号，美股直线拉升油价跳水；地缘缓和短期利好风险资产，分行外汇敞口客户可关注汇率波动收敛。",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://finance.eastmoney.com/a/202608253852805852.html": {
     "title": "暴涨时代远去？英伟达财报前夕期权市场给出了“冷静”预判",
@@ -9937,7 +9937,7 @@
     "firstSeenAt": "2026-08-25T12:32:07.216Z",
     "lastSeenAt": "2026-08-25T12:32:07.216Z",
     "summary": "SHEIN折价超七成招股中东/印度/拉美机构浮亏，红杉获27倍回报；跨境电商龙头IPO估值倒挂，分行可关注产业链上下游外贸企业融资需求。",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://finance.sina.com.cn/stock/vcpe/yc/2026-08-25/doc-inipprns2233929.shtml": {
     "title": "SHEIN折价超七成招股 | 四分之三美国机构未回本 红杉资本获27倍回报成最大赢家",
@@ -9951,7 +9951,7 @@
     "firstSeenAt": "2026-08-25T12:32:07.216Z",
     "lastSeenAt": "2026-08-25T12:32:07.216Z",
     "summary": "SHEIN折价超七成招股中东/印度/拉美机构浮亏，红杉获27倍回报；跨境电商龙头IPO估值倒挂，分行可关注产业链上下游外贸企业融资需求。",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://finance.sina.com.cn/wm/2026-08-25/doc-inippvuq2250185.shtml": {
     "title": "老百姓大药房入选沪市“提质增效重回报”2.0专",
@@ -10203,7 +10203,7 @@
     "firstSeenAt": "2026-08-25T12:32:07.216Z",
     "lastSeenAt": "2026-08-25T12:32:07.216Z",
     "summary": "大理金融监管分局公示行政处罚信息；地方金融监管持续高压，分行需对照自查合规风险点。",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://www.cls.cn/detail/2463756": {
     "title": "REITs打新褪去狂热：网下配售最高100% | 公募REITs面面观",
@@ -10217,7 +10217,7 @@
     "firstSeenAt": "2026-08-25T12:32:07.216Z",
     "lastSeenAt": "2026-08-25T12:32:07.216Z",
     "summary": "REITs打新褪去狂热多只项目网下配售超40%，部分上市破发；另类资产配置需谨慎，分行私行REITs代销须强化风险揭示。",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://www.cls.cn/detail/2463907": {
     "title": "高赤字、高债务、高利率：美国长期财政风险正在累积？",
@@ -10273,7 +10273,7 @@
     "firstSeenAt": "2026-08-25T12:32:07.216Z",
     "lastSeenAt": "2026-08-25T12:32:07.216Z",
     "summary": "MLF缩量续作下资金面偏紧，10年/30年国债表现坚挺；长端利率债多头情绪强，分行自营/代销债券配置需关注久期风险。",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://www.cls.cn/detail/2463577": {
     "title": "比特币三个月来首次突破8万美元 8月迄今累计涨幅高达28%！",
@@ -10287,7 +10287,7 @@
     "firstSeenAt": "2026-08-25T12:32:07.216Z",
     "lastSeenAt": "2026-08-25T12:32:07.216Z",
     "summary": "比特币三个月来首次突破8万美元，月内涨28%；加密资产高波动，分行须按监管要求严禁代销并加强客户风险教育。",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://www.cls.cn/detail/2463517": {
     "title": "大成律所刘榕：跨境架构赋能全球化，助力企业资本“走出去、回得来”",
@@ -10329,7 +10329,7 @@
     "firstSeenAt": "2026-08-25T12:32:07.216Z",
     "lastSeenAt": "2026-08-25T12:32:07.216Z",
     "summary": "德鲁肯米勒抨击贝森特美债救市\"大错特错\"；美债政策不确定性加大，分行外汇/海外资产条线需强化情景分析。",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://www.cls.cn/detail/2463173": {
     "title": "债市公告精选 | 泛海控股三家子公司进入重整程序；佳兆业集团预计上半年亏损不多于95亿",
@@ -10343,7 +10343,7 @@
     "firstSeenAt": "2026-08-25T12:32:07.216Z",
     "lastSeenAt": "2026-08-25T12:32:07.216Z",
     "summary": "泛海控股三家子公司进入重整程序，佳兆业预计上半年亏损不多于95亿；房企债务风险持续暴露，分行房地产开发贷须严控区域与主体。",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://www.cls.cn/detail/2463132": {
     "title": "贝森特还有招“终极阳谋”：美元稳定币变身美债“接盘侠”？",
@@ -10357,7 +10357,7 @@
     "firstSeenAt": "2026-08-25T12:32:07.216Z",
     "lastSeenAt": "2026-08-25T12:32:07.216Z",
     "summary": "贝森特\"终极阳谋\"：美元稳定币变身美债\"接盘侠\"？；稳定币监管立法推进，分行需关注跨境支付/数字货币合规边界。",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://www.cls.cn/detail/2463020": {
     "title": "债市早参8月25日|今日央行将开展5000亿MLF操作 隔夜逆回购27日起接踵而至；多家房企预告上半年大幅亏损",
@@ -10385,7 +10385,7 @@
     "firstSeenAt": "2026-08-25T12:32:07.216Z",
     "lastSeenAt": "2026-08-25T12:32:07.216Z",
     "summary": "北新路桥H1亏损2.79亿叠加高杠杆，偿债压力凸显；西部基建企业信用资质分化，分行属地政信业务须穿透底层。",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://www.cls.cn/detail/2462774": {
     "title": "天健集团上半年由盈转亏：净利润-3.78亿元，存续债78.9亿元 | 债市财报观察",
@@ -10399,7 +10399,7 @@
     "firstSeenAt": "2026-08-25T12:32:07.216Z",
     "lastSeenAt": "2026-08-25T12:32:07.216Z",
     "summary": "天健集团H1由盈转亏净利-3.78亿，存续债78.9亿；城投/施工企业信用承压，分行对公贷款需关注地方平台流动性。",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://www.cnfin.com/yw-lb/detail/20260825/4460256_1.html": {
     "title": "马云出手增持阿里 与管理层合计买入阿里巴巴超8亿港元",
@@ -10497,7 +10497,7 @@
     "firstSeenAt": "2026-08-25T12:32:07.216Z",
     "lastSeenAt": "2026-08-25T12:32:07.216Z",
     "summary": "大湾区上市公司ESG报告发布，高评级企业五年增长超九倍；ESG披露成趋势，分行可开发绿色信贷/ESG主题理财产品。",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://www.stcn.com/article/detail/4116179.html": {
     "title": "香港北部都会区首个“片区开发”项目批出 六大企业联手开发",
@@ -10581,7 +10581,7 @@
     "firstSeenAt": "2026-08-25T12:32:07.216Z",
     "lastSeenAt": "2026-08-25T12:32:07.216Z",
     "summary": "华南首座SKP效果图亮相马场顶奢商场；广州高端消费再升级，分行私行可关注高端商圈信用卡/财富客户拓展机会。",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://news.dayoo.com/guangzhou/202608/25/139995_54995045.htm": {
     "title": "超燃！直击广州公安巡特警实战练兵现场",
@@ -10887,7 +10887,7 @@
     "publishedAt": "2026-08-25T00:00:00.000Z",
     "firstSeenAt": "2026-08-25T12:41:45.612Z",
     "lastSeenAt": "2026-08-25T12:41:45.612Z",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://www.cnfin.com/yw-lb/detail/20260825/4460135_1.html": {
     "title": "人大常委会｜水法修订草案拟规定加快构建国家水网",
@@ -10926,7 +10926,7 @@
     "publishedAt": "2026-08-25T00:00:00.000Z",
     "firstSeenAt": "2026-08-25T12:41:45.612Z",
     "lastSeenAt": "2026-08-25T12:41:45.612Z",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://www.cnfin.com/hg-lb/detail/20260825/4460228_1.html": {
     "title": "“十五五”时期四川南充谋划储备重大项目1560个 总投资超1万亿元",
@@ -11056,7 +11056,7 @@
     "publishedAt": "2026-08-25T00:00:00.000Z",
     "firstSeenAt": "2026-08-25T12:41:45.612Z",
     "lastSeenAt": "2026-08-25T12:41:45.612Z",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://news.dayoo.com/guangzhou/202608/25/139995_54994962.htm": {
     "title": "官宣！广州国际商业港首开区北地块正式挂牌",
@@ -11082,7 +11082,7 @@
     "publishedAt": "2026-08-25T00:00:00.000Z",
     "firstSeenAt": "2026-08-25T12:41:45.612Z",
     "lastSeenAt": "2026-08-25T12:41:45.612Z",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://news.dayoo.com/guangzhou/202608/25/139995_54994946.htm": {
     "title": "广州音乐公园今日开园！建设运营规划发布：赋能万亿级音乐产业",
@@ -11226,7 +11226,7 @@
     "publishedAt": "2026-08-25T00:00:00.000Z",
     "firstSeenAt": "2026-08-25T13:12:38.109Z",
     "lastSeenAt": "2026-08-25T13:12:38.109Z",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://finance.sina.com.cn/stock/aigc/hkgg/2026-08-25/doc-inippvun5526340.shtml": {
     "title": "摩根亚洲股票高息基金2026-08-24基金净值",
@@ -11278,7 +11278,7 @@
     "publishedAt": "2026-08-25T00:00:00.000Z",
     "firstSeenAt": "2026-08-25T13:12:38.109Z",
     "lastSeenAt": "2026-08-25T13:12:38.109Z",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://finance.sina.com.cn/jryx/bank/2026-08-25/doc-inippvun5519940.shtml": {
     "title": "工商银行：单户可享受中小微企业贷款贴息的贷款规模上限提至7500万元",
@@ -11382,7 +11382,7 @@
     "publishedAt": "2026-08-25T00:00:00.000Z",
     "firstSeenAt": "2026-08-25T13:12:38.109Z",
     "lastSeenAt": "2026-08-25T13:12:38.109Z",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://www.cnfin.com/hg-lb/detail/20260825/4460200_1.html": {
     "title": "“春雨润苗” 多部门合力护航小微企业发展",
@@ -11434,7 +11434,7 @@
     "publishedAt": "2026-08-25T00:00:00.000Z",
     "firstSeenAt": "2026-08-25T13:12:38.109Z",
     "lastSeenAt": "2026-08-25T13:12:38.109Z",
-    "ai_relevant": true
+    "ai_relevant": false
   },
   "https://www.stcn.com/article/detail/4120269.html": {
     "title": "广誉远上半年实现收入8.24亿元 多维创新驱动老字号开启新增长",
@@ -11498,7 +11498,8 @@
     "excerpt": "",
     "publishedAt": "2026-08-25T13:13:27.000Z",
     "firstSeenAt": "2026-08-25T13:24:42.369Z",
-    "lastSeenAt": "2026-08-25T13:24:42.369Z"
+    "lastSeenAt": "2026-08-25T13:24:42.369Z",
+    "ai_relevant": false
   },
   "https://www.investing.com/news/analyst-ratings/cantor-fitzgerald-reiterates-overweight-on-crowdstrike-stock-at-250-93CH-4873410": {
     "title": "Cantor Fitzgerald reiterates Overweight on CrowdStrike stock at $250",
@@ -11510,7 +11511,8 @@
     "excerpt": "",
     "publishedAt": "2026-08-25T13:02:06.000Z",
     "firstSeenAt": "2026-08-25T13:24:42.369Z",
-    "lastSeenAt": "2026-08-25T13:24:42.369Z"
+    "lastSeenAt": "2026-08-25T13:24:42.369Z",
+    "ai_relevant": false
   },
   "https://www.investing.com/news/economic-indicators/us-home-prices-rise-more-than-expected-boosting-market-confidence-93CH-4875392": {
     "title": "U.S. Home Prices Rise More Than Expected, Boosting Market Confidence",
@@ -11522,7 +11524,8 @@
     "excerpt": "",
     "publishedAt": "2026-08-25T13:01:02.000Z",
     "firstSeenAt": "2026-08-25T13:24:42.369Z",
-    "lastSeenAt": "2026-08-25T13:24:42.369Z"
+    "lastSeenAt": "2026-08-25T13:24:42.369Z",
+    "ai_relevant": false
   },
   "https://www.investing.com/news/stock-market-news/europe-ad-roundup-airbus-strike-resumes-bae-wins-italy-rocket-approval-4875385": {
     "title": "Europe A&D roundup: Airbus strike resumes, BAE wins Italy rocket approval",
@@ -11534,7 +11537,8 @@
     "excerpt": "",
     "publishedAt": "2026-08-25T12:57:05.000Z",
     "firstSeenAt": "2026-08-25T13:24:42.369Z",
-    "lastSeenAt": "2026-08-25T13:24:42.369Z"
+    "lastSeenAt": "2026-08-25T13:24:42.369Z",
+    "ai_relevant": false
   },
   "https://www.investing.com/news/stock-market-news/european-stocks-rebound-as-iran-sanctions-threats-fizzle-4874515": {
     "title": "European stocks trade at one-week highs as sanctions threat proves toothless",
@@ -11546,7 +11550,8 @@
     "excerpt": "",
     "publishedAt": "2026-08-25T12:55:53.000Z",
     "firstSeenAt": "2026-08-25T13:24:42.369Z",
-    "lastSeenAt": "2026-08-25T13:24:42.369Z"
+    "lastSeenAt": "2026-08-25T13:24:42.369Z",
+    "ai_relevant": false
   },
   "https://finance.sina.com.cn/jjxw/2026-08-25/doc-inippvuq2318678.shtml": {
     "title": "孩子王半年报出炉：营收稳增、利润提速，三扩",
@@ -11558,7 +11563,8 @@
     "excerpt": "",
     "publishedAt": "2026-08-25T00:00:00.000Z",
     "firstSeenAt": "2026-08-25T13:24:42.369Z",
-    "lastSeenAt": "2026-08-25T13:24:42.369Z"
+    "lastSeenAt": "2026-08-25T13:24:42.369Z",
+    "ai_relevant": false
   },
   "https://finance.sina.com.cn/stock/marketresearch/2026-08-25/doc-inippvuq2318989.shtml": {
     "title": "净利同比转亏！A股大牛股中报披露！",
@@ -11570,7 +11576,8 @@
     "excerpt": "",
     "publishedAt": "2026-08-25T00:00:00.000Z",
     "firstSeenAt": "2026-08-25T13:24:42.369Z",
-    "lastSeenAt": "2026-08-25T13:24:42.369Z"
+    "lastSeenAt": "2026-08-25T13:24:42.369Z",
+    "ai_relevant": false
   },
   "https://finance.sina.com.cn/stock/hkstock/marketalerts/2026-08-25/doc-inippvun5538182.shtml": {
     "title": "空池名单调整 | AMBC比金(03002)等进入新一期空池名单",
@@ -11582,7 +11589,8 @@
     "excerpt": "",
     "publishedAt": "2026-08-25T00:00:00.000Z",
     "firstSeenAt": "2026-08-25T13:24:42.369Z",
-    "lastSeenAt": "2026-08-25T13:24:42.369Z"
+    "lastSeenAt": "2026-08-25T13:24:42.369Z",
+    "ai_relevant": false
   },
   "https://www.cnfin.com/hg-lb/detail/20260825/4460306_1.html": {
     "title": "【环球财经】德国上调二季度经济增速",
@@ -11594,7 +11602,8 @@
     "excerpt": "",
     "publishedAt": "2026-08-25T00:00:00.000Z",
     "firstSeenAt": "2026-08-25T13:24:42.369Z",
-    "lastSeenAt": "2026-08-25T13:24:42.369Z"
+    "lastSeenAt": "2026-08-25T13:24:42.369Z",
+    "ai_relevant": false
   },
   "https://www.cnfin.com/hg-lb/detail/20260825/4460302_1.html": {
     "title": "深耕投资主题 第二十六届投洽会亮点前瞻",
@@ -11606,7 +11615,8 @@
     "excerpt": "",
     "publishedAt": "2026-08-25T00:00:00.000Z",
     "firstSeenAt": "2026-08-25T13:24:42.369Z",
-    "lastSeenAt": "2026-08-25T13:24:42.369Z"
+    "lastSeenAt": "2026-08-25T13:24:42.369Z",
+    "ai_relevant": false
   },
   "https://www.cnfin.com/qy-lb/detail/20260825/4460271_1.html": {
     "title": "国泰海通独家冠名上海女足",
@@ -11618,7 +11628,8 @@
     "excerpt": "",
     "publishedAt": "2026-08-25T00:00:00.000Z",
     "firstSeenAt": "2026-08-25T13:24:42.369Z",
-    "lastSeenAt": "2026-08-25T13:24:42.369Z"
+    "lastSeenAt": "2026-08-25T13:24:42.369Z",
+    "ai_relevant": false
   },
   "https://www.cnfin.com/cy-lb/detail/20260825/4460229_1.html": {
     "title": "金隅振兴的“数绿”蝶变——传统水泥厂的绿色智能化转型之路",
@@ -11630,7 +11641,8 @@
     "excerpt": "",
     "publishedAt": "2026-08-25T00:00:00.000Z",
     "firstSeenAt": "2026-08-25T13:24:42.369Z",
-    "lastSeenAt": "2026-08-25T13:24:42.369Z"
+    "lastSeenAt": "2026-08-25T13:24:42.369Z",
+    "ai_relevant": false
   },
   "https://www.cnfin.com/cy-lb/detail/20260825/4460222_1.html": {
     "title": "泸州老窖半年报：高端壁垒稳守，战略锚定长期",
@@ -11642,7 +11654,8 @@
     "excerpt": "",
     "publishedAt": "2026-08-25T00:00:00.000Z",
     "firstSeenAt": "2026-08-25T13:24:42.369Z",
-    "lastSeenAt": "2026-08-25T13:24:42.369Z"
+    "lastSeenAt": "2026-08-25T13:24:42.369Z",
+    "ai_relevant": false
   },
   "https://www.stcn.com/article/detail/4120672.html": {
     "title": "中国贸促会副会长刘健男会见百威亚太首席执行官兼董事会联席主席程衍俊一行",
@@ -11654,7 +11667,8 @@
     "excerpt": "",
     "publishedAt": "2026-08-25T00:00:00.000Z",
     "firstSeenAt": "2026-08-25T13:24:42.369Z",
-    "lastSeenAt": "2026-08-25T13:24:42.369Z"
+    "lastSeenAt": "2026-08-25T13:24:42.369Z",
+    "ai_relevant": false
   },
   "https://www.stcn.com/article/detail/4118863.html": {
     "title": "天山股份披露2026年半年报 固本拓新蓄力长期价值",
@@ -11666,7 +11680,8 @@
     "excerpt": "",
     "publishedAt": "2026-08-25T00:00:00.000Z",
     "firstSeenAt": "2026-08-25T13:24:42.369Z",
-    "lastSeenAt": "2026-08-25T13:24:42.369Z"
+    "lastSeenAt": "2026-08-25T13:24:42.369Z",
+    "ai_relevant": false
   },
   "https://www.stcn.com/article/detail/4118843.html": {
     "title": "聚焦眼科主业 光正眼科2026年上半年净利增超11倍",
@@ -11678,7 +11693,8 @@
     "excerpt": "",
     "publishedAt": "2026-08-25T00:00:00.000Z",
     "firstSeenAt": "2026-08-25T13:24:42.369Z",
-    "lastSeenAt": "2026-08-25T13:24:42.369Z"
+    "lastSeenAt": "2026-08-25T13:24:42.369Z",
+    "ai_relevant": false
   },
   "https://www.stcn.com/article/detail/4118851.html": {
     "title": "长鸿高科披露重组预案修订稿 产业链一体化整合加速落地",
@@ -11690,6 +11706,7 @@
     "excerpt": "",
     "publishedAt": "2026-08-25T00:00:00.000Z",
     "firstSeenAt": "2026-08-25T13:24:42.369Z",
-    "lastSeenAt": "2026-08-25T13:24:42.369Z"
+    "lastSeenAt": "2026-08-25T13:24:42.369Z",
+    "ai_relevant": false
   }
 }
