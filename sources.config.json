@@ -348,34 +348,13 @@
     "url": "https://www.investing.com/rss/news.rss",
     "category": "stocks",
     "subcategory": "us",
-    "keywords": [
-      "China",
-      "Chinese",
-      "央行",
-      "人民银行",
-      "人民币",
-      "港股",
-      "中概",
-      "bank",
-      "banking",
-      "利率",
-      "美联储",
-      "降息",
-      "降准",
-      "汇率",
-      "黄金",
-      "理财",
-      "信贷",
-      "美元",
-      "trade",
-      "tariff"
-    ],
+    "keywords": [],
     "enabled": true,
     "locales": [
       "zh",
       "en"
     ],
-    "notes": "昨日股市·美股信息源（2026-08-25 启用）：CI 沙箱实测可获取（本地 403 因 Cloudflare，CI IP 可达）。RSS 综合市场新闻（investing.com/rss/news.rss），subcategory=us 归「美股」分组；PER_SOURCE_FETCH_CAP 每源限 10 条。",
+    "notes": "昨日股市·美股信息源（2026-08-25 启用）：CI 沙箱实测可获取（本地 403 因 Cloudflare，CI IP 可达）。RSS 综合市场新闻（investing.com/rss/news.rss），subcategory=us 归「美股」分组；PER_SOURCE_FETCH_CAP 每源限 10 条。2026-08-25 修：移除原中国/银行/零售关键词（与美股市场新闻不匹配，导致被滤到 1 条），改空数组不过滤，先全量进 10 条观察真实内容（美股收盘≈北京时间凌晨，看 RSS 是否含收盘/解读稿），后续视噪声再加美股市场关键词。",
     "lang": "en"
   },
   {
@@ -983,5 +962,21 @@
       "zh"
     ],
     "notes": "昨日股市·港股信息源（2026-08-25 新增）：lib/sources/crawlers/sources/hkex-stock.ts 抓披露易最新公告 JSON（过滤 IPO 关键词、2天窗口、上限40条）；config 仅供 tier/knownSourceIds 识别。"
+  },
+  {
+    "id": "sina-hk-stock",
+    "role": "crawled-input",
+    "tier": "T2",
+    "name": "新浪财经·港股频道",
+    "type": "scrape",
+    "url": "https://finance.sina.com.cn/stock/hkstock/",
+    "category": "stocks",
+    "subcategory": "hk",
+    "enabled": false,
+    "lang": "zh",
+    "locales": [
+      "zh"
+    ],
+    "notes": "昨日股市·港股市场新闻源（2026-08-25 新增）：lib/sources/crawlers/sources/sina-hk-stock.ts 抓新浪港股频道列表页，匹配 dated doc 链接 + 港股相关性过滤（标题含港股关键词或港股代码(0XXXX)）+ 2天窗口；补足 hkex-stock 披露易公告偏英文公司级、对收盘解读支撑弱的问题。config 仅供 tier/knownSourceIds 识别，不直接 scrape。"
   }
 ]
