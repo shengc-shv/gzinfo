@@ -957,5 +957,21 @@
       "zh"
     ],
     "notes": "昨日股市·港股市场新闻源（2026-08-25 新增）：lib/sources/crawlers/sources/sina-hk-stock.ts 抓新浪港股频道列表页，匹配 dated doc 链接 + 港股相关性过滤（标题含港股关键词或港股代码(0XXXX)）+ 2天窗口；补足 hkex-stock 披露易公告偏英文公司级、对收盘解读支撑弱的问题。config 仅供 tier/knownSourceIds 识别，不直接 scrape。"
+  },
+  {
+    "id": "sina-a-stock",
+    "role": "crawled-input",
+    "tier": "T2",
+    "name": "新浪财经·A股频道",
+    "type": "scrape",
+    "url": "https://finance.sina.com.cn/stock/",
+    "category": "stocks",
+    "subcategory": "a-share",
+    "enabled": false,
+    "lang": "zh",
+    "locales": [
+      "zh"
+    ],
+    "notes": "昨日股市·A股交叉验证源（2026-08-25 新增）：lib/sources/crawlers/sources/sina-a-stock.ts 抓新浪财经A股频道列表页，匹配 dated doc 链接 + A股相关性过滤（标题含A股关键词或6位A股代码，排除港股/美股标记）+ 3天窗口；与 eastmoney-stock 构成 A股双源独立验证。config 仅供 tier/knownSourceIds 识别，不直接 scrape。"
   }
 ]
