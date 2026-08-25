@@ -1773,8 +1773,8 @@
     "publishedAt": "2026-08-24T00:00:00.000Z",
     "firstSeenAt": "2026-08-24T08:26:12.411Z",
     "lastSeenAt": "2026-08-24T08:26:12.411Z",
-    "summary": "工信部将印发时空信息终端供需适配行动计划，产业政策动态，与银行零售经营无直接关联。",
-    "ai_relevant": true,
+    "summary": "（业务相关性红线：立法草案/产业政策动态，与客群/财富/私行/信贷无直接挂钩）",
+    "ai_relevant": false,
     "subcategory": "cn-finance"
   },
   "https://www.cnfin.com/yw-lb/detail/20260824/4459407_1.html": {
@@ -6873,8 +6873,8 @@
     "publishedAt": "2026-08-25T00:00:00.000Z",
     "firstSeenAt": "2026-08-25T04:52:06.949Z",
     "lastSeenAt": "2026-08-25T04:52:06.949Z",
-    "summary": "港股异动 | 海清智元(01392)再涨近9% 近期股价已实现翻倍 下月有望进入…；港股市场动态",
-    "ai_relevant": true
+    "summary": "（单股新闻已过滤：非巨头/非广州本地大企业）",
+    "ai_relevant": false
   },
   "https://finance.sina.com.cn/stock/hkstock/marketalerts/2026-08-25/doc-inipnyqs9700263.shtml": {
     "title": "港股异动 | 华润建材科技(01313)午前跌近3% 上半年业绩同比盈转亏 水泥产品销量有所下滑",
@@ -6887,8 +6887,8 @@
     "publishedAt": "2026-08-25T00:00:00.000Z",
     "firstSeenAt": "2026-08-25T04:52:06.949Z",
     "lastSeenAt": "2026-08-25T04:52:06.949Z",
-    "summary": "港股异动 | 华润建材科技(01313)午前跌近3% 上半年业绩同比盈转亏 水泥…；港股市场动态",
-    "ai_relevant": true
+    "summary": "（单股新闻已过滤：非巨头/非广州本地大企业）",
+    "ai_relevant": false
   },
   "https://finance.sina.com.cn/stock/hkstock/marketalerts/2026-08-25/doc-inipnyqw5573300.shtml": {
     "title": "港股异动 | 诺诚健华(09969)涨超4% 商业化产品强劲增长叠加BD兑现 上半年同比扭亏为盈",
@@ -6901,8 +6901,8 @@
     "publishedAt": "2026-08-25T00:00:00.000Z",
     "firstSeenAt": "2026-08-25T04:52:06.949Z",
     "lastSeenAt": "2026-08-25T04:52:06.949Z",
-    "summary": "港股异动 | 诺诚健华(09969)涨超4% 商业化产品强劲增长叠加BD兑现 上…；港股市场动态",
-    "ai_relevant": true
+    "summary": "（单股新闻已过滤：非巨头/非广州本地大企业）",
+    "ai_relevant": false
   },
   "https://finance.sina.com.cn/stock/hkstock/marketalerts/2026-08-25/doc-inipnyqu1645640.shtml": {
     "title": "港股异动 | 融创中国(01918)早盘涨超9% 官宣转型“资产管理+资产运营” 收购而今管理全部股权",
@@ -7797,8 +7797,8 @@
     "publishedAt": "2026-08-25T00:00:00.000Z",
     "firstSeenAt": "2026-08-25T07:11:31.892Z",
     "lastSeenAt": "2026-08-25T07:11:31.892Z",
-    "summary": "港股异动 | 兆易创新(03986)涨超5% 二季度业绩快速增长 预计DRAM价…；港股市场动态",
-    "ai_relevant": true
+    "summary": "（单股新闻已过滤：非巨头/非广州本地大企业）",
+    "ai_relevant": false
   },
   "https://finance.sina.com.cn/stock/hkstock/marketalerts/2026-08-25/doc-inippeww2339912.shtml": {
     "title": "港股异动 | 联想集团(00992)午后涨超4% ISG表现远超预期 有望推动未来数季盈利按季改善",
@@ -7811,8 +7811,8 @@
     "publishedAt": "2026-08-25T00:00:00.000Z",
     "firstSeenAt": "2026-08-25T07:11:31.892Z",
     "lastSeenAt": "2026-08-25T07:11:31.892Z",
-    "summary": "港股异动 | 联想集团(00992)午后涨超4% ISG表现远超预期 有望推动未…；港股市场动态",
-    "ai_relevant": true
+    "summary": "（单股新闻已过滤：非巨头/非广州本地大企业）",
+    "ai_relevant": false
   },
   "https://finance.sina.com.cn/stock/hkstock/marketalerts/2026-08-25/doc-inippews1678388.shtml": {
     "title": "港股异动 | 保利物业(06049)涨超4% 上半年纯利同比增长4.8% 公司物管业务经营稳健",
@@ -7839,8 +7839,8 @@
     "publishedAt": "2026-08-25T00:00:00.000Z",
     "firstSeenAt": "2026-08-25T07:11:31.892Z",
     "lastSeenAt": "2026-08-25T07:11:31.892Z",
-    "summary": "港股异动 | SENASIC琻捷(06675)再涨超6% 公司获纳入恒生综合指数…；港股市场动态",
-    "ai_relevant": true
+    "summary": "（单股新闻已过滤：非巨头/非广州本地大企业）",
+    "ai_relevant": false
   },
   "https://finance.sina.com.cn/stock/hkstock/marketalerts/2026-08-25/doc-inippewu5563661.shtml": {
     "title": "港股异动 | 俊知集团(01300)涨近6% 预期中期溢利同比增超7.35倍 相关主力产品在AIDC领域逐步获客户认可",
@@ -7853,8 +7853,8 @@
     "publishedAt": "2026-08-25T00:00:00.000Z",
     "firstSeenAt": "2026-08-25T07:11:31.892Z",
     "lastSeenAt": "2026-08-25T07:11:31.892Z",
-    "summary": "港股异动 | 俊知集团(01300)涨近6% 预期中期溢利同比增超7.35倍 相…；港股市场动态",
-    "ai_relevant": true
+    "summary": "（单股新闻已过滤：非巨头/非广州本地大企业）",
+    "ai_relevant": false
   },
   "https://finance.sina.com.cn/stock/hkstock/marketalerts/2026-08-25/doc-inippews1669129.shtml": {
     "title": "港股异动 | 丽珠医药(01513)续跌超3% 二季度归母净利同比降四成 化学制剂与中药板块明显下滑",
@@ -7867,8 +7867,8 @@
     "publishedAt": "2026-08-25T00:00:00.000Z",
     "firstSeenAt": "2026-08-25T07:11:31.892Z",
     "lastSeenAt": "2026-08-25T07:11:31.892Z",
-    "summary": "港股异动 | 丽珠医药(01513)续跌超3% 二季度归母净利同比降四成 化学制…；港股市场动态",
-    "ai_relevant": true
+    "summary": "（单股新闻已过滤：非巨头/非广州本地大企业）",
+    "ai_relevant": false
   },
   "https://finance.sina.com.cn/stock/hkstock/marketalerts/2026-08-25/doc-inippews1664210.shtml": {
     "title": "港股异动 | 大族数控(03200)午后涨近7% Q2净利率创单季度新高 机构看好业绩持续超预期兑现",
@@ -7881,8 +7881,8 @@
     "publishedAt": "2026-08-25T00:00:00.000Z",
     "firstSeenAt": "2026-08-25T07:11:31.892Z",
     "lastSeenAt": "2026-08-25T07:11:31.892Z",
-    "summary": "港股异动 | 大族数控(03200)午后涨近7% Q2净利率创单季度新高 机构看…；港股市场动态",
-    "ai_relevant": true
+    "summary": "（单股新闻已过滤：非巨头/非广州本地大企业）",
+    "ai_relevant": false
   },
   "https://www.cnfin.com/hg-lb/detail/20260825/4460001_1.html": {
     "title": "我国修改银行业监督管理法拟加强消费者权益保护",
@@ -8497,8 +8497,8 @@
     "publishedAt": "2026-08-25T00:00:00.000Z",
     "firstSeenAt": "2026-08-25T07:37:49.953Z",
     "lastSeenAt": "2026-08-25T07:37:49.953Z",
-    "summary": "港股异动 | 鲟龙科技(06715)涨超5% 上半年经调整净利润同比增加15.7…；港股市场动态",
-    "ai_relevant": true
+    "summary": "（单股新闻已过滤：非巨头/非广州本地大企业）",
+    "ai_relevant": false
   },
   "https://finance.sina.com.cn/stock/hkstock/marketalerts/2026-08-25/doc-inippmen9638175.shtml": {
     "title": "港股异动 | 津上机床中国(01651)尾盘涨超4% 公司进入恒生综合指数 花旗指入通或成短期正面催化剂",
@@ -8539,8 +8539,8 @@
     "publishedAt": "2026-08-25T00:00:00.000Z",
     "firstSeenAt": "2026-08-25T07:37:49.953Z",
     "lastSeenAt": "2026-08-25T07:37:49.953Z",
-    "summary": "港股异动 | 亚博科技控股(08279)再涨超6% 港金所新交易系统预计2027…；港股市场动态",
-    "ai_relevant": true
+    "summary": "（单股新闻已过滤：非巨头/非广州本地大企业）",
+    "ai_relevant": false
   },
   "https://finance.sina.com.cn/stock/hkstock/marketalerts/2026-08-25/doc-inippmeq1574167.shtml": {
     "title": "港股异动 | 礼邦医药-B(09637)涨超6% 公司入通预期与业绩窗口有望形成双重催化 美信罗商业化放量可期",
@@ -8553,8 +8553,8 @@
     "publishedAt": "2026-08-25T00:00:00.000Z",
     "firstSeenAt": "2026-08-25T07:37:49.953Z",
     "lastSeenAt": "2026-08-25T07:37:49.953Z",
-    "summary": "港股异动 | 礼邦医药-B(09637)涨超6% 公司入通预期与业绩窗口有望形成…；港股市场动态",
-    "ai_relevant": true
+    "summary": "（单股新闻已过滤：非巨头/非广州本地大企业）",
+    "ai_relevant": false
   },
   "https://www.cnfin.com/yw-lb/detail/20260825/4460058_1.html": {
     "title": "【新华解读】风险管理范式持续升级 非集中清算衍生品交易保证金业务有望释放制度红利",
@@ -8623,8 +8623,8 @@
     "publishedAt": "2026-08-25T00:00:00.000Z",
     "firstSeenAt": "2026-08-25T07:37:49.953Z",
     "lastSeenAt": "2026-08-25T07:37:49.953Z",
-    "summary": "耕地保护和质量提升法草案三审稿增加多方面规定；对分行财富/信贷/客群业务有宏观参考",
-    "ai_relevant": true
+    "summary": "（业务相关性红线：立法草案/产业政策动态，与客群/财富/私行/信贷无直接挂钩）",
+    "ai_relevant": false
   },
   "https://www.cnfin.com/cy-lb/detail/20260825/4459953_1.html": {
     "title": "第一届“中国式现代化与边疆发展”学术研讨会在鄂尔多斯举行——聚焦“北疆各民族交往交流交融和高质量发展”",
@@ -8973,8 +8973,8 @@
     "publishedAt": "2026-08-25T00:00:00.000Z",
     "firstSeenAt": "2026-08-25T08:04:05.056Z",
     "lastSeenAt": "2026-08-25T08:04:05.056Z",
-    "summary": "港股异动 | 非凡领越(00933)涨超7% 中期权益持有人应占溢利同比增长48…；港股市场动态",
-    "ai_relevant": true
+    "summary": "（单股新闻已过滤：非巨头/非广州本地大企业）",
+    "ai_relevant": false
   },
   "https://finance.sina.com.cn/stock/hkstock/marketalerts/2026-08-25/doc-inippmes5476692.shtml": {
     "title": "港股异动 | 力勤资源(02245)涨近7% Obi项目全面达产将推动盈利能提稳步提升 本周四披露中期业绩",
@@ -8987,8 +8987,8 @@
     "publishedAt": "2026-08-25T00:00:00.000Z",
     "firstSeenAt": "2026-08-25T08:04:05.056Z",
     "lastSeenAt": "2026-08-25T08:04:05.056Z",
-    "summary": "港股异动 | 力勤资源(02245)涨近7% Obi项目全面达产将推动盈利能提稳…；港股市场动态",
-    "ai_relevant": true
+    "summary": "（单股新闻已过滤：非巨头/非广州本地大企业）",
+    "ai_relevant": false
   },
   "https://www.cnfin.com/yw-lb/detail/20260825/4460088_1.html": {
     "title": "收评：三大指数走势分化 成交额再次跌破两万亿 装修装饰、粮食股走强",
@@ -12494,5 +12494,41 @@
     "publishedAt": "2026-08-25T00:00:00.000Z",
     "firstSeenAt": "2026-08-25T15:19:08.783Z",
     "lastSeenAt": "2026-08-25T15:19:08.783Z"
+  },
+  "https://www.cnfin.com/hg-lb/detail/20260825/4460327_1.html": {
+    "title": "1至7月全国主要港口货物吞吐量突破百亿吨，沿海区域表现分化",
+    "url": "https://www.cnfin.com/hg-lb/detail/20260825/4460327_1.html",
+    "sourceId": "cnfin",
+    "source": "新华财经",
+    "category": "finance",
+    "subcategory": "cn-finance",
+    "excerpt": "",
+    "publishedAt": "2026-08-25T00:00:00.000Z",
+    "firstSeenAt": "2026-08-25T15:23:39.387Z",
+    "lastSeenAt": "2026-08-25T15:23:39.387Z"
+  },
+  "https://www.stcn.com/article/detail/4120975.html": {
+    "title": "双林股份：上半年现金流保持稳健 机器人及智能角模块业务产业化提速",
+    "url": "https://www.stcn.com/article/detail/4120975.html",
+    "sourceId": "stcn",
+    "source": "证券时报",
+    "category": "finance",
+    "subcategory": "cn-finance",
+    "excerpt": "",
+    "publishedAt": "2026-08-25T15:22:00.000Z",
+    "firstSeenAt": "2026-08-25T15:23:39.387Z",
+    "lastSeenAt": "2026-08-25T15:23:39.387Z"
+  },
+  "https://news.dayoo.com/guangzhou/202608/25/139995_54995074.htm": {
+    "title": "“紫檀”“沙德尔”远程送雨，广州降雨几乎无缝衔接",
+    "url": "https://news.dayoo.com/guangzhou/202608/25/139995_54995074.htm",
+    "sourceId": "dayoo-gz",
+    "source": "广州日报·大洋网",
+    "category": "gz",
+    "subcategory": "gz-media",
+    "excerpt": "",
+    "publishedAt": "2026-08-25T00:00:00.000Z",
+    "firstSeenAt": "2026-08-25T15:23:39.387Z",
+    "lastSeenAt": "2026-08-25T15:23:39.387Z"
   }
 }

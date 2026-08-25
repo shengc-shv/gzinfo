@@ -559,13 +559,15 @@ async function main() {
     );
   }
 
-  // —— 降本（2026-08-22）：lightAi 源（命中率低但保留热点发现）每源每天最多取 N 条，
-  // 减少进 PASS1 的总量；其 raw_text 在 toPass1Input 已截断到 LIGHT_AI_RAW_CAP 字。 ——
+  // —— 降本 + 展示限额（2026-08-22 lightAi；2026-08-25 用户指令：所有媒体源每源≤10 条进 LLM 分析/展示）——
+  // 以「全部源 id 集合」cap，使每个媒体源每天最多 10 条进入 AI 管线；
+  // lightAi 源（命中率低）的 raw_text 额外截断到 LIGHT_AI_RAW_CAP 字。
   const beforeLight = articles.length;
-  articles = capLightAiSources(articles, LIGHT_AI_SOURCES, LIGHT_AI_MAX_PER_SOURCE);
+  const allSrcIds = new Set(loadAllSources().map((s) => s.id));
+  articles = capLightAiSources(articles, allSrcIds, LIGHT_AI_MAX_PER_SOURCE);
   if (articles.length < beforeLight) {
     console.log(
-      `[daily] 🔻 lightAi 限流: 移除 ${beforeLight - articles.length} 条（cnfin/stcn/dayoo-gz/southcn/cnr-gd 每源≤${LIGHT_AI_MAX_PER_SOURCE}）`,
+      `[daily] 🔻 每源限额: 移除 ${beforeLight - articles.length} 条（全部媒体源每源≤${LIGHT_AI_MAX_PER_SOURCE} 条进 LLM 分析/展示）`,
     );
   }
 

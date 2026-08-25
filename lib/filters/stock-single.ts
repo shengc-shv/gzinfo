@@ -64,6 +64,7 @@ const SINGLE_STOCK_PATTERNS = [
   /配售|定增|解禁|质押|商誉|爆雷|退市|ST|摘帽/,
   /H1|H2|Q1|Q2|Q3|Q4|营收|净利|净利润|亏损|盈利|由盈转亏/,
   /估值|下调|上调|维持|入选|专项行动|调出|调入/,
+  /异动|盈测|业绩低于预期|不及预期|超预期|纳入|成份股|恒生综合指数/,
   /earnings|shares|stock price|target price|rating|upgrade|downgrade|buyback/,
   /market cap|revenue|profit|loss|guidance|forecast/,
   /report|misses|beats|warns|cuts|raises/,
@@ -84,13 +85,16 @@ export function shouldKeepStockNews(title: string): boolean {
     if (t.includes(c)) return true;
   }
 
+  // 股票代码（如 (01478) (9988.HK)）→ 单股异动，先于 MACRO 判定过滤
+  // （"港股异动|丘钛科技(01478)…"——"港股"在 MACRO 会误放行，代码优先拦截）
+  if (STOCK_CODE_RE.test(t)) return false;
+
   // 宏观/指数/板块级 → 保留
   for (const p of MACRO_PATTERNS) {
     if (p.test(t)) return true;
   }
 
-  // 单股特征（股票代码 或 个股词）且无白名单公司 → 过滤
-  if (STOCK_CODE_RE.test(t)) return false;
+  // 单股特征（个股词）且无白名单公司 → 过滤
   for (const p of SINGLE_STOCK_PATTERNS) {
     if (p.test(t)) return false;
   }
