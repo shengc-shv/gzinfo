@@ -270,37 +270,16 @@
     "name": "CNBC Top Stories",
     "type": "rss",
     "url": "https://www.cnbc.com/id/100003114/device/rss/rss.html",
-    "category": "finance",
-    "subcategory": "news",
-    "keywords": [
-      "China",
-      "Chinese",
-      "央行",
-      "人民银行",
-      "人民币",
-      "港股",
-      "中概",
-      "bank",
-      "banking",
-      "利率",
-      "美联储",
-      "降息",
-      "降准",
-      "汇率",
-      "黄金",
-      "理财",
-      "信贷",
-      "美元",
-      "trade",
-      "tariff"
-    ],
-    "enabled": false,
+    "category": "stocks",
+    "subcategory": "us",
+    "keywords": [],
+    "enabled": true,
     "locales": [
       "zh",
       "en"
     ],
-    "notes": "CI 沙箱实测可获取（非 403 拦截）",
-    "disabledReason": "结构失衡清理(2026-08-21)：7天存量10条仅3条相关(30%)，6条 relevant:false（美股个股/科技公司动态与分行无关）；海外财经保留 Guardian/Economist/Yahoo 即可"
+    "notes": "昨日股市·美股信息源（2026-08-25 启用，复用现成 RSS）：CNBC 美股/科技个股动态，路由 stocks/us；清空原中国/银行关键词避免误杀，喂 LLM 生成中文美股口播卡。CI 沙箱实测可获取（非 403 拦截）。",
+    "disabledReason": null
   },
   {
     "id": "yahoo-finance",
