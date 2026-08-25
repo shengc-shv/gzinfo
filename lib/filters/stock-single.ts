@@ -77,6 +77,9 @@ export function shouldKeepStockNews(title: string): boolean {
   if (!title) return true;
   const t = title;
 
+  // "XX异动|"快讯格式一律不要（2026-08-25 用户指令：港股异动等异动快讯无价值，优先于白名单）
+  if (/异动/.test(t)) return false;
+
   // 白名单巨头/广州本地大企业 → 保留
   for (const c of MEGA_CORPS) {
     if (t.includes(c)) return true;
