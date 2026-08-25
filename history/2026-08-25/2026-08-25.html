@@ -330,6 +330,28 @@
     border-radius: 2px; background: color-mix(in srgb, var(--c-trading) 55%, var(--muted));
   }
   .stock-empty { margin: 0; font-size: 0.76rem; color: var(--muted); }
+  /* 行情指数块（新浪行情 API，2026-08-25 用户拍板补指数 + 精准发布时间/渠道） */
+  .stock-indices {
+    margin: 0; padding: 0.4rem 0.5rem; background: color-mix(in srgb, var(--c-trading) 8%, var(--bg));
+    border-radius: 8px; border: 1px solid var(--rule);
+  }
+  .stock-idx-cap {
+    display: block; font-size: 0.64rem; color: var(--muted); font-weight: 600;
+    letter-spacing: 0.04em; margin-bottom: 0.25rem;
+  }
+  .stock-idx-list { display: flex; flex-wrap: wrap; gap: 0.35rem 0.7rem; }
+  .stock-idx {
+    font-size: 0.74rem; color: var(--fg-soft); white-space: nowrap;
+  }
+  .stock-idx b { color: var(--fg); font-weight: 700; font-variant-numeric: tabular-nums; margin-left: 0.1rem; }
+  /* 涨红跌绿（中国股市惯例） */
+  .stock-idx-pct { font-style: normal; font-weight: 700; font-variant-numeric: tabular-nums; margin-left: 0.15rem; }
+  .stock-idx-pct.up { color: #e23b3b; }
+  .stock-idx-pct.down { color: #1a9e5a; }
+  .stock-idx-src {
+    display: block; margin-top: 0.3rem; font-size: 0.62rem; color: var(--muted);
+    letter-spacing: 0.01em;
+  }
   /* 卡脚小字备注：来源网站 + 数据时间 + 交叉验证网站（2026-08-25 替代来源链接按钮） */
   .stock-meta {
     margin: 0.2rem 0 0; font-size: 0.66rem; color: var(--muted);
@@ -1082,7 +1104,7 @@
 <body>
 <main>
   <div class="player-card">
-    <div class="player-title"><span class="ic">🎧</span> 今日语音简报 <span class="player-dur">约 2 分 20 秒</span><span class="player-badge player-badge-tencent">腾讯合成</span></div>
+    <div class="player-title"><span class="ic">🎧</span> 今日语音简报 <span class="player-dur">约 2 分 23 秒</span><span class="player-badge player-badge-tencent">腾讯合成</span></div>
     <audio controls preload="none" src="audio/briefing-2026-08-25.mp3"></audio>
   </div>
   <!-- 报头：今日定调 + 数据截至 -->
@@ -1090,7 +1112,7 @@
     <div class="eyebrow">广州地区 · 零售业务每日资信（个人整理，非本行立场）</div>
     <h1>8月25日 星期二</h1>
     <p class="hero-line">今日定调：六大行贷款贴息细则火速落地，消费贷政策扩围进入执行期，分行须立即优化本地流程抢抓客群。</p>
-    <p class="meta-line">数据截至 12:52 · 去重后资讯 103 条 · 商机 4 条 · <a class="archive" href="../archive.html">← 历史归档</a></p>
+    <p class="meta-line">数据截至 15:11 · 去重后资讯 103 条 · 商机 4 条 · <a class="archive" href="../archive.html">← 历史归档</a></p>
   </header>
 
   <section class="exec-summary">
@@ -1128,19 +1150,22 @@
       <p class="stock-note">昨日市场复盘 · 涨跌概况与关键板块（AI 生成）</p>
       <ul class="stock-scroller"><li class="stock-card stock-card--a">
         <header class="stock-card-head">A股</header>
-        <p class="stock-overview">A股三大指数集体收跌，贵金属与煤炭板块逆市走强；人形机器人、光模块等前期热门题材高位回调，宇树科技跌至全球人形机器人市值榜第二，光模块三巨头集体重挫，市场避险情绪升温。</p>
-        <div class="stock-sectors"><span class="stock-sec-label">关键板块</span><ul><li>贵金属：金价上行带动板块逆市走强</li><li>煤炭：供给偏紧、板块逆市走强</li><li>人形机器人：宇树科技高位回调，市值被反超</li><li>光模块：三巨头集体重挫，机构称 9 月迎决胜窗口</li><li>券商：中信证券半年报多项指标被国泰海通反超</li></ul></div>
-        <p class="stock-meta">来源：东方财富 · 2026-08-24 · 交叉验证：新浪财经·A股</p>
+        <div class="stock-indices"><span class="stock-idx-cap">收盘点位</span><div class="stock-idx-list"><span class="stock-idx">上证指数 <b>3882.01</b> <em class="stock-idx-pct down">-0.59%</em></span><span class="stock-idx">深证成指 <b>13794.29</b> <em class="stock-idx-pct down">-2.13%</em></span><span class="stock-idx">创业板指 <b>3431.89</b> <em class="stock-idx-pct down">-3.21%</em></span></div><span class="stock-idx-src">新浪行情 · 取值于 2026-08-24 收盘</span></div>
+        <p class="stock-overview">A股三大指数集体收跌，上证指数跌0.59%、深证成指跌2.13%、创业板指跌3.21%；贵金属与煤炭板块逆市走强，科技成长高位回落，地缘与IPO收紧传闻扰动风险偏好。</p>
+        <div class="stock-sectors"><span class="stock-sec-label">关键板块</span><ul><li>贵金属：避险需求推动逆市走强</li><li>煤炭：供需偏紧板块逆市走高</li><li>半导体/AI：宇树科技等高位回落，成长承压（中金、中信继续看好AI算力主线）</li><li>券商：交易所收紧IPO传闻扰动情绪</li><li>外部：美方对伊朗二级制裁威胁增添地缘扰动</li></ul></div>
+        <p class="stock-meta">渠道：东方财富 · 发布时间：2026-08-24 · 交叉验证：新浪行情</p>
       </li><li class="stock-card stock-card--hk">
         <header class="stock-card-head">港股</header>
-        <p class="stock-overview">港股处于健康调整期：恒指季检在即，高盛预计被动资金净流入最多的六只股份包括携程集团等科网股；券商密集上调瑞声科技、康龙化成、贝壳目标价；安本与东方汇理均认为美债息高企影响可控、资金轮动利好高息股。</p>
-        <div class="stock-sectors"><span class="stock-sec-label">关键板块</span><ul><li>科网：恒指季检料带动被动资金流入携程集团等</li><li>消费电子：里昂升瑞声科技目标价至 54.4 港元</li><li>医药CXO：高盛升康龙化成目标价，挪威主权基金减持凯莱英</li><li>啤酒消费：华润啤酒白酒业务拖累，遭高盛下调目标价</li></ul></div>
-        <p class="stock-meta">来源：新浪财经·港股 · 2026-08-24 · 交叉验证：港交所披露易</p>
+        <div class="stock-indices"><span class="stock-idx-cap">收盘点位</span><div class="stock-idx-list"><span class="stock-idx">恒生指数 <b>25517.33</b></span><span class="stock-idx">恒生科技 <b>4594.04</b></span></div><span class="stock-idx-src">新浪行情 · 取值于 2026-08-24 收盘</span></div>
+        <p class="stock-overview">港股方面，大型科技股动向主导盘面，阿里官宣800亿港元AI配售、核心管理层增持护盘，市场关注巨额融资对流动性的影响；乐动机器人获纳入恒生综合指数。恒指收报25517点、恒生科技4594点。</p>
+        <div class="stock-sectors"><span class="stock-sec-label">关键板块</span><ul><li>大型科技：阿里800亿港元配售全押AI，管理层增持护盘，引流动性关注</li><li>指数调整：乐动机器人获纳入恒生综合指数成份股</li><li>医药/新股：麦科医药-B存仓市值5.21亿港元，个股转仓活跃</li></ul></div>
+        <p class="stock-meta">渠道：新浪财经·港股 · 发布时间：2026-08-25 · 交叉验证：新浪行情</p>
       </li><li class="stock-card stock-card--us">
         <header class="stock-card-head">美股</header>
-        <p class="stock-overview">美股市场消息面偏谨慎：美方对伊朗扩大制裁并称不豁免中国，地缘不确定性升温，油价企稳；亚洲市场因科技股担忧走低，科技情绪受压。个股财报分化，防务股 EOS 业绩大增、股价涨超 12%，殡葬服务商 Propel 业绩符合预期但股价回落。</p>
-        <div class="stock-sectors"><span class="stock-sec-label">关键板块</span><ul><li>防务军工：EOS 反无人机需求大增，半年利润创新高、股价大涨</li><li>能源石油：美伊制裁升级推升地缘溢价，油价企稳偏强</li><li>科技：亚洲科技股受情绪拖累走低，Tuya 营收超预期但板块整体承压</li><li>消费服务：Propel 殡葬业务量增但利润率下滑，股价下跌</li></ul></div>
-        <p class="stock-meta">来源：Investing.com News · 2026-08-25 · 交叉验证：CNBC Top Stories</p>
+        <div class="stock-indices"><span class="stock-idx-cap">收盘点位</span><div class="stock-idx-list"><span class="stock-idx">道琼斯 <b>53417.16</b> <em class="stock-idx-pct up">+0.26%</em></span><span class="stock-idx">纳斯达克 <b>25980.19</b> <em class="stock-idx-pct down">-0.76%</em></span><span class="stock-idx">标普500 <b>7652.86</b> <em class="stock-idx-pct down">-0.28%</em></span></div><span class="stock-idx-src">新浪行情 · 取值于 2026-08-24 收盘</span></div>
+        <p class="stock-overview">美股涨跌互现，道指微涨0.26%、纳指跌0.76%、标普跌0.28%；市场权衡美国扩大对伊朗制裁对油价的影响，科技股整体承压，但部分中小盘个股财报亮眼、盈利分化。</p>
+        <div class="stock-sectors"><span class="stock-sec-label">关键板块</span><ul><li>能源：油价受美国扩大对伊朗制裁预期影响持稳</li><li>科技：纳指走弱，部分个股财报分化（Tuya营收超预期）</li><li>中小盘：盈利显著分化（Tyro现金流大增、Austin盈利下滑67%）</li><li>政策：美扩大对伊朗全球制裁、拟上调加拿大汽车关税，贸易摩擦升温</li></ul></div>
+        <p class="stock-meta">渠道：Investing.com News · 发布时间：2026-08-25 · 交叉验证：新浪行情</p>
       </li></ul>
     </div>
   </section>
