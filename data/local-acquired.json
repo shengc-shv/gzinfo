@@ -1,9 +1,81 @@
 {
-  "fetchedAt": "2026-08-24T10:54:09.512Z",
+  "fetchedAt": "2026-08-25T12:30:39.931Z",
   "items": [
+    {
+      "title": "国家金融监督管理总局黑龙江监管局行政处罚信息公开表（黑金监罚决字〔2026〕76、77号）",
+      "url": "https://www.nfra.gov.cn/cn/view/pages/ItemDetail.html?docId=1269246",
+      "excerpt": "",
+      "publishedAt": "2026-08-25",
+      "sourceId": "nfra",
+      "source": "国家金融监督管理总局"
+    },
+    {
+      "title": "国家金融监督管理总局东莞监管分局行政处罚信息公示列表",
+      "url": "https://www.nfra.gov.cn/cn/view/pages/ItemDetail.html?docId=1269236",
+      "excerpt": "",
+      "publishedAt": "2026-08-25",
+      "sourceId": "nfra",
+      "source": "国家金融监督管理总局"
+    },
+    {
+      "title": "大理金融监管分局行政处罚信息公示列表",
+      "url": "https://www.nfra.gov.cn/cn/view/pages/ItemDetail.html?docId=1269239",
+      "excerpt": "",
+      "publishedAt": "2026-08-25",
+      "sourceId": "nfra",
+      "source": "国家金融监督管理总局"
+    },
+    {
+      "title": "国家金融监督管理总局浙江监管局行政处罚信息公开表",
+      "url": "https://www.nfra.gov.cn/cn/view/pages/ItemDetail.html?docId=1269238",
+      "excerpt": "",
+      "publishedAt": "2026-08-25",
+      "sourceId": "nfra",
+      "source": "国家金融监督管理总局"
+    },
+    {
+      "title": "国家金融监督管理总局河南监管局\n行政处罚信息公示表",
+      "url": "https://www.nfra.gov.cn/cn/view/pages/ItemDetail.html?docId=1269228",
+      "excerpt": "国家金融监督管理总局河南监管局行政处罚信息公示表",
+      "publishedAt": "2026-08-25",
+      "sourceId": "nfra",
+      "source": "国家金融监督管理总局"
+    },
+    {
+      "title": "国家金融监督管理总局岳阳监管分局行政处罚信息公示列表",
+      "url": "https://www.nfra.gov.cn/cn/view/pages/ItemDetail.html?docId=1269222",
+      "excerpt": "",
+      "publishedAt": "2026-08-25",
+      "sourceId": "nfra",
+      "source": "国家金融监督管理总局"
+    },
+    {
+      "title": "国家金融监督管理总局汕尾监管分局行政处罚信息公示列表",
+      "url": "https://www.nfra.gov.cn/cn/view/pages/ItemDetail.html?docId=1269187",
+      "excerpt": "",
+      "publishedAt": "2026-08-25",
+      "sourceId": "nfra",
+      "source": "国家金融监督管理总局"
+    },
+    {
+      "title": "泉州金融监管分局行政处罚信息公示表",
+      "url": "https://www.nfra.gov.cn/cn/view/pages/ItemDetail.html?docId=1269173",
+      "excerpt": "",
+      "publishedAt": "2026-08-25",
+      "sourceId": "nfra",
+      "source": "国家金融监督管理总局"
+    },
     {
       "title": "国家金融监督管理总局德阳监管分局行政处罚信息公开表",
       "url": "https://www.nfra.gov.cn/cn/view/pages/ItemDetail.html?docId=1269113",
+      "excerpt": "",
+      "publishedAt": "2026-08-24",
+      "sourceId": "nfra",
+      "source": "国家金融监督管理总局"
+    },
+    {
+      "title": "国家金融监督管理总局郴州监管分局行政处罚信息公示列表",
+      "url": "https://www.nfra.gov.cn/cn/view/pages/ItemDetail.html?docId=1269213",
       "excerpt": "",
       "publishedAt": "2026-08-24",
       "sourceId": "nfra",
@@ -16,6 +88,142 @@
       "publishedAt": "2026-08-24",
       "sourceId": "pbc",
       "source": "中国人民银行"
+    },
+    {
+      "title": "REITs打新褪去狂热：网下配售最高100% | 公募REITs面面观",
+      "url": "https://www.cls.cn/detail/2463756",
+      "excerpt": "①REITs打新降温，多只项目网下配售超 40%，部分标的上市即破发。\n②该市场从去年下半年开始调整，至今仍难言趋势反转。",
+      "publishedAt": "2026-08-25",
+      "sourceId": "cls",
+      "source": "财联社"
+    },
+    {
+      "title": "高赤字、高债务、高利率：美国长期财政风险正在累积？",
+      "url": "https://www.cls.cn/detail/2463907",
+      "excerpt": "①美国债务规模突破40万亿美元后，市场尚未明显恐慌，但业内指出，高赤字、高利率环境下，长期财政风险正在浮现；\n②美国当前年度财政赤字接近GDP的6%，高于经济学家认为的3%的长期稳定水平；\n③美国借贷成本已不再稳定低于经济增长速度，美国利息支出占GDP比例已经翻倍，达到约3%。",
+      "publishedAt": "2026-08-25",
+      "sourceId": "cls",
+      "source": "财联社"
+    },
+    {
+      "title": "单月暴跌26%后8月领涨8.55%，部分固收+基金过山车行情或暴露赛道化隐忧",
+      "url": "https://www.cls.cn/detail/2463749",
+      "excerpt": "①1921只固收+基金中，华泰保兴科荣A以8.55%月度收益领跑，其二季报显示股票仓位从0.05%升至38.74%，重仓AI算力产业链、可转债占比30.15%，属高赛道集中度产品。\n②业内人士称，选品时要穿透产品标签，重点关注产品仓位结构、最大回撤控制能力及管理人中长期投研实力。",
+      "publishedAt": "2026-08-25",
+      "sourceId": "cls",
+      "source": "财联社"
+    },
+    {
+      "title": "近四分之一含权理财押注打新、优先股！部分收益超22%，策略“撞脸”引关注",
+      "url": "https://www.cls.cn/detail/2463681",
+      "excerpt": "①今年银行理财打新赛道爆发，247只混合及权益类公募理财中，39只打新产品、20只优先股产品占比近四分之一。\n②39只打新产品收益分化，光大理财部分产品成立以来年化超22%，工银理财多只集中在4%-7%；\n③20只优先股产品均出自工银理财，年化多在2%左右。",
+      "publishedAt": "2026-08-25",
+      "sourceId": "cls",
+      "source": "财联社"
+    },
+    {
+      "title": "2026陆家嘴金融沙龙｜第二十八期圆桌共话投教革新：风险前置，服务下沉",
+      "url": "https://www.cls.cn/detail/2463356",
+      "excerpt": "①8月22日，本期圆桌对话圆满举行，与会嘉宾进一步就投资者教育革新、服务细节展开了精彩讨论。\n②对话由中证中小投资者服务中心党委委员、副总经理贺瑛主持。",
+      "publishedAt": "2026-08-25",
+      "sourceId": "cls",
+      "source": "财联社"
+    },
+    {
+      "title": "债市收盘|MLF缩量续作下资金面偏紧，10年及30年期国债表现相对坚挺",
+      "url": "https://www.cls.cn/detail/2463606",
+      "excerpt": "债市资金对于长端的多头情绪仍较强，后续可关注8月27日隔夜逆回购规模情况。",
+      "publishedAt": "2026-08-25",
+      "sourceId": "cls",
+      "source": "财联社"
+    },
+    {
+      "title": "比特币三个月来首次突破8万美元 8月迄今累计涨幅高达28%！",
+      "url": "https://www.cls.cn/detail/2463577",
+      "excerpt": "①比特币周二突破8万美元，创下三个多月来的新高，8月迄今累计涨超28%；\n②比特币上涨与美国财政部债券回购计划及特朗普呼吁国会通过加密监管《清晰法案》相关；\n③分析师认为，贬值交易的兴起是比特币上涨的关键原因，但也有人认为市场对比特币的需求无法持久。",
+      "publishedAt": "2026-08-25",
+      "sourceId": "cls",
+      "source": "财联社"
+    },
+    {
+      "title": "大成律所刘榕：跨境架构赋能全球化，助力企业资本“走出去、回得来”",
+      "url": "https://www.cls.cn/detail/2463517",
+      "excerpt": "静安区2026年苏河财富对话第四场活动21日在静安国际会客厅圆满举行，北京大成（上海）律师事务所合伙人刘榕出席活动，并发表“跨境交易架构设计：让资本走得出去，也走得回来”的主题演讲。",
+      "publishedAt": "2026-08-25",
+      "sourceId": "cls",
+      "source": "财联社"
+    },
+    {
+      "title": "鑫元基金胡昊：两大主线主导全球资产定价 AI泡沫破裂或言之尚早",
+      "url": "https://www.cls.cn/detail/2463548",
+      "excerpt": "静安区2026年苏河财富对话第四场活动21日在静安国际会客厅顺利举行，鑫元基金全球资产投资部基金经理助理兼海外宏观研究员胡昊进行了“全球宏观变局与资本市场新叙事”主旨演讲。",
+      "publishedAt": "2026-08-25",
+      "sourceId": "cls",
+      "source": "财联社"
+    },
+    {
+      "title": "贝森特“恩师”德鲁肯米勒公开抨击：美债救市计划大错特错！",
+      "url": "https://www.cls.cn/detail/2463426",
+      "excerpt": "①本周，德鲁肯米勒这位贝森特的“恩师”，公开发表了一篇题为《让债券市场说话》的评论文章，直言贝森特上周扩大长期国债回购“救市”的计划是一个“错误”；\n②“师徒间”在应如何对待市场信号与财政干预这一核心问题上，罕见出现了极其公开且尖锐的观点碰撞。",
+      "publishedAt": "2026-08-25",
+      "sourceId": "cls",
+      "source": "财联社"
+    },
+    {
+      "title": "债市公告精选 | 泛海控股三家子公司进入重整程序；佳兆业集团预计上半年亏损不多于95亿",
+      "url": "https://www.cls.cn/detail/2463173",
+      "excerpt": "尽享债市公告，把握机会，有效避雷。",
+      "publishedAt": "2026-08-25",
+      "sourceId": "cls",
+      "source": "财联社"
+    },
+    {
+      "title": "贝森特还有招“终极阳谋”：美元稳定币变身美债“接盘侠”？",
+      "url": "https://www.cls.cn/detail/2463132",
+      "excerpt": "①看似风马牛不相及，但美国财政部长贝森特近来旨在稳定美债市场的举措，可能会得到特朗普政府另一项重磅议程的助力——加密货币立法；\n②贝森特此前曾多次提及，短期国库券未来有望迎来一个极具爆发力的需求来源：稳定币。",
+      "publishedAt": "2026-08-25",
+      "sourceId": "cls",
+      "source": "财联社"
+    },
+    {
+      "title": "大日子还没到！贝森特：加码长债回购尚未开始 暂无意调整债券标售规模",
+      "url": "https://www.cls.cn/detail/2463054",
+      "excerpt": "①在周一这场以伊朗制裁为主题的新闻发布会上，当被问及财政部未来债券回购计划及标售规模时，贝森特表示，该部门将“继续执行8月初宣布的常规标售计划”；\n②他还示意，在11月初下一次所谓的季度再融资公告发布之前，不会作出调整。",
+      "publishedAt": "2026-08-25",
+      "sourceId": "cls",
+      "source": "财联社"
+    },
+    {
+      "title": "债市早参8月25日|今日央行将开展5000亿MLF操作 隔夜逆回购27日起接踵而至；多家房企预告上半年大幅亏损",
+      "url": "https://www.cls.cn/detail/2463020",
+      "excerpt": "把握债市政策脉搏，综览每日市场动向，尽在财联社《债市早参》。",
+      "publishedAt": "2026-08-25",
+      "sourceId": "cls",
+      "source": "财联社"
+    },
+    {
+      "title": "北新路桥上半年亏损2.79亿，叠加高杠杆，偿债压力凸显 | 债市财报观察",
+      "url": "https://www.cls.cn/detail/2462783",
+      "excerpt": "①公司亏损主因是信用减值损失大额计提与毛利率下滑。\n②目前公司存续债券3只，规模25亿元。",
+      "publishedAt": "2026-08-24",
+      "sourceId": "cls",
+      "source": "财联社"
+    },
+    {
+      "title": "天健集团上半年由盈转亏：净利润-3.78亿元，存续债78.9亿元 | 债市财报观察",
+      "url": "https://www.cls.cn/detail/2462774",
+      "excerpt": "①2026年中期天健集团实现营业收入65.89亿元，同比增长5.22%，但净利润-3.78亿元，同比下滑58倍，由盈转亏。\n②公司当前存续债券8只，规模78.9亿元。",
+      "publishedAt": "2026-08-24",
+      "sourceId": "cls",
+      "source": "财联社"
+    },
+    {
+      "title": "5000亿MLF、隔夜逆回购双箭齐发 央行“组合拳”呵护月末资金面",
+      "url": "https://www.cls.cn/detail/2462742",
+      "excerpt": "①8月末短期流动性需求增加。央行在这一时点连续开展隔夜逆回购，有助于控制市场隔夜利率DR001的波动性。\n②8月有6000亿MLF到期，这意味着8月MLF续作缩量1000亿，月末资金面扰动因素也增多。市场认为需关注长债调控。",
+      "publishedAt": "2026-08-24",
+      "sourceId": "cls",
+      "source": "财联社"
     },
     {
       "title": "对冲万亿供给压力，央行隔夜逆回购实现跨月操作，10年国债击穿1.68%关口，债牛逻辑或未改",
@@ -134,14 +342,6 @@
       "url": "https://www.cls.cn/detail/2461824",
       "excerpt": "①上半年我国GDP同比增长4.7%，处于全年4.5%—5%的增长预期目标区间，经济延续总体平稳、向新向优的发展态势；\n②上半年我国新动能对经济增长直接贡献超四成，规模以上清洁能源发电量占比36.2%，新能源汽车零售渗透率达54.1%，居民人均可支配收入同比名义增长5.2%。",
       "publishedAt": "2026-08-24",
-      "sourceId": "cls",
-      "source": "财联社"
-    },
-    {
-      "title": "具身智能涌向工厂一线，产业界竞逐落地“最后一公里” |2026WRC观察",
-      "url": "https://www.cls.cn/detail/2461552",
-      "excerpt": "①2022年底GPT的问世展示了语言交互的强大，而2023至2024年兴起的“世界模型”概念，则是补齐了机器人实操能力的短板。\n②客户的态度正在发生根本性转变——从过去关注“能不能做Demo”，转变为现在拿着计算器算“ROI（投资回报率）”。",
-      "publishedAt": "2026-08-23",
       "sourceId": "cls",
       "source": "财联社"
     }
