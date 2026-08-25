@@ -1022,7 +1022,7 @@ function renderStockRecap(report: DailyReport): string {
     .map(({ label, cls, card }) => {
       const empty = !card.overview && !card.spoken && card.sectors.length === 0;
       if (empty) {
-        return `<article class="stock-card stock-card--${cls}"><header class="stock-card-head">${label}</header><p class="stock-empty">暂无数据</p></article>`;
+        return `<li class="stock-card stock-card--${cls}"><header class="stock-card-head">${label}</header><p class="stock-empty">暂无数据</p></li>`;
       }
       const overview = card.overview || card.spoken || "";
       const sectors = card.sectors.length
@@ -1030,19 +1030,19 @@ function renderStockRecap(report: DailyReport): string {
             .map((s) => `<li>${escapeHtml(s)}</li>`)
             .join("")}</ul></div>`
         : "";
-      return `<article class="stock-card stock-card--${cls}">
+      return `<li class="stock-card stock-card--${cls}">
         <header class="stock-card-head">${label}</header>
         ${overview ? `<p class="stock-overview">${escapeHtml(overview)}</p>` : ""}
         ${sectors}
-      </article>`;
+      </li>`;
     })
     .join("");
   return `<section class="stock-recap">
-    <div class="exec-head">
-      <h2 class="exec-title">股市解读</h2>
-      <span class="exec-sub">昨日市场复盘 · 涨跌概况与关键板块（AI 生成）</span>
+    <div class="stock-must">
+      <h3 class="exec-col-title">📊 股市解读<span class="stock-hint-inline" aria-hidden="true">← 左右滑动查看 →</span></h3>
+      <p class="stock-note">昨日市场复盘 · 涨跌概况与关键板块（AI 生成）</p>
+      <ul class="stock-scroller">${cardHtml}</ul>
     </div>
-    <div class="stock-cards">${cardHtml}</div>
   </section>`;
 }
 

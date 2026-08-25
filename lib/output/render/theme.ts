@@ -275,14 +275,24 @@ export const THEME_CSS = `
   .insight-topic { margin: 0 0 0.3rem; font-size: 0.85rem; color: var(--c-finance); font-weight: 700; }
   .insight-impact, .insight-action { margin: 0.2rem 0 0; font-size: 0.78rem; color: var(--fg-soft); line-height: 1.55; }
 
-  /* —— 昨日股市复盘三卡（参考区） —— */
+  /* —— 昨日股市复盘三卡（参考区）：横向滑动卡片，与「今日必读」同款 —— */
   .stock-recap { margin-top: 0.5rem; }
-  .stock-cards {
-    display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.6rem;
+  .stock-must { position: relative; margin-bottom: 0.3rem; }
+  .stock-note { margin: 0 0 0.45rem; font-size: 0.72rem; color: var(--muted); }
+  .stock-scroller {
+    list-style: none; margin: 0; padding: 0 0.75rem 0.5rem 0;
+    display: flex; flex-direction: row; gap: 0.5rem;
+    overflow-x: auto; -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: thin; scrollbar-color: var(--rule) transparent;
   }
+  .stock-scroller::-webkit-scrollbar { height: 5px; }
+  .stock-scroller::-webkit-scrollbar-thumb { background: var(--rule); border-radius: 4px; }
   .stock-card {
-    border: 1px solid var(--rule); border-radius: 10px; padding: 0.6rem 0.7rem;
-    background: var(--bg); border-top: 3px solid var(--c-trading);
+    flex: 0 0 auto; width: 82vw; max-width: 320px;
+    border: 1px solid var(--rule); border-radius: 12px;
+    padding: 0.6rem 0.75rem; background: var(--bg-elevated);
+    box-shadow: var(--shadow-sm); border-top: 3px solid var(--c-trading);
     display: flex; flex-direction: column; gap: 0.4rem; min-width: 0;
   }
   .stock-card--us { border-top-color: var(--c-pol); }
@@ -315,8 +325,24 @@ export const THEME_CSS = `
     border-radius: 2px; background: color-mix(in srgb, var(--c-trading) 55%, var(--muted));
   }
   .stock-empty { margin: 0; font-size: 0.76rem; color: var(--muted); }
-  @media (max-width: 560px) {
-    .stock-cards { grid-template-columns: 1fr; }
+  /* 右侧渐隐遮罩：暗示右侧还有更多卡片（移动端横滑时可见） */
+  .stock-must::after {
+    content: ""; position: absolute; top: 1.7rem; right: 0; bottom: 0.5rem;
+    width: 3.25rem; pointer-events: none; z-index: 3;
+    background: linear-gradient(to left, color-mix(in srgb, var(--accent-cmb) 16%, var(--bg)) 0%, color-mix(in srgb, var(--accent-cmb) 4%, transparent) 55%, transparent 100%);
+  }
+  .stock-hint-inline {
+    display: inline-block; margin-left: 0.45rem; vertical-align: middle;
+    font-size: 0.68rem; font-weight: 500; color: var(--accent-cmb);
+    white-space: nowrap;
+  }
+  .stock-hint-inline .hint-arrow { display: inline-block; animation: nudge 1.1s ease-in-out infinite; }
+  @media (min-width: 720px) {
+    /* 桌面转网格：自适应列数（最多 3 列），无横向滑动，隐藏遮罩与提示 */
+    .stock-scroller { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); overflow: visible; padding-bottom: 0; padding-right: 0; scroll-snap-type: none; }
+    .stock-card { width: auto; max-width: none; }
+    .stock-must::after { display: none; }
+    .stock-hint-inline { display: none; }
   }
   /* 商机洞察来源标记 ①/②/③：标题后内联，移动端点击区域加大（≥26px），便于手机点开溯源 */
   .insight-srcs { display: inline-flex; gap: 0.22rem; margin-left: 0.35rem; vertical-align: middle; }
