@@ -36,16 +36,28 @@ const SUB_TO_DEPT: Record<string, string> = {
   "cn-customer": "客群",
 };
 
-/** 结构类型：任何带 subcategory/subcategories/tags 的对象都能喂进来（ArticleInput / Pass1Item / 缓存条目）。 */
+/** 结构类型：任何带 subcategory/subcategories/tags/title/summary 的对象都能喂进来 */
 interface Taggable {
   subcategories?: string[] | null;
   subcategory?: string | null;
   tags?: string[] | null;
+  title?: string | null;
+  summary?: string | null;
 }
+
+/** 标题/摘要关键词 → 部门（2026-08-25 兜底：v1-v8 把部门 subcategory 改成 cn-finance 等
+ *  通用值后 SUB_TO_DEPT 映射失效，SKIP_AI 又无 LLM 自由标签 → 部门标签全空。
+ *  此处按内容关键词推断，保证每张卡必带 ≥1 个部门标签。） */
+const TEXT_TO_DEPT: Array<[RegExp, string]> = [
+  [/理财|基金|保险|黄金|贵金属|财富|资管|代销|信托|ETF|债市|国债|AUM|积存金|金条/, "财富"],
+  [/贷款|信贷|房贷|消费贷|经营贷|按揭|公积金|利率|首付|融资担保|普惠|小微/, "信贷"],
+  [/私行|家族|高净值|私人银行|股权|家办/, "私行"],
+  [/客群|零售|代发|信用卡|养老|支付|商圈|储户|网点|反诈/, "客群"],
+];
 
 /**
  * 双标构造：返回去重后的标签数组，同时包含
- *  - 部门（来自 subcategory 映射）
+ *  - 部门（来自 subcategory 映射 + 标题/摘要关键词推断）
  *  - 原始自由标签（用于卡片展示，含粤/监管合规等）
  *  - 自由标签经 TAG_TO_DEPT 产生的部门
  */
@@ -63,5 +75,11 @@ export function rollUpTags(a: Taggable): string[] {
   const deptFromFree = Array.from(
     new Set(free.map((t) => TAG_TO_DEPT[t]).filter((t): t is string => Boolean(t))),
   );
-  return Array.from(new Set([...deptFromSub, ...free, ...deptFromFree]));
+  // 标题关键词 → 部门（兜底，保证必带 ≥1 部门标签；只看 title——
+  // 滚动历史的 summary 是脚本套话"对分行财富/信贷/客群业务有宏观参考"，会误伤三部门全标）
+  const text = `${a.title ?? ""}`;
+  const deptFromText = Array.from(
+    new Set(TEXT_TO_DEPT.filter(([re]) => re.test(text)).map(([, d]) => d)),
+  );
+  return Array.from(new Set([...deptFromSub, ...deptFromText, ...free, ...deptFromFree]));
 }
