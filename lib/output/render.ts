@@ -810,6 +810,14 @@ function tagClsOf(tag: string): string {
   return "";
 }
 
+/** 股市动态面板：卡片市场徽标（A股/港股/美股）。 */
+const MARKET_BADGE: Record<string, { label: string; cls: string }> = {
+  "a-share": { label: "A股", cls: "mkt-a" },
+  hk: { label: "港股", cls: "mkt-hk" },
+  us: { label: "美股", cls: "mkt-us" },
+};
+
+
 export function renderReportItemHtml(item: ReportItem, showSource = true): string {
   const title = escapeHtml(item.title_cn || item.title_orig || "");
   const url = escapeHtml(item.url);
@@ -820,8 +828,10 @@ export function renderReportItemHtml(item: ReportItem, showSource = true): strin
   const tags = (item.tags ?? [])
     .map((t) => `<span class="tag ${tagClsOf(t)}">${escapeHtml(t)}</span>`)
     .join("");
+  const mkt = item.market ? MARKET_BADGE[item.market] : undefined;
+  const mktBadge = mkt ? `<span class="mkt-badge ${mkt.cls}">${mkt.label}</span>` : "";
   return `<article class="brief${item.importance === 3 ? " must" : ""}" data-source="${item.source_type}" data-tags="${(item.tags ?? []).join(" ")}" data-market="${escapeHtml(item.market ?? "")}">
-  <div class="bm"><span class="src-badge ${badge.cls}">${badge.label}</span>${showSource && item.source ? `<span>${escapeHtml(item.source)}</span>` : ""}${time ? `<span>${time}</span>` : ""}${item.importance === 3 ? `<span class="imp-badge">必知</span>` : ""}</div>
+  <div class="bm">${mktBadge}<span class="src-badge ${badge.cls}">${badge.label}</span>${showSource && item.source ? `<span>${escapeHtml(item.source)}</span>` : ""}${time ? `<span>${time}</span>` : ""}${item.importance === 3 ? `<span class="imp-badge">必知</span>` : ""}</div>
   <h3><a href="${url}" target="_blank" rel="noopener noreferrer">${title}</a></h3>
   ${summary ? `<p class="sum">${summary}</p>` : ""}
   ${tags ? `<div class="tags">${tags}</div>` : ""}

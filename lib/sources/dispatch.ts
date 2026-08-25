@@ -43,6 +43,7 @@ export async function fetchSource(source: SourceDef): Promise<RawArticle[]> {
     items = await fetchRss(source.id, source.url, source.category, {
       useCurl: source.useCurl,
       keywords: source.keywords,
+      ...(source.category === "stocks" ? { subcategory: source.subcategory } : {}),
     });
   return BUSINESS_SOURCES.has(source.id) ? items : items.slice(0, PER_SOURCE_FETCH_CAP);
 }

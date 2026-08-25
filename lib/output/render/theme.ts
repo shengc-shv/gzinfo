@@ -1076,6 +1076,11 @@ export const THEME_CSS = `
   .src-badge { font-size: 0.66rem; font-weight: 700; border-radius: 4px; padding: 0.06rem 0.35rem; }
   .src-official { color: #b45309; background: rgba(217, 119, 6, 0.14); }
   .src-media { color: #4f46e5; background: rgba(79, 70, 229, 0.12); }
+  /* 股市动态面板：市场徽标（A股/港股/美股，2026-08-25 用户：卡片打标市场） */
+  .mkt-badge { font-size: 0.66rem; font-weight: 700; border-radius: 4px; padding: 0.06rem 0.35rem; }
+  .mkt-a { color: #dc2626; background: rgba(220, 38, 38, 0.12); }
+  .mkt-hk { color: #0d9488; background: rgba(13, 148, 136, 0.12); }
+  .mkt-us { color: #7c3aed; background: rgba(124, 58, 237, 0.12); }
   .brief h3 { margin: 0; font-size: 0.98rem; line-height: 1.5; }
   .brief .sum { margin: 0.35rem 0 0; font-size: 0.92rem; color: var(--fg-soft); line-height: 1.65; }
   .brief .sum b { color: var(--fg); }

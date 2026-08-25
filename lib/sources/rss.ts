@@ -44,7 +44,7 @@ export async function fetchRss(
   sourceId: string,
   url: string,
   category: Category,
-  options: { limit?: number; useCurl?: boolean; keywords?: string[] } = {},
+  options: { limit?: number; useCurl?: boolean; keywords?: string[]; subcategory?: string } = {},
 ): Promise<RawArticle[]> {
   const limit = options.limit ?? 30;
 
@@ -68,6 +68,7 @@ export async function fetchRss(
       ),
       publishedAt: item.isoDate ? new Date(item.isoDate) : undefined,
       category,
+      subcategory: options.subcategory,
     }))
     .filter((a) => a.title && a.url);
 

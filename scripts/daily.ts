@@ -63,6 +63,7 @@ import {
   selectStockRecap,
   type StockItem,
 } from "../lib/ai/stock-recap";
+import { analyzeStockNews, writeStockNews, loadStockNews } from "../lib/ai/stock-news-analysis";
 import { fetchMarketQuotes, prevTradingDay } from "../lib/sources/quote-api";
 import { assembleAudioScript, formatDuration, type AudioMeta } from "../lib/audio/audio";
 import { synthesizeAudio } from "../lib/audio/tts";
@@ -779,12 +780,26 @@ async function main() {
       filterByWindow(items as Array<{ publishedAt?: Date | string; fetchedAt?: Date }>, win)
         .map((a) => toNews(a, market))
         .slice(0, PER_MARKET_CAP);
-    const news: StockNewsItem[] = [
+    const rawNews: StockNewsItem[] = [
       ...collect(crawled.stocks.filter((a) => a.subcategory === "a-share"), "a-share", 3),
       ...collect(crawled.stocks.filter((a) => a.subcategory === "hk"), "hk", 3),
       ...collect(rawArticles.filter((a) => a.category === "stocks" && a.subcategory === "us"), "us", 4),
     ];
-    if (news.length) {
+    if (rawNews.length) {
+      let news: StockNewsItem[] = rawNews;
+      if (SKIP_AI) {
+        // 复用预写 store（WorkBuddy 预分析）或上次正常跑的分析结果；无则回退原始清单
+        const persisted = loadStockNews(date);
+        if (persisted) {
+          news = persisted;
+        } else {
+          console.warn(`[daily] ⚠️ SKIP_AI 但 store 无 stock_news，回退原始清单`);
+        }
+      } else {
+        // 与其它板块同逻辑：线上由 LLM 逐条归纳（中性事实，禁业务引申），并持久化供 SKIP_AI 复用
+        news = await analyzeStockNews(rawNews);
+        writeStockNews(date, news);
+      }
       mergedReport.stock_news = news;
       console.log(
         `[daily] 📋 股市消息清单构建：${news.filter((n) => n.market === "a-share").length} A股 / ${news.filter((n) => n.market === "hk").length} 港股 / ${news.filter((n) => n.market === "us").length} 美股`,

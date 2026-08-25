@@ -14,6 +14,7 @@ export type AiStage =
   | "classify" // 条目级 LLM 分类
   | "executive" // 执行摘要
   | "stock-recap" // 股市解读三卡（昨日股市复盘）
+  | "stock-news" // 股市消息清单逐条归纳（底部「股市动态」面板）
   | "trading" // 交易点评
   | "credentials" // 启动凭证校验
   | "pass1" // 两阶段管线：PASS1 筛选分类
