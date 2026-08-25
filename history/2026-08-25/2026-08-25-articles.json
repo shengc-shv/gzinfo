@@ -38,7 +38,7 @@
       "source": "新浪财经·理财保险",
       "fetchedToday": false,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "cnfin",
@@ -51,7 +51,7 @@
       "source": "新华财经",
       "fetchedToday": false,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "cnfin",
@@ -77,7 +77,7 @@
       "source": "新华财经",
       "fetchedToday": false,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "cnfin",
@@ -116,7 +116,7 @@
       "source": "新华财经",
       "fetchedToday": false,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "stcn",
@@ -129,7 +129,7 @@
       "source": "证券时报",
       "fetchedToday": false,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "stcn",
@@ -155,7 +155,7 @@
       "source": "证券时报",
       "fetchedToday": false,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "stcn",
@@ -220,7 +220,7 @@
       "source": "新浪财经·理财保险",
       "fetchedToday": false,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "sina-money",
@@ -233,7 +233,7 @@
       "source": "新浪财经·理财保险",
       "fetchedToday": false,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "sina-money",
@@ -246,7 +246,7 @@
       "source": "新浪财经·理财保险",
       "fetchedToday": false,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "sina-money",
@@ -298,7 +298,7 @@
       "source": "21世纪经济报道·金融",
       "fetchedToday": false,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "21jingji-finance",
@@ -415,7 +415,7 @@
       "source": "财联社",
       "fetchedToday": false,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "cls",
@@ -441,7 +441,7 @@
       "source": "财联社",
       "fetchedToday": false,
       "subcategory": "gz-credit",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "cls",
@@ -454,7 +454,7 @@
       "source": "财联社",
       "fetchedToday": false,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "cls",
@@ -558,7 +558,7 @@
       "source": "新华财经",
       "fetchedToday": false,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "cnfin",
@@ -571,7 +571,7 @@
       "source": "新华财经",
       "fetchedToday": false,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "cnfin",
@@ -610,7 +610,7 @@
       "source": "证券时报",
       "fetchedToday": false,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "stcn",
@@ -636,7 +636,7 @@
       "source": "证券时报",
       "fetchedToday": false,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "stcn",
@@ -662,7 +662,7 @@
       "source": "证券时报",
       "fetchedToday": false,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "stcn",
@@ -675,7 +675,7 @@
       "source": "证券时报",
       "fetchedToday": false,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "dayoo-gz",
@@ -805,7 +805,7 @@
       "source": "新华财经",
       "fetchedToday": false,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "cnfin",
@@ -831,7 +831,7 @@
       "source": "新华财经",
       "fetchedToday": false,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "cnfin",
@@ -870,7 +870,7 @@
       "source": "证券时报",
       "fetchedToday": false,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "stcn",
@@ -896,7 +896,7 @@
       "source": "证券时报",
       "fetchedToday": false,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "stcn",
@@ -922,7 +922,7 @@
       "source": "证券时报",
       "fetchedToday": false,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "stcn",
@@ -935,7 +935,7 @@
       "source": "证券时报",
       "fetchedToday": false,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "dayoo-gz",
@@ -1104,7 +1104,7 @@
       "source": "证券时报",
       "fetchedToday": false,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "stcn",
@@ -1130,7 +1130,7 @@
       "source": "证券时报",
       "fetchedToday": false,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "stcn",
@@ -1207,7 +1207,7 @@
       "source": "证券时报",
       "fetchedToday": false,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "stcn",
@@ -1220,7 +1220,7 @@
       "source": "证券时报",
       "fetchedToday": false,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "stcn",
@@ -1309,7 +1309,7 @@
       "source": "新浪财经·理财保险",
       "fetchedToday": false,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "cnfin",
@@ -1322,7 +1322,7 @@
       "source": "新华财经",
       "fetchedToday": false,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "cnfin",
@@ -1348,7 +1348,7 @@
       "source": "新华财经",
       "fetchedToday": false,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "cnfin",
@@ -1361,7 +1361,7 @@
       "source": "新华财经",
       "fetchedToday": false,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "cnfin",
@@ -1439,7 +1439,7 @@
       "source": "证券时报",
       "fetchedToday": false,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "stcn",
@@ -1452,7 +1452,7 @@
       "source": "证券时报",
       "fetchedToday": false,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "stcn",
@@ -1702,7 +1702,7 @@
       "source": "新华财经",
       "fetchedToday": false,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "cnfin",
@@ -1715,7 +1715,7 @@
       "source": "新华财经",
       "fetchedToday": false,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "cnfin",
@@ -1728,7 +1728,7 @@
       "source": "新华财经",
       "fetchedToday": false,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "cnfin",
@@ -1741,7 +1741,7 @@
       "source": "新华财经",
       "fetchedToday": false,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "cnfin",
@@ -1780,7 +1780,7 @@
       "source": "证券时报",
       "fetchedToday": false,
       "subcategory": "gz-credit",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "stcn",
@@ -1793,7 +1793,7 @@
       "source": "证券时报",
       "fetchedToday": false,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "stcn",
@@ -1819,7 +1819,7 @@
       "source": "证券时报",
       "fetchedToday": false,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "stcn",
@@ -1845,7 +1845,7 @@
       "source": "证券时报",
       "fetchedToday": false,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "dayoo-gz",
@@ -1923,7 +1923,7 @@
       "source": "港交所IPO公告",
       "fetchedToday": false,
       "subcategory": "hkex",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "cnfin",
@@ -1936,7 +1936,7 @@
       "source": "新华财经",
       "fetchedToday": false,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "cnfin",
@@ -1962,7 +1962,7 @@
       "source": "新华财经",
       "fetchedToday": false,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "cnfin",
@@ -1988,7 +1988,7 @@
       "source": "证券时报",
       "fetchedToday": false,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "stcn",
@@ -2066,7 +2066,7 @@
       "source": "新浪财经·理财保险",
       "fetchedToday": false,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "sina-money",
@@ -2092,7 +2092,7 @@
       "source": "新浪财经·理财保险",
       "fetchedToday": false,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "21jingji-finance",
@@ -2118,7 +2118,7 @@
       "source": "港交所IPO公告",
       "fetchedToday": false,
       "subcategory": "hkex",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "hkex",
@@ -2131,7 +2131,7 @@
       "source": "港交所IPO公告",
       "fetchedToday": false,
       "subcategory": "hkex",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "bse",
@@ -2144,7 +2144,7 @@
       "source": "北交所IPO公告",
       "fetchedToday": false,
       "subcategory": "bse",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "sina-bank",
@@ -2291,7 +2291,7 @@
       "source": "新华财经",
       "fetchedToday": false,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "cnfin",
@@ -2304,7 +2304,7 @@
       "source": "新华财经",
       "fetchedToday": false,
       "subcategory": "gz-customer",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "cnfin",
@@ -2356,7 +2356,7 @@
       "source": "新华财经",
       "fetchedToday": false,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "stcn",
@@ -2369,7 +2369,7 @@
       "source": "证券时报",
       "fetchedToday": false,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "stcn",
@@ -2395,7 +2395,7 @@
       "source": "证券时报",
       "fetchedToday": false,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "stcn",
@@ -2408,7 +2408,7 @@
       "source": "证券时报",
       "fetchedToday": false,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "stcn",
@@ -2486,7 +2486,7 @@
       "source": "港交所IPO公告",
       "fetchedToday": false,
       "subcategory": "hkex",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "sina-bank",
@@ -2564,7 +2564,7 @@
       "source": "财联社",
       "fetchedToday": false,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "cls",
@@ -2590,7 +2590,7 @@
       "source": "财联社",
       "fetchedToday": false,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "cls",
@@ -2616,7 +2616,7 @@
       "source": "新华财经",
       "fetchedToday": false,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "cnfin",
@@ -2629,7 +2629,7 @@
       "source": "新华财经",
       "fetchedToday": false,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "stcn",
@@ -2681,7 +2681,7 @@
       "source": "证券时报",
       "fetchedToday": false,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "stcn",
@@ -2811,7 +2811,7 @@
       "source": "北交所IPO公告",
       "fetchedToday": false,
       "subcategory": "bse",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "sina-bank",
@@ -2837,7 +2837,7 @@
       "source": "证券时报",
       "fetchedToday": false,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "stcn",
@@ -2863,7 +2863,7 @@
       "source": "新华财经",
       "fetchedToday": false,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "cnfin",
@@ -2876,7 +2876,7 @@
       "source": "新华财经",
       "fetchedToday": false,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "cnfin",
@@ -2889,7 +2889,7 @@
       "source": "新华财经",
       "fetchedToday": false,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "stcn",
@@ -2915,7 +2915,7 @@
       "source": "证券时报",
       "fetchedToday": false,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "stcn",
@@ -2928,7 +2928,7 @@
       "source": "证券时报",
       "fetchedToday": false,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "sina-money",
@@ -3019,7 +3019,7 @@
       "source": "新浪财经·理财保险",
       "fetchedToday": false,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "sina-money",
@@ -3110,7 +3110,7 @@
       "source": "21世纪经济报道·金融",
       "fetchedToday": false,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "21jingji-finance",
@@ -3175,7 +3175,7 @@
       "source": "港交所IPO公告",
       "fetchedToday": false,
       "subcategory": "hkex",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "hkex",
@@ -3188,7 +3188,7 @@
       "source": "港交所IPO公告",
       "fetchedToday": false,
       "subcategory": "hkex",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "hkex",
@@ -3201,7 +3201,7 @@
       "source": "港交所IPO公告",
       "fetchedToday": false,
       "subcategory": "hkex",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "hkex",
@@ -3214,7 +3214,7 @@
       "source": "港交所IPO公告",
       "fetchedToday": false,
       "subcategory": "hkex",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "hkex",
@@ -3227,7 +3227,7 @@
       "source": "港交所IPO公告",
       "fetchedToday": false,
       "subcategory": "hkex",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "hkex",
@@ -3240,7 +3240,7 @@
       "source": "港交所IPO公告",
       "fetchedToday": false,
       "subcategory": "hkex",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "sina-bank",
@@ -3292,7 +3292,7 @@
       "source": "新华财经",
       "fetchedToday": false,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "cnfin",
@@ -3357,7 +3357,7 @@
       "source": "新华财经",
       "fetchedToday": false,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "stcn",
@@ -3383,7 +3383,7 @@
       "source": "证券时报",
       "fetchedToday": false,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "stcn",
@@ -3409,7 +3409,7 @@
       "source": "证券时报",
       "fetchedToday": false,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "stcn",
@@ -3565,7 +3565,7 @@
       "source": "新浪财经·理财保险",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "sse",
@@ -3578,7 +3578,7 @@
       "source": "上交所IPO公告",
       "fetchedToday": true,
       "subcategory": "sse",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "szse",
@@ -3591,7 +3591,7 @@
       "source": "深交所IPO公告",
       "fetchedToday": true,
       "subcategory": "szse",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "szse",
@@ -3604,7 +3604,7 @@
       "source": "深交所IPO公告",
       "fetchedToday": true,
       "subcategory": "szse",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "sina-bank",
@@ -3708,7 +3708,7 @@
       "source": "东方财富",
       "fetchedToday": true,
       "subcategory": "a-share",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "eastmoney-stock",
@@ -3721,7 +3721,7 @@
       "source": "东方财富",
       "fetchedToday": true,
       "subcategory": "a-share",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "eastmoney-stock",
@@ -3734,7 +3734,7 @@
       "source": "东方财富",
       "fetchedToday": true,
       "subcategory": "a-share",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "eastmoney-stock",
@@ -3747,7 +3747,7 @@
       "source": "东方财富",
       "fetchedToday": true,
       "subcategory": "a-share",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "eastmoney-stock",
@@ -3760,7 +3760,7 @@
       "source": "东方财富",
       "fetchedToday": true,
       "subcategory": "a-share",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "eastmoney-stock",
@@ -3773,7 +3773,7 @@
       "source": "东方财富",
       "fetchedToday": true,
       "subcategory": "a-share",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "eastmoney-stock",
@@ -3786,7 +3786,7 @@
       "source": "东方财富",
       "fetchedToday": true,
       "subcategory": "a-share",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "eastmoney-stock",
@@ -3825,7 +3825,7 @@
       "source": "东方财富",
       "fetchedToday": true,
       "subcategory": "a-share",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "eastmoney-stock",
@@ -3864,7 +3864,7 @@
       "source": "东方财富",
       "fetchedToday": true,
       "subcategory": "a-share",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "eastmoney-stock",
@@ -3877,7 +3877,7 @@
       "source": "东方财富",
       "fetchedToday": true,
       "subcategory": "a-share",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "eastmoney-stock",
@@ -3890,7 +3890,7 @@
       "source": "东方财富",
       "fetchedToday": true,
       "subcategory": "a-share",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "eastmoney-stock",
@@ -3903,7 +3903,7 @@
       "source": "东方财富",
       "fetchedToday": true,
       "subcategory": "a-share",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "eastmoney-stock",
@@ -3916,7 +3916,7 @@
       "source": "东方财富",
       "fetchedToday": true,
       "subcategory": "a-share",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "eastmoney-stock",
@@ -3929,7 +3929,7 @@
       "source": "东方财富",
       "fetchedToday": true,
       "subcategory": "a-share",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "hkex-stock",
@@ -4072,7 +4072,7 @@
       "source": "证券时报",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "stcn",
@@ -4085,7 +4085,7 @@
       "source": "证券时报",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "stcn",
@@ -4098,7 +4098,7 @@
       "source": "证券时报",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "stcn",
@@ -4111,7 +4111,7 @@
       "source": "证券时报",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "stcn",
@@ -4124,7 +4124,7 @@
       "source": "证券时报",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "stcn",
@@ -4202,7 +4202,7 @@
       "source": "新华财经",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "cnfin",
@@ -4501,7 +4501,7 @@
       "source": "上交所IPO公告",
       "fetchedToday": true,
       "subcategory": "sse",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "sse",
@@ -4514,7 +4514,7 @@
       "source": "上交所IPO公告",
       "fetchedToday": true,
       "subcategory": "sse",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "szse",
@@ -4527,7 +4527,7 @@
       "source": "深交所IPO公告",
       "fetchedToday": true,
       "subcategory": "szse",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "sina-bank",
@@ -4631,7 +4631,7 @@
       "source": "新浪财经·港股",
       "fetchedToday": true,
       "subcategory": "hk",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "sina-hk-stock",
@@ -4644,7 +4644,7 @@
       "source": "新浪财经·港股",
       "fetchedToday": true,
       "subcategory": "hk",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "sina-hk-stock",
@@ -4657,7 +4657,7 @@
       "source": "新浪财经·港股",
       "fetchedToday": true,
       "subcategory": "hk",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "sina-hk-stock",
@@ -4683,7 +4683,7 @@
       "source": "新浪财经·港股",
       "fetchedToday": true,
       "subcategory": "hk",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "sina-hk-stock",
@@ -4696,7 +4696,7 @@
       "source": "新浪财经·港股",
       "fetchedToday": true,
       "subcategory": "hk",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "sina-hk-stock",
@@ -4761,7 +4761,7 @@
       "source": "新浪财经·港股",
       "fetchedToday": true,
       "subcategory": "hk",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "sina-hk-stock",
@@ -4826,7 +4826,7 @@
       "source": "新浪财经·港股",
       "fetchedToday": true,
       "subcategory": "hk",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "sina-hk-stock",
@@ -4839,7 +4839,7 @@
       "source": "新浪财经·港股",
       "fetchedToday": true,
       "subcategory": "hk",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "sina-hk-stock",
@@ -4852,7 +4852,7 @@
       "source": "新浪财经·港股",
       "fetchedToday": true,
       "subcategory": "hk",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "sina-hk-stock",
@@ -4891,7 +4891,7 @@
       "source": "新华财经",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "cnfin",
@@ -4969,7 +4969,7 @@
       "source": "证券时报",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "stcn",
@@ -5008,7 +5008,7 @@
       "source": "证券时报",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "stcn",
@@ -5333,7 +5333,7 @@
       "source": "新浪财经·理财保险",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "sina-money",
@@ -5372,7 +5372,7 @@
       "source": "新浪财经·港股",
       "fetchedToday": true,
       "subcategory": "hk",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "sina-hk-stock",
@@ -5385,7 +5385,7 @@
       "source": "新浪财经·港股",
       "fetchedToday": true,
       "subcategory": "hk",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "cnfin",
@@ -5398,7 +5398,7 @@
       "source": "新华财经",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "cnfin",
@@ -5411,7 +5411,7 @@
       "source": "新华财经",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "stcn",
@@ -5424,7 +5424,7 @@
       "source": "证券时报",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "stcn",
@@ -5437,7 +5437,7 @@
       "source": "证券时报",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "stcn",
@@ -5774,7 +5774,7 @@
       "source": "新浪财经·理财保险",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "sina-money",
@@ -5787,7 +5787,7 @@
       "source": "新浪财经·理财保险",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "21jingji-finance",
@@ -5943,7 +5943,7 @@
       "source": "东方财富",
       "fetchedToday": true,
       "subcategory": "a-share",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "eastmoney-stock",
@@ -6034,7 +6034,7 @@
       "source": "新浪财经·A股",
       "fetchedToday": true,
       "subcategory": "a-share",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "sina-a-stock",
@@ -6047,7 +6047,7 @@
       "source": "新浪财经·A股",
       "fetchedToday": true,
       "subcategory": "a-share",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "sina-a-stock",
@@ -6060,7 +6060,7 @@
       "source": "新浪财经·A股",
       "fetchedToday": true,
       "subcategory": "a-share",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "sina-a-stock",
@@ -6086,7 +6086,7 @@
       "source": "新浪财经·A股",
       "fetchedToday": true,
       "subcategory": "a-share",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "sina-a-stock",
@@ -6112,7 +6112,7 @@
       "source": "新浪财经·A股",
       "fetchedToday": true,
       "subcategory": "a-share",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "sina-a-stock",
@@ -6125,7 +6125,7 @@
       "source": "新浪财经·A股",
       "fetchedToday": true,
       "subcategory": "a-share",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "sina-a-stock",
@@ -6138,7 +6138,7 @@
       "source": "新浪财经·A股",
       "fetchedToday": true,
       "subcategory": "a-share",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "sina-a-stock",
@@ -6151,7 +6151,7 @@
       "source": "新浪财经·A股",
       "fetchedToday": true,
       "subcategory": "a-share",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "sina-a-stock",
@@ -6255,7 +6255,7 @@
       "source": "新浪财经·A股",
       "fetchedToday": true,
       "subcategory": "a-share",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "sina-a-stock",
@@ -6294,7 +6294,7 @@
       "source": "新浪财经·A股",
       "fetchedToday": true,
       "subcategory": "a-share",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "sina-a-stock",
@@ -6320,7 +6320,7 @@
       "source": "新浪财经·A股",
       "fetchedToday": true,
       "subcategory": "a-share",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "hkex-stock",
@@ -6450,7 +6450,7 @@
       "source": "新浪财经·港股",
       "fetchedToday": true,
       "subcategory": "hk",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "sina-hk-stock",
@@ -6463,7 +6463,7 @@
       "source": "新浪财经·港股",
       "fetchedToday": true,
       "subcategory": "hk",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "sina-hk-stock",
@@ -6476,7 +6476,7 @@
       "source": "新浪财经·港股",
       "fetchedToday": true,
       "subcategory": "hk",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "sina-hk-stock",
@@ -6489,7 +6489,7 @@
       "source": "新浪财经·港股",
       "fetchedToday": true,
       "subcategory": "hk",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "sina-hk-stock",
@@ -6541,7 +6541,7 @@
       "source": "新华财经",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "cnfin",
@@ -6567,7 +6567,7 @@
       "source": "新华财经",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "cnfin",
@@ -6593,7 +6593,7 @@
       "source": "证券时报",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "stcn",
@@ -6606,7 +6606,7 @@
       "source": "证券时报",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "stcn",
@@ -6645,7 +6645,7 @@
       "source": "证券时报",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "stcn",
@@ -6905,7 +6905,7 @@
       "source": "Investing.com News",
       "fetchedToday": true,
       "subcategory": "us",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "investing-news",
@@ -7022,7 +7022,7 @@
       "source": "东方财富",
       "fetchedToday": true,
       "subcategory": "a-share",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "eastmoney-stock",
@@ -7035,7 +7035,7 @@
       "source": "东方财富",
       "fetchedToday": true,
       "subcategory": "a-share",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "eastmoney-stock",
@@ -7048,7 +7048,7 @@
       "source": "东方财富",
       "fetchedToday": true,
       "subcategory": "a-share",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "eastmoney-stock",
@@ -7061,7 +7061,7 @@
       "source": "东方财富",
       "fetchedToday": true,
       "subcategory": "a-share",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "eastmoney-stock",
@@ -7100,7 +7100,7 @@
       "source": "新浪财经·A股",
       "fetchedToday": true,
       "subcategory": "a-share",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "sina-a-stock",
@@ -7113,7 +7113,7 @@
       "source": "新浪财经·A股",
       "fetchedToday": true,
       "subcategory": "a-share",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "sina-a-stock",
@@ -7152,7 +7152,7 @@
       "source": "新浪财经·A股",
       "fetchedToday": true,
       "subcategory": "a-share",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "sina-a-stock",
@@ -7165,7 +7165,7 @@
       "source": "新浪财经·A股",
       "fetchedToday": true,
       "subcategory": "a-share",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "sina-a-stock",
@@ -7204,7 +7204,7 @@
       "source": "新浪财经·港股",
       "fetchedToday": true,
       "subcategory": "hk",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "sina-hk-stock",
@@ -7308,7 +7308,7 @@
       "source": "新浪财经·港股",
       "fetchedToday": true,
       "subcategory": "hk",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "sina-hk-stock",
@@ -7321,7 +7321,7 @@
       "source": "新浪财经·港股",
       "fetchedToday": true,
       "subcategory": "hk",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "sina-hk-stock",
@@ -7334,7 +7334,7 @@
       "source": "新浪财经·港股",
       "fetchedToday": true,
       "subcategory": "hk",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "sina-hk-stock",
@@ -7347,7 +7347,7 @@
       "source": "新浪财经·港股",
       "fetchedToday": true,
       "subcategory": "hk",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "sina-hk-stock",
@@ -7360,7 +7360,7 @@
       "source": "新浪财经·港股",
       "fetchedToday": true,
       "subcategory": "hk",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "sina-hk-stock",
@@ -7373,7 +7373,7 @@
       "source": "新浪财经·港股",
       "fetchedToday": true,
       "subcategory": "hk",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "sina-hk-stock",
@@ -7425,7 +7425,7 @@
       "source": "新华财经",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "cnfin",
@@ -7477,7 +7477,7 @@
       "source": "证券时报",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "stcn",
@@ -7542,7 +7542,7 @@
       "source": "证券时报",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "dayoo-gz",
@@ -7685,7 +7685,7 @@
       "source": "新浪财经·A股",
       "fetchedToday": true,
       "subcategory": "a-share",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "investing-news",
@@ -7815,7 +7815,7 @@
       "source": "新浪财经·银行频道",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "eastmoney-stock",
@@ -7841,7 +7841,7 @@
       "source": "新浪财经·A股",
       "fetchedToday": true,
       "subcategory": "a-share",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "sina-a-stock",
@@ -7867,7 +7867,7 @@
       "source": "新浪财经·A股",
       "fetchedToday": true,
       "subcategory": "a-share",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "sina-a-stock",
@@ -7880,7 +7880,7 @@
       "source": "新浪财经·A股",
       "fetchedToday": true,
       "subcategory": "a-share",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "sina-a-stock",
@@ -7893,7 +7893,7 @@
       "source": "新浪财经·A股",
       "fetchedToday": true,
       "subcategory": "a-share",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "sina-a-stock",
@@ -7906,7 +7906,7 @@
       "source": "新浪财经·A股",
       "fetchedToday": true,
       "subcategory": "a-share",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "hkex-stock",
@@ -7919,7 +7919,7 @@
       "source": "港交所披露易",
       "fetchedToday": true,
       "subcategory": "hk",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "sina-hk-stock",
@@ -7932,7 +7932,7 @@
       "source": "新浪财经·港股",
       "fetchedToday": true,
       "subcategory": "hk",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "sina-hk-stock",
@@ -7958,7 +7958,7 @@
       "source": "新浪财经·港股",
       "fetchedToday": true,
       "subcategory": "hk",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "sina-hk-stock",
@@ -7971,7 +7971,7 @@
       "source": "新浪财经·港股",
       "fetchedToday": true,
       "subcategory": "hk",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "sina-hk-stock",
@@ -7984,7 +7984,7 @@
       "source": "新浪财经·港股",
       "fetchedToday": true,
       "subcategory": "hk",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "sina-hk-stock",
@@ -7997,7 +7997,7 @@
       "source": "新浪财经·港股",
       "fetchedToday": true,
       "subcategory": "hk",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "sina-hk-stock",
@@ -8010,7 +8010,7 @@
       "source": "新浪财经·港股",
       "fetchedToday": true,
       "subcategory": "hk",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "cnfin",
@@ -8049,7 +8049,7 @@
       "source": "新华财经",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "cnfin",
@@ -8075,7 +8075,7 @@
       "source": "新华财经",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "cnfin",
@@ -8114,7 +8114,7 @@
       "source": "证券时报",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "stcn",
@@ -8153,7 +8153,7 @@
       "source": "证券时报",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "stcn",
@@ -8335,7 +8335,7 @@
       "source": "新浪财经·理财保险",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "sina-money",
@@ -8348,7 +8348,7 @@
       "source": "新浪财经·理财保险",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "eastmoney-stock",
@@ -8374,7 +8374,7 @@
       "source": "新浪财经·A股",
       "fetchedToday": true,
       "subcategory": "a-share",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "sina-hk-stock",
@@ -8387,7 +8387,7 @@
       "source": "新浪财经·港股",
       "fetchedToday": true,
       "subcategory": "hk",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "sina-hk-stock",
@@ -8400,7 +8400,7 @@
       "source": "新浪财经·港股",
       "fetchedToday": true,
       "subcategory": "hk",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "sina-hk-stock",
@@ -8413,7 +8413,7 @@
       "source": "新浪财经·港股",
       "fetchedToday": true,
       "subcategory": "hk",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "cnfin",
@@ -8426,7 +8426,7 @@
       "source": "新华财经",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "cnfin",
@@ -8465,7 +8465,7 @@
       "source": "证券时报",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "stcn",
@@ -8647,7 +8647,7 @@
       "source": "新浪财经·A股",
       "fetchedToday": true,
       "subcategory": "a-share",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "sina-a-stock",
@@ -8660,7 +8660,7 @@
       "source": "新浪财经·A股",
       "fetchedToday": true,
       "subcategory": "a-share",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "sina-hk-stock",
@@ -8673,7 +8673,7 @@
       "source": "新浪财经·港股",
       "fetchedToday": true,
       "subcategory": "hk",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "sina-hk-stock",
@@ -8712,7 +8712,7 @@
       "source": "证券时报",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "stcn",
@@ -8725,7 +8725,7 @@
       "source": "证券时报",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "stcn",
@@ -8738,7 +8738,7 @@
       "source": "证券时报",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "hkex-stock",
@@ -8867,7 +8867,7 @@
       "source": "央视财经",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "cctv-finance",
@@ -8904,7 +8904,7 @@
       "source": "中国政府网·国务院政策",
       "fetchedToday": true,
       "subcategory": "cn-policy",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "sina-money",
@@ -8956,7 +8956,7 @@
       "source": "新浪财经·理财保险",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "sina-money",
@@ -8969,7 +8969,7 @@
       "source": "新浪财经·理财保险",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "sina-money",
@@ -9034,7 +9034,7 @@
       "source": "港交所IPO公告",
       "fetchedToday": true,
       "subcategory": "hkex",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "gz-gov",
@@ -9177,7 +9177,7 @@
       "source": "东方财富",
       "fetchedToday": true,
       "subcategory": "a-share",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "eastmoney-stock",
@@ -9229,7 +9229,7 @@
       "source": "新浪财经·A股",
       "fetchedToday": true,
       "subcategory": "a-share",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "sina-a-stock",
@@ -9242,7 +9242,7 @@
       "source": "新浪财经·A股",
       "fetchedToday": true,
       "subcategory": "a-share",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "sina-a-stock",
@@ -9307,7 +9307,7 @@
       "source": "新浪财经·港股",
       "fetchedToday": true,
       "subcategory": "hk",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "sina-hk-stock",
@@ -9476,7 +9476,7 @@
       "source": "国家金融监督管理总局",
       "fetchedToday": true,
       "subcategory": "cn-policy",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "cls",
@@ -9489,7 +9489,7 @@
       "source": "财联社",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "cls",
@@ -9541,7 +9541,7 @@
       "source": "财联社",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "cls",
@@ -9554,7 +9554,7 @@
       "source": "财联社",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "cls",
@@ -9593,7 +9593,7 @@
       "source": "财联社",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "cls",
@@ -9606,7 +9606,7 @@
       "source": "财联社",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "cls",
@@ -9619,7 +9619,7 @@
       "source": "财联社",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "cls",
@@ -9645,7 +9645,7 @@
       "source": "财联社",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "cls",
@@ -9658,7 +9658,7 @@
       "source": "财联社",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "cnfin",
@@ -9723,7 +9723,7 @@
       "source": "新华财经",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "cnfin",
@@ -9749,7 +9749,7 @@
       "source": "证券时报",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "stcn",
@@ -10110,7 +10110,7 @@
       "source": "新华财经",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "cnfin",
@@ -10122,7 +10122,7 @@
       "source": "新华财经",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "cnfin",
@@ -10134,7 +10134,7 @@
       "source": "新华财经",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "cnfin",
@@ -10146,7 +10146,7 @@
       "source": "新华财经",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "cnfin",
@@ -10158,7 +10158,7 @@
       "source": "新华财经",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "cnfin",
@@ -10170,7 +10170,7 @@
       "source": "新华财经",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "stcn",
@@ -10423,7 +10423,7 @@
       "source": "新浪财经·理财保险",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "sina-money",
@@ -10471,7 +10471,7 @@
       "source": "新浪财经·银行频道",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "sina-bank",
@@ -10543,7 +10543,7 @@
       "source": "新华财经",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "cnfin",
@@ -10567,7 +10567,7 @@
       "source": "新华财经",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "cnfin",
@@ -10591,7 +10591,7 @@
       "source": "新华财经",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "stcn",
@@ -10615,7 +10615,7 @@
       "source": "证券时报",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "stcn",
@@ -10627,7 +10627,7 @@
       "source": "证券时报",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "stcn",
@@ -10639,7 +10639,7 @@
       "source": "证券时报",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "stcn",
@@ -10663,7 +10663,7 @@
       "source": "证券时报",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "investing-news",
@@ -10747,7 +10747,7 @@
       "source": "新浪财经·A股",
       "fetchedToday": true,
       "subcategory": "a-share",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "sina-hk-stock",
@@ -10783,7 +10783,7 @@
       "source": "新华财经",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "cnfin",
@@ -10867,57 +10867,199 @@
       "source": "证券时报",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "21jingji-finance",
       "title": "货币市场日报：8月25日",
       "url": "https://m.21jingji.com/article/20260825/herald/b1c803b0968a660c7b2f570207784075.html",
       "excerpt": "【21财经·金融】货币市场日报：8月25日",
-      "category": "gz",
       "publishedAt": "2026-08-25T00:00:00.000Z",
+      "category": "gz",
       "source": "21世纪经济报道·金融",
-      "tier": "T2",
-      "filterBucket": "daily",
-      "filterDimensions": [],
       "fetchedToday": true,
-      "subcategory": "cn-finance"
+      "subcategory": "cn-finance",
+      "relevant": false
     },
     {
       "sourceId": "sina-money",
       "title": "摩根资管：美联储9月不应加息",
       "url": "https://finance.sina.com.cn/world/2026-08-25/doc-inippvuq2321474.shtml",
       "excerpt": "【财富管理】摩根资管：美联储9月不应加息",
-      "category": "gz",
       "publishedAt": "2026-08-25T00:00:00.000Z",
+      "category": "gz",
       "source": "新浪财经·理财保险",
-      "tier": "T2",
-      "filterBucket": "daily",
-      "filterDimensions": [
-        "macro_policy"
-      ],
       "fetchedToday": true,
-      "subcategory": "cn-finance"
+      "subcategory": "cn-finance",
+      "relevant": true
     },
     {
       "sourceId": "21jingji-finance",
       "title": "多次降价、分拆拍卖，中小银行股权为啥没人要",
       "url": "https://m.21jingji.com/article/20260825/herald/60458ff1dd7d24ea42223fed6d26f379.html",
       "excerpt": "【21财经·金融】多次降价、分拆拍卖，中小银行股权为啥没人要",
-      "category": "gz",
       "publishedAt": "2026-08-25T00:00:00.000Z",
+      "category": "gz",
       "source": "21世纪经济报道·金融",
+      "fetchedToday": true,
+      "subcategory": "cn-finance",
+      "relevant": true
+    },
+    {
+      "sourceId": "eastmoney-stock",
+      "title": "突然大跳水！美伊局势再度生变！国际油价下挫",
+      "url": "https://finance.eastmoney.com/a/202608253853296519.html",
+      "excerpt": "",
+      "publishedAt": "2026-08-25T00:00:00.000Z",
+      "category": "stocks",
+      "source": "东方财富",
+      "fetchedToday": true,
+      "subcategory": "a-share",
+      "relevant": false
+    },
+    {
+      "sourceId": "cnfin",
+      "title": "【新华解读】工业和信息化部就脑机接口标准体系征求意见 消费级脑机接口等赛道迎机遇",
+      "url": "https://www.cnfin.com/yw-lb/detail/20260825/4460319_1.html",
+      "excerpt": "",
+      "publishedAt": "2026-08-25T00:00:00.000Z",
+      "category": "finance",
+      "source": "新华财经",
+      "fetchedToday": true,
+      "subcategory": "cn-finance",
+      "relevant": true
+    },
+    {
+      "sourceId": "cnfin",
+      "title": "努力实现“十五五”良好开局——从计划执行报告看下半年经济工作重点",
+      "url": "https://www.cnfin.com/yw-lb/detail/20260825/4460311_1.html",
+      "excerpt": "",
+      "publishedAt": "2026-08-25T00:00:00.000Z",
+      "category": "finance",
+      "source": "新华财经",
+      "fetchedToday": true,
+      "subcategory": "cn-finance",
+      "relevant": true
+    },
+    {
+      "sourceId": "cnfin",
+      "title": "“长安新韵·大地华彩”西安户县农民画晋京展开幕",
+      "url": "https://www.cnfin.com/hg-lb/detail/20260825/4460321_1.html",
+      "excerpt": "",
+      "publishedAt": "2026-08-25T00:00:00.000Z",
+      "category": "finance",
+      "source": "新华财经",
+      "fetchedToday": true,
+      "subcategory": "cn-finance",
+      "relevant": false
+    },
+    {
+      "sourceId": "cnfin",
+      "title": "央企共筑“应用生态先发优势” 6G商业化主线渐明",
+      "url": "https://www.cnfin.com/hg-lb/detail/20260825/4460316_1.html",
+      "excerpt": "",
+      "publishedAt": "2026-08-25T00:00:00.000Z",
+      "category": "finance",
+      "source": "新华财经",
+      "fetchedToday": true,
+      "subcategory": "cn-finance",
+      "relevant": true
+    },
+    {
+      "sourceId": "cnfin",
+      "title": "交通运输部：推进交通基础设施更新和数智化改造",
+      "url": "https://www.cnfin.com/hg-lb/detail/20260825/4460314_1.html",
+      "excerpt": "",
+      "publishedAt": "2026-08-25T00:00:00.000Z",
+      "category": "finance",
+      "source": "新华财经",
+      "fetchedToday": true,
+      "subcategory": "cn-finance",
+      "relevant": false
+    },
+    {
+      "sourceId": "stcn",
+      "title": "中集车辆2026年上半年营收稳健增长 积极推进结构性改革",
+      "url": "https://www.stcn.com/article/detail/4120315.html",
+      "excerpt": "",
+      "publishedAt": "2026-08-25T00:00:00.000Z",
+      "category": "finance",
+      "source": "证券时报",
+      "fetchedToday": true,
+      "subcategory": "cn-finance",
+      "relevant": false
+    },
+    {
+      "sourceId": "stcn",
+      "title": "川润股份上半年营收创历史同期新高 算力液冷产品已批量供货",
+      "url": "https://www.stcn.com/article/detail/4120703.html",
+      "excerpt": "",
+      "publishedAt": "2026-08-25T00:00:00.000Z",
+      "category": "finance",
+      "source": "证券时报",
+      "fetchedToday": true,
+      "subcategory": "cn-finance",
+      "relevant": false
+    },
+    {
+      "sourceId": "stcn",
+      "title": "深市蓝筹新景象丨不止业绩大涨！有色蓝筹正从周期走向“周期+成长”",
+      "url": "https://www.stcn.com/article/detail/4120704.html",
+      "excerpt": "",
+      "publishedAt": "2026-08-25T00:00:00.000Z",
+      "category": "finance",
+      "source": "证券时报",
+      "fetchedToday": true,
+      "subcategory": "cn-finance",
+      "relevant": false
+    },
+    {
+      "sourceId": "investing-news",
+      "title": "Trump administration moves to impose more than $100,000 fee for H-1B worker visas",
+      "url": "https://www.investing.com/news/stock-market-news/trump-administration-moves-to-impose-more-than-100000-fee-for-h1b-worker-visas-4873633",
+      "excerpt": "",
+      "publishedAt": "2026-08-25T13:18:33.000Z",
+      "category": "stocks",
+      "subcategory": "us",
+      "source": "Investing.com News",
       "tier": "T2",
       "filterBucket": "daily",
       "filterDimensions": [],
-      "fetchedToday": true,
-      "subcategory": "cn-finance"
+      "fetchedToday": true
+    },
+    {
+      "sourceId": "investing-news",
+      "title": "Earnings call transcript: DICK’S Sporting Goods Q2 2026 results miss as shares sink",
+      "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-dicks-sporting-goods-q2-2026-results-miss-as-shares-sink-93CH-4875453",
+      "excerpt": "",
+      "publishedAt": "2026-08-25T13:17:19.000Z",
+      "category": "stocks",
+      "subcategory": "us",
+      "source": "Investing.com News",
+      "tier": "T2",
+      "filterBucket": "daily",
+      "filterDimensions": [],
+      "fetchedToday": true
+    },
+    {
+      "sourceId": "investing-news",
+      "title": "Canada to announce retaliatory tariffs on US goods today",
+      "url": "https://www.investing.com/news/economy-news/canada-to-announce-retaliatory-tariffs-on-us-goods-today-4875422",
+      "excerpt": "",
+      "publishedAt": "2026-08-25T13:04:11.000Z",
+      "category": "stocks",
+      "subcategory": "us",
+      "source": "Investing.com News",
+      "tier": "T2",
+      "filterBucket": "daily",
+      "filterDimensions": [],
+      "fetchedToday": true
     },
     {
       "sourceId": "eastmoney-stock",
       "source": "东方财富",
-      "title": "突然大跳水！美伊局势再度生变！国际油价下挫",
-      "url": "https://finance.eastmoney.com/a/202608253853296519.html",
+      "title": "美股三大指数集体上涨存储芯片板块普涨",
+      "url": "https://finance.eastmoney.com/a/202608253853312037.html",
       "excerpt": "",
       "publishedAt": "2026-08-25T00:00:00.000Z",
       "category": "stocks",
@@ -10929,85 +11071,10 @@
       "subcategory": "a-share"
     },
     {
-      "sourceId": "cnfin",
-      "source": "新华财经",
-      "title": "【新华解读】工业和信息化部就脑机接口标准体系征求意见 消费级脑机接口等赛道迎机遇",
-      "url": "https://www.cnfin.com/yw-lb/detail/20260825/4460319_1.html",
-      "excerpt": "",
-      "publishedAt": "2026-08-25T00:00:00.000Z",
-      "category": "finance",
-      "summary": "",
-      "tier": "T1.5",
-      "filterBucket": "daily",
-      "filterDimensions": [],
-      "fetchedToday": true,
-      "subcategory": "cn-finance"
-    },
-    {
-      "sourceId": "cnfin",
-      "source": "新华财经",
-      "title": "努力实现“十五五”良好开局——从计划执行报告看下半年经济工作重点",
-      "url": "https://www.cnfin.com/yw-lb/detail/20260825/4460311_1.html",
-      "excerpt": "",
-      "publishedAt": "2026-08-25T00:00:00.000Z",
-      "category": "finance",
-      "summary": "",
-      "tier": "T1.5",
-      "filterBucket": "daily",
-      "filterDimensions": [],
-      "fetchedToday": true,
-      "subcategory": "cn-finance"
-    },
-    {
-      "sourceId": "cnfin",
-      "source": "新华财经",
-      "title": "“长安新韵·大地华彩”西安户县农民画晋京展开幕",
-      "url": "https://www.cnfin.com/hg-lb/detail/20260825/4460321_1.html",
-      "excerpt": "",
-      "publishedAt": "2026-08-25T00:00:00.000Z",
-      "category": "finance",
-      "summary": "",
-      "tier": "T1.5",
-      "filterBucket": "daily",
-      "filterDimensions": [],
-      "fetchedToday": true,
-      "subcategory": "cn-finance"
-    },
-    {
-      "sourceId": "cnfin",
-      "source": "新华财经",
-      "title": "央企共筑“应用生态先发优势” 6G商业化主线渐明",
-      "url": "https://www.cnfin.com/hg-lb/detail/20260825/4460316_1.html",
-      "excerpt": "",
-      "publishedAt": "2026-08-25T00:00:00.000Z",
-      "category": "finance",
-      "summary": "",
-      "tier": "T1.5",
-      "filterBucket": "daily",
-      "filterDimensions": [],
-      "fetchedToday": true,
-      "subcategory": "cn-finance"
-    },
-    {
-      "sourceId": "cnfin",
-      "source": "新华财经",
-      "title": "交通运输部：推进交通基础设施更新和数智化改造",
-      "url": "https://www.cnfin.com/hg-lb/detail/20260825/4460314_1.html",
-      "excerpt": "",
-      "publishedAt": "2026-08-25T00:00:00.000Z",
-      "category": "finance",
-      "summary": "",
-      "tier": "T1.5",
-      "filterBucket": "daily",
-      "filterDimensions": [],
-      "fetchedToday": true,
-      "subcategory": "cn-finance"
-    },
-    {
       "sourceId": "stcn",
       "source": "证券时报",
-      "title": "中集车辆2026年上半年营收稳健增长 积极推进结构性改革",
-      "url": "https://www.stcn.com/article/detail/4120315.html",
+      "title": "期货资管深度洗牌：规模半年缩水近800亿，提高“含期量”成明牌",
+      "url": "https://www.stcn.com/article/detail/4120713.html",
       "excerpt": "",
       "publishedAt": "2026-08-25T00:00:00.000Z",
       "category": "finance",
@@ -11021,8 +11088,25 @@
     {
       "sourceId": "stcn",
       "source": "证券时报",
-      "title": "川润股份上半年营收创历史同期新高 算力液冷产品已批量供货",
-      "url": "https://www.stcn.com/article/detail/4120703.html",
+      "title": "公积金新政密集出圈！成都首创“首付15%+利息补贴”模式",
+      "url": "https://www.stcn.com/article/detail/4120714.html",
+      "excerpt": "",
+      "publishedAt": "2026-08-25T00:00:00.000Z",
+      "category": "finance",
+      "summary": "",
+      "tier": "T2",
+      "filterBucket": "daily",
+      "filterDimensions": [
+        "macro_policy"
+      ],
+      "fetchedToday": true,
+      "subcategory": "cn-finance"
+    },
+    {
+      "sourceId": "stcn",
+      "source": "证券时报",
+      "title": "深高速上半年净利9.19亿元 多个工程项目进展顺利",
+      "url": "https://www.stcn.com/article/detail/4120332.html",
       "excerpt": "",
       "publishedAt": "2026-08-25T00:00:00.000Z",
       "category": "finance",
@@ -11036,8 +11120,8 @@
     {
       "sourceId": "stcn",
       "source": "证券时报",
-      "title": "深市蓝筹新景象丨不止业绩大涨！有色蓝筹正从周期走向“周期+成长”",
-      "url": "https://www.stcn.com/article/detail/4120704.html",
+      "title": "福瑞达上半年化妆品收入增近两成 新品牌珂谧营收翻六倍",
+      "url": "https://www.stcn.com/article/detail/4120324.html",
       "excerpt": "",
       "publishedAt": "2026-08-25T00:00:00.000Z",
       "category": "finance",

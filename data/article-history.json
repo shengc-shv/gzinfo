@@ -11864,5 +11864,101 @@
     "firstSeenAt": "2026-08-25T13:32:56.165Z",
     "lastSeenAt": "2026-08-25T13:32:56.165Z",
     "ai_relevant": false
+  },
+  "https://www.investing.com/news/stock-market-news/trump-administration-moves-to-impose-more-than-100000-fee-for-h1b-worker-visas-4873633": {
+    "title": "Trump administration moves to impose more than $100,000 fee for H-1B worker visas",
+    "url": "https://www.investing.com/news/stock-market-news/trump-administration-moves-to-impose-more-than-100000-fee-for-h1b-worker-visas-4873633",
+    "sourceId": "investing-news",
+    "source": "Investing.com News",
+    "category": "stocks",
+    "subcategory": "us",
+    "excerpt": "",
+    "publishedAt": "2026-08-25T13:18:33.000Z",
+    "firstSeenAt": "2026-08-25T13:41:01.639Z",
+    "lastSeenAt": "2026-08-25T13:41:01.639Z"
+  },
+  "https://www.investing.com/news/transcripts/earnings-call-transcript-dicks-sporting-goods-q2-2026-results-miss-as-shares-sink-93CH-4875453": {
+    "title": "Earnings call transcript: DICK’S Sporting Goods Q2 2026 results miss as shares sink",
+    "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-dicks-sporting-goods-q2-2026-results-miss-as-shares-sink-93CH-4875453",
+    "sourceId": "investing-news",
+    "source": "Investing.com News",
+    "category": "stocks",
+    "subcategory": "us",
+    "excerpt": "",
+    "publishedAt": "2026-08-25T13:17:19.000Z",
+    "firstSeenAt": "2026-08-25T13:41:01.639Z",
+    "lastSeenAt": "2026-08-25T13:41:01.639Z"
+  },
+  "https://www.investing.com/news/economy-news/canada-to-announce-retaliatory-tariffs-on-us-goods-today-4875422": {
+    "title": "Canada to announce retaliatory tariffs on US goods today",
+    "url": "https://www.investing.com/news/economy-news/canada-to-announce-retaliatory-tariffs-on-us-goods-today-4875422",
+    "sourceId": "investing-news",
+    "source": "Investing.com News",
+    "category": "stocks",
+    "subcategory": "us",
+    "excerpt": "",
+    "publishedAt": "2026-08-25T13:04:11.000Z",
+    "firstSeenAt": "2026-08-25T13:41:01.639Z",
+    "lastSeenAt": "2026-08-25T13:41:01.639Z"
+  },
+  "https://finance.eastmoney.com/a/202608253853312037.html": {
+    "title": "美股三大指数集体上涨存储芯片板块普涨",
+    "url": "https://finance.eastmoney.com/a/202608253853312037.html",
+    "sourceId": "eastmoney-stock",
+    "source": "东方财富",
+    "category": "stocks",
+    "subcategory": "a-share",
+    "excerpt": "",
+    "publishedAt": "2026-08-25T00:00:00.000Z",
+    "firstSeenAt": "2026-08-25T13:41:01.639Z",
+    "lastSeenAt": "2026-08-25T13:41:01.639Z"
+  },
+  "https://www.stcn.com/article/detail/4120713.html": {
+    "title": "期货资管深度洗牌：规模半年缩水近800亿，提高“含期量”成明牌",
+    "url": "https://www.stcn.com/article/detail/4120713.html",
+    "sourceId": "stcn",
+    "source": "证券时报",
+    "category": "finance",
+    "subcategory": "cn-finance",
+    "excerpt": "",
+    "publishedAt": "2026-08-25T00:00:00.000Z",
+    "firstSeenAt": "2026-08-25T13:41:01.639Z",
+    "lastSeenAt": "2026-08-25T13:41:01.639Z"
+  },
+  "https://www.stcn.com/article/detail/4120714.html": {
+    "title": "公积金新政密集出圈！成都首创“首付15%+利息补贴”模式",
+    "url": "https://www.stcn.com/article/detail/4120714.html",
+    "sourceId": "stcn",
+    "source": "证券时报",
+    "category": "finance",
+    "subcategory": "cn-finance",
+    "excerpt": "",
+    "publishedAt": "2026-08-25T00:00:00.000Z",
+    "firstSeenAt": "2026-08-25T13:41:01.639Z",
+    "lastSeenAt": "2026-08-25T13:41:01.639Z"
+  },
+  "https://www.stcn.com/article/detail/4120332.html": {
+    "title": "深高速上半年净利9.19亿元 多个工程项目进展顺利",
+    "url": "https://www.stcn.com/article/detail/4120332.html",
+    "sourceId": "stcn",
+    "source": "证券时报",
+    "category": "finance",
+    "subcategory": "cn-finance",
+    "excerpt": "",
+    "publishedAt": "2026-08-25T00:00:00.000Z",
+    "firstSeenAt": "2026-08-25T13:41:01.639Z",
+    "lastSeenAt": "2026-08-25T13:41:01.639Z"
+  },
+  "https://www.stcn.com/article/detail/4120324.html": {
+    "title": "福瑞达上半年化妆品收入增近两成 新品牌珂谧营收翻六倍",
+    "url": "https://www.stcn.com/article/detail/4120324.html",
+    "sourceId": "stcn",
+    "source": "证券时报",
+    "category": "finance",
+    "subcategory": "cn-finance",
+    "excerpt": "",
+    "publishedAt": "2026-08-25T00:00:00.000Z",
+    "firstSeenAt": "2026-08-25T13:41:01.639Z",
+    "lastSeenAt": "2026-08-25T13:41:01.639Z"
   }
 }
