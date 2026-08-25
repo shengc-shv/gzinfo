@@ -279,6 +279,82 @@
   }
   .insight-topic { margin: 0 0 0.3rem; font-size: 0.85rem; color: var(--c-finance); font-weight: 700; }
   .insight-impact, .insight-action { margin: 0.2rem 0 0; font-size: 0.78rem; color: var(--fg-soft); line-height: 1.55; }
+
+  /* —— 昨日股市复盘三卡（参考区）：横向滑动卡片，与「今日必读」同款 —— */
+  .stock-recap { margin-top: 0.5rem; }
+  .stock-must { position: relative; margin-bottom: 0.3rem; }
+  .stock-note { margin: 0 0 0.45rem; font-size: 0.72rem; color: var(--muted); }
+  .stock-scroller {
+    list-style: none; margin: 0; padding: 0 0.75rem 0.5rem 0;
+    display: flex; flex-direction: row; gap: 0.5rem;
+    overflow-x: auto; -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: thin; scrollbar-color: var(--rule) transparent;
+  }
+  .stock-scroller::-webkit-scrollbar { height: 5px; }
+  .stock-scroller::-webkit-scrollbar-thumb { background: var(--rule); border-radius: 4px; }
+  .stock-card {
+    flex: 0 0 auto; width: 82vw; max-width: 320px;
+    border: 1px solid var(--rule); border-radius: 12px;
+    padding: 0.6rem 0.75rem; background: var(--bg-elevated);
+    box-shadow: var(--shadow-sm); border-top: 3px solid var(--c-trading);
+    display: flex; flex-direction: column; gap: 0.4rem; min-width: 0;
+  }
+  .stock-card--us { border-top-color: var(--c-pol); }
+  .stock-card--a { border-top-color: var(--c-gz); }
+  .stock-card--hk { border-top-color: var(--c-ipo); }
+  .stock-card-head {
+    font-size: 0.9rem; font-weight: 700; color: var(--fg);
+    letter-spacing: 0.04em; display: flex; align-items: center; gap: 0.35rem;
+  }
+  .stock-card-head::before {
+    content: ""; width: 0.5rem; height: 0.5rem; border-radius: 50%;
+    background: var(--c-trading); flex: none;
+  }
+  .stock-card--us .stock-card-head::before { background: var(--c-pol); }
+  .stock-card--a .stock-card-head::before { background: var(--c-gz); }
+  .stock-card--hk .stock-card-head::before { background: var(--c-ipo); }
+  .stock-overview { margin: 0; font-size: 0.8rem; color: var(--fg-soft); line-height: 1.6; }
+  .stock-sectors { margin-top: 0.1rem; }
+  .stock-sec-label {
+    display: block; font-size: 0.68rem; color: var(--muted); font-weight: 600;
+    margin-bottom: 0.25rem; letter-spacing: 0.03em;
+  }
+  .stock-sectors ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.28rem; }
+  .stock-sectors li {
+    font-size: 0.76rem; color: var(--fg-soft); line-height: 1.5;
+    padding-left: 0.7rem; position: relative;
+  }
+  .stock-sectors li::before {
+    content: ""; position: absolute; left: 0; top: 0.5em; width: 0.32rem; height: 0.32rem;
+    border-radius: 2px; background: color-mix(in srgb, var(--c-trading) 55%, var(--muted));
+  }
+  .stock-empty { margin: 0; font-size: 0.76rem; color: var(--muted); }
+  /* 卡脚小字备注：来源网站 + 数据时间 + 交叉验证网站（2026-08-25 替代来源链接按钮） */
+  .stock-meta {
+    margin: 0.2rem 0 0; font-size: 0.66rem; color: var(--muted);
+    line-height: 1.5; letter-spacing: 0.01em;
+    border-top: 1px dashed var(--rule); padding-top: 0.35rem;
+  }
+  /* 右侧渐隐遮罩：暗示右侧还有更多卡片（移动端横滑时可见） */
+  .stock-must::after {
+    content: ""; position: absolute; top: 1.7rem; right: 0; bottom: 0.5rem;
+    width: 3.25rem; pointer-events: none; z-index: 3;
+    background: linear-gradient(to left, color-mix(in srgb, var(--accent-cmb) 16%, var(--bg)) 0%, color-mix(in srgb, var(--accent-cmb) 4%, transparent) 55%, transparent 100%);
+  }
+  .stock-hint-inline {
+    display: inline-block; margin-left: 0.45rem; vertical-align: middle;
+    font-size: 0.68rem; font-weight: 500; color: var(--accent-cmb);
+    white-space: nowrap;
+  }
+  .stock-hint-inline .hint-arrow { display: inline-block; animation: nudge 1.1s ease-in-out infinite; }
+  @media (min-width: 720px) {
+    /* 桌面转网格：自适应列数（最多 3 列），无横向滑动，隐藏遮罩与提示 */
+    .stock-scroller { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); overflow: visible; padding-bottom: 0; padding-right: 0; scroll-snap-type: none; }
+    .stock-card { width: auto; max-width: none; }
+    .stock-must::after { display: none; }
+    .stock-hint-inline { display: none; }
+  }
   /* 商机洞察来源标记 ①/②/③：标题后内联，移动端点击区域加大（≥26px），便于手机点开溯源 */
   .insight-srcs { display: inline-flex; gap: 0.22rem; margin-left: 0.35rem; vertical-align: middle; }
   .insight-src {
@@ -1006,7 +1082,7 @@
 <body>
 <main>
   <div class="player-card">
-    <div class="player-title"><span class="ic">🎧</span> 今日语音简报 <span class="player-dur">约 1 分 43 秒</span><span class="player-badge player-badge-tencent">腾讯合成</span></div>
+    <div class="player-title"><span class="ic">🎧</span> 今日语音简报 <span class="player-dur">约 2 分 20 秒</span><span class="player-badge player-badge-tencent">腾讯合成</span></div>
     <audio controls preload="none" src="audio/briefing-2026-08-25.mp3"></audio>
   </div>
   <!-- 报头：今日定调 + 数据截至 -->
@@ -1014,7 +1090,7 @@
     <div class="eyebrow">广州地区 · 零售业务每日资信（个人整理，非本行立场）</div>
     <h1>8月25日 星期二</h1>
     <p class="hero-line">今日定调：六大行贷款贴息细则火速落地，消费贷政策扩围进入执行期，分行须立即优化本地流程抢抓客群。</p>
-    <p class="meta-line">数据截至 09:46 · 去重后资讯 103 条 · 商机 4 条 · <a class="archive" href="../archive.html">← 历史归档</a></p>
+    <p class="meta-line">数据截至 12:52 · 去重后资讯 103 条 · 商机 4 条 · <a class="archive" href="../archive.html">← 历史归档</a></p>
   </header>
 
   <section class="exec-summary">
@@ -1044,6 +1120,29 @@
         <p><b>影响：</b>沙面活化与汽车主题公园新增本地消费场景，可带动信用卡、消费贷和车主权益业务，服务本地客群经营。</p>
         <p><b>建议：</b>本月内联合沙面商户与汽车主题公园策划刷卡优惠，将文旅场景嵌入消费贷和信用卡获客活动。</p>
       </article></div></div>
+  </section>
+
+  <section class="stock-recap">
+    <div class="stock-must">
+      <h3 class="exec-col-title">📊 股市解读<span class="stock-hint-inline" aria-hidden="true">← 左右滑动查看 →</span></h3>
+      <p class="stock-note">昨日市场复盘 · 涨跌概况与关键板块（AI 生成）</p>
+      <ul class="stock-scroller"><li class="stock-card stock-card--a">
+        <header class="stock-card-head">A股</header>
+        <p class="stock-overview">A股三大指数集体收跌，贵金属与煤炭板块逆市走强；人形机器人、光模块等前期热门题材高位回调，宇树科技跌至全球人形机器人市值榜第二，光模块三巨头集体重挫，市场避险情绪升温。</p>
+        <div class="stock-sectors"><span class="stock-sec-label">关键板块</span><ul><li>贵金属：金价上行带动板块逆市走强</li><li>煤炭：供给偏紧、板块逆市走强</li><li>人形机器人：宇树科技高位回调，市值被反超</li><li>光模块：三巨头集体重挫，机构称 9 月迎决胜窗口</li><li>券商：中信证券半年报多项指标被国泰海通反超</li></ul></div>
+        <p class="stock-meta">来源：东方财富 · 2026-08-24 · 交叉验证：新浪财经·A股</p>
+      </li><li class="stock-card stock-card--hk">
+        <header class="stock-card-head">港股</header>
+        <p class="stock-overview">港股处于健康调整期：恒指季检在即，高盛预计被动资金净流入最多的六只股份包括携程集团等科网股；券商密集上调瑞声科技、康龙化成、贝壳目标价；安本与东方汇理均认为美债息高企影响可控、资金轮动利好高息股。</p>
+        <div class="stock-sectors"><span class="stock-sec-label">关键板块</span><ul><li>科网：恒指季检料带动被动资金流入携程集团等</li><li>消费电子：里昂升瑞声科技目标价至 54.4 港元</li><li>医药CXO：高盛升康龙化成目标价，挪威主权基金减持凯莱英</li><li>啤酒消费：华润啤酒白酒业务拖累，遭高盛下调目标价</li></ul></div>
+        <p class="stock-meta">来源：新浪财经·港股 · 2026-08-24 · 交叉验证：港交所披露易</p>
+      </li><li class="stock-card stock-card--us">
+        <header class="stock-card-head">美股</header>
+        <p class="stock-overview">美股市场消息面偏谨慎：美方对伊朗扩大制裁并称不豁免中国，地缘不确定性升温，油价企稳；亚洲市场因科技股担忧走低，科技情绪受压。个股财报分化，防务股 EOS 业绩大增、股价涨超 12%，殡葬服务商 Propel 业绩符合预期但股价回落。</p>
+        <div class="stock-sectors"><span class="stock-sec-label">关键板块</span><ul><li>防务军工：EOS 反无人机需求大增，半年利润创新高、股价大涨</li><li>能源石油：美伊制裁升级推升地缘溢价，油价企稳偏强</li><li>科技：亚洲科技股受情绪拖累走低，Tuya 营收超预期但板块整体承压</li><li>消费服务：Propel 殡葬业务量增但利润率下滑，股价下跌</li></ul></div>
+        <p class="stock-meta">来源：Investing.com News · 2026-08-25 · 交叉验证：CNBC Top Stories</p>
+      </li></ul>
+    </div>
   </section>
 
   <!-- 板块导航：单层 tab，移动端横滑不折行 -->
