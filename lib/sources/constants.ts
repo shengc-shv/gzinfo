@@ -25,6 +25,8 @@ export const CATEGORY_ORDER: Category[] = [
   "gd-ipo",
   "ipo",
   "gz",
+  // 昨日股市（2026-08-25 新增）：A股/美股/港股信息，置于「广州本地」之后
+  "stocks",
 ];
 
 /** 把爬虫产物的 sourceId 改写为 gz- 前缀（仅广州辖区条目）。

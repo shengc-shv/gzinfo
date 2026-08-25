@@ -97,7 +97,7 @@ function matchTracker(
  * 仅扫描商机追踪器；命中商机进商机池，未命中直接放行。
  * finance / gz（银行零售业务线）走完整漏斗。
  */
-const REFERENCE_CATEGORIES = new Set(["tech", "ipo", "gd-ipo", "politics"]);
+const REFERENCE_CATEGORIES = new Set(["tech", "ipo", "gd-ipo", "politics", "stocks"]);
 
 /** 商机追踪（多值：命中即全部收录，按 S>A>B 排序；一条信息可进多个商机池）。 */
 function scanOpportunities(

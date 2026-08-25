@@ -1,4 +1,4 @@
-export type Category = "tech" | "finance" | "politics" | "gd-ipo" | "ipo" | "gz";
+export type Category = "tech" | "finance" | "politics" | "gd-ipo" | "ipo" | "gz" | "stocks";
 export type SourceType = "rss" | "api" | "scrape";
 import type { SourceTier } from "./tiers";
 

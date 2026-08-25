@@ -318,11 +318,15 @@ async function main() {
   // —— 归一化（边界②）：采集产物汇合 + URL 去重 + region 分流（gd-→gz- 前缀改写）——
   // M3-A：爬虫已 TS 化并由本进程内 fetchCrawledArticles() 直接调用（不再 shell 出去写
   // crawled-articles.json / crawled-gz.json 中间文件）；逻辑集中在 lib/ingest/merge.ts（纯函数、可单测）。
-  let crawled: { ipo: CrawledArticle[]; gz: CrawledArticle[] } = { ipo: [], gz: [] };
+  let crawled: { ipo: CrawledArticle[]; gz: CrawledArticle[]; stocks: CrawledArticle[] } = {
+    ipo: [],
+    gz: [],
+    stocks: [],
+  };
   try {
     crawled = await fetchCrawledArticles();
     console.log(
-      `[daily] ✅ 爬虫抓取: IPO/新股 ${crawled.ipo.length} 条 / 广州商机 ${crawled.gz.length} 条`,
+      `[daily] ✅ 爬虫抓取: IPO/新股 ${crawled.ipo.length} 条 / 广州商机 ${crawled.gz.length} 条 / 昨日股市 ${crawled.stocks.length} 条`,
     );
   } catch (err) {
     const msg = err instanceof Error ? err.message : String(err);
@@ -351,6 +355,18 @@ async function main() {
     );
     articles = merged;
     console.log(`[daily] ✅ 加载广州商机数据 ${added} 条（跳过 ${skipped} 条重复）`);
+  }
+
+  // 昨日股市（2026-08-25 新增）：A股（东方财富爬虫）/ 港股（披露易公告）——
+  // category 固定 stocks（不依赖 SOURCE_ROUTE），subcategory=a-share|hk 由爬虫标注；
+  // 美股（investing-news RSS）已随 fetchAll 进入 articles（category=stocks/us）。
+  if (crawled.stocks.length) {
+    const { merged, added, skipped } = dedupeByUrl(
+      articles,
+      crawled.stocks.map((it) => toMergeArticle(it, "gz", { gzCategory: "stocks" })),
+    );
+    articles = merged;
+    console.log(`[daily] ✅ 加载昨日股市数据 ${added} 条（跳过 ${skipped} 条重复）`);
   }
 
   // —— 本地手动采集（data/local-acquired.json，2026-08-20 方案）——

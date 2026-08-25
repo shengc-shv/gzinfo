@@ -346,8 +346,8 @@
     "name": "Investing.com News",
     "type": "rss",
     "url": "https://www.investing.com/rss/news.rss",
-    "category": "finance",
-    "subcategory": "news",
+    "category": "stocks",
+    "subcategory": "us",
     "keywords": [
       "China",
       "Chinese",
@@ -370,13 +370,13 @@
       "trade",
       "tariff"
     ],
-    "enabled": false,
+    "enabled": true,
     "locales": [
       "zh",
       "en"
     ],
-    "disabledReason": "结构失衡清理(2026-08-21)：7天存量仅1条且为军事新闻（未打标），有效产出≈0；海外财经保留 Guardian/Economist/Yahoo/Fed 即可（原恢复原因：#45 CI 实测可拉到10条，但产出于分行无价值）",
-    "notes": "CI 沙箱实测可获取（非 403 拦截）"
+    "notes": "昨日股市·美股信息源（2026-08-25 启用）：CI 沙箱实测可获取（本地 403 因 Cloudflare，CI IP 可达）。RSS 综合市场新闻（investing.com/rss/news.rss），subcategory=us 归「美股」分组；PER_SOURCE_FETCH_CAP 每源限 10 条。",
+    "lang": "en"
   },
   {
     "id": "nbd",
@@ -951,5 +951,37 @@
       "compliance"
     ],
     "notes": "用户指定(2026-08-20)：q-fin/cs.AI/cs.LG 三分类，按关键词过滤只留金融科技相关"
+  },
+  {
+    "id": "eastmoney-stock",
+    "role": "crawled-input",
+    "tier": "T2",
+    "name": "东方财富·A股股市新闻",
+    "type": "scrape",
+    "url": "https://stock.eastmoney.com/a/cgsxw.html",
+    "category": "stocks",
+    "subcategory": "a-share",
+    "enabled": false,
+    "lang": "zh",
+    "locales": [
+      "zh"
+    ],
+    "notes": "昨日股市·A股信息源（2026-08-25 新增）：lib/sources/crawlers/sources/eastmoney-stock.ts 抓 stock.eastmoney.com/a/cgsxw.html 列表页，URL /a/YYYYMMDDxxxx.html 推导日期；config 仅供 tier/knownSourceIds 识别，不直接 scrape。"
+  },
+  {
+    "id": "hkex-stock",
+    "role": "crawled-input",
+    "tier": "T1.5",
+    "name": "港交所披露易·最新公告",
+    "type": "api",
+    "url": "https://www1.hkexnews.hk/ncms/json/eds/lcisehk7relsde_1.json",
+    "category": "stocks",
+    "subcategory": "hk",
+    "enabled": false,
+    "lang": "zh",
+    "locales": [
+      "zh"
+    ],
+    "notes": "昨日股市·港股信息源（2026-08-25 新增）：lib/sources/crawlers/sources/hkex-stock.ts 抓披露易最新公告 JSON（过滤 IPO 关键词、2天窗口、上限40条）；config 仅供 tier/knownSourceIds 识别。"
   }
 ]

@@ -38,6 +38,7 @@ export const CATEGORY_LABELS: Record<Category, string> = {
   'gd-ipo': '广东地区IPO',
   ipo: STR.catIpo,
   gz: '广州商机',
+  stocks: '昨日股市',
 };
 
 export const CATEGORY_DIGEST_LABELS: Record<Category, string> = {
@@ -47,6 +48,7 @@ export const CATEGORY_DIGEST_LABELS: Record<Category, string> = {
   'gd-ipo': STR.catGdIpo,
   ipo: STR.catIpo,
   gz: '广州商机',
+  stocks: '昨日股市',
 };
 
 /**

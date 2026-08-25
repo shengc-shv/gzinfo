@@ -374,6 +374,7 @@ export function groupRaw(
     'gd-ipo': new Map(),
     ipo: new Map(),
     gz: new Map(),
+    stocks: new Map(),
   };
 
   // 广东地区IPO：文章级三道闸分类后，按 classifier 决定的子标签归桶
@@ -614,6 +615,7 @@ export function groupRaw(
   'gd-ipo': [],
   ipo: [],
   gz: [],
+  stocks: [],
   };
   
   for (const cat of CATEGORY_ORDER) {

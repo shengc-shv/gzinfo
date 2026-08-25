@@ -25,6 +25,9 @@ import { GuanchaCrawler } from "./sources/guancha-web";
 import { DayooGzCrawler } from "./sources/dayoo-gz";
 import { SouthcnEconomyCrawler } from "./sources/southcn-economy";
 import { CnrGdCrawler } from "./sources/cnr-gd";
+// 2026-08-25 昨日股市信息源（A股/港股新闻采集）
+import { EastMoneyStockCrawler } from "./sources/eastmoney-stock";
+import { HKEXStockCrawler } from "./sources/hkex-stock";
 // 2026-08-22：chinanews-gd（中新网广东）命中率 0% 已砍掉，Crawler 文件保留便于未来恢复。
 // 2026-08-20 用户决定：取消南沙信息源（只看广州市政府 gz-gov），GzNanshaCrawler 停用，
 // 文件保留便于未来恢复。
@@ -36,6 +39,7 @@ import { CnrGdCrawler } from "./sources/cnr-gd";
 export interface CrawledBundle {
   ipo: CrawledArticle[];
   gz: CrawledArticle[];
+  stocks: CrawledArticle[];
 }
 
 /** 按 URL 去重（保留首次出现） */
@@ -100,5 +104,22 @@ export async function fetchCrawledArticles(): Promise<CrawledBundle> {
     }
   }
 
-  return { ipo: dedupeByUrl(ipo), gz: dedupeByUrl(gz) };
+  // —— 昨日股市信息源（2026-08-25 新增）：A股（东方财富）+ 港股（披露易公告）——
+  // 美股由 RSS 源 investing-news 走 fetchAll 抓取（CI 可达），不在此列。
+  const stocksCrawlers: BaseCrawler[] = [
+    new EastMoneyStockCrawler(),
+    new HKEXStockCrawler(),
+  ];
+
+  const stocks: CrawledArticle[] = [];
+  for (const crawler of stocksCrawlers) {
+    try {
+      await crawler.run();
+      stocks.push(...(crawler.results as CrawledArticle[]));
+    } catch (err) {
+      console.error(`[${crawler.name}] 异常:`, (err as Error).message);
+    }
+  }
+
+  return { ipo: dedupeByUrl(ipo), gz: dedupeByUrl(gz), stocks: dedupeByUrl(stocks) };
 }

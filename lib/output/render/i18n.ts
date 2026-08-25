@@ -151,6 +151,8 @@ const SUBCATEGORY_ORDER: Partial<Record<Category, string[]>> = {
   // 本地全国分层，面板内仅按「官方政府 / 媒体智库」两类 tab 展现）
   gz: ["gz-all"],
   politics: ["world"],
+  // 昨日股市（2026-08-25 新增）：A股 / 美股 / 港股 三个市场分组
+  stocks: ["a-share", "us", "hk"],
 };
 
 const SUBCATEGORY_LABELS: Record<string, string> = {
@@ -177,6 +179,10 @@ const SUBCATEGORY_LABELS: Record<string, string> = {
   bse: "北交所",
   hkex: "港交所",
   "ipo-tutoring": "IPO辅导",
+  // 昨日股市三个市场分组（2026-08-25 新增）
+  "a-share": "A股",
+  us: "美股",
+  hk: "港股",
   overseas: "境外",
   // 广东地区IPO 按「上市进度」分栏（任务二：看已上市 / 准备IPO 两类，找股份行广州分行商机）
   "stage-listed": "已上市·新股",
