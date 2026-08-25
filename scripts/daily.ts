@@ -62,6 +62,7 @@ import {
   selectStockRecap,
   type StockItem,
 } from "../lib/ai/stock-recap";
+import { fetchMarketQuotes, prevTradingDay } from "../lib/sources/quote-api";
 import { assembleAudioScript, formatDuration, type AudioMeta } from "../lib/audio/audio";
 import { synthesizeAudio } from "../lib/audio/tts";
 import { buildTwoDayExecPool } from "../lib/ai/exec-pool";
@@ -709,12 +710,15 @@ async function main() {
       .filter((a) => a.subcategory === "hk")
       .map((a) => toItem(a));
     const persistedRecap = loadStockRecap(date);
+    // 行情指数（新浪行情 API）：取「上一交易日」收盘精确点位 + 涨跌幅；
+    // 失败优雅降级（quotes=null → 三卡缺指数块，不阻断整页）。SKIP_AI 复用 store 时已由预写带入。
+    const quotes = SKIP_AI ? null : await fetchMarketQuotes(prevTradingDay(date));
     try {
       const recap = await selectStockRecap({
         skipAi: SKIP_AI,
         persisted: persistedRecap,
         generate: () =>
-          generateStockRecap({ date, us: usItems, aShare: aShareItems, hk: hkItems }),
+          generateStockRecap({ date, us: usItems, aShare: aShareItems, hk: hkItems }, quotes),
       });
       if (recap) {
         mergedReport.stock_recap = recap;

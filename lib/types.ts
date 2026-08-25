@@ -96,6 +96,8 @@ export interface MarketCard {
   sectors: string[];
   /** 口播稿（纯口语）：涨跌概况+关键板块浓缩，≤120 字，可直接朗读。 */
   spoken?: string;
+  /** 行情指数（新浪行情 API，非 LLM）：收盘点位 + 涨跌幅（带符号）。 */
+  indices?: { name: string; value: string; changePct?: string }[];
   /** 卡脚小字备注（2026-08-25 用户拍板，替代来源链接按钮）：信息来源网站 + 数据时间 + 交叉验证网站。 */
   meta?: {
     /** 信息来源网站（该市场主源名，取自输入条目 source，非 LLM 生成） */
@@ -112,6 +114,9 @@ export interface StockRecap {
   us: MarketCard;
   aShare: MarketCard;
   hk: MarketCard;
+  /** 行情数据来源与取值日（新浪行情 / 上一交易日），卡脚备注用，随 store 持久化、SKIP_AI 复用。 */
+  quoteChannel?: string;
+  quoteDate?: string;
 }
 
 export interface DailyReport {

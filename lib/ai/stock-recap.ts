@@ -3,6 +3,7 @@ import { extractJson } from "./json-util";
 import fs from "node:fs";
 import path from "node:path";
 import type { MarketCard, StockRecap } from "../types";
+import type { QuoteResult } from "../sources/quote-api";
 
 /**
  * 「股市解读」AI 层（2026-08-25 用户确认实施）
@@ -96,7 +97,10 @@ function normalizeCard(parsed: unknown): MarketCard {
   return { overview, sectors, spoken };
 }
 
-export async function generateStockRecap(input: StockRecapInput): Promise<StockRecap | null> {
+export async function generateStockRecap(
+  input: StockRecapInput,
+  quotes?: QuoteResult | null,
+): Promise<StockRecap | null> {
   const payload = {
     date: input.date,
     us: toPayloadItems(input.us),
@@ -133,6 +137,14 @@ export async function generateStockRecap(input: StockRecapInput): Promise<StockR
     recap.us.meta = buildMeta(input.us);
     recap.aShare.meta = buildMeta(input.aShare);
     recap.hk.meta = buildMeta(input.hk);
+    // 行情指数（新浪行情 API，非 LLM）：挂到三卡 + 顶层来源/取值日，随 store 持久化、SKIP_AI 复用
+    if (quotes) {
+      recap.aShare.indices = quotes.quotes.aShare;
+      recap.hk.indices = quotes.quotes.hk;
+      recap.us.indices = quotes.quotes.us;
+      recap.quoteChannel = quotes.channel;
+      recap.quoteDate = quotes.date;
+    }
     // 三卡全空（极少：三市场均无输入）→ 视为生成失败，页面不渲染该区
     const empty =
       !recap.us.overview && !recap.us.spoken && recap.us.sectors.length === 0 &&

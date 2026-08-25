@@ -1,6 +1,7 @@
 import type {
   ArticleInput,
   DailyReport,
+  MarketCard,
   ReportInsight,
   ReportItem,
   ReportMustRead,
@@ -1010,6 +1011,29 @@ function renderReportExec(report: DailyReport): string {
  * 参考区，置于执行摘要之后、板块导航之前；stock_recap 缺失或三卡全空则不渲染。
  * 内容纯市场事实概述，无零售/对公引申（用户 2026-08-25 拍板，且转口播友好）。
  */
+function renderStockIndexBlock(card: MarketCard, quoteChannel?: string, quoteDate?: string): string {
+  if (!card.indices || !card.indices.length) return "";
+  const items = card.indices
+    .map((i) => {
+      const cls = i.changePct
+        ? i.changePct.trim().startsWith("-")
+          ? "down"
+          : "up"
+        : "";
+      const pct = i.changePct
+        ? ` <em class="stock-idx-pct ${cls}">${escapeHtml(i.changePct)}</em>`
+        : "";
+      return `<span class="stock-idx">${escapeHtml(i.name)} <b>${escapeHtml(i.value)}</b>${pct}</span>`;
+    })
+    .join("");
+  // 行情来源备注：精准发布时间（取值日=上一交易日收盘）+ 渠道（新浪行情）
+  const src =
+    quoteChannel && quoteDate
+      ? `<span class="stock-idx-src">${escapeHtml(quoteChannel)} · 取值于 ${escapeHtml(quoteDate)} 收盘</span>`
+      : "";
+  return `<div class="stock-indices"><span class="stock-idx-cap">收盘点位</span><div class="stock-idx-list">${items}</div>${src}</div>`;
+}
+
 function renderStockRecap(report: DailyReport): string {
   const recap = report.stock_recap;
   if (!recap) return "";
@@ -1020,20 +1044,22 @@ function renderStockRecap(report: DailyReport): string {
   ];
   const cardHtml = cards
     .map(({ label, cls, card }) => {
-      const empty = !card.overview && !card.spoken && card.sectors.length === 0;
-      // 卡脚小字备注：来源网站 + 数据时间 + 交叉验证网站（2026-08-25 用户拍板替代来源链接按钮）
+      const empty = !card.overview && !card.spoken && card.sectors.length === 0 && !card.indices?.length;
+      // 卡脚小字备注：渠道（来源网站）+ 发布时间（数据日期）+ 交叉验证网站（2026-08-25 用户拍板替代来源链接按钮）
       const meta =
         card.meta && (card.meta.source || card.meta.date || card.meta.crossCheck)
           ? `<p class="stock-meta">${[
-              card.meta.source ? `来源：${escapeHtml(card.meta.source)}` : "",
-              card.meta.date ? escapeHtml(card.meta.date) : "",
+              card.meta.source ? `渠道：${escapeHtml(card.meta.source)}` : "",
+              card.meta.date ? `发布时间：${escapeHtml(card.meta.date)}` : "",
+              card.meta.crossCheck ? "" : "",
               card.meta.crossCheck ? `交叉验证：${escapeHtml(card.meta.crossCheck)}` : "",
             ]
               .filter(Boolean)
               .join(" · ")}</p>`
           : "";
+      const indices = renderStockIndexBlock(card, recap.quoteChannel, recap.quoteDate);
       if (empty) {
-        return `<li class="stock-card stock-card--${cls}"><header class="stock-card-head">${label}</header><p class="stock-empty">暂无数据</p>${meta}</li>`;
+        return `<li class="stock-card stock-card--${cls}"><header class="stock-card-head">${label}</header><p class="stock-empty">暂无数据</p>${indices}${meta}</li>`;
       }
       const overview = card.overview || card.spoken || "";
       const sectors = card.sectors.length
@@ -1043,6 +1069,7 @@ function renderStockRecap(report: DailyReport): string {
         : "";
       return `<li class="stock-card stock-card--${cls}">
         <header class="stock-card-head">${label}</header>
+        ${indices}
         ${overview ? `<p class="stock-overview">${escapeHtml(overview)}</p>` : ""}
         ${sectors}
         ${meta}

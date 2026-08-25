@@ -325,6 +325,28 @@ export const THEME_CSS = `
     border-radius: 2px; background: color-mix(in srgb, var(--c-trading) 55%, var(--muted));
   }
   .stock-empty { margin: 0; font-size: 0.76rem; color: var(--muted); }
+  /* 行情指数块（新浪行情 API，2026-08-25 用户拍板补指数 + 精准发布时间/渠道） */
+  .stock-indices {
+    margin: 0; padding: 0.4rem 0.5rem; background: color-mix(in srgb, var(--c-trading) 8%, var(--bg));
+    border-radius: 8px; border: 1px solid var(--rule);
+  }
+  .stock-idx-cap {
+    display: block; font-size: 0.64rem; color: var(--muted); font-weight: 600;
+    letter-spacing: 0.04em; margin-bottom: 0.25rem;
+  }
+  .stock-idx-list { display: flex; flex-wrap: wrap; gap: 0.35rem 0.7rem; }
+  .stock-idx {
+    font-size: 0.74rem; color: var(--fg-soft); white-space: nowrap;
+  }
+  .stock-idx b { color: var(--fg); font-weight: 700; font-variant-numeric: tabular-nums; margin-left: 0.1rem; }
+  /* 涨红跌绿（中国股市惯例） */
+  .stock-idx-pct { font-style: normal; font-weight: 700; font-variant-numeric: tabular-nums; margin-left: 0.15rem; }
+  .stock-idx-pct.up { color: #e23b3b; }
+  .stock-idx-pct.down { color: #1a9e5a; }
+  .stock-idx-src {
+    display: block; margin-top: 0.3rem; font-size: 0.62rem; color: var(--muted);
+    letter-spacing: 0.01em;
+  }
   /* 卡脚小字备注：来源网站 + 数据时间 + 交叉验证网站（2026-08-25 替代来源链接按钮） */
   .stock-meta {
     margin: 0.2rem 0 0; font-size: 0.66rem; color: var(--muted);
