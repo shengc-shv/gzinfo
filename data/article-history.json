@@ -12422,7 +12422,7 @@
     "lastSeenAt": "2026-08-25T15:06:29.775Z"
   },
   "https://finance.eastmoney.com/a/202608253853407744.html": {
-    "title": "加拿大将美国钢铁产品的关税从25%提高到50%",
+    "title": "加拿大宣布自9月8日起对美国商品加征报复性关税",
     "url": "https://finance.eastmoney.com/a/202608253853407744.html",
     "sourceId": "eastmoney-stock",
     "source": "东方财富",
@@ -12431,6 +12431,30 @@
     "excerpt": "",
     "publishedAt": "2026-08-25T00:00:00.000Z",
     "firstSeenAt": "2026-08-25T15:06:29.775Z",
-    "lastSeenAt": "2026-08-25T15:06:29.775Z"
+    "lastSeenAt": "2026-08-25T15:11:49.918Z"
+  },
+  "https://www.investing.com/news/stock-market-news/ati-inc-options-activity-put-volume-surges-to-4102-contracts-dwarfing-calls-93CH-4875652": {
+    "title": "ATI Inc options activity: put volume surges to 4,102 contracts, dwarfing calls",
+    "url": "https://www.investing.com/news/stock-market-news/ati-inc-options-activity-put-volume-surges-to-4102-contracts-dwarfing-calls-93CH-4875652",
+    "sourceId": "investing-news",
+    "source": "Investing.com News",
+    "category": "stocks",
+    "subcategory": "us",
+    "excerpt": "",
+    "publishedAt": "2026-08-25T14:53:13.000Z",
+    "firstSeenAt": "2026-08-25T15:11:49.918Z",
+    "lastSeenAt": "2026-08-25T15:11:49.918Z"
+  },
+  "https://www.stcn.com/article/detail/4120728.html": {
+    "title": "联合化学：上半年营收2.62亿元 半导体板块部分产品迈入验证期",
+    "url": "https://www.stcn.com/article/detail/4120728.html",
+    "sourceId": "stcn",
+    "source": "证券时报",
+    "category": "finance",
+    "subcategory": "cn-finance",
+    "excerpt": "",
+    "publishedAt": "2026-08-25T23:08:00.000Z",
+    "firstSeenAt": "2026-08-25T15:11:49.918Z",
+    "lastSeenAt": "2026-08-25T15:11:49.918Z"
   }
 }

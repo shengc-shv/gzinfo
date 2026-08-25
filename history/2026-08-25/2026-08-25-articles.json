@@ -593,11 +593,11 @@
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "finance",
-      "summary": "科学探索奖50位青年获奖，属科技奖励。与分行零售业务无直接关联。",
+      "summary": "（业务相关性红线：与客群/财富/私行/信贷无直接挂钩，且非国家省市一级商机政策）",
       "source": "证券时报",
       "fetchedToday": false,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "stcn",
@@ -619,11 +619,11 @@
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "finance",
-      "summary": "中国机器人受欧洲市场欢迎，属出口产业动态。与分行零售业务关联弱。",
+      "summary": "（业务相关性红线：与客群/财富/私行/信贷无直接挂钩，且非国家省市一级商机政策）",
       "source": "证券时报",
       "fetchedToday": false,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "stcn",
@@ -3457,11 +3457,11 @@
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "gz",
-      "summary": "2026广东智慧物业产业博览会在穗启幕 助力物业行业提质升级；广州市政策动向，分行需关注落地机会",
+      "summary": "（业务相关性红线：与客群/财富/私行/信贷无直接挂钩，且非国家省市一级商机政策）",
       "source": "南方网·经济",
       "fetchedToday": false,
       "subcategory": "gz-media",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "investing-news",
@@ -7408,11 +7408,11 @@
       "excerpt": "",
       "publishedAt": "2026-08-25T00:00:00.000Z",
       "category": "finance",
-      "summary": "“第一批已经发货去法国”，中国人形机器人进入海外工厂“打工”；对分行财富/信贷/客群业务有宏观参考",
+      "summary": "（业务相关性红线：与客群/财富/私行/信贷无直接挂钩，且非国家省市一级商机政策）",
       "source": "证券时报",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "stcn",
@@ -11496,12 +11496,9 @@
       "excerpt": "",
       "publishedAt": "2026-08-25T15:01:29.000Z",
       "category": "stocks",
-      "subcategory": "us",
       "source": "Investing.com News",
-      "tier": "T2",
-      "filterBucket": "daily",
-      "filterDimensions": [],
-      "fetchedToday": true
+      "fetchedToday": true,
+      "subcategory": "us"
     },
     {
       "sourceId": "investing-news",
@@ -11510,12 +11507,9 @@
       "excerpt": "",
       "publishedAt": "2026-08-25T15:01:06.000Z",
       "category": "stocks",
-      "subcategory": "us",
       "source": "Investing.com News",
-      "tier": "T2",
-      "filterBucket": "daily",
-      "filterDimensions": [],
-      "fetchedToday": true
+      "fetchedToday": true,
+      "subcategory": "us"
     },
     {
       "sourceId": "investing-news",
@@ -11524,17 +11518,14 @@
       "excerpt": "",
       "publishedAt": "2026-08-25T14:55:32.000Z",
       "category": "stocks",
-      "subcategory": "us",
       "source": "Investing.com News",
-      "tier": "T2",
-      "filterBucket": "daily",
-      "filterDimensions": [],
-      "fetchedToday": true
+      "fetchedToday": true,
+      "subcategory": "us"
     },
     {
       "sourceId": "eastmoney-stock",
       "source": "东方财富",
-      "title": "加拿大将美国钢铁产品的关税从25%提高到50%",
+      "title": "加拿大宣布自9月8日起对美国商品加征报复性关税",
       "url": "https://finance.eastmoney.com/a/202608253853407744.html",
       "excerpt": "",
       "publishedAt": "2026-08-25T00:00:00.000Z",
@@ -11545,6 +11536,35 @@
       "filterDimensions": [],
       "fetchedToday": true,
       "subcategory": "a-share"
+    },
+    {
+      "sourceId": "investing-news",
+      "title": "ATI Inc options activity: put volume surges to 4,102 contracts, dwarfing calls",
+      "url": "https://www.investing.com/news/stock-market-news/ati-inc-options-activity-put-volume-surges-to-4102-contracts-dwarfing-calls-93CH-4875652",
+      "excerpt": "",
+      "publishedAt": "2026-08-25T14:53:13.000Z",
+      "category": "stocks",
+      "subcategory": "us",
+      "source": "Investing.com News",
+      "tier": "T2",
+      "filterBucket": "daily",
+      "filterDimensions": [],
+      "fetchedToday": true
+    },
+    {
+      "sourceId": "stcn",
+      "source": "证券时报",
+      "title": "联合化学：上半年营收2.62亿元 半导体板块部分产品迈入验证期",
+      "url": "https://www.stcn.com/article/detail/4120728.html",
+      "excerpt": "",
+      "publishedAt": "2026-08-25T23:08:00.000Z",
+      "category": "finance",
+      "summary": "",
+      "tier": "T2",
+      "filterBucket": "daily",
+      "filterDimensions": [],
+      "fetchedToday": true,
+      "subcategory": "cn-finance"
     }
   ]
 }
