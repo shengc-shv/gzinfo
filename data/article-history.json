@@ -12056,5 +12056,19 @@
     "publishedAt": "2026-08-25T00:00:00.000Z",
     "firstSeenAt": "2026-08-25T13:53:24.320Z",
     "lastSeenAt": "2026-08-25T13:53:24.320Z"
+  },
+  "https://data.eastmoney.com/xg/ipo/fd/10000218952.html": {
+    "title": "辉芒微电子(深圳)股份有限公司 (辅导备案) [深圳证监局]",
+    "url": "https://data.eastmoney.com/xg/ipo/fd/10000218952.html",
+    "excerpt": "IPO辅导备案 | 辅导机构: 国投证券股份有限公司 | 备案时间: 2026-08-21 00:00:00 | 状态: 辅导备案 | 报告: 辅导备案报告",
+    "publishedAt": "2026-08-21T00:00:00.000Z",
+    "firstSeenAt": "2026-08-25T13:32:00.000Z",
+    "lastSeenAt": "2026-08-25T13:32:00.000Z",
+    "sourceId": "em-ipo",
+    "source": "东方财富IPO辅导",
+    "category": "ipo",
+    "subcategory": "szse",
+    "ai_relevant": true,
+    "summary": "深圳辉芒微电子启动IPO辅导备案，辅导机构国投证券；深圳本地半导体企业资本运作提速，分行可关注辖区拟上市企业服务需求。"
   }
 }
