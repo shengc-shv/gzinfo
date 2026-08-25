@@ -12470,5 +12470,29 @@
     "publishedAt": "2026-08-25T00:00:00.000Z",
     "firstSeenAt": "2026-08-25T15:16:32.857Z",
     "lastSeenAt": "2026-08-25T15:16:32.857Z"
+  },
+  "https://news.dayoo.com/guangzhou/202608/25/139995_54995123.htm": {
+    "title": "广州音乐公园“湾区流行音乐夜”人气拉满",
+    "url": "https://news.dayoo.com/guangzhou/202608/25/139995_54995123.htm",
+    "sourceId": "dayoo-gz",
+    "source": "广州日报·大洋网",
+    "category": "gz",
+    "subcategory": "gz-media",
+    "excerpt": "",
+    "publishedAt": "2026-08-25T00:00:00.000Z",
+    "firstSeenAt": "2026-08-25T15:19:08.783Z",
+    "lastSeenAt": "2026-08-25T15:19:08.783Z"
+  },
+  "https://news.dayoo.com/guangzhou/202608/25/139995_54995122.htm": {
+    "title": "特写｜社区书记为8个娃当了五天大厨",
+    "url": "https://news.dayoo.com/guangzhou/202608/25/139995_54995122.htm",
+    "sourceId": "dayoo-gz",
+    "source": "广州日报·大洋网",
+    "category": "gz",
+    "subcategory": "gz-media",
+    "excerpt": "",
+    "publishedAt": "2026-08-25T00:00:00.000Z",
+    "firstSeenAt": "2026-08-25T15:19:08.783Z",
+    "lastSeenAt": "2026-08-25T15:19:08.783Z"
   }
 }

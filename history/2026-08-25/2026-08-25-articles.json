@@ -7031,11 +7031,11 @@
       "excerpt": "",
       "publishedAt": "2026-08-25T00:00:00.000Z",
       "category": "stocks",
-      "summary": "石头科技绩后20CM涨停！国产GPU四小龙之一燧原科技IPO新进展，上海印发芯片…；A股市场动态",
+      "summary": "（单股新闻已过滤：石头科技涨停为主，上海芯片政策非广东本地商机）",
       "source": "新浪财经·A股",
       "fetchedToday": true,
       "subcategory": "a-share",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-a-stock",
@@ -11559,9 +11559,35 @@
     },
     {
       "sourceId": "dayoo-gz",
-      "source": "广州日报·大洋网",
       "title": "广州首个旧村改造项目重整成功案例：从预重整到获批仅94天，全面复工续建",
       "url": "https://news.dayoo.com/guangzhou/202608/25/139995_54995124.htm",
+      "excerpt": "",
+      "publishedAt": "2026-08-25T00:00:00.000Z",
+      "category": "gz",
+      "source": "广州日报·大洋网",
+      "fetchedToday": true,
+      "subcategory": "gz-media"
+    },
+    {
+      "sourceId": "dayoo-gz",
+      "source": "广州日报·大洋网",
+      "title": "广州音乐公园“湾区流行音乐夜”人气拉满",
+      "url": "https://news.dayoo.com/guangzhou/202608/25/139995_54995123.htm",
+      "excerpt": "",
+      "publishedAt": "2026-08-25T00:00:00.000Z",
+      "category": "gz",
+      "summary": "",
+      "tier": "T2",
+      "filterBucket": "daily",
+      "filterDimensions": [],
+      "fetchedToday": true,
+      "subcategory": "gz-media"
+    },
+    {
+      "sourceId": "dayoo-gz",
+      "source": "广州日报·大洋网",
+      "title": "特写｜社区书记为8个娃当了五天大厨",
+      "url": "https://news.dayoo.com/guangzhou/202608/25/139995_54995122.htm",
       "excerpt": "",
       "publishedAt": "2026-08-25T00:00:00.000Z",
       "category": "gz",
