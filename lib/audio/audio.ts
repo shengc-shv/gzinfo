@@ -15,7 +15,7 @@ import path from "node:path";
 import { runLlm } from "../ai/llm";
 import { aiEnabled } from "../ai/mode";
 import type { ExecutiveSummary } from "../ai/executive-summary";
-import type { ReportItem } from "../types";
+import type { ReportItem, StockRecap } from "../types";
 
 /** 播放器元数据：renderHtml 注入 sticky 播放器时使用。 */
 export interface AudioMeta {
@@ -33,11 +33,13 @@ export const AUDIO_SPEAK_LIMITS = {
   must_read: 320,
   insights: 280,
   ipo: 60,
+  stock: 220,
 } as const;
 
 const OPENER = "早上好，以下是今日简报。";
 const CLOSER = "详细内容请查看下方图文。";
 const IPO_TRANSITION = "另外，关注一条广东IPO企业动态。";
+const STOCK_TRANSITION = "最后是昨日股市解读。";
 /** 中文 TTS 语速估算（字/秒）：腾讯 Speed=1（1.2 倍）实测约 5.3 字/秒，取 5.2 便于徽标时长贴近实际（2026-08-24 校准）。 */
 const CHARS_PER_SEC = 5.2;
 
@@ -144,6 +146,7 @@ export async function assembleAudioScript(
   date: string,
   exec: ExecutiveSummary,
   ipoItems: ReportItem[] = [],
+  stockRecap?: StockRecap | null,
 ): Promise<AudioBuildResult | null> {
   const parts: string[] = [OPENER];
   const partMap: Record<string, string> = {};
@@ -179,8 +182,28 @@ export async function assembleAudioScript(
     console.warn("⚠️ 章节「商机洞察」无口播稿，跳过");
   }
 
+  // —— 昨日股市解读：三市场 spoken 拼接（若有）——
+  if (stockRecap) {
+    const segs: string[] = [];
+    const pushSeg = (label: string, card: { spoken?: string }) => {
+      const s = sanitize(card.spoken ?? "");
+      if (s) segs.push(`${label}：${truncateAtSentence(s, Math.floor(AUDIO_SPEAK_LIMITS.stock / 3))}`);
+    };
+    pushSeg("美股", stockRecap.us);
+    pushSeg("A股", stockRecap.aShare);
+    pushSeg("港股", stockRecap.hk);
+    if (segs.length) {
+      const combined = truncateAtSentence(segs.join("。"), AUDIO_SPEAK_LIMITS.stock);
+      parts.push(`${STOCK_TRANSITION}${combined}`);
+      partMap.stock_recap = combined;
+      found++;
+    } else {
+      console.warn("⚠️ 章节「昨日股市解读」三市场口播稿均缺失，跳过");
+    }
+  }
+
   if (found === 0) {
-    console.warn("⚠️ 三个章节口播稿全部缺失，无法生成语音播报（降级：页面不出播放器）");
+    console.warn("⚠️ 今日定调/必读/洞察/股市解读口播稿全部缺失，无法生成语音播报（降级：页面不出播放器）");
     return null;
   }
 

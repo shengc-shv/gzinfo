@@ -29,6 +29,8 @@ export interface CrawledArticle {
   /** 来源地域标记：gz（股份行广州分行辖区）/ gd / nation / 其它或缺省。 */
   region?: string;
   category?: string;
+  /** 条目级子标签（昨日股市：a-share / hk / us）。爬虫产物标注，路由复盘卡输入用。 */
+  subcategory?: string;
   summary?: string;
   /** 源等级（T6）：T1 官方一手 / T1.5 准官方·机构一手 / T2 媒体·智库。 */
   tier?: SourceTier;

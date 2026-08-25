@@ -88,6 +88,23 @@ export interface ReportSections {
   ipo: ReportItem[];
 }
 
+/** 股市解读单卡：涨跌概况 + 关键板块（口播友好、无零售/对公引申）。 */
+export interface MarketCard {
+  /** 涨跌概况（1-2 句）：主要指数涨跌方向与幅度 + 最关键驱动因素。 */
+  overview: string;
+  /** 关键板块（3-5 个）：「板块名：一句话」强弱描述。 */
+  sectors: string[];
+  /** 口播稿（纯口语）：涨跌概况+关键板块浓缩，≤120 字，可直接朗读。 */
+  spoken?: string;
+}
+
+/** 昨日股市复盘三卡（美股 / A股 / 港股）。 */
+export interface StockRecap {
+  us: MarketCard;
+  aShare: MarketCard;
+  hk: MarketCard;
+}
+
 export interface DailyReport {
   date: string;
   /** 今日定调一句话，15~70字，必填（为空时由管线兜底）。 */
@@ -97,6 +114,8 @@ export interface DailyReport {
   sections: ReportSections;
   /** Optional trading-signals section, present when scripts/daily.ts ran successfully. */
   trading?: TradingSection;
+  /** Optional 昨日股市复盘三卡（美股/A股/港股），由 lib/ai/stock-recap.ts 生成。 */
+  stock_recap?: StockRecap;
 }
 
 export interface TradingSection {

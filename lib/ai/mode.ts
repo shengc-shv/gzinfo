@@ -13,6 +13,7 @@ export type AiStage =
   | "enrich" // 富集摘要（GitHub/X/论文/finance/politics/gd-ipo）
   | "classify" // 条目级 LLM 分类
   | "executive" // 执行摘要
+  | "stock-recap" // 股市解读三卡（昨日股市复盘）
   | "trading" // 交易点评
   | "credentials" // 启动凭证校验
   | "pass1" // 两阶段管线：PASS1 筛选分类

@@ -274,6 +274,50 @@ export const THEME_CSS = `
   }
   .insight-topic { margin: 0 0 0.3rem; font-size: 0.85rem; color: var(--c-finance); font-weight: 700; }
   .insight-impact, .insight-action { margin: 0.2rem 0 0; font-size: 0.78rem; color: var(--fg-soft); line-height: 1.55; }
+
+  /* —— 昨日股市复盘三卡（参考区） —— */
+  .stock-recap { margin-top: 0.5rem; }
+  .stock-cards {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.6rem;
+  }
+  .stock-card {
+    border: 1px solid var(--rule); border-radius: 10px; padding: 0.6rem 0.7rem;
+    background: var(--bg); border-top: 3px solid var(--c-trading);
+    display: flex; flex-direction: column; gap: 0.4rem; min-width: 0;
+  }
+  .stock-card--us { border-top-color: var(--c-pol); }
+  .stock-card--a { border-top-color: var(--c-gz); }
+  .stock-card--hk { border-top-color: var(--c-ipo); }
+  .stock-card-head {
+    font-size: 0.9rem; font-weight: 700; color: var(--fg);
+    letter-spacing: 0.04em; display: flex; align-items: center; gap: 0.35rem;
+  }
+  .stock-card-head::before {
+    content: ""; width: 0.5rem; height: 0.5rem; border-radius: 50%;
+    background: var(--c-trading); flex: none;
+  }
+  .stock-card--us .stock-card-head::before { background: var(--c-pol); }
+  .stock-card--a .stock-card-head::before { background: var(--c-gz); }
+  .stock-card--hk .stock-card-head::before { background: var(--c-ipo); }
+  .stock-overview { margin: 0; font-size: 0.8rem; color: var(--fg-soft); line-height: 1.6; }
+  .stock-sectors { margin-top: 0.1rem; }
+  .stock-sec-label {
+    display: block; font-size: 0.68rem; color: var(--muted); font-weight: 600;
+    margin-bottom: 0.25rem; letter-spacing: 0.03em;
+  }
+  .stock-sectors ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.28rem; }
+  .stock-sectors li {
+    font-size: 0.76rem; color: var(--fg-soft); line-height: 1.5;
+    padding-left: 0.7rem; position: relative;
+  }
+  .stock-sectors li::before {
+    content: ""; position: absolute; left: 0; top: 0.5em; width: 0.32rem; height: 0.32rem;
+    border-radius: 2px; background: color-mix(in srgb, var(--c-trading) 55%, var(--muted));
+  }
+  .stock-empty { margin: 0; font-size: 0.76rem; color: var(--muted); }
+  @media (max-width: 560px) {
+    .stock-cards { grid-template-columns: 1fr; }
+  }
   /* 商机洞察来源标记 ①/②/③：标题后内联，移动端点击区域加大（≥26px），便于手机点开溯源 */
   .insight-srcs { display: inline-flex; gap: 0.22rem; margin-left: 0.35rem; vertical-align: middle; }
   .insight-src {

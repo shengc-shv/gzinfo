@@ -55,6 +55,13 @@ import {
   mergeStoredExecutive,
 } from "../lib/output/render";
 import { loadStore, generateExecutiveSummary, writeStore } from "../lib/ai/executive-summary";
+import {
+  generateStockRecap,
+  writeStockRecap,
+  loadStockRecap,
+  selectStockRecap,
+  type StockItem,
+} from "../lib/ai/stock-recap";
 import { assembleAudioScript, formatDuration, type AudioMeta } from "../lib/audio/audio";
 import { synthesizeAudio } from "../lib/audio/tts";
 import { buildTwoDayExecPool } from "../lib/ai/exec-pool";
@@ -660,6 +667,56 @@ async function main() {
     }
   }
 
+  // —— 昨日股市复盘三卡（2026-08-25 用户确认）：美股 / A股 / 港股 ——
+  // 输入来自原始抓取（不经 PASS1 过滤，复盘参考区豁免漏斗）：
+  //  - 美股：articles 中 category=stocks & subcategory=us（cnbc-top / investing-news RSS）；
+  //  - A股：crawled.stocks 中 subcategory=a-share（东方财富爬虫）；
+  //  - 港股：crawled.stocks 中 subcategory=hk（新浪港股 / 披露易）。
+  // 非 SKIP_AI：合并三市场输入 → generateStockRecap → 写 store.json（stock_recap 字段）；
+  // SKIP_AI：仅从 store.json 复用，零 LLM。失败均优雅降级（页面不渲染该区）。
+  {
+    const toItem = (it: { title?: string; summary?: string; url?: string; source?: string }): StockItem => ({
+      title: it.title || "无标题",
+      summary: it.summary || "",
+      url: it.url || "",
+      source: it.source || "",
+    });
+    const usItems: StockItem[] = articles
+      .filter((a) => a.category === "stocks" && a.subcategory === "us")
+      .map((a) => toItem(a));
+    const aShareItems: StockItem[] = crawled.stocks
+      .filter((a) => a.subcategory === "a-share")
+      .map((a) => toItem(a));
+    const hkItems: StockItem[] = crawled.stocks
+      .filter((a) => a.subcategory === "hk")
+      .map((a) => toItem(a));
+    const persistedRecap = loadStockRecap(date);
+    try {
+      const recap = await selectStockRecap({
+        skipAi: SKIP_AI,
+        persisted: persistedRecap,
+        generate: () =>
+          generateStockRecap({ date, us: usItems, aShare: aShareItems, hk: hkItems }),
+      });
+      if (recap) {
+        mergedReport.stock_recap = recap;
+        if (!SKIP_AI) {
+          writeStockRecap(date, recap);
+          console.log(
+            `[daily] 📈 股市复盘三卡生成：美股 ${usItems.length} / A股 ${aShareItems.length} / 港股 ${hkItems.length} 条输入`,
+          );
+        } else {
+          console.log(`[daily] 📈 SKIP_AI 复用 store.json 股市复盘三卡`);
+        }
+      } else {
+        console.log(`[daily] ℹ️ 股市复盘无可用输入或生成失败（跳过该区）`);
+      }
+    } catch (e) {
+      const msg = e instanceof Error ? e.message : String(e);
+      console.warn(`[daily] ⚠️ 股市复盘生成失败（继续）: ${msg}`);
+    }
+  }
+
   // —— M2-④：AI 资产账本写回（daily 级：仅 trading；正文已随 report.json 落盘）——
   const dk = dailyAssetKey(date);
   const dailyPrev = assetDaily(aiAssets, date);
@@ -683,7 +740,8 @@ async function main() {
   try {
     const execAudio = loadStore(date);
     if (execAudio) {
-      const built = await assembleAudioScript(date, execAudio, mergedReport.sections.ipo ?? []);
+      const stockAudio = loadStockRecap(date);
+      const built = await assembleAudioScript(date, execAudio, mergedReport.sections.ipo ?? [], stockAudio);
       if (built) {
         // 腾讯云包月：配置密钥即忽略 SKIP_TTS，每次都实际合成
         const hasTencent = !!(process.env.TENCENTCLOUD_SECRET_ID && process.env.TENCENTCLOUD_SECRET_KEY);

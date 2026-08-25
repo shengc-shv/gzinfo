@@ -1005,6 +1005,47 @@ function renderReportExec(report: DailyReport): string {
   </section>`;
 }
 
+/**
+ * 昨日股市复盘三卡（美股 / A股 / 港股）：每张 = 涨跌概况 + 关键板块。
+ * 参考区，置于执行摘要之后、板块导航之前；stock_recap 缺失或三卡全空则不渲染。
+ * 内容纯市场事实概述，无零售/对公引申（用户 2026-08-25 拍板，且转口播友好）。
+ */
+function renderStockRecap(report: DailyReport): string {
+  const recap = report.stock_recap;
+  if (!recap) return "";
+  const cards = [
+    { label: "美股", cls: "us", card: recap.us },
+    { label: "A股", cls: "a", card: recap.aShare },
+    { label: "港股", cls: "hk", card: recap.hk },
+  ];
+  const cardHtml = cards
+    .map(({ label, cls, card }) => {
+      const empty = !card.overview && !card.spoken && card.sectors.length === 0;
+      if (empty) {
+        return `<article class="stock-card stock-card--${cls}"><header class="stock-card-head">${label}</header><p class="stock-empty">暂无数据</p></article>`;
+      }
+      const overview = card.overview || card.spoken || "";
+      const sectors = card.sectors.length
+        ? `<div class="stock-sectors"><span class="stock-sec-label">关键板块</span><ul>${card.sectors
+            .map((s) => `<li>${escapeHtml(s)}</li>`)
+            .join("")}</ul></div>`
+        : "";
+      return `<article class="stock-card stock-card--${cls}">
+        <header class="stock-card-head">${label}</header>
+        ${overview ? `<p class="stock-overview">${escapeHtml(overview)}</p>` : ""}
+        ${sectors}
+      </article>`;
+    })
+    .join("");
+  return `<section class="stock-recap">
+    <div class="exec-head">
+      <h2 class="exec-title">股市解读</h2>
+      <span class="exec-sub">昨日市场复盘 · 涨跌概况与关键板块（AI 生成）</span>
+    </div>
+    <div class="stock-cards">${cardHtml}</div>
+  </section>`;
+}
+
 // ----- top-level renderer -----
 
 /**
@@ -1351,6 +1392,8 @@ ${THEME_CSS}
   </header>
 
   ${renderReportExec(report)}
+
+  ${renderStockRecap(report)}
 
   <!-- 板块导航：单层 tab，移动端横滑不折行 -->
   <nav class="tabs">
