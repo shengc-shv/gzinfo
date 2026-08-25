@@ -102,23 +102,65 @@ export class SouthcnEconomyCrawler extends BaseCrawler {
     console.log(`[${this.name}] 开始抓取 (南方经济)`);
     const html = await this._getHtml(SOUTHCN_URL);
     if (!html) return this.results;
-    const today = todayBeijing();
     const seen = new Set<string>();
+    const items: ParsedItem[] = [];
     for (const it of this._parseList(html)) {
       if (seen.has(it.url)) continue;
       seen.add(it.url);
-      this.results.push({
-        title: it.title,
-        url: it.url,
-        excerpt: "",
-        publishedAt: today,
-        sourceId: "southcn",
-        source: "南方网·经济",
-      });
+      items.push(it);
     }
-    console.log(`[${this.name}] 完成，共 ${this.results.length} 条`);
+    // 时间真实性红线（2026-08-25 用户要求）：列表页无日期 → 必须进详情页提取
+    // 真实发布时间（<span id="pubtime_baidu">YYYY-MM-DD HH:MM</span>）；
+    // 提取不到真实时间 → 该条废弃（不产出，避免旧闻被兜底成"今天新鲜"混入报告）。
+    const CONCURRENCY = 5;
+    let cursor = 0;
+    const worker = async () => {
+      while (cursor < items.length) {
+        const it = items[cursor++];
+        try {
+          const detail = await this._getHtml(it.url);
+          if (!detail) continue;
+          const pub = extractDetailPubtime(detail);
+          if (!pub) continue; // 无真实时间 → 废弃
+          this.results.push({
+            title: it.title,
+            url: it.url,
+            excerpt: "",
+            publishedAt: pub,
+            sourceId: "southcn",
+            source: "南方网·经济",
+          });
+        } catch {
+          continue; // 单条失败 → 废弃
+        }
+      }
+    };
+    await Promise.all(
+      Array.from({ length: Math.min(CONCURRENCY, items.length) }, () => worker()),
+    );
+    console.log(`[${this.name}] 完成，共 ${this.results.length} 条（详情页无真实时间已废弃 ${items.length - this.results.length} 条）`);
     return this.results;
   }
+}
+
+/** 从详情页提取真实发布时间：<span id="pubtime_baidu">2026-08-21 16:23</span> 或 <meta name="PubDate"> */
+export function extractDetailPubtime(html: string): string | undefined {
+  const span = html.match(/<span[^>]*id=["']pubtime_baidu["'][^>]*>([^<]{10,25})<\/span>/i);
+  if (span) {
+    const m = span[1].match(/(20\d{2})[-\/年](\d{1,2})[-\/月](\d{1,2})日?\s*(\d{1,2}:\d{2})?/);
+    if (m) {
+      const d = `${m[1]}-${m[2].padStart(2, "0")}-${m[3].padStart(2, "0")}`;
+      return m[4] ? `${d} ${m[4]}` : d;
+    }
+  }
+  const meta =
+    html.match(/<meta[^>]+name=["']PubDate["'][^>]*content=["']([^"']+)["']/i) ||
+    html.match(/<meta[^>]+content=["']([^"']+)["'][^>]*name=["']PubDate["']/i);
+  if (meta) {
+    const m = meta[1].match(/(20\d{2})[-\/](\d{1,2})[-\/](\d{1,2})/);
+    if (m) return `${m[1]}-${m[2].padStart(2, "0")}-${m[3].padStart(2, "0")}`;
+  }
+  return undefined;
 }
 
 export function createCrawler(): SouthcnEconomyCrawler {

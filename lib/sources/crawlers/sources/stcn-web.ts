@@ -121,7 +121,6 @@ export class StcnCrawler extends BaseCrawler {
   async run(): Promise<CrawlerResult[]> {
     console.log(`[${this.name}] 开始抓取 (静态列表页)`);
     const seen = new Set<string>();
-    const today = todayBeijing();
 
     for (const col of STCN_COLUMNS) {
       const html = await this._getHtml(col.listUrl);
@@ -135,7 +134,7 @@ export class StcnCrawler extends BaseCrawler {
           title: it.title,
           url: it.url,
           excerpt: "",
-          publishedAt: today,
+          publishedAt: "", // 占位：稍后进详情页提取真实时间
           sourceId: "stcn",
           source: "证券时报",
         });
@@ -146,9 +145,62 @@ export class StcnCrawler extends BaseCrawler {
       );
     }
 
+    // 时间真实性红线（2026-08-25 用户要求）：列表页无日期 → 并发进详情页提取
+    // 真实发布时间（正文"来源：XXX 作者：XXX YYYY-MM-DD HH:MM"）；
+    // 提取不到真实时间 → 该条废弃（不产出，避免旧闻被兜底成"今天新鲜"）。
+    const pending = this.results.filter((it) => it.url && !it.publishedAt);
+    if (pending.length) {
+      console.log(`[${this.name}] 详情页补日期: ${pending.length} 条（并发5）…`);
+      const CONCURRENCY = 5;
+      let cursor = 0;
+      const worker = async () => {
+        while (cursor < pending.length) {
+          const it = pending[cursor++];
+          try {
+            const detail = await this._getHtml(it.url!);
+            if (!detail) continue;
+            const pub = extractDetailPubtime(detail);
+            if (pub) it.publishedAt = pub;
+          } catch {
+            // 单条失败静默（无时间 → 后续废弃）
+          }
+        }
+      };
+      await Promise.all(
+        Array.from({ length: Math.min(CONCURRENCY, pending.length) }, () => worker()),
+      );
+      const got = pending.filter((it) => it.publishedAt).length;
+      const dropped = pending.length - got;
+      console.log(`[${this.name}] 详情页补日期完成: ${got}/${pending.length} 条（无真实时间废弃 ${dropped} 条）`);
+      if (dropped > 0) {
+        const kept = this.results.filter((it) => it.publishedAt);
+        this.results.length = 0;
+        this.results.push(...kept);
+      }
+    }
+
     console.log(`[${this.name}] 完成，共 ${this.results.length} 条（去重后）`);
     return this.results;
   }
+}
+
+/** 从详情页提取真实发布时间：正文"YYYY-MM-DD HH:MM" 或 <meta name="publishdate"/PubDate> */
+export function extractDetailPubtime(html: string): string | undefined {
+  const body = html.replace(/<script[\s\S]*?<\/script>/gi, " ").replace(/<style[\s\S]*?<\/style>/gi, " ");
+  // 正文时间："2026-08-25 07:26" / "2026-08-25 07:26:00"
+  const m = body.match(/(20\d{2})[-/年](\d{1,2})[-/月](\d{1,2})日?\s*(\d{1,2}:\d{2}(?::\d{2})?)?/);
+  if (m) {
+    const d = `${m[1]}-${m[2].padStart(2, "0")}-${m[3].padStart(2, "0")}`;
+    return m[4] ? `${d} ${m[4]}` : d;
+  }
+  const meta =
+    html.match(/<meta[^>]+name=["'](?:publishdate|PubDate|pubdate|weibo:article:create_at)["'][^>]*content=["']([^"']+)["']/i) ||
+    html.match(/<meta[^>]+content=["']([^"']+)["'][^>]*name=["'](?:publishdate|PubDate|pubdate|weibo:article:create_at)["']/i);
+  if (meta) {
+    const mm = meta[1].match(/(20\d{2})[-/](\d{1,2})[-/](\d{1,2})/);
+    if (mm) return `${mm[1]}-${mm[2].padStart(2, "0")}-${mm[3].padStart(2, "0")}`;
+  }
+  return undefined;
 }
 
 export function createCrawler(): StcnCrawler {
