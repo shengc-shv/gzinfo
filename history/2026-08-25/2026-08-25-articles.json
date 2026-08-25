@@ -11,7 +11,7 @@
       "summary": "阿里新股配售获全球主权基金踊跃认购，港股IPO热度升温。可提示财富客户关注打新与中概配置机会。",
       "source": "新浪财经·理财保险",
       "fetchedToday": false,
-      "subcategory": "gz-wealth",
+      "subcategory": "cn-finance",
       "relevant": true
     },
     {
@@ -24,7 +24,7 @@
       "summary": "周末要闻：美伊经济战致原油下挫、黄金走高，阿里新股配售、英伟达芯片涨价。可提示客户关注避险资产与科技板块波动。",
       "source": "新浪财经·理财保险",
       "fetchedToday": false,
-      "subcategory": "gz-wealth",
+      "subcategory": "cn-finance",
       "relevant": true
     },
     {
@@ -37,7 +37,7 @@
       "summary": "黄金消费迎旺季、小克重产品走俏，避险与礼品需求双升。可提示积存金与黄金饰品客户把握旺季营销。",
       "source": "新浪财经·理财保险",
       "fetchedToday": false,
-      "subcategory": "gz-wealth",
+      "subcategory": "cn-finance",
       "relevant": true
     },
     {
@@ -50,7 +50,7 @@
       "summary": "黄金消费迎旺季、小克重产品走俏，避险与礼品需求双升。可提示积存金与黄金饰品客户把握旺季营销。",
       "source": "新华财经",
       "fetchedToday": false,
-      "subcategory": "gz-wealth",
+      "subcategory": "cn-finance",
       "relevant": true
     },
     {
@@ -63,7 +63,7 @@
       "summary": "国际市场早参：关注美债、汇率与大宗波动。可提示外汇与黄金客户留意海外利率与避险情绪变化。",
       "source": "新华财经",
       "fetchedToday": false,
-      "subcategory": "gz-wealth",
+      "subcategory": "cn-finance",
       "relevant": true
     },
     {
@@ -76,7 +76,8 @@
       "summary": "发改委“两天三会”释放稳投资加力信号。可关注基建与重大项目带来的对公与零售协同机会。",
       "source": "新华财经",
       "fetchedToday": false,
-      "relevant": true
+      "subcategory": "cn-finance",
+      "relevant": false
     },
     {
       "sourceId": "cnfin",
@@ -88,8 +89,8 @@
       "summary": "资产负债管理新规落地，负债成本下行拓宽险资权益空间。可关注保险资管与固收+产品对财富客户的配置价值。",
       "source": "新华财经",
       "fetchedToday": false,
-      "subcategory": "gz-wealth",
-      "relevant": true
+      "subcategory": "cn-finance",
+      "relevant": false
     },
     {
       "sourceId": "cnfin",
@@ -114,6 +115,7 @@
       "summary": "人形机器人技术迭代、赛事含金量提升，属科技产业动态。与零售业务线关联弱。",
       "source": "新华财经",
       "fetchedToday": false,
+      "subcategory": "cn-finance",
       "relevant": false
     },
     {
@@ -126,7 +128,8 @@
       "summary": "发改委“两天三会”释放稳投资加力信号。可关注基建与重大项目带来的对公与零售协同机会。",
       "source": "证券时报",
       "fetchedToday": false,
-      "relevant": true
+      "subcategory": "cn-finance",
+      "relevant": false
     },
     {
       "sourceId": "stcn",
@@ -138,7 +141,7 @@
       "summary": "央行重启7天逆回购、精细化调节流动性。可提示理财客户关注短端利率与货基收益变化。",
       "source": "证券时报",
       "fetchedToday": false,
-      "subcategory": "gz-wealth",
+      "subcategory": "cn-finance",
       "relevant": true
     },
     {
@@ -151,6 +154,7 @@
       "summary": "央企布局机器人赛道，属科技产业动态。与零售业务关联弱。",
       "source": "证券时报",
       "fetchedToday": false,
+      "subcategory": "cn-finance",
       "relevant": false
     },
     {
@@ -176,6 +180,7 @@
       "summary": "上市银行上半年净息差企稳，行业基本面改善。可对标同业优化广州分行存款定价与中收策略。",
       "source": "证券时报",
       "fetchedToday": false,
+      "subcategory": "cn-finance",
       "relevant": true
     },
     {
@@ -188,6 +193,7 @@
       "summary": "车企转向体验竞争，属行业营销趋势。与零售业务关联弱。",
       "source": "证券时报",
       "fetchedToday": false,
+      "subcategory": "cn-finance",
       "relevant": false
     },
     {
@@ -200,7 +206,8 @@
       "summary": "宏观解读：中国是世界经济增长稳定锚，基本面韧性强。可关注经济回升对零售信贷与财富管理的支撑。",
       "source": "南方网·经济",
       "fetchedToday": false,
-      "relevant": true
+      "subcategory": "gz-media",
+      "relevant": false
     },
     {
       "sourceId": "sina-money",
@@ -212,7 +219,7 @@
       "summary": "本周4只新股申购，含国内轴承制造龙头。可提示财富客户关注打新机会，联动券商资管与固收+产品承接打新闲置资金。",
       "source": "新浪财经·理财保险",
       "fetchedToday": false,
-      "subcategory": "gz-wealth",
+      "subcategory": "cn-finance",
       "relevant": true
     },
     {
@@ -225,7 +232,7 @@
       "summary": "美元走弱带动贵金属与铜阶段性反弹。可提示客户关注商品类资产配置与黄金避险敞口，优化组合抗波动能力。",
       "source": "新浪财经·理财保险",
       "fetchedToday": false,
-      "subcategory": "gz-wealth",
+      "subcategory": "cn-finance",
       "relevant": true
     },
     {
@@ -238,7 +245,7 @@
       "summary": "美债担忧重燃“货币贬值交易”，黄金走强、避险情绪升温（比特币属高波动另类资产，不作零售推荐）。可提示客户增配黄金等避险资产。",
       "source": "新浪财经·理财保险",
       "fetchedToday": false,
-      "subcategory": "gz-wealth",
+      "subcategory": "cn-finance",
       "relevant": true
     },
     {
@@ -251,7 +258,7 @@
       "summary": "黄金创三个月新高，本周聚焦杰克逊霍尔央行年会指引。可提示积存金客户关注金价波动，适时配置避险资产。",
       "source": "新浪财经·理财保险",
       "fetchedToday": false,
-      "subcategory": "gz-wealth",
+      "subcategory": "cn-finance",
       "relevant": true
     },
     {
@@ -264,7 +271,7 @@
       "summary": "药明康德跌5.01%，创金合信旗下2只基金持仓承压。可提示相关理财/基金客户关注净值波动，做好持仓沟通与再平衡建议。",
       "source": "新浪财经·理财保险",
       "fetchedToday": false,
-      "subcategory": "gz-wealth",
+      "subcategory": "cn-finance",
       "relevant": true
     },
     {
@@ -277,6 +284,7 @@
       "summary": "粤财控股拟转让罗定农商行股权、珠海农商行或接盘，广东农信改革持续推进。关注区域同业格局变化对广州分行下沉客群的影响。",
       "source": "21世纪经济报道·金融",
       "fetchedToday": false,
+      "subcategory": "cn-finance",
       "relevant": true
     },
     {
@@ -289,7 +297,7 @@
       "summary": "港股科技“易中天”跌超7%、恒生科技半日跌3.84%。可提示权益持仓客户关注科技板块波动，做好风险揭示与资产再平衡。",
       "source": "21世纪经济报道·金融",
       "fetchedToday": false,
-      "subcategory": "gz-wealth",
+      "subcategory": "cn-finance",
       "relevant": true
     },
     {
@@ -302,7 +310,7 @@
       "summary": "招银研究指海外超长端利率上行，主因期限溢价与供给压力。可提示债基/固收客户关注久期风险，适度缩短组合久期。",
       "source": "21世纪经济报道·金融",
       "fetchedToday": false,
-      "subcategory": "gz-wealth",
+      "subcategory": "cn-finance",
       "relevant": true
     },
     {
@@ -315,7 +323,8 @@
       "summary": "某银行行长失联引发舆情，属行业个案，对分行无直接业务启示；关注声誉风险与员工行为管理即可。",
       "source": "21世纪经济报道·金融",
       "fetchedToday": false,
-      "relevant": false
+      "subcategory": "cn-finance",
+      "relevant": true
     },
     {
       "sourceId": "21jingji-finance",
@@ -327,7 +336,7 @@
       "summary": "多家银行积存金克价涨破1000元，金价强势。可提示贵金属客户关注积存金机会，同步做好高位波动风险提示。",
       "source": "21世纪经济报道·金融",
       "fetchedToday": false,
-      "subcategory": "gz-wealth",
+      "subcategory": "cn-finance",
       "relevant": true
     },
     {
@@ -354,7 +363,7 @@
       "source": "新浪财经·银行频道",
       "fetchedToday": false,
       "subcategory": "gz-credit",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-bank",
@@ -366,6 +375,7 @@
       "summary": "上市银行半年报密集披露，业绩回暖显经营韧性。可对标同业优化广州分行零售客群经营与中间业务策略。",
       "source": "新浪财经·银行频道",
       "fetchedToday": false,
+      "subcategory": "cn-finance",
       "relevant": true
     },
     {
@@ -378,6 +388,7 @@
       "summary": "头部城商行营收净利双增、对公成扩表主力。可借鉴同业对公经验，分行重心在零售，关注其零售转型动作。",
       "source": "新浪财经·银行频道",
       "fetchedToday": false,
+      "subcategory": "cn-finance",
       "relevant": true
     },
     {
@@ -403,6 +414,7 @@
       "summary": "国资委召开6G未来产业推进会，央企牵头布局。可关注6G产业链投融资与科技金融机会，储备广东相关制造企业服务。",
       "source": "财联社",
       "fetchedToday": false,
+      "subcategory": "cn-finance",
       "relevant": true
     },
     {
@@ -415,7 +427,7 @@
       "summary": "53只理财打新宇树科技获近亿浮盈，第三批基准调整落地。可提示财富客户关注理财打新与业绩比较基准变更，做好产品适配。",
       "source": "财联社",
       "fetchedToday": false,
-      "subcategory": "gz-wealth",
+      "subcategory": "cn-finance",
       "relevant": true
     },
     {
@@ -441,6 +453,7 @@
       "summary": "财政部称下半年谋划增量政策，地方专项债资金闲置待盘活。可关注后续财政发力对基建与消费信贷的拉动。",
       "source": "财联社",
       "fetchedToday": false,
+      "subcategory": "cn-finance",
       "relevant": true
     },
     {
@@ -453,7 +466,7 @@
       "summary": "杰克逊霍尔央行年会本周召开，市场聚焦美联储利率路径与美债走势。可提示外汇与黄金客户关注汇率波动，做好避险配置。",
       "source": "财联社",
       "fetchedToday": false,
-      "subcategory": "gz-wealth",
+      "subcategory": "cn-finance",
       "relevant": true
     },
     {
@@ -467,7 +480,7 @@
       "source": "央广网·广东",
       "fetchedToday": false,
       "subcategory": "gz-customer",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "cnr-gd",
@@ -479,6 +492,7 @@
       "summary": "广东省第十七届运动会收官，大型赛事带动城市消费与客流。与分行具体业务关联弱，作本地活动资讯。",
       "source": "央广网·广东",
       "fetchedToday": false,
+      "subcategory": "gz-media",
       "relevant": false
     },
     {
@@ -491,7 +505,8 @@
       "summary": "粤产机器人亮相世界人形机器人运动会，广东智能制造领先。可关注机器人产业链企业金融需求，储备科技金融服务。",
       "source": "央广网·广东",
       "fetchedToday": false,
-      "relevant": true
+      "subcategory": "gz-media",
+      "relevant": false
     },
     {
       "sourceId": "cnr-gd",
@@ -503,6 +518,7 @@
       "summary": "广州“扫黄打非+文明实践”空间亮相，属公益宣传阵地。与零售业务无直接关联。",
       "source": "央广网·广东",
       "fetchedToday": false,
+      "subcategory": "gz-media",
       "relevant": false
     },
     {
@@ -515,6 +531,7 @@
       "summary": "日本米价大起大落属海外农产品波动，与国内零售业务无直接关联。",
       "source": "新华财经",
       "fetchedToday": false,
+      "subcategory": "cn-finance",
       "relevant": false
     },
     {
@@ -527,6 +544,7 @@
       "summary": "全国小麦收购超9000万吨，粮食生产平稳。与分行零售业务无直接关联。",
       "source": "新华财经",
       "fetchedToday": false,
+      "subcategory": "cn-finance",
       "relevant": false
     },
     {
@@ -539,7 +557,7 @@
       "summary": "中际旭创澄清产品价格降幅理性、订单强劲，股价仍跌超6%。可提示相关持仓客户关注光模块龙头波动，做好沟通。",
       "source": "新华财经",
       "fetchedToday": false,
-      "subcategory": "gz-wealth",
+      "subcategory": "cn-finance",
       "relevant": true
     },
     {
@@ -552,7 +570,8 @@
       "summary": "通达股份借“六张网”布局新型电网。属电网设备企业动态，与分行零售业务关联弱。",
       "source": "新华财经",
       "fetchedToday": false,
-      "relevant": false
+      "subcategory": "cn-finance",
+      "relevant": true
     },
     {
       "sourceId": "cnfin",
@@ -564,7 +583,7 @@
       "summary": "杰克逊霍尔年会成美元关键节点，汇率走向牵动全球资产。可提示外汇与黄金客户关注波动，优化避险配置。",
       "source": "新华财经",
       "fetchedToday": false,
-      "subcategory": "gz-wealth",
+      "subcategory": "cn-finance",
       "relevant": true
     },
     {
@@ -577,8 +596,8 @@
       "summary": "希音启动全球发售、拟9月1日登陆港交所，港股IPO受关注。可提示财富客户关注打新与跨境资产配置机会。",
       "source": "新华财经",
       "fetchedToday": false,
-      "subcategory": "gz-wealth",
-      "relevant": true
+      "subcategory": "cn-finance",
+      "relevant": false
     },
     {
       "sourceId": "stcn",
@@ -590,6 +609,7 @@
       "summary": "科学探索奖50位青年获奖，属科技奖励。与分行零售业务无直接关联。",
       "source": "证券时报",
       "fetchedToday": false,
+      "subcategory": "cn-finance",
       "relevant": false
     },
     {
@@ -602,7 +622,7 @@
       "summary": "多家城商行理财规模冷暖不一，行业分化加剧。可提示财富客户关注理财净值与规模变化，优化产品货架。",
       "source": "证券时报",
       "fetchedToday": false,
-      "subcategory": "gz-wealth",
+      "subcategory": "cn-finance",
       "relevant": true
     },
     {
@@ -615,6 +635,7 @@
       "summary": "中国机器人受欧洲市场欢迎，属出口产业动态。与分行零售业务关联弱。",
       "source": "证券时报",
       "fetchedToday": false,
+      "subcategory": "cn-finance",
       "relevant": false
     },
     {
@@ -627,6 +648,7 @@
       "summary": "防沙治沙国际合作属环保外交，与零售业务无关。",
       "source": "证券时报",
       "fetchedToday": false,
+      "subcategory": "cn-finance",
       "relevant": false
     },
     {
@@ -639,6 +661,7 @@
       "summary": "硬科技支撑中国智造，属产业宏观。与分行零售业务线关联弱。",
       "source": "证券时报",
       "fetchedToday": false,
+      "subcategory": "cn-finance",
       "relevant": false
     },
     {
@@ -651,7 +674,8 @@
       "summary": "AI模型开源催生产业空间，属科技趋势。与零售业务线关联弱。",
       "source": "证券时报",
       "fetchedToday": false,
-      "relevant": false
+      "subcategory": "cn-finance",
+      "relevant": true
     },
     {
       "sourceId": "dayoo-gz",
@@ -660,11 +684,11 @@
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "gz",
-      "summary": "广州新增汽车主题公园（免预约），文旅消费场景丰富。可联动信用卡车主权益与消费贷，深耕本地客群。",
+      "summary": "（非银行业务相关，已过滤）广州新增汽车主题公园（免预约），文旅消费场景丰富。可联动信用卡车主权益与消费贷，深耕本地客群。",
       "source": "广州日报·大洋网",
       "fetchedToday": false,
       "subcategory": "gz-customer",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "dayoo-gz",
@@ -676,6 +700,7 @@
       "summary": "从化举办青少年摩托夜赛，属本地文体活动。与分行业务关联弱。",
       "source": "广州日报·大洋网",
       "fetchedToday": false,
+      "subcategory": "gz-media",
       "relevant": false
     },
     {
@@ -688,6 +713,7 @@
       "summary": "广州推动生态文明宣传，属公益科普。与零售业务无直接关联。",
       "source": "广州日报·大洋网",
       "fetchedToday": false,
+      "subcategory": "gz-media",
       "relevant": false
     },
     {
@@ -697,11 +723,11 @@
       "excerpt": "",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "gz",
-      "summary": "广州老公园微改造惠民，老城更新提速。可关注老旧社区客群经营，联动社区支行与适老金融服务。",
+      "summary": "（非银行业务相关，已过滤）广州老公园微改造惠民，老城更新提速。可关注老旧社区客群经营，联动社区支行与适老金融服务。",
       "source": "广州日报·大洋网",
       "fetchedToday": false,
       "subcategory": "gz-customer",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "dayoo-gz",
@@ -713,6 +739,7 @@
       "summary": "荔湾白云以数智赋能城市治理，属政务数字化。与零售业务无直接关联。",
       "source": "广州日报·大洋网",
       "fetchedToday": false,
+      "subcategory": "gz-media",
       "relevant": false
     },
     {
@@ -725,6 +752,7 @@
       "summary": "广州援疆教师事迹，属正能量宣传。与零售业务无直接关联。",
       "source": "广州日报·大洋网",
       "fetchedToday": false,
+      "subcategory": "gz-media",
       "relevant": false
     },
     {
@@ -737,7 +765,8 @@
       "summary": "上半年GDP增4.7%，经济延续回升。可关注宏观回暖对零售信贷与财富管理的支撑，把握扩内需政策窗口。",
       "source": "南方网·经济",
       "fetchedToday": false,
-      "relevant": true
+      "subcategory": "gz-media",
+      "relevant": false
     },
     {
       "sourceId": "sina-money",
@@ -749,7 +778,7 @@
       "summary": "星图测控股价回调、华夏基金旗下基金重仓，反映卫星应用主题波动。财富线可借市场热点回落做持仓检视，提示客户卫星/军工主题基金波动风险，避免追高。",
       "source": "新浪财经·理财保险",
       "fetchedToday": false,
-      "subcategory": "gz-wealth",
+      "subcategory": "cn-finance",
       "relevant": true
     },
     {
@@ -762,6 +791,7 @@
       "summary": "五大信披媒体精华摘要，为当日财经资讯汇总，信息密度低、无单条决策价值，仅作行业信息背景参考。",
       "source": "新华财经",
       "fetchedToday": false,
+      "subcategory": "cn-finance",
       "relevant": false
     },
     {
@@ -787,6 +817,7 @@
       "summary": "新华财经早报，当日综合资讯汇总，信息分散、无单条零售决策价值，仅作背景参考。",
       "source": "新华财经",
       "fetchedToday": false,
+      "subcategory": "cn-finance",
       "relevant": false
     },
     {
@@ -799,7 +830,8 @@
       "summary": "加拿大民调显示超七成民众支持退出加美贸易谈判，属国际政治动向，与国内银行零售经营无直接关联。",
       "source": "新华财经",
       "fetchedToday": false,
-      "relevant": false
+      "subcategory": "cn-finance",
+      "relevant": true
     },
     {
       "sourceId": "cnfin",
@@ -811,6 +843,7 @@
       "summary": "美财长称美伊战事进入终局，地缘缓和信号，对黄金等避险资产或有边际影响，但不构成零售经营直接决策依据。",
       "source": "新华财经",
       "fetchedToday": false,
+      "subcategory": "cn-finance",
       "relevant": false
     },
     {
@@ -823,6 +856,7 @@
       "summary": "法国今夏溺水事件社会新闻，与银行零售业务无关联，不进入经营参考。",
       "source": "新华财经",
       "fetchedToday": false,
+      "subcategory": "cn-finance",
       "relevant": false
     },
     {
@@ -835,6 +869,7 @@
       "summary": "人形机器人从展示走向落地交付，产业加速趋势。可作科技客群经营背景，但暂无零售直接商机，不进业务线。",
       "source": "证券时报",
       "fetchedToday": false,
+      "subcategory": "cn-finance",
       "relevant": false
     },
     {
@@ -848,7 +883,7 @@
       "source": "证券时报",
       "fetchedToday": false,
       "subcategory": "gz-policy",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "stcn",
@@ -860,6 +895,7 @@
       "summary": "德生科技上半年转型推进、民生AI布局，个股业绩公告，非零售条线决策信息。",
       "source": "证券时报",
       "fetchedToday": false,
+      "subcategory": "cn-finance",
       "relevant": false
     },
     {
@@ -872,7 +908,8 @@
       "summary": "万孚生物IVD全品类布局提速、国际化与AI赋能，个股业绩公告，与零售经营无直接关联。",
       "source": "证券时报",
       "fetchedToday": false,
-      "relevant": false
+      "subcategory": "cn-finance",
+      "relevant": true
     },
     {
       "sourceId": "stcn",
@@ -884,6 +921,7 @@
       "summary": "浩云科技上半年减亏46%并拟分红，个股业绩公告，非零售决策信息。",
       "source": "证券时报",
       "fetchedToday": false,
+      "subcategory": "cn-finance",
       "relevant": false
     },
     {
@@ -896,6 +934,7 @@
       "summary": "顶固集创上半年净利过亿、投资收益贡献增量，个股业绩公告，与零售经营无直接关联。",
       "source": "证券时报",
       "fetchedToday": false,
+      "subcategory": "cn-finance",
       "relevant": false
     },
     {
@@ -908,6 +947,7 @@
       "summary": "广州新龙镇推进移风易俗，属镇街行政民生新闻，与银行零售经营无关联。",
       "source": "广州日报·大洋网",
       "fetchedToday": false,
+      "subcategory": "gz-media",
       "relevant": false
     },
     {
@@ -920,6 +960,7 @@
       "summary": "广州一商家刷单失信被罚5万元，市场监管案例，可作合规宣传素材，无经营决策价值。",
       "source": "广州日报·大洋网",
       "fetchedToday": false,
+      "subcategory": "gz-media",
       "relevant": false
     },
     {
@@ -932,6 +973,7 @@
       "summary": "广州商铺占道经营扰民曝光，市容管理新闻，与银行零售经营无关联。",
       "source": "广州日报·大洋网",
       "fetchedToday": false,
+      "subcategory": "gz-media",
       "relevant": false
     },
     {
@@ -944,6 +986,7 @@
       "summary": "国家级方志学术盛会在穗举办，文化学术活动新闻，与银行零售经营无关联。",
       "source": "广州日报·大洋网",
       "fetchedToday": false,
+      "subcategory": "gz-media",
       "relevant": false
     },
     {
@@ -957,7 +1000,7 @@
       "source": "广州日报·大洋网",
       "fetchedToday": false,
       "subcategory": "gz-customer",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "dayoo-gz",
@@ -969,6 +1012,7 @@
       "summary": "首届流行音乐创作大会在广州启幕，文化活动新闻，与银行零售经营无直接关联。",
       "source": "广州日报·大洋网",
       "fetchedToday": false,
+      "subcategory": "gz-media",
       "relevant": false
     },
     {
@@ -994,6 +1038,7 @@
       "summary": "泡泡玛特业绩预期下调、股价大跌，个股消费公司动态，与银行零售经营无直接关联。",
       "source": "南方网·经济",
       "fetchedToday": false,
+      "subcategory": "gz-media",
       "relevant": false
     },
     {
@@ -1019,6 +1064,7 @@
       "summary": "奶茶店业态观察报道，消费趋势软文，无零售经营决策价值。",
       "source": "南方网·经济",
       "fetchedToday": false,
+      "subcategory": "gz-media",
       "relevant": false
     },
     {
@@ -1031,6 +1077,7 @@
       "summary": "当周中国LNG进口量约89万吨，能源行业数据，与银行零售经营无关联。",
       "source": "新华财经",
       "fetchedToday": false,
+      "subcategory": "cn-finance",
       "relevant": false
     },
     {
@@ -1043,6 +1090,7 @@
       "summary": "国内汽柴油批发价格数据，大宗价格信息，与银行零售经营无直接关联。",
       "source": "新华财经",
       "fetchedToday": false,
+      "subcategory": "cn-finance",
       "relevant": false
     },
     {
@@ -1055,6 +1103,7 @@
       "summary": "慧谷新材拟用超募资金投资珠海项目，个股募投公告，与零售经营无直接关联。",
       "source": "证券时报",
       "fetchedToday": false,
+      "subcategory": "cn-finance",
       "relevant": false
     },
     {
@@ -1067,6 +1116,7 @@
       "summary": "松原安全订单储备扩容、全球化推进，个股业绩公告，非零售决策信息。",
       "source": "证券时报",
       "fetchedToday": false,
+      "subcategory": "cn-finance",
       "relevant": false
     },
     {
@@ -1092,7 +1142,7 @@
       "summary": "公募重仓标的显疲态，基金经理审视再平衡，拥挤赛道回调风险显现。财富线可借此提示客户分散持仓、均衡配置，规避抱团拥挤风险。",
       "source": "证券时报",
       "fetchedToday": false,
-      "subcategory": "gz-wealth",
+      "subcategory": "cn-finance",
       "relevant": true
     },
     {
@@ -1105,7 +1155,7 @@
       "summary": "多只绩优基金放开限购、重新开门迎客，绩优产品申购窗口打开。财富线可借机向客户推荐放开限购的绩优基金，补足优质权益配置。",
       "source": "证券时报",
       "fetchedToday": false,
-      "subcategory": "gz-wealth",
+      "subcategory": "cn-finance",
       "relevant": true
     },
     {
@@ -1119,7 +1169,7 @@
       "source": "证券时报",
       "fetchedToday": false,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "dayoo-gz",
@@ -1131,6 +1181,7 @@
       "summary": "广州生意人群体文化报道，商业氛围软文，无零售经营决策价值。",
       "source": "广州日报·大洋网",
       "fetchedToday": false,
+      "subcategory": "gz-media",
       "relevant": false
     },
     {
@@ -1155,7 +1206,8 @@
       "summary": "茅台股价重回1300元上方、种业概念逆市上涨，A股板块行情，财富线可作白酒板块客户持仓参考，决策价值有限。",
       "source": "证券时报",
       "fetchedToday": false,
-      "relevant": false
+      "subcategory": "cn-finance",
+      "relevant": true
     },
     {
       "sourceId": "stcn",
@@ -1167,7 +1219,8 @@
       "summary": "茅台股价大涨，个股行情快讯，无零售经营决策价值。",
       "source": "证券时报",
       "fetchedToday": false,
-      "relevant": false
+      "subcategory": "cn-finance",
+      "relevant": true
     },
     {
       "sourceId": "stcn",
@@ -1179,6 +1232,7 @@
       "summary": "三大巨头集体下跌、新技术题材扰动市场，A股短线行情新闻，财富线需做好波动预期管理，无独立商机。",
       "source": "证券时报",
       "fetchedToday": false,
+      "subcategory": "cn-finance",
       "relevant": false
     },
     {
@@ -1191,7 +1245,8 @@
       "summary": "中广核风电等在云南楚雄成立新能源公司，对公产业投资动态，与零售经营无直接关联。",
       "source": "证券时报",
       "fetchedToday": false,
-      "relevant": false
+      "subcategory": "cn-finance",
+      "relevant": true
     },
     {
       "sourceId": "cctv-finance",
@@ -1227,7 +1282,7 @@
       "summary": "现货黄金连涨三周站上4600美元，美债变局释放宽松信号。财富线应把握黄金配置窗口，向客户推荐积存金、黄金ETF，并做好高位波动风险提示。",
       "source": "新浪财经·理财保险",
       "fetchedToday": false,
-      "subcategory": "gz-wealth",
+      "subcategory": "cn-finance",
       "relevant": true
     },
     {
@@ -1240,7 +1295,7 @@
       "summary": "黄金T+D、Au99、积存金上下车解析，实操类内容。财富线可据此指导客户黄金入场/离场节奏，管理高位波动预期，强化积存金长期配置价值。",
       "source": "新浪财经·理财保险",
       "fetchedToday": false,
-      "subcategory": "gz-wealth",
+      "subcategory": "cn-finance",
       "relevant": true
     },
     {
@@ -1253,7 +1308,7 @@
       "summary": "高盛警告黄金4900美元预测偏保守、交易商被迫抬轿，金价乐观情绪升温。财富线配置黄金同时须提示过热回调风险，防止客户追高。",
       "source": "新浪财经·理财保险",
       "fetchedToday": false,
-      "subcategory": "gz-wealth",
+      "subcategory": "cn-finance",
       "relevant": true
     },
     {
@@ -1266,7 +1321,8 @@
       "summary": "国资委召开中央企业6G未来产业推进会，产业政策动态，与银行零售经营无直接关联。",
       "source": "新华财经",
       "fetchedToday": false,
-      "relevant": false
+      "subcategory": "cn-finance",
+      "relevant": true
     },
     {
       "sourceId": "cnfin",
@@ -1291,7 +1347,8 @@
       "summary": "上海发布大宗商品贸易真实性规则指引，对公贸易金融监管细化，与零售经营无直接关联。",
       "source": "新华财经",
       "fetchedToday": false,
-      "relevant": false
+      "subcategory": "cn-finance",
+      "relevant": true
     },
     {
       "sourceId": "cnfin",
@@ -1303,6 +1360,7 @@
       "summary": "民间资本加码新动能投资，宏观投资结构动态，非零售经营直接决策信息。",
       "source": "新华财经",
       "fetchedToday": false,
+      "subcategory": "cn-finance",
       "relevant": false
     },
     {
@@ -1315,6 +1373,7 @@
       "summary": "菲律宾拖船沉没，国际突发新闻，与银行零售业务无关联。",
       "source": "新华财经",
       "fetchedToday": false,
+      "subcategory": "cn-finance",
       "relevant": false
     },
     {
@@ -1327,6 +1386,7 @@
       "summary": "德国出口回暖但顺差收窄，国际经贸结构性动态，与国内零售经营无直接关联。",
       "source": "新华财经",
       "fetchedToday": false,
+      "subcategory": "cn-finance",
       "relevant": false
     },
     {
@@ -1340,7 +1400,7 @@
       "source": "证券时报",
       "fetchedToday": false,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "stcn",
@@ -1352,6 +1412,7 @@
       "summary": "AI能否替科学家提出原创问题，科技评论文章，无零售经营决策价值。",
       "source": "证券时报",
       "fetchedToday": false,
+      "subcategory": "cn-finance",
       "relevant": false
     },
     {
@@ -1364,7 +1425,8 @@
       "summary": "智光电气上半年扭亏、储能放量，广州企业个股业绩，与零售经营无直接关联。",
       "source": "证券时报",
       "fetchedToday": false,
-      "relevant": false
+      "subcategory": "cn-finance",
+      "relevant": true
     },
     {
       "sourceId": "stcn",
@@ -1376,6 +1438,7 @@
       "summary": "国家电投在广东成立燃机技术服务公司，对公产业投资动态，非零售决策信息。",
       "source": "证券时报",
       "fetchedToday": false,
+      "subcategory": "cn-finance",
       "relevant": false
     },
     {
@@ -1388,7 +1451,7 @@
       "summary": "单只ETF一周净流入44.51亿元登顶亚洲吸金榜，资金借道ETF布局明显。财富线可借ETF资金流向提示客户把握宽基/主题配置方向，顺势引导定投。",
       "source": "证券时报",
       "fetchedToday": false,
-      "subcategory": "gz-wealth",
+      "subcategory": "cn-finance",
       "relevant": true
     },
     {
@@ -1401,6 +1464,7 @@
       "summary": "货拉拉研学营活动收官，企业CSR新闻，与银行零售经营无关联。",
       "source": "证券时报",
       "fetchedToday": false,
+      "subcategory": "cn-finance",
       "relevant": false
     },
     {
@@ -1413,6 +1477,7 @@
       "summary": "花都秀全街安全宣传与非遗活动，区街民生新闻，与银行零售经营无关联。",
       "source": "广州日报·大洋网",
       "fetchedToday": false,
+      "subcategory": "gz-media",
       "relevant": false
     },
     {
@@ -1425,6 +1490,7 @@
       "summary": "猎德人家夏令营结营非遗展演，社区文化新闻，与银行零售经营无关联。",
       "source": "广州日报·大洋网",
       "fetchedToday": false,
+      "subcategory": "gz-media",
       "relevant": false
     },
     {
@@ -1437,6 +1503,7 @@
       "summary": "花都读者分享会活动新闻，文化民生资讯，无经营决策价值。",
       "source": "广州日报·大洋网",
       "fetchedToday": false,
+      "subcategory": "gz-media",
       "relevant": false
     },
     {
@@ -1449,6 +1516,7 @@
       "summary": "南沙街区道路系统优化工程，市政建设新闻，与银行零售经营无关联。",
       "source": "广州日报·大洋网",
       "fetchedToday": false,
+      "subcategory": "gz-media",
       "relevant": false
     },
     {
@@ -1461,6 +1529,7 @@
       "summary": "广州840路公交进驻云溪花园，公共交通新闻，与银行零售经营无直接关联。",
       "source": "广州日报·大洋网",
       "fetchedToday": false,
+      "subcategory": "gz-media",
       "relevant": false
     },
     {
@@ -1473,6 +1542,7 @@
       "summary": "广州海珠携73家帮扶地企业亮相广博会，区域产业协作动态，可作对公与客群经营背景，零售决策价值有限。",
       "source": "广州日报·大洋网",
       "fetchedToday": false,
+      "subcategory": "gz-media",
       "relevant": false
     },
     {
@@ -1484,6 +1554,7 @@
       "summary": "427万辆汽车召回事件报道，消费行业新闻，与银行零售经营无直接关联。",
       "source": "央视财经",
       "fetchedToday": false,
+      "subcategory": "cn-finance",
       "relevant": false
     },
     {
@@ -1496,7 +1567,7 @@
       "summary": "美债利率上行叠加全球供给扰动，有色定价中枢或承压。财富线可提示客户关注有色商品波动，调整大宗商品类资产配置预期。",
       "source": "新浪财经·理财保险",
       "fetchedToday": false,
-      "subcategory": "gz-wealth",
+      "subcategory": "cn-finance",
       "relevant": true
     },
     {
@@ -1509,7 +1580,7 @@
       "summary": "机器人ETF博时启动发行，主题ETF新品供给。财富线可结合AI/机器人产业趋势向客户推荐主题基金配置，把握科技成长主线。",
       "source": "新浪财经·理财保险",
       "fetchedToday": false,
-      "subcategory": "gz-wealth",
+      "subcategory": "cn-finance",
       "relevant": true
     },
     {
@@ -1522,7 +1593,7 @@
       "summary": "融通泓安等新品基金启动发行，产品供给扩容。财富线可优选新产品丰富货架，按客户风险等级匹配合适基金。",
       "source": "新浪财经·理财保险",
       "fetchedToday": false,
-      "subcategory": "gz-wealth",
+      "subcategory": "cn-finance",
       "relevant": true
     },
     {
@@ -1532,11 +1603,11 @@
       "excerpt": "【21财经·金融】客户挂靠居间人分佣金、开户问卷给答案 中金岭南期货两人被采取监管措施",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "gz",
-      "summary": "中金岭南期货两名人员因居间人分佣、开户问卷代答被监管处罚。分行须强化销售合规，严禁代客操作与利益输送，守住适当性底线。",
+      "summary": "（非银行业务相关，已过滤）中金岭南期货两名人员因居间人分佣、开户问卷代答被监管处罚。分行须强化销售合规，严禁代客操作与利益输送，守住适当性底线。",
       "source": "21世纪经济报道·金融",
       "fetchedToday": false,
-      "subcategory": "gz-wealth",
-      "relevant": true
+      "subcategory": "cn-finance",
+      "relevant": false
     },
     {
       "sourceId": "21jingji-finance",
@@ -1565,7 +1636,7 @@
       "summary": "国际金价站上4700美元、多家银行积存金克价破千，黄金强势延续。财富线应加大积存金与黄金ETF配置引导，同步强化高位波动风险提示。",
       "source": "21世纪经济报道·金融",
       "fetchedToday": false,
-      "subcategory": "gz-wealth",
+      "subcategory": "cn-finance",
       "relevant": true
     },
     {
@@ -1592,7 +1663,7 @@
       "source": "广州市统计局",
       "fetchedToday": false,
       "subcategory": "gz-customer",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "gz-stats",
@@ -1604,6 +1675,7 @@
       "summary": "暑运前半程广州运力拉满、客流量高位，交通运行数据，客群经营参考价值有限。",
       "source": "广州市统计局",
       "fetchedToday": false,
+      "subcategory": "gz-customer",
       "relevant": false
     },
     {
@@ -1642,7 +1714,8 @@
       "summary": "工信部将印发时空信息终端供需适配行动计划，产业政策动态，与银行零售经营无直接关联。",
       "source": "新华财经",
       "fetchedToday": false,
-      "relevant": false
+      "subcategory": "cn-finance",
+      "relevant": true
     },
     {
       "sourceId": "cnfin",
@@ -1654,6 +1727,7 @@
       "summary": "多家药企中报增长、创新比拼国际化AI化，医药行业业绩动态，非零售经营直接决策信息。",
       "source": "新华财经",
       "fetchedToday": false,
+      "subcategory": "cn-finance",
       "relevant": false
     },
     {
@@ -1666,7 +1740,8 @@
       "summary": "新华500指数跌1.35%，指数行情快讯，无零售经营决策价值。",
       "source": "新华财经",
       "fetchedToday": false,
-      "relevant": false
+      "subcategory": "cn-finance",
+      "relevant": true
     },
     {
       "sourceId": "cnfin",
@@ -1678,6 +1753,7 @@
       "summary": "全国电动汽车充电桩达2368.3万个，产业数据，与银行零售经营无直接关联。",
       "source": "新华财经",
       "fetchedToday": false,
+      "subcategory": "cn-finance",
       "relevant": false
     },
     {
@@ -1690,6 +1766,7 @@
       "summary": "AI重塑商业、信任决定未来，商业评论文章，无零售经营直接决策价值。",
       "source": "新华财经",
       "fetchedToday": false,
+      "subcategory": "cn-finance",
       "relevant": false
     },
     {
@@ -1715,6 +1792,7 @@
       "summary": "广晟控股澄清与7家企业无股权关系，上市公司澄清公告，与零售经营无关联。",
       "source": "证券时报",
       "fetchedToday": false,
+      "subcategory": "cn-finance",
       "relevant": false
     },
     {
@@ -1727,6 +1805,7 @@
       "summary": "新基药目录施行倒计时，医药政策动态，与银行零售经营无直接关联。",
       "source": "证券时报",
       "fetchedToday": false,
+      "subcategory": "cn-finance",
       "relevant": false
     },
     {
@@ -1752,6 +1831,7 @@
       "summary": "同程旅行中秋国庆提前订热度大增，出行消费公司动态，可作消费趋势背景，零售决策价值有限。",
       "source": "证券时报",
       "fetchedToday": false,
+      "subcategory": "cn-finance",
       "relevant": false
     },
     {
@@ -1777,6 +1857,7 @@
       "summary": "广州地铁十二号线中段轨行区进入运营调试，市政交通新闻，与银行零售经营无关联。",
       "source": "广州日报·大洋网",
       "fetchedToday": false,
+      "subcategory": "gz-media",
       "relevant": false
     },
     {
@@ -1789,6 +1870,7 @@
       "summary": "广州9月启用一批移动电子眼，交管新闻，与银行零售经营无关联。",
       "source": "广州日报·大洋网",
       "fetchedToday": false,
+      "subcategory": "gz-media",
       "relevant": false
     },
     {
@@ -1801,7 +1883,8 @@
       "summary": "华夏精选固收配置基金净值披露，例行产品净值公告，客户持仓参考信息，无独立商机。",
       "source": "新浪财经·理财保险",
       "fetchedToday": false,
-      "relevant": false
+      "subcategory": "cn-finance",
+      "relevant": true
     },
     {
       "sourceId": "sina-money",
@@ -1813,7 +1896,8 @@
       "summary": "东亚联丰亚洲策略债券基金净值披露，海外债基净值公告，例行披露，无独立决策价值。",
       "source": "新浪财经·理财保险",
       "fetchedToday": false,
-      "relevant": false
+      "subcategory": "cn-finance",
+      "relevant": true
     },
     {
       "sourceId": "21jingji-finance",
@@ -1838,6 +1922,7 @@
       "summary": "港企YUK WING GP供股及配售安排，境外上市公司资本运作公告，与广东零售经营无关联。",
       "source": "港交所IPO公告",
       "fetchedToday": false,
+      "subcategory": "hkex",
       "relevant": false
     },
     {
@@ -1863,6 +1948,7 @@
       "summary": "激光技术新突破助力光子计算，前沿科技新闻，与银行零售经营无直接关联。",
       "source": "新华财经",
       "fetchedToday": false,
+      "subcategory": "cn-finance",
       "relevant": false
     },
     {
@@ -1875,7 +1961,8 @@
       "summary": "山东港口原油价格指数环比上涨，大宗商品价格数据，与零售经营无直接关联。",
       "source": "新华财经",
       "fetchedToday": false,
-      "relevant": false
+      "subcategory": "cn-finance",
+      "relevant": true
     },
     {
       "sourceId": "cnfin",
@@ -1887,6 +1974,7 @@
       "summary": "广西电网绿电赋能探索，能源行业报道，与银行零售经营无关联。",
       "source": "新华财经",
       "fetchedToday": false,
+      "subcategory": "cn-finance",
       "relevant": false
     },
     {
@@ -1899,7 +1987,8 @@
       "summary": "莱克电气发行江苏首单上市民企绿色超短融，对公融资动态，非零售决策信息。",
       "source": "证券时报",
       "fetchedToday": false,
-      "relevant": false
+      "subcategory": "cn-finance",
+      "relevant": true
     },
     {
       "sourceId": "stcn",
@@ -1911,6 +2000,7 @@
       "summary": "顺鑫农业转型实践报道，个股经营动态，与零售经营无直接关联。",
       "source": "证券时报",
       "fetchedToday": false,
+      "subcategory": "cn-finance",
       "relevant": false
     },
     {
@@ -1923,7 +2013,7 @@
       "summary": "分析师调查：美联储与英央行今年大概率按兵不动、欧央行日央行有加息预期，全球利率分化。财富线可据此管理海外固收与美元资产配置预期。",
       "source": "新浪财经·理财保险",
       "fetchedToday": false,
-      "subcategory": "gz-wealth",
+      "subcategory": "cn-finance",
       "relevant": true
     },
     {
@@ -1936,7 +2026,8 @@
       "summary": "惠理价值系列基金净值披露，例行公告，无独立决策价值。",
       "source": "新浪财经·理财保险",
       "fetchedToday": false,
-      "relevant": false
+      "subcategory": "cn-finance",
+      "relevant": true
     },
     {
       "sourceId": "stcn",
@@ -1949,7 +2040,7 @@
       "source": "证券时报",
       "fetchedToday": false,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-money",
@@ -1958,11 +2049,11 @@
       "excerpt": "【财富管理】中原再担保集团董事长薛怀宇被查 曾任中原信托副总裁",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "category": "gz",
-      "summary": "中原再担保集团董事长薛怀宇被查，曾任中原信托副总裁，金融高管落马案例。分行应强化内控合规教育，警惕关联交易与道德风险。",
+      "summary": "（非银行业务相关，已过滤）中原再担保集团董事长薛怀宇被查，曾任中原信托副总裁，金融高管落马案例。分行应强化内控合规教育，警惕关联交易与道德风险。",
       "source": "新浪财经·理财保险",
       "fetchedToday": false,
-      "subcategory": "gz-wealth",
-      "relevant": true
+      "subcategory": "cn-finance",
+      "relevant": false
     },
     {
       "sourceId": "sina-money",
@@ -1974,7 +2065,7 @@
       "summary": "美债困境有望推动流动性宽松、黄金仍有上行空间，机构观点。财富线可据此向客户传导黄金中长期配置逻辑，同时提示节奏管理。",
       "source": "新浪财经·理财保险",
       "fetchedToday": false,
-      "subcategory": "gz-wealth",
+      "subcategory": "cn-finance",
       "relevant": true
     },
     {
@@ -1987,7 +2078,7 @@
       "summary": "黄金到达压力位附近，突破还是冲高回落，技术面分析视频。财富线可用于客户沟通中的金价走势参考，提示关键点位波动风险。",
       "source": "新浪财经·理财保险",
       "fetchedToday": false,
-      "subcategory": "gz-wealth",
+      "subcategory": "cn-finance",
       "relevant": true
     },
     {
@@ -2000,7 +2091,7 @@
       "summary": "黄金3周暴涨700美元、高盛预测冲6000美元，金价高波动行情。财富线配置黄金务必强化风险提示，防止客户情绪化追高。",
       "source": "新浪财经·理财保险",
       "fetchedToday": false,
-      "subcategory": "gz-wealth",
+      "subcategory": "cn-finance",
       "relevant": true
     },
     {
@@ -2027,7 +2118,7 @@
       "source": "港交所IPO公告",
       "fetchedToday": false,
       "subcategory": "hkex",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "hkex",
@@ -2039,6 +2130,7 @@
       "summary": "小鹏披露认购、赎回权及Dogotix股权激励计划，公司治理公告，与零售经营直接关联有限。",
       "source": "港交所IPO公告",
       "fetchedToday": false,
+      "subcategory": "hkex",
       "relevant": false
     },
     {
@@ -2052,7 +2144,7 @@
       "source": "北交所IPO公告",
       "fetchedToday": false,
       "subcategory": "bse",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-bank",
@@ -2077,7 +2169,8 @@
       "summary": "苏州银行30亿元二级资本债发行完毕，同业资本补充动态，与零售经营无直接关联。",
       "source": "新浪财经·银行频道",
       "fetchedToday": false,
-      "relevant": false
+      "subcategory": "cn-finance",
+      "relevant": true
     },
     {
       "sourceId": "sina-bank",
@@ -2089,7 +2182,8 @@
       "summary": "青岛银行职工董事任职资格获核准，同业人事公告，非零售决策信息。",
       "source": "新浪财经·银行频道",
       "fetchedToday": false,
-      "relevant": false
+      "subcategory": "cn-finance",
+      "relevant": true
     },
     {
       "sourceId": "sina-bank",
@@ -2101,7 +2195,8 @@
       "summary": "瑞丰银行拟每10股派1元中期分红，同业分红动态，可作股东回报参考，零售决策价值有限。",
       "source": "新浪财经·银行频道",
       "fetchedToday": false,
-      "relevant": false
+      "subcategory": "cn-finance",
+      "relevant": true
     },
     {
       "sourceId": "sina-bank",
@@ -2113,7 +2208,8 @@
       "summary": "瑞丰银行上半年营收22.14亿元、同比下降1.96%，同业半年报，可对标经营趋势，非零售直接决策信息。",
       "source": "新浪财经·银行频道",
       "fetchedToday": false,
-      "relevant": false
+      "subcategory": "cn-finance",
+      "relevant": true
     },
     {
       "sourceId": "sina-bank",
@@ -2138,7 +2234,7 @@
       "summary": "内地投资者在港银行不动户核查迎关键节点，跨境资金与账户合规收紧。私行/财富线应提示客户合规处理香港账户，避免账户冻结风险。",
       "source": "新浪财经·银行频道",
       "fetchedToday": false,
-      "subcategory": "gz-wealth",
+      "subcategory": "cn-finance",
       "subcategories": [
         "gz-wealth",
         "gz-private"
@@ -2156,7 +2252,7 @@
       "source": "广州日报·大洋网",
       "fetchedToday": false,
       "subcategory": "gz-customer",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "dayoo-gz",
@@ -2168,6 +2264,7 @@
       "summary": "广府共绣工作营为广州老建筑活化出点子，城市更新文化活动，与零售经营无直接关联。",
       "source": "广州日报·大洋网",
       "fetchedToday": false,
+      "subcategory": "gz-media",
       "relevant": false
     },
     {
@@ -2180,6 +2277,7 @@
       "summary": "广州白鹅潭第二高楼效果图曝光，城市建设新闻，与银行零售经营无直接关联。",
       "source": "广州日报·大洋网",
       "fetchedToday": false,
+      "subcategory": "gz-media",
       "relevant": false
     },
     {
@@ -2192,6 +2290,7 @@
       "summary": "石头科技Q2扣非净利同比增长111%，个股业绩公告，非零售决策信息。",
       "source": "新华财经",
       "fetchedToday": false,
+      "subcategory": "cn-finance",
       "relevant": false
     },
     {
@@ -2217,6 +2316,7 @@
       "summary": "商品日报：集运欧线乙二醇涨超4%、焦炭刷新两年新高，大宗商品行情，与零售经营无直接关联。",
       "source": "新华财经",
       "fetchedToday": false,
+      "subcategory": "cn-finance",
       "relevant": false
     },
     {
@@ -2242,6 +2342,7 @@
       "summary": "泉州智造电力保障报道，区域产业新闻，与银行零售经营无关联。",
       "source": "新华财经",
       "fetchedToday": false,
+      "subcategory": "cn-finance",
       "relevant": false
     },
     {
@@ -2254,7 +2355,8 @@
       "summary": "中国能化现货估价指数环比上涨，大宗指数数据，非零售决策信息。",
       "source": "新华财经",
       "fetchedToday": false,
-      "relevant": false
+      "subcategory": "cn-finance",
+      "relevant": true
     },
     {
       "sourceId": "stcn",
@@ -2266,7 +2368,8 @@
       "summary": "月内涨超20%的品种受关注、相关股票爆发，行情快讯，无零售经营决策价值。",
       "source": "证券时报",
       "fetchedToday": false,
-      "relevant": false
+      "subcategory": "cn-finance",
+      "relevant": true
     },
     {
       "sourceId": "stcn",
@@ -2278,7 +2381,7 @@
       "summary": "极端行情中宝藏基金年内赚超20%、最大回撤不到10%，攻守兼备策略复盘。财富线可借案例向客户推介稳健策略基金，强化回撤控制理念。",
       "source": "证券时报",
       "fetchedToday": false,
-      "subcategory": "gz-wealth",
+      "subcategory": "cn-finance",
       "relevant": true
     },
     {
@@ -2291,6 +2394,7 @@
       "summary": "悦达投资转型成效兑现，个股业绩公告，与零售经营无直接关联。",
       "source": "证券时报",
       "fetchedToday": false,
+      "subcategory": "cn-finance",
       "relevant": false
     },
     {
@@ -2303,6 +2407,7 @@
       "summary": "康冠科技半年报拟分红超2.5亿元，个股业绩公告，非零售决策信息。",
       "source": "证券时报",
       "fetchedToday": false,
+      "subcategory": "cn-finance",
       "relevant": false
     },
     {
@@ -2315,6 +2420,7 @@
       "summary": "零跑汽车上半年营收381.1亿元创同期新高，个股业绩公告，与零售经营无直接关联。",
       "source": "证券时报",
       "fetchedToday": false,
+      "subcategory": "cn-finance",
       "relevant": false
     },
     {
@@ -2327,6 +2433,7 @@
       "summary": "Keep中期业绩亏损收窄、AI应用提速，个股业绩公告，非零售决策信息。",
       "source": "证券时报",
       "fetchedToday": false,
+      "subcategory": "cn-finance",
       "relevant": false
     },
     {
@@ -2340,7 +2447,7 @@
       "source": "南方网·经济",
       "fetchedToday": false,
       "subcategory": "gz-customer",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "21jingji-finance",
@@ -2365,7 +2472,7 @@
       "summary": "业绩不达标就调基准行不通了，单日超200只理财密集调基，理财业绩比较基准规范收紧。财富线应规范理财产品宣传，引导客户理性看待净值波动。",
       "source": "新浪财经·理财保险",
       "fetchedToday": false,
-      "subcategory": "gz-wealth",
+      "subcategory": "cn-finance",
       "relevant": true
     },
     {
@@ -2379,7 +2486,7 @@
       "source": "港交所IPO公告",
       "fetchedToday": false,
       "subcategory": "hkex",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-bank",
@@ -2391,7 +2498,8 @@
       "summary": "瑞丰银行对金柯桥集团关联授信续授6.9亿元，同业关联授信披露，与零售经营无直接关联。",
       "source": "新浪财经·银行频道",
       "fetchedToday": false,
-      "relevant": false
+      "subcategory": "cn-finance",
+      "relevant": true
     },
     {
       "sourceId": "sina-bank",
@@ -2403,7 +2511,8 @@
       "summary": "浦发银行发行150亿元绿色金融债券，同业资本工具动态，与零售经营无直接关联。",
       "source": "新浪财经·银行频道",
       "fetchedToday": false,
-      "relevant": false
+      "subcategory": "cn-finance",
+      "relevant": true
     },
     {
       "sourceId": "nfra",
@@ -2467,7 +2576,8 @@
       "summary": "财联社金榛子资管卓越案例征集网络投票启动，行业评选活动宣传，无零售经营决策价值。",
       "source": "财联社",
       "fetchedToday": false,
-      "relevant": false
+      "subcategory": "cn-finance",
+      "relevant": true
     },
     {
       "sourceId": "cls",
@@ -2493,7 +2603,7 @@
       "source": "财联社",
       "fetchedToday": false,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "cnfin",
@@ -2505,7 +2615,8 @@
       "summary": "山东港口石油焦现货价格环比上涨9元/吨，大宗数据，非零售决策信息。",
       "source": "新华财经",
       "fetchedToday": false,
-      "relevant": false
+      "subcategory": "cn-finance",
+      "relevant": true
     },
     {
       "sourceId": "cnfin",
@@ -2517,7 +2628,8 @@
       "summary": "山东港口钢坯热轧C料价格小幅上涨，大宗数据，非零售决策信息。",
       "source": "新华财经",
       "fetchedToday": false,
-      "relevant": false
+      "subcategory": "cn-finance",
+      "relevant": true
     },
     {
       "sourceId": "stcn",
@@ -2530,7 +2642,7 @@
       "source": "证券时报",
       "fetchedToday": false,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "stcn",
@@ -2542,6 +2654,7 @@
       "summary": "黄山谷捷上半年收入增35%、募投推进，个股业绩公告，非零售决策信息。",
       "source": "证券时报",
       "fetchedToday": false,
+      "subcategory": "cn-finance",
       "relevant": false
     },
     {
@@ -2554,6 +2667,7 @@
       "summary": "3D打印设备全球爆单、融资客加仓，产业行情快讯，与零售经营无直接关联。",
       "source": "证券时报",
       "fetchedToday": false,
+      "subcategory": "cn-finance",
       "relevant": false
     },
     {
@@ -2580,7 +2694,7 @@
       "source": "证券时报",
       "fetchedToday": false,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "southcn",
@@ -2593,7 +2707,7 @@
       "source": "南方网·经济",
       "fetchedToday": false,
       "subcategory": "gz-customer",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "cnfin",
@@ -2606,7 +2720,7 @@
       "source": "新华财经",
       "fetchedToday": false,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "cnfin",
@@ -2619,7 +2733,7 @@
       "source": "新华财经",
       "fetchedToday": false,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "stcn",
@@ -2632,7 +2746,7 @@
       "source": "证券时报",
       "fetchedToday": false,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "cnfin",
@@ -2645,7 +2759,7 @@
       "source": "新华财经",
       "fetchedToday": false,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "stcn",
@@ -2658,7 +2772,7 @@
       "source": "证券时报",
       "fetchedToday": false,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "stcn",
@@ -2671,7 +2785,7 @@
       "source": "证券时报",
       "fetchedToday": false,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-money",
@@ -2697,7 +2811,7 @@
       "source": "北交所IPO公告",
       "fetchedToday": false,
       "subcategory": "bse",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-bank",
@@ -2710,7 +2824,7 @@
       "source": "新浪财经·银行频道",
       "fetchedToday": false,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "stcn",
@@ -2736,7 +2850,7 @@
       "source": "证券时报",
       "fetchedToday": false,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "cnfin",
@@ -2840,7 +2954,7 @@
       "source": "新华财经",
       "fetchedToday": false,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "stcn",
@@ -2853,7 +2967,7 @@
       "source": "证券时报",
       "fetchedToday": false,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "stcn",
@@ -2866,7 +2980,7 @@
       "source": "证券时报",
       "fetchedToday": false,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "dayoo-gz",
@@ -2879,7 +2993,7 @@
       "source": "广州日报·大洋网",
       "fetchedToday": false,
       "subcategory": "gz-media",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "dayoo-gz",
@@ -2905,7 +3019,7 @@
       "source": "新浪财经·理财保险",
       "fetchedToday": false,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-money",
@@ -3061,7 +3175,7 @@
       "source": "港交所IPO公告",
       "fetchedToday": false,
       "subcategory": "hkex",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "hkex",
@@ -3074,7 +3188,7 @@
       "source": "港交所IPO公告",
       "fetchedToday": false,
       "subcategory": "hkex",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "hkex",
@@ -3087,7 +3201,7 @@
       "source": "港交所IPO公告",
       "fetchedToday": false,
       "subcategory": "hkex",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "hkex",
@@ -3100,7 +3214,7 @@
       "source": "港交所IPO公告",
       "fetchedToday": false,
       "subcategory": "hkex",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "hkex",
@@ -3113,7 +3227,7 @@
       "source": "港交所IPO公告",
       "fetchedToday": false,
       "subcategory": "hkex",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "hkex",
@@ -3126,7 +3240,7 @@
       "source": "港交所IPO公告",
       "fetchedToday": false,
       "subcategory": "hkex",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-bank",
@@ -3178,7 +3292,7 @@
       "source": "新华财经",
       "fetchedToday": false,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "cnfin",
@@ -3213,11 +3327,11 @@
       "excerpt": "",
       "publishedAt": "2026-08-25T00:00:00.000Z",
       "category": "finance",
-      "summary": "美媒：美政府计划吊销20万外国人商务和旅游签证；对分行财富/信贷/客群业务有宏观参考",
+      "summary": "（非银行业务相关，已过滤）美媒：美政府计划吊销20万外国人商务和旅游签证；对分行财富/信贷/客群业务有宏观参考",
       "source": "新华财经",
       "fetchedToday": false,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "cnfin",
@@ -3226,11 +3340,11 @@
       "excerpt": "",
       "publishedAt": "2026-08-25T00:00:00.000Z",
       "category": "finance",
-      "summary": "中秋国庆“黄金周”出行预订提前启动；对分行财富/信贷/客群业务有宏观参考",
+      "summary": "（非银行业务相关，已过滤）中秋国庆“黄金周”出行预订提前启动；对分行财富/信贷/客群业务有宏观参考",
       "source": "新华财经",
       "fetchedToday": false,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "cnfin",
@@ -3308,7 +3422,7 @@
       "source": "证券时报",
       "fetchedToday": false,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "stcn",
@@ -3347,7 +3461,7 @@
       "source": "广州日报·大洋网",
       "fetchedToday": false,
       "subcategory": "gz-media",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "dayoo-gz",
@@ -3412,7 +3526,7 @@
       "source": "南方网·经济",
       "fetchedToday": false,
       "subcategory": "gz-media",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "investing-news",
@@ -3425,7 +3539,7 @@
       "source": "Investing.com News",
       "fetchedToday": true,
       "subcategory": "us",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-money",
@@ -3464,7 +3578,7 @@
       "source": "上交所IPO公告",
       "fetchedToday": true,
       "subcategory": "sse",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "szse",
@@ -3477,7 +3591,7 @@
       "source": "深交所IPO公告",
       "fetchedToday": true,
       "subcategory": "szse",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "szse",
@@ -3490,7 +3604,7 @@
       "source": "深交所IPO公告",
       "fetchedToday": true,
       "subcategory": "szse",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-bank",
@@ -3503,7 +3617,7 @@
       "source": "新浪财经·银行频道",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-bank",
@@ -3516,7 +3630,7 @@
       "source": "新浪财经·银行频道",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-bank",
@@ -3659,7 +3773,7 @@
       "source": "东方财富",
       "fetchedToday": true,
       "subcategory": "a-share",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "eastmoney-stock",
@@ -3672,7 +3786,7 @@
       "source": "东方财富",
       "fetchedToday": true,
       "subcategory": "a-share",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "eastmoney-stock",
@@ -3685,7 +3799,7 @@
       "source": "东方财富",
       "fetchedToday": true,
       "subcategory": "a-share",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "eastmoney-stock",
@@ -3737,7 +3851,7 @@
       "source": "东方财富",
       "fetchedToday": true,
       "subcategory": "a-share",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "eastmoney-stock",
@@ -3763,7 +3877,7 @@
       "source": "东方财富",
       "fetchedToday": true,
       "subcategory": "a-share",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "eastmoney-stock",
@@ -3828,7 +3942,7 @@
       "source": "港交所披露易",
       "fetchedToday": true,
       "subcategory": "hk",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "hkex-stock",
@@ -3841,7 +3955,7 @@
       "source": "港交所披露易",
       "fetchedToday": true,
       "subcategory": "hk",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "hkex-stock",
@@ -3854,7 +3968,7 @@
       "source": "港交所披露易",
       "fetchedToday": true,
       "subcategory": "hk",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "hkex-stock",
@@ -3867,7 +3981,7 @@
       "source": "港交所披露易",
       "fetchedToday": true,
       "subcategory": "hk",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "hkex-stock",
@@ -3880,7 +3994,7 @@
       "source": "港交所披露易",
       "fetchedToday": true,
       "subcategory": "hk",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "hkex-stock",
@@ -3893,7 +4007,7 @@
       "source": "港交所披露易",
       "fetchedToday": true,
       "subcategory": "hk",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "hkex-stock",
@@ -3906,7 +4020,7 @@
       "source": "港交所披露易",
       "fetchedToday": true,
       "subcategory": "hk",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "hkex-stock",
@@ -3919,7 +4033,7 @@
       "source": "港交所披露易",
       "fetchedToday": true,
       "subcategory": "hk",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "hkex-stock",
@@ -3932,7 +4046,7 @@
       "source": "港交所披露易",
       "fetchedToday": true,
       "subcategory": "hk",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "hkex-stock",
@@ -3945,7 +4059,7 @@
       "source": "港交所披露易",
       "fetchedToday": true,
       "subcategory": "hk",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "stcn",
@@ -3958,7 +4072,7 @@
       "source": "证券时报",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "stcn",
@@ -4049,7 +4163,7 @@
       "source": "新华财经",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "cnfin",
@@ -4075,7 +4189,7 @@
       "source": "新华财经",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "cnfin",
@@ -4088,7 +4202,7 @@
       "source": "新华财经",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "cnfin",
@@ -4101,7 +4215,7 @@
       "source": "新华财经",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "dayoo-gz",
@@ -4114,7 +4228,7 @@
       "source": "广州日报·大洋网",
       "fetchedToday": true,
       "subcategory": "gz-media",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "dayoo-gz",
@@ -4153,7 +4267,7 @@
       "source": "广州日报·大洋网",
       "fetchedToday": true,
       "subcategory": "gz-media",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "dayoo-gz",
@@ -4166,7 +4280,7 @@
       "source": "广州日报·大洋网",
       "fetchedToday": true,
       "subcategory": "gz-media",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "dayoo-gz",
@@ -4192,7 +4306,7 @@
       "source": "央广网·广东",
       "fetchedToday": true,
       "subcategory": "gz-media",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "cnr-gd",
@@ -4205,7 +4319,7 @@
       "source": "央广网·广东",
       "fetchedToday": true,
       "subcategory": "gz-media",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "cnr-gd",
@@ -4218,7 +4332,7 @@
       "source": "央广网·广东",
       "fetchedToday": true,
       "subcategory": "gz-media",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "investing-news",
@@ -4231,7 +4345,7 @@
       "source": "Investing.com News",
       "fetchedToday": true,
       "subcategory": "us",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "investing-news",
@@ -4244,7 +4358,7 @@
       "source": "Investing.com News",
       "fetchedToday": true,
       "subcategory": "us",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "investing-news",
@@ -4257,7 +4371,7 @@
       "source": "Investing.com News",
       "fetchedToday": true,
       "subcategory": "us",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "investing-news",
@@ -4270,7 +4384,7 @@
       "source": "Investing.com News",
       "fetchedToday": true,
       "subcategory": "us",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "investing-news",
@@ -4283,7 +4397,7 @@
       "source": "Investing.com News",
       "fetchedToday": true,
       "subcategory": "us",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "investing-news",
@@ -4296,7 +4410,7 @@
       "source": "Investing.com News",
       "fetchedToday": true,
       "subcategory": "us",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "investing-news",
@@ -4309,7 +4423,7 @@
       "source": "Investing.com News",
       "fetchedToday": true,
       "subcategory": "us",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "investing-news",
@@ -4322,7 +4436,7 @@
       "source": "Investing.com News",
       "fetchedToday": true,
       "subcategory": "us",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "investing-news",
@@ -4335,7 +4449,7 @@
       "source": "Investing.com News",
       "fetchedToday": true,
       "subcategory": "us",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "investing-news",
@@ -4348,7 +4462,7 @@
       "source": "Investing.com News",
       "fetchedToday": true,
       "subcategory": "us",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-money",
@@ -4387,7 +4501,7 @@
       "source": "上交所IPO公告",
       "fetchedToday": true,
       "subcategory": "sse",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sse",
@@ -4400,7 +4514,7 @@
       "source": "上交所IPO公告",
       "fetchedToday": true,
       "subcategory": "sse",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "szse",
@@ -4413,7 +4527,7 @@
       "source": "深交所IPO公告",
       "fetchedToday": true,
       "subcategory": "szse",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-bank",
@@ -4426,7 +4540,7 @@
       "source": "新浪财经·银行频道",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-bank",
@@ -4465,7 +4579,7 @@
       "source": "新浪财经·银行频道",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-bank",
@@ -4504,7 +4618,7 @@
       "source": "新浪财经·港股",
       "fetchedToday": true,
       "subcategory": "hk",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-hk-stock",
@@ -4660,7 +4774,7 @@
       "source": "新浪财经·港股",
       "fetchedToday": true,
       "subcategory": "hk",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-hk-stock",
@@ -4673,7 +4787,7 @@
       "source": "新浪财经·港股",
       "fetchedToday": true,
       "subcategory": "hk",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-hk-stock",
@@ -4686,7 +4800,7 @@
       "source": "新浪财经·港股",
       "fetchedToday": true,
       "subcategory": "hk",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-hk-stock",
@@ -4699,7 +4813,7 @@
       "source": "新浪财经·港股",
       "fetchedToday": true,
       "subcategory": "hk",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-hk-stock",
@@ -4712,7 +4826,7 @@
       "source": "新浪财经·港股",
       "fetchedToday": true,
       "subcategory": "hk",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-hk-stock",
@@ -4751,7 +4865,7 @@
       "source": "新浪财经·港股",
       "fetchedToday": true,
       "subcategory": "hk",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "cnfin",
@@ -4764,7 +4878,7 @@
       "source": "新华财经",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "cnfin",
@@ -4816,7 +4930,7 @@
       "source": "新华财经",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "cnfin",
@@ -4829,7 +4943,7 @@
       "source": "新华财经",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "stcn",
@@ -4842,7 +4956,7 @@
       "source": "证券时报",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "stcn",
@@ -4855,7 +4969,7 @@
       "source": "证券时报",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "stcn",
@@ -4881,7 +4995,7 @@
       "source": "证券时报",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "stcn",
@@ -4907,7 +5021,7 @@
       "source": "证券时报",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "dayoo-gz",
@@ -4920,7 +5034,7 @@
       "source": "广州日报·大洋网",
       "fetchedToday": true,
       "subcategory": "gz-media",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "southcn",
@@ -4933,7 +5047,7 @@
       "source": "南方网·经济",
       "fetchedToday": true,
       "subcategory": "gz-media",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "southcn",
@@ -4946,7 +5060,7 @@
       "source": "南方网·经济",
       "fetchedToday": true,
       "subcategory": "gz-media",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "southcn",
@@ -4959,7 +5073,7 @@
       "source": "南方网·经济",
       "fetchedToday": true,
       "subcategory": "gz-media",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "southcn",
@@ -4972,7 +5086,7 @@
       "source": "南方网·经济",
       "fetchedToday": true,
       "subcategory": "gz-media",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "southcn",
@@ -4985,7 +5099,7 @@
       "source": "南方网·经济",
       "fetchedToday": true,
       "subcategory": "gz-media",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "southcn",
@@ -4998,7 +5112,7 @@
       "source": "南方网·经济",
       "fetchedToday": true,
       "subcategory": "gz-media",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "cnbc-top",
@@ -5011,7 +5125,7 @@
       "source": "CNBC Top Stories",
       "fetchedToday": true,
       "subcategory": "us",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "cnbc-top",
@@ -5024,7 +5138,7 @@
       "source": "CNBC Top Stories",
       "fetchedToday": true,
       "subcategory": "us",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "cnbc-top",
@@ -5037,7 +5151,7 @@
       "source": "CNBC Top Stories",
       "fetchedToday": true,
       "subcategory": "us",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "cnbc-top",
@@ -5050,7 +5164,7 @@
       "source": "CNBC Top Stories",
       "fetchedToday": true,
       "subcategory": "us",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "cnbc-top",
@@ -5063,7 +5177,7 @@
       "source": "CNBC Top Stories",
       "fetchedToday": true,
       "subcategory": "us",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "cnbc-top",
@@ -5076,7 +5190,7 @@
       "source": "CNBC Top Stories",
       "fetchedToday": true,
       "subcategory": "us",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "cnbc-top",
@@ -5089,7 +5203,7 @@
       "source": "CNBC Top Stories",
       "fetchedToday": true,
       "subcategory": "us",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "cnbc-top",
@@ -5102,7 +5216,7 @@
       "source": "CNBC Top Stories",
       "fetchedToday": true,
       "subcategory": "us",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "cnbc-top",
@@ -5115,7 +5229,7 @@
       "source": "CNBC Top Stories",
       "fetchedToday": true,
       "subcategory": "us",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "investing-news",
@@ -5128,7 +5242,7 @@
       "source": "Investing.com News",
       "fetchedToday": true,
       "subcategory": "us",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "investing-news",
@@ -5141,7 +5255,7 @@
       "source": "Investing.com News",
       "fetchedToday": true,
       "subcategory": "us",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "investing-news",
@@ -5154,7 +5268,7 @@
       "source": "Investing.com News",
       "fetchedToday": true,
       "subcategory": "us",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "investing-news",
@@ -5167,7 +5281,7 @@
       "source": "Investing.com News",
       "fetchedToday": true,
       "subcategory": "us",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "investing-news",
@@ -5180,7 +5294,7 @@
       "source": "Investing.com News",
       "fetchedToday": true,
       "subcategory": "us",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "investing-news",
@@ -5193,7 +5307,7 @@
       "source": "Investing.com News",
       "fetchedToday": true,
       "subcategory": "us",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "investing-news",
@@ -5206,7 +5320,7 @@
       "source": "Investing.com News",
       "fetchedToday": true,
       "subcategory": "us",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-money",
@@ -5245,7 +5359,7 @@
       "source": "东方财富",
       "fetchedToday": true,
       "subcategory": "a-share",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-hk-stock",
@@ -5284,7 +5398,7 @@
       "source": "新华财经",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "cnfin",
@@ -5323,7 +5437,7 @@
       "source": "证券时报",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "stcn",
@@ -5336,7 +5450,7 @@
       "source": "证券时报",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "stcn",
@@ -5349,7 +5463,7 @@
       "source": "证券时报",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "stcn",
@@ -5362,7 +5476,7 @@
       "source": "证券时报",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "stcn",
@@ -5388,7 +5502,7 @@
       "source": "南方网·经济",
       "fetchedToday": true,
       "subcategory": "gz-media",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "southcn",
@@ -5414,7 +5528,7 @@
       "source": "南方网·经济",
       "fetchedToday": true,
       "subcategory": "gz-media",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "southcn",
@@ -5427,7 +5541,7 @@
       "source": "南方网·经济",
       "fetchedToday": true,
       "subcategory": "gz-media",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "southcn",
@@ -5440,7 +5554,7 @@
       "source": "南方网·经济",
       "fetchedToday": true,
       "subcategory": "gz-media",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "southcn",
@@ -5453,7 +5567,7 @@
       "source": "南方网·经济",
       "fetchedToday": true,
       "subcategory": "gz-media",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "gz-gov",
@@ -5466,7 +5580,7 @@
       "source": "广州市政府",
       "fetchedToday": true,
       "subcategory": "gz-policy",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "cnbc-top",
@@ -5479,7 +5593,7 @@
       "source": "CNBC Top Stories",
       "fetchedToday": true,
       "subcategory": "us",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "cnbc-top",
@@ -5492,7 +5606,7 @@
       "source": "CNBC Top Stories",
       "fetchedToday": true,
       "subcategory": "us",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "cnbc-top",
@@ -5505,7 +5619,7 @@
       "source": "CNBC Top Stories",
       "fetchedToday": true,
       "subcategory": "us",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "cnbc-top",
@@ -5518,7 +5632,7 @@
       "source": "CNBC Top Stories",
       "fetchedToday": true,
       "subcategory": "us",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "investing-news",
@@ -5531,7 +5645,7 @@
       "source": "Investing.com News",
       "fetchedToday": true,
       "subcategory": "us",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "investing-news",
@@ -5544,7 +5658,7 @@
       "source": "Investing.com News",
       "fetchedToday": true,
       "subcategory": "us",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "investing-news",
@@ -5557,7 +5671,7 @@
       "source": "Investing.com News",
       "fetchedToday": true,
       "subcategory": "us",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "investing-news",
@@ -5570,7 +5684,7 @@
       "source": "Investing.com News",
       "fetchedToday": true,
       "subcategory": "us",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "investing-news",
@@ -5583,7 +5697,7 @@
       "source": "Investing.com News",
       "fetchedToday": true,
       "subcategory": "us",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "investing-news",
@@ -5596,7 +5710,7 @@
       "source": "Investing.com News",
       "fetchedToday": true,
       "subcategory": "us",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "investing-news",
@@ -5609,7 +5723,7 @@
       "source": "Investing.com News",
       "fetchedToday": true,
       "subcategory": "us",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "investing-news",
@@ -5622,7 +5736,7 @@
       "source": "Investing.com News",
       "fetchedToday": true,
       "subcategory": "us",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "cctv-finance",
@@ -5829,7 +5943,7 @@
       "source": "东方财富",
       "fetchedToday": true,
       "subcategory": "a-share",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "eastmoney-stock",
@@ -5838,11 +5952,11 @@
       "excerpt": "",
       "publishedAt": "2026-08-25T00:00:00.000Z",
       "category": "stocks",
-      "summary": "多重利好共振！旅游酒店集体走强2026业绩高增长个股来了；A股市场动态",
+      "summary": "（非银行业务相关，已过滤）多重利好共振！旅游酒店集体走强2026业绩高增长个股来了；A股市场动态",
       "source": "东方财富",
       "fetchedToday": true,
       "subcategory": "a-share",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "eastmoney-stock",
@@ -5868,7 +5982,7 @@
       "source": "东方财富",
       "fetchedToday": true,
       "subcategory": "a-share",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "eastmoney-stock",
@@ -5881,7 +5995,7 @@
       "source": "东方财富",
       "fetchedToday": true,
       "subcategory": "a-share",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "eastmoney-stock",
@@ -5894,7 +6008,7 @@
       "source": "东方财富",
       "fetchedToday": true,
       "subcategory": "a-share",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-a-stock",
@@ -5959,7 +6073,7 @@
       "source": "新浪财经·A股",
       "fetchedToday": true,
       "subcategory": "a-share",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-a-stock",
@@ -6063,7 +6177,7 @@
       "source": "新浪财经·A股",
       "fetchedToday": true,
       "subcategory": "a-share",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-a-stock",
@@ -6076,7 +6190,7 @@
       "source": "新浪财经·A股",
       "fetchedToday": true,
       "subcategory": "a-share",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-a-stock",
@@ -6089,7 +6203,7 @@
       "source": "新浪财经·A股",
       "fetchedToday": true,
       "subcategory": "a-share",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-a-stock",
@@ -6102,7 +6216,7 @@
       "source": "新浪财经·A股",
       "fetchedToday": true,
       "subcategory": "a-share",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-a-stock",
@@ -6115,7 +6229,7 @@
       "source": "新浪财经·A股",
       "fetchedToday": true,
       "subcategory": "a-share",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-a-stock",
@@ -6128,7 +6242,7 @@
       "source": "新浪财经·A股",
       "fetchedToday": true,
       "subcategory": "a-share",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-a-stock",
@@ -6141,7 +6255,7 @@
       "source": "新浪财经·A股",
       "fetchedToday": true,
       "subcategory": "a-share",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-a-stock",
@@ -6167,7 +6281,7 @@
       "source": "新浪财经·A股",
       "fetchedToday": true,
       "subcategory": "a-share",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-a-stock",
@@ -6219,7 +6333,7 @@
       "source": "港交所披露易",
       "fetchedToday": true,
       "subcategory": "hk",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "hkex-stock",
@@ -6232,7 +6346,7 @@
       "source": "港交所披露易",
       "fetchedToday": true,
       "subcategory": "hk",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-hk-stock",
@@ -6245,7 +6359,7 @@
       "source": "新浪财经·港股",
       "fetchedToday": true,
       "subcategory": "hk",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-hk-stock",
@@ -6258,7 +6372,7 @@
       "source": "新浪财经·港股",
       "fetchedToday": true,
       "subcategory": "hk",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-hk-stock",
@@ -6271,7 +6385,7 @@
       "source": "新浪财经·港股",
       "fetchedToday": true,
       "subcategory": "hk",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-hk-stock",
@@ -6284,7 +6398,7 @@
       "source": "新浪财经·港股",
       "fetchedToday": true,
       "subcategory": "hk",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-hk-stock",
@@ -6297,7 +6411,7 @@
       "source": "新浪财经·港股",
       "fetchedToday": true,
       "subcategory": "hk",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-hk-stock",
@@ -6310,7 +6424,7 @@
       "source": "新浪财经·港股",
       "fetchedToday": true,
       "subcategory": "hk",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-hk-stock",
@@ -6323,7 +6437,7 @@
       "source": "新浪财经·港股",
       "fetchedToday": true,
       "subcategory": "hk",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-hk-stock",
@@ -6388,7 +6502,7 @@
       "source": "新浪财经·港股",
       "fetchedToday": true,
       "subcategory": "hk",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "cnfin",
@@ -6414,7 +6528,7 @@
       "source": "新华财经",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "cnfin",
@@ -6440,7 +6554,7 @@
       "source": "新华财经",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "cnfin",
@@ -6466,7 +6580,7 @@
       "source": "新华财经",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "stcn",
@@ -6479,7 +6593,7 @@
       "source": "证券时报",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "stcn",
@@ -6492,7 +6606,7 @@
       "source": "证券时报",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "stcn",
@@ -6518,7 +6632,7 @@
       "source": "证券时报",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "stcn",
@@ -6609,7 +6723,7 @@
       "source": "广州日报·大洋网",
       "fetchedToday": true,
       "subcategory": "gz-media",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "southcn",
@@ -6622,7 +6736,7 @@
       "source": "南方网·经济",
       "fetchedToday": true,
       "subcategory": "gz-media",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "southcn",
@@ -6635,7 +6749,7 @@
       "source": "南方网·经济",
       "fetchedToday": true,
       "subcategory": "gz-media",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "southcn",
@@ -6648,7 +6762,7 @@
       "source": "南方网·经济",
       "fetchedToday": true,
       "subcategory": "gz-media",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "southcn",
@@ -6661,7 +6775,7 @@
       "source": "南方网·经济",
       "fetchedToday": true,
       "subcategory": "gz-media",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "southcn",
@@ -6674,7 +6788,7 @@
       "source": "南方网·经济",
       "fetchedToday": true,
       "subcategory": "gz-media",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "southcn",
@@ -6687,7 +6801,7 @@
       "source": "南方网·经济",
       "fetchedToday": true,
       "subcategory": "gz-media",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "cnr-gd",
@@ -6700,7 +6814,7 @@
       "source": "央广网·广东",
       "fetchedToday": true,
       "subcategory": "gz-media",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "cnbc-top",
@@ -6713,7 +6827,7 @@
       "source": "CNBC Top Stories",
       "fetchedToday": true,
       "subcategory": "us",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "investing-news",
@@ -6726,7 +6840,7 @@
       "source": "Investing.com News",
       "fetchedToday": true,
       "subcategory": "us",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "investing-news",
@@ -6739,7 +6853,7 @@
       "source": "Investing.com News",
       "fetchedToday": true,
       "subcategory": "us",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "investing-news",
@@ -6752,7 +6866,7 @@
       "source": "Investing.com News",
       "fetchedToday": true,
       "subcategory": "us",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "investing-news",
@@ -6765,7 +6879,7 @@
       "source": "Investing.com News",
       "fetchedToday": true,
       "subcategory": "us",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "investing-news",
@@ -6778,7 +6892,7 @@
       "source": "Investing.com News",
       "fetchedToday": true,
       "subcategory": "us",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "investing-news",
@@ -6804,7 +6918,7 @@
       "source": "Investing.com News",
       "fetchedToday": true,
       "subcategory": "us",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "investing-news",
@@ -6817,7 +6931,7 @@
       "source": "Investing.com News",
       "fetchedToday": true,
       "subcategory": "us",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "investing-news",
@@ -6830,7 +6944,7 @@
       "source": "Investing.com News",
       "fetchedToday": true,
       "subcategory": "us",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "investing-news",
@@ -6843,7 +6957,7 @@
       "source": "Investing.com News",
       "fetchedToday": true,
       "subcategory": "us",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-money",
@@ -6895,7 +7009,7 @@
       "source": "新浪财经·银行频道",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "eastmoney-stock",
@@ -6960,7 +7074,7 @@
       "source": "东方财富",
       "fetchedToday": true,
       "subcategory": "a-share",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "eastmoney-stock",
@@ -6999,7 +7113,7 @@
       "source": "新浪财经·A股",
       "fetchedToday": true,
       "subcategory": "a-share",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-a-stock",
@@ -7012,7 +7126,7 @@
       "source": "新浪财经·A股",
       "fetchedToday": true,
       "subcategory": "a-share",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-a-stock",
@@ -7025,7 +7139,7 @@
       "source": "新浪财经·A股",
       "fetchedToday": true,
       "subcategory": "a-share",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-a-stock",
@@ -7051,7 +7165,7 @@
       "source": "新浪财经·A股",
       "fetchedToday": true,
       "subcategory": "a-share",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-a-stock",
@@ -7064,7 +7178,7 @@
       "source": "新浪财经·A股",
       "fetchedToday": true,
       "subcategory": "a-share",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-a-stock",
@@ -7077,7 +7191,7 @@
       "source": "新浪财经·A股",
       "fetchedToday": true,
       "subcategory": "a-share",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-hk-stock",
@@ -7103,7 +7217,7 @@
       "source": "新浪财经·港股",
       "fetchedToday": true,
       "subcategory": "hk",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-hk-stock",
@@ -7116,7 +7230,7 @@
       "source": "新浪财经·港股",
       "fetchedToday": true,
       "subcategory": "hk",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-hk-stock",
@@ -7129,7 +7243,7 @@
       "source": "新浪财经·港股",
       "fetchedToday": true,
       "subcategory": "hk",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-hk-stock",
@@ -7142,7 +7256,7 @@
       "source": "新浪财经·港股",
       "fetchedToday": true,
       "subcategory": "hk",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-hk-stock",
@@ -7155,7 +7269,7 @@
       "source": "新浪财经·港股",
       "fetchedToday": true,
       "subcategory": "hk",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-hk-stock",
@@ -7181,7 +7295,7 @@
       "source": "新浪财经·港股",
       "fetchedToday": true,
       "subcategory": "hk",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-hk-stock",
@@ -7298,7 +7412,7 @@
       "source": "新华财经",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "cnfin",
@@ -7324,7 +7438,7 @@
       "source": "新华财经",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "cnfin",
@@ -7350,7 +7464,7 @@
       "source": "新华财经",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "stcn",
@@ -7363,7 +7477,7 @@
       "source": "证券时报",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "stcn",
@@ -7376,7 +7490,7 @@
       "source": "证券时报",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "stcn",
@@ -7402,7 +7516,7 @@
       "source": "证券时报",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "stcn",
@@ -7415,7 +7529,7 @@
       "source": "证券时报",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "stcn",
@@ -7428,7 +7542,7 @@
       "source": "证券时报",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "dayoo-gz",
@@ -7441,7 +7555,7 @@
       "source": "广州日报·大洋网",
       "fetchedToday": true,
       "subcategory": "gz-media",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "dayoo-gz",
@@ -7493,7 +7607,7 @@
       "source": "南方网·经济",
       "fetchedToday": true,
       "subcategory": "gz-media",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "southcn",
@@ -7506,7 +7620,7 @@
       "source": "南方网·经济",
       "fetchedToday": true,
       "subcategory": "gz-media",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "southcn",
@@ -7519,7 +7633,7 @@
       "source": "南方网·经济",
       "fetchedToday": true,
       "subcategory": "gz-media",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "southcn",
@@ -7532,7 +7646,7 @@
       "source": "南方网·经济",
       "fetchedToday": true,
       "subcategory": "gz-media",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "southcn",
@@ -7545,7 +7659,7 @@
       "source": "南方网·经济",
       "fetchedToday": true,
       "subcategory": "gz-media",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "southcn",
@@ -7558,7 +7672,7 @@
       "source": "南方网·经济",
       "fetchedToday": true,
       "subcategory": "gz-media",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-a-stock",
@@ -7584,7 +7698,7 @@
       "source": "Investing.com News",
       "fetchedToday": true,
       "subcategory": "us",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "investing-news",
@@ -7597,7 +7711,7 @@
       "source": "Investing.com News",
       "fetchedToday": true,
       "subcategory": "us",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "investing-news",
@@ -7610,7 +7724,7 @@
       "source": "Investing.com News",
       "fetchedToday": true,
       "subcategory": "us",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "investing-news",
@@ -7623,7 +7737,7 @@
       "source": "Investing.com News",
       "fetchedToday": true,
       "subcategory": "us",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "investing-news",
@@ -7636,7 +7750,7 @@
       "source": "Investing.com News",
       "fetchedToday": true,
       "subcategory": "us",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "investing-news",
@@ -7649,7 +7763,7 @@
       "source": "Investing.com News",
       "fetchedToday": true,
       "subcategory": "us",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "investing-news",
@@ -7662,7 +7776,7 @@
       "source": "Investing.com News",
       "fetchedToday": true,
       "subcategory": "us",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "investing-news",
@@ -7675,7 +7789,7 @@
       "source": "Investing.com News",
       "fetchedToday": true,
       "subcategory": "us",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-bank",
@@ -7701,7 +7815,7 @@
       "source": "新浪财经·银行频道",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "eastmoney-stock",
@@ -7740,7 +7854,7 @@
       "source": "新浪财经·A股",
       "fetchedToday": true,
       "subcategory": "a-share",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-a-stock",
@@ -7779,7 +7893,7 @@
       "source": "新浪财经·A股",
       "fetchedToday": true,
       "subcategory": "a-share",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-a-stock",
@@ -7805,7 +7919,7 @@
       "source": "港交所披露易",
       "fetchedToday": true,
       "subcategory": "hk",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-hk-stock",
@@ -7818,7 +7932,7 @@
       "source": "新浪财经·港股",
       "fetchedToday": true,
       "subcategory": "hk",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-hk-stock",
@@ -7831,7 +7945,7 @@
       "source": "新浪财经·港股",
       "fetchedToday": true,
       "subcategory": "hk",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-hk-stock",
@@ -7909,7 +8023,7 @@
       "source": "新华财经",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "cnfin",
@@ -7922,7 +8036,7 @@
       "source": "新华财经",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "cnfin",
@@ -7948,7 +8062,7 @@
       "source": "新华财经",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "cnfin",
@@ -7961,7 +8075,7 @@
       "source": "新华财经",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "cnfin",
@@ -7974,7 +8088,7 @@
       "source": "新华财经",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "stcn",
@@ -7987,7 +8101,7 @@
       "source": "证券时报",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "stcn",
@@ -8013,7 +8127,7 @@
       "source": "证券时报",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "stcn",
@@ -8026,7 +8140,7 @@
       "source": "证券时报",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "stcn",
@@ -8039,7 +8153,7 @@
       "source": "证券时报",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "stcn",
@@ -8052,7 +8166,7 @@
       "source": "证券时报",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "cnbc-top",
@@ -8065,7 +8179,7 @@
       "source": "CNBC Top Stories",
       "fetchedToday": true,
       "subcategory": "us",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "cnbc-top",
@@ -8078,7 +8192,7 @@
       "source": "CNBC Top Stories",
       "fetchedToday": true,
       "subcategory": "us",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "investing-news",
@@ -8091,7 +8205,7 @@
       "source": "Investing.com News",
       "fetchedToday": true,
       "subcategory": "us",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "investing-news",
@@ -8104,7 +8218,7 @@
       "source": "Investing.com News",
       "fetchedToday": true,
       "subcategory": "us",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "investing-news",
@@ -8117,7 +8231,7 @@
       "source": "Investing.com News",
       "fetchedToday": true,
       "subcategory": "us",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "investing-news",
@@ -8130,7 +8244,7 @@
       "source": "Investing.com News",
       "fetchedToday": true,
       "subcategory": "us",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "investing-news",
@@ -8143,7 +8257,7 @@
       "source": "Investing.com News",
       "fetchedToday": true,
       "subcategory": "us",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "investing-news",
@@ -8156,7 +8270,7 @@
       "source": "Investing.com News",
       "fetchedToday": true,
       "subcategory": "us",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "investing-news",
@@ -8169,7 +8283,7 @@
       "source": "Investing.com News",
       "fetchedToday": true,
       "subcategory": "us",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "investing-news",
@@ -8182,7 +8296,7 @@
       "source": "Investing.com News",
       "fetchedToday": true,
       "subcategory": "us",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "investing-news",
@@ -8195,7 +8309,7 @@
       "source": "Investing.com News",
       "fetchedToday": true,
       "subcategory": "us",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-money",
@@ -8247,7 +8361,7 @@
       "source": "东方财富",
       "fetchedToday": true,
       "subcategory": "a-share",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-a-stock",
@@ -8325,7 +8439,7 @@
       "source": "新华财经",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "stcn",
@@ -8338,7 +8452,7 @@
       "source": "证券时报",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "stcn",
@@ -8351,7 +8465,7 @@
       "source": "证券时报",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "stcn",
@@ -8364,7 +8478,7 @@
       "source": "证券时报",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "stcn",
@@ -8377,7 +8491,7 @@
       "source": "证券时报",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "stcn",
@@ -8386,11 +8500,11 @@
       "excerpt": "",
       "publishedAt": "2026-08-25T00:00:00.000Z",
       "category": "finance",
-      "summary": "旅游板块逆势活跃 中秋国庆预订热潮加速 “抢跑”；对分行财富/信贷/客群业务有宏观参考",
+      "summary": "（非银行业务相关，已过滤）旅游板块逆势活跃 中秋国庆预订热潮加速 “抢跑”；对分行财富/信贷/客群业务有宏观参考",
       "source": "证券时报",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "stcn",
@@ -8403,7 +8517,7 @@
       "source": "证券时报",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "investing-news",
@@ -8416,7 +8530,7 @@
       "source": "Investing.com News",
       "fetchedToday": true,
       "subcategory": "us",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "investing-news",
@@ -8429,7 +8543,7 @@
       "source": "Investing.com News",
       "fetchedToday": true,
       "subcategory": "us",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "investing-news",
@@ -8442,7 +8556,7 @@
       "source": "Investing.com News",
       "fetchedToday": true,
       "subcategory": "us",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "investing-news",
@@ -8455,7 +8569,7 @@
       "source": "Investing.com News",
       "fetchedToday": true,
       "subcategory": "us",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "investing-news",
@@ -8468,7 +8582,7 @@
       "source": "Investing.com News",
       "fetchedToday": true,
       "subcategory": "us",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "investing-news",
@@ -8481,7 +8595,7 @@
       "source": "Investing.com News",
       "fetchedToday": true,
       "subcategory": "us",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "investing-news",
@@ -8494,7 +8608,7 @@
       "source": "Investing.com News",
       "fetchedToday": true,
       "subcategory": "us",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "investing-news",
@@ -8507,7 +8621,7 @@
       "source": "Investing.com News",
       "fetchedToday": true,
       "subcategory": "us",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-money",
@@ -8572,7 +8686,7 @@
       "source": "新浪财经·港股",
       "fetchedToday": true,
       "subcategory": "hk",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "stcn",
@@ -8585,7 +8699,7 @@
       "source": "证券时报",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "stcn",
@@ -8598,7 +8712,7 @@
       "source": "证券时报",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "stcn",
@@ -8611,7 +8725,7 @@
       "source": "证券时报",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "stcn",
@@ -8624,7 +8738,7 @@
       "source": "证券时报",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "hkex-stock",
@@ -8650,20 +8764,23 @@
       "source": "CNBC Top Stories",
       "fetchedToday": true,
       "subcategory": "us",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "cnbc-top",
-      "title": "Oil drops more than 3% on report U.S. plans to return evacuated diplomats to Middle East",
+      "title": "Oil drops 3% as U.S. shifts to economic pressure on Iran, easing fears of renewed war",
       "url": "https://www.cnbc.com/2026/08/25/oil-prices-iran-trump-hormuz.html",
       "excerpt": "Investors shrugged off the latest developments in the U.S.-Iran war.",
-      "publishedAt": "2026-08-25T12:23:32.000Z",
+      "publishedAt": "2026-08-25T13:04:49.000Z",
       "category": "stocks",
-      "summary": "美国拟撤回中东外交官，油价单日跌超3%缓解通胀压力；地缘溢价回落对国内能源价格传导减弱，分行可关注能源板块基金净值波动。",
-      "source": "CNBC Top Stories",
-      "fetchedToday": true,
       "subcategory": "us",
-      "relevant": true
+      "source": "CNBC Top Stories",
+      "tier": "T2",
+      "filterBucket": "daily",
+      "filterDimensions": [],
+      "fetchedToday": true,
+      "relevant": false,
+      "summary": "美国拟撤回中东外交官，油价单日跌超3%缓解通胀压力；地缘溢价回落对国内能源价格传导减弱，分行可关注能源板块基金净值波动。"
     },
     {
       "sourceId": "cnbc-top",
@@ -8676,7 +8793,7 @@
       "source": "CNBC Top Stories",
       "fetchedToday": true,
       "subcategory": "us",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "cnbc-top",
@@ -8689,7 +8806,7 @@
       "source": "CNBC Top Stories",
       "fetchedToday": true,
       "subcategory": "us",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "cnbc-top",
@@ -8777,7 +8894,7 @@
       "source": "央视财经",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "govcn-policy",
@@ -8790,7 +8907,7 @@
       "source": "中国政府网·国务院政策",
       "fetchedToday": true,
       "subcategory": "cn-policy",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-money",
@@ -8920,7 +9037,7 @@
       "source": "港交所IPO公告",
       "fetchedToday": true,
       "subcategory": "hkex",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "gz-gov",
@@ -8933,7 +9050,7 @@
       "source": "广州市政府",
       "fetchedToday": true,
       "subcategory": "gz-policy",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "gz-gov",
@@ -8946,7 +9063,7 @@
       "source": "广州市政府",
       "fetchedToday": true,
       "subcategory": "gz-policy",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "eastmoney-stock",
@@ -9076,7 +9193,7 @@
       "source": "东方财富",
       "fetchedToday": true,
       "subcategory": "a-share",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "eastmoney-stock",
@@ -9089,7 +9206,7 @@
       "source": "东方财富",
       "fetchedToday": true,
       "subcategory": "a-share",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-a-stock",
@@ -9102,7 +9219,7 @@
       "source": "新浪财经·A股",
       "fetchedToday": true,
       "subcategory": "a-share",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-a-stock",
@@ -9141,7 +9258,7 @@
       "source": "新浪财经·A股",
       "fetchedToday": true,
       "subcategory": "a-share",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-a-stock",
@@ -9154,7 +9271,7 @@
       "source": "新浪财经·A股",
       "fetchedToday": true,
       "subcategory": "a-share",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "hkex-stock",
@@ -9193,7 +9310,7 @@
       "source": "新浪财经·港股",
       "fetchedToday": true,
       "subcategory": "hk",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-hk-stock",
@@ -9206,7 +9323,7 @@
       "source": "新浪财经·港股",
       "fetchedToday": true,
       "subcategory": "hk",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-hk-stock",
@@ -9219,7 +9336,7 @@
       "source": "新浪财经·港股",
       "fetchedToday": true,
       "subcategory": "hk",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "sina-hk-stock",
@@ -9232,7 +9349,7 @@
       "source": "新浪财经·港股",
       "fetchedToday": true,
       "subcategory": "hk",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "sina-hk-stock",
@@ -9258,7 +9375,7 @@
       "source": "新浪财经·港股",
       "fetchedToday": true,
       "subcategory": "hk",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "sina-hk-stock",
@@ -9336,7 +9453,7 @@
       "source": "新浪财经·港股",
       "fetchedToday": true,
       "subcategory": "hk",
-      "relevant": false
+      "relevant": true
     },
     {
       "sourceId": "sina-hk-stock",
@@ -9453,7 +9570,7 @@
       "source": "财联社",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "cls",
@@ -9557,7 +9674,7 @@
       "source": "新华财经",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "cnfin",
@@ -9583,7 +9700,7 @@
       "source": "新华财经",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "cnfin",
@@ -9596,7 +9713,7 @@
       "source": "新华财经",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "cnfin",
@@ -9648,7 +9765,7 @@
       "source": "证券时报",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "stcn",
@@ -9661,7 +9778,7 @@
       "source": "证券时报",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "stcn",
@@ -9674,7 +9791,7 @@
       "source": "证券时报",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "stcn",
@@ -9687,7 +9804,7 @@
       "source": "证券时报",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "stcn",
@@ -9700,7 +9817,7 @@
       "source": "证券时报",
       "fetchedToday": true,
       "subcategory": "cn-finance",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "dayoo-gz",
@@ -9713,7 +9830,7 @@
       "source": "广州日报·大洋网",
       "fetchedToday": true,
       "subcategory": "gz-media",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "dayoo-gz",
@@ -9778,7 +9895,7 @@
       "source": "广州日报·大洋网",
       "fetchedToday": true,
       "subcategory": "gz-media",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "southcn",
@@ -9804,7 +9921,7 @@
       "source": "南方网·经济",
       "fetchedToday": true,
       "subcategory": "gz-media",
-      "relevant": true
+      "relevant": false
     },
     {
       "sourceId": "investing-news",
@@ -9813,12 +9930,10 @@
       "excerpt": "",
       "publishedAt": "2026-08-25T12:27:47.000Z",
       "category": "stocks",
-      "subcategory": "us",
       "source": "Investing.com News",
-      "tier": "T2",
-      "filterBucket": "daily",
-      "filterDimensions": [],
-      "fetchedToday": true
+      "fetchedToday": true,
+      "subcategory": "us",
+      "relevant": false
     },
     {
       "sourceId": "investing-news",
@@ -9827,12 +9942,10 @@
       "excerpt": "",
       "publishedAt": "2026-08-25T12:14:42.000Z",
       "category": "stocks",
-      "subcategory": "us",
       "source": "Investing.com News",
-      "tier": "T2",
-      "filterBucket": "daily",
-      "filterDimensions": [],
-      "fetchedToday": true
+      "fetchedToday": true,
+      "subcategory": "us",
+      "relevant": false
     },
     {
       "sourceId": "investing-news",
@@ -9841,12 +9954,10 @@
       "excerpt": "",
       "publishedAt": "2026-08-25T12:13:46.000Z",
       "category": "stocks",
-      "subcategory": "us",
       "source": "Investing.com News",
-      "tier": "T2",
-      "filterBucket": "daily",
-      "filterDimensions": [],
-      "fetchedToday": true
+      "fetchedToday": true,
+      "subcategory": "us",
+      "relevant": false
     },
     {
       "sourceId": "investing-news",
@@ -9855,12 +9966,10 @@
       "excerpt": "",
       "publishedAt": "2026-08-25T12:13:43.000Z",
       "category": "stocks",
-      "subcategory": "us",
       "source": "Investing.com News",
-      "tier": "T2",
-      "filterBucket": "daily",
-      "filterDimensions": [],
-      "fetchedToday": true
+      "fetchedToday": true,
+      "subcategory": "us",
+      "relevant": false
     },
     {
       "sourceId": "investing-news",
@@ -9869,12 +9978,10 @@
       "excerpt": "",
       "publishedAt": "2026-08-25T12:13:42.000Z",
       "category": "stocks",
-      "subcategory": "us",
       "source": "Investing.com News",
-      "tier": "T2",
-      "filterBucket": "daily",
-      "filterDimensions": [],
-      "fetchedToday": true
+      "fetchedToday": true,
+      "subcategory": "us",
+      "relevant": false
     },
     {
       "sourceId": "investing-news",
@@ -9883,12 +9990,10 @@
       "excerpt": "",
       "publishedAt": "2026-08-25T12:10:35.000Z",
       "category": "stocks",
-      "subcategory": "us",
       "source": "Investing.com News",
-      "tier": "T2",
-      "filterBucket": "daily",
-      "filterDimensions": [],
-      "fetchedToday": true
+      "fetchedToday": true,
+      "subcategory": "us",
+      "relevant": false
     },
     {
       "sourceId": "investing-news",
@@ -9897,12 +10002,10 @@
       "excerpt": "",
       "publishedAt": "2026-08-25T12:06:24.000Z",
       "category": "stocks",
-      "subcategory": "us",
       "source": "Investing.com News",
-      "tier": "T2",
-      "filterBucket": "daily",
-      "filterDimensions": [],
-      "fetchedToday": true
+      "fetchedToday": true,
+      "subcategory": "us",
+      "relevant": false
     },
     {
       "sourceId": "investing-news",
@@ -9911,12 +10014,10 @@
       "excerpt": "",
       "publishedAt": "2026-08-25T12:06:06.000Z",
       "category": "stocks",
-      "subcategory": "us",
       "source": "Investing.com News",
-      "tier": "T2",
-      "filterBucket": "daily",
-      "filterDimensions": [],
-      "fetchedToday": true
+      "fetchedToday": true,
+      "subcategory": "us",
+      "relevant": false
     },
     {
       "sourceId": "investing-news",
@@ -9925,12 +10026,10 @@
       "excerpt": "",
       "publishedAt": "2026-08-25T12:05:09.000Z",
       "category": "stocks",
-      "subcategory": "us",
       "source": "Investing.com News",
-      "tier": "T2",
-      "filterBucket": "daily",
-      "filterDimensions": [],
-      "fetchedToday": true
+      "fetchedToday": true,
+      "subcategory": "us",
+      "relevant": false
     },
     {
       "sourceId": "investing-news",
@@ -9938,6 +10037,325 @@
       "url": "https://www.investing.com/news/company-news/septerna-appoints-rajiv-patni-as-chief-medical-officer-93CH-4875244",
       "excerpt": "",
       "publishedAt": "2026-08-25T12:05:04.000Z",
+      "category": "stocks",
+      "source": "Investing.com News",
+      "fetchedToday": true,
+      "subcategory": "us",
+      "relevant": false
+    },
+    {
+      "sourceId": "sina-a-stock",
+      "title": "值得买发布2026年半年报：AI战略持续深化，创",
+      "url": "https://finance.sina.com.cn/jjxw/2026-08-25/doc-inippvuq2274542.shtml",
+      "excerpt": "",
+      "publishedAt": "2026-08-25T00:00:00.000Z",
+      "category": "stocks",
+      "source": "新浪财经·A股",
+      "fetchedToday": true,
+      "subcategory": "a-share",
+      "relevant": false
+    },
+    {
+      "sourceId": "hkex-stock",
+      "title": "Announcements and Notices - [Announcement by Offeree Company under the Takeovers Code / Announcement by Offeror Company under the Takeovers Code / Delay in Dispatch of Circular or other Document]",
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0825/2026082501669.pdf",
+      "excerpt": "Announcements and Notices - [Announcement by Offeree Company under the Takeovers Code / Announcement by Offeror Company...More]",
+      "publishedAt": "2026-08-25T00:00:00.000Z",
+      "category": "stocks",
+      "source": "港交所披露易",
+      "fetchedToday": true,
+      "subcategory": "hk",
+      "relevant": false
+    },
+    {
+      "sourceId": "sina-hk-stock",
+      "title": "UBS Group AG减持名创优品(09896)86.56万股 每股作价约21.61港元",
+      "url": "https://finance.sina.com.cn/stock/hkstock/marketalerts/2026-08-25/doc-inippvun5493958.shtml",
+      "excerpt": "",
+      "publishedAt": "2026-08-25T00:00:00.000Z",
+      "category": "stocks",
+      "source": "新浪财经·港股",
+      "fetchedToday": true,
+      "subcategory": "hk",
+      "relevant": false
+    },
+    {
+      "sourceId": "sina-hk-stock",
+      "title": "Pzena Investment Management, LLC减持太平洋航运(02343)655.2071万股 每股作价约4.19港元",
+      "url": "https://finance.sina.com.cn/stock/hkstock/marketalerts/2026-08-25/doc-inippvuq2268166.shtml",
+      "excerpt": "",
+      "publishedAt": "2026-08-25T00:00:00.000Z",
+      "category": "stocks",
+      "source": "新浪财经·港股",
+      "fetchedToday": true,
+      "subcategory": "hk",
+      "relevant": false
+    },
+    {
+      "sourceId": "sina-hk-stock",
+      "title": "BlackRock, Inc.减持福耀玻璃(03606)30.96万股 每股作价约57.02港元",
+      "url": "https://finance.sina.com.cn/stock/hkstock/marketalerts/2026-08-25/doc-inippvuh9588639.shtml",
+      "excerpt": "",
+      "publishedAt": "2026-08-25T00:00:00.000Z",
+      "category": "stocks",
+      "source": "新浪财经·港股",
+      "fetchedToday": true,
+      "subcategory": "hk",
+      "relevant": false
+    },
+    {
+      "sourceId": "cnfin",
+      "title": "“六张网”新机遇·上市公司在行动｜从冶金到治水：中国中冶如何跨界水网建设",
+      "url": "https://www.cnfin.com/yw-lb/detail/20260825/4460141_1.html",
+      "excerpt": "",
+      "publishedAt": "2026-08-25T00:00:00.000Z",
+      "category": "finance",
+      "source": "新华财经",
+      "fetchedToday": true,
+      "subcategory": "cn-finance",
+      "relevant": true
+    },
+    {
+      "sourceId": "cnfin",
+      "title": "人大常委会｜水法修订草案拟规定加快构建国家水网",
+      "url": "https://www.cnfin.com/yw-lb/detail/20260825/4460135_1.html",
+      "excerpt": "",
+      "publishedAt": "2026-08-25T00:00:00.000Z",
+      "category": "finance",
+      "source": "新华财经",
+      "fetchedToday": true,
+      "subcategory": "cn-finance",
+      "relevant": false
+    },
+    {
+      "sourceId": "cnfin",
+      "title": "上海：以“一江一河”交汇处“黄金三角”为核心，打造引领全球消费高地",
+      "url": "https://www.cnfin.com/hg-lb/detail/20260825/4460280_1.html",
+      "excerpt": "",
+      "publishedAt": "2026-08-25T00:00:00.000Z",
+      "category": "finance",
+      "source": "新华财经",
+      "fetchedToday": true,
+      "subcategory": "cn-finance",
+      "relevant": true
+    },
+    {
+      "sourceId": "cnfin",
+      "title": "上海：引育全球供应链管理中心，集聚培育高能级贸易商",
+      "url": "https://www.cnfin.com/hg-lb/detail/20260825/4460262_1.html",
+      "excerpt": "",
+      "publishedAt": "2026-08-25T00:00:00.000Z",
+      "category": "finance",
+      "source": "新华财经",
+      "fetchedToday": true,
+      "subcategory": "cn-finance",
+      "relevant": true
+    },
+    {
+      "sourceId": "cnfin",
+      "title": "“十五五”时期四川南充谋划储备重大项目1560个 总投资超1万亿元",
+      "url": "https://www.cnfin.com/hg-lb/detail/20260825/4460228_1.html",
+      "excerpt": "",
+      "publishedAt": "2026-08-25T00:00:00.000Z",
+      "category": "finance",
+      "source": "新华财经",
+      "fetchedToday": true,
+      "subcategory": "cn-finance",
+      "relevant": false
+    },
+    {
+      "sourceId": "cnfin",
+      "title": "上半年数字产业收入超20万亿元 同比增长13.6%",
+      "url": "https://www.cnfin.com/hg-lb/detail/20260825/4460217_1.html",
+      "excerpt": "",
+      "publishedAt": "2026-08-25T00:00:00.000Z",
+      "category": "finance",
+      "source": "新华财经",
+      "fetchedToday": true,
+      "subcategory": "cn-finance",
+      "relevant": true
+    },
+    {
+      "sourceId": "stcn",
+      "title": "广汽集团董事长冯兴亚与华为创始人任正非会面 围绕启境品牌发展等议题展开深入交流",
+      "url": "https://www.stcn.com/article/detail/4120300.html",
+      "excerpt": "",
+      "publishedAt": "2026-08-25T00:00:00.000Z",
+      "category": "finance",
+      "source": "证券时报",
+      "fetchedToday": true,
+      "subcategory": "cn-finance",
+      "relevant": false
+    },
+    {
+      "sourceId": "stcn",
+      "title": "唯品会：第二季度营收247亿元 Non-GAAP净利润3.92亿元",
+      "url": "https://www.stcn.com/article/detail/4116270.html",
+      "excerpt": "",
+      "publishedAt": "2026-08-25T00:00:00.000Z",
+      "category": "finance",
+      "source": "证券时报",
+      "fetchedToday": true,
+      "subcategory": "cn-finance",
+      "relevant": false
+    },
+    {
+      "sourceId": "stcn",
+      "title": "药明生物上半年营收增长18.4% 净利润增长4.3%",
+      "url": "https://www.stcn.com/article/detail/4120308.html",
+      "excerpt": "",
+      "publishedAt": "2026-08-25T00:00:00.000Z",
+      "category": "finance",
+      "source": "证券时报",
+      "fetchedToday": true,
+      "subcategory": "cn-finance",
+      "relevant": true
+    },
+    {
+      "sourceId": "stcn",
+      "title": "雅迪控股上半年营收净利双降 国内市场进入调整期 海外业务保持增长",
+      "url": "https://www.stcn.com/article/detail/4120309.html",
+      "excerpt": "",
+      "publishedAt": "2026-08-25T00:00:00.000Z",
+      "category": "finance",
+      "source": "证券时报",
+      "fetchedToday": true,
+      "subcategory": "cn-finance",
+      "relevant": false
+    },
+    {
+      "sourceId": "stcn",
+      "title": "直击恩捷股份业绩说明会：隔膜价格相对坚挺 预计盈利将持续恢复",
+      "url": "https://www.stcn.com/article/detail/4120298.html",
+      "excerpt": "",
+      "publishedAt": "2026-08-25T00:00:00.000Z",
+      "category": "finance",
+      "source": "证券时报",
+      "fetchedToday": true,
+      "subcategory": "cn-finance",
+      "relevant": false
+    },
+    {
+      "sourceId": "stcn",
+      "title": "致远互联：百万元以上订单同比增长69.1% 高价值客群经营成效凸显",
+      "url": "https://www.stcn.com/article/detail/4118828.html",
+      "excerpt": "",
+      "publishedAt": "2026-08-25T00:00:00.000Z",
+      "category": "finance",
+      "source": "证券时报",
+      "fetchedToday": true,
+      "subcategory": "cn-finance",
+      "relevant": false
+    },
+    {
+      "sourceId": "dayoo-gz",
+      "title": "荔湾东沙片区规划通过审议，广州中心城区唯一滨水内港湾全面提速",
+      "url": "https://news.dayoo.com/guangzhou/202608/25/139995_54994993.htm",
+      "excerpt": "",
+      "publishedAt": "2026-08-25T00:00:00.000Z",
+      "category": "gz",
+      "source": "广州日报·大洋网",
+      "fetchedToday": true,
+      "subcategory": "gz-media",
+      "relevant": false
+    },
+    {
+      "sourceId": "dayoo-gz",
+      "title": "港澳媒体走访穗企，探寻“十五五”协同机遇",
+      "url": "https://news.dayoo.com/guangzhou/202608/25/139995_54994988.htm",
+      "excerpt": "",
+      "publishedAt": "2026-08-25T00:00:00.000Z",
+      "category": "gz",
+      "source": "广州日报·大洋网",
+      "fetchedToday": true,
+      "subcategory": "gz-media",
+      "relevant": false
+    },
+    {
+      "sourceId": "dayoo-gz",
+      "title": "官宣！广州国际商业港首开区北地块正式挂牌",
+      "url": "https://news.dayoo.com/guangzhou/202608/25/139995_54994962.htm",
+      "excerpt": "",
+      "publishedAt": "2026-08-25T00:00:00.000Z",
+      "category": "gz",
+      "source": "广州日报·大洋网",
+      "fetchedToday": true,
+      "subcategory": "gz-media",
+      "relevant": false
+    },
+    {
+      "sourceId": "dayoo-gz",
+      "title": "“甲醛白菜”风波追踪：广州江南市场未发现问题白菜",
+      "url": "https://news.dayoo.com/guangzhou/202608/25/139995_54994960.htm",
+      "excerpt": "",
+      "publishedAt": "2026-08-25T00:00:00.000Z",
+      "category": "gz",
+      "source": "广州日报·大洋网",
+      "fetchedToday": true,
+      "subcategory": "gz-media",
+      "relevant": false
+    },
+    {
+      "sourceId": "dayoo-gz",
+      "title": "广州音乐公园今日开园！建设运营规划发布：赋能万亿级音乐产业",
+      "url": "https://news.dayoo.com/guangzhou/202608/25/139995_54994946.htm",
+      "excerpt": "",
+      "publishedAt": "2026-08-25T00:00:00.000Z",
+      "category": "gz",
+      "summary": "（非银行业务相关，已过滤）",
+      "source": "广州日报·大洋网",
+      "fetchedToday": true,
+      "subcategory": "gz-media",
+      "relevant": false
+    },
+    {
+      "sourceId": "cnbc-top",
+      "title": "China needs U.S. dollars but is building a hedge against Washington’s sanctions",
+      "url": "https://www.cnbc.com/2026/08/25/china-iran-us-sanctions-banks-cips.html",
+      "excerpt": "The U.S. can pressure Chinese banks over Iran through access to its financial system, while Beijing is building alternatives such as CIPS.",
+      "publishedAt": "2026-08-25T12:42:15.000Z",
+      "category": "stocks",
+      "subcategory": "us",
+      "source": "CNBC Top Stories",
+      "tier": "T2",
+      "filterBucket": "daily",
+      "filterDimensions": [],
+      "fetchedToday": true
+    },
+    {
+      "sourceId": "cnbc-top",
+      "title": "Canada poised to retaliate against Trump tariffs: 'We're not waiting by the phone'",
+      "url": "https://www.cnbc.com/2026/08/25/canada-trump-tariffs-trade-carney-leblanc.html",
+      "excerpt": "Canadian trade negotiators left the U.S. last week after failing to clinch a trade deal that would stop President Donald Trump's new tariffs from taking effect.",
+      "publishedAt": "2026-08-25T13:07:35.000Z",
+      "category": "stocks",
+      "subcategory": "us",
+      "source": "CNBC Top Stories",
+      "tier": "T2",
+      "filterBucket": "daily",
+      "filterDimensions": [],
+      "fetchedToday": true
+    },
+    {
+      "sourceId": "cnbc-top",
+      "title": "Apple announces new Mac Mini and Mac Studio models with AI upgrades",
+      "url": "https://www.cnbc.com/2026/08/25/apple-announces-new-mac-mini-and-mac-studio-models-with-ai-upgrades.html",
+      "excerpt": "\"With these frameworks and new chips, developers can run and fine-tune large AI models locally on their Mac,\" Apple said.",
+      "publishedAt": "2026-08-25T13:00:01.000Z",
+      "category": "stocks",
+      "subcategory": "us",
+      "source": "CNBC Top Stories",
+      "tier": "T2",
+      "filterBucket": "daily",
+      "filterDimensions": [],
+      "fetchedToday": true
+    },
+    {
+      "sourceId": "investing-news",
+      "title": "Wall Street set for a higher open amid falling oil prices and Treasury yields",
+      "url": "https://www.investing.com/news/stock-market-news/wall-st-futures-steady-as-investors-brace-for-nvidia-results-fed-signals-4874359",
+      "excerpt": "",
+      "publishedAt": "2026-08-25T12:39:47.000Z",
       "category": "stocks",
       "subcategory": "us",
       "source": "Investing.com News",
@@ -9947,10 +10365,168 @@
       "fetchedToday": true
     },
     {
+      "sourceId": "investing-news",
+      "title": "Average weekly U.S. private payrolls rise 11,750 in four weeks ending Aug 8 - ADP",
+      "url": "https://www.investing.com/news/economic-indicators/average-weekly-us-private-payrolls-rise-11750-in-four-weeks-ending-aug-8--adp-4875339",
+      "excerpt": "",
+      "publishedAt": "2026-08-25T12:37:37.000Z",
+      "category": "stocks",
+      "subcategory": "us",
+      "source": "Investing.com News",
+      "tier": "T2",
+      "filterBucket": "daily",
+      "filterDimensions": [],
+      "fetchedToday": true
+    },
+    {
+      "sourceId": "investing-news",
+      "title": "Building permits rise 4.3%, missing forecast but showing improvement",
+      "url": "https://www.investing.com/news/economic-indicators/building-permits-rise-43-missing-forecast-but-showing-improvement-93CH-4875335",
+      "excerpt": "",
+      "publishedAt": "2026-08-25T12:34:38.000Z",
+      "category": "stocks",
+      "subcategory": "us",
+      "source": "Investing.com News",
+      "tier": "T2",
+      "filterBucket": "daily",
+      "filterDimensions": [],
+      "fetchedToday": true
+    },
+    {
+      "sourceId": "investing-news",
+      "title": "Morgan Stanley Ranks These EU Diagnostics Stocks by China Reform Risk",
+      "url": "https://www.investing.com/news/stock-market-news/morgan-stanley-ranks-these-eu-diagnostics-stocks-by-china-reform-risk-93CH-4875334",
+      "excerpt": "",
+      "publishedAt": "2026-08-25T12:34:11.000Z",
+      "category": "stocks",
+      "subcategory": "us",
+      "source": "Investing.com News",
+      "tier": "T2",
+      "filterBucket": "daily",
+      "filterDimensions": [],
+      "fetchedToday": true
+    },
+    {
+      "sourceId": "investing-news",
+      "title": "Earnings call transcript: BMO tops Q3 2026 estimates as profit rises 22%",
+      "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-bmo-tops-q3-2026-estimates-as-profit-rises-22-93CH-4875332",
+      "excerpt": "",
+      "publishedAt": "2026-08-25T12:33:43.000Z",
+      "category": "stocks",
+      "subcategory": "us",
+      "source": "Investing.com News",
+      "tier": "T2",
+      "filterBucket": "daily",
+      "filterDimensions": [],
+      "fetchedToday": true
+    },
+    {
+      "sourceId": "investing-news",
+      "title": "Earnings call transcript: FluoGuide advances U.S. cancer trial setup in H1 2026",
+      "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-fluoguide-advances-us-cancer-trial-setup-in-h1-2026-93CH-4875331",
+      "excerpt": "",
+      "publishedAt": "2026-08-25T12:33:35.000Z",
+      "category": "stocks",
+      "subcategory": "us",
+      "source": "Investing.com News",
+      "tier": "T2",
+      "filterBucket": "daily",
+      "filterDimensions": [],
+      "fetchedToday": true
+    },
+    {
+      "sourceId": "sina-money",
+      "title": "东亚联丰多元累积A人民币对冲：8月24日净值14",
+      "url": "https://finance.sina.com.cn/stock/aigc/hkgg/2026-08-25/doc-inippvuq2298902.shtml",
+      "excerpt": "【财富管理】东亚联丰多元累积A人民币对冲：8月24日净值14",
+      "category": "gz",
+      "publishedAt": "2026-08-25T00:00:00.000Z",
+      "source": "新浪财经·理财保险",
+      "tier": "T2",
+      "filterBucket": "daily",
+      "filterDimensions": [],
+      "fetchedToday": true,
+      "subcategory": "cn-finance"
+    },
+    {
+      "sourceId": "sina-money",
+      "title": "摩根亚洲股票高息基金2026-08-24基金净值",
+      "url": "https://finance.sina.com.cn/stock/aigc/hkgg/2026-08-25/doc-inippvun5526340.shtml",
+      "excerpt": "【财富管理】摩根亚洲股票高息基金2026-08-24基金净值",
+      "category": "gz",
+      "publishedAt": "2026-08-25T00:00:00.000Z",
+      "source": "新浪财经·理财保险",
+      "tier": "T2",
+      "filterBucket": "daily",
+      "filterDimensions": [],
+      "fetchedToday": true,
+      "subcategory": "cn-finance"
+    },
+    {
+      "sourceId": "21jingji-finance",
+      "title": "国管公积金新政，来了！",
+      "url": "https://m.21jingji.com/article/20260825/herald/4f65026333a9d5f025f348f6ed122caa.html",
+      "excerpt": "【21财经·金融】国管公积金新政，来了！",
+      "category": "gz",
+      "publishedAt": "2026-08-25T00:00:00.000Z",
+      "source": "21世纪经济报道·金融",
+      "tier": "T2",
+      "filterBucket": "daily",
+      "filterDimensions": [
+        "macro_policy"
+      ],
+      "fetchedToday": true,
+      "subcategory": "cn-finance"
+    },
+    {
+      "sourceId": "21jingji-finance",
+      "title": "审计观察 | 大型银行机构智能化审计的平台架构与技术应用",
+      "url": "https://m.21jingji.com/article/20260825/herald/7e181b1e703a4530aa00828be76c8f40.html",
+      "excerpt": "【21财经·金融】审计观察 | 大型银行机构智能化审计的平台架构与技术应用",
+      "category": "gz",
+      "publishedAt": "2026-08-25T00:00:00.000Z",
+      "source": "21世纪经济报道·金融",
+      "tier": "T2",
+      "filterBucket": "daily",
+      "filterDimensions": [],
+      "fetchedToday": true,
+      "subcategory": "cn-finance"
+    },
+    {
+      "sourceId": "sina-bank",
+      "source": "新浪财经·银行频道",
+      "title": "拉卡拉正式终止港股IPO：因市场环境变化及公司规划调整",
+      "url": "https://finance.sina.com.cn/jryx/bank/2026-08-25/doc-inippvuq2298201.shtml",
+      "excerpt": "",
+      "publishedAt": "2026-08-25T00:00:00.000Z",
+      "category": "finance",
+      "summary": "",
+      "tier": "T2",
+      "filterBucket": "daily",
+      "filterDimensions": [],
+      "fetchedToday": true,
+      "subcategory": "cn-finance"
+    },
+    {
+      "sourceId": "sina-bank",
+      "source": "新浪财经·银行频道",
+      "title": "工商银行：单户可享受中小微企业贷款贴息的贷款规模上限提至7500万元",
+      "url": "https://finance.sina.com.cn/jryx/bank/2026-08-25/doc-inippvun5519940.shtml",
+      "excerpt": "",
+      "publishedAt": "2026-08-25T00:00:00.000Z",
+      "category": "finance",
+      "summary": "",
+      "tier": "T2",
+      "filterBucket": "daily",
+      "filterDimensions": [],
+      "fetchedToday": true,
+      "subcategory": "cn-finance"
+    },
+    {
       "sourceId": "sina-a-stock",
       "source": "新浪财经·A股",
-      "title": "值得买发布2026年半年报：AI战略持续深化，创",
-      "url": "https://finance.sina.com.cn/jjxw/2026-08-25/doc-inippvuq2274542.shtml",
+      "title": "涨停！700亿液冷龙头，大幅“吸金”",
+      "url": "https://finance.sina.com.cn/roll/2026-08-25/doc-inippvuk1553405.shtml",
       "excerpt": "",
       "publishedAt": "2026-08-25T00:00:00.000Z",
       "category": "stocks",
@@ -9964,9 +10540,9 @@
     {
       "sourceId": "hkex-stock",
       "source": "港交所披露易",
-      "title": "Announcements and Notices - [Announcement by Offeree Company under the Takeovers Code / Announcement by Offeror Company under the Takeovers Code / Delay in Dispatch of Circular or other Document]",
-      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0825/2026082501669.pdf",
-      "excerpt": "Announcements and Notices - [Announcement by Offeree Company under the Takeovers Code / Announcement by Offeror Company...More]",
+      "title": "Announcements and Notices - [Change in Company Secretary / Change in Registered Address or Office, Registered Place of Business in HK or Agent for Service of Process in HK]",
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0825/2026082501803.pdf",
+      "excerpt": "Announcements and Notices - [Change in Company Secretary / Change in Registered Address or Office, Registered Place of...More]",
       "publishedAt": "2026-08-25T00:00:00.000Z",
       "category": "stocks",
       "summary": "",
@@ -9977,45 +10553,15 @@
       "subcategory": "hk"
     },
     {
-      "sourceId": "sina-hk-stock",
-      "source": "新浪财经·港股",
-      "title": "UBS Group AG减持名创优品(09896)86.56万股 每股作价约21.61港元",
-      "url": "https://finance.sina.com.cn/stock/hkstock/marketalerts/2026-08-25/doc-inippvun5493958.shtml",
-      "excerpt": "",
+      "sourceId": "hkex-stock",
+      "source": "港交所披露易",
+      "title": "Circulars - [Explanatory Statement for Repurchase of Shares / Amendment of Constitutional Documents / Other]",
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0825/2026082501771.pdf",
+      "excerpt": "Circulars - [Explanatory Statement for Repurchase of Shares / Amendment of Constitutional Documents / Other]",
       "publishedAt": "2026-08-25T00:00:00.000Z",
       "category": "stocks",
       "summary": "",
-      "tier": "T2",
-      "filterBucket": "daily",
-      "filterDimensions": [],
-      "fetchedToday": true,
-      "subcategory": "hk"
-    },
-    {
-      "sourceId": "sina-hk-stock",
-      "source": "新浪财经·港股",
-      "title": "Pzena Investment Management, LLC减持太平洋航运(02343)655.2071万股 每股作价约4.19港元",
-      "url": "https://finance.sina.com.cn/stock/hkstock/marketalerts/2026-08-25/doc-inippvuq2268166.shtml",
-      "excerpt": "",
-      "publishedAt": "2026-08-25T00:00:00.000Z",
-      "category": "stocks",
-      "summary": "",
-      "tier": "T2",
-      "filterBucket": "daily",
-      "filterDimensions": [],
-      "fetchedToday": true,
-      "subcategory": "hk"
-    },
-    {
-      "sourceId": "sina-hk-stock",
-      "source": "新浪财经·港股",
-      "title": "BlackRock, Inc.减持福耀玻璃(03606)30.96万股 每股作价约57.02港元",
-      "url": "https://finance.sina.com.cn/stock/hkstock/marketalerts/2026-08-25/doc-inippvuh9588639.shtml",
-      "excerpt": "",
-      "publishedAt": "2026-08-25T00:00:00.000Z",
-      "category": "stocks",
-      "summary": "",
-      "tier": "T2",
+      "tier": "T1.5",
       "filterBucket": "daily",
       "filterDimensions": [],
       "fetchedToday": true,
@@ -10024,8 +10570,8 @@
     {
       "sourceId": "cnfin",
       "source": "新华财经",
-      "title": "“六张网”新机遇·上市公司在行动｜从冶金到治水：中国中冶如何跨界水网建设",
-      "url": "https://www.cnfin.com/yw-lb/detail/20260825/4460141_1.html",
+      "title": "货币市场日报：8月25日",
+      "url": "https://www.cnfin.com/yw-lb/detail/20260825/4460291_1.html",
       "excerpt": "",
       "publishedAt": "2026-08-25T00:00:00.000Z",
       "category": "finance",
@@ -10039,8 +10585,8 @@
     {
       "sourceId": "cnfin",
       "source": "新华财经",
-      "title": "人大常委会｜水法修订草案拟规定加快构建国家水网",
-      "url": "https://www.cnfin.com/yw-lb/detail/20260825/4460135_1.html",
+      "title": "四川南充力争到2030年科技型中小企业突破1000户",
+      "url": "https://www.cnfin.com/hg-lb/detail/20260825/4460299_1.html",
       "excerpt": "",
       "publishedAt": "2026-08-25T00:00:00.000Z",
       "category": "finance",
@@ -10054,25 +10600,8 @@
     {
       "sourceId": "cnfin",
       "source": "新华财经",
-      "title": "上海：以“一江一河”交汇处“黄金三角”为核心，打造引领全球消费高地",
-      "url": "https://www.cnfin.com/hg-lb/detail/20260825/4460280_1.html",
-      "excerpt": "",
-      "publishedAt": "2026-08-25T00:00:00.000Z",
-      "category": "finance",
-      "summary": "",
-      "tier": "T1.5",
-      "filterBucket": "daily",
-      "filterDimensions": [
-        "wealth_mgmt"
-      ],
-      "fetchedToday": true,
-      "subcategory": "cn-finance"
-    },
-    {
-      "sourceId": "cnfin",
-      "source": "新华财经",
-      "title": "上海：引育全球供应链管理中心，集聚培育高能级贸易商",
-      "url": "https://www.cnfin.com/hg-lb/detail/20260825/4460262_1.html",
+      "title": "经合组织：七国集团二季度经济增速放缓至0.3%",
+      "url": "https://www.cnfin.com/hg-lb/detail/20260825/4460296_1.html",
       "excerpt": "",
       "publishedAt": "2026-08-25T00:00:00.000Z",
       "category": "finance",
@@ -10086,8 +10615,8 @@
     {
       "sourceId": "cnfin",
       "source": "新华财经",
-      "title": "“十五五”时期四川南充谋划储备重大项目1560个 总投资超1万亿元",
-      "url": "https://www.cnfin.com/hg-lb/detail/20260825/4460228_1.html",
+      "title": "商务部：跨国公司对华投资呈现“三个转变”",
+      "url": "https://www.cnfin.com/hg-lb/detail/20260825/4460292_1.html",
       "excerpt": "",
       "publishedAt": "2026-08-25T00:00:00.000Z",
       "category": "finance",
@@ -10101,8 +10630,23 @@
     {
       "sourceId": "cnfin",
       "source": "新华财经",
-      "title": "上半年数字产业收入超20万亿元 同比增长13.6%",
-      "url": "https://www.cnfin.com/hg-lb/detail/20260825/4460217_1.html",
+      "title": "“春雨润苗” 多部门合力护航小微企业发展",
+      "url": "https://www.cnfin.com/hg-lb/detail/20260825/4460200_1.html",
+      "excerpt": "",
+      "publishedAt": "2026-08-25T00:00:00.000Z",
+      "category": "finance",
+      "summary": "",
+      "tier": "T1.5",
+      "filterBucket": "daily",
+      "filterDimensions": [],
+      "fetchedToday": true,
+      "subcategory": "cn-finance"
+    },
+    {
+      "sourceId": "cnfin",
+      "source": "新华财经",
+      "title": "一图读懂《上海市综合交通发展“十五五”规划》",
+      "url": "https://www.cnfin.com/hg-lb/detail/20260825/4460186_1.html",
       "excerpt": "",
       "publishedAt": "2026-08-25T00:00:00.000Z",
       "category": "finance",
@@ -10116,8 +10660,8 @@
     {
       "sourceId": "stcn",
       "source": "证券时报",
-      "title": "广汽集团董事长冯兴亚与华为创始人任正非会面 围绕启境品牌发展等议题展开深入交流",
-      "url": "https://www.stcn.com/article/detail/4120300.html",
+      "title": "世纪天鸿：半年营收1.56亿 教辅守成、AI攻新",
+      "url": "https://www.stcn.com/article/detail/4120291.html",
       "excerpt": "",
       "publishedAt": "2026-08-25T00:00:00.000Z",
       "category": "finance",
@@ -10131,8 +10675,8 @@
     {
       "sourceId": "stcn",
       "source": "证券时报",
-      "title": "唯品会：第二季度营收247亿元 Non-GAAP净利润3.92亿元",
-      "url": "https://www.stcn.com/article/detail/4116270.html",
+      "title": "利润增速远超营收增速 科创板公司盈利质量显著改善",
+      "url": "https://www.stcn.com/article/detail/4116523.html",
       "excerpt": "",
       "publishedAt": "2026-08-25T00:00:00.000Z",
       "category": "finance",
@@ -10146,8 +10690,8 @@
     {
       "sourceId": "stcn",
       "source": "证券时报",
-      "title": "药明生物上半年营收增长18.4% 净利润增长4.3%",
-      "url": "https://www.stcn.com/article/detail/4120308.html",
+      "title": "广誉远上半年实现收入8.24亿元 多维创新驱动老字号开启新增长",
+      "url": "https://www.stcn.com/article/detail/4120269.html",
       "excerpt": "",
       "publishedAt": "2026-08-25T00:00:00.000Z",
       "category": "finance",
@@ -10161,8 +10705,8 @@
     {
       "sourceId": "stcn",
       "source": "证券时报",
-      "title": "雅迪控股上半年营收净利双降 国内市场进入调整期 海外业务保持增长",
-      "url": "https://www.stcn.com/article/detail/4120309.html",
+      "title": "嘉美包装：上半年归母净利润增长256% 全产业链平台进入增长期",
+      "url": "https://www.stcn.com/article/detail/4120266.html",
       "excerpt": "",
       "publishedAt": "2026-08-25T00:00:00.000Z",
       "category": "finance",
@@ -10176,8 +10720,8 @@
     {
       "sourceId": "stcn",
       "source": "证券时报",
-      "title": "直击恩捷股份业绩说明会：隔膜价格相对坚挺 预计盈利将持续恢复",
-      "url": "https://www.stcn.com/article/detail/4120298.html",
+      "title": "四维图新：2026年上半年智云数据合规业务继续保持高增长",
+      "url": "https://www.stcn.com/article/detail/4120218.html",
       "excerpt": "",
       "publishedAt": "2026-08-25T00:00:00.000Z",
       "category": "finance",
@@ -10191,8 +10735,8 @@
     {
       "sourceId": "stcn",
       "source": "证券时报",
-      "title": "致远互联：百万元以上订单同比增长69.1% 高价值客群经营成效凸显",
-      "url": "https://www.stcn.com/article/detail/4118828.html",
+      "title": "冠盛股份：营收同比增长近18%，绿色能源与机器人零部件赛道布局提速",
+      "url": "https://www.stcn.com/article/detail/4118878.html",
       "excerpt": "",
       "publishedAt": "2026-08-25T00:00:00.000Z",
       "category": "finance",
@@ -10202,81 +10746,6 @@
       "filterDimensions": [],
       "fetchedToday": true,
       "subcategory": "cn-finance"
-    },
-    {
-      "sourceId": "dayoo-gz",
-      "source": "广州日报·大洋网",
-      "title": "荔湾东沙片区规划通过审议，广州中心城区唯一滨水内港湾全面提速",
-      "url": "https://news.dayoo.com/guangzhou/202608/25/139995_54994993.htm",
-      "excerpt": "",
-      "publishedAt": "2026-08-25T00:00:00.000Z",
-      "category": "gz",
-      "summary": "",
-      "tier": "T2",
-      "filterBucket": "daily",
-      "filterDimensions": [],
-      "fetchedToday": true,
-      "subcategory": "gz-media"
-    },
-    {
-      "sourceId": "dayoo-gz",
-      "source": "广州日报·大洋网",
-      "title": "港澳媒体走访穗企，探寻“十五五”协同机遇",
-      "url": "https://news.dayoo.com/guangzhou/202608/25/139995_54994988.htm",
-      "excerpt": "",
-      "publishedAt": "2026-08-25T00:00:00.000Z",
-      "category": "gz",
-      "summary": "",
-      "tier": "T2",
-      "filterBucket": "daily",
-      "filterDimensions": [],
-      "fetchedToday": true,
-      "subcategory": "gz-media"
-    },
-    {
-      "sourceId": "dayoo-gz",
-      "source": "广州日报·大洋网",
-      "title": "官宣！广州国际商业港首开区北地块正式挂牌",
-      "url": "https://news.dayoo.com/guangzhou/202608/25/139995_54994962.htm",
-      "excerpt": "",
-      "publishedAt": "2026-08-25T00:00:00.000Z",
-      "category": "gz",
-      "summary": "",
-      "tier": "T2",
-      "filterBucket": "daily",
-      "filterDimensions": [],
-      "fetchedToday": true,
-      "subcategory": "gz-media"
-    },
-    {
-      "sourceId": "dayoo-gz",
-      "source": "广州日报·大洋网",
-      "title": "“甲醛白菜”风波追踪：广州江南市场未发现问题白菜",
-      "url": "https://news.dayoo.com/guangzhou/202608/25/139995_54994960.htm",
-      "excerpt": "",
-      "publishedAt": "2026-08-25T00:00:00.000Z",
-      "category": "gz",
-      "summary": "",
-      "tier": "T2",
-      "filterBucket": "daily",
-      "filterDimensions": [],
-      "fetchedToday": true,
-      "subcategory": "gz-media"
-    },
-    {
-      "sourceId": "dayoo-gz",
-      "source": "广州日报·大洋网",
-      "title": "广州音乐公园今日开园！建设运营规划发布：赋能万亿级音乐产业",
-      "url": "https://news.dayoo.com/guangzhou/202608/25/139995_54994946.htm",
-      "excerpt": "",
-      "publishedAt": "2026-08-25T00:00:00.000Z",
-      "category": "gz",
-      "summary": "",
-      "tier": "T2",
-      "filterBucket": "daily",
-      "filterDimensions": [],
-      "fetchedToday": true,
-      "subcategory": "gz-media"
     }
   ]
 }
