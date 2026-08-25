@@ -1,8 +1,10 @@
 /**
  * 股市单股过滤（2026-08-25 用户决定，永久生效）
  *
- * 位置：采集汇合 + 窗口过滤 + 单机构过滤之后，**对所有板块生效**（不只 stocks——
- * 单股新闻无论落在哪个分类都不应体现；宏观/指数/板块级不受影响）。
+ * 位置：采集汇合 + 窗口过滤 + 单机构过滤之后，**仅对 category=stocks（A股/港股/美股）生效**。
+ * 注意：不扩展到 finance/gz——那里大量行业综述（上市银行半年报/债市观察/银行股综述）是
+ * 银行零售相关宏观内容，会被"半年报/股价"等特征词误伤；真单股新闻（如 finance 里的
+ * "石头科技Q2扣非净利"）由存量逐条核验清理。
  *
  * 规则：股市新闻只保留
  *  - 巨头企业（阿里巴巴/京东/腾讯/苹果/英伟达等能影响板块的巨头）
@@ -23,7 +25,7 @@ const MEGA_CORPS = [
   "中国平安", "中国人寿", "中石油", "中石化", "中海油", "中国移动", "中国电信",
   "汇丰", "渣打",
   // 各行业龙头（能影响板块）
-  "贵州茅台", "五粮液", "泸州老窖", "美的", "格力", "海尔", "伊利", "农夫山泉",
+  "贵州茅台", "茅台", "五粮液", "泸州老窖", "美的", "格力", "海尔", "伊利", "农夫山泉",
   "华为", "中兴通讯", "科大讯飞", "海康威视", "京东方", "立讯精密", "歌尔",
   "恒瑞医药", "迈瑞", "药明", "百济", "复星医药", "片仔癀",
   "万科", "保利", "招商蛇口", "华润置地", "碧桂园", "龙湖",
@@ -97,7 +99,11 @@ export function shouldKeepStockNews(title: string): boolean {
   return true;
 }
 
-/** 批量过滤（对所有板块生效：单股新闻无论落在哪个分类都不应体现） */
-export function filterStockNews<T extends { title?: string }>(items: T[]): T[] {
-  return items.filter((a) => shouldKeepStockNews(a.title ?? ""));
+/** 批量过滤（仅 stocks 类生效；finance/gz 综述类不误伤） */
+export function filterStockNews<T extends { title?: string; category?: string }>(
+  items: T[],
+): T[] {
+  return items.filter(
+    (a) => a.category !== "stocks" || shouldKeepStockNews(a.title ?? ""),
+  );
 }
