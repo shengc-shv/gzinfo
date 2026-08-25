@@ -68,14 +68,20 @@ function toPayloadItems(items: StockItem[]): Array<{ title: string; summary: str
   }));
 }
 
-/** 从原始输入条目抽取可点击来源（去重、至多 3 条），供卡片「溯源」按钮使用。 */
+/** 从原始输入条目抽取可点击来源（去重、至多 3 条），供卡片「溯源」按钮使用。
+ *  每源至多 2 条：保证交叉验证的两个源（如 A股=东财+新浪）在按钮上都可见，
+ *  避免单个源条目多时把另一源挤掉。 */
 function toSources(items: StockItem[]): { url: string; title: string }[] {
   const seen = new Set<string>();
+  const perSource = new Map<string, number>();
   const out: { url: string; title: string }[] = [];
   for (const it of items) {
     const url = (it.url ?? "").trim();
     if (!url || seen.has(url)) continue;
+    const src = (it.source ?? "未知").trim() || "未知";
+    if ((perSource.get(src) ?? 0) >= 2) continue;
     seen.add(url);
+    perSource.set(src, (perSource.get(src) ?? 0) + 1);
     out.push({ url, title: (it.title ?? "").trim() || url });
     if (out.length >= 3) break;
   }
