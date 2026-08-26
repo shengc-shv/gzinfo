@@ -128,6 +128,26 @@ export interface StockNewsItem extends ReportItem {
   market: "a-share" | "hk" | "us";
 }
 
+/** 今日风险（M 层：行长 5 分钟核心决策信息之一）。
+ *  与 insights 对称：1 个最值得警惕的事件 + 依据 + 影响 + 建议。
+ *  影响按部门拆解（个贷/财富/私行/公司/风控），让行长听到后知道"该让哪个部门做什么"。 */
+export interface RiskItem {
+  /** 风险主题（≤15 字，如"央行重申防止资金空转"） */
+  topic: string;
+  /** 依据（1 句，事件本身，不写"市场波动"这类虚词） */
+  evidence: string;
+  /** 本行影响（按部门拆解，40-60 字） */
+  impact: string;
+  /** 建议动作（具体可执行，40-60 字） */
+  action: string;
+  /** 关联条目 URL（从输入 finance/gz 中按相似度回匹配） */
+  url?: string;
+  /** 来源权威等级（T1 央妈/T1.5 监管/T2 媒体） */
+  source?: "T1" | "T1.5" | "T2";
+  /** 来源链接（1-3 条，类似 insights.sources） */
+  sources?: Array<{ title: string; url: string }>;
+}
+
 export interface DailyReport {
   date: string;
   /** 今日定调一句话，15~70字，必填（为空时由管线兜底）。 */
@@ -141,6 +161,8 @@ export interface DailyReport {
   stock_recap?: StockRecap;
   /** Optional 股市消息清单（底部「股市动态」面板）：三市场原始新闻条目，按 A股/港股/美股 过滤。非 AI 生成。 */
   stock_news?: StockNewsItem[];
+  /** M 层：今日风险（1 条最值得警惕）。与 must_read/insights 同源（exec summary LLM），用于音频「风险预警」段。 */
+  risk?: RiskItem;
 }
 
 export interface TradingSection {

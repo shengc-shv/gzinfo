@@ -34,14 +34,29 @@ export interface ExecutiveSummary {
   must_read: Array<{ title: string; why: string; url?: string }>;
   /** 商机提示：对广州分行零售/对公的潜在影响与建议动作 */
   insights: ExecInsight[];
+  /** M 层：今日风险（1 条最值得警惕）。evidence 必填具体事件，impact 按部门拆解 */
+  risk?: ExecRisk;
+  /** 广东/广州 IPO 企业动态口播（≤60字）；当日无相关动态时为 null */
+  guangdong_ipo?: { spoken?: string } | null;
   /** 口播稿：今日定调（主播解读感：60字左右完整句，事件+应对建议，纯口语） */
   spoken_hero?: string;
   /** 口播稿：今日必读（主播解读感：5条左右，每条=事件+应对建议，独立成句换行，≤280字，纯口语） */
   spoken_must_read?: string;
   /** 口播稿：商机洞察（每条=事件+应对建议，多条换行，≤240字，纯口语） */
   spoken_insights?: string;
-  /** 广东/广州 IPO 企业动态口播（≤60字）；当日无相关动态时为 null */
-  guangdong_ipo?: { spoken?: string } | null;
+  /** M 层：风险口播稿（≤80字，行长听到"今天有 1 个需要警惕：xxx，建议 xxx"形式） */
+  spoken_risk?: string;
+}
+
+/** M 层：单条今日风险（与 ExecInsight 对称） */
+export interface ExecRisk {
+  topic: string;
+  evidence: string;
+  impact: string;
+  action: string;
+  url?: string;
+  source?: "T1" | "T1.5" | "T2";
+  sources?: Array<{ title: string; url: string }>;
 }
 
 export interface ExecSummaryInput {
@@ -53,6 +68,8 @@ export interface ExecSummaryInput {
   marketOverview?: string;
   /** IPO 板块条目（用于筛广东/广州 IPO 动态口播，可选） */
   ipo?: Array<{ title?: string; summary?: string; url?: string }>;
+  /** B-1：关键词层已识别的风险候选（来自 risk_tracker），喂给 LLM 的 risk 段 */
+  riskCandidates?: Array<{ title: string; url?: string; trackers: string[]; priority: string }>;
   /** 报告日期 YYYY-MM-DD */
   date: string;
 }
@@ -62,7 +79,7 @@ const SYSTEM_PROMPT =
 
 const RULES = `你是股份行广州分行零售决策简报的主编。系统面向分行信息技术部领导和分管零售的行领导，核心诉求：更快掌握宏观经济变化、政府政策变化、市场变化，从而挖掘更多客户、发现更多商机。
 
-基于输入的当日条目（宏观政策 + 广州商机 + 市场总览 + IPO），输出四部分：
+基于输入的当日条目（宏观政策 + 广州商机 + 市场总览 + IPO），输出五部分：
 
 0. hero_line（今日定调，1 句话）：以"总编辑"视角提炼今天最值得分行领导关注的一件事，50 字以内，一句话讲清"今天主题是什么、对分行意味着什么"。例："中行'算力Token贷'在穗抢跑落地，同业以新风控逻辑圈占科创轻资产客群，建议分行尽快评估应对。" 若当日无突出主题可省略（输出空字符串）；并为该定调配套口播稿 spoken_hero（"主播解读感"：60 字左右完整句，先讲事件再给应对建议，如"消费贷贴息集体扩围，价格战升级，建议分行统一口径抢抓窗口"，与 hero_line 结论一致；纯口语、无链接/无Markdown/无emoji，可直接朗读，严禁照读 hero_line 原文）。
 
@@ -80,16 +97,28 @@ const RULES = `你是股份行广州分行零售决策简报的主编。系统�
    - sources：来源链接数组（1-3 条，必填优先）。每条为输入中直接支撑该洞察的源文章，原样复制其 {title,url}（url 从输入对应条目复制，不得编造）。若洞察由多条输入综合得出，列最权威的 1-3 条；若确实无任何输入支撑则该字段省略。
    ；并为商机洞察整体配套口播稿 spoken_insights（每条 = 事件一句话 + 处置动作一句话（各 30-45 字），多条各占一行、句号收尾换行分隔形成气口停顿；每条≤60 字、总字数≤260 字；讲清"机会在哪+本周怎么落"，不要铺陈成段落，不念表格）。
 
-3. guangdong_ipo（广东/广州企业 IPO 动态，1 条或 null）：若输入 ipo 条目中存在"广东/广州企业"的 IPO 相关进展（过会、注册生效、申购、招股、上市敲钟等），则产出 guangdong_ipo.spoken（≤60字，说清企业名称、上市板块与最新进展，一两句话）；若无广东/广州 IPO 动态，则 guangdong_ipo 设为 null（不要编造）。
+3. risk（M 层：今日风险，1 条或 null）：今天最值得警惕的 1 件事。**与 insights 错开**——insights 是"机会"，risk 是"威胁"，**不能同一条事件又当机会又当风险**。
+   - 优先从「关键词层风险候选」（即输入中的 risk_candidates 数组，由 B-1 risk_tracker 预识别）里选 —— 这是关键词 + AI 双轨；LLM 决定是否采纳、并补足 evidence/impact/action 字段。
+   - 若 risk_candidates 都不合适（空 / 都不是真正的威胁），LLM 可自己从 finance/gz 中识别，但 evidence 仍需可溯源到具体输入条目。
+   - 无突出风险时，risk 设为 null（不要硬编）。
+   - topic：风险主题（15 字内，如"央行重申防止资金空转"）
+   - evidence：依据（1 句，事件本身，**禁止"市场波动/不确定性增加"这类虚词**，必须可溯源到输入条目）
+   - impact：对广州分行零售/对公业务的影响（40-60 字，**按部门拆解**：个贷/财富/私行/公司/风控 受影响的方式）
+   - action：建议动作（40-60 字，具体可执行，**带部门**："公司部应…/风控部应…"）
+   - source：来源权威等级（T1=央妈/金融监管总局/国务院 / T1.5=交易所/行业协会 / T2=媒体智库）
+   - sources：来源链接数组（1-3 条，evidence 依据的输入条目，原样复制 {title,url}）
+   ；并配套口播稿 spoken_risk（≤80 字，结构"今天有 1 个需要警惕：[topic]，[impact 一句话]，[action 一句话]"，纯口语、无链接/无 Markdown/无 emoji，每句独立成句、句号收尾）。当日无突出风险时，risk 设为 null（不要硬编），spoken_risk 省略。
+
+4. guangdong_ipo（广东/广州企业 IPO 动态，1 条或 null）：若输入 ipo 条目中存在"广东/广州企业"的 IPO 相关进展（过会、注册生效、申购、招股、上市敲钟等），则产出 guangdong_ipo.spoken（≤60字，说清企业名称、上市板块与最新进展，一两句话）；若无广东/广州 IPO 动态，则 guangdong_ipo 设为 null（不要编造）。
 
 要求：
 - 只基于输入信息，不要编造
 - 广州本地信息（南沙/广州企业/广州政策）优先于泛全国信息
 - 语言精炼，站在分行行长视角，不写空话套话
-- 措辞语气（2026-08-25 用户）：凡涉及「建议分行开展动作」的表达，一律用柔软建议式「建议分行…」（如"建议分行统一口径抢抓窗口""建议分行本周走访客群"），**严禁「分行应该/分行应/须尽快/需尽快/务必」等强硬祈使语气**；hero_line、spoken_* 口播稿与 insights.action 均适用
-- spoken_* 口播稿均为纯文本：无 Markdown、无链接、无 emoji、无 # * | \` 等符号，可直接朗读；口播稿是"二次提炼的主播语态"，严禁把 hero_line/must_read/insights 原文整段照读，要浓缩成口语（定调/必读/洞察均为"事件+应对建议"式完整句，每条独立成句、句号收尾、换行分隔形成气口停顿；总口播约 600 字、时长约 2 分钟）
+- 措辞语气（2026-08-25 用户）：凡涉及「建议分行开展动作」的表达，一律用柔软建议式「建议分行…」（如"建议分行统一口径抢抓窗口""建议分行本周走访客群"），**严禁「分行应该/分行应/须尽快/需尽快/务必」等强硬祈使语气**；hero_line、spoken_* 口播稿与 insights.action / risk.action 均适用
+- spoken_* 口播稿均为纯文本：无 Markdown、无链接、无 emoji、无 # * | \` 等符号，可直接朗读；口播稿是"二次提炼的主播语态"，严禁把 hero_line/must_read/insights/risk 原文整段照读，要浓缩成口语（定调/必读/洞察/风险均为"事件+应对建议"式完整句，每条独立成句、句号收尾、换行分隔形成气口停顿；总口播约 700 字、时长约 2.5 分钟）
 - 输出 STRICTLY 一个 JSON 对象（无 markdown 代码块）：
-{"hero_line":"...","spoken_hero":"...","must_read":[{"title":"...","why":"...","url":"..."}],"spoken_must_read":"...","insights":[{"topic":"...","impact":"...","action":"...","tag":["..."],"sources":[{"title":"...","url":"..."}]}],"spoken_insights":"...","guangdong_ipo":{"spoken":"..."} 或 null}
+{"hero_line":"...","spoken_hero":"...","must_read":[{"title":"...","why":"...","url":"..."}],"spoken_must_read":"...","insights":[{"topic":"...","impact":"...","action":"...","tag":["..."],"sources":[{"title":"...","url":"..."}]}],"spoken_insights":"...","risk":{"topic":"...","evidence":"...","impact":"...","action":"...","source":"T1","sources":[{"title":"...","url":"..."}]} 或 null,"spoken_risk":"...","guangdong_ipo":{"spoken":"..."} 或 null}
 注意：字符串内引号用单引号或中文引号，禁止裸双引号；url 字段原样复制输入中的链接。`;
 
 /**
@@ -157,6 +186,10 @@ export async function generateExecutiveSummary(
       summary: it.summary ?? "",
       url: it.url ?? "",
     })),
+    // B-1：关键词层 risk_tracker 已识别的风险候选，LLM 优先从这里选 1 条作为今日风险
+    ...(input.riskCandidates && input.riskCandidates.length > 0
+      ? { risk_candidates: input.riskCandidates }
+      : {}),
   };
   const userPrompt = [
     RULES,
@@ -192,6 +225,37 @@ export async function generateExecutiveSummary(
       }
       return undefined;
     };
+    // M 层：风险解析（risk 可为 null；source 限定 T1/T1.5/T2；sources 同 insights 相似度回链）
+    const rawRisk = parsed.risk;
+    const risk: ExecRisk | undefined =
+      rawRisk && typeof rawRisk === "object" && typeof rawRisk.topic === "string" && rawRisk.topic.trim()
+        ? (() => {
+            const r = rawRisk as unknown as Record<string, unknown>;
+            const explicit = Array.isArray(r.sources) && (r.sources as unknown[]).length > 0
+              ? (r.sources as Array<{ title?: string; url?: string }>)
+                  .slice(0, 3)
+                  .filter((s) => s && s.url)
+                  .map((s) => ({ title: s.title || "", url: s.url as string }))
+              : [];
+            const sources = explicit.length > 0
+              ? explicit
+              : resolveInsightSources(
+                  String(r.topic),
+                  String(r.evidence ?? ""),
+                  String(r.impact ?? ""),
+                  [...input.finance, ...input.gz],
+                );
+            return {
+              topic: String(r.topic),
+              evidence: typeof r.evidence === "string" ? r.evidence : "",
+              impact: typeof r.impact === "string" ? r.impact : "",
+              action: typeof r.action === "string" ? r.action : "",
+              ...(typeof r.url === "string" && r.url ? { url: r.url } : {}),
+              ...(r.source === "T1" || r.source === "T1.5" || r.source === "T2" ? { source: r.source } : {}),
+              ...(sources.length > 0 ? { sources } : {}),
+            };
+          })()
+        : undefined;
     return {
       hero_line: typeof parsed.hero_line === "string" ? parsed.hero_line : "",
       spoken_hero: typeof parsed.spoken_hero === "string" && parsed.spoken_hero.trim() ? parsed.spoken_hero.trim() : undefined,
@@ -217,6 +281,11 @@ export async function generateExecutiveSummary(
         };
       }),
       spoken_insights: typeof parsed.spoken_insights === "string" && parsed.spoken_insights.trim() ? parsed.spoken_insights.trim() : undefined,
+      risk,
+      spoken_risk:
+        typeof parsed.spoken_risk === "string" && parsed.spoken_risk.trim()
+          ? parsed.spoken_risk.trim()
+          : undefined,
       guangdong_ipo:
         parsed.guangdong_ipo && typeof parsed.guangdong_ipo === "object" && typeof parsed.guangdong_ipo.spoken === "string" && parsed.guangdong_ipo.spoken.trim()
           ? { spoken: parsed.guangdong_ipo.spoken.trim() }
