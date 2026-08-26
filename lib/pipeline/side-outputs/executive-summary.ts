@@ -82,14 +82,17 @@ export async function buildExecutiveSummary(
     return report;
   }
 
-  // AI 模式：先复用 → 否则生成
-  if (stored && (stored.hero_line || stored.must_read?.length || stored.insights?.length)) {
+  // AI 模式：默认重新生成 LLM（更符合"AI 开 = AI 跑"的用户预期）
+  // 仅当 REGEN_EXEC=0 时才复用 store.json（CI 去重 / 失败恢复等显式场景）
+  // REGEN_EXEC=1 显式声明"重生成"，与默认行为等价（用于脚本可读性）
+  const regenMode = process.env.REGEN_EXEC ?? "1";  // 默认 "1"（重新生成）
+  if (regenMode === "0" && stored && (stored.hero_line || stored.must_read?.length || stored.insights?.length)) {
     const next: DailyReport = { ...report };
     if (stored.hero_line) next.hero_line = stored.hero_line;
     mergeStoredExecutive(next, stored);
     ctx.log.info(
       "exec",
-      `🧠 复用 store.json 执行摘要（跳过 LLM 生成）：${stored.must_read?.length ?? 0} 必读 / ${stored.insights?.length ?? 0} 商机`,
+      `🧠 AI 模式 + REGEN_EXEC=0 复用 store.json 执行摘要：${stored.must_read?.length ?? 0} 必读 / ${stored.insights?.length ?? 0} 商机`,
     );
     return next;
   }
