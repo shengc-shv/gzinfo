@@ -16,6 +16,7 @@ import type {
   KeywordConfig,
   DimensionRule,
   OpportunityTracker,
+  RiskTracker,
   RawArticleInput,
   FilterResult,
 } from "./types";
@@ -57,23 +58,32 @@ function matchGeo(
 function matchDimension(
   d: DimensionRule,
   text: string,
-): { hit: boolean; strong: boolean; matched: string[] } {
+): { hit: boolean; strong: boolean; weak: boolean; matched: string[] } {
   const matched: string[] = [];
   // exclude 优先：命中即强制不归入该维度
   if (d.exclude && d.exclude.some((w) => text.includes(w))) {
-    return { hit: false, strong: false, matched };
+    return { hit: false, strong: false, weak: false, matched };
   }
   for (const w of d.strong_keywords ?? []) {
-    if (text.includes(w)) return { hit: true, strong: true, matched: [w] };
+    if (text.includes(w)) return { hit: true, strong: true, weak: false, matched: [w] };
   }
-  // weak 关键词必须与其 cooccurrence 词共现才算命中（无共现配置的 weak 词不单独命中）
+  // weak 关键词必须与其 cooccurrence 词共现才算命中（B-3：弱命中无共现 = 灰度）
   for (const [weak, coWords] of Object.entries(d.cooccurrence_for_weak ?? {})) {
     if (!(d.weak_keywords ?? []).includes(weak)) continue;
     if (text.includes(weak) && coWords.some((c) => text.includes(c))) {
-      return { hit: true, strong: false, matched: [weak] };
+      return { hit: true, strong: false, weak: false, matched: [weak] };
     }
   }
-  return { hit: false, strong: false, matched };
+  // B-3：weak 命中但无 cooccurrence → 灰度（标记但不阻断）
+  for (const w of d.weak_keywords ?? []) {
+    if (text.includes(w)) {
+      // 检查该 weak 词是否在 cooccurrence_for_weak 中且有共现词 — 如果有，说明已在上一步处理
+      const coWords = d.cooccurrence_for_weak?.[w];
+      if (coWords && coWords.length > 0) continue;  // 已有共现配置但未匹配 → 不算弱命中
+      return { hit: false, strong: false, weak: true, matched: [w] };
+    }
+  }
+  return { hit: false, strong: false, weak: false, matched };
 }
 
 function matchTracker(
@@ -127,6 +137,55 @@ function scanOpportunities(
   return opportunities;
 }
 
+/** B-1：风险追踪（与商机并存 — 一条新闻可同时是机会和风险）。 */
+function scanRisks(
+  config: KeywordConfig,
+  text: string,
+  geoHit: boolean,
+  matched: string[],
+): NonNullable<FilterResult["risks"]> {
+  const PRIORITY_ORDER: Record<"S" | "A" | "B", number> = { S: 0, A: 1, B: 2 };
+  const risks: NonNullable<FilterResult["risks"]> = [];
+  for (const [key, t] of Object.entries(config.risk_tracker ?? {})) {
+    if (!t || typeof t !== "object" || Array.isArray(t)) continue;
+    if (t.priority !== "S" && t.priority !== "A" && t.priority !== "B") continue;
+    // risk_tracker 默认不锁 geo（风险跨地域）；仅当显式 geo_lock=true 才检查
+    const r = matchRiskTracker(t, text, geoHit);
+    if (r.hit) {
+      risks.push({
+        tracker: key,
+        priority: t.priority,
+        label: t.label ?? key,
+        fields: t.fields ?? [],
+        action: t.action ?? "",
+      });
+      matched.push(...r.matched);
+    }
+  }
+  risks.sort((a, b) => PRIORITY_ORDER[a.priority] - PRIORITY_ORDER[b.priority]);
+  return risks;
+}
+
+/**
+ * B-1：风险追踪器匹配（与 OpportunityTracker 区别：默认无 geo_lock）。
+ * matchTracker 把 geo_lock 默认当作 true（机会常需本地化），这里把
+ * geo_lock 严格按配置值（默认 false）— 风险事件通常跨地域传播。
+ */
+function matchRiskTracker(
+  t: RiskTracker,
+  text: string,
+  geoHit: boolean,
+): { hit: boolean; matched: string[] } {
+  if (t.geo_lock && !geoHit) return { hit: false, matched: [] };
+  if (t.exclude_if_in_title && t.exclude_if_in_title.some((c) => text.includes(c))) {
+    return { hit: false, matched: [] };
+  }
+  for (const tok of [...(t.strong_triggers ?? []), ...(t.triggers ?? [])]) {
+    if (matchToken(tok, text)) return { hit: true, matched: [tok] };
+  }
+  return { hit: false, matched: [] };
+}
+
 /**
  * 对单条文章执行关键词漏斗（硬过滤）。
  *
@@ -146,11 +205,13 @@ export function applyKeywordFilter(
     // 仍跑 geo 判定：商机追踪器里 geo_lock=true 的（上市/融资/扩张等）依赖地域命中
     const geo = matchGeo(config, full);
     const opportunities = scanOpportunities(config, full, geo.hit, matched);
+    const risks = scanRisks(config, full, geo.hit, matched);
     return {
       pass: true,
       score: geo.score + (opportunities.length > 0 ? 1000 : 0),
       dimensions: [],
       ...(opportunities.length > 0 ? { opportunities } : {}),
+      ...(risks.length > 0 ? { risks } : {}),
       matched,
       bucket: opportunities.length > 0 ? "opportunity" : "daily",
     };
@@ -170,9 +231,11 @@ export function applyKeywordFilter(
   const geo = matchGeo(config, full);
 
   // 维度命中（multi_dimension: all_hit）。任一维度命中（含宏观政策·零售传导弱共现）即视为相关。
+  // B-3：弱命中无共现 → 灰度（gray=true），不阻断
   const hitDims: string[] = [];
   let dimScore = 0;
   let weekly = false;
+  let gray = false;
   for (const [key, d] of Object.entries(config.dimensions ?? {})) {
     if (!d || typeof d !== "object" || Array.isArray(d)) continue;
     const r = matchDimension(d, full);
@@ -181,11 +244,17 @@ export function applyKeywordFilter(
       dimScore += r.strong ? 2 : 1;
       if (d.weekly) weekly = true;
       matched.push(...r.matched);
+    } else if (r.weak) {
+      // B-3：弱命中无共现 → 灰度（弱信号，AI 收到后按灰度降级）
+      gray = true;
+      matched.push(...r.matched);
     }
   }
 
   // 商机追踪（多值：命中即全部收录，按 S>A>B 排序）
   const opportunities = scanOpportunities(config, full, geo.hit, matched);
+  // B-1：风险追踪（与商机并存 — 一条新闻可同时是机会和风险）
+  const risks = scanRisks(config, full, geo.hit, matched);
 
   // 漏斗只做 L0 明显噪声硬排除（零成本预过滤），真正的「相关性准度」交由
   // PASS1/PASS2 AI 回检裁决。2026-08-22 回退：此前的相关性闸门误杀了
@@ -202,6 +271,8 @@ export function applyKeywordFilter(
     score: geo.score + dimScore + (opportunities.length > 0 ? 1000 : 0),
     dimensions: hitDims,
     ...(opportunities.length > 0 ? { opportunities } : {}),
+    ...(risks.length > 0 ? { risks } : {}),
+    ...(gray ? { gray: true } : {}),
     matched,
     bucket,
   };

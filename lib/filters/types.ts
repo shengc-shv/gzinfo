@@ -35,6 +35,24 @@ export interface OpportunityTracker {
   fields?: string[];
 }
 
+/** 风险追踪器（risk_tracker.*，B-1）：行长 5 分钟决策的"威胁"维度。 */
+export interface RiskTracker {
+  label?: string;
+  /** 风险等级：S=重大（监管罚单/资本风险） A=重要（信用事件/政策收紧） B=关注（同业风险） */
+  priority?: "S" | "A" | "B";
+  /** 触发词：标题或正文命中任一即触发 */
+  strong_triggers?: string[];
+  triggers?: string[];
+  /** 命中要求地域命中（geo tier1 词出现在文本中）。默认 false — 风险通常跨地域传播 */
+  geo_lock?: boolean;
+  /** 标题出现任一城市名则跳过 */
+  exclude_if_in_title?: string[];
+  /** 行动建议：行长听到后的"该让谁做什么" */
+  action?: string;
+  /** 需收集的字段（按部门排查时用） */
+  fields?: string[];
+}
+
 /** sources.keywords.json 顶层结构。 */
 export interface KeywordConfig {
   version?: number;
@@ -53,6 +71,8 @@ export interface KeywordConfig {
   };
   dimensions?: Record<string, DimensionRule>;
   opportunity_tracker?: Record<string, OpportunityTracker>;
+  /** B-1：风险追踪器（关键词层风险识别，与 AI 层 risk 段双轨） */
+  risk_tracker?: Record<string, RiskTracker>;
   filter_rules?: {
     matching_mode?: string;
     multi_dimension?: { enabled?: boolean; strategy?: string };
@@ -102,6 +122,23 @@ export interface FilterResult {
     fields: string[];
     action: string;
   }>;
+  /**
+   * B-1：命中的风险追踪器列表（与 opportunities 并存 — 一条新闻可同时是商机和风险）。
+   * 风险无 geo_lock 默认值（除部分显式开启）— 风险通常跨地域传播，本行需对照自查。
+   */
+  risks?: Array<{
+    tracker: string;
+    priority: "S" | "A" | "B";
+    label: string;
+    fields: string[];
+    action: string;
+  }>;
+  /**
+   * B-3：灰度命中（弱关键词命中但 cooccurrence 未匹配）。
+   * 标记但不阻断 — AI 接收此标记后可在 prompt 中按"灰度"降级处理（少选 / 不选）。
+   * 当前主战场在 L0 之后一律放行进 AI（2026-08-22 决策），gray 仅作信号、不 drop。
+   */
+  gray?: boolean;
   /** 命中的关键词/触发词（用于调试与测试断言）。 */
   matched: string[];
   bucket: FilterBucket;

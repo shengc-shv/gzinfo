@@ -92,11 +92,23 @@ export function dedupeByTitleSimilarity(
   }
 
   // 贪心聚簇：每条与已有簇的代表比较，相似则入簇，否则新建簇。
+  // B-2 跨源去重精度：先按 canonical URL 归一（同一文章不同 utm_*/协议/尾斜杠
+  // 直接归一簇），再做标题相似度匹配（捕捉"同一事件不同源不同角度"）。
   const clusters: ArticleInput[][] = [];
   const reps: ArticleInput[] = [];
+  const repCanonical: (string | undefined)[] = [];
+  const { canonicalizeUrl } = require("./canonical-url") as typeof import("./canonical-url");
   for (const a of articles) {
     let placed = false;
+    const aCanon = a.url ? canonicalizeUrl(a.url) : undefined;
     for (let i = 0; i < reps.length; i++) {
+      // 1) canonical URL 相同 → 直接归一簇（最强信号）
+      if (aCanon && repCanonical[i] && aCanon === repCanonical[i]) {
+        clusters[i].push(a);
+        placed = true;
+        break;
+      }
+      // 2) 标题相似度达阈值 → 归一簇（捕捉跨源同事件）
       if (titleSimilarity(a.title, reps[i].title) >= threshold) {
         clusters[i].push(a);
         placed = true;
@@ -106,6 +118,7 @@ export function dedupeByTitleSimilarity(
     if (!placed) {
       clusters.push([a]);
       reps.push(a);
+      repCanonical.push(aCanon);
     }
   }
 
