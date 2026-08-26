@@ -1,0 +1,157 @@
+/**
+ * 必读 / 商机 / hero_line 执行摘要（PR4 引入，PR6 SKIP_AI 模式统一收口）。
+ *
+ * 模式自适应：
+ * - AI 模式：先读 store.json（若已有 → 复用，零 LLM）；否则用 buildTwoDayExecPool +
+ *   generateExecutiveSummary 拼 2 天窗口 → 覆盖 PASS2 产出 → writeStore 持久化
+ * - SKIP_AI 模式：仅从 store.json 复用（无 LLM 路径）
+ *
+ * 行为完全对齐原 daily.ts main 200-220 行的双分支。
+ */
+
+import type { ArticleInput, DailyReport } from "../../types";
+import {
+  loadStore,
+  generateExecutiveSummary,
+  writeStore,
+} from "../../ai/executive-summary";
+import { mergeStoredExecutive } from "../../output/render";
+import { buildTwoDayExecPool } from "../../ai/exec-pool";
+import type { HistoryStore } from "../../output/history";
+import type { FilterResult } from "../../filters/types";
+import type { DailyContext } from "../context";
+
+/**
+ * B-1：从 keyword-funnel 的 filterResults 提取 risk_tracker 命中的条目，
+ * 作为 LLM risk 段的"已识别候选"输入。
+ * 取最高 priority（风险 S > A > B）作为条目的 priority 字段。
+ */
+function extractRiskCandidates(
+  filterResults: Map<string, FilterResult>,
+  _articles: ArticleInput[],
+  _report: DailyReport,
+): Array<{ title: string; url?: string; trackers: string[]; priority: string }> {
+  const out: Array<{ title: string; url?: string; trackers: string[]; priority: string }> = [];
+  const PRIO: Record<string, number> = { S: 0, A: 1, B: 2 };
+  for (const [url, r] of filterResults) {
+    if (!r.risks || r.risks.length === 0) continue;
+    const trackers = r.risks.map((x) => x.tracker);
+    const priority = r.risks.reduce(
+      (best, x) => (PRIO[x.priority] < PRIO[best] ? x.priority : best),
+      "B",
+    );
+    // 用 url 作 title 兜底（exec summary LLM 看到 url 也能去 search）
+    out.push({ title: r.matched.join(" / ") || url, url, trackers, priority });
+  }
+  // 按 priority S > A > B 排序，最多取 5 条
+  out.sort((a, b) => PRIO[a.priority] - PRIO[b.priority]);
+  return out.slice(0, 5);
+}
+
+/**
+ * 应用执行摘要到 report。
+ * 返回新 report（不 mutate 入参）。
+ * 失败不抛错（与原 main 一致：生成失败时沿用 PASS2 产出）。
+ */
+export async function buildExecutiveSummary(
+  report: DailyReport,
+  history: HistoryStore,
+  articles: ArticleInput[],
+  ctx: DailyContext,
+  filterResults?: Map<string, FilterResult>,
+): Promise<DailyReport> {
+  const date = ctx.date;
+  const stored = loadStore(date);
+
+  // SKIP_AI 分支：仅复用 store，不调 LLM
+  if (ctx.mode.kind === "skip-ai") {
+    if (stored && (stored.must_read?.length || stored.insights?.length)) {
+      const before = { must: report.must_read.length, ins: report.insights.length };
+      const next: DailyReport = { ...report };
+      mergeStoredExecutive(next, stored);
+      ctx.log.info(
+        "exec",
+        `🧠 SKIP_AI 复用 store.json 执行摘要：必读 ${before.must}→${next.must_read.length} / 商机 ${before.ins}→${next.insights.length}`,
+      );
+      return next;
+    }
+    ctx.log.info(
+      "exec",
+      `ℹ️ SKIP_AI 无 store.json 执行摘要可复用（history/${date}/store.json 缺失或为空）`,
+    );
+    return report;
+  }
+
+  // AI 模式：先复用 → 否则生成
+  if (stored && (stored.hero_line || stored.must_read?.length || stored.insights?.length)) {
+    const next: DailyReport = { ...report };
+    if (stored.hero_line) next.hero_line = stored.hero_line;
+    mergeStoredExecutive(next, stored);
+    ctx.log.info(
+      "exec",
+      `🧠 复用 store.json 执行摘要（跳过 LLM 生成）：${stored.must_read?.length ?? 0} 必读 / ${stored.insights?.length ?? 0} 商机`,
+    );
+    return next;
+  }
+
+  // 生成新执行摘要
+  try {
+    const pool = buildTwoDayExecPool({ history, articles, report, today: date });
+    // B-1：从 filterResults 提取 risk_tracker 候选，喂给 LLM 作为 risk 段输入
+    const riskCandidates = filterResults
+      ? extractRiskCandidates(filterResults, articles, report)
+      : [];
+    if (riskCandidates.length > 0) {
+      ctx.log.info("exec", `🎯 关键词层风险候选 ${riskCandidates.length} 条（喂给 LLM）`);
+    }
+    const exec = await generateExecutiveSummary({
+      date,
+      finance: pool.finance,
+      gz: pool.gz,
+      ...(riskCandidates.length > 0 ? { riskCandidates } : {}),
+    });
+    if (exec) {
+      const next: DailyReport = { ...report };
+      if (exec.hero_line) next.hero_line = exec.hero_line;
+      const mustRead = exec.must_read
+        .filter((m) => !!m.url)
+        .map((m) => ({ title: m.title, why: m.why, url: m.url as string }));
+      if (mustRead.length) next.must_read = mustRead;
+      if (exec.insights.length) {
+        next.insights = exec.insights.map((it) => ({
+          topic: it.topic,
+          tags: it.tag ?? [],
+          impact: it.impact,
+          action: it.action,
+          ...(it.sources && it.sources.length ? { sources: it.sources } : {}),
+        }));
+      }
+      // M 层：风险落地（ExecRisk → DailyReport.risk）
+      if (exec.risk) {
+        next.risk = {
+          topic: exec.risk.topic,
+          evidence: exec.risk.evidence,
+          impact: exec.risk.impact,
+          action: exec.risk.action,
+          ...(exec.risk.url ? { url: exec.risk.url } : {}),
+          ...(exec.risk.source ? { source: exec.risk.source } : {}),
+          ...(exec.risk.sources && exec.risk.sources.length
+            ? { sources: exec.risk.sources }
+            : {}),
+        };
+      }
+      writeStore(date, exec);
+      ctx.log.info(
+        "exec",
+        `🧠 必读/商机/风险(今昨2天窗口)生成：${exec.must_read.length} 必读 / ${exec.insights.length} 商机 / ${exec.risk ? 1 : 0} 风险（输入 finance ${pool.finance.length} + gz ${pool.gz}）`,
+      );
+      return next;
+    }
+    ctx.log.info("exec", `ℹ️ 2天窗口执行摘要为空（沿用 PASS2 产出）`);
+    return report;
+  } catch (e) {
+    const msg = e instanceof Error ? e.message : String(e);
+    ctx.log.warn("exec", `⚠️ 2天窗口执行摘要生成失败（沿用 PASS2）: ${msg}`);
+    return report;
+  }
+}
