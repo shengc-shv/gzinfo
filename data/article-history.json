@@ -11645,5 +11645,17 @@
     "publishedAt": "2026-08-26T00:00:00.000Z",
     "firstSeenAt": "2026-08-26T10:17:49.872Z",
     "lastSeenAt": "2026-08-26T10:17:49.872Z"
+  },
+  "https://www.cnbc.com/2026/08/25/bond-rout-ending-massive-bets-on-bond-rally-dominate-options-market-.html": {
+    "title": "Bond rout ending? Massive bets on bond rally dominate options market",
+    "url": "https://www.cnbc.com/2026/08/25/bond-rout-ending-massive-bets-on-bond-rally-dominate-options-market-.html",
+    "sourceId": "cnbc-top",
+    "source": "CNBC Top Stories",
+    "category": "stocks",
+    "subcategory": "us",
+    "excerpt": "There's an old Wall Street adage: Stocks float on a sea of bonds. Options traders are betting the tide is going out.",
+    "publishedAt": "2026-08-25T19:42:17.000Z",
+    "firstSeenAt": "2026-08-26T10:22:26.952Z",
+    "lastSeenAt": "2026-08-26T10:22:26.952Z"
   }
 }
