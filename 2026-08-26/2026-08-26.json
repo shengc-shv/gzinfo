@@ -633,22 +633,6 @@
     ],
     "policy_market": [
       {
-        "url": "https://www.stcn.com/article/detail/4126838.html",
-        "title_cn": "增资潮来袭！信托疯狂补血背后，藏着什么信号？",
-        "title_orig": "增资潮来袭！信托疯狂补血背后，藏着什么信号？",
-        "source": "证券时报",
-        "source_type": "media",
-        "date": "08/26",
-        "summary": "信托行业迎来增资潮，多家机构密集补血。监管引导下行业资本约束趋紧，头部机构主动加固风险垫；建议分行财富条线跟进合作信托公司的资本金与评级变化，及时校准代销产品池的高风险主体敞口。",
-        "importance": 2,
-        "rank": 1,
-        "tags": [
-          "监管合规",
-          "财富"
-        ],
-        "locale": "national"
-      },
-      {
         "url": "https://www.cnfin.com/yw-lb/detail/20260825/4459772_1.html",
         "title_cn": "促进投资回稳成重点 多地开列下半年任务清单",
         "source": "新华财经",
@@ -657,7 +641,7 @@
         "date": "08/25",
         "summary": "促进投资回稳成重点 多地开列下半年任务清单；对分行财富/信贷/客群业务有宏观参考",
         "importance": 2,
-        "rank": 2,
+        "rank": 1,
         "tags": [],
         "locale": "national"
       },
@@ -670,7 +654,7 @@
         "date": "08/25",
         "summary": "央行打出长短“组合拳”呵护流动性；对分行财富/信贷/客群业务有宏观参考",
         "importance": 2,
-        "rank": 3,
+        "rank": 2,
         "tags": [],
         "locale": "national"
       },
@@ -683,7 +667,7 @@
         "date": "08/25",
         "summary": "智能产业提质升级 将激活有效投资新动能；对分行财富/信贷/客群业务有宏观参考",
         "importance": 2,
-        "rank": 4,
+        "rank": 3,
         "tags": [],
         "locale": "national"
       },
@@ -696,7 +680,7 @@
         "date": "08/25",
         "summary": "央行打出长短“组合拳”呵护流动性；对分行财富/信贷/客群业务有宏观参考",
         "importance": 2,
-        "rank": 5,
+        "rank": 4,
         "tags": [],
         "locale": "national"
       },
@@ -709,7 +693,7 @@
         "date": "08/25",
         "summary": "产业链协同托举 机器人赛场“高光”时刻；对分行财富/信贷/客群业务有宏观参考",
         "importance": 2,
-        "rank": 6,
+        "rank": 5,
         "tags": [],
         "locale": "national"
       },
@@ -722,7 +706,7 @@
         "date": "08/25",
         "summary": "从“口说无凭”到契约保障： 信托如何撬动企业人才激励新棋局；对分行财富/信贷/客群业务有宏观参考",
         "importance": 2,
-        "rank": 7,
+        "rank": 6,
         "tags": [
           "财富"
         ],
@@ -737,7 +721,7 @@
         "date": "08/25",
         "summary": "解码上市银行半年报：息差企稳回升 中间业务分化；对分行财富/信贷/客群业务有宏观参考",
         "importance": 2,
-        "rank": 8,
+        "rank": 7,
         "tags": [],
         "locale": "national"
       },
@@ -750,7 +734,7 @@
         "date": "08/25",
         "summary": "促进投资回稳成重点 多地开列下半年任务清单；对分行财富/信贷/客群业务有宏观参考",
         "importance": 2,
-        "rank": 9,
+        "rank": 8,
         "tags": [],
         "locale": "national"
       },
@@ -763,7 +747,7 @@
         "date": "08/25",
         "summary": "智能产业提质升级 将激活有效投资新动能；对分行财富/信贷/客群业务有宏观参考",
         "importance": 2,
-        "rank": 10,
+        "rank": 9,
         "tags": [],
         "locale": "national"
       },
@@ -776,7 +760,7 @@
         "date": "08/25",
         "summary": "人形机器人要全力奔赴产业化主战场；对分行财富/信贷/客群业务有宏观参考",
         "importance": 2,
-        "rank": 11,
+        "rank": 10,
         "tags": [],
         "locale": "national"
       },
@@ -788,6 +772,19 @@
         "tier": "T2",
         "date": "08/25",
         "summary": "国资委：孵化场景业态 加快实现6G商业闭环；对分行财富/信贷/客群业务有宏观参考",
+        "importance": 2,
+        "rank": 11,
+        "tags": [],
+        "locale": "national"
+      },
+      {
+        "url": "https://www.stcn.com/article/detail/4115160.html",
+        "title_cn": "国家人形机器人产业标准体系建设指南公开征求意见",
+        "source": "证券时报",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "08/25",
+        "summary": "国家人形机器人产业标准体系建设指南公开征求意见；对分行财富/信贷/客群业务有宏观参考",
         "importance": 2,
         "rank": 12,
         "tags": [],
@@ -802,7 +799,7 @@
         "date": "08/25",
         "summary": "通胀加速叠加日元承压 日本央行9月加息预期升温；对分行财富/信贷/客群业务有宏观参考",
         "importance": 2,
-        "rank": 14,
+        "rank": 13,
         "tags": [],
         "locale": "national"
       },
@@ -815,7 +812,7 @@
         "date": "08/25",
         "summary": "通胀债务双重压力叠加 美政策困局待解；对分行财富/信贷/客群业务有宏观参考",
         "importance": 2,
-        "rank": 15,
+        "rank": 14,
         "tags": [],
         "locale": "national"
       },
@@ -828,7 +825,7 @@
         "date": "08/25",
         "summary": "央行8月25日开展3860亿元7天期逆回购操作；对分行财富/信贷/客群业务有宏观参考",
         "importance": 2,
-        "rank": 16,
+        "rank": 15,
         "tags": [],
         "locale": "national"
       },
@@ -841,7 +838,7 @@
         "date": "08/25",
         "summary": "8月25日，人民币对美元中间价报6.7852，调降11个基点。前一交易日中间价报…；对分行财富/信贷/客群业务有宏观参考",
         "importance": 2,
-        "rank": 17,
+        "rank": 16,
         "tags": [],
         "locale": "national"
       },
@@ -854,7 +851,7 @@
         "date": "08/25",
         "summary": "智库报告：建行广东省分行以金融数字化改革助力农业强省建设；对分行财富/信贷/客群业务有宏观参考",
         "importance": 2,
-        "rank": 18,
+        "rank": 17,
         "tags": [],
         "locale": "national"
       },
@@ -867,7 +864,7 @@
         "date": "08/25",
         "summary": "上海银行业调整购房首付比例；对分行财富/信贷/客群业务有宏观参考",
         "importance": 2,
-        "rank": 20,
+        "rank": 19,
         "tags": [
           "信贷"
         ],
@@ -882,7 +879,7 @@
         "date": "08/25",
         "summary": "财报透视｜一省双雄：江苏银行“大而优” 南京银行“韧而进”；对分行财富/信贷/客群业务有宏观参考",
         "importance": 2,
-        "rank": 23,
+        "rank": 22,
         "tags": [],
         "locale": "national"
       },
@@ -895,7 +892,7 @@
         "date": "08/25",
         "summary": "成都：购买本市新建商品住房申请住房公积金贷款的 最低首付款比例为15%；对分行财富/信贷/客群业务有宏观参考",
         "importance": 2,
-        "rank": 24,
+        "rank": 23,
         "tags": [
           "信贷"
         ],
@@ -910,7 +907,7 @@
         "date": "08/25",
         "summary": "成都：购买本市新建商品住房申请住房公积金贷款的 最低首付款比例为15%；对分行财富/信贷/客群业务有宏观参考",
         "importance": 2,
-        "rank": 25,
+        "rank": 24,
         "tags": [
           "信贷"
         ],
@@ -925,7 +922,7 @@
         "date": "08/25",
         "summary": "成都再推楼市新政：公积金降首付+贷款利息补贴；对分行财富/信贷/客群业务有宏观参考",
         "importance": 2,
-        "rank": 33,
+        "rank": 32,
         "tags": [
           "信贷"
         ],
@@ -940,7 +937,7 @@
         "date": "08/25",
         "summary": "又一银行宣布申请理财子：温州银行拟申请理财子、；对分行财富/信贷/客群业务有宏观参考",
         "importance": 2,
-        "rank": 35,
+        "rank": 34,
         "tags": [
           "财富"
         ],
@@ -955,7 +952,7 @@
         "date": "08/25",
         "summary": "中国企业海外并购告别“扫货潮”，硬科技整合为境内并购主线；对分行财富/信贷/客群业务有宏观参考",
         "importance": 2,
-        "rank": 36,
+        "rank": 35,
         "tags": [],
         "locale": "national"
       },
@@ -968,7 +965,7 @@
         "date": "08/25",
         "summary": "人民日报连发4篇\"钟才文\"文章聚焦下半年经济工作定调；稳增长政策预期升温，分行需关注后续货币/财政政策细则对零售信贷投放的影响。",
         "importance": 2,
-        "rank": 41,
+        "rank": 40,
         "tags": [],
         "locale": "national"
       },
@@ -981,7 +978,7 @@
         "date": "08/25",
         "summary": "定期存款热度降温，分红型保险成银行力推替代品；存款搬家趋势延续，分行财富条线应加快分红险/固收+代销能力建设，承接低息存款外溢。",
         "importance": 2,
-        "rank": 42,
+        "rank": 41,
         "tags": [
           "财富"
         ],
@@ -996,7 +993,7 @@
         "date": "08/25",
         "summary": "中办国办印发《党政领导干部生态环境损害责任追究办法》，强化生态环保党政同责；绿色信贷/ESG评级相关业务合规边界进一步明确。",
         "importance": 2,
-        "rank": 43,
+        "rank": 42,
         "tags": [],
         "locale": "national"
       },
@@ -1009,7 +1006,7 @@
         "date": "08/25",
         "summary": "建行完成发行500亿元总损失吸收能力非资本债券；国有大行TLAC达标推进，分行可研究G-SIBs监管要求对接机会。",
         "importance": 2,
-        "rank": 44,
+        "rank": 43,
         "tags": [],
         "locale": "national"
       },
@@ -1022,7 +1019,7 @@
         "date": "08/25",
         "summary": "青农商行可转债到期兑付完毕，兑付价108元/张；中小银行资本补充工具到期处置，分行可关注属地农商行二级资本债配置。",
         "importance": 2,
-        "rank": 45,
+        "rank": 44,
         "tags": [],
         "locale": "national"
       },
@@ -1035,7 +1032,7 @@
         "date": "08/25",
         "summary": "江苏农信改革提速，徐州农商行在筹；省级农信改革推进，分行需关注属地农商行整合对存贷市场的影响。",
         "importance": 2,
-        "rank": 46,
+        "rank": 45,
         "tags": [],
         "locale": "national"
       }
@@ -1172,13 +1169,12 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/26",
-      "summary": "8月26日凌晨，霍尔木兹海峡相关地缘消息与特朗普释放的最新信号集中发酵，被市场视为对A股的突发利好。",
-      "importance": 2,
+      "summary": "霍尔木兹海峡相关消息及特朗普就相关议题释放信号，事件于8月26日凌晨传出。",
+      "importance": 3,
       "rank": 0,
       "tags": [
-        "地缘政治",
         "能源",
-        "宏观"
+        "地缘政治"
       ],
       "locale": "national",
       "market": "a-share"
@@ -1189,30 +1185,12 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/26",
-      "summary": "据披露，知名投资者章建平重仓买入1只算力概念股并清仓资源股，葛卫东则加仓芯片股。",
+      "summary": "牛散章建平调仓，重仓算力相关个股并清仓资源类股票；葛卫东加仓芯片股。",
       "importance": 1,
       "rank": 0,
       "tags": [
-        "算力",
-        "芯片",
-        "资金动向"
-      ],
-      "locale": "national",
-      "market": "a-share"
-    },
-    {
-      "url": "https://finance.eastmoney.com/a/202608253852958655.html",
-      "title_cn": "美伊又来利好了！美股直线拉升原油大跳水！",
-      "source": "东方财富",
-      "source_type": "media",
-      "date": "08/25",
-      "summary": "8月25日美伊传来利好信号，美股盘中直线拉升，国际原油价格大幅跳水。",
-      "importance": 2,
-      "rank": 0,
-      "tags": [
-        "地缘政治",
-        "原油",
-        "美股"
+        "芯片/半导体",
+        "AI算力"
       ],
       "locale": "national",
       "market": "a-share"
@@ -1223,12 +1201,11 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/25",
-      "summary": "8月25日晚间，沪深上市公司密集披露重大事项公告，涵盖停复牌、增减持、回购等日常信披。",
+      "summary": "8月25日晚间沪深上市公司密集发布重大事项公告，涵盖重组、增减持、业绩等。",
       "importance": 1,
       "rank": 0,
       "tags": [
-        "公司公告",
-        "信披"
+        "公司公告"
       ],
       "locale": "national",
       "market": "a-share"
@@ -1239,96 +1216,106 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/26",
-      "summary": "华为与苹果折叠屏新机预计于9月同期发布，A股相关核心增量环节供应链公司受关注。",
+      "summary": "华为与苹果折叠屏手机均计划于9月同期发布，折叠屏核心增量环节受市场关注。",
       "importance": 2,
       "rank": 0,
       "tags": [
         "消费电子",
-        "折叠屏",
-        "华为概念",
-        "苹果概念"
+        "华为/苹果"
       ],
       "locale": "national",
       "market": "a-share"
     },
     {
-      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0826/2026082600698.pdf",
-      "title_cn": "Circulars - [Other]",
-      "source": "港交所披露易",
+      "url": "https://finance.eastmoney.com/a/202608253853323150.html",
+      "title_cn": "爆买！“牛散”章建平成为光纤大牛股第三大股东",
+      "source": "东方财富",
       "source_type": "media",
-      "date": "08/26",
-      "summary": "港交所披露易发布一项类别为\"其他\"的上市公司通函。",
+      "date": "08/25",
+      "summary": "牛散章建平大举买入一只光纤龙头股，持股比例上升至第三大股东。",
       "importance": 1,
       "rank": 0,
       "tags": [
-        "港股",
+        "通信/光通信"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0826/2026082600716.pdf",
+      "title_cn": "Next Day Disclosure Returns - [Others]",
+      "source": "港交所披露易",
+      "source_type": "media",
+      "date": "08/26",
+      "summary": "港交所披露易刊出\"次日披露回报\"类公告（其他事项），具体内容未提供。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
         "公司公告"
       ],
       "locale": "national",
       "market": "hk"
     },
     {
-      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0826/2026082600695.htm",
-      "title_cn": "Announcements and Notices - [Overseas Regulatory Announcement - Issue of Securities and Related Matters]",
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0826/2026082600714.pdf",
+      "title_cn": "Announcements and Notices - [List of Directors and their Role and Function]",
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/26",
-      "summary": "港交所披露易收录一份上市公司海外监管公告，涉及证券发行及相关事宜。",
+      "summary": "港交所披露易刊出\"董事名单与其角色和职能\"类公告。",
       "importance": 1,
       "rank": 0,
       "tags": [
-        "港股",
         "公司公告",
-        "证券发行"
+        "公司治理"
       ],
       "locale": "national",
       "market": "hk"
     },
     {
-      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0826/2026082600692.pdf",
-      "title_cn": "Announcements and Notices - [Profit Warning / Inside Information]",
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0826/2026082600704.pdf",
+      "title_cn": "Announcements and Notices - [Dividend or Distribution (Announcement Form)]",
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/26",
-      "summary": "港股上市公司发布盈利预警/内幕消息公告。",
+      "summary": "港交所披露易刊出\"股息或分派\"相关上市公司公告。",
       "importance": 1,
       "rank": 0,
       "tags": [
-        "港股",
         "公司公告",
-        "盈利预警"
+        "分红"
       ],
       "locale": "national",
       "market": "hk"
     },
     {
-      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0826/2026082600688.pdf",
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0826/2026082600702.pdf",
+      "title_cn": "Announcements and Notices - [Change in Directors or of Important Executive Functions or Responsibilities / Change of Audit Committee Member / Change of Nomination Committee Member / Change of Remuneration Committee Member]",
+      "source": "港交所披露易",
+      "source_type": "media",
+      "date": "08/26",
+      "summary": "港交所披露易刊出\"董事或重要执行职能变动/审计/提名/薪酬委员会成员变更\"类公告。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "公司公告",
+        "公司治理"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0826/2026082600700.pdf",
       "title_cn": "Announcements and Notices - [Interim Results]",
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/26",
-      "summary": "港股上市公司披露中期业绩公告。",
+      "summary": "港交所披露易刊出某上市公司\"中期业绩\"公告。",
       "importance": 1,
       "rank": 0,
       "tags": [
-        "港股",
-        "中期业绩"
-      ],
-      "locale": "national",
-      "market": "hk"
-    },
-    {
-      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0826/2026082600686.pdf",
-      "title_cn": "Announcements and Notices - [Interim Results]",
-      "source": "港交所披露易",
-      "source_type": "media",
-      "date": "08/26",
-      "summary": "港股上市公司披露中期业绩公告。",
-      "importance": 1,
-      "rank": 0,
-      "tags": [
-        "港股",
-        "中期业绩"
+        "财报",
+        "公司公告"
       ],
       "locale": "national",
       "market": "hk"
@@ -1339,13 +1326,12 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/26",
-      "summary": "伊朗与阿曼准备就霍尔木兹海峡达成协议，美国在二级制裁问题上暂时按兵不动。",
+      "summary": "伊朗与阿曼准备就霍尔木兹海峡相关协议进行磋商，美国在二级制裁问题上暂持观望态度。",
       "importance": 3,
       "rank": 0,
       "tags": [
         "地缘政治",
-        "能源",
-        "中东"
+        "能源"
       ],
       "locale": "overseas",
       "market": "us"
@@ -1357,12 +1343,11 @@
       "source_type": "media",
       "date": "08/26",
       "summary": "亚马逊宣布关停一项曾被贝佐斯形容为\"人工的人工智能\"的服务。",
-      "importance": 1,
+      "importance": 2,
       "rank": 0,
       "tags": [
-        "亚马逊",
-        "AI",
-        "美股"
+        "科技/AI",
+        "中概股/美股科技"
       ],
       "locale": "overseas",
       "market": "us"
@@ -1373,14 +1358,12 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/25",
-      "summary": "加拿大公布对约200亿美元美国商品加征报复性关税的清单。",
-      "importance": 2,
+      "summary": "加拿大公布对约200亿美元美国商品的报复性关税清单。",
+      "importance": 3,
       "rank": 0,
       "tags": [
-        "贸易摩擦",
-        "关税",
-        "加拿大",
-        "美国"
+        "贸易/关税",
+        "地缘政治"
       ],
       "locale": "overseas",
       "market": "us"
@@ -1391,12 +1374,11 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/25",
-      "summary": "SpaceX计划在美国路易斯安那州建设一座投资规模约1000亿美元的太空港。",
+      "summary": "SpaceX计划在路易斯安那州建设投资规模达1000亿美元的太空发射场。",
       "importance": 2,
       "rank": 0,
       "tags": [
-        "SpaceX",
-        "航天",
+        "航天/科技",
         "基建"
       ],
       "locale": "overseas",
@@ -1408,13 +1390,13 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/26",
-      "summary": "特朗普政府与沙特达成的核能合作方案已提交国会审议，专家警告存在核扩散风险。",
-      "importance": 2,
+      "summary": "特朗普政府与沙特之间的核能合作方案已送交国会审议，专家警告存在核扩散风险。",
+      "importance": 3,
       "rank": 0,
       "tags": [
-        "核电",
-        "中东",
-        "美国政策"
+        "能源/核电",
+        "政策",
+        "地缘政治"
       ],
       "locale": "overseas",
       "market": "us"
