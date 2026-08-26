@@ -1,6 +1,6 @@
 {
   "date": "2026-08-26",
-  "updatedAt": "2026-08-26T09:48:24.508Z",
+  "updatedAt": "2026-08-26T09:53:04.336Z",
   "executive": {
     "hero_line": "广州国际商业港北地块挂牌落地，城市更新融资赛道升温，建议分行以商业地产与旧改项目为抓手扩增量。",
     "spoken_hero": "广州国际商业港北地块挂牌，城市更新融资升温。建议分行跟进本地项目与旧改专班，提前锁定开发贷和按揭。",
@@ -192,13 +192,12 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/26",
-      "summary": "8月26日凌晨，霍尔木兹海峡相关地缘消息与特朗普释放的最新信号集中发酵，被市场视为对A股的突发利好。",
-      "importance": 2,
+      "summary": "霍尔木兹海峡相关消息及特朗普就相关议题释放信号，事件于8月26日凌晨传出。",
+      "importance": 3,
       "rank": 0,
       "tags": [
-        "地缘政治",
         "能源",
-        "宏观"
+        "地缘政治"
       ],
       "locale": "national",
       "market": "a-share"
@@ -209,30 +208,12 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/26",
-      "summary": "据披露，知名投资者章建平重仓买入1只算力概念股并清仓资源股，葛卫东则加仓芯片股。",
+      "summary": "牛散章建平调仓，重仓算力相关个股并清仓资源类股票；葛卫东加仓芯片股。",
       "importance": 1,
       "rank": 0,
       "tags": [
-        "算力",
-        "芯片",
-        "资金动向"
-      ],
-      "locale": "national",
-      "market": "a-share"
-    },
-    {
-      "url": "https://finance.eastmoney.com/a/202608253852958655.html",
-      "title_cn": "美伊又来利好了！美股直线拉升原油大跳水！",
-      "source": "东方财富",
-      "source_type": "media",
-      "date": "08/25",
-      "summary": "8月25日美伊传来利好信号，美股盘中直线拉升，国际原油价格大幅跳水。",
-      "importance": 2,
-      "rank": 0,
-      "tags": [
-        "地缘政治",
-        "原油",
-        "美股"
+        "芯片/半导体",
+        "AI算力"
       ],
       "locale": "national",
       "market": "a-share"
@@ -243,12 +224,11 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/25",
-      "summary": "8月25日晚间，沪深上市公司密集披露重大事项公告，涵盖停复牌、增减持、回购等日常信披。",
+      "summary": "8月25日晚间沪深上市公司密集发布重大事项公告，涵盖重组、增减持、业绩等。",
       "importance": 1,
       "rank": 0,
       "tags": [
-        "公司公告",
-        "信披"
+        "公司公告"
       ],
       "locale": "national",
       "market": "a-share"
@@ -259,14 +239,12 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/26",
-      "summary": "华为与苹果折叠屏新机预计于9月同期发布，A股相关核心增量环节供应链公司受关注。",
+      "summary": "华为与苹果折叠屏手机均计划于9月同期发布，折叠屏核心增量环节受市场关注。",
       "importance": 2,
       "rank": 0,
       "tags": [
         "消费电子",
-        "折叠屏",
-        "华为概念",
-        "苹果概念"
+        "华为/苹果"
       ],
       "locale": "national",
       "market": "a-share"
@@ -277,13 +255,11 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/25",
-      "summary": "牛散章建平大举买入一只光纤龙头股，跻身其第三大股东。",
+      "summary": "牛散章建平大举买入一只光纤龙头股，持股比例上升至第三大股东。",
       "importance": 1,
       "rank": 0,
       "tags": [
-        "光纤",
-        "资金动向",
-        "通信"
+        "通信/光通信"
       ],
       "locale": "national",
       "market": "a-share"
@@ -294,12 +270,11 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/26",
-      "summary": "近期一只新股中签率较高，被券商提示投资者不要忘记打新。",
+      "summary": "近期一只新股中签率较高，媒体提示投资者关注打新机会。",
       "importance": 1,
       "rank": 0,
       "tags": [
-        "IPO",
-        "新股"
+        "IPO/打新"
       ],
       "locale": "national",
       "market": "a-share"
@@ -310,13 +285,12 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/26",
-      "summary": "国内9家企业协同攻关可控核聚变，工程化验证进程提速，融资客加仓11只相关潜力股。",
+      "summary": "9家企业协同攻关可控核聚变，工程化验证加速推进；融资客加仓11只相关潜力股。",
       "importance": 2,
       "rank": 0,
       "tags": [
-        "可控核聚变",
-        "新能源",
-        "融资融券"
+        "新能源/核聚变",
+        "政策"
       ],
       "locale": "national",
       "market": "a-share"
@@ -327,14 +301,13 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/26",
-      "summary": "英伟达二季度财报发布在即，摩根士丹利给予其信用评级\"中性\"，引发市场关注。",
-      "importance": 2,
+      "summary": "英伟达即将发布Q2财报，摩根士丹利给予其信用评级\"中性\"，市场关注度提升。",
+      "importance": 3,
       "rank": 0,
       "tags": [
-        "英伟达",
         "AI",
-        "财报",
-        "美股"
+        "芯片/半导体",
+        "财报"
       ],
       "locale": "national",
       "market": "a-share"
@@ -345,12 +318,11 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/26",
-      "summary": "8月26日有色金属板块强势爆发，千亿市值巨头封死涨停板。",
+      "summary": "有色金属板块强势爆发，多只千亿市值龙头封死涨停板。",
       "importance": 2,
       "rank": 0,
       "tags": [
-        "有色金属",
-        "A股"
+        "有色金属"
       ],
       "locale": "national",
       "market": "a-share"
@@ -361,13 +333,12 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/26",
-      "summary": "市场围绕宇树科技与牧原股份研发费用规模展开讨论，关注两家公司的研发投入。",
+      "summary": "市场讨论宇树科技与牧原股份的研发费用争议，两家公司研发投入水平引发对比。",
       "importance": 1,
       "rank": 0,
       "tags": [
-        "机器人",
-        "农牧业",
-        "公司研究"
+        "科技/AI",
+        "农林牧渔"
       ],
       "locale": "national",
       "market": "a-share"
@@ -378,15 +349,110 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/26",
-      "summary": "中信建投发布观点称，保险板块在中长期具备较为突出的配置价值。",
+      "summary": "中信建投证券发布研报，认为保险板块中长期配置价值突出。",
       "importance": 1,
       "rank": 0,
       "tags": [
         "保险",
-        "券商研究"
+        "券商研报"
       ],
       "locale": "national",
       "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202608263853770144.html",
+      "title_cn": "中信证券：标准体系顶层设计加快完善脑机接口产业化进程有望提速",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "08/26",
+      "summary": "中信证券研报指出，脑机接口标准体系顶层设计加快完善，产业化进程有望提速。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "脑机接口/医药",
+        "政策"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0826/2026082600716.pdf",
+      "title_cn": "Next Day Disclosure Returns - [Others]",
+      "source": "港交所披露易",
+      "source_type": "media",
+      "date": "08/26",
+      "summary": "港交所披露易刊出\"次日披露回报\"类公告（其他事项），具体内容未提供。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "公司公告"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0826/2026082600714.pdf",
+      "title_cn": "Announcements and Notices - [List of Directors and their Role and Function]",
+      "source": "港交所披露易",
+      "source_type": "media",
+      "date": "08/26",
+      "summary": "港交所披露易刊出\"董事名单与其角色和职能\"类公告。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "公司公告",
+        "公司治理"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0826/2026082600704.pdf",
+      "title_cn": "Announcements and Notices - [Dividend or Distribution (Announcement Form)]",
+      "source": "港交所披露易",
+      "source_type": "media",
+      "date": "08/26",
+      "summary": "港交所披露易刊出\"股息或分派\"相关上市公司公告。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "公司公告",
+        "分红"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0826/2026082600702.pdf",
+      "title_cn": "Announcements and Notices - [Change in Directors or of Important Executive Functions or Responsibilities / Change of Audit Committee Member / Change of Nomination Committee Member / Change of Remuneration Committee Member]",
+      "source": "港交所披露易",
+      "source_type": "media",
+      "date": "08/26",
+      "summary": "港交所披露易刊出\"董事或重要执行职能变动/审计/提名/薪酬委员会成员变更\"类公告。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "公司公告",
+        "公司治理"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0826/2026082600700.pdf",
+      "title_cn": "Announcements and Notices - [Interim Results]",
+      "source": "港交所披露易",
+      "source_type": "media",
+      "date": "08/26",
+      "summary": "港交所披露易刊出某上市公司\"中期业绩\"公告。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "财报",
+        "公司公告"
+      ],
+      "locale": "national",
+      "market": "hk"
     },
     {
       "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0826/2026082600698.pdf",
@@ -394,11 +460,10 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/26",
-      "summary": "港交所披露易发布一项类别为\"其他\"的上市公司通函。",
+      "summary": "港交所披露易刊出\"通函—其他\"类公告。",
       "importance": 1,
       "rank": 0,
       "tags": [
-        "港股",
         "公司公告"
       ],
       "locale": "national",
@@ -410,13 +475,12 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/26",
-      "summary": "港交所披露易收录一份上市公司海外监管公告，涉及证券发行及相关事宜。",
+      "summary": "港交所披露易刊出\"海外监管公告—证券发行及相关事宜\"类公告。",
       "importance": 1,
       "rank": 0,
       "tags": [
-        "港股",
         "公司公告",
-        "证券发行"
+        "融资"
       ],
       "locale": "national",
       "market": "hk"
@@ -427,13 +491,12 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/26",
-      "summary": "港股上市公司发布盈利预警/内幕消息公告。",
+      "summary": "港交所披露易刊出\"盈利警告/内幕消息\"类公告。",
       "importance": 1,
       "rank": 0,
       "tags": [
-        "港股",
         "公司公告",
-        "盈利预警"
+        "财报"
       ],
       "locale": "national",
       "market": "hk"
@@ -444,12 +507,12 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/26",
-      "summary": "港股上市公司披露中期业绩公告。",
+      "summary": "港交所披露易刊出某上市公司\"中期业绩\"公告。",
       "importance": 1,
       "rank": 0,
       "tags": [
-        "港股",
-        "中期业绩"
+        "财报",
+        "公司公告"
       ],
       "locale": "national",
       "market": "hk"
@@ -460,12 +523,12 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/26",
-      "summary": "港股上市公司披露中期业绩公告。",
+      "summary": "港交所披露易刊出某上市公司\"中期业绩\"公告。",
       "importance": 1,
       "rank": 0,
       "tags": [
-        "港股",
-        "中期业绩"
+        "财报",
+        "公司公告"
       ],
       "locale": "national",
       "market": "hk"
@@ -476,11 +539,11 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/26",
-      "summary": "港股上市公司更新董事会成员名单及其角色与职能。",
+      "summary": "港交所披露易刊出\"董事名单与其角色和职能\"类公告。",
       "importance": 1,
       "rank": 0,
       "tags": [
-        "港股",
+        "公司公告",
         "公司治理"
       ],
       "locale": "national",
@@ -492,92 +555,12 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/26",
-      "summary": "港股上市公司通过港交所披露易申报次日股份回购披露表。",
+      "summary": "港交所披露易刊出\"次日披露回报—股份回购\"类公告。",
       "importance": 1,
       "rank": 0,
       "tags": [
-        "港股",
-        "股份回购"
-      ],
-      "locale": "national",
-      "market": "hk"
-    },
-    {
-      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0826/2026082600680.pdf",
-      "title_cn": "Announcements and Notices - [Interim Results]",
-      "source": "港交所披露易",
-      "source_type": "media",
-      "date": "08/26",
-      "summary": "港股上市公司披露中期业绩公告。",
-      "importance": 1,
-      "rank": 0,
-      "tags": [
-        "港股",
-        "中期业绩"
-      ],
-      "locale": "national",
-      "market": "hk"
-    },
-    {
-      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0826/2026082600679.htm",
-      "title_cn": "Announcements and Notices - [Overseas Regulatory Announcement - Other]",
-      "source": "港交所披露易",
-      "source_type": "media",
-      "date": "08/26",
-      "summary": "港股上市公司发布海外监管公告（其他类别）。",
-      "importance": 1,
-      "rank": 0,
-      "tags": [
-        "港股",
-        "公司公告"
-      ],
-      "locale": "national",
-      "market": "hk"
-    },
-    {
-      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0826/2026082600676.pdf",
-      "title_cn": "Announcements and Notices - [Interim Results]",
-      "source": "港交所披露易",
-      "source_type": "media",
-      "date": "08/26",
-      "summary": "港股上市公司披露中期业绩公告。",
-      "importance": 1,
-      "rank": 0,
-      "tags": [
-        "港股",
-        "中期业绩"
-      ],
-      "locale": "national",
-      "market": "hk"
-    },
-    {
-      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0826/2026082600674.pdf",
-      "title_cn": "Next Day Disclosure Returns - [Others / Share Buyback]",
-      "source": "港交所披露易",
-      "source_type": "media",
-      "date": "08/26",
-      "summary": "港股上市公司通过港交所披露易申报次日披露表，涉及股份回购及其他事项。",
-      "importance": 1,
-      "rank": 0,
-      "tags": [
-        "港股",
-        "股份回购"
-      ],
-      "locale": "national",
-      "market": "hk"
-    },
-    {
-      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0826/2026082600672.pdf",
-      "title_cn": "Announcements and Notices - [Interim Results / Other - Business Update]",
-      "source": "港交所披露易",
-      "source_type": "media",
-      "date": "08/26",
-      "summary": "港股上市公司发布中期业绩公告，并附带业务更新。",
-      "importance": 1,
-      "rank": 0,
-      "tags": [
-        "港股",
-        "中期业绩"
+        "公司公告",
+        "回购"
       ],
       "locale": "national",
       "market": "hk"
@@ -588,13 +571,12 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/26",
-      "summary": "伊朗与阿曼准备就霍尔木兹海峡达成协议，美国在二级制裁问题上暂时按兵不动。",
+      "summary": "伊朗与阿曼准备就霍尔木兹海峡相关协议进行磋商，美国在二级制裁问题上暂持观望态度。",
       "importance": 3,
       "rank": 0,
       "tags": [
         "地缘政治",
-        "能源",
-        "中东"
+        "能源"
       ],
       "locale": "overseas",
       "market": "us"
@@ -606,12 +588,11 @@
       "source_type": "media",
       "date": "08/26",
       "summary": "亚马逊宣布关停一项曾被贝佐斯形容为\"人工的人工智能\"的服务。",
-      "importance": 1,
+      "importance": 2,
       "rank": 0,
       "tags": [
-        "亚马逊",
-        "AI",
-        "美股"
+        "科技/AI",
+        "中概股/美股科技"
       ],
       "locale": "overseas",
       "market": "us"
@@ -622,14 +603,12 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/25",
-      "summary": "加拿大公布对约200亿美元美国商品加征报复性关税的清单。",
-      "importance": 2,
+      "summary": "加拿大公布对约200亿美元美国商品的报复性关税清单。",
+      "importance": 3,
       "rank": 0,
       "tags": [
-        "贸易摩擦",
-        "关税",
-        "加拿大",
-        "美国"
+        "贸易/关税",
+        "地缘政治"
       ],
       "locale": "overseas",
       "market": "us"
@@ -640,12 +619,11 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/25",
-      "summary": "SpaceX计划在美国路易斯安那州建设一座投资规模约1000亿美元的太空港。",
+      "summary": "SpaceX计划在路易斯安那州建设投资规模达1000亿美元的太空发射场。",
       "importance": 2,
       "rank": 0,
       "tags": [
-        "SpaceX",
-        "航天",
+        "航天/科技",
         "基建"
       ],
       "locale": "overseas",
@@ -657,30 +635,13 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/26",
-      "summary": "特朗普政府与沙特达成的核能合作方案已提交国会审议，专家警告存在核扩散风险。",
-      "importance": 2,
+      "summary": "特朗普政府与沙特之间的核能合作方案已送交国会审议，专家警告存在核扩散风险。",
+      "importance": 3,
       "rank": 0,
       "tags": [
-        "核电",
-        "中东",
-        "美国政策"
-      ],
-      "locale": "overseas",
-      "market": "us"
-    },
-    {
-      "url": "https://www.cnbc.com/2026/08/25/waymo-robotaxi-germany-2027.html",
-      "title_cn": "Waymo to launch driverless rides in Germany in 2027, entering third market outside U.S.",
-      "source": "CNBC Top Stories",
-      "source_type": "media",
-      "date": "08/25",
-      "summary": "Waymo宣布将于2027年在德国推出无人驾驶出行服务，扩展至美国本土之外的第三个市场。",
-      "importance": 1,
-      "rank": 0,
-      "tags": [
-        "自动驾驶",
-        "Waymo",
-        "出海"
+        "能源/核电",
+        "政策",
+        "地缘政治"
       ],
       "locale": "overseas",
       "market": "us"
@@ -691,31 +652,44 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/26",
-      "summary": "海底捞因外卖业务增长及新品牌孵化带动前景，股价出现明显上涨。",
+      "summary": "海底捞股价上涨，受外卖业务增长及新餐饮品牌推出推动，公司前景受市场看好。",
       "importance": 2,
       "rank": 0,
       "tags": [
-        "海底捞",
-        "消费",
-        "港股"
+        "消费/餐饮",
+        "中概股"
       ],
       "locale": "overseas",
       "market": "us"
     },
     {
-      "url": "https://www.cnbc.com/2026/08/25/nvidias-dependence-on-hyperscalers-faces-big-test-in-earnings-report.html",
-      "title_cn": "Nvidia’s dependence on hyperscalers faces big test in earnings report",
+      "url": "https://www.cnbc.com/2026/08/25/waymo-robotaxi-germany-2027.html",
+      "title_cn": "Waymo to launch driverless rides in Germany in 2027, entering third market outside U.S.",
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/25",
-      "summary": "英伟达即将发布财报，其业绩对超大规模云厂商客户的高度依赖将面临市场检验。",
-      "importance": 3,
+      "summary": "Waymo计划于2027年在德国推出无人驾驶出行服务，将成为其美国以外的第三个市场。",
+      "importance": 2,
       "rank": 0,
       "tags": [
-        "英伟达",
-        "AI",
-        "财报",
-        "美股"
+        "自动驾驶",
+        "科技"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/08/25/trump-debt-ceiling-markets-midterm-election.html",
+      "title_cn": "Here's why markets are starting to care about the 2026 election 10 weeks out",
+      "source": "CNBC Top Stories",
+      "source_type": "media",
+      "date": "08/25",
+      "summary": "距2026年美国中期选举仅约10周，市场开始提前定价选举相关不确定性。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "美国政治",
+        "宏观"
       ],
       "locale": "overseas",
       "market": "us"
@@ -730,8 +704,7 @@
       "importance": 1,
       "rank": 0,
       "tags": [
-        "美国政治",
-        "选举"
+        "美国政治"
       ],
       "locale": "overseas",
       "market": "us"
@@ -742,47 +715,43 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/25",
-      "summary": "财经专业人士就\"K型经济\"是否走向终结展开讨论。",
-      "importance": 1,
-      "rank": 0,
-      "tags": [
-        "宏观",
-        "美国经济"
-      ],
-      "locale": "overseas",
-      "market": "us"
-    },
-    {
-      "url": "https://www.investing.com/news/forex-news/asia-fx-mixed-ahead-of-us-pce-inflation-aussie-dollar-gains-on-hot-cpi-4876252",
-      "title_cn": "Dollar treads water ahead of PCE; Aussie gains on hot CPI",
-      "source": "Investing.com News",
-      "source_type": "media",
-      "date": "08/26",
-      "summary": "美元在PCE物价数据公布前走势平淡，澳元受澳洲CPI高于预期提振上涨。",
-      "importance": 1,
-      "rank": 0,
-      "tags": [
-        "外汇",
-        "美元",
-        "宏观"
-      ],
-      "locale": "overseas",
-      "market": "us"
-    },
-    {
-      "url": "https://www.investing.com/news/earnings/li-auto-tops-quarterly-revenue-estimates-but-issues-weak-q3-guidance-4876562",
-      "title_cn": "Li Auto tops quarterly revenue estimates but issues weak Q3 guidance; shares dip",
-      "source": "Investing.com News",
-      "source_type": "media",
-      "date": "08/26",
-      "summary": "理想汽车季度营收超市场预期，但给出的三季度指引偏弱，盘后股价下跌。",
+      "summary": "财经专业人士讨论美国\"K型经济\"分化格局是否正在走向终结。",
       "importance": 2,
       "rank": 0,
       "tags": [
-        "理想汽车",
-        "中概股",
-        "新能源车",
-        "财报"
+        "宏观经济"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.investing.com/news/company-news/bidcorp-fy2026-slides-margins-expand-as-cash-flow-surges-93CH-4876587",
+      "title_cn": "Bidcorp FY2026 slides: margins expand as cash flow surges",
+      "source": "Investing.com News",
+      "source_type": "media",
+      "date": "08/26",
+      "summary": "Bidcorp公布2026财年业绩，利润率扩张且现金流大幅增长。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "财报",
+        "消费/食品"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.investing.com/news/company-news/stadler-rail-h1-2026-slides-record-revenue-growth-shares-fall-22-93CH-4876586",
+      "title_cn": "Stadler Rail H1 2026 slides: record revenue growth, shares fall 22%",
+      "source": "Investing.com News",
+      "source_type": "media",
+      "date": "08/26",
+      "summary": "Stadler Rail公布2026年上半年业绩，营收创纪录增长，但股价当日下跌22%。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "财报",
+        "轨道交通"
       ],
       "locale": "overseas",
       "market": "us"
