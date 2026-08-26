@@ -210,6 +210,18 @@ export const THEME_CSS = `
   .must-card {
     flex: 0 0 auto; width: 80vw; max-width: 300px;
     display: flex; gap: 0.55rem; align-items: flex-start;
+  }
+  /* N 层：top 3 必读卡片 — "今日三件事" 视觉强调（行长音频重点） */
+  .must-card.must-top {
+    background: color-mix(in srgb, var(--accent-cmb) 6%, var(--card));
+    border-left: 3px solid var(--accent-cmb);
+  }
+  .must-top-badge {
+    display: inline-block; margin-left: 0.4rem; padding: 1px 6px;
+    font-size: 0.66rem; font-weight: 700; color: white;
+    background: var(--accent-cmb); border-radius: 3px;
+    vertical-align: middle;
+  }
     border: 1px solid var(--rule); border-radius: 12px;
     padding: 0.6rem 0.75rem; background: var(--bg-elevated);
     box-shadow: var(--shadow-sm);
@@ -285,6 +297,48 @@ export const THEME_CSS = `
     .insight-scroller .insight { width: auto; max-width: none; }
     .exec-insights::after { display: none; }
     .insight-hint-inline { display: none; }
+  }
+
+  /* —— M 层：风险预警卡片（与 insight 同结构，红/警示色调）—— */
+  .exec-risk { position: relative; margin-top: 0.5rem; }
+  .risk-hint-inline { display: inline; color: var(--muted); font-size: 0.78rem; margin-left: 0.4rem; }
+  .risk-scroller {
+    list-style: none; margin: 0; padding: 0 0.75rem 0.5rem 0;
+    display: flex; flex-direction: row; gap: 0.5rem;
+    overflow-x: auto; -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: thin; scrollbar-color: var(--rule) transparent;
+  }
+  .risk-scroller::-webkit-scrollbar { height: 5px; }
+  .risk-scroller::-webkit-scrollbar-thumb { background: var(--rule); border-radius: 4px; }
+  .risk-scroller .risk-card {
+    flex: 0 0 auto; width: 82vw; max-width: 320px;
+    box-sizing: border-box;
+    background: color-mix(in srgb, #d9534f 4%, var(--card));
+    border-left: 3px solid #d9534f;
+    padding: 0.75rem 0.85rem;
+    border-radius: 6px;
+  }
+  .risk-card .risk-header { font-size: 0.72rem; color: #a94442; font-weight: 700; margin-bottom: 0.3rem; display: flex; align-items: center; gap: 0.4rem; }
+  .risk-card h3 { font-size: 0.92rem; margin: 0 0 0.35rem; color: #a94442; }
+  .risk-card p { margin: 0.2rem 0; font-size: 0.78rem; color: var(--fg-soft); line-height: 1.55; }
+  .risk-card p b { color: #d9534f; }
+  .risk-source-badge { display: inline-block; padding: 1px 6px; font-size: 0.65rem; border-radius: 3px; font-weight: 600; }
+  .risk-source-t1 { background: #d9534f; color: white; }
+  .risk-source-t1\.5 { background: #f0ad4e; color: white; }
+  .risk-source-t2 { background: #ddd; color: #666; }
+  .risk-srcs { display: inline-flex; gap: 4px; margin-left: auto; }
+  .risk-src { color: var(--muted); font-size: 0.72rem; padding: 0 4px; border-radius: 3px; border: 1px solid var(--rule); text-decoration: none; }
+  .exec-risk::after {
+    content: ""; position: absolute; top: 1.7rem; right: 0; bottom: 0.5rem;
+    width: 3.25rem; pointer-events: none; z-index: 3;
+    background: linear-gradient(to left, color-mix(in srgb, #d9534f 8%, var(--bg)) 0%, color-mix(in srgb, #d9534f 2%, transparent) 55%, transparent 100%);
+  }
+  @media (min-width: 720px) {
+    .risk-scroller { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); overflow: visible; padding-bottom: 0; padding-right: 0; scroll-snap-type: none; }
+    .risk-scroller .risk-card { width: auto; max-width: none; }
+    .exec-risk::after { display: none; }
+    .risk-hint-inline { display: none; }
   }
 
   /* —— 昨日股市复盘三卡（参考区）：横向滑动卡片，与「今日必读」同款 —— */
