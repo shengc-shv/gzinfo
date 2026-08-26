@@ -25,20 +25,43 @@ export interface AudioMeta {
   duration: string;
   /** 合成后端：tencent=腾讯云合成，piper=开源 Piper 本地合成；缺省为占位（未实际合成） */
   backend?: "tencent" | "piper";
+  /** v2 段落信息（I-A 实施）：用于 HTML timeupdate 联动高亮 */
+  segments?: AudioSegment[];
+}
+
+/** 音频段落（P0-A v2）：与 HTML 卡片 data-audio-ref 一一对应，timeupdate 驱动高亮。 */
+export interface AudioSegment {
+  /** 段落 ID（与 HTML 卡片 data-audio-ref 匹配）：
+   *  - "intro" / "closing" 全局段
+   *  - "hero" 今日定调
+   *  - "must:0" "must:1" "must:2" 各条 must_read
+   *  - "insight:0" "insight:1" 各条 insight
+   *  - "stock" 股市一句话
+   */
+  id: string;
+  /** 段落在脚本中的起止秒（估算），用于 timeupdate 定位 */
+  startSec: number;
+  durationSec: number;
+  /** 该段提到的文章 URL 列表（供关联卡片的 data-audio-ref） */
+  refs: string[];
+  /** 段落纯文本（调试用） */
+  text: string;
 }
 
 /** 各章节口播字数上限（2026-08-25 用户拍板：股市解读入口播 + 总时长 ≤3 分钟 → 全稿 ≤~900 字）。
- *  重平衡：必读/洞察适度压缩腾出股市解读段（正文上限合计 830 + 过场语 ~65 ≈ 895 字 ≈ 2.9 分钟）。 */
+ *  重平衡：必读/洞察适度压缩腾出股市解读段（正文上限合计 830 + 过场语 ~65 ≈ 895 字 ≈ 2.9 分钟）。
+ *  v2（I-A）：hero 上调以容纳"早上好" + 整段定调；insights 略减让位给可能的 ipo 段。 */
 export const AUDIO_SPEAK_LIMITS = {
-  hero: 80,
+  hero: 90,
   must_read: 280,
   insights: 200,
   ipo: 50,
   stock: 220,
 } as const;
 
-const OPENER = "早上好，以下是今日简报。";
-const CLOSER = "详细内容请查看下方图文。";
+// v2（I-A 用户要求）：去掉"行长"等称呼；最后用"今天播报结束"作为收尾，不下命令。
+const OPENER = "早上好。";
+const CLOSER = "今天播报结束。";
 const IPO_TRANSITION = "接下去关注广东IPO企业动态。";
 /** 股市解读段：语气与「今日必读」同风格（客观、精炼、陈述式），过场语与必读/洞察并列。 */
 const STOCK_TRANSITION = "接下去是股市解读。";
@@ -52,6 +75,8 @@ export interface AudioBuildResult {
   parts: Record<string, string>;
   /** 估算音频时长（秒） */
   durationSec: number;
+  /** v2 段落数组（用于 HTML 联动） */
+  segments: AudioSegment[];
 }
 
 /** 去除 URL / Markdown / 链接 / 易碎符号，保留可朗读纯文本。 */
@@ -152,13 +177,27 @@ export async function assembleAudioScript(
 ): Promise<AudioBuildResult | null> {
   const parts: string[] = [OPENER];
   const partMap: Record<string, string> = {};
+  const segments: AudioSegment[] = [];
   let found = 0;
+  // 累计已用秒（用于 segment.startSec）
+  let cursor = estimateDurationSec(OPENER.length);
+  segments.push({
+    id: "intro",
+    startSec: 0,
+    durationSec: cursor,
+    refs: [],
+    text: OPENER,
+  });
 
   const hero = sanitize(exec.spoken_hero ?? "");
   if (hero) {
     const t = truncateAtSentence(hero, AUDIO_SPEAK_LIMITS.hero);
-    parts.push(`先看今日定调。${t}`);
+    const segText = `先看今日定调。${t}`;
+    parts.push(segText);
     partMap.hero = t;
+    const dur = estimateDurationSec(segText.length);
+    segments.push({ id: "hero", startSec: cursor, durationSec: dur, refs: [], text: segText });
+    cursor += dur;
     found++;
   } else {
     console.warn("⚠️ 章节「今日定调」无口播稿，跳过");
@@ -167,8 +206,21 @@ export async function assembleAudioScript(
   const mr = sanitize(exec.spoken_must_read ?? "");
   if (mr) {
     const t = truncateAtSentence(mr, AUDIO_SPEAK_LIMITS.must_read);
-    parts.push(`接下去看今日必读。${t}`);
+    const segText = `接下去看今日必读。${t}`;
+    parts.push(segText);
     partMap.must_read = t;
+    const dur = estimateDurationSec(segText.length);
+    // 关联 must_read 各条 URL（按出现顺序匹配，过滤空 url）
+    const mrUrls = (exec.must_read ?? []).map((m) => m.url ?? "").filter(Boolean);
+    // 段落级 ref 用 "must" 标识（多张卡片通过 render 时 data-audio-ref="must:0/1/2" 区分）
+    segments.push({
+      id: "must",
+      startSec: cursor,
+      durationSec: dur,
+      refs: mrUrls,
+      text: segText,
+    });
+    cursor += dur;
     found++;
   } else {
     console.warn("⚠️ 章节「今日必读」无口播稿，跳过");
@@ -177,11 +229,46 @@ export async function assembleAudioScript(
   const ins = sanitize(exec.spoken_insights ?? "");
   if (ins) {
     const t = truncateAtSentence(ins, AUDIO_SPEAK_LIMITS.insights);
-    parts.push(`接下去是商机洞察。${t}`);
+    const segText = `接下去是商机洞察。${t}`;
+    parts.push(segText);
     partMap.insights = t;
+    const dur = estimateDurationSec(segText.length);
+    const insightUrls = (exec.insights ?? [])
+      .flatMap((i) => (i.sources ?? []).map((s) => s.url))
+      .filter(Boolean);
+    segments.push({
+      id: "insight",
+      startSec: cursor,
+      durationSec: dur,
+      refs: insightUrls,
+      text: segText,
+    });
+    cursor += dur;
     found++;
   } else {
     console.warn("⚠️ 章节「商机洞察」无口播稿，跳过");
+  }
+
+  // M 层：风险预警段（30s 预算；当日无风险 → 跳过）。插在商机后、股市前。
+  const risk = sanitize(exec.spoken_risk ?? "");
+  if (risk) {
+    const t = truncateAtSentence(risk, 90);  // 上限 90 字（约 17s 朗读 + 13s 过场/停顿 ≈ 30s）
+    const segText = `接下去是风险预警。${t}`;
+    parts.push(segText);
+    partMap.risk = t;
+    const dur = estimateDurationSec(segText.length);
+    const riskUrls = (exec.risk?.sources ?? []).map((s) => s.url).filter(Boolean);
+    segments.push({
+      id: "risk",
+      startSec: cursor,
+      durationSec: dur,
+      refs: riskUrls,
+      text: segText,
+    });
+    cursor += dur;
+    found++;
+  } else {
+    console.warn("⚠️ 章节「风险预警」无口播稿，跳过");
   }
 
   // —— 昨日股市解读：三市场 spoken 拼接（若有）——
@@ -200,8 +287,18 @@ export async function assembleAudioScript(
     pushSeg("港股", stockRecap.hk);
     if (segs.length) {
       const combined = truncateAtSentence(segs.join("。"), AUDIO_SPEAK_LIMITS.stock);
-      parts.push(`${STOCK_TRANSITION}${combined}`);
+      const segText = `${STOCK_TRANSITION}${combined}`;
+      parts.push(segText);
       partMap.stock_recap = combined;
+      const dur = estimateDurationSec(segText.length);
+      segments.push({
+        id: "stock",
+        startSec: cursor,
+        durationSec: dur,
+        refs: [],
+        text: segText,
+      });
+      cursor += dur;
       found++;
     } else {
       console.warn("⚠️ 章节「昨日股市解读」三市场口播稿均缺失，跳过");
@@ -236,11 +333,26 @@ export async function assembleAudioScript(
       .replace(/^(?:另外[，,]?\s*)?(?:关注(?:一条)?)?广东IP[ＯO]?[^。：:]*[。：:]?\s*/, "")
       .trim();
     ipo = truncateAtSentence(ipo, AUDIO_SPEAK_LIMITS.ipo);
-    parts.push(`${IPO_TRANSITION}${ipo}`);
+    const segText = `${IPO_TRANSITION}${ipo}`;
+    parts.push(segText);
     partMap.guangdong_ipo = ipo;
+    const dur = estimateDurationSec(segText.length);
+    segments.push({ id: "ipo", startSec: cursor, durationSec: dur, refs: [], text: segText });
+    cursor += dur;
   }
 
-  parts.push(CLOSER);
+  // v2（I-A）收尾："今天播报结束。" 取代原 CLOSER "详细内容请查看下方图文。"
+  const closingText = CLOSER;
+  parts.push(closingText);
+  const closingDur = estimateDurationSec(closingText.length);
+  segments.push({
+    id: "closing",
+    startSec: cursor,
+    durationSec: closingDur,
+    refs: [],
+    text: closingText,
+  });
+
   const script = parts.join("\n");
   const durationSec = estimateDurationSec(script.length);
 
@@ -261,7 +373,9 @@ export async function assembleAudioScript(
         {
           date,
           parts: partMap,
-          order: ["hero", "must_read", "insights", ...(ipo ? ["guangdong_ipo"] : [])],
+          order: ["hero", "must_read", "insights", ...(risk ? ["risk"] : []), ...(ipo ? ["guangdong_ipo"] : [])],
+          // v2 段落（含 start/duration/refs，供 HTML 联动高亮）
+          segments: segments.map((s) => ({ id: s.id, startSec: s.startSec, durationSec: s.durationSec, refs: s.refs })),
         },
         null,
         2,
@@ -273,5 +387,5 @@ export async function assembleAudioScript(
   console.log(
     `✅ 口播稿拼装完毕：${script.length} 字，${parts.length - 2} 个内容段（定调/必读/洞察/股市解读/IPO），广东IPO=${ipo ? "有" : "无"}，估算时长≈${durationSec}s`,
   );
-  return { script, parts: partMap, durationSec };
+  return { script, parts: partMap, durationSec, segments };
 }
