@@ -1,26 +1,204 @@
 {
   "date": "2026-08-27",
-  "hero_line": "今日暂无可推送重点，详见各板块资讯。",
-  "must_read": [],
-  "insights": [],
+  "hero_line": "理财业绩基准集中换锚叠加外部关税扰动，零售预期管理与外贸客群摸排成今日分行双主线。",
+  "must_read": [
+    {
+      "title": "理财基准集中换锚",
+      "why": "3000余只产品调整业绩比较基准锚定方式，零售端客户对净值波动的感知会放大，代销端需要做预期管理，否则可能影响财富客户留存与产品口碑。",
+      "url": "https://m.21jingji.com/article/20260827/herald/ccb1cf0cb4d2676776906b20771b0ca4.html"
+    },
+    {
+      "title": "财政部深化零基预算与地方债管理",
+      "why": "城投、基建类授信客群偿付与再融资逻辑会受地方债管理节奏影响，对公客户经理要跟踪属地化债进展，把握项目审批与续作窗口。",
+      "url": "https://www.cnfin.com/yw-lb/detail/20260827/4461283_1.html"
+    },
+    {
+      "title": "美方考虑对华加征7.5%关税",
+      "why": "外贸及跨境客群关税成本预期上升，辖内外贸企业的订单、结算与结售汇节奏可能率先波动，对公与外汇条线需提前排摸。",
+      "url": "https://www.cnfin.com/hg-lb/detail/20260827/4461272_1.html"
+    },
+    {
+      "title": "日央行放风或加快加息",
+      "why": "日元利率路径变化会传导到跨境理财与外汇产品定价，结售汇客户与海外配置型客户的窗口期值得关注。",
+      "url": "https://m.21jingji.com/article/20260827/herald/8d4f7f0b4b468bfed9ef93cff92535ac.html"
+    }
+  ],
+  "insights": [
+    {
+      "topic": "理财基准换锚做客户预期管理",
+      "tags": [
+        "财富"
+      ],
+      "impact": "业绩比较基准调整后首批产品净值表现会被市场放大解读，老客户若未及时告知容易产生信任损耗，影响代销留存。",
+      "action": "本周内财富部组织理财经理话术统一，对持有换锚产品客户逐一沟通新基准逻辑，并配套稳健型产品作为过渡选项。",
+      "sources": [
+        {
+          "title": "8月超3000只银行理财公告\"换锚\"",
+          "url": "https://m.21jingji.com/article/20260827/herald/ccb1cf0cb4d2676776906b20771b0ca4.html"
+        }
+      ]
+    },
+    {
+      "topic": "外贸客群关税成本摸排",
+      "tags": [
+        "客群",
+        "信贷"
+      ],
+      "impact": "美方拟加征7.5%关税若落地，辖内外贸出口企业的毛利与订单结构将承压，结算、结售汇和贸易融资需求可能先于基本面变化。",
+      "action": "对公部本周起梳理辖内外贸百强与跨境结算大户名单，优先走访并评估关税转嫁能力，配套贸易融资与外汇套保方案。",
+      "sources": [
+        {
+          "title": "商务部回应美考虑对华额外加征7.5%关税",
+          "url": "https://www.cnfin.com/hg-lb/detail/20260827/4461272_1.html"
+        }
+      ]
+    },
+    {
+      "topic": "城投基建续作窗口跟进",
+      "tags": [
+        "信贷",
+        "政银合作"
+      ],
+      "impact": "零基预算与地方债管理节奏会传导至城投平台再融资能力，存量授信客户的项目审批与还款来源需重新评估。",
+      "action": "对公部联合风控梳理辖内城投基建白名单客户，对短期到期项目提前对接续作方案，并关注新型政策性金融工具对接机会。",
+      "sources": [
+        {
+          "title": "财政部：持续深化零基预算改革 加强地方政府债务管理",
+          "url": "https://www.cnfin.com/yw-lb/detail/20260827/4461283_1.html"
+        }
+      ]
+    },
+    {
+      "topic": "跨境与外汇客户窗口营销",
+      "tags": [
+        "私行",
+        "财富"
+      ],
+      "impact": "日央行加息预期叠加关税扰动，人民币汇率波动区间可能打开，结售汇客户与海外配置型客户的交易意愿提升。",
+      "action": "私行与财富部本周内筛出高净值外汇活跃客户，推送结售汇优惠与海外配置型产品组合，借波动窗口做大客单价。",
+      "sources": [
+        {
+          "title": "日本央行副行长发声：若金融环境过松或加快加息，不会冲击市场",
+          "url": "https://m.21jingji.com/article/20260827/herald/8d4f7f0b4b468bfed9ef93cff92535ac.html"
+        },
+        {
+          "title": "资管一线 | 资源、算力与资本日益稀缺，资产配置如何重构？",
+          "url": "https://www.cnfin.com/hg-lb/detail/20260827/4461280_1.html"
+        }
+      ]
+    }
+  ],
   "sections": {
     "gz_local": [],
-    "biz_insight": [],
-    "policy_market": [],
+    "biz_insight": [
+      {
+        "url": "https://www.cnfin.com/hg-lb/detail/20260827/4461280_1.html",
+        "title_cn": "资管一线 | 资源、算力与资本日益稀缺，资产配置如何重构？",
+        "title_orig": "资管一线 | 资源、算力与资本日益稀缺，资产配置如何重构？",
+        "source": "新华财经",
+        "source_type": "media",
+        "date": "08/27",
+        "summary": "资管机构围绕资源、算力、资本三要素讨论资产配置重构方向。逻辑变化将影响代销产品池的权重排序。财富条线可据此审视在售策略型产品的主题分布与客户适配度。",
+        "importance": 2,
+        "rank": 1,
+        "tags": [
+          "财富"
+        ],
+        "locale": "national"
+      }
+    ],
+    "policy_market": [
+      {
+        "url": "https://m.21jingji.com/article/20260827/herald/ccb1cf0cb4d2676776906b20771b0ca4.html",
+        "title_cn": "8月超3000只银行理财公告\"换锚\"",
+        "title_orig": "8月超3000只银行理财公告\"换锚\"",
+        "source": "21世纪经济报道·金融",
+        "source_type": "media",
+        "date": "08/27",
+        "summary": "8月超3000只银行理财公告调整业绩比较基准锚定方式。基准切换或放大产品净值波动感知，代销端需对客户做预期管理。下一步关注首批调整产品到期后的净值表现。",
+        "importance": 3,
+        "rank": 1,
+        "tags": [
+          "财富",
+          "市场",
+          "客群"
+        ],
+        "locale": "national"
+      },
+      {
+        "url": "https://www.cnfin.com/yw-lb/detail/20260827/4461283_1.html",
+        "title_cn": "财政部：持续深化零基预算改革 加强地方政府债务管理",
+        "title_orig": "财政部：持续深化零基预算改革 加强地方政府债务管理",
+        "source": "新华财经",
+        "source_type": "official",
+        "date": "08/27",
+        "summary": "财政部表态深化零基预算改革并加强地方政府债务管理。城投、基建相关授信客群的偿付与再融资逻辑或受地方债管理节奏影响。对公客户经理可留意属地化债进展与项目审批窗口。",
+        "importance": 2,
+        "rank": 2,
+        "tags": [
+          "监管合规"
+        ],
+        "locale": "national"
+      },
+      {
+        "url": "https://www.cnfin.com/hg-lb/detail/20260827/4461272_1.html",
+        "title_cn": "商务部回应美考虑对华额外加征7.5%关税",
+        "title_orig": "商务部回应美考虑对华额外加征7.5%关税",
+        "source": "新华财经",
+        "source_type": "official",
+        "date": "08/27",
+        "summary": "商务部就美方考虑对华额外加征7.5%关税作出回应。外贸及跨境客群面临的关税成本预期上升。提示对公条线提前摸排辖内外贸企业订单与结算节奏变化。",
+        "importance": 2,
+        "rank": 3,
+        "tags": [
+          "市场",
+          "客群"
+        ],
+        "locale": "national"
+      },
+      {
+        "url": "https://m.21jingji.com/article/20260827/herald/8d4f7f0b4b468bfed9ef93cff92535ac.html",
+        "title_cn": "日本央行副行长发声：若金融环境过松或加快加息，不会冲击市场",
+        "title_orig": "日本央行副行长发声：若金融环境过松或加快加息，不会冲击市场",
+        "source": "21世纪经济报道·金融",
+        "source_type": "media",
+        "date": "08/27",
+        "summary": "日本央行副行长暗示若金融环境过松将加快加息。日元利率路径变化会影响跨境理财与外汇产品定价。结售汇与海外配置型客户可关注汇率波动窗口。",
+        "importance": 1,
+        "rank": 4,
+        "tags": [
+          "市场",
+          "客群"
+        ],
+        "locale": "national"
+      }
+    ],
     "tech": [],
     "ipo": []
   },
+  "risk": {
+    "topic": "理财换锚引发客户投诉与合规风险",
+    "evidence": "8月已有超3000只银行理财公告调整业绩比较基准锚定方式，首批调整产品到期后净值波动感知会被放大。",
+    "impact": "个贷与财富端：换锚产品客户对净值波动的容忍度下降，易产生集中投诉；私行端：高净值客户对收益不达预期敏感，可能引发产品赎回潮；风控端：代销合规与销售适当性需重新留痕。",
+    "action": "财富部应统一话术与销售留痕，风控部联合合规对换锚产品销售过程做专项复核，客服部提前备好投诉处置预案。",
+    "source": "T2",
+    "sources": [
+      {
+        "title": "8月超3000只银行理财公告\"换锚\"",
+        "url": "https://m.21jingji.com/article/20260827/herald/ccb1cf0cb4d2676776906b20771b0ca4.html"
+      }
+    ]
+  },
   "stock_recap": {
     "us": {
-      "overview": "科技股财报强劲领涨大盘，油轮袭击与能源紧张带来扰动。",
+      "overview": "AI主线强势领涨，能源及地缘扰动有限。",
       "sectors": [
-        "软件：Salesforce财报大超预期涨12%，AI与Anthropic投资获益",
-        "网络安全：Okta业绩超预期涨20%，AI驱动身份安全需求",
-        "半导体/AI：英伟达业绩超预期提振AI算力链",
-        "黄金：Harmony Gold财报创新高但股价走弱，贵金属承压",
-        "航运/能源：霍尔木兹海峡油轮遇袭，欧洲气价高企，能源紧张升温"
+        "人工智能：英伟达拟收购Hugging Face，Salesforce AI业务推动股价大涨12%。",
+        "半导体：Z.ai发布纯国产芯片AI模型，国产算力链走强。",
+        "能源/航运：霍尔木兹海峡油轮遇袭，天然气供应担忧推升气价。",
+        "互联网：Meta以167亿美元和解社交媒体成瘾诉讼。"
       ],
-      "spoken": "美股科技股领涨大盘，Salesforce财报大超预期大涨12%，Okta业绩亮眼飙升20%，AI算力链受英伟达业绩提振走强。能源板块因霍尔木兹海峡油轮遇袭、欧洲气价走高而走强；贵金属板块受黄金股业绩创新高但股价走弱拖累。",
+      "spoken": "美股盘面AI主线强势领涨，英伟达拟收购Hugging Face，Salesforce因AI业务大涨12%，国产芯片AI模型发布提振算力链。Meta以167亿美元和解社交媒体成瘾诉讼。能源板块受霍尔木兹海峡油轮遇袭及欧洲天然气库存偏低影响走强。",
       "meta": {
         "source": "CNBC Top Stories",
         "crossCheck": "新浪行情",
@@ -45,15 +223,15 @@
       ]
     },
     "aShare": {
-      "overview": "A股盘面结构性走强，算力产业链与券商股获资金关注。",
+      "overview": "A股光模块、券商走强，AI算力链受英伟达财报提振。",
       "sectors": [
-        "算力：中信证券看好千亿项目全链条落地，国产算力链迎明确增长机遇",
-        "券商：牛散扎堆买入，业绩高增支撑估值修复",
-        "半导体材料：中金看好玻璃基板成下一代先进封装重要平台",
-        "新能源/战略新兴产业：上海印发十五五战略性新兴产业发展规划",
-        "乳业：龙头拟回购注销至多20亿元股份获资金关注"
+        "光模块：中报业绩亮眼集体爆发，融资客大举抢筹。",
+        "券商：牛散扎堆买入，业绩高增支撑估值修复。",
+        "AI算力：英伟达财报超预期叠加千亿项目落地，国产算力链迎催化。",
+        "消费：乳业龙头拟最高20亿元回购注销，产业资本积极入场。",
+        "战略新兴产业：上海印发十五五规划，玻璃基板等被券商看好。"
       ],
-      "spoken": "A股盘面结构性走强，算力产业链受千亿项目落地催化表现突出，券商股获牛散扎堆买入、估值修复预期升温。半导体材料端玻璃基板受机构看好，上海十五五战略性新兴产业规划印发利好新能源板块，乳业龙头大额回购提振信心。",
+      "spoken": "A股盘面光模块与券商板块走强，光模块中报业绩集体爆发获融资客抢筹，牛散扎堆买入券商股支撑估值修复。英伟达财报大超预期叠加千亿项目落地，国产算力产业链迎明确增长机遇。乳业龙头拟最高20亿元回购注销，产业资本积极入场。",
       "meta": {
         "source": "东方财富",
         "crossCheck": "新浪行情",
@@ -78,13 +256,13 @@
       ]
     },
     "hk": {
-      "overview": "港股盘面披露密集，多家公司发布回购及中期业绩公告。",
+      "overview": "港股盘面分化，个股回购与中报披露密集。",
       "sectors": [
-        "回购：多家公司集中披露股份回购公告",
-        "中期业绩：多只标的集中发布中期业绩与派息公告",
-        "风险提示：有公司发布盈利预警"
+        "科技/互联网：受英伟达收购及AI主线提振，板块情绪偏暖。",
+        "能源/航运：霍尔木兹地缘风险升温，油运及油气板块关注度上升。",
+        "金融：多家公司密集派息及披露中期业绩，分红主题受关注。"
       ],
-      "spoken": "港股盘面公司公告密集，多家企业集中披露股份回购与中期业绩、分红派息安排，市场关注业绩兑现情况。个别公司发布盈利预警，需留意后续业绩分化。",
+      "spoken": "港股盘面个股走势分化，多家公司密集披露回购及中期业绩，分红派息主题受关注。受英伟达收购及AI主线提振，科技板块情绪偏暖。霍尔木兹海峡地缘风险升温，油运及油气板块关注度上升。",
       "meta": {
         "source": "新浪财经·港股",
         "crossCheck": "新浪行情",
@@ -93,13 +271,13 @@
       "indices": [
         {
           "name": "恒生指数",
-          "value": "25542.67",
-          "changePct": "-0.43%"
+          "value": "25547.11",
+          "changePct": "-0.41%"
         },
         {
           "name": "恒生科技",
-          "value": "4614.07",
-          "changePct": "-0.26%"
+          "value": "4616.71",
+          "changePct": "-0.20%"
         }
       ]
     },
@@ -113,13 +291,13 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/27",
-      "summary": "英伟达最新季度营收和利润均同比翻倍，并预计下一财年营收再增长约70%，业绩大幅超出市场预期。",
+      "summary": "英伟达Q2营收与利润均同比翻倍，远超市场预期，并指引下一财年营收再增约70%。",
       "importance": 3,
       "rank": 0,
       "tags": [
+        "财报",
         "AI",
-        "半导体",
-        "财报"
+        "半导体"
       ],
       "locale": "national",
       "market": "a-share"
@@ -130,11 +308,12 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/26",
-      "summary": "8月26日伊朗股市约90%个股上涨，指数大幅走强，具体触发因素尚未明确。",
+      "summary": "伊朗股市当日约90%的个股上涨，录得单日大幅上涨行情。",
       "importance": 1,
       "rank": 0,
       "tags": [
-        "新兴市场"
+        "新兴市场",
+        "中东"
       ],
       "locale": "national",
       "market": "a-share"
@@ -145,11 +324,12 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/26",
-      "summary": "8月26日晚间沪深上市公司集中披露重大事项公告，具体内容尚需查阅原文。",
+      "summary": "东方财富汇总8月26日晚间沪深上市公司重大事项公告，包括业绩、回购、增减持等。",
       "importance": 1,
       "rank": 0,
       "tags": [
-        "公告"
+        "公告",
+        "A股"
       ],
       "locale": "national",
       "market": "a-share"
@@ -160,7 +340,7 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/26",
-      "summary": "报道指出知名投资者近期集中买入券商股，认为券商业绩高增长有望支撑板块估值修复。",
+      "summary": "报道称多位\"牛散\"集中买入券商股，市场观点认为券商业绩高增长有望支撑估值修复。",
       "importance": 2,
       "rank": 0,
       "tags": [
@@ -176,12 +356,13 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/27",
-      "summary": "针对\"A股未盈利企业无法上市\"的市场传闻，知情人士作出回应，否认相关说法。",
+      "summary": "针对\"A股未盈利企业无法上市\"的市场传闻，知情人士作出回应澄清。",
       "importance": 2,
       "rank": 0,
       "tags": [
         "政策",
-        "A股"
+        "A股",
+        "IPO"
       ],
       "locale": "national",
       "market": "a-share"
@@ -192,7 +373,7 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/27",
-      "summary": "港交所披露易收录一项上市公司股份回购的次日披露。",
+      "summary": "港交所披露易发布某上市公司股份回购的翌日披露。",
       "importance": 1,
       "rank": 0,
       "tags": [
@@ -208,7 +389,7 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/27",
-      "summary": "港交所披露易收录一项上市公司股份回购的次日披露。",
+      "summary": "港交所披露易发布某上市公司股份回购的翌日披露。",
       "importance": 1,
       "rank": 0,
       "tags": [
@@ -224,7 +405,7 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/27",
-      "summary": "港交所披露易收录一项上市公司股份回购的次日披露。",
+      "summary": "港交所披露易发布某上市公司股份回购的翌日披露。",
       "importance": 1,
       "rank": 0,
       "tags": [
@@ -240,7 +421,7 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/27",
-      "summary": "港股上市公司发布海外监管公告，涉及交易进展、子公司业绩及内幕消息等内容。",
+      "summary": "港交所披露易发布海外监管公告，内容涉及交易最新情况、內幕消息及附属公司业绩。",
       "importance": 1,
       "rank": 0,
       "tags": [
@@ -256,7 +437,7 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/27",
-      "summary": "港股上市公司发布股息或分派公告。",
+      "summary": "港交所披露易发布某上市公司股息或分派公告。",
       "importance": 1,
       "rank": 0,
       "tags": [
@@ -272,12 +453,47 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/27",
-      "summary": "霍尔木兹海峡附近油轮遇袭事件，测试了特朗普关于该海峡\"运转正常\"的说法。",
+      "summary": "油轮在霍尔木兹海峡遇袭事件，考验特朗普此前关于该海峡\"运行正常\"的表态。",
       "importance": 2,
       "rank": 0,
       "tags": [
         "能源",
+        "中东",
         "地缘政治"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/08/27/ratcliffe-moscow-russia-nato-ukraine-iran.html",
+      "title_cn": "CIA chief John Ratcliffe reportedly made secretive Moscow trip to warn Russia against attacking NATO",
+      "source": "CNBC Top Stories",
+      "source_type": "media",
+      "date": "08/27",
+      "summary": "据报道，CIA局长John Ratcliffe秘密访问莫斯科，警告俄罗斯勿攻击北约。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "地缘政治",
+        "美国",
+        "俄罗斯"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/08/27/nvidia-hugging-face-acquisition.html",
+      "title_cn": "Nvidia agrees to buy Hugging Face for $12.9 billion, report says",
+      "source": "CNBC Top Stories",
+      "source_type": "media",
+      "date": "08/27",
+      "summary": "据报道，英伟达同意以129亿美元收购AI平台Hugging Face。",
+      "importance": 3,
+      "rank": 0,
+      "tags": [
+        "AI",
+        "并购",
+        "半导体"
       ],
       "locale": "overseas",
       "market": "us"
@@ -288,13 +504,13 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/26",
-      "summary": "Meta与美国加州等多州达成和解，同意支付167亿美元以解决社交媒体成瘾相关诉讼。",
-      "importance": 3,
+      "summary": "Meta同意与加州及其他州达成167亿美元和解，以了结社交媒体成瘾相关诉讼。",
+      "importance": 2,
       "rank": 0,
       "tags": [
-        "互联网",
-        "监管",
-        "诉讼"
+        "科技",
+        "诉讼",
+        "Meta"
       ],
       "locale": "overseas",
       "market": "us"
@@ -305,46 +521,13 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/27",
-      "summary": "Z.ai（智谱）股价上涨约8%，此前发布仅基于中国芯片运行的新一代AI模型。",
+      "summary": "Z.ai发布仅使用中国芯片运行的新AI模型，股价当日上涨8%。",
       "importance": 2,
       "rank": 0,
       "tags": [
         "AI",
         "中概股",
-        "国产芯片"
-      ],
-      "locale": "overseas",
-      "market": "us"
-    },
-    {
-      "url": "https://www.cnbc.com/2026/08/26/salesforce-crm-q2-earnings-report-2027.html",
-      "title_cn": "Salesforce stock jumps 12% on AI growth and Anthropic investment gain",
-      "source": "CNBC Top Stories",
-      "source_type": "media",
-      "date": "08/27",
-      "summary": "Salesforce股价上涨12%，受AI业务增长以及对Anthropic投资估值提升带动。",
-      "importance": 2,
-      "rank": 0,
-      "tags": [
-        "AI",
-        "美股",
-        "财报"
-      ],
-      "locale": "overseas",
-      "market": "us"
-    },
-    {
-      "url": "https://www.cnbc.com/2026/08/27/europe-gas-storage-prices-winter-lng.html",
-      "title_cn": "Europe’s gas stores are running low — and prices could top 100 euros this winter",
-      "source": "CNBC Top Stories",
-      "source_type": "media",
-      "date": "08/27",
-      "summary": "欧洲天然气库存低于正常水平，市场担忧今冬气价可能突破每兆瓦时100欧元。",
-      "importance": 2,
-      "rank": 0,
-      "tags": [
-        "能源",
-        "欧洲"
+        "芯片"
       ],
       "locale": "overseas",
       "market": "us"
