@@ -118,7 +118,7 @@ function normalizeCard(parsed: unknown): MarketCard {
  *   - 若 LLM 给出空 → 用 quotes 合成："{name}收报{value}点（{changePct}）。" 拼成单句
  *   - 若 LLM 给出空 + 无 quotes → 返回 undefined（无法兜底，仍按"全空"视为生成失败）
  */
-function synthesizeFallbackCard(
+function synthesizeFallbackCardInternal(
   llmCard: MarketCard,
   quotes: IndexQuote[] | undefined,
 ): MarketCard | undefined {
@@ -131,6 +131,14 @@ function synthesizeFallbackCard(
   });
   const sentence = lines.join("；") + "。";
   return { overview: sentence, sectors: [], spoken: sentence };
+}
+
+/** 导出供 side-outputs/stock-recap.ts 复用：对 selectStockRecap 返回的空卡**始终**用指数兜底 */
+export function synthesizeFallbackCard(
+  llmCard: MarketCard,
+  quotes: IndexQuote[] | undefined,
+): MarketCard | undefined {
+  return synthesizeFallbackCardInternal(llmCard, quotes);
 }
 
 export async function generateStockRecap(

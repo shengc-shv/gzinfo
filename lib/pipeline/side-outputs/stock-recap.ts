@@ -20,6 +20,7 @@ import {
   writeStockRecap,
   loadStockRecap,
   selectStockRecap,
+  synthesizeFallbackCard,
   type StockItem,
 } from "../../ai/stock-recap";
 import { filterByWindow } from "../../ingest/merge";
@@ -93,6 +94,14 @@ export async function buildStockRecap(
     if (!recap) {
       ctx.log.info("recap", "ℹ️ 股市复盘无可用输入或生成失败（跳过该区）");
       return report;
+    }
+    // 2026-08-27 修：selectStockRecap 在 LLM 模式优先用 persisted（绕过了 generate 内的
+    // synthesizeFallbackCard）。这里对任何空卡**始终**应用指数兜底 — 即使 persisted
+    // 里的 hk/us/aShare 仍空、quotes 有数据，也用指数合成最小复盘。
+    if (quotes) {
+      recap.us = synthesizeFallbackCard(recap.us, quotes.quotes.us) ?? recap.us;
+      recap.aShare = synthesizeFallbackCard(recap.aShare, quotes.quotes.aShare) ?? recap.aShare;
+      recap.hk = synthesizeFallbackCard(recap.hk, quotes.quotes.hk) ?? recap.hk;
     }
     if (!skipAi) {
       writeStockRecap(date, recap);
