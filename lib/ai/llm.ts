@@ -109,28 +109,60 @@ export async function runLlm(
     tokens: 0,
     modelTag: getModelTag(),
   });
-  try {
-    let result: LlmRunResult;
-    switch (backend) {
-      case "claude-cli":
-        result = await runClaudeCli(opts);
-        break;
-      case "anthropic":
-      case "zhipu":
-        result = await runAnthropicCompat(opts, ANTHROPIC_PRESETS[backend]);
-        break;
-      case "openai":
-      case "deepseek":
-      case "minimax":
-        result = await runOpenAICompat(opts, OPENAI_PRESETS[backend]);
-        break;
+  // 重试配置（2026-08-27 用户反馈：CI 限流导致 LLM 偶发失败，重试 3 次 + 指数退避）
+  // 重试只对 transient 错误（5xx / 429 / 超时 / 网络）；4xx 立即抛（配置错误不该重试）
+  const MAX_RETRIES = 3;
+  const BASE_DELAY_MS = 1500;  // 1.5s / 3s / 6s 指数退避
+  let lastErr: unknown;
+  for (let attempt = 0; attempt < MAX_RETRIES; attempt++) {
+    try {
+      let result: LlmRunResult;
+      switch (backend) {
+        case "claude-cli":
+          result = await runClaudeCli(opts);
+          break;
+        case "anthropic":
+        case "zhipu":
+          result = await runAnthropicCompat(opts, ANTHROPIC_PRESETS[backend]);
+          break;
+        case "openai":
+        case "deepseek":
+        case "minimax":
+          result = await runOpenAICompat(opts, OPENAI_PRESETS[backend]);
+          break;
+      }
+      if (attempt > 0) {
+        console.warn(`[llm] ${stage} 成功（重试 ${attempt} 次后）`);
+      }
+      recordAiCall({ ...stamp(), ok: true, ms: result.durationMs || Date.now() - t0 });
+      return result;
+    } catch (e) {
+      lastErr = e;
+      if (!isTransientLlmError(e) || attempt === MAX_RETRIES - 1) {
+        recordAiCall({ ...stamp(), ok: false, ms: Date.now() - t0 });
+        throw e;
+      }
+      const delay = BASE_DELAY_MS * Math.pow(2, attempt);
+      console.warn(
+        `[llm] ${stage} 第 ${attempt + 1} 次失败，${delay}ms 后重试: ${(e as Error).message?.slice(0, 120)}`,
+      );
+      await new Promise((r) => setTimeout(r, delay));
     }
-    recordAiCall({ ...stamp(), ok: true, ms: result.durationMs || Date.now() - t0 });
-    return result;
-  } catch (e) {
-    recordAiCall({ ...stamp(), ok: false, ms: Date.now() - t0 });
-    throw e;
   }
+  // 理论不可达；保险抛
+  recordAiCall({ ...stamp(), ok: false, ms: Date.now() - t0 });
+  throw lastErr;
+}
+
+/** 判定 LLM 错误是否 transient（5xx/429/超时/网络）—— 4xx 立即抛 */
+function isTransientLlmError(e: unknown): boolean {
+  if (!e || typeof e !== "object") return true;
+  const msg = String((e as Error).message ?? e).toLowerCase();
+  if (/401|403|404|invalid api key|unauthorized|forbidden|not found/.test(msg)) return false;
+  if (/invalid_request_error|invalid argument/.test(msg)) return false;
+  if (/429|rate.?limit|too many requests|quota/.test(msg)) return true;
+  if (/5\d\d|internal server|bad gateway|service unavailable|gateway timeout|timeout|etimedout|econnreset|econnrefused/.test(msg)) return true;
+  return true;
 }
 /**
  * Cheap startup sanity-check so a misconfigured backend errors in <1s
