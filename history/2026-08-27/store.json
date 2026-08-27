@@ -1,123 +1,23 @@
 {
   "date": "2026-08-27",
-  "updatedAt": "2026-08-27T07:03:32.810Z",
+  "updatedAt": "2026-08-27T07:27:02.071Z",
   "executive": {
-    "hero_line": "六大行贴息集中扩围，股份行个贷定价与获客双向承压，建议分行本周内完成自营产品适配度盘点。",
-    "spoken_hero": "六大行集中升级消费贷与经营贷贴息，额度更高、覆盖面更广。同业以价格优势抢先圈客，股份行定价空间被压缩。本周可考虑对照贴息门槛，把自营消费贷和经营贷产品先盘一遍。",
-    "must_read": [
-      {
-        "title": "六大行贴息集中升级",
-        "why": "国有大行以贴息工具抢消费贷与经营贷客群，股份行定价与获客双向承压，分行需评估自营产品对标策略。",
-        "url": "https://m.21jingji.com/article/20260827/herald/112a0c96518f58c10b09d1d9c4177cdc.html"
-      },
-      {
-        "title": "西藏灾情触发保险业二级响应",
-        "why": "监管巨灾理赔机制与时效标准对零售保险产品设计具参考意义，分行保险代销与高净值保障配置可提前对接。",
-        "url": "https://finance.cctv.com/2026/08/27/ARTIWM6TLGaDfiYjEj2cT0GP260827.shtml"
-      },
-      {
-        "title": "PCE超预期致金价剧烈波动",
-        "why": "美国PCE超预期扰动黄金配置窗口，高净值客户大类资产择时心态偏谨慎，分行财富顾问需提前备好应对话术。",
-        "url": "https://finance.sina.com.cn/money/nmetal/hjzx/2026-08-27/doc-inipttav5420753.shtml"
-      },
-      {
-        "title": "固收+新基金密集发行",
-        "why": "鑫元等固收+产品集中入市，代销池进一步丰富，财富代销档期与产品遴选窗口需要分行提前排布。",
-        "url": "https://www.stcn.com/article/detail/4138590.html"
-      },
-      {
-        "title": "中信银行倡言经营连续剧",
-        "why": "头部股份行强调客户经营长期主义与节奏感，零售AUM提升逻辑从单点爆破转向持续触达，分行打法需同步校准。",
-        "url": "https://finance.sina.com.cn/jryx/bank/2026-08-27/doc-iniptnux5483198.shtml"
-      }
-    ],
-    "spoken_must_read": "六大行贴息集体扩围，股份行定价与获客双向承压，分行需尽快完成自营产品对标。\n西藏灾情触发保险业二级响应，巨灾理赔标准对零售保险代销与高净值保障配置有参考价值。\n美国PCE超预期致金价剧烈波动，高净值客户择时心态偏紧，财富端话术与配置建议需提前备好。\n固收+新基金密集发行，代销池进一步丰富，财富部可提前排布档期与产品遴选。\n头部股份行强调客户经营长期主义，分行零售AUM提升逻辑要从单点爆破转向持续触达。",
-    "insights": [
-      {
-        "topic": "消费贷经营贷贴息对标",
-        "impact": "六大行贴息升级直接挤压我行自营消费贷与经营贷定价空间，存量客户面临被同业以低息挖角风险，新增获客成本抬升。",
-        "action": "本周内由零售部牵头对照六大行贴息门槛，梳理自营产品额度与利率适配度，针对优质代发与高AUM客群设计定向利率方案。",
-        "tag": [
-          "信贷",
-          "竞对动态"
-        ],
-        "sources": [
-          {
-            "title": "提额扩面！六大行\"升级\"两类贷款贴息安排",
-            "url": "https://m.21jingji.com/article/20260827/herald/112a0c96518f58c10b09d1d9c4177cdc.html"
-          }
-        ]
-      },
-      {
-        "topic": "高净值黄金配置窗口提示",
-        "impact": "PCE超预期引发金价剧烈波动，高净值客户大类资产配置出现择时需求，财富端若不及时介入易流失至同业私行。",
-        "action": "财富部与私行部今日起组织高净值客户一对一沟通，结合结售汇与黄金积存产品给出分批配置建议，配套市场解读简报。",
-        "tag": [
-          "财富",
-          "私行"
-        ],
-        "sources": [
-          {
-            "title": "PCE\"超预期\"重击金价！4600关口失而复得 黄金多头今夜能否守住'脸面'？",
-            "url": "https://finance.sina.com.cn/money/nmetal/hjzx/2026-08-27/doc-inipttav5420753.shtml"
-          }
-        ]
-      },
-      {
-        "topic": "固收+新基金代销排布",
-        "impact": "鑫元金鑫回报等固收+新基金集中入市，丰富代销产品池，但也加剧档期与策略对比难度，代销管理需前置。",
-        "action": "财富部可考虑在9月14日发行前完成产品策略与回撤特征评估，提前锁定重点代销档期并对一线理财经理做产品培训。",
-        "tag": [
-          "财富"
-        ],
-        "sources": [
-          {
-            "title": "鑫元金鑫回报混合9月14日起正式发售",
-            "url": "https://www.stcn.com/article/detail/4138590.html"
-          }
-        ]
-      },
-      {
-        "topic": "客群经营连续剧打法校准",
-        "impact": "头部股份行强调客户长期主义与持续触达，传统单点爆破式营销边际效用下降，AUM提升路径需要重新设计。",
-        "tag": [
-          "客群",
-          "财富"
-        ],
-        "sources": [
-          {
-            "title": "中信银行行长吕天贵：一个好的银行经营要讲好连续剧",
-            "url": "https://finance.sina.com.cn/jryx/bank/2026-08-27/doc-iniptnux5483198.shtml"
-          }
-        ]
-      },
-      {
-        "topic": "巨灾保险代销与高净值保障",
-        "impact": "监管启动保险业二级救灾响应，理赔时效与服务标准曝光度提升，高净值客户对保障型保险产品关注度上行。",
-        "tag": [
-          "私行",
-          "财富"
-        ],
-        "sources": [
-          {
-            "title": "金融监管总局对西藏灾情启动保险业二级救灾应急响应",
-            "url": "https://finance.cctv.com/2026/08/27/ARTIWM6TLGaDfiYjEj2cT0GP260827.shtml"
-          }
-        ]
-      }
-    ],
-    "spoken_insights": "消费贷经营贷贴息被六大行集体拉高，本周分行可对照门槛做自营产品适配，优质客群定向利率方案优先出手。\nPCE超预期搅动金价，财富部与私行部今日起对高净值客户做一对一配置沟通，分批进场。\n固收+新基金密集发行，财富部在9月14日前完成策略评估与档期锁定，理财经理培训同步跟上。\n头部股份行都在讲客群经营连续剧，分行AUM提升从单点爆破转向持续触达，打法需要重新设计。\n巨灾理赔机制曝光度上行，高净值客户对保障型保险关注度走高，私行端可借势推保障配置。",
+    "hero_line": "",
+    "must_read": [],
+    "insights": [],
     "guangdong_ipo": null
   },
   "stock_recap": {
     "us": {
-      "overview": "科技股财报与AI主线驱动盘面，英伟达SalesforceOkta齐走高。",
+      "overview": "科技股财报强劲领涨大盘，油轮袭击与能源紧张带来扰动。",
       "sectors": [
-        "AI与软件：英伟达业绩超预期，Salesforce涨12%、Okta涨20%，算力与安全需求共振",
-        "社交媒体：Meta以167亿美元和解社交媒体成瘾案，监管利空出清",
-        "油气运输：霍尔木兹海峡油轮遇袭，测试特朗普'通行正常'表态"
+        "软件：Salesforce财报大超预期涨12%，AI与Anthropic投资获益",
+        "网络安全：Okta业绩超预期涨20%，AI驱动身份安全需求",
+        "半导体/AI：英伟达业绩超预期提振AI算力链",
+        "黄金：Harmony Gold财报创新高但股价走弱，贵金属承压",
+        "航运/能源：霍尔木兹海峡油轮遇袭，欧洲气价高企，能源紧张升温"
       ],
-      "spoken": "美股盘面科技股领涨，AI主线全面走强。英伟达业绩翻倍叠加指引乐观，Salesforce涨12%，Okta涨20%，算力与安全需求共振。Meta以167亿美元和解成瘾诉讼，监管利空出清。能源端霍尔木兹油轮遇袭，油运板块受关注。",
+      "spoken": "美股科技股领涨大盘，Salesforce财报大超预期大涨12%，Okta业绩亮眼飙升20%，AI算力链受英伟达业绩提振走强。能源板块因霍尔木兹海峡油轮遇袭、欧洲气价走高而走强；贵金属板块受黄金股业绩创新高但股价走弱拖累。",
       "meta": {
         "source": "CNBC Top Stories",
         "crossCheck": "新浪行情",
@@ -142,14 +42,15 @@
       ]
     },
     "aShare": {
-      "overview": "A股三大指数集体收涨，证券与工业金属板块领涨。",
+      "overview": "A股盘面结构性走强，算力产业链与券商股获资金关注。",
       "sectors": [
-        "证券：牛散扎堆买入，业绩高增支撑估值修复",
-        "工业金属：板块跟随指数共振走强",
-        "半导体与算力：英伟达财报超预期，国产算力链迎增长机遇",
-        "乳业：龙头拟回购注销至多20亿元，陈发树加仓"
+        "算力：中信证券看好千亿项目全链条落地，国产算力链迎明确增长机遇",
+        "券商：牛散扎堆买入，业绩高增支撑估值修复",
+        "半导体材料：中金看好玻璃基板成下一代先进封装重要平台",
+        "新能源/战略新兴产业：上海印发十五五战略性新兴产业发展规划",
+        "乳业：龙头拟回购注销至多20亿元股份获资金关注"
       ],
-      "spoken": "A股三大指数集体收涨，证券与工业金属板块领涨。券商股获牛散扎堆买入，业绩高增有望支撑估值修复。英伟达财报超预期叠加千亿项目落地，国产算力产业链迎来明确增长机遇。乳业龙头抛出至多20亿元回购注销方案，产业资本同步加仓。",
+      "spoken": "A股盘面结构性走强，算力产业链受千亿项目落地催化表现突出，券商股获牛散扎堆买入、估值修复预期升温。半导体材料端玻璃基板受机构看好，上海十五五战略性新兴产业规划印发利好新能源板块，乳业龙头大额回购提振信心。",
       "meta": {
         "source": "东方财富",
         "crossCheck": "新浪行情",
@@ -174,13 +75,13 @@
       ]
     },
     "hk": {
-      "overview": "港股盘面消息面清淡，以个股回购与中期业绩公告为主。",
+      "overview": "港股盘面披露密集，多家公司发布回购及中期业绩公告。",
       "sectors": [
-        "个股回购：多家公司披露股份回购公告",
-        "中期业绩：密集披露中期业绩及分红派息",
-        "互联互通：阿里巴巴千亿项目落地带动相关产业链情绪"
+        "回购：多家公司集中披露股份回购公告",
+        "中期业绩：多只标的集中发布中期业绩与派息公告",
+        "风险提示：有公司发布盈利预警"
       ],
-      "spoken": "港股盘面消息面以披露公告为主，多家公司密集披露股份回购与中期业绩。互联网龙头大额项目落地，对算力与产业链情绪形成正向传导。整体盘面个股驱动，板块效应有限，观望情绪较浓。",
+      "spoken": "港股盘面公司公告密集，多家企业集中披露股份回购与中期业绩、分红派息安排，市场关注业绩兑现情况。个别公司发布盈利预警，需留意后续业绩分化。",
       "meta": {
         "source": "新浪财经·港股",
         "crossCheck": "新浪行情",
@@ -189,13 +90,13 @@
       "indices": [
         {
           "name": "恒生指数",
-          "value": "25585.40",
-          "changePct": "-0.26%"
+          "value": "25542.67",
+          "changePct": "-0.43%"
         },
         {
           "name": "恒生科技",
-          "value": "4623.61",
-          "changePct": "-0.05%"
+          "value": "4614.07",
+          "changePct": "-0.26%"
         }
       ]
     },
@@ -209,13 +110,13 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/27",
-      "summary": "英伟达财报显示，第二财季营收与利润均同比增长逾一倍，公司指引下一财年营收将再增长约70%。",
+      "summary": "英伟达最新季度营收和利润均同比翻倍，并预计下一财年营收再增长约70%，业绩大幅超出市场预期。",
       "importance": 3,
       "rank": 0,
       "tags": [
-        "财报",
+        "AI",
         "半导体",
-        "AI"
+        "财报"
       ],
       "locale": "national",
       "market": "a-share"
@@ -226,12 +127,11 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/26",
-      "summary": "伊朗股市出现普涨行情，约九成个股收涨。",
+      "summary": "8月26日伊朗股市约90%个股上涨，指数大幅走强，具体触发因素尚未明确。",
       "importance": 1,
       "rank": 0,
       "tags": [
-        "新兴市场",
-        "中东"
+        "新兴市场"
       ],
       "locale": "national",
       "market": "a-share"
@@ -242,29 +142,11 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/26",
-      "summary": "8月26日晚间，沪深上市公司密集披露重大事项公告（具体内容未在标题中列示）。",
+      "summary": "8月26日晚间沪深上市公司集中披露重大事项公告，具体内容尚需查阅原文。",
       "importance": 1,
       "rank": 0,
       "tags": [
-        "公司公告",
-        "A股"
-      ],
-      "locale": "national",
-      "market": "a-share"
-    },
-    {
-      "url": "https://finance.eastmoney.com/a/202608263854495011.html",
-      "title_cn": "A股三大指数集体收涨证券与工业金属板块领涨",
-      "source": "东方财富",
-      "source_type": "media",
-      "date": "08/26",
-      "summary": "8月26日A股三大指数集体收涨，证券与工业金属板块涨幅居前。",
-      "importance": 2,
-      "rank": 0,
-      "tags": [
-        "A股",
-        "券商",
-        "有色金属"
+        "公告"
       ],
       "locale": "national",
       "market": "a-share"
@@ -275,8 +157,8 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/26",
-      "summary": "A股市场知名个人投资者集中买入券商股，业内观点认为券商业绩高增长有望支撑估值修复。",
-      "importance": 1,
+      "summary": "报道指出知名投资者近期集中买入券商股，认为券商业绩高增长有望支撑板块估值修复。",
+      "importance": 2,
       "rank": 0,
       "tags": [
         "券商",
@@ -291,13 +173,12 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/27",
-      "summary": "针对市场传闻，知情人士回应称\"A股未盈利企业无法上市\"的说法不属实。",
+      "summary": "针对\"A股未盈利企业无法上市\"的市场传闻，知情人士作出回应，否认相关说法。",
       "importance": 2,
       "rank": 0,
       "tags": [
         "政策",
-        "A股",
-        "IPO"
+        "A股"
       ],
       "locale": "national",
       "market": "a-share"
@@ -308,13 +189,13 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/26",
-      "summary": "英伟达财报公布前夕，市场关注其季度营收是否逼近千亿美元水平，以及订单结构和实际兑现能力。",
+      "summary": "财报发布前市场对英伟达预期较高，季度营收规模或逼近千亿美元，订单质量成为关注焦点。",
       "importance": 2,
       "rank": 0,
       "tags": [
-        "财报",
+        "AI",
         "半导体",
-        "AI"
+        "财报"
       ],
       "locale": "national",
       "market": "a-share"
@@ -325,7 +206,7 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/26",
-      "summary": "上海市印发《战略性新兴产业发展\"十五五\"规划》，明确\"十五五\"期间战略性新兴产业方向。",
+      "summary": "上海印发《战略性新兴产业发展\"十五五\"规划》，明确未来五年战略性新兴产业方向。",
       "importance": 2,
       "rank": 0,
       "tags": [
@@ -341,13 +222,12 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/26",
-      "summary": "国内乳业龙头发布回购计划，拟回购注销金额最高20亿元；知名投资者陈发树同步加仓。",
+      "summary": "国内某乳业龙头计划回购注销最多20亿元股份，知名投资者陈发树同步加仓。",
       "importance": 2,
       "rank": 0,
       "tags": [
-        "回购",
         "消费",
-        "乳业"
+        "回购"
       ],
       "locale": "national",
       "market": "a-share"
@@ -358,11 +238,27 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/26",
-      "summary": "东方财富发布8月27日（周四）财经早餐，对隔夜及当日重要财经资讯进行汇总。",
+      "summary": "东方财富发布8月27日财经早间资讯汇总，覆盖隔夜全球市场与重要财经事件。",
       "importance": 1,
       "rank": 0,
       "tags": [
-        "财经要闻"
+        "综合"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202608263855077467.html",
+      "title_cn": "莫德纳癌症疫苗一针近50万美元",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "08/26",
+      "summary": "莫德纳（Moderna）推出的一款个性化癌症疫苗单针定价接近50万美元，反映mRNA肿瘤治疗商业化定价水平。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "医药",
+        "创新药"
       ],
       "locale": "national",
       "market": "a-share"
@@ -373,13 +269,12 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/27",
-      "summary": "中金公司研报指出，玻璃基板有望成为下一代先进封装的重要材料平台，建议关注相关核心设备放量机会。",
+      "summary": "中金研报指出，玻璃基板有望成为下一代先进封装的重要材料平台，建议关注核心设备放量。",
       "importance": 2,
       "rank": 0,
       "tags": [
         "半导体",
-        "先进封装",
-        "研报"
+        "封装"
       ],
       "locale": "national",
       "market": "a-share"
@@ -394,9 +289,9 @@
       "importance": 2,
       "rank": 0,
       "tags": [
+        "AI",
         "算力",
-        "国产替代",
-        "研报"
+        "国产替代"
       ],
       "locale": "national",
       "market": "a-share"
@@ -407,7 +302,7 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/27",
-      "summary": "港交所披露易收到一则上市公司翌日披露的股份回购公告。",
+      "summary": "港交所披露易收录一项上市公司股份回购的次日披露。",
       "importance": 1,
       "rank": 0,
       "tags": [
@@ -423,7 +318,7 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/27",
-      "summary": "港交所披露易收到一则上市公司翌日披露的股份回购公告。",
+      "summary": "港交所披露易收录一项上市公司股份回购的次日披露。",
       "importance": 1,
       "rank": 0,
       "tags": [
@@ -439,7 +334,7 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/27",
-      "summary": "港交所披露易收到一则上市公司翌日披露的股份回购公告。",
+      "summary": "港交所披露易收录一项上市公司股份回购的次日披露。",
       "importance": 1,
       "rank": 0,
       "tags": [
@@ -455,11 +350,11 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/27",
-      "summary": "港股上市公司发布海外监管公告，内容涉及交易更新/内幕信息/附属公司业绩。",
+      "summary": "港股上市公司发布海外监管公告，涉及交易进展、子公司业绩及内幕消息等内容。",
       "importance": 1,
       "rank": 0,
       "tags": [
-        "公司公告",
+        "公告",
         "港股"
       ],
       "locale": "national",
@@ -471,7 +366,7 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/27",
-      "summary": "港股上市公司发布分红或派息公告。",
+      "summary": "港股上市公司发布股息或分派公告。",
       "importance": 1,
       "rank": 0,
       "tags": [
@@ -487,7 +382,7 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/27",
-      "summary": "港股上市公司发布分红或派息公告。",
+      "summary": "港股上市公司发布股息或分派公告。",
       "importance": 1,
       "rank": 0,
       "tags": [
@@ -503,7 +398,7 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/27",
-      "summary": "港股上市公司披露持续关联交易公告。",
+      "summary": "港股上市公司披露持续性关联交易公告。",
       "importance": 1,
       "rank": 0,
       "tags": [
@@ -519,12 +414,11 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/27",
-      "summary": "港股上市公司发布中期业绩及分红或派息公告。",
+      "summary": "港股上市公司发布中期业绩及股息分派公告。",
       "importance": 1,
       "rank": 0,
       "tags": [
         "财报",
-        "分红",
         "港股"
       ],
       "locale": "national",
@@ -536,7 +430,7 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/27",
-      "summary": "港股上市公司发布中期业绩、分红派息及暂停办理股份过户登记手续的公告。",
+      "summary": "港股上市公司发布中期业绩及股息分派公告，并涉及暂停办理股份过户登记。",
       "importance": 1,
       "rank": 0,
       "tags": [
@@ -553,7 +447,7 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/27",
-      "summary": "港股上市公司发布分红或派息公告。",
+      "summary": "港股上市公司发布股息或分派公告。",
       "importance": 1,
       "rank": 0,
       "tags": [
@@ -585,11 +479,11 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/27",
-      "summary": "港股上市公司发布盈利警告及内幕信息公告，预计业绩出现下滑。",
-      "importance": 1,
+      "summary": "港股上市公司发布盈利警告及内幕消息公告，提示业绩可能低于市场预期。",
+      "importance": 2,
       "rank": 0,
       "tags": [
-        "盈利预警",
+        "财报",
         "港股"
       ],
       "locale": "national",
@@ -601,13 +495,12 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/27",
-      "summary": "油轮在霍尔木兹海峡遇袭事件，考验特朗普此前关于该海峡\"运行正常\"的表态。",
-      "importance": 3,
+      "summary": "霍尔木兹海峡附近油轮遇袭事件，测试了特朗普关于该海峡\"运转正常\"的说法。",
+      "importance": 2,
       "rank": 0,
       "tags": [
         "能源",
-        "地缘政治",
-        "中东"
+        "地缘政治"
       ],
       "locale": "overseas",
       "market": "us"
@@ -618,13 +511,13 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/26",
-      "summary": "Meta与美国加州等州就社交媒体成瘾诉讼达成和解，和解金额达167亿美元。",
-      "importance": 2,
+      "summary": "Meta与美国加州等多州达成和解，同意支付167亿美元以解决社交媒体成瘾相关诉讼。",
+      "importance": 3,
       "rank": 0,
       "tags": [
-        "科技",
-        "诉讼",
-        "美股"
+        "互联网",
+        "监管",
+        "诉讼"
       ],
       "locale": "overseas",
       "market": "us"
@@ -635,13 +528,13 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/27",
-      "summary": "中国AI公司Z.ai发布新AI模型，且该模型完全运行于中国国产芯片，股价上涨8%。",
+      "summary": "Z.ai（智谱）股价上涨约8%，此前发布仅基于中国芯片运行的新一代AI模型。",
       "importance": 2,
       "rank": 0,
       "tags": [
         "AI",
-        "国产芯片",
-        "中概股"
+        "中概股",
+        "国产芯片"
       ],
       "locale": "overseas",
       "market": "us"
@@ -652,13 +545,13 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/27",
-      "summary": "Salesforce因AI业务增长及对Anthropic投资的估值上升，股价上涨12%。",
+      "summary": "Salesforce股价上涨12%，受AI业务增长以及对Anthropic投资估值提升带动。",
       "importance": 2,
       "rank": 0,
       "tags": [
         "AI",
-        "财报",
-        "美股"
+        "美股",
+        "财报"
       ],
       "locale": "overseas",
       "market": "us"
@@ -669,7 +562,7 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/27",
-      "summary": "欧洲天然气库存告急，市场担忧今冬气价可能突破每兆瓦时100欧元。",
+      "summary": "欧洲天然气库存低于正常水平，市场担忧今冬气价可能突破每兆瓦时100欧元。",
       "importance": 2,
       "rank": 0,
       "tags": [
@@ -685,12 +578,12 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/27",
-      "summary": "澳洲航空发布业绩并推出新商务舱座椅，股价应声上涨。",
+      "summary": "澳洲航空公布业绩后股价上涨，公司同时发布了新一款商务舱座椅产品。",
       "importance": 1,
       "rank": 0,
       "tags": [
-        "财报",
-        "航空"
+        "航空",
+        "财报"
       ],
       "locale": "overseas",
       "market": "us"
@@ -701,13 +594,13 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/26",
-      "summary": "Okta业绩超预期，AI相关安全威胁推升身份安全需求，股价上涨20%。",
+      "summary": "Okta股价上涨20%，业绩超预期，受益于AI安全威胁上升推动的身份安全需求增长。",
       "importance": 2,
       "rank": 0,
       "tags": [
-        "财报",
+        "AI",
         "网络安全",
-        "AI"
+        "财报"
       ],
       "locale": "overseas",
       "market": "us"
@@ -718,7 +611,7 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/26",
-      "summary": "OpenAI发布关于Hugging Face AI智能体遭黑客攻击事件的长篇报告。",
+      "summary": "OpenAI发布关于Hugging Face平台上AI智能体遭入侵事件的长篇报告。",
       "importance": 1,
       "rank": 0,
       "tags": [
@@ -734,12 +627,12 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/26",
-      "summary": "亚马逊宣布将关闭一项曾被贝索斯称为\"人工人工智能\"的服务。",
+      "summary": "亚马逊宣布关闭一项曾被贝索斯称为\"人工式人工智能\"的内部服务。",
       "importance": 1,
       "rank": 0,
       "tags": [
-        "科技",
-        "美股"
+        "互联网",
+        "AI"
       ],
       "locale": "overseas",
       "market": "us"
@@ -750,7 +643,7 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/27",
-      "summary": "韩国央行连续第二次加息，原因是核心通胀仍处高位。",
+      "summary": "韩国央行连续两次会议加息，理由是核心通胀仍维持高位。",
       "importance": 2,
       "rank": 0,
       "tags": [
@@ -761,33 +654,33 @@
       "market": "us"
     },
     {
-      "url": "https://www.investing.com/news/company-news/waypoint-reit-1h26-slides-earnings-rise-34-amid-rate-headwinds-93CH-4878160",
-      "title_cn": "Waypoint REIT 1H26 slides: earnings rise 3.4% amid rate headwinds",
+      "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-harmony-gold-posts-record-fy-2026-results-as-shares-slip-93CH-4878436",
+      "title_cn": "Earnings call transcript: Harmony Gold posts record FY 2026 results as shares slip",
       "source": "Investing.com News",
       "source_type": "media",
       "date": "08/27",
-      "summary": "Waypoint REIT 2026年上半年业绩显示，受利率压力影响，盈利同比上升3.4%。",
+      "summary": "Harmony Gold发布2026财年创纪录业绩，但当日股价小幅回落。",
       "importance": 1,
       "rank": 0,
       "tags": [
-        "财报",
-        "REITs"
+        "黄金",
+        "财报"
       ],
       "locale": "overseas",
       "market": "us"
     },
     {
-      "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-bapcors-h2-2026-reset-lifts-shares-20-93CH-4878159",
-      "title_cn": "Earnings call transcript: Bapcor’s H2 2026 reset lifts shares 20%",
+      "url": "https://www.investing.com/news/company-news/grieg-seafood-h1-2026-slides-strategic-reset-complete-profit-recovery-ahead-93CH-4878435",
+      "title_cn": "Grieg Seafood H1 2026 slides: strategic reset complete, profit recovery ahead",
       "source": "Investing.com News",
       "source_type": "media",
       "date": "08/27",
-      "summary": "Bapcor召开2026财年下半年业绩电话会议，业绩\"重置\"推动股价上涨20%。",
+      "summary": "Grieg Seafood发布2026年上半年业绩，表示战略调整完成，预期后续利润将恢复增长。",
       "importance": 1,
       "rank": 0,
       "tags": [
-        "财报",
-        "汽车后市场"
+        "农业",
+        "财报"
       ],
       "locale": "overseas",
       "market": "us"
