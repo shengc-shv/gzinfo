@@ -30,6 +30,8 @@ import { EastMoneyStockCrawler } from "./sources/eastmoney-stock";
 import { HKEXStockCrawler } from "./sources/hkex-stock";
 // 2026-08-25 新浪港股市场新闻（补足港股解读类内容，披露易公告偏英文公司级）
 import { SinaHkStockCrawler } from "./sources/sina-hk-stock";
+// 2026-08-26 新增：东方财富港股收评（昨日港股收盘复盘素材，原 3 源皆缺）
+import { HkEastMoneyRecapCrawler } from "./sources/hk-eastmoney-recap";
 import { SinaAStockCrawler } from "./sources/sina-a-stock";
 // 2026-08-22：chinanews-gd（中新网广东）命中率 0% 已砍掉，Crawler 文件保留便于未来恢复。
 // 2026-08-20 用户决定：取消南沙信息源（只看广州市政府 gz-gov），GzNanshaCrawler 停用，
@@ -110,6 +112,7 @@ export async function fetchCrawledArticles(): Promise<CrawledBundle> {
     new SinaAStockCrawler(),
     new HKEXStockCrawler(),
     new SinaHkStockCrawler(),
+    new HkEastMoneyRecapCrawler(),
   ];
 
   const stocks: CrawledArticle[] = [];

@@ -3,7 +3,7 @@ import { extractJson } from "./json-util";
 import fs from "node:fs";
 import path from "node:path";
 import type { MarketCard, StockRecap } from "../types";
-import type { QuoteResult } from "../sources/quote-api";
+import type { IndexQuote, QuoteResult } from "../sources/quote-api";
 
 /**
  * 「股市解读」AI 层（2026-08-25 用户确认实施）
@@ -54,6 +54,7 @@ const RULES = `你是证券市场播报编辑。系统面向分行内部资讯�
 - spoken 语气对齐内部「今日必读」栏目风格：精炼、客观、陈述式（如"美股三大指数涨跌不一，科技股领涨""A股沪指收跌，贵金属逆市走强"），不铺陈、不抒情、不喊话。
 
 严格要求：
+- **有输入必须出卡，绝不空卡**（2026-08-26 港股空卡修复）：即使新闻条目为 0，只要系统给定了"市场输入"（美股 / A股 / 港股 任一组非空），该市场就必须产出非空卡；条目稀薄时据指数点位（若有）+ 板块印象补足一句话，宁可短不可空。
 - 只基于输入信息，不要编造指数点位/涨跌幅；若输入未提供具体数字，用"走强/走弱/涨跌互现/集体收跌"等定性描述，绝不臆造精确数字。
 - 只做市场事实性概述，**严禁引申到银行零售/对公业务、投资建议、获客动作、风险提示等**（本卡是盘面复盘，不是商机分析）。
 - 语言精炼、客观、面向资讯听众，不写空话套话。
@@ -61,7 +62,7 @@ const RULES = `你是证券市场播报编辑。系统面向分行内部资讯�
 
 输出 STRICTLY 一个 JSON 对象（无 markdown 代码块）：
 {"us":{"overview":"...","sectors":["...","..."],"spoken":"..."},"aShare":{"overview":"...","sectors":["..."],"spoken":"..."},"hk":{"overview":"...","sectors":["..."],"spoken":"..."}}
-注意：字符串内引号用单引号或中文引号，禁止裸双引号。若某一市场输入为空（无条目），该市场输出 {"overview":"","sectors":[],"spoken":""}。`;
+注意：字符串内引号用单引号或中文引号，禁止裸双引号。**三市场都禁止空卡**（overview/sectors/spoken 至少 overview 非空）；有指数点位就据指数写一句话，无指数则用"盘面涨跌互现/走强/走弱"等定性描述。`;
 
 function toPayloadItems(items: StockItem[]): Array<{ title: string; summary: string; source: string }> {
   return items.slice(0, 12).map((it) => ({
@@ -109,6 +110,29 @@ function normalizeCard(parsed: unknown): MarketCard {
   return { overview, sectors, spoken };
 }
 
+/**
+ * 收评兜底（2026-08-26 港股空卡修复）：
+ *   LLM 仍返回空卡（罕见，但可能因输入极少 / 模型抽风）→ 用指数点位合成最小复盘，
+ *   保证「有输入必出卡，绝不空卡」。
+ *   - 若 LLM 已给出非空 overview/spoken → 不覆盖（保留 LLM 质量）
+ *   - 若 LLM 给出空 → 用 quotes 合成："{name}收报{value}点（{changePct}）。" 拼成单句
+ *   - 若 LLM 给出空 + 无 quotes → 返回 undefined（无法兜底，仍按"全空"视为生成失败）
+ */
+function synthesizeFallbackCard(
+  llmCard: MarketCard,
+  quotes: IndexQuote[] | undefined,
+): MarketCard | undefined {
+  if (llmCard.overview || llmCard.spoken) return llmCard;  // LLM 给了就不覆盖
+  if (!quotes || quotes.length === 0) return undefined;
+  const lines = quotes.map((q) => {
+    const valueStr = q.value ?? "";
+    const pctStr = q.changePct ? `（${q.changePct}）` : "";
+    return `${q.name}收报${valueStr}点${pctStr}`;
+  });
+  const sentence = lines.join("；") + "。";
+  return { overview: sentence, sectors: [], spoken: sentence };
+}
+
 export async function generateStockRecap(
   input: StockRecapInput,
   quotes?: QuoteResult | null,
@@ -140,10 +164,16 @@ export async function generateStockRecap(
       const jsonrepair = (await import("jsonrepair")).jsonrepair;
       parsed = JSON.parse(jsonrepair(cleaned));
     }
-    const recap: StockRecap = {
+    const llmCards: StockRecap = {
       us: normalizeCard(parsed.us),
       aShare: normalizeCard(parsed.aShare),
       hk: normalizeCard(parsed.hk),
+    };
+    // 收评兜底（2026-08-26 港股空卡修复）：LLM 仍空 → 用指数点位合成最小复盘
+    const recap: StockRecap = {
+      us: synthesizeFallbackCard(llmCards.us, quotes?.quotes.us) ?? llmCards.us,
+      aShare: synthesizeFallbackCard(llmCards.aShare, quotes?.quotes.aShare) ?? llmCards.aShare,
+      hk: synthesizeFallbackCard(llmCards.hk, quotes?.quotes.hk) ?? llmCards.hk,
     };
     // 附带卡脚小字备注（来源网站/交叉验证网站/数据时间取自输入条目真实字段，非 LLM 臆造；SKIP_AI 复用 store 时一并带回）
     // crossCheck 统一为指数核验源「新浪行情」（quotes.channel），披露易等公告流不进主位
@@ -158,7 +188,7 @@ export async function generateStockRecap(
       recap.quoteChannel = quotes.channel;
       recap.quoteDate = quotes.date;
     }
-    // 三卡全空（极少：三市场均无输入）→ 视为生成失败，页面不渲染该区
+    // 三卡全空（极少：三市场均无输入且无 quotes）→ 视为生成失败，页面不渲染该区
     const empty =
       !recap.us.overview && !recap.us.spoken && recap.us.sectors.length === 0 &&
       !recap.aShare.overview && !recap.aShare.spoken && recap.aShare.sectors.length === 0 &&
