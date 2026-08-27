@@ -1,124 +1,106 @@
 {
   "date": "2026-08-27",
-  "updatedAt": "2026-08-27T08:08:46.879Z",
+  "updatedAt": "2026-08-27T08:43:41.869Z",
   "executive": {
-    "hero_line": "理财业绩基准集中换锚叠加外部关税扰动，零售预期管理与外贸客群摸排成今日分行双主线。",
-    "spoken_hero": "今天理财业绩基准集体换锚、净值波动感知会放大，财富端要帮客户管好预期；同时美方可能再加关税，外贸客群需提前摸排，分行这两条线今天都该盯紧。",
+    "hero_line": "三年定存集中到期复购率持平，居民仍把存款当底仓，分行应锁住到期资金承接。",
+    "spoken_hero": "三年定存到期高峰已至，复购率与此前基本持平，存款仍是居民配置的底仓。提示分行结合到期台账，重点推大额存单与稳健理财，防止客户单纯转存。",
     "must_read": [
       {
-        "title": "理财基准集中换锚",
-        "why": "3000余只产品调整业绩比较基准锚定方式，零售端客户对净值波动的感知会放大，代销端需要做预期管理，否则可能影响财富客户留存与产品口碑。",
-        "url": "https://m.21jingji.com/article/20260827/herald/ccb1cf0cb4d2676776906b20771b0ca4.html"
+        "title": "定存复购率持平，存款仍是底仓",
+        "why": "居民安全资产偏好未松动，分行到期资金承接与中收转化需前置布局。",
+        "url": "https://m.21jingji.com/article/20260827/herald/894a6e5dd1e088c6b7123e40225ec2f8.html"
       },
       {
-        "title": "财政部深化零基预算与地方债管理",
-        "why": "城投、基建类授信客群偿付与再融资逻辑会受地方债管理节奏影响，对公客户经理要跟踪属地化债进展，把握项目审批与续作窗口。",
-        "url": "https://www.cnfin.com/yw-lb/detail/20260827/4461283_1.html"
+        "title": "低利率延续，存款搬家未现",
+        "why": "理财与基金替代效应有限，分行财富产品组合需围绕稳健底仓做加法。",
+        "url": "https://m.21jingji.com/article/20260827/herald/894a6e5dd1e088c6b7123e40225ec2f8.html"
       },
       {
-        "title": "美方考虑对华加征7.5%关税",
-        "why": "外贸及跨境客群关税成本预期上升，辖内外贸企业的订单、结算与结售汇节奏可能率先波动，对公与外汇条线需提前排摸。",
-        "url": "https://www.cnfin.com/hg-lb/detail/20260827/4461272_1.html"
+        "title": "三年期定存到期高峰",
+        "why": "到期客户体量集中，分行若承接不力将影响负债端与中收双指标。",
+        "url": "https://m.21jingji.com/article/20260827/herald/894a6e5dd1e088c6b7123e40225ec2f8.html"
       },
       {
-        "title": "日央行放风或加快加息",
-        "why": "日元利率路径变化会传导到跨境理财与外汇产品定价，结售汇客户与海外配置型客户的窗口期值得关注。",
-        "url": "https://m.21jingji.com/article/20260827/herald/8d4f7f0b4b468bfed9ef93cff92535ac.html"
+        "title": "安全资产偏好粘性强",
+        "why": "客户风险偏好下移，分行私行与财富条线可借机做大类配置再平衡。",
+        "url": "https://m.21jingji.com/article/20260827/herald/894a6e5dd1e088c6b7123e40225ec2f8.html"
       }
     ],
-    "spoken_must_read": "理财基准集中换锚，零售端需提前向客户做好净值波动解释，避免预期落差引发投诉。\n财政部深化零基预算与地方债管理，城投基建续作窗口收窄，对公端应抓紧摸排属地化债节奏。\n美方考虑再加7.5%关税，外贸客群结算与结售汇可能先波动，对公与外汇条线本周可主动走访。\n日央行放风或加快加息，跨境理财与外汇定价短期承压，结售汇客户可关注汇率波动窗口。\n资管机构围绕资源算力资本重排配置主线，财富端可重新审视在售策略型产品的主题权重。",
+    "spoken_must_read": "定存复购率持平，存款仍是底仓。提示分行把到期承接与中收转化前置。\n低利率延续，存款搬家暂未出现。财富线可在稳健底仓上做加法。\n三年期定存集中到期，规模可观。承接不力会影响负债与中收两端。\n居民安全资产偏好粘性较强。私行可借机推动大类资产再平衡。\n全年来看，存款底仓逻辑未变。分行负债结构与产品组合需同步校准。",
     "insights": [
       {
-        "topic": "理财基准换锚做客户预期管理",
-        "impact": "业绩比较基准调整后首批产品净值表现会被市场放大解读，老客户若未及时告知容易产生信任损耗，影响代销留存。",
-        "action": "本周内财富部组织理财经理话术统一，对持有换锚产品客户逐一沟通新基准逻辑，并配套稳健型产品作为过渡选项。",
+        "topic": "三年定存到期资金承接",
+        "impact": "大额到期客户若仅转活期或他行，将直接分流分行负债与中收，需以专属产品锁定。",
+        "action": "本周起梳理到期台账，对50万以上客户推送大额存单+稳享理财组合，财富经理逐户触达。",
         "tag": [
-          "财富"
+          "财富",
+          "私行"
         ],
         "sources": [
           {
-            "title": "8月超3000只银行理财公告\"换锚\"",
-            "url": "https://m.21jingji.com/article/20260827/herald/ccb1cf0cb4d2676776906b20771b0ca4.html"
+            "title": "谢志斌答21：三年期存款到期复购率持平，存款仍是居民配置底仓",
+            "url": "https://m.21jingji.com/article/20260827/herald/894a6e5dd1e088c6b7123e40225ec2f8.html"
           }
         ]
       },
       {
-        "topic": "外贸客群关税成本摸排",
-        "impact": "美方拟加征7.5%关税若落地，辖内外贸出口企业的毛利与订单结构将承压，结算、结售汇和贸易融资需求可能先于基本面变化。",
-        "action": "对公部本周起梳理辖内外贸百强与跨境结算大户名单，优先走访并评估关税转嫁能力，配套贸易融资与外汇套保方案。",
+        "topic": "大额存单与稳健理财组合推",
+        "impact": "客户对安全资产偏好未松动，是负债端稳规模和拉动中收的窗口期。",
+        "action": "本周内在私行APP首页上线到期客户专属组合券，引导转购稳享理财与储蓄险。",
         "tag": [
-          "客群",
-          "信贷"
+          "财富",
+          "私行"
         ],
         "sources": [
           {
-            "title": "商务部回应美考虑对华额外加征7.5%关税",
-            "url": "https://www.cnfin.com/hg-lb/detail/20260827/4461272_1.html"
+            "title": "谢志斌答21：三年期存款到期复购率持平，存款仍是居民配置底仓",
+            "url": "https://m.21jingji.com/article/20260827/herald/894a6e5dd1e088c6b7123e40225ec2f8.html"
           }
         ]
       },
       {
-        "topic": "城投基建续作窗口跟进",
-        "impact": "零基预算与地方债管理节奏会传导至城投平台再融资能力，存量授信客户的项目审批与还款来源需重新评估。",
-        "action": "对公部联合风控梳理辖内城投基建白名单客户，对短期到期项目提前对接续作方案，并关注新型政策性金融工具对接机会。",
-        "tag": [
-          "信贷",
-          "政银合作"
-        ],
-        "sources": [
-          {
-            "title": "财政部：持续深化零基预算改革 加强地方政府债务管理",
-            "url": "https://www.cnfin.com/yw-lb/detail/20260827/4461283_1.html"
-          }
-        ]
-      },
-      {
-        "topic": "跨境与外汇客户窗口营销",
-        "impact": "日央行加息预期叠加关税扰动，人民币汇率波动区间可能打开，结售汇客户与海外配置型客户的交易意愿提升。",
-        "action": "私行与财富部本周内筛出高净值外汇活跃客户，推送结售汇优惠与海外配置型产品组合，借波动窗口做大客单价。",
+        "topic": "到期客户大类资产再平衡",
+        "impact": "客户风险偏好下移，仅推存款易错失中收机会，需做稳健+保障的搭配。",
+        "action": "本周面向高净值客户试点配置再平衡沙龙，推稳健理财搭配保障型保险。",
         "tag": [
           "私行",
+          "客群"
+        ],
+        "sources": [
+          {
+            "title": "谢志斌答21：三年期存款到期复购率持平，存款仍是居民配置底仓",
+            "url": "https://m.21jingji.com/article/20260827/herald/894a6e5dd1e088c6b7123e40225ec2f8.html"
+          }
+        ]
+      },
+      {
+        "topic": "到期客户防流失外呼机制",
+        "impact": "复购率持平不等于客户不流失，竞对可能以更高收益挖角，需提前外呼挽留。",
+        "action": "本周起对到期前30天客户触发外呼，由客户经理+财富经理双人触达并记录。",
+        "tag": [
+          "客群",
           "财富"
         ],
         "sources": [
           {
-            "title": "日本央行副行长发声：若金融环境过松或加快加息，不会冲击市场",
-            "url": "https://m.21jingji.com/article/20260827/herald/8d4f7f0b4b468bfed9ef93cff92535ac.html"
-          },
-          {
-            "title": "资管一线 | 资源、算力与资本日益稀缺，资产配置如何重构？",
-            "url": "https://www.cnfin.com/hg-lb/detail/20260827/4461280_1.html"
+            "title": "谢志斌答21：三年期存款到期复购率持平，存款仍是居民配置底仓",
+            "url": "https://m.21jingji.com/article/20260827/herald/894a6e5dd1e088c6b7123e40225ec2f8.html"
           }
         ]
       }
     ],
-    "spoken_insights": "理财基准换锚后净值波动会被放大，财富部本周内统一话术并配套稳健产品过渡。\n美方拟加7.5%关税，对公部本周起走访辖内外贸百强与跨境结算大户，做贸易融资与外汇套保方案。\n城投基建再融资节奏受地方债管理影响，对公联合风控梳理短期到期项目提前续作。\n日央行加息预期叠加关税扰动打开汇率波动窗口，私行与财富部可推送结售汇与海外配置组合。\n资管主线转向资源算力资本，财富条线可借机调整在售策略型产品的主题权重。",
-    "risk": {
-      "topic": "理财换锚引发客户投诉与合规风险",
-      "evidence": "8月已有超3000只银行理财公告调整业绩比较基准锚定方式，首批调整产品到期后净值波动感知会被放大。",
-      "impact": "个贷与财富端：换锚产品客户对净值波动的容忍度下降，易产生集中投诉；私行端：高净值客户对收益不达预期敏感，可能引发产品赎回潮；风控端：代销合规与销售适当性需重新留痕。",
-      "action": "财富部应统一话术与销售留痕，风控部联合合规对换锚产品销售过程做专项复核，客服部提前备好投诉处置预案。",
-      "source": "T2",
-      "sources": [
-        {
-          "title": "8月超3000只银行理财公告\"换锚\"",
-          "url": "https://m.21jingji.com/article/20260827/herald/ccb1cf0cb4d2676776906b20771b0ca4.html"
-        }
-      ]
-    },
-    "spoken_risk": "今天有1个需要警惕：理财基准集中换锚后净值波动或被放大，客户投诉风险上升。\n财富部统一话术并做好销售留痕，风控联合合规开展专项复核，客服提前备好投诉处置预案。",
+    "spoken_insights": "三年定存集中到期，可考虑大额存单配稳享理财组合，逐户触达。\n本周在私行APP上线到期客户专属券，引导资金转购稳健产品。\n高净值客户试点再平衡沙龙，搭配保障型保险做中收加法。\n到期前30天客户触发外唤，客户经理与财富经理双人跟进。\n提示把到期台账与外唤闭环接入CRM，防止资金被他行截走。",
     "guangdong_ipo": null
   },
   "stock_recap": {
     "us": {
-      "overview": "AI主线强势领涨，能源及地缘扰动有限。",
+      "overview": "美股科技股在英伟达财报超预期提振下领涨大盘。",
       "sectors": [
-        "人工智能：英伟达拟收购Hugging Face，Salesforce AI业务推动股价大涨12%。",
-        "半导体：Z.ai发布纯国产芯片AI模型，国产算力链走强。",
-        "能源/航运：霍尔木兹海峡油轮遇袭，天然气供应担忧推升气价。",
-        "互联网：Meta以167亿美元和解社交媒体成瘾诉讼。"
+        "半导体：英伟达Q2业绩大超预期，盘后大涨7%，AI支出周期信心增强",
+        "软件与AI应用：Salesforce因AI增长及对Anthropic投资获益，股价大涨12%",
+        "能源：中东局势紧张，卡塔尔斡旋伊朗以缓和冲突，原油相关板块受关注"
       ],
-      "spoken": "美股盘面AI主线强势领涨，英伟达拟收购Hugging Face，Salesforce因AI业务大涨12%，国产芯片AI模型发布提振算力链。Meta以167亿美元和解社交媒体成瘾诉讼。能源板块受霍尔木兹海峡油轮遇袭及欧洲天然气库存偏低影响走强。",
+      "spoken": "美股科技板块在英伟达财报大超预期提振下集体走强，英伟达盘后大涨百分之七，Salesforce涨百分之十二，AI算力与应用链情绪明显回暖。中东方面，卡塔尔出访伊朗寻求降温，地缘溢价仍存。整体盘面风险偏好回升，科技股领涨。",
       "meta": {
         "source": "CNBC Top Stories",
         "crossCheck": "新浪行情",
@@ -143,15 +125,15 @@
       ]
     },
     "aShare": {
-      "overview": "A股光模块、券商走强，AI算力链受英伟达财报提振。",
+      "overview": "A股受英伟达财报催化，算力与光模块板块大幅走强。",
       "sectors": [
-        "光模块：中报业绩亮眼集体爆发，融资客大举抢筹。",
-        "券商：牛散扎堆买入，业绩高增支撑估值修复。",
-        "AI算力：英伟达财报超预期叠加千亿项目落地，国产算力链迎催化。",
-        "消费：乳业龙头拟最高20亿元回购注销，产业资本积极入场。",
-        "战略新兴产业：上海印发十五五规划，玻璃基板等被券商看好。"
+        "光模块：中报业绩亮眼，板块集体爆发，融资客大举抢筹",
+        "国产算力：千亿级项目全链条落地，中信证券看好产业链增长机遇",
+        "券商：牛散扎堆买入，业绩高增支撑估值修复预期",
+        "半导体材料：中金看好玻璃基板成下一代先进封装核心平台",
+        "政策受益：上海十五五战略性新兴产业规划印发，相关概念受关注"
       ],
-      "spoken": "A股盘面光模块与券商板块走强，光模块中报业绩集体爆发获融资客抢筹，牛散扎堆买入券商股支撑估值修复。英伟达财报大超预期叠加千亿项目落地，国产算力产业链迎明确增长机遇。乳业龙头拟最高20亿元回购注销，产业资本积极入场。",
+      "spoken": "A股盘面算力链全线走强，光模块板块中报业绩亮眼集体爆发，国产算力受千亿项目落地提振情绪升温。券商股获牛散扎堆买入，估值修复预期增强。半导体材料端，玻璃基板题材受机构看好。整体热点围绕AI产业链扩散。",
       "meta": {
         "source": "东方财富",
         "crossCheck": "新浪行情",
@@ -176,13 +158,13 @@
       ]
     },
     "hk": {
-      "overview": "港股盘面分化，个股回购与中报披露密集。",
+      "overview": "港股盘面受中报密集披露带动，业绩与回购成主要线索。",
       "sectors": [
-        "科技/互联网：受英伟达收购及AI主线提振，板块情绪偏暖。",
-        "能源/航运：霍尔木兹地缘风险升温，油运及油气板块关注度上升。",
-        "金融：多家公司密集派息及披露中期业绩，分红主题受关注。"
+        "中报行情：多家公司集中披露半年度业绩，盈利与分红成关注焦点",
+        "回购与公司治理：多家公司发布股份回购授权及董事变动公告，治理事项活跃",
+        "企业管治：部分公司修订章程文件并披露关联交易，公司治理事项密集"
       ],
-      "spoken": "港股盘面个股走势分化，多家公司密集披露回购及中期业绩，分红派息主题受关注。受英伟达收购及AI主线提振，科技板块情绪偏暖。霍尔木兹海峡地缘风险升温，油运及油气板块关注度上升。",
+      "spoken": "港股近期进入中报密集披露期，多家公司发布半年度业绩及分红安排，成为盘面主要观察线索。同时，股份回购授权、董事变更及关联交易等公司治理公告较为活跃，市场关注业绩兑现与企业管治动态。整体盘面以个股消息驱动为主。",
       "meta": {
         "source": "新浪财经·港股",
         "crossCheck": "新浪行情",
@@ -191,13 +173,13 @@
       "indices": [
         {
           "name": "恒生指数",
-          "value": "25547.11",
-          "changePct": "-0.41%"
+          "value": "25565.74",
+          "changePct": "-0.34%"
         },
         {
           "name": "恒生科技",
-          "value": "4616.71",
-          "changePct": "-0.20%"
+          "value": "4620.29",
+          "changePct": "-0.13%"
         }
       ]
     },
@@ -211,12 +193,12 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/27",
-      "summary": "英伟达Q2营收与利润均同比翻倍，远超市场预期，并指引下一财年营收再增约70%。",
+      "summary": "英伟达Q2营收和利润同比双双翻倍，并预计下一财年营收将再增长约70%，业绩大超市场预期。",
       "importance": 3,
       "rank": 0,
       "tags": [
-        "财报",
         "AI",
+        "财报",
         "半导体"
       ],
       "locale": "national",
@@ -228,7 +210,7 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/26",
-      "summary": "伊朗股市当日约90%的个股上涨，录得单日大幅上涨行情。",
+      "summary": "伊朗股市约90%的股票上涨，市场出现普涨行情。",
       "importance": 1,
       "rank": 0,
       "tags": [
@@ -244,7 +226,7 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/26",
-      "summary": "东方财富汇总8月26日晚间沪深上市公司重大事项公告，包括业绩、回购、增减持等。",
+      "summary": "8月26日晚间沪深上市公司发布一批重大事项公告，包括业绩、重组、增减持等公告。",
       "importance": 1,
       "rank": 0,
       "tags": [
@@ -260,7 +242,7 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/26",
-      "summary": "报道称多位\"牛散\"集中买入券商股，市场观点认为券商业绩高增长有望支撑估值修复。",
+      "summary": "部分知名个人投资者集中买入券商股，市场关注券商板块业绩高增长对估值修复的支撑作用。",
       "importance": 2,
       "rank": 0,
       "tags": [
@@ -276,13 +258,13 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/27",
-      "summary": "针对\"A股未盈利企业无法上市\"的市场传闻，知情人士作出回应澄清。",
+      "summary": "针对市场关于\"A股未盈利企业无法上市\"的传闻，知情人士作出回应，否认相关说法。",
       "importance": 2,
       "rank": 0,
       "tags": [
         "政策",
-        "A股",
-        "IPO"
+        "IPO",
+        "A股"
       ],
       "locale": "national",
       "market": "a-share"
@@ -293,13 +275,13 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/26",
-      "summary": "英伟达财报发布前，市场关注其季度营收是否逼近千亿美元以及订单的\"含金量\"。",
+      "summary": "英伟达财报公布前夕，机构预期其季度营收接近千亿美元，市场关注订单的\"含金量\"。",
       "importance": 2,
       "rank": 0,
       "tags": [
-        "财报",
         "AI",
-        "半导体"
+        "半导体",
+        "财报"
       ],
       "locale": "national",
       "market": "a-share"
@@ -310,12 +292,12 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/26",
-      "summary": "某乳业龙头拟回购并注销至多20亿元股份，知名投资者陈发树同步加仓。",
+      "summary": "某乳业龙头计划回购并注销最多20亿元股份，知名个人投资者陈发树加仓。",
       "importance": 2,
       "rank": 0,
       "tags": [
-        "回购",
         "消费",
+        "回购",
         "乳业"
       ],
       "locale": "national",
@@ -327,7 +309,7 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/26",
-      "summary": "上海印发《战略性新兴产业发展\"十五五\"规划》，明确未来五年战略性新兴产业方向。",
+      "summary": "上海市印发《战略性新兴产业发展\"十五五\"规划》，明确\"十五五\"期间战略性新兴产业的发展方向。",
       "importance": 2,
       "rank": 0,
       "tags": [
@@ -343,13 +325,13 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/27",
-      "summary": "中报业绩亮眼背景下，光模块板块集体上涨，融资资金净买入24只个股金额过亿。",
+      "summary": "光模块板块中报业绩亮眼，集体爆发，融资资金净买入24只个股金额超过1亿元。",
       "importance": 2,
       "rank": 0,
       "tags": [
         "光模块",
         "AI",
-        "半导体"
+        "中报"
       ],
       "locale": "national",
       "market": "a-share"
@@ -360,11 +342,12 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/26",
-      "summary": "东方财富发布8月27日财经早餐，汇总隔夜全球市场与重要财经资讯。",
+      "summary": "东方财富发布8月27日财经早餐，汇总宏观、市场及公司重要资讯。",
       "importance": 1,
       "rank": 0,
       "tags": [
-        "财经早报"
+        "早盘资讯",
+        "A股"
       ],
       "locale": "national",
       "market": "a-share"
@@ -375,7 +358,7 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/27",
-      "summary": "中金研报指出，玻璃基板有望成为下一代先进封装的重要材料平台，建议关注核心设备放量。",
+      "summary": "中金公司研报指出，玻璃基板有望成为下一代先进封装的重要材料平台，建议关注核心设备放量机会。",
       "importance": 2,
       "rank": 0,
       "tags": [
@@ -392,7 +375,7 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/27",
-      "summary": "中信证券研报称，千亿级项目全链条落地，国产算力产业链迎来明确增长机遇。",
+      "summary": "中信证券研报认为，千亿级国产算力项目全链条落地，国产算力产业链迎来明确增长机遇。",
       "importance": 2,
       "rank": 0,
       "tags": [
@@ -404,212 +387,216 @@
       "market": "a-share"
     },
     {
-      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0827/2026082700203.pdf",
-      "title_cn": "Next Day Disclosure Returns - [Share Buyback]",
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0827/2026082700368.pdf",
+      "title_cn": "Circulars - [General Mandate / Explanatory Statement for Repurchase of Shares / Re-election or Appointment of Director subject to Shareholders' Approval]",
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/27",
-      "summary": "港交所披露易发布某上市公司股份回购的翌日披露。",
+      "summary": "港股上市公司发布关于一般性授权、股份回购说明函及董事任免的通函。",
       "importance": 1,
       "rank": 0,
       "tags": [
-        "回购",
-        "港股"
-      ],
-      "locale": "national",
-      "market": "hk"
-    },
-    {
-      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0827/2026082700201.pdf",
-      "title_cn": "Next Day Disclosure Returns - [Share Buyback]",
-      "source": "港交所披露易",
-      "source_type": "media",
-      "date": "08/27",
-      "summary": "港交所披露易发布某上市公司股份回购的翌日披露。",
-      "importance": 1,
-      "rank": 0,
-      "tags": [
-        "回购",
-        "港股"
-      ],
-      "locale": "national",
-      "market": "hk"
-    },
-    {
-      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0827/2026082700197.pdf",
-      "title_cn": "Next Day Disclosure Returns - [Share Buyback]",
-      "source": "港交所披露易",
-      "source_type": "media",
-      "date": "08/27",
-      "summary": "港交所披露易发布某上市公司股份回购的翌日披露。",
-      "importance": 1,
-      "rank": 0,
-      "tags": [
-        "回购",
-        "港股"
-      ],
-      "locale": "national",
-      "market": "hk"
-    },
-    {
-      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0827/2026082700193.pdf",
-      "title_cn": "Announcements and Notices - [Overseas Regulatory Announcement - Trading Update / Inside Information / Results of a Subsidiary]",
-      "source": "港交所披露易",
-      "source_type": "media",
-      "date": "08/27",
-      "summary": "港交所披露易发布海外监管公告，内容涉及交易最新情况、內幕消息及附属公司业绩。",
-      "importance": 1,
-      "rank": 0,
-      "tags": [
-        "公告",
-        "港股"
-      ],
-      "locale": "national",
-      "market": "hk"
-    },
-    {
-      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0827/2026082700183.pdf",
-      "title_cn": "Announcements and Notices - [Dividend or Distribution (Announcement Form)]",
-      "source": "港交所披露易",
-      "source_type": "media",
-      "date": "08/27",
-      "summary": "港交所披露易发布某上市公司股息或分派公告。",
-      "importance": 1,
-      "rank": 0,
-      "tags": [
-        "分红",
-        "港股"
-      ],
-      "locale": "national",
-      "market": "hk"
-    },
-    {
-      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0827/2026082700181.pdf",
-      "title_cn": "Announcements and Notices - [Dividend or Distribution (Announcement Form)]",
-      "source": "港交所披露易",
-      "source_type": "media",
-      "date": "08/27",
-      "summary": "港交所披露易发布某上市公司股息或分派公告。",
-      "importance": 1,
-      "rank": 0,
-      "tags": [
-        "分红",
-        "港股"
-      ],
-      "locale": "national",
-      "market": "hk"
-    },
-    {
-      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0827/2026082700179.pdf",
-      "title_cn": "Announcements and Notices - [Continuing Connected Transaction]",
-      "source": "港交所披露易",
-      "source_type": "media",
-      "date": "08/27",
-      "summary": "港交所披露易发布某上市公司持续关连交易公告。",
-      "importance": 1,
-      "rank": 0,
-      "tags": [
-        "关连交易",
-        "港股"
-      ],
-      "locale": "national",
-      "market": "hk"
-    },
-    {
-      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0827/2026082700177.pdf",
-      "title_cn": "Announcements and Notices - [Interim Results / Dividend or Distribution]",
-      "source": "港交所披露易",
-      "source_type": "media",
-      "date": "08/27",
-      "summary": "港交所披露易发布某上市公司中期业绩及股息或分派公告。",
-      "importance": 1,
-      "rank": 0,
-      "tags": [
-        "中报",
         "港股",
-        "分红"
+        "公告"
       ],
       "locale": "national",
       "market": "hk"
     },
     {
-      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0827/2026082700175.pdf",
-      "title_cn": "Announcements and Notices - [Interim Results / Dividend or Distribution / Closure of Books or Change of Book Closure Period]",
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0827/2026082700366.pdf",
+      "title_cn": "Financial Statements/ESG Information - [Interim/Half-Year Report]",
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/27",
-      "summary": "港交所披露易发布某上市公司中期业绩、股息分派及暂停办理股份过户登记公告。",
+      "summary": "港股上市公司发布中期/半年度财务报告及ESG信息。",
       "importance": 1,
       "rank": 0,
       "tags": [
-        "中报",
         "港股",
-        "分红"
+        "中报",
+        "ESG"
       ],
       "locale": "national",
       "market": "hk"
     },
     {
-      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0827/2026082700173.pdf",
-      "title_cn": "Announcements and Notices - [Dividend or Distribution (Announcement Form)]",
-      "source": "港交所披露易",
-      "source_type": "media",
-      "date": "08/27",
-      "summary": "港交所披露易发布某上市公司股息或分派公告。",
-      "importance": 1,
-      "rank": 0,
-      "tags": [
-        "分红",
-        "港股"
-      ],
-      "locale": "national",
-      "market": "hk"
-    },
-    {
-      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0827/2026082700171.pdf",
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0827/2026082700356.pdf",
       "title_cn": "Announcements and Notices - [Interim Results]",
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/27",
-      "summary": "港交所披露易发布某上市公司中期业绩公告。",
+      "summary": "港股上市公司发布中期业绩公告。",
       "importance": 1,
       "rank": 0,
       "tags": [
-        "中报",
-        "港股"
+        "港股",
+        "中报"
       ],
       "locale": "national",
       "market": "hk"
     },
     {
-      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0827/2026082700167.pdf",
-      "title_cn": "Announcements and Notices - [Profit Warning / Inside Information]",
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0827/2026082700354.pdf",
+      "title_cn": "Financial Statements/ESG Information - [Interim/Half-Year Report]",
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/27",
-      "summary": "港交所披露易发布某上市公司盈利警告及內幕消息公告。",
-      "importance": 2,
+      "summary": "港股上市公司发布中期/半年度财务报告及ESG信息。",
+      "importance": 1,
       "rank": 0,
       "tags": [
-        "盈利警告",
-        "港股"
+        "港股",
+        "中报",
+        "ESG"
       ],
       "locale": "national",
       "market": "hk"
     },
     {
-      "url": "https://www.cnbc.com/2026/08/27/us-iran-war-trump-hormuz-attack-mine-.html",
-      "title_cn": "Tanker attack tests Trump’s claim that Hormuz is a 'functioning strait'",
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0827/2026082700352.pdf",
+      "title_cn": "Announcements and Notices - [Connected Transaction / Announcement by Offeree Company under the Takeovers Code / Issue of Shares under a Specific Mandate]",
+      "source": "港交所披露易",
+      "source_type": "media",
+      "date": "08/27",
+      "summary": "港股上市公司发布关连交易、要约人公告及根据特别授权发行股份的公告。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "港股",
+        "关连交易",
+        "公告"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0827/2026082700348.pdf",
+      "title_cn": "Announcements and Notices - [Amendment of Constitutional Documents / Other - Corporate Governance Related Matters]",
+      "source": "港交所披露易",
+      "source_type": "media",
+      "date": "08/27",
+      "summary": "港股上市公司发布修订组织章程文件及企业管治相关公告。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "港股",
+        "公司治理",
+        "公告"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0827/2026082700346.pdf",
+      "title_cn": "Announcements and Notices - [Interim Results / Dividend or Distribution / Closure of Books or Change of Book Closure Period]",
+      "source": "港交所披露易",
+      "source_type": "media",
+      "date": "08/27",
+      "summary": "港股上市公司发布中期业绩、分红派息及暂停办理股份过户登记的公告。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "港股",
+        "中报",
+        "分红"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0827/2026082700344.pdf",
+      "title_cn": "Announcements and Notices - [Closure of Books or Change of Book Closure Period]",
+      "source": "港交所披露易",
+      "source_type": "media",
+      "date": "08/27",
+      "summary": "港股上市公司发布暂停办理股份过户登记或变更截止过户日期的公告。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "港股",
+        "公告"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0827/2026082700342.pdf",
+      "title_cn": "Financial Statements/ESG Information - [Interim/Half-Year Report]",
+      "source": "港交所披露易",
+      "source_type": "media",
+      "date": "08/27",
+      "summary": "港股上市公司发布中期/半年度财务报告及ESG信息。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "港股",
+        "中报",
+        "ESG"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0827/2026082700338.pdf",
+      "title_cn": "Proxy Forms",
+      "source": "港交所披露易",
+      "source_type": "media",
+      "date": "08/27",
+      "summary": "港股上市公司发布代表委任表格。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "港股",
+        "公告"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0827/2026082700336.pdf",
+      "title_cn": "Circulars - [Other]",
+      "source": "港交所披露易",
+      "source_type": "media",
+      "date": "08/27",
+      "summary": "港股上市公司发布其他类别的通函。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "港股",
+        "公告"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0827/2026082700332.pdf",
+      "title_cn": "Circulars - [Other]",
+      "source": "港交所披露易",
+      "source_type": "media",
+      "date": "08/27",
+      "summary": "港股上市公司发布其他类别的通函。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "港股",
+        "公告"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/08/27/nvidia-nvda-q2-earnings.html",
+      "title_cn": "Nvidia jumps 7% in after blockbuster earnings boost AI confidence",
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/27",
-      "summary": "油轮在霍尔木兹海峡遇袭事件，考验特朗普此前关于该海峡\"运行正常\"的表态。",
-      "importance": 2,
+      "summary": "受强劲财报提振AI市场信心，英伟达盘后股价上涨约7%。",
+      "importance": 3,
       "rank": 0,
       "tags": [
-        "能源",
-        "中东",
-        "地缘政治"
+        "AI",
+        "半导体",
+        "美股"
       ],
       "locale": "overseas",
       "market": "us"
@@ -620,13 +607,12 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/27",
-      "summary": "据报道，CIA局长John Ratcliffe秘密访问莫斯科，警告俄罗斯勿攻击北约。",
+      "summary": "据报道，美国中情局局长约翰·拉特克利夫秘密访问莫斯科，警告俄罗斯不要攻击北约。",
       "importance": 2,
       "rank": 0,
       "tags": [
         "地缘政治",
-        "美国",
-        "俄罗斯"
+        "美俄"
       ],
       "locale": "overseas",
       "market": "us"
@@ -637,7 +623,7 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/27",
-      "summary": "据报道，英伟达同意以129亿美元收购AI平台Hugging Face。",
+      "summary": "据报道，英伟达同意以129亿美元收购AI模型平台Hugging Face。",
       "importance": 3,
       "rank": 0,
       "tags": [
@@ -649,18 +635,35 @@
       "market": "us"
     },
     {
+      "url": "https://www.cnbc.com/2026/08/27/us-iran-war-trump-hormuz-attack-mine-.html",
+      "title_cn": "Qatari PM heads to Iran to 'de-escalate tensions' as tanker attack tests Trump’s Hormuz claim",
+      "source": "CNBC Top Stories",
+      "source_type": "media",
+      "date": "08/27",
+      "summary": "卡塔尔首相前往伊朗试图缓和紧张局势，油轮遇袭事件使霍尔木兹海峡局势成为关注焦点。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "地缘政治",
+        "中东",
+        "能源"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
       "url": "https://www.cnbc.com/2026/08/26/meta-social-media-trial-settlement.html",
       "title_cn": "Meta settles social media addiction case with California, other states for $16.7 billion",
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/26",
-      "summary": "Meta同意与加州及其他州达成167亿美元和解，以了结社交媒体成瘾相关诉讼。",
+      "summary": "Meta与加州及其他州达成和解，将就社交媒体成瘾案支付167亿美元。",
       "importance": 2,
       "rank": 0,
       "tags": [
+        "美股",
         "科技",
-        "诉讼",
-        "Meta"
+        "监管"
       ],
       "locale": "overseas",
       "market": "us"
@@ -671,13 +674,30 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/27",
-      "summary": "Z.ai发布仅使用中国芯片运行的新AI模型，股价当日上涨8%。",
+      "summary": "中国AI公司Z.ai发布可在纯国产芯片上运行的新AI模型，股价上涨8%。",
       "importance": 2,
       "rank": 0,
       "tags": [
         "AI",
         "中概股",
-        "芯片"
+        "国产芯片"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/08/26/jensen-huang-defends-nvidias-growing-financial-support-for-ai-ecosystem-says-the-risk-is-low-.html",
+      "title_cn": "Jensen Huang defends Nvidia's growing financial support for AI ecosystem, says 'the risk is low'",
+      "source": "CNBC Top Stories",
+      "source_type": "media",
+      "date": "08/27",
+      "summary": "英伟达CEO黄仁勋为公司在AI生态中不断加大的财务支持进行辩护，称\"风险较低\"。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "AI",
+        "半导体",
+        "美股"
       ],
       "locale": "overseas",
       "market": "us"
@@ -688,13 +708,13 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/27",
-      "summary": "Salesforce因AI业务增长及对Anthropic投资录得收益，股价当日上涨12%。",
+      "summary": "受AI业务增长及对Anthropic投资估值上升提振，Salesforce股价上涨12%。",
       "importance": 2,
       "rank": 0,
       "tags": [
         "AI",
-        "财报",
-        "美股"
+        "美股",
+        "SaaS"
       ],
       "locale": "overseas",
       "market": "us"
@@ -705,7 +725,7 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/27",
-      "summary": "欧洲天然气库存处于低位，分析预计冬季气价可能突破100欧元/兆瓦时。",
+      "summary": "欧洲天然气库存水平偏低，分析预计今年冬季气价可能突破100欧元。",
       "importance": 2,
       "rank": 0,
       "tags": [
@@ -716,84 +736,52 @@
       "market": "us"
     },
     {
-      "url": "https://www.cnbc.com/2026/08/27/qantas-shares-jump-on-earnings-as-airline-updates-business-class-.html",
-      "title_cn": "Qantas shares jump after earnings as airline unveils new business-class seats",
-      "source": "CNBC Top Stories",
-      "source_type": "media",
-      "date": "08/27",
-      "summary": "澳航公布财报并发布全新商务舱座椅，当日股价上涨。",
-      "importance": 1,
-      "rank": 0,
-      "tags": [
-        "财报",
-        "航空",
-        "美股"
-      ],
-      "locale": "overseas",
-      "market": "us"
-    },
-    {
       "url": "https://www.cnbc.com/2026/08/25/amazon-service-that-jeff-bezos-called-artificial-ai-is-shutting-down.html",
       "title_cn": "Amazon service Bezos once called 'artificial artificial intelligence' is shutting down",
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/26",
-      "summary": "亚马逊宣布关闭贝佐斯曾称为\"人工的人工智能\"的服务。",
+      "summary": "亚马逊宣布关闭一项曾被贝佐斯称为\"人工的人工智能\"的服务。",
       "importance": 1,
       "rank": 0,
       "tags": [
+        "美股",
         "科技",
-        "AI",
-        "亚马逊"
+        "AI"
       ],
       "locale": "overseas",
       "market": "us"
     },
     {
-      "url": "https://www.cnbc.com/2026/08/26/bill-gates-ai-jobs-economic-upheaval.html",
-      "title_cn": "Bill Gates warns ‘there is no plan’ for the ‘upheaval’ AI will cause",
-      "source": "CNBC Top Stories",
-      "source_type": "media",
-      "date": "08/26",
-      "summary": "比尔·盖茨警告称，对于AI将带来的\"剧变\"目前没有应对计划。",
-      "importance": 1,
-      "rank": 0,
-      "tags": [
-        "AI",
-        "科技"
-      ],
-      "locale": "overseas",
-      "market": "us"
-    },
-    {
-      "url": "https://www.investing.com/news/stock-market-news/why-is-verve-stock-plunging-today-93CH-4878482",
-      "title_cn": "Why is Verve stock plunging today?",
+      "url": "https://www.investing.com/news/economy-news/investors-expectations-for-next-bank-of-england-rate-hike-drift-into-2027-4878543",
+      "title_cn": "Investors’ expectations for next Bank of England rate hike drift into 2027",
       "source": "Investing.com News",
       "source_type": "media",
       "date": "08/27",
-      "summary": "基因编辑公司Verve Therapeutics股价当日大幅下跌，文章探讨下跌原因。",
-      "importance": 1,
+      "summary": "市场对英国央行下次加息的预期时间后移至2027年。",
+      "importance": 2,
       "rank": 0,
       "tags": [
-        "医药",
+        "央行",
+        "英国",
+        "利率"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.investing.com/news/stock-market-news/nvidia-rises-after-signaling-longer-ai-spending-runway-4878530",
+      "title_cn": "Nvidia rises after signaling longer AI spending runway",
+      "source": "Investing.com News",
+      "source_type": "media",
+      "date": "08/27",
+      "summary": "英伟达释放AI支出周期将更长的信号，股价走高。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "AI",
+        "半导体",
         "美股"
-      ],
-      "locale": "overseas",
-      "market": "us"
-    },
-    {
-      "url": "https://www.investing.com/news/forex-news/euro-yields-bounce-off-2week-lows-as-schnabel-warnings-dampen-rally-4878481",
-      "title_cn": "Euro yields bounce off 2-week lows as Schnabel warnings dampen rally",
-      "source": "Investing.com News",
-      "source_type": "media",
-      "date": "08/27",
-      "summary": "欧债收益率自两周低点反弹，因欧央行官员Schnabel的鹰派言论抑制了市场涨势。",
-      "importance": 1,
-      "rank": 0,
-      "tags": [
-        "债券",
-        "欧洲",
-        "央行"
       ],
       "locale": "overseas",
       "market": "us"
