@@ -15,8 +15,9 @@ import { BaseCrawler, type CrawlerResult } from "../base-crawler";
  * 三个源合用提供"昨日港股复盘"完整素材：收评（本文）+ 公告（hkex）+ 解读（sina-hk））。
  */
 const HK_LIST_URLS = [
-  "https://hk.eastmoney.com/",                              // 港股首页
-  "https://hk.eastmoney.com/news/yaowen.html",              // 港股要闻
+  "https://hk.eastmoney.com/",                              // 港股首页（含港股要闻/滚动）
+  "https://hk.eastmoney.com/news/cggdd.html",               // 港股大典（滚动，含收评/复盘）
+  "https://hk.eastmoney.com/news/cgyw.html",                // 港股要闻
 ];
 
 /** 匹配港股 收评 / 复盘 / 收盘 类文章链接 */

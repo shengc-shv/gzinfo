@@ -78,8 +78,10 @@ export async function buildStockRecap(
 
   const persistedRecap = loadStockRecap(date);
   // 行情指数（新浪行情 API）：取「上一交易日」收盘精确点位 + 涨跌幅；
-  // 失败优雅降级（quotes=null → 三卡缺指数块，不阻断整页）。SKIP_AI 复用 store 时已由预写带入。
-  const quotes = skipAi ? null : await fetchMarketQuotes(prevTradingDay(date));
+  // 失败优雅降级（quotes=null → 三卡缺指数块，不阻断整页）。
+  // 2026-08-27 修：SKIP_AI 也拉指数（fetchMarketQuotes 不调 LLM，仅 HTTP），
+  // 让 synthesizeFallbackCard 在 SKIP_AI 也能用指数合成空卡 → 港股/A股永不空。
+  const quotes = await fetchMarketQuotes(prevTradingDay(date));
 
   try {
     const recap = await selectStockRecap({
