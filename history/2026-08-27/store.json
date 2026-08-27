@@ -1,100 +1,21 @@
 {
   "date": "2026-08-27",
-  "updatedAt": "2026-08-27T01:54:55.860Z",
+  "updatedAt": "2026-08-27T02:42:10.634Z",
   "executive": {
-    "hero_line": "中收下滑54.8%催生中小行理财子扩围，财富条线对标压力升级，分行宜提前对位补位。",
-    "spoken_hero": "温州银行中收同比腰斩，理财子申请落地。中小行借理财子补资管短板成新趋势，财富条线竞争压力再加码，分行宜提前检视代销能力与产品布局。",
-    "must_read": [
-      {
-        "title": "中小行借理财子补位资管",
-        "why": "区域行扎堆申设理财子，财富赛道竞争维度从渠道向产品端上移，分行代销体系须重估对标节奏。",
-        "url": "https://finance.sina.com.cn/money/bank/gsdt/2026-08-26/doc-iniprytn5630909.shtml"
-      },
-      {
-        "title": "投资收益首降警示自营策略",
-        "why": "自营端五年首现负增，提示自营与代客联动模型需重检，财富端稳健资产话术价值上升。",
-        "url": "https://finance.sina.com.cn/jjxw/2026-08-26/doc-iniprums2372999.shtml"
-      },
-      {
-        "title": "员工行为罚单回溯十余年",
-        "why": "长年限及终身禁业罚单回溯至十年前旧账，警示员工行为管理边界后移，分行内控合规须做加法。",
-        "url": "https://finance.sina.com.cn/roll/2026-08-26/doc-inipsmie0703486.shtml"
-      }
-    ],
-    "spoken_must_read": "理财子扩围，区域行用资管牌照补中收短板，分行代销体系需重新对标。自营投资收益五年来首跌，自营与代客联动策略要重检，稳健资产话术价值上升。监管罚单回溯到十年前旧账，员工行为问责边界后移，分行内控合规要提前加码。",
-    "insights": [
-      {
-        "topic": "理财子赛道对标补位",
-        "impact": "温州银行拟设理财子，区域行资管能力快速补齐，分行财富条线产品端议价空间与代销议价能力面临进一步挤压。",
-        "action": "本周由财富部牵头梳理代销产品矩阵缺口，重点对标头部城商行理财子收益档，纳入下季度产品引入清单。",
-        "tag": [
-          "财富",
-          "竞对动态"
-        ],
-        "sources": [
-          {
-            "title": "中收下滑54.8%，5200亿温州银行拟申请设立理财子",
-            "url": "https://finance.sina.com.cn/money/bank/gsdt/2026-08-26/doc-iniprytn5630909.shtml"
-          }
-        ]
-      },
-      {
-        "topic": "自营联动话术重塑",
-        "impact": "苏农银行投资收益近五年首次同比下滑，反映自营端高波动资产承压，分行对客沟通需弱化收益承诺、强化稳健配置。",
-        "action": "由财富部、零售部联合更新一线客户经理话术包，本周内导入偏债与固收+类资产作为主推话术。",
-        "tag": [
-          "财富",
-          "客群"
-        ],
-        "sources": [
-          {
-            "title": "投资收益近5年首次下跌，苏农银行业绩分化",
-            "url": "https://finance.sina.com.cn/jjxw/2026-08-26/doc-iniprums2372999.shtml"
-          }
-        ]
-      },
-      {
-        "topic": "一线柜面行为再排查",
-        "impact": "监管罚单回溯至十年前旧账并下沉至柜员岗，分行一线操作风险与历史遗留问题被同步放大，声誉与合规成本上升。",
-        "action": "分行运营与合规部可考虑借势启动一线柜员行为再排查，重点覆盖历史业务、代理业务与销售录音回溯。",
-        "tag": [
-          "监管",
-          "客群"
-        ],
-        "sources": [
-          {
-            "title": "15年禁业沉到柜员岗、终身禁业追至14年前旧账",
-            "url": "https://finance.sina.com.cn/roll/2026-08-26/doc-inipsmie0703486.shtml"
-          }
-        ]
-      }
-    ],
-    "spoken_insights": "温州银行拟设理财子，区域行补资管短板，分行财富部本周梳理代销产品矩阵，纳入下季度引入清单。自营投资收益五年首跌，财富部可考虑主推偏债与固收+话术包。监管罚单下沉到柜员岗，运营合规部借势启动一线行为再排查，覆盖历史业务回溯。",
-    "risk": {
-      "topic": "员工行为监管罚单回溯加严",
-      "evidence": "监管近期对柜员岗开出15年禁业、终身禁业罚单，并追溯至10至14年前历史问题。",
-      "impact": "个贷端历史违规房贷、消费贷将面临再追责；财富端私行代销与理财销售可被旧案触发；公司端历史投行项目牵连员工亦在范围；风控条线历史案件问询将上升。",
-      "action": "合规部牵头归集近十年员工处罚台账；个贷部、财富部、运营部配合对历史在岗人员做合规再核查；风控部提前准备监管问询应答口径。",
-      "source": "T1.5",
-      "sources": [
-        {
-          "title": "15年禁业沉到柜员岗、终身禁业追至14年前旧账",
-          "url": "https://finance.sina.com.cn/roll/2026-08-26/doc-inipsmie0703486.shtml"
-        }
-      ]
-    },
-    "spoken_risk": "今天有一个需要警惕：员工行为罚单回溯到十年前旧账。个贷、财富、私行历史业务可能再被追责，合规部牵头归集十年处罚台账，提前备好监管问询口径。",
+    "hero_line": "",
+    "must_read": [],
+    "insights": [],
     "guangdong_ipo": null
   },
   "stock_recap": {
     "us": {
-      "overview": "科技与AI安全股全线大涨，Salesforce升12%领涨大盘。",
+      "overview": "科技股财报集中放量大涨，Salesforce、Okta、CrowdStrike齐创新高提振市场。",
       "sectors": [
-        "AI与软件：Salesforce因AI增长及Anthropic投资跳涨12%，Okta业绩超预期飙升20%。",
-        "网络安全：CrowdStrike营收创新高，AI驱动需求激推动股价升11%。",
-        "金融：盘中受美就业数据及美联储独立性质疑扰动，走势偏弱。"
+        "AI与软件：Salesforce因AI增长及Anthropic投资大涨12%，与Anthropic扩大合作提振情绪",
+        "网络安全：Okta业绩超预期大涨20%，CrowdStrike季度创新高涨11%，AI驱动安全需求升温",
+        "宏观与利率：韩国央行连续加息，鲍威尔前理事遭罢免威胁，美联储独立性引关注"
       ],
-      "spoken": "美股科技与AI安全板块全线走强，Salesforce跳涨百分之十二领涨，Okta业绩超预期飙升两成，CrowdStrike亦升百分之十一。网络安全与软件板块在AI需求驱动下成为盘面焦点，金融股则受美联储独立性争议影响走势偏弱。",
+      "spoken": "美股科技板块在财报季集中爆发，Salesforce、Okta、CrowdStrike均大幅领涨，AI与网络安全成最强主线。美联储独立性争议和韩国加息构成外围扰动，整体盘面科技引领、情绪偏多。",
       "meta": {
         "source": "CNBC Top Stories",
         "crossCheck": "新浪行情",
@@ -119,14 +40,14 @@
       ]
     },
     "aShare": {
-      "overview": "A股三大指数集体收涨，证券与工业金属板块联袂领涨。",
+      "overview": "A股三大指数集体收涨，证券与有色金属板块联袂领涨。",
       "sectors": [
-        "工业金属：千亿巨头封板涨停，有色板块强势爆发。",
-        "证券：业绩高增叠加重组浪潮共振，板块爆发彰显配置价值。",
-        "算力：英伟达财报大超预期，国内算力金属与国产算力链获资金关注。",
-        "资源股：顶级牛散章建平清退资源仓位，加仓算力与芯片方向。"
+        "证券：业绩高增与重组预期共振，板块爆发，配置价值受关注",
+        "有色金属：千亿巨头封涨停，板块强势爆发，机构看好涨价主线",
+        "算力产业链：英伟达财报大超预期叠加国产算力利好，玻璃基板等细分受捧",
+        "工业金属：与券商共振，板块涨幅居前"
       ],
-      "spoken": "A股三大指数集体收涨，证券与工业金属板块联袂领涨，千亿有色巨头封死涨停。算力与国产芯片链条受英伟达财报超预期及牛散调仓共振，资金关注度提升。盘面量价配合良好，结构性机会集中于AI算力上游。",
+      "spoken": "A股三大指数集体收涨，证券板块在业绩与重组共振下率先爆发，有色金属紧随其后多股涨停。英伟达财报超预期提振国产算力产业链情绪，玻璃基板等细分方向获机构关注，市场情绪明显回暖。",
       "meta": {
         "source": "东方财富",
         "crossCheck": "新浪行情",
@@ -151,13 +72,14 @@
       ]
     },
     "hk": {
-      "overview": "港股当日无重大宏观或行业新闻，盘面缺乏明确方向指引。",
+      "overview": "港股盘面整体偏弱，板块涨跌互现，缺乏明确方向性催化。",
       "sectors": [
-        "企业管治：多家公司密集披露提名、薪酬及审核委员会职权范围等公司治理文件。",
-        "业绩披露：港交所进入中期业绩密集公告期，半年度财务报告陆续发布。",
-        "市场情绪：缺乏催化剂，港股整体观望氛围较浓，板块涨跌互现。"
+        "科技与AI概念：受英伟达财报提振，算力及AI相关标的有资金关注",
+        "金融与券商：A股证券板块强势映射，港股券商股跟随情绪修复",
+        "地产与公用：政策预期落空叠加业绩平淡，板块走弱",
+        "高息防御：受外围利率走高影响，公用事业及REITs承压"
       ],
-      "spoken": "港股当日无重大宏观或行业新闻，企业管治公告与中期业绩披露成为主要信息来源。多家公司集中发布委员会职权范围及董事名单变更等公司治理文件，市场缺乏明显催化剂，整体观望情绪较浓，板块涨跌互现。",
+      "spoken": "港股今日板块涨跌互现，科技AI方向在英伟达财报利好下有资金关注，券商股跟随A股情绪修复。地产及高息防御板块走弱，市场整体缺乏明确主线，观望情绪较浓。",
       "meta": {
         "source": "新浪财经·港股",
         "crossCheck": "新浪行情",
@@ -166,13 +88,13 @@
       "indices": [
         {
           "name": "恒生指数",
-          "value": "25645.76",
-          "changePct": "-0.03%"
+          "value": "25587.65",
+          "changePct": "-0.25%"
         },
         {
           "name": "恒生科技",
-          "value": "4639.86",
-          "changePct": "+0.30%"
+          "value": "4633.81",
+          "changePct": "+0.17%"
         }
       ]
     },
@@ -181,35 +103,18 @@
   },
   "stock_news": [
     {
-      "url": "https://finance.eastmoney.com/a/202608263854198288.html",
-      "title_cn": "顶级牛散大调仓！章建平又入1只股重仓算力清退资源！葛卫东加仓芯片",
-      "source": "东方财富",
-      "source_type": "media",
-      "date": "08/26",
-      "summary": "报道称国内顶级个人投资者章建平调仓，加仓一只算力概念股并清仓资源股；葛卫东则加仓芯片股。",
-      "importance": 1,
-      "rank": 0,
-      "tags": [
-        "算力",
-        "芯片",
-        "个人投资者"
-      ],
-      "locale": "national",
-      "market": "a-share"
-    },
-    {
       "url": "https://finance.eastmoney.com/a/202608273855299898.html",
       "title_cn": "英伟达业绩大超预期！Q2营收利润双双翻倍下一财年预计营收再涨70%！",
       "source": "东方财富",
       "source_type": "media",
       "date": "08/27",
-      "summary": "英伟达发布业绩，第二财季营收与利润同比均翻倍，并预计下一财季营收同比增长约70%。",
+      "summary": "英伟达Q2营收利润同比翻倍，下一财年营收指引增长70%，大幅超出市场预期。",
       "importance": 3,
       "rank": 0,
       "tags": [
         "财报",
-        "AI",
-        "半导体"
+        "半导体",
+        "AI"
       ],
       "locale": "national",
       "market": "a-share"
@@ -220,12 +125,11 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/26",
-      "summary": "伊朗股市当日约九成个股上涨，指数出现大幅上涨行情，具体驱动因素标题未给出。",
+      "summary": "伊朗股市约90%个股上涨，出现普涨行情。",
       "importance": 1,
       "rank": 0,
       "tags": [
-        "新兴市场",
-        "中东"
+        "新兴市场"
       ],
       "locale": "national",
       "market": "a-share"
@@ -236,7 +140,7 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/26",
-      "summary": "一只市值千亿级的有色金属巨头封涨停板，带动有色金属板块整体走强。",
+      "summary": "A股市值千亿级有色金属龙头封涨停板，有色金属板块整体强势爆发。",
       "importance": 2,
       "rank": 0,
       "tags": [
@@ -252,12 +156,12 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/26",
-      "summary": "8月26日晚间沪深两市上市公司集中披露重大事项公告，涵盖重组、增减持、业绩等动态（具体内容标题未列）。",
+      "summary": "沪深上市公司8月26日晚间集中披露重大事项公告，内容涵盖业绩、重组、增减持等。",
       "importance": 1,
       "rank": 0,
       "tags": [
-        "公告",
-        "A股"
+        "A股",
+        "公告"
       ],
       "locale": "national",
       "market": "a-share"
@@ -268,13 +172,13 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/26",
-      "summary": "市场就宇树科技与牧原股份在研发费用投入方面的对比展开讨论。",
+      "summary": "市场关注宇树科技与牧原股份在研发费用投入上的对比与争议。",
       "importance": 1,
       "rank": 0,
       "tags": [
         "机器人",
-        "农牧",
-        "公司治理"
+        "农林牧渔",
+        "A股"
       ],
       "locale": "national",
       "market": "a-share"
@@ -290,7 +194,7 @@
       "rank": 0,
       "tags": [
         "A股",
-        "证券",
+        "券商",
         "有色金属"
       ],
       "locale": "national",
@@ -302,13 +206,13 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/26",
-      "summary": "证券板块在业绩高增长与行业并购重组预期共振下大幅上涨，被市场称为\"牛市旗手\"爆发。",
+      "summary": "券商板块受业绩高增与行业重组浪潮共振刺激爆发，券商股被部分资金视为\"牛市旗手\"。",
       "importance": 2,
       "rank": 0,
       "tags": [
-        "证券",
-        "重组",
-        "A股"
+        "券商",
+        "A股",
+        "重组"
       ],
       "locale": "national",
       "market": "a-share"
@@ -319,13 +223,13 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/26",
-      "summary": "英伟达发布财报前夕，市场预期其季度营收将逼近1000亿美元，订单结构\"含金量\"成为关注焦点。",
+      "summary": "市场聚焦英伟达即将发布的财报，预期季度营收逼近千亿美元，订单质量成为关注焦点。",
       "importance": 2,
       "rank": 0,
       "tags": [
         "财报",
-        "AI",
-        "半导体"
+        "半导体",
+        "AI"
       ],
       "locale": "national",
       "market": "a-share"
@@ -336,13 +240,29 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/26",
-      "summary": "机构梳理与AI算力相关的金属品种涨价机会，覆盖铜、铝、稀土等方向并附相关个股名单。",
+      "summary": "机构梳理算力相关金属涨价品种，覆盖铜、铝、稀土等算力产业链上游资源。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "有色金属",
+        "AI",
+        "算力"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202608263855222885.html",
+      "title_cn": "“牛散”扎堆买入券商股！业绩高增有望支撑估值修复",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "08/26",
+      "summary": "知名个人投资者集中买入券商股，业绩高增被市场视为支撑估值修复的逻辑。",
       "importance": 1,
       "rank": 0,
       "tags": [
-        "算力",
-        "有色金属",
-        "涨价"
+        "券商",
+        "A股"
       ],
       "locale": "national",
       "market": "a-share"
@@ -353,13 +273,12 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/27",
-      "summary": "中金公司研报指出，玻璃基板有望成为下一代先进封装的关键材料平台，核心设备放量值得关注。",
-      "importance": 2,
+      "summary": "中金公司研报指出，玻璃基板有望成为下一代先进封装的重要材料平台，建议关注核心设备放量机会。",
+      "importance": 1,
       "rank": 0,
       "tags": [
         "半导体",
-        "封装",
-        "研报"
+        "封装"
       ],
       "locale": "national",
       "market": "a-share"
@@ -370,13 +289,13 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/27",
-      "summary": "中信证券研报称，多个千亿级算力项目全链条落地，国产算力产业链迎来明确增长机遇。",
+      "summary": "中信证券研报认为，国产算力产业链千亿级项目全链条落地，相关公司迎来明确增长机遇。",
       "importance": 2,
       "rank": 0,
       "tags": [
         "算力",
         "国产替代",
-        "研报"
+        "AI"
       ],
       "locale": "national",
       "market": "a-share"
@@ -387,12 +306,12 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/27",
-      "summary": "港交所披露易刊登一份\"提名委员会职权范围\"相关公告及通知（具体公司未在标题中显示）。",
+      "summary": "港交所披露某上市公司提名委员会职权范围。",
       "importance": 1,
       "rank": 0,
       "tags": [
-        "公司治理",
-        "港股"
+        "港股",
+        "公司治理"
       ],
       "locale": "national",
       "market": "hk"
@@ -403,12 +322,12 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/27",
-      "summary": "港交所披露易刊登一份\"薪酬委员会职权范围\"相关公告及通知（具体公司未在标题中显示）。",
+      "summary": "港交所披露某上市公司薪酬委员会职权范围。",
       "importance": 1,
       "rank": 0,
       "tags": [
-        "公司治理",
-        "港股"
+        "港股",
+        "公司治理"
       ],
       "locale": "national",
       "market": "hk"
@@ -419,12 +338,12 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/27",
-      "summary": "港交所披露易刊登一份\"审核委员会职权范围\"相关公告及通知（具体公司未在标题中显示）。",
+      "summary": "港交所披露某上市公司审核委员会职权范围。",
       "importance": 1,
       "rank": 0,
       "tags": [
-        "公司治理",
-        "港股"
+        "港股",
+        "公司治理"
       ],
       "locale": "national",
       "market": "hk"
@@ -435,12 +354,12 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/27",
-      "summary": "港交所披露易刊登一份\"董事名单与其角色和职能\"相关公告及通知（具体公司未在标题中显示）。",
+      "summary": "港交所披露某上市公司董事名单及角色与职能。",
       "importance": 1,
       "rank": 0,
       "tags": [
-        "公司治理",
-        "港股"
+        "港股",
+        "公司治理"
       ],
       "locale": "national",
       "market": "hk"
@@ -451,12 +370,12 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/27",
-      "summary": "港交所披露易列示一份\"宪章文件\"类目条目（具体公司与内容未在标题中显示）。",
+      "summary": "港交所披露某上市公司章程文件。",
       "importance": 1,
       "rank": 0,
       "tags": [
-        "公司治理",
-        "港股"
+        "港股",
+        "公司治理"
       ],
       "locale": "national",
       "market": "hk"
@@ -467,12 +386,12 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/27",
-      "summary": "港交所披露易列示一份\"公司资料表\"（具体公司未在标题中显示）。",
+      "summary": "港交所披露某上市公司信息表（Company Information Sheet）。",
       "importance": 1,
       "rank": 0,
       "tags": [
-        "公司治理",
-        "港股"
+        "港股",
+        "公司治理"
       ],
       "locale": "national",
       "market": "hk"
@@ -483,12 +402,12 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/27",
-      "summary": "港交所披露易列示一份类别为\"其他\"的通函（具体公司与内容未在标题中显示）。",
+      "summary": "港交所披露某上市公司其他类别通函。",
       "importance": 1,
       "rank": 0,
       "tags": [
-        "公告",
-        "港股"
+        "港股",
+        "公告"
       ],
       "locale": "national",
       "market": "hk"
@@ -499,12 +418,12 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/27",
-      "summary": "港交所披露易列示另一份类别为\"其他\"的通函（具体公司与内容未在标题中显示）。",
+      "summary": "港交所披露某上市公司其他类别通函。",
       "importance": 1,
       "rank": 0,
       "tags": [
-        "公告",
-        "港股"
+        "港股",
+        "公告"
       ],
       "locale": "national",
       "market": "hk"
@@ -515,13 +434,13 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/27",
-      "summary": "港交所披露易列示一份\"中期/半年度报告\"类目下的财务报告或ESG信息（具体公司未在标题中显示）。",
+      "summary": "港交所披露某上市公司中期/半年度报告及ESG信息。",
       "importance": 1,
       "rank": 0,
       "tags": [
+        "港股",
         "财报",
-        "ESG",
-        "港股"
+        "ESG"
       ],
       "locale": "national",
       "market": "hk"
@@ -532,12 +451,12 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/27",
-      "summary": "港交所披露易列示一份\"公司资料表\"（具体公司未在标题中显示）。",
+      "summary": "港交所披露某上市公司信息表。",
       "importance": 1,
       "rank": 0,
       "tags": [
-        "公司治理",
-        "港股"
+        "港股",
+        "公司治理"
       ],
       "locale": "national",
       "market": "hk"
@@ -548,13 +467,12 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/27",
-      "summary": "港交所披露易刊登一份多事项合并公告/通知，涵盖关连交易豁免、股份计划、业务更新、公司秘书变更、持续关连交易及交易安排等。",
+      "summary": "港交所披露某上市公司多项公告，内容涵盖关联交易豁免、股份计划、公司秘书变更、持续关联交易等。",
       "importance": 1,
       "rank": 0,
       "tags": [
-        "公司治理",
         "港股",
-        "关连交易"
+        "公告"
       ],
       "locale": "national",
       "market": "hk"
@@ -565,12 +483,12 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/27",
-      "summary": "港交所披露易刊登一份\"海外监管公告-其他\"类目公告（具体公司未在标题中显示）。",
+      "summary": "港交所披露某上市公司海外监管公告（其他类）。",
       "importance": 1,
       "rank": 0,
       "tags": [
-        "公告",
-        "港股"
+        "港股",
+        "公告"
       ],
       "locale": "national",
       "market": "hk"
@@ -581,13 +499,14 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/27",
-      "summary": "Salesforce因AI业务增长以及Anthropic投资增值，股价当日上涨约12%。",
+      "summary": "Salesforce因AI业务增长及对Anthropic投资获益，股价单日上涨约12%。",
       "importance": 2,
       "rank": 0,
       "tags": [
-        "AI",
         "美股",
-        "财报"
+        "财报",
+        "AI",
+        "SaaS"
       ],
       "locale": "overseas",
       "market": "us"
@@ -598,12 +517,13 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/27",
-      "summary": "中国7月规模以上工业企业利润同比增长11.2%，为近七个月最低增速。",
+      "summary": "中国7月规模以上工业企业利润同比增长11.2%，增速降至7个月以来最低。",
       "importance": 2,
       "rank": 0,
       "tags": [
         "宏观",
-        "中国"
+        "中国",
+        "工业利润"
       ],
       "locale": "overseas",
       "market": "us"
@@ -614,13 +534,13 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/26",
-      "summary": "Meta与加利福尼亚州及其他州就社交媒体成瘾相关诉讼达成和解，金额达167亿美元。",
+      "summary": "Meta同意以约167亿美元与美国加州等多州就社交媒体成瘾诉讼达成和解。",
       "importance": 2,
       "rank": 0,
       "tags": [
         "美股",
-        "监管",
-        "诉讼"
+        "诉讼",
+        "科技"
       ],
       "locale": "overseas",
       "market": "us"
@@ -631,13 +551,14 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/26",
-      "summary": "Okta因业绩超预期且AI安全威胁推动身份安全需求，股价上涨约20%。",
+      "summary": "Okta财报超预期，受AI驱动的身份安全需求拉动，股价盘后上涨约20%。",
       "importance": 2,
       "rank": 0,
       "tags": [
-        "AI",
+        "美股",
+        "财报",
         "网络安全",
-        "美股"
+        "AI"
       ],
       "locale": "overseas",
       "market": "us"
@@ -648,12 +569,13 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/27",
-      "summary": "美联储理事Lisa Cook的律师就特朗普再次威胁将其解职作出公开回应。",
+      "summary": "美联储理事Lisa Cook的律师就特朗普再次威胁解除其职务作出回应。",
       "importance": 2,
       "rank": 0,
       "tags": [
         "美联储",
-        "美国政治"
+        "美股",
+        "政治"
       ],
       "locale": "overseas",
       "market": "us"
@@ -664,12 +586,12 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/26",
-      "summary": "Salesforce与Anthropic扩大合作，创始人Benioff就\"SaaS末日\"相关市场担忧作出回应。",
+      "summary": "Salesforce与Anthropic扩大AI合作伙伴关系，CEO Benioff回应市场对\"SaaS末日\"的担忧。",
       "importance": 2,
       "rank": 0,
       "tags": [
-        "AI",
         "美股",
+        "AI",
         "SaaS"
       ],
       "locale": "overseas",
@@ -681,12 +603,13 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/27",
-      "summary": "韩国央行连续第二次议息会议加息，原因是核心通胀仍居高不下。",
+      "summary": "韩国央行连续第二次加息，原因是核心通胀仍处高位。",
       "importance": 2,
       "rank": 0,
       "tags": [
-        "货币政策",
-        "韩国"
+        "央行",
+        "韩国",
+        "通胀"
       ],
       "locale": "overseas",
       "market": "us"
@@ -697,11 +620,12 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/26",
-      "summary": "贝索斯曾称之为\"人工的人工智能\"的一项亚马逊服务宣布关停。",
+      "summary": "亚马逊宣布关闭贝佐斯曾形容为\"人工版人工智能\"的服务。",
       "importance": 1,
       "rank": 0,
       "tags": [
         "美股",
+        "科技",
         "AI"
       ],
       "locale": "overseas",
@@ -713,13 +637,14 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/26",
-      "summary": "CrowdStrike第二季度业绩创纪录，被管理层称为AI网络安全领域的\"Mythos时刻\"，股价上涨11%。",
+      "summary": "CrowdStrike第二季度业绩创纪录，被市场称为AI网络安全的\"Mythos时刻\"，股价上涨11%。",
       "importance": 2,
       "rank": 0,
       "tags": [
+        "美股",
+        "财报",
         "网络安全",
-        "AI",
-        "美股"
+        "AI"
       ],
       "locale": "overseas",
       "market": "us"
@@ -730,11 +655,12 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/26",
-      "summary": "共和党方面淡化生活成本议题，这一策略可能在11月选举中成为风险点。",
+      "summary": "共和党方面淡化生活成本议题，可能成为11月中期选举的隐患。",
       "importance": 1,
       "rank": 0,
       "tags": [
-        "美国政治",
+        "美股",
+        "政治",
         "宏观"
       ],
       "locale": "overseas",
@@ -746,13 +672,13 @@
       "source": "Investing.com News",
       "source_type": "media",
       "date": "08/27",
-      "summary": "Waypoint REIT公布2026年上半年业绩，盈利同比上升3.4%，背景是利率构成逆风。",
+      "summary": "Waypoint REIT 2026年上半年业绩：盈利同比增长3.4%，面临利率逆风。",
       "importance": 1,
       "rank": 0,
       "tags": [
-        "REITs",
+        "REIT",
         "财报",
-        "美股"
+        "地产"
       ],
       "locale": "overseas",
       "market": "us"
@@ -763,12 +689,13 @@
       "source": "Investing.com News",
       "source_type": "media",
       "date": "08/27",
-      "summary": "Bapcor公布2026年下半年业绩\"重置\"方案，业绩电话会议内容被披露，股价应声上涨约20%。",
+      "summary": "Bapcor发布2026年下半年业务重置计划，财报电话会议后股价上涨20%。",
       "importance": 1,
       "rank": 0,
       "tags": [
         "财报",
-        "澳股"
+        "零售",
+        "澳洲"
       ],
       "locale": "overseas",
       "market": "us"
