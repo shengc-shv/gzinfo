@@ -97,8 +97,8 @@ export function toMergeArticle(
     url: item.url || "",
     excerpt: item.excerpt || "",
     publishedAt: resolvedPub ? new Date(resolvedPub) : undefined,
-    // 无发布时间（URL 亦无日期）→ 回退采集时间（本次爬取时刻）
-    ...(resolvedPub ? {} : { fetchedAt: new Date() }),
+    // 2026-08-27 核心规则：无发布时间直接 discarded — 上游调用方（fetchCrawledArticles
+    // 入口或 filter 阶段 no-date-fallback）负责丢弃，不再写 fetchedAt 兜底。
     category,
     summary: item.summary || "",
     ...(item.tier ? { tier: item.tier } : {}),

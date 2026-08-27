@@ -21,10 +21,6 @@ import {
   type CrawledArticle,
 } from "../ingest/merge";
 import { SOURCE_ROUTE } from "../sources/constants";
-import {
-  loadLocalAcquired,
-  filterLocalAcquiredRecent,
-} from "../sources/local-acquired";
 import type { ArticleInput } from "../types";
 import type { Category } from "../sources/types";
 import type { DailyContext } from "./context";
@@ -55,13 +51,18 @@ async function fetchAllSources(ctx: DailyContext): Promise<ArticleInput[]> {
       const items = await fetchSource(source);
       console.log(`  ${source.id.padEnd(20)} ${items.length}`);
       // 采集层声明源等级 tier（T6）：源定义 → 文章；
-      // 无发布时间 → 回退采集时间（本次抓取时刻）
+      // 2026-08-27 核心规则：源级拿不到 publishedAt 直接丢弃（不写 fetchedAt 兜底 — 抓取时间≠发文时间）。
+      // 无 publishedAt 的条目不进入 articles 数组；filter 阶段 no-date-fallback 是 defense in depth。
+      const valid = items.filter((it) => it.publishedAt);
+      const dropped = items.length - valid.length;
+      if (dropped > 0) {
+        console.log(`    (无发布时间丢弃 ${dropped} 条 — 2026-08-27 核心规则)`);
+      }
       articles.push(
-        ...items.map((it) => ({
+        ...valid.map((it) => ({
           ...it,
           source: source.name,
           tier: source.tier,
-          ...(it.publishedAt ? {} : { fetchedAt: new Date() }),
         })),
       );
     } catch (e) {
@@ -115,48 +116,6 @@ function mergeCrawledBatch(
 }
 
 /**
- * 本地手动采集合并：data/local-acquired.json 7 天窗口内条目按 region/sourceId 分流。
- * 文案特殊：除 added/skipped 外还打印「共 N 条 7 天内」，与原 main 一致。
- */
-function mergeLocalAcquired(articles: ArticleInput[]): ArticleInput[] {
-  const localAcq = loadLocalAcquired();
-  if (!localAcq || !localAcq.items.length) {
-    console.log(`[daily] ℹ️ 无本地手动采集文件（data/local-acquired.json 缺失或为空）`);
-    return articles;
-  }
-  const recent = filterLocalAcquiredRecent(localAcq.items);
-  const isIpoItem = (it: CrawledArticle) =>
-    it.region === "gd" ||
-    ["sse", "szse", "bse", "hkex", "em-ipo"].includes(it.sourceId ?? "");
-  const localIpo = recent.filter(isIpoItem);
-  const localGz = recent.filter((it) => !isIpoItem(it));
-  const regCat = (id?: string) => (id ? SOURCE_ROUTE[id]?.category : undefined);
-
-  let out = articles;
-  if (localIpo.length) {
-    const { merged, added, skipped } = dedupeByUrl(
-      out,
-      localIpo.map((it) => toMergeArticle(it, "ipo")),
-    );
-    out = merged;
-    console.log(
-      `[daily] ✅ 本地手动采集(IPO) ${added} 条（跳过 ${skipped} 条重复，共 ${recent.length} 条 7 天内）`,
-    );
-  }
-  if (localGz.length) {
-    const { merged, added, skipped } = dedupeByUrl(
-      out,
-      localGz.map((it) => toMergeArticle(it, "gz", { gzCategory: regCat(it.sourceId) })),
-    );
-    out = merged;
-    console.log(
-      `[daily] ✅ 本地手动采集(商机财经) ${added} 条（跳过 ${skipped} 条重复，共 ${recent.length} 条 7 天内）`,
-    );
-  }
-  return out;
-}
-
-/**
  * tier 补齐：爬虫产物未带 tier 的条目按源定义透传（归一化层只透传、不渲染）。
  * PR1 之前在 main 中构建 tierBySource；现在用 ctx.tierBySource。
  */
@@ -170,10 +129,11 @@ function backfillTier(articles: ArticleInput[], ctx: DailyContext): ArticleInput
 }
 
 /**
- * 采集 + 归一化入口（PR2 引入）。
+ * 采集 + 归一化入口（PR2 引入；2026-08-27 移除本地手动采集）。
  *
- * 顺序：fetchAll → 抓爬虫 → 合并三类爬虫 → 合并本地采集 → tier 补齐
- * 与原 main 中 136-228 行顺序一致，确保行为不变。
+ * 顺序：fetchAll → 抓爬虫 → 合并三类爬虫 → tier 补齐
+ * 移除原因：data/local-acquired.json（NFRA/PBC/财联社/同花顺 WAF 4 源本地直连）
+ * 资源质量差、成本高（需本地 runner/WorkBuddy skill），改由远端可达源覆盖。
  */
 export async function ingestAll(ctx: DailyContext): Promise<IngestResult> {
   // ① fetchAll
@@ -199,10 +159,7 @@ export async function ingestAll(ctx: DailyContext): Promise<IngestResult> {
     "昨日股市数据",
   );
 
-  // ④ 本地手动采集
-  articles = mergeLocalAcquired(articles);
-
-  // ⑤ tier 补齐
+  // ④ tier 补齐
   articles = backfillTier(articles, ctx);
 
   if (articles.length === 0) {

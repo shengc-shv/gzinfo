@@ -75,11 +75,16 @@ async function main() {
         const items = await fetchSource(source);
         console.log(`  ${source.id.padEnd(20)} ${items.length}`);
         // 无发布时间 → 回退采集时间（本次抓取时刻）
+        // 2026-08-27 核心规则：源级无 publishedAt 直接丢弃（不写 fetchedAt 兜底）
+        const valid = items.filter((it) => it.publishedAt);
+        const dropped = items.length - valid.length;
+        if (dropped > 0) {
+          console.log(`    (无发布时间丢弃 ${dropped} 条 — 2026-08-27 核心规则)`);
+        }
         articles.push(
-          ...items.map((it) => ({
+          ...valid.map((it) => ({
             ...it,
             source: source.name,
-            ...(it.publishedAt ? {} : { fetchedAt: new Date() }),
           })),
         );
       } catch (e) {

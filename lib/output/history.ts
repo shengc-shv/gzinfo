@@ -113,8 +113,8 @@ function entryToArticle(e: HistoryEntry, fetchedToday: boolean): ArticleInput {
     url: e.url,
     excerpt: e.excerpt,
     publishedAt: e.publishedAt ? new Date(e.publishedAt) : undefined,
-    // 无发布时间 → 回退采集时间（历史条目 = 最近一次被采集/确认的时间）
-    ...(e.publishedAt ? {} : { fetchedAt: new Date(e.lastSeenAt) }),
+    // 2026-08-27 核心规则：无发布时间直接 undefined — history 中无 publishedAt 的
+    // 条目在 buildRolling 时被 no-date-fallback 阶段丢弃，不再写 fetchedAt 兜底。
     category: e.category,
     summary: e.summary,
     source: e.source,

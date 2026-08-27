@@ -11,7 +11,6 @@
     "quota-report": "tsx scripts/quota-report.ts",
     "sources": "tsx scripts/sources.ts",
     "sources:check": "tsx scripts/sources.ts check",
-    "acquire:local": "tsx scripts/acquire-local.mts",
     "deploy": "node scripts/deploy.mjs",
     "build-site": "node scripts/build-site.mjs",
     "test": "node --import tsx --test \"tests/**/*.test.ts\"",

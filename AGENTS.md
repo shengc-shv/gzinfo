@@ -52,6 +52,13 @@ sources.config.json   # SINGLE SOURCE OF TRUTH for the source registry
 
 6. **No agent-specific build steps.** No `next build`, no bundling. `tsx` runs TS directly. The HTML is hand-rendered, CSS is inlined string-templated.
 
+7. **No publishedAt → discard, never fill with fetch time（2026-08-27 用户核心规则）**：
+   - 信息源抓取时若拿不到 `publishedAt`（发布时间），**直接废弃该条**，不入库、不进 AI、不进任何下游。
+   - **严禁**用 `fetchedAt`（抓取时刻）兜底填 `publishedAt` —— 抓取时间 ≠ 发文时间，前者会让"今天抓的"等于"今天发的"，复盘卡和窗口过滤会全错。
+   - 源级丢弃位置：`lib/pipeline/ingest.ts:fetchAllSources`（`publishedAt` 缺失的 article 不加入 articles）+ `lib/ingest/merge.ts:toMergeArticle`（crawler 归一化时缺日期丢）+ `lib/output/history.ts:entryToArticle`（历史库回放时缺日期丢）。
+   - 兜底层：`lib/pipeline/filter/stages.ts` 的 `no-date-fallback` stage 仍然存在，**defense in depth** — 即使源级漏掉，filter 也会再丢一次。
+   - 时间比较口径：所有「今日 / 窗口内」判定都基于 `publishedAt`（绝不基于 `fetchedAt`）。如果未来需要"仅看抓取时间"的视图，另行设计。
+
 ## Commands
 
 | Task | Command | Cost |

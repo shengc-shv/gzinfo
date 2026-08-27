@@ -41,7 +41,7 @@ jobs:
     name: Time & concurrency gate
     runs-on: ubuntu-latest
     outputs:
-      should-run: ${{ steps.check.outputs.should-run }}
+      should-build: ${{ steps.check.outputs.should-build }}
     steps:
       - name: Check schedule
         id: check
@@ -60,7 +60,7 @@ jobs:
           # Manual triggers always run — user clicked Run workflow.
           if [ "$EVENT_NAME" = "workflow_dispatch" ]; then
             echo "Manual trigger — bypassing gate"
-            echo "should-run=true" >> "$GITHUB_OUTPUT"
+            echo "should-build=true" >> "$GITHUB_OUTPUT"
             exit 0
           fi
 
@@ -73,7 +73,7 @@ jobs:
           echo "Other running runs of daily.yml: $RUNNING"
           if [ "$RUNNING" -gt 0 ]; then
             echo "→ Previous run still in progress — skipping this trigger"
-            echo "should-run=false" >> "$GITHUB_OUTPUT"
+            echo "should-build=false" >> "$GITHUB_OUTPUT"
             exit 0
           fi
 
@@ -134,32 +134,24 @@ jobs:
             done
           fi
 
-          # 每天最多构建一次：当日报告已发布到 gh-pages 则跳过本次触发。
-          # 并发跳过已在前面处理：前一次还在跑（in_progress）时本次直接跳过。
+          # 2026-08-27 改：gate 只看 time+day match，不再检查「当日已发布」——
+          # build 每次时间窗触发都跑（全 AI 标 fresh data）。
+          # 「一天最多发布一次」挪到 publish 步骤（不影响 build）：
+          #   9:10 触发：build（AI）+ publish（如未发）
+          #   9:40 触发：build（AI，标新抓数据）+ publish 跳过（如 9:10 已发）
+          # 这保证：无论 SKIP_AI 何时发布，新抓数据都保证被全 AI 标过。
           if [ "$time_match" = "true" ] && [ "$day_match" = "true" ]; then
-            TODAY=$(TZ="$TZ_VAL" date +%Y-%m-%d)
-            CHECK_URL="https://api.github.com/repos/${GITHUB_REPOSITORY}/contents/${TODAY}/${TODAY}.html?ref=gh-pages"
-            HTTP_CODE=$(curl -s -o /dev/null -w "%{http_code}" \
-              -H "Authorization: Bearer ${GH_TOKEN}" \
-              -H "Accept: application/vnd.github+json" \
-              -H "X-GitHub-Api-Version: 2022-11-28" \
-              "$CHECK_URL" || echo "000")
-            if [ "$HTTP_CODE" = "404" ]; then
-              echo "✓ Match & today's report missing — proceeding to build"
-              echo "should-run=true" >> "$GITHUB_OUTPUT"
-            else
-              echo "Today's report already exists (HTTP $HTTP_CODE) — skipping (one build per day)"
-              echo "should-run=false" >> "$GITHUB_OUTPUT"
-            fi
+            echo "✓ Time & day match — proceeding to build (full AI)"
+            echo "should-build=true" >> "$GITHUB_OUTPUT"
           else
             echo "✗ No match — skipping (time=$time_match day=$day_match)"
-            echo "should-run=false" >> "$GITHUB_OUTPUT"
+            echo "should-build=false" >> "$GITHUB_OUTPUT"
           fi
 
   build:
     name: Build & publish
     needs: gate
-    if: needs.gate.outputs.should-run == 'true'
+    if: needs.gate.outputs.should-build == 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
@@ -361,12 +353,35 @@ jobs:
           fi
 
       # 发布步骤：schedule 固定发布；手动触发按 publish input（false = 仅验证不发布）
+      # 2026-08-27：增加「当日已发布则跳过 publish」检查 — build 已全跑过全 AI，publish 一次即可
       - name: Build static site (index + archive)
         if: ${{ github.event_name == 'schedule' || inputs.publish == true }}
         run: npm run build-site
 
-      - name: Publish to gh-pages
+      # 检查 gh-pages 当日报告是否已存在（一天最多发布一次）
+      - name: Check if today's report already published
         if: ${{ github.event_name == 'schedule' || inputs.publish == true }}
+        id: published-check
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          TODAY=$(TZ='${TZ:-Asia/Shanghai}' date +%Y-%m-%d)
+          CHECK_URL="https://api.github.com/repos/${GITHUB_REPOSITORY}/contents/${TODAY}/${TODAY}.html?ref=gh-pages"
+          HTTP_CODE=$(curl -s -o /dev/null -w "%{http_code}" \
+            -H "Authorization: Bearer ${GH_TOKEN}" \
+            -H "Accept: application/vnd.github+json" \
+            -H "X-GitHub-Api-Version: 2022-11-28" \
+            "$CHECK_URL" || echo "000")
+          if [ "$HTTP_CODE" = "404" ]; then
+            echo "✓ Today's report not yet published — will publish"
+            echo "should-publish=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "Today's report already published (HTTP $HTTP_CODE) — skipping publish, build still produced full AI artifacts"
+            echo "should-publish=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Publish to gh-pages
+        if: (github.event_name == 'schedule' || inputs.publish == true) && steps.published-check.outputs.should-publish == 'true'
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
