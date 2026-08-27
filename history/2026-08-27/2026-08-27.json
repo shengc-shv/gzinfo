@@ -1,90 +1,66 @@
 {
   "date": "2026-08-27",
-  "hero_line": "银行业监督管理法修订草案二审增设『四不准』，合规红线再度收紧，零售与财富条线需率先对照排查。",
+  "hero_line": "中收下滑54.8%催生中小行理财子扩围，财富条线对标压力升级，分行宜提前对位补位。",
   "must_read": [
     {
-      "title": "银行监管法二审增设『四不准』",
-      "why": "监管红线进一步明确，分行零售、财富、个贷需率先对照条款排查营销宣传、产品销售流程，避免新规落地后被动整改。",
-      "url": "https://finance.sina.com.cn/roll/2026-08-27/doc-iniptafc5614033.shtml"
+      "title": "中小行借理财子补位资管",
+      "why": "区域行扎堆申设理财子，财富赛道竞争维度从渠道向产品端上移，分行代销体系须重估对标节奏。",
+      "url": "https://finance.sina.com.cn/money/bank/gsdt/2026-08-26/doc-iniprytn5630909.shtml"
     },
     {
-      "title": "六大行迅速响应监管新规",
-      "why": "国有大行已发内部执行口径，分行需对标大行节奏，48小时内完成内部规范与客户沟通同步落地，避免监管套利空间收窄。",
-      "url": "https://finance.sina.com.cn/jjxw/2026-08-27/doc-iniptafc9047622.shtml"
+      "title": "投资收益首降警示自营策略",
+      "why": "自营端五年首现负增，提示自营与代客联动模型需重检，财富端稳健资产话术价值上升。",
+      "url": "https://finance.sina.com.cn/jjxw/2026-08-26/doc-iniprums2372999.shtml"
     },
     {
-      "title": "消费贴息加速兑现红利",
-      "why": "贴息带动消费贷需求回暖，分行可对接贴息落地节奏与额度，把窗口期转化为消费贷集中获客动作。",
-      "url": "https://finance.sina.com.cn/money/bank/bank_hydt/2026-08-26/doc-iniprytr6015676.shtml"
-    },
-    {
-      "title": "中小行自营理财清零潮",
-      "why": "65家中小行一年半内自营清零，代销与托管模式加速形成，财富业务下一步需观察与头部理财子的代销合作及客户迁徙承接。",
-      "url": "https://finance.sina.com.cn/jjxw/2026-08-26/doc-inipsezn2317680.shtml"
+      "title": "员工行为罚单回溯十余年",
+      "why": "长年限及终身禁业罚单回溯至十年前旧账，警示员工行为管理边界后移，分行内控合规须做加法。",
+      "url": "https://finance.sina.com.cn/roll/2026-08-26/doc-inipsmie0703486.shtml"
     }
   ],
   "insights": [
     {
-      "topic": "积存金揽客窗口重启",
+      "topic": "理财子赛道对标补位",
       "tags": [
         "财富",
-        "客群"
-      ],
-      "impact": "金价重返千元关口成为各行揽客抓手，贵金属偏好客户活跃度上升，财富一线可借此激活存量并拓展新客。",
-      "action": "本周内梳理贵金属偏好客群，财富一线主推积存金及配套费率优惠活动，对接高净值客户的黄金配置需求。",
-      "sources": [
-        {
-          "title": "积存金克价重返千元 银行各显神通招揽『金主』",
-          "url": "https://finance.sina.com.cn/jjxw/2026-08-27/doc-inipsrri5784081.shtml"
-        }
-      ]
-    },
-    {
-      "topic": "县域私行客群防截留",
-      "tags": [
-        "私行",
         "竞对动态"
       ],
-      "impact": "农商行系集中发力38万亿私行赛道，主攻县域高净值下沉，与大行私行形成差异化竞争，周边县域高净值客户存在被截留风险。",
-      "action": "本周内由私行部牵头，对接广州周边县域高净值客户名单，差异化配置家族信托与专属权益，防范客户分流。",
+      "impact": "温州银行拟设理财子，区域行资管能力快速补齐，分行财富条线产品端议价空间与代销议价能力面临进一步挤压。",
+      "action": "本周由财富部牵头梳理代销产品矩阵缺口，重点对标头部城商行理财子收益档，纳入下季度产品引入清单。",
       "sources": [
         {
-          "title": "农商行抢滩38万亿元私行赛道，深耕县域高净值群体",
-          "url": "https://www.stcn.com/article/detail/4137917.html"
+          "title": "中收下滑54.8%，5200亿温州银行拟申请设立理财子",
+          "url": "https://finance.sina.com.cn/money/bank/gsdt/2026-08-26/doc-iniprytn5630909.shtml"
         }
       ]
     },
     {
-      "topic": "债市波动拖累投资收益",
+      "topic": "自营联动话术重塑",
       "tags": [
         "财富",
         "客群"
       ],
-      "impact": "8家银行投资收益负增长，FVOCI持仓估值压力可能放大净值表现波动，影响中收节奏与客户持有体验。",
-      "action": "财富一线本周内做好净值波动沟通话术准备，重点客户一对一解读持仓与配置策略，预防赎回压力。",
+      "impact": "苏农银行投资收益近五年首次同比下滑，反映自营端高波动资产承压，分行对客沟通需弱化收益承诺、强化稳健配置。",
+      "action": "由财富部、零售部联合更新一线客户经理话术包，本周内导入偏债与固收+类资产作为主推话术。",
       "sources": [
         {
-          "title": "透视银行中报｜9家银行8家投资收益负增长，为什么？",
-          "url": "https://finance.sina.com.cn/jjxw/2026-08-26/doc-iniprumq5575412.shtml"
-        },
-        {
-          "title": "逆势增长的苏农银行自营理财业务，为何『越卖越亏』",
-          "url": "https://finance.sina.com.cn/roll/2026-08-26/doc-inipsezp9218434.shtml"
+          "title": "投资收益近5年首次下跌，苏农银行业绩分化",
+          "url": "https://finance.sina.com.cn/jjxw/2026-08-26/doc-iniprums2372999.shtml"
         }
       ]
     },
     {
-      "topic": "可转债摘牌加速退出",
+      "topic": "一线柜面行为再排查",
       "tags": [
-        "财富",
+        "监管",
         "客群"
       ],
-      "impact": "青农转债以0.01%转股率摘牌，银行可转债退出节奏密集，可能影响持有转债类理财产品的客户到期安排与转型沟通。",
-      "action": "本周内由财富部牵头，排查存量转债类理财产品持仓客户，提前对接到期安排与替代产品配置建议。",
+      "impact": "监管罚单回溯至十年前旧账并下沉至柜员岗，分行一线操作风险与历史遗留问题被同步放大，声誉与合规成本上升。",
+      "action": "分行运营与合规部可考虑借势启动一线柜员行为再排查，重点覆盖历史业务、代理业务与销售录音回溯。",
       "sources": [
         {
-          "title": "转股率仅0.01%，青农转债黯然摘牌！银行可转债连",
-          "url": "https://finance.sina.com.cn/jjxw/2026-08-26/doc-inipsezp9170012.shtml"
+          "title": "15年禁业沉到柜员岗、终身禁业追至14年前旧账",
+          "url": "https://finance.sina.com.cn/roll/2026-08-26/doc-inipsmie0703486.shtml"
         }
       ]
     }
@@ -93,86 +69,49 @@
     "gz_local": [],
     "biz_insight": [
       {
-        "url": "https://www.stcn.com/article/detail/4137917.html",
-        "title_cn": "农商行抢滩38万亿元私行赛道，深耕县域高净值群体",
-        "title_orig": "农商行抢滩38万亿元私行赛道，深耕县域高净值群体",
-        "source": "证券时报",
+        "url": "https://finance.sina.com.cn/money/bank/gsdt/2026-08-26/doc-iniprytn5630909.shtml",
+        "title_cn": "中收下滑54.8%，5200亿温州银行拟申请设立理财子",
+        "title_orig": "中收下滑54.8%，5200亿温州银行拟申请设立理财子",
+        "source": "新浪财经·银行频道",
         "source_type": "media",
-        "date": "08/27",
-        "summary": "农商行系集中发力38万亿元私人银行赛道，主打县域高净值客群下沉，与大行私行形成差异化竞争。县域高端客群争夺升级，提示分行关注周边县域高净值客户被截留风险，对标产品和服务体验仍有提升空间。",
+        "date": "08/26",
+        "summary": "资产规模约5200亿的温州银行中收同比下滑54.8%，已正式拟申请设立理财子公司。中小行通过理财子补足资管能力成为新路径，财富条线对标竞争压力进一步加大。",
         "importance": 3,
         "rank": 1,
         "tags": [
-          "私行",
-          "客群",
-          "竞对动态"
+          "竞对动态",
+          "财富"
         ],
         "locale": "national"
       },
       {
-        "url": "https://finance.sina.com.cn/jjxw/2026-08-27/doc-inipsrri5784081.shtml",
-        "title_cn": "积存金克价重返千元 银行各显神通招揽\"金主\"",
-        "title_orig": "积存金克价重返千元 银行各显神通招揽\"金主\"",
+        "url": "https://finance.sina.com.cn/jjxw/2026-08-26/doc-iniprums2372999.shtml",
+        "title_cn": "投资收益近5年首次下跌，苏农银行业绩分化",
+        "title_orig": "投资收益近5年首次下跌，苏农银行业绩分化！拟中",
         "source": "新浪财经·银行频道",
         "source_type": "media",
-        "date": "08/27",
-        "summary": "积存金克价回到千元关口，各家银行通过费率优惠、实物兑换、联名活动等争抢黄金配置客户。黄金再次成为揽客抓手，对贵金属偏好客户可加强触达，财富一线可主推积存金及配套服务。",
+        "date": "08/26",
+        "summary": "苏农银行投资收益出现近5年首次同比下滑，业绩结构分化加剧。提示自营与代客联动策略需重新检视，对客沟通过程中可强化稳健类资产配置话术。",
         "importance": 2,
         "rank": 2,
         "tags": [
-          "财富",
           "竞对动态",
-          "市场",
-          "客群"
+          "财富"
         ],
         "locale": "national"
       },
       {
-        "url": "https://finance.sina.com.cn/jjxw/2026-08-26/doc-inipsezn2317680.shtml",
-        "title_cn": "一年半65家自营清零！中小银行理财的进退抉择",
-        "title_orig": "一年半65家自营清零！中小银行理财的进退抉择",
+        "url": "https://finance.sina.com.cn/roll/2026-08-26/doc-inipsmie0703486.shtml",
+        "title_cn": "15年禁业沉到柜员岗、终身禁业追至14年前旧账",
+        "title_orig": "15年禁业沉到柜员岗、终身禁业追至14年前旧账：20",
         "source": "新浪财经·银行频道",
         "source_type": "media",
         "date": "08/26",
-        "summary": "一年半内65家中小银行自营理财业务清零，行业代销与托管模式加速形成。中小行退出自营为代销腾出空间，财富业务下一步观察与头部理财子的代销合作及客户迁徙承接机会。",
+        "summary": "监管近期开出多张长年限及终身禁业罚单，且回溯至10余年前历史问题。反映员工行为管理问责趋严，分行条线可考虑借势启动一线人员行为再排查。",
         "importance": 2,
         "rank": 3,
         "tags": [
-          "财富",
-          "竞对动态"
-        ],
-        "locale": "national"
-      },
-      {
-        "url": "https://finance.sina.com.cn/jjxw/2026-08-26/doc-iniprumq5575412.shtml",
-        "title_cn": "透视银行中报｜9家银行8家投资收益负增长，为什么？",
-        "title_orig": "透视银行中报｜9家银行8家投资收益负增长，为什么？",
-        "source": "新浪财经·银行频道",
-        "source_type": "media",
-        "date": "08/26",
-        "summary": "9家披露中报银行中8家投资收益负增长，主要受债市波动与FVOCI持仓估值压力拖累。其他综合收益波动放大净值表现，可能影响中收节奏与客户持有体验，提示财富前线做好净值沟通。",
-        "importance": 2,
-        "rank": 4,
-        "tags": [
-          "财富",
-          "市场",
-          "客群"
-        ],
-        "locale": "national"
-      },
-      {
-        "url": "https://finance.sina.com.cn/roll/2026-08-26/doc-inipsezp9218434.shtml",
-        "title_cn": "逆势增长的苏农银行自营理财业务，为何\"越卖越亏\"",
-        "title_orig": "逆势增长的苏农银行自营理财业务，为何\"越卖越亏\"",
-        "source": "新浪财经·银行频道",
-        "source_type": "media",
-        "date": "08/26",
-        "summary": "苏农银行自营理财规模逆势增长但出现\"越卖越亏\"，反映中小行自营理财在投研与运营成本上的压力。该案例为财富业务盈利模型提供反面参照，可作为代销产品筛选与自营策略评估的参考。",
-        "importance": 2,
-        "rank": 5,
-        "tags": [
-          "财富",
-          "竞对动态"
+          "监管合规"
         ],
         "locale": "national"
       },
@@ -185,91 +124,37 @@
         "date": "08/25",
         "summary": "Shein’s up to $1.8 billion Hong Kong IPO…；美股市场动态",
         "importance": 2,
-        "rank": 6,
+        "rank": 4,
         "tags": [],
         "locale": "national"
       }
     ],
-    "policy_market": [
-      {
-        "url": "https://finance.sina.com.cn/roll/2026-08-27/doc-iniptafc5614033.shtml",
-        "title_cn": "银行业监督管理法修订草案二审：增设\"四不准\"",
-        "title_orig": "增设\"四不准\"",
-        "source": "新浪财经·银行频道",
-        "source_type": "media",
-        "date": "08/27",
-        "summary": "银行业监督管理法修订草案二审，增设\"四不准\"条款，约束银行经营行为边界。监管红线进一步明确，合规、零售、财富等部门需对照条款排查营销宣传与产品销售流程。",
-        "importance": 3,
-        "rank": 1,
-        "tags": [
-          "监管合规"
-        ],
-        "locale": "national"
-      },
-      {
-        "url": "https://finance.sina.com.cn/jjxw/2026-08-27/doc-iniptafc9047622.shtml",
-        "title_cn": "六大行迅速响应监管新规",
-        "title_orig": "六大行迅速响应",
-        "source": "新浪财经·银行频道",
-        "source_type": "media",
-        "date": "08/27",
-        "summary": "六大行已迅速响应\"四不准\"等监管新规，发布内部执行与对外公告。国有大行动作快，提示分行需对照大行口径尽快完成内部规范和客户沟通的同步落地。",
-        "importance": 2,
-        "rank": 2,
-        "tags": [
-          "监管合规"
-        ],
-        "locale": "national"
-      },
-      {
-        "url": "https://finance.sina.com.cn/money/bank/bank_hydt/2026-08-26/doc-iniprytr6015676.shtml",
-        "title_cn": "消费贴息落地调查：加速兑现红利",
-        "title_orig": "消费贴息落地调查：加速兑现红利",
-        "source": "新浪财经·银行频道",
-        "source_type": "media",
-        "date": "08/26",
-        "summary": "消费贴息政策在多地加速兑现，红利向消费贷客户释放。贴息政策带动消费贷需求回暖，分行消费贷团队可对接落地节奏与额度，捕捉获客窗口。",
-        "importance": 2,
-        "rank": 3,
-        "tags": [
-          "消费贷",
-          "市场",
-          "信贷",
-          "客群"
-        ],
-        "locale": "national"
-      },
-      {
-        "url": "https://finance.sina.com.cn/jjxw/2026-08-26/doc-inipsezp9170012.shtml",
-        "title_cn": "转股率仅0.01%，青农转债黯然摘牌！银行可转债连",
-        "title_orig": "转股率仅0.01%，青农转债摘牌！银行可转债连",
-        "source": "新浪财经·银行频道",
-        "source_type": "media",
-        "date": "08/26",
-        "summary": "青农转债以0.01%转股率摘牌，银行可转债再添一例退出案例。可转债退出节奏密集，可能影响银行资本补充路径与二级市场情绪，对持有转债类产品的客户做好到期与转型沟通。",
-        "importance": 2,
-        "rank": 4,
-        "tags": [
-          "市场",
-          "客群"
-        ],
-        "locale": "national"
-      }
-    ],
+    "policy_market": [],
     "tech": [],
     "ipo": []
   },
+  "risk": {
+    "topic": "员工行为监管罚单回溯加严",
+    "evidence": "监管近期对柜员岗开出15年禁业、终身禁业罚单，并追溯至10至14年前历史问题。",
+    "impact": "个贷端历史违规房贷、消费贷将面临再追责；财富端私行代销与理财销售可被旧案触发；公司端历史投行项目牵连员工亦在范围；风控条线历史案件问询将上升。",
+    "action": "合规部牵头归集近十年员工处罚台账；个贷部、财富部、运营部配合对历史在岗人员做合规再核查；风控部提前准备监管问询应答口径。",
+    "source": "T1.5",
+    "sources": [
+      {
+        "title": "15年禁业沉到柜员岗、终身禁业追至14年前旧账",
+        "url": "https://finance.sina.com.cn/roll/2026-08-26/doc-inipsmie0703486.shtml"
+      }
+    ]
+  },
   "stock_recap": {
     "us": {
-      "overview": "科技股财报集中爆表，AI与网安龙头领涨大盘。",
+      "overview": "科技与AI安全股全线大涨，Salesforce升12%领涨大盘。",
       "sectors": [
-        "SaaS与AI：Salesforce财报超预期+Anthropic投资入账，单日飙涨12%",
-        "网安：CrowdStrike、Okta业绩亮眼带动板块走强",
-        "半导体：英伟达Q2营收利润翻倍，下一财年指引再增70%",
-        "金融：美联储独立性议题持续发酵，板块情绪受扰",
-        "消费：共和党淡化可负担性议题，零售与玩具股承压"
+        "AI与软件：Salesforce因AI增长及Anthropic投资跳涨12%，Okta业绩超预期飙升20%。",
+        "网络安全：CrowdStrike营收创新高，AI驱动需求激推动股价升11%。",
+        "金融：盘中受美就业数据及美联储独立性质疑扰动，走势偏弱。"
       ],
-      "spoken": "美股科技板块强势领涨，AI主线全面爆发。Salesforce财报超预期，单日大涨12%，网安龙头CrowdStrike、Okta业绩亮眼，板块同步走强。英伟达Q2营收利润双双翻倍，对下一财年给出七成增长指引，提振算力链情绪。美联储独立性话题持续扰动金融板块，消费端受可负担性争议压制，整体盘面呈科技强、防御弱格局。",
+      "spoken": "美股科技与AI安全板块全线走强，Salesforce跳涨百分之十二领涨，Okta业绩超预期飙升两成，CrowdStrike亦升百分之十一。网络安全与软件板块在AI需求驱动下成为盘面焦点，金融股则受美联储独立性争议影响走势偏弱。",
       "meta": {
         "source": "CNBC Top Stories",
         "crossCheck": "新浪行情",
@@ -294,30 +179,45 @@
       ]
     },
     "aShare": {
-      "overview": "A股三大指数集体收涨，证券与工业金属板块领涨。",
+      "overview": "A股三大指数集体收涨，证券与工业金属板块联袂领涨。",
       "sectors": [
-        "证券：业绩高增与重组预期共振，板块爆发",
-        "工业金属：千亿龙头封板，有色板块强势上攻",
-        "算力与芯片：牛散加仓叠加国产算力利好共振",
-        "核聚变：九家企业协同攻关，工程化进程加速",
-        "玻璃基板：中金看好先进封装新平台，设备端受关注"
+        "工业金属：千亿巨头封板涨停，有色板块强势爆发。",
+        "证券：业绩高增叠加重组浪潮共振，板块爆发彰显配置价值。",
+        "算力：英伟达财报大超预期，国内算力金属与国产算力链获资金关注。",
+        "资源股：顶级牛散章建平清退资源仓位，加仓算力与芯片方向。"
       ],
-      "spoken": "A股三大指数集体收涨，证券板块在业绩与重组预期共振下集中爆发，有色金属同样强势，千亿龙头封板领涨。算力与芯片方向获顶级牛散加仓，叠加国产算力产业链利好催化，板块情绪升温。可控核聚变进入工程化验证新阶段，相关潜力股获融资客加码。整体盘面呈权重搭台、题材轮动格局。",
+      "spoken": "A股三大指数集体收涨，证券与工业金属板块联袂领涨，千亿有色巨头封死涨停。算力与国产芯片链条受英伟达财报超预期及牛散调仓共振，资金关注度提升。盘面量价配合良好，结构性机会集中于AI算力上游。",
       "meta": {
         "source": "东方财富",
         "crossCheck": "新浪行情",
         "date": "2026-08-27"
       },
-      "indices": []
+      "indices": [
+        {
+          "name": "上证指数",
+          "value": "3912.52",
+          "changePct": "+0.59%"
+        },
+        {
+          "name": "深证成指",
+          "value": "13841.33",
+          "changePct": "+0.69%"
+        },
+        {
+          "name": "创业板指",
+          "value": "3414.88",
+          "changePct": "+0.51%"
+        }
+      ]
     },
     "hk": {
-      "overview": "港股盘面以公司治理类公告为主，缺少明确指数与板块涨跌线索。",
+      "overview": "港股当日无重大宏观或行业新闻，盘面缺乏明确方向指引。",
       "sectors": [
-        "公司治理：多家公司集中披露董事会委员会职权范围与董事名单",
-        "中期业绩：陆续公布半年度财务报告及ESG信息",
-        "关联交易：出现关联交易豁免与业务更新类公告"
+        "企业管治：多家公司密集披露提名、薪酬及审核委员会职权范围等公司治理文件。",
+        "业绩披露：港交所进入中期业绩密集公告期，半年度财务报告陆续发布。",
+        "市场情绪：缺乏催化剂，港股整体观望氛围较浓，板块涨跌互现。"
       ],
-      "spoken": "港股今日盘面以公司治理与定期报告披露为主，多家企业发布董事委员会职权范围及董事名单更新，半年度财务报告与ESG信息陆续披露。另有公司公告关联交易豁免及业务更新事项。整体市场缺少明确方向性催化，盘面以结构性公告为主，方向感不强。",
+      "spoken": "港股当日无重大宏观或行业新闻，企业管治公告与中期业绩披露成为主要信息来源。多家公司集中发布委员会职权范围及董事名单变更等公司治理文件，市场缺乏明显催化剂，整体观望情绪较浓，板块涨跌互现。",
       "meta": {
         "source": "新浪财经·港股",
         "crossCheck": "新浪行情",
@@ -326,13 +226,13 @@
       "indices": [
         {
           "name": "恒生指数",
-          "value": "25652.97",
-          "changePct": "+0.56%"
+          "value": "25645.76",
+          "changePct": "-0.03%"
         },
         {
           "name": "恒生科技",
-          "value": "4626.15",
-          "changePct": "+0.82%"
+          "value": "4639.86",
+          "changePct": "+0.30%"
         }
       ]
     },
@@ -346,13 +246,30 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/26",
-      "summary": "顶级牛散章建平新进1只股票并重仓算力板块，同时清仓资源类个股；葛卫东则加仓芯片股。",
+      "summary": "报道称国内顶级个人投资者章建平调仓，加仓一只算力概念股并清仓资源股；葛卫东则加仓芯片股。",
       "importance": 1,
       "rank": 0,
       "tags": [
         "算力",
         "芯片",
-        "A股"
+        "个人投资者"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202608273855299898.html",
+      "title_cn": "英伟达业绩大超预期！Q2营收利润双双翻倍下一财年预计营收再涨70%！",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "08/27",
+      "summary": "英伟达发布业绩，第二财季营收与利润同比均翻倍，并预计下一财季营收同比增长约70%。",
+      "importance": 3,
+      "rank": 0,
+      "tags": [
+        "财报",
+        "AI",
+        "半导体"
       ],
       "locale": "national",
       "market": "a-share"
@@ -363,12 +280,12 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/26",
-      "summary": "伊朗股市8月26日大涨，约90%的股票上涨，具体原因待披露。",
+      "summary": "伊朗股市当日约九成个股上涨，指数出现大幅上涨行情，具体驱动因素标题未给出。",
       "importance": 1,
       "rank": 0,
       "tags": [
         "新兴市场",
-        "地缘政治"
+        "中东"
       ],
       "locale": "national",
       "market": "a-share"
@@ -379,27 +296,11 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/26",
-      "summary": "有色金属板块强势爆发，千亿市值巨头封涨停板，板块多股大涨。",
+      "summary": "一只市值千亿级的有色金属巨头封涨停板，带动有色金属板块整体走强。",
       "importance": 2,
       "rank": 0,
       "tags": [
         "有色金属",
-        "A股"
-      ],
-      "locale": "national",
-      "market": "a-share"
-    },
-    {
-      "url": "https://finance.eastmoney.com/a/202608263854457052.html",
-      "title_cn": "如何看待宇树与牧原的研发费用之争？",
-      "source": "东方财富",
-      "source_type": "media",
-      "date": "08/26",
-      "summary": "市场关注宇树与牧原的研发费用对比争议，话题涉及两家公司的研发投入。",
-      "importance": 1,
-      "rank": 0,
-      "tags": [
-        "机器人",
         "A股"
       ],
       "locale": "national",
@@ -411,7 +312,7 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/26",
-      "summary": "8月26日晚间沪深上市公司发布重大事项公告，内容涵盖业绩、重组、增减持等动态汇总。",
+      "summary": "8月26日晚间沪深两市上市公司集中披露重大事项公告，涵盖重组、增减持、业绩等动态（具体内容标题未列）。",
       "importance": 1,
       "rank": 0,
       "tags": [
@@ -427,7 +328,7 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/27",
-      "summary": "港交所披露某上市公司提名委员会职权范围相关公告。",
+      "summary": "港交所披露易刊登一份\"提名委员会职权范围\"相关公告及通知（具体公司未在标题中显示）。",
       "importance": 1,
       "rank": 0,
       "tags": [
@@ -443,7 +344,7 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/27",
-      "summary": "港交所披露某上市公司薪酬委员会职权范围相关公告。",
+      "summary": "港交所披露易刊登一份\"薪酬委员会职权范围\"相关公告及通知（具体公司未在标题中显示）。",
       "importance": 1,
       "rank": 0,
       "tags": [
@@ -459,7 +360,7 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/27",
-      "summary": "港交所披露某上市公司审计委员会职权范围相关公告。",
+      "summary": "港交所披露易刊登一份\"审核委员会职权范围\"相关公告及通知（具体公司未在标题中显示）。",
       "importance": 1,
       "rank": 0,
       "tags": [
@@ -475,7 +376,7 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/27",
-      "summary": "港交所披露某上市公司董事名单及其角色与职能公告。",
+      "summary": "港交所披露易刊登一份\"董事名单与其角色和职能\"相关公告及通知（具体公司未在标题中显示）。",
       "importance": 1,
       "rank": 0,
       "tags": [
@@ -491,7 +392,7 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/27",
-      "summary": "港交所披露某上市公司章程文件。",
+      "summary": "港交所披露易列示一份\"宪章文件\"类目条目（具体公司与内容未在标题中显示）。",
       "importance": 1,
       "rank": 0,
       "tags": [
@@ -507,13 +408,29 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/27",
-      "summary": "Salesforce因AI业务增长及对Anthropic投资获得收益，股价大涨12%。",
+      "summary": "Salesforce因AI业务增长以及Anthropic投资增值，股价当日上涨约12%。",
       "importance": 2,
       "rank": 0,
       "tags": [
-        "Salesforce",
         "AI",
-        "美股"
+        "美股",
+        "财报"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/08/27/china-industrial-profits-july-factory-production-.html",
+      "title_cn": "China industrial profit growth in July slumps to 7-month low of 11.2%",
+      "source": "CNBC Top Stories",
+      "source_type": "media",
+      "date": "08/27",
+      "summary": "中国7月规模以上工业企业利润同比增长11.2%，为近七个月最低增速。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "宏观",
+        "中国"
       ],
       "locale": "overseas",
       "market": "us"
@@ -524,13 +441,13 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/26",
-      "summary": "Meta与加州及其他州就社交媒体成瘾诉讼达成和解，赔偿金额达167亿美元。",
+      "summary": "Meta与加利福尼亚州及其他州就社交媒体成瘾相关诉讼达成和解，金额达167亿美元。",
       "importance": 2,
       "rank": 0,
       "tags": [
-        "Meta",
-        "诉讼",
-        "美股"
+        "美股",
+        "监管",
+        "诉讼"
       ],
       "locale": "overseas",
       "market": "us"
@@ -541,13 +458,12 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/26",
-      "summary": "Okta因AI安全威胁推动身份认证需求，业绩超预期，股价大涨20%。",
+      "summary": "Okta因业绩超预期且AI安全威胁推动身份安全需求，股价上涨约20%。",
       "importance": 2,
       "rank": 0,
       "tags": [
-        "Okta",
-        "财报",
         "AI",
+        "网络安全",
         "美股"
       ],
       "locale": "overseas",
@@ -559,29 +475,12 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/27",
-      "summary": "美联储理事Lisa Cook的律师就特朗普再次威胁将其解职作出回应，否认相关指控。",
+      "summary": "美联储理事Lisa Cook的律师就特朗普再次威胁将其解职作出公开回应。",
       "importance": 2,
       "rank": 0,
       "tags": [
         "美联储",
         "美国政治"
-      ],
-      "locale": "overseas",
-      "market": "us"
-    },
-    {
-      "url": "https://www.cnbc.com/2026/08/26/salesforce-anthropic-partnership-claudeforce.html",
-      "title_cn": "Salesforce, Anthropic expand partnership as Benioff responds to ‘SaaSpocalypse’ concerns",
-      "source": "CNBC Top Stories",
-      "source_type": "media",
-      "date": "08/26",
-      "summary": "Salesforce与Anthropic扩大合作，CEO Benioff回应市场对所谓\"SaaS末日\"的担忧。",
-      "importance": 2,
-      "rank": 0,
-      "tags": [
-        "Salesforce",
-        "AI",
-        "美股"
       ],
       "locale": "overseas",
       "market": "us"
