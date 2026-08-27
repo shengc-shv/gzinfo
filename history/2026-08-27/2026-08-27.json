@@ -1,38 +1,204 @@
 {
   "date": "2026-08-27",
-  "hero_line": "今日暂无可推送重点，详见各板块资讯。",
-  "must_read": [],
-  "insights": [],
+  "hero_line": "六大行贴息集中扩围，股份行个贷定价与获客双向承压，建议分行本周内完成自营产品适配度盘点。",
+  "must_read": [
+    {
+      "title": "六大行贴息集中升级",
+      "why": "国有大行以贴息工具抢消费贷与经营贷客群，股份行定价与获客双向承压，分行需评估自营产品对标策略。",
+      "url": "https://m.21jingji.com/article/20260827/herald/112a0c96518f58c10b09d1d9c4177cdc.html"
+    },
+    {
+      "title": "西藏灾情触发保险业二级响应",
+      "why": "监管巨灾理赔机制与时效标准对零售保险产品设计具参考意义，分行保险代销与高净值保障配置可提前对接。",
+      "url": "https://finance.cctv.com/2026/08/27/ARTIWM6TLGaDfiYjEj2cT0GP260827.shtml"
+    },
+    {
+      "title": "PCE超预期致金价剧烈波动",
+      "why": "美国PCE超预期扰动黄金配置窗口，高净值客户大类资产择时心态偏谨慎，分行财富顾问需提前备好应对话术。",
+      "url": "https://finance.sina.com.cn/money/nmetal/hjzx/2026-08-27/doc-inipttav5420753.shtml"
+    },
+    {
+      "title": "固收+新基金密集发行",
+      "why": "鑫元等固收+产品集中入市，代销池进一步丰富，财富代销档期与产品遴选窗口需要分行提前排布。",
+      "url": "https://www.stcn.com/article/detail/4138590.html"
+    },
+    {
+      "title": "中信银行倡言经营连续剧",
+      "why": "头部股份行强调客户经营长期主义与节奏感，零售AUM提升逻辑从单点爆破转向持续触达，分行打法需同步校准。",
+      "url": "https://finance.sina.com.cn/jryx/bank/2026-08-27/doc-iniptnux5483198.shtml"
+    }
+  ],
+  "insights": [
+    {
+      "topic": "消费贷经营贷贴息对标",
+      "tags": [
+        "信贷",
+        "竞对动态"
+      ],
+      "impact": "六大行贴息升级直接挤压我行自营消费贷与经营贷定价空间，存量客户面临被同业以低息挖角风险，新增获客成本抬升。",
+      "action": "本周内由零售部牵头对照六大行贴息门槛，梳理自营产品额度与利率适配度，针对优质代发与高AUM客群设计定向利率方案。",
+      "sources": [
+        {
+          "title": "提额扩面！六大行\"升级\"两类贷款贴息安排",
+          "url": "https://m.21jingji.com/article/20260827/herald/112a0c96518f58c10b09d1d9c4177cdc.html"
+        }
+      ]
+    },
+    {
+      "topic": "高净值黄金配置窗口提示",
+      "tags": [
+        "财富",
+        "私行"
+      ],
+      "impact": "PCE超预期引发金价剧烈波动，高净值客户大类资产配置出现择时需求，财富端若不及时介入易流失至同业私行。",
+      "action": "财富部与私行部今日起组织高净值客户一对一沟通，结合结售汇与黄金积存产品给出分批配置建议，配套市场解读简报。",
+      "sources": [
+        {
+          "title": "PCE\"超预期\"重击金价！4600关口失而复得 黄金多头今夜能否守住'脸面'？",
+          "url": "https://finance.sina.com.cn/money/nmetal/hjzx/2026-08-27/doc-inipttav5420753.shtml"
+        }
+      ]
+    },
+    {
+      "topic": "固收+新基金代销排布",
+      "tags": [
+        "财富"
+      ],
+      "impact": "鑫元金鑫回报等固收+新基金集中入市，丰富代销产品池，但也加剧档期与策略对比难度，代销管理需前置。",
+      "action": "财富部可考虑在9月14日发行前完成产品策略与回撤特征评估，提前锁定重点代销档期并对一线理财经理做产品培训。",
+      "sources": [
+        {
+          "title": "鑫元金鑫回报混合9月14日起正式发售",
+          "url": "https://www.stcn.com/article/detail/4138590.html"
+        }
+      ]
+    },
+    {
+      "topic": "客群经营连续剧打法校准",
+      "tags": [
+        "客群",
+        "财富"
+      ],
+      "impact": "头部股份行强调客户长期主义与持续触达，传统单点爆破式营销边际效用下降，AUM提升路径需要重新设计。",
+      "sources": [
+        {
+          "title": "中信银行行长吕天贵：一个好的银行经营要讲好连续剧",
+          "url": "https://finance.sina.com.cn/jryx/bank/2026-08-27/doc-iniptnux5483198.shtml"
+        }
+      ]
+    },
+    {
+      "topic": "巨灾保险代销与高净值保障",
+      "tags": [
+        "私行",
+        "财富"
+      ],
+      "impact": "监管启动保险业二级救灾响应，理赔时效与服务标准曝光度提升，高净值客户对保障型保险产品关注度上行。",
+      "sources": [
+        {
+          "title": "金融监管总局对西藏灾情启动保险业二级救灾应急响应",
+          "url": "https://finance.cctv.com/2026/08/27/ARTIWM6TLGaDfiYjEj2cT0GP260827.shtml"
+        }
+      ]
+    }
+  ],
   "sections": {
     "gz_local": [],
     "biz_insight": [
       {
-        "url": "https://www.investing.com/news/stock-market-news/sheins-up-to-18-billion-hong-kong-ipo-order-book-covered-sources-say-4874486",
-        "title_cn": "Shein’s up to $1.8 billion Hong Kong IPO order book covered, sources say",
-        "source": "Investing.com News",
+        "url": "https://finance.sina.com.cn/jryx/bank/2026-08-27/doc-iniptnux5483198.shtml",
+        "title_cn": "中信银行行长吕天贵：一个好的银行经营要讲好连续剧",
+        "title_orig": "中信银行行长吕天贵：一个好的银行经营要讲好连续剧",
+        "source": "新浪财经·银行频道",
         "source_type": "media",
-        "tier": "T2",
-        "date": "08/25",
-        "summary": "Shein’s up to $1.8 billion Hong Kong IPO…；美股市场动态",
-        "importance": 2,
+        "date": "08/27",
+        "summary": "中信银行行长公开阐释\"经营连续剧\"理念，强调客户经营的长期主义与节奏感。同业表态频繁，零售客群深耕已是共识。提示：分行可对照自身客群经营打法，检视AUM提升路径与持续触达机制。",
+        "importance": 3,
         "rank": 1,
-        "tags": [],
+        "tags": [
+          "竞对动态"
+        ],
         "locale": "national"
       }
     ],
-    "policy_market": [],
+    "policy_market": [
+      {
+        "url": "https://m.21jingji.com/article/20260827/herald/112a0c96518f58c10b09d1d9c4177cdc.html",
+        "title_cn": "提额扩面！六大行\"升级\"两类贷款贴息安排",
+        "title_orig": "提额扩面！六大行\"升级\"两类贷款贴息安排",
+        "source": "21世纪经济报道·金融",
+        "source_type": "media",
+        "date": "08/27",
+        "summary": "六大行集中升级两类贷款贴息政策，额度提升与覆盖面同步扩大，意在对位促消费与稳信贷。国有大行集中发力，股份行个贷定价与获客承压。分行需尽快对照贴息门槛，盘点自营消费贷与经营贷产品适配度。",
+        "importance": 3,
+        "rank": 1,
+        "tags": [
+          "信贷",
+          "消费贷"
+        ],
+        "locale": "national"
+      },
+      {
+        "url": "https://finance.cctv.com/2026/08/27/ARTIWM6TLGaDfiYjEj2cT0GP260827.shtml",
+        "title_cn": "金融监管总局对西藏灾情启动保险业二级救灾应急响应",
+        "title_orig": "金融监管总局对西藏灾情启动保险业二级救灾应急响应",
+        "source": "央视财经",
+        "source_type": "official",
+        "date": "08/27",
+        "summary": "金融监管总局针对西藏灾情启动保险业二级救灾应急响应，理赔绿色通道与应急处置全面铺开。属地虽远，但巨灾保险机制与理赔服务标准具参考价值。提示：留意后续保险产品保障范围与理赔时效要求。",
+        "importance": 2,
+        "rank": 2,
+        "tags": [
+          "监管合规"
+        ],
+        "locale": "national",
+        "locale_evidence": "金融监管总局对西藏灾情启动保险业二级救灾应急响应"
+      },
+      {
+        "url": "https://finance.sina.com.cn/money/nmetal/hjzx/2026-08-27/doc-inipttav5420753.shtml",
+        "title_cn": "PCE\"超预期\"重击金价！4600关口失而复得 黄金多头今夜能否守住'脸面'？",
+        "title_orig": "PCE\"超预期\"重击金价！4600关口失而复得 黄金多头今夜能否守住'脸面'？",
+        "source": "新浪财经·理财保险",
+        "source_type": "media",
+        "date": "08/27",
+        "summary": "美国PCE数据超预期，金价4600关口失而复得，市场波动放大。黄金仍是零售客户大类配置关注品种，择时心态偏谨慎。结售汇与黄金配置窗口值得提示高净值客户关注。",
+        "importance": 2,
+        "rank": 3,
+        "tags": [
+          "财富",
+          "市场",
+          "客群"
+        ],
+        "locale": "national"
+      },
+      {
+        "url": "https://www.stcn.com/article/detail/4138590.html",
+        "title_cn": "鑫元金鑫回报混合9月14日起正式发售",
+        "title_orig": "鑫元金鑫回报混合9月14日起正式发售",
+        "source": "证券时报",
+        "source_type": "media",
+        "date": "08/27",
+        "summary": "鑫元金鑫回报混合基金将于9月14日起正式发售，新基金供给持续涌入固收+赛道。零售代销产品池面临进一步丰富窗口。代销遴选与档期排布可提前对接，重点关注产品策略与回撤特征。",
+        "importance": 1,
+        "rank": 4,
+        "tags": [
+          "财富"
+        ],
+        "locale": "national"
+      }
+    ],
     "tech": [],
     "ipo": []
   },
   "stock_recap": {
     "us": {
-      "overview": "科技股财报集中放量大涨，Salesforce、Okta、CrowdStrike齐创新高提振市场。",
+      "overview": "科技股财报与AI主线驱动盘面，英伟达SalesforceOkta齐走高。",
       "sectors": [
-        "AI与软件：Salesforce因AI增长及Anthropic投资大涨12%，与Anthropic扩大合作提振情绪",
-        "网络安全：Okta业绩超预期大涨20%，CrowdStrike季度创新高涨11%，AI驱动安全需求升温",
-        "宏观与利率：韩国央行连续加息，鲍威尔前理事遭罢免威胁，美联储独立性引关注"
+        "AI与软件：英伟达业绩超预期，Salesforce涨12%、Okta涨20%，算力与安全需求共振",
+        "社交媒体：Meta以167亿美元和解社交媒体成瘾案，监管利空出清",
+        "油气运输：霍尔木兹海峡油轮遇袭，测试特朗普'通行正常'表态"
       ],
-      "spoken": "美股科技板块在财报季集中爆发，Salesforce、Okta、CrowdStrike均大幅领涨，AI与网络安全成最强主线。美联储独立性争议和韩国加息构成外围扰动，整体盘面科技引领、情绪偏多。",
+      "spoken": "美股盘面科技股领涨，AI主线全面走强。英伟达业绩翻倍叠加指引乐观，Salesforce涨12%，Okta涨20%，算力与安全需求共振。Meta以167亿美元和解成瘾诉讼，监管利空出清。能源端霍尔木兹油轮遇袭，油运板块受关注。",
       "meta": {
         "source": "CNBC Top Stories",
         "crossCheck": "新浪行情",
@@ -57,14 +223,14 @@
       ]
     },
     "aShare": {
-      "overview": "A股三大指数集体收涨，证券与有色金属板块联袂领涨。",
+      "overview": "A股三大指数集体收涨，证券与工业金属板块领涨。",
       "sectors": [
-        "证券：业绩高增与重组预期共振，板块爆发，配置价值受关注",
-        "有色金属：千亿巨头封涨停，板块强势爆发，机构看好涨价主线",
-        "算力产业链：英伟达财报大超预期叠加国产算力利好，玻璃基板等细分受捧",
-        "工业金属：与券商共振，板块涨幅居前"
+        "证券：牛散扎堆买入，业绩高增支撑估值修复",
+        "工业金属：板块跟随指数共振走强",
+        "半导体与算力：英伟达财报超预期，国产算力链迎增长机遇",
+        "乳业：龙头拟回购注销至多20亿元，陈发树加仓"
       ],
-      "spoken": "A股三大指数集体收涨，证券板块在业绩与重组共振下率先爆发，有色金属紧随其后多股涨停。英伟达财报超预期提振国产算力产业链情绪，玻璃基板等细分方向获机构关注，市场情绪明显回暖。",
+      "spoken": "A股三大指数集体收涨，证券与工业金属板块领涨。券商股获牛散扎堆买入，业绩高增有望支撑估值修复。英伟达财报超预期叠加千亿项目落地，国产算力产业链迎来明确增长机遇。乳业龙头抛出至多20亿元回购注销方案，产业资本同步加仓。",
       "meta": {
         "source": "东方财富",
         "crossCheck": "新浪行情",
@@ -89,14 +255,13 @@
       ]
     },
     "hk": {
-      "overview": "港股盘面整体偏弱，板块涨跌互现，缺乏明确方向性催化。",
+      "overview": "港股盘面消息面清淡，以个股回购与中期业绩公告为主。",
       "sectors": [
-        "科技与AI概念：受英伟达财报提振，算力及AI相关标的有资金关注",
-        "金融与券商：A股证券板块强势映射，港股券商股跟随情绪修复",
-        "地产与公用：政策预期落空叠加业绩平淡，板块走弱",
-        "高息防御：受外围利率走高影响，公用事业及REITs承压"
+        "个股回购：多家公司披露股份回购公告",
+        "中期业绩：密集披露中期业绩及分红派息",
+        "互联互通：阿里巴巴千亿项目落地带动相关产业链情绪"
       ],
-      "spoken": "港股今日板块涨跌互现，科技AI方向在英伟达财报利好下有资金关注，券商股跟随A股情绪修复。地产及高息防御板块走弱，市场整体缺乏明确主线，观望情绪较浓。",
+      "spoken": "港股盘面消息面以披露公告为主，多家公司密集披露股份回购与中期业绩。互联网龙头大额项目落地，对算力与产业链情绪形成正向传导。整体盘面个股驱动，板块效应有限，观望情绪较浓。",
       "meta": {
         "source": "新浪财经·港股",
         "crossCheck": "新浪行情",
@@ -105,13 +270,13 @@
       "indices": [
         {
           "name": "恒生指数",
-          "value": "25587.65",
-          "changePct": "-0.25%"
+          "value": "25585.40",
+          "changePct": "-0.26%"
         },
         {
           "name": "恒生科技",
-          "value": "4633.81",
-          "changePct": "+0.17%"
+          "value": "4623.61",
+          "changePct": "-0.05%"
         }
       ]
     },
@@ -125,7 +290,7 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/27",
-      "summary": "英伟达Q2营收利润同比翻倍，下一财年营收指引增长70%，大幅超出市场预期。",
+      "summary": "英伟达财报显示，第二财季营收与利润均同比增长逾一倍，公司指引下一财年营收将再增长约70%。",
       "importance": 3,
       "rank": 0,
       "tags": [
@@ -142,27 +307,12 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/26",
-      "summary": "伊朗股市约90%个股上涨，出现普涨行情。",
+      "summary": "伊朗股市出现普涨行情，约九成个股收涨。",
       "importance": 1,
       "rank": 0,
       "tags": [
-        "新兴市场"
-      ],
-      "locale": "national",
-      "market": "a-share"
-    },
-    {
-      "url": "https://finance.eastmoney.com/a/202608263854381941.html",
-      "title_cn": "千亿巨头封死涨停！有色金属强势爆发发生了什么？",
-      "source": "东方财富",
-      "source_type": "media",
-      "date": "08/26",
-      "summary": "A股市值千亿级有色金属龙头封涨停板，有色金属板块整体强势爆发。",
-      "importance": 2,
-      "rank": 0,
-      "tags": [
-        "有色金属",
-        "A股"
+        "新兴市场",
+        "中东"
       ],
       "locale": "national",
       "market": "a-share"
@@ -173,144 +323,142 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/26",
-      "summary": "沪深上市公司8月26日晚间集中披露重大事项公告，内容涵盖业绩、重组、增减持等。",
+      "summary": "8月26日晚间，沪深上市公司密集披露重大事项公告（具体内容未在标题中列示）。",
       "importance": 1,
       "rank": 0,
       "tags": [
-        "A股",
-        "公告"
-      ],
-      "locale": "national",
-      "market": "a-share"
-    },
-    {
-      "url": "https://finance.eastmoney.com/a/202608263854457052.html",
-      "title_cn": "如何看待宇树与牧原的研发费用之争？",
-      "source": "东方财富",
-      "source_type": "media",
-      "date": "08/26",
-      "summary": "市场关注宇树科技与牧原股份在研发费用投入上的对比与争议。",
-      "importance": 1,
-      "rank": 0,
-      "tags": [
-        "机器人",
-        "农林牧渔",
+        "公司公告",
         "A股"
       ],
       "locale": "national",
       "market": "a-share"
     },
     {
-      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0827/2026082700095.pdf",
-      "title_cn": "Announcements and Notices - [Terms of Reference of the Nomination Committee]",
-      "source": "港交所披露易",
+      "url": "https://finance.eastmoney.com/a/202608263854495011.html",
+      "title_cn": "A股三大指数集体收涨证券与工业金属板块领涨",
+      "source": "东方财富",
       "source_type": "media",
-      "date": "08/27",
-      "summary": "港交所披露某上市公司提名委员会职权范围。",
-      "importance": 1,
-      "rank": 0,
-      "tags": [
-        "港股",
-        "公司治理"
-      ],
-      "locale": "national",
-      "market": "hk"
-    },
-    {
-      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0827/2026082700085.pdf",
-      "title_cn": "Announcements and Notices - [Terms of Reference of the Remuneration Committee]",
-      "source": "港交所披露易",
-      "source_type": "media",
-      "date": "08/27",
-      "summary": "港交所披露某上市公司薪酬委员会职权范围。",
-      "importance": 1,
-      "rank": 0,
-      "tags": [
-        "港股",
-        "公司治理"
-      ],
-      "locale": "national",
-      "market": "hk"
-    },
-    {
-      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0827/2026082700079.pdf",
-      "title_cn": "Announcements and Notices - [Terms of Reference of the Audit Committee]",
-      "source": "港交所披露易",
-      "source_type": "media",
-      "date": "08/27",
-      "summary": "港交所披露某上市公司审核委员会职权范围。",
-      "importance": 1,
-      "rank": 0,
-      "tags": [
-        "港股",
-        "公司治理"
-      ],
-      "locale": "national",
-      "market": "hk"
-    },
-    {
-      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0827/2026082700067.pdf",
-      "title_cn": "Announcements and Notices - [List of Directors and their Role and Function]",
-      "source": "港交所披露易",
-      "source_type": "media",
-      "date": "08/27",
-      "summary": "港交所披露某上市公司董事名单及角色与职能。",
-      "importance": 1,
-      "rank": 0,
-      "tags": [
-        "港股",
-        "公司治理"
-      ],
-      "locale": "national",
-      "market": "hk"
-    },
-    {
-      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0827/2026082700063.pdf",
-      "title_cn": "Constitutional Documents",
-      "source": "港交所披露易",
-      "source_type": "media",
-      "date": "08/27",
-      "summary": "港交所披露某上市公司章程文件。",
-      "importance": 1,
-      "rank": 0,
-      "tags": [
-        "港股",
-        "公司治理"
-      ],
-      "locale": "national",
-      "market": "hk"
-    },
-    {
-      "url": "https://www.cnbc.com/2026/08/26/salesforce-crm-q2-earnings-report-2027.html",
-      "title_cn": "Salesforce stock jumps 12% on AI growth and Anthropic investment gain",
-      "source": "CNBC Top Stories",
-      "source_type": "media",
-      "date": "08/27",
-      "summary": "Salesforce因AI业务增长及对Anthropic投资获益，股价单日上涨约12%。",
+      "date": "08/26",
+      "summary": "8月26日A股三大指数集体收涨，证券与工业金属板块涨幅居前。",
       "importance": 2,
       "rank": 0,
       "tags": [
-        "美股",
-        "财报",
-        "AI",
-        "SaaS"
+        "A股",
+        "券商",
+        "有色金属"
       ],
-      "locale": "overseas",
-      "market": "us"
+      "locale": "national",
+      "market": "a-share"
     },
     {
-      "url": "https://www.cnbc.com/2026/08/27/china-industrial-profits-july-factory-production-.html",
-      "title_cn": "China industrial profit growth in July slumps to 7-month low of 11.2%",
+      "url": "https://finance.eastmoney.com/a/202608263855222885.html",
+      "title_cn": "“牛散”扎堆买入券商股！业绩高增有望支撑估值修复",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "08/26",
+      "summary": "A股市场知名个人投资者集中买入券商股，业内观点认为券商业绩高增长有望支撑估值修复。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "券商",
+        "A股"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0827/2026082700203.pdf",
+      "title_cn": "Next Day Disclosure Returns - [Share Buyback]",
+      "source": "港交所披露易",
+      "source_type": "media",
+      "date": "08/27",
+      "summary": "港交所披露易收到一则上市公司翌日披露的股份回购公告。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "回购",
+        "港股"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0827/2026082700201.pdf",
+      "title_cn": "Next Day Disclosure Returns - [Share Buyback]",
+      "source": "港交所披露易",
+      "source_type": "media",
+      "date": "08/27",
+      "summary": "港交所披露易收到一则上市公司翌日披露的股份回购公告。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "回购",
+        "港股"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0827/2026082700197.pdf",
+      "title_cn": "Next Day Disclosure Returns - [Share Buyback]",
+      "source": "港交所披露易",
+      "source_type": "media",
+      "date": "08/27",
+      "summary": "港交所披露易收到一则上市公司翌日披露的股份回购公告。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "回购",
+        "港股"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0827/2026082700193.pdf",
+      "title_cn": "Announcements and Notices - [Overseas Regulatory Announcement - Trading Update / Inside Information / Results of a Subsidiary]",
+      "source": "港交所披露易",
+      "source_type": "media",
+      "date": "08/27",
+      "summary": "港股上市公司发布海外监管公告，内容涉及交易更新/内幕信息/附属公司业绩。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "公司公告",
+        "港股"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0827/2026082700183.pdf",
+      "title_cn": "Announcements and Notices - [Dividend or Distribution (Announcement Form)]",
+      "source": "港交所披露易",
+      "source_type": "media",
+      "date": "08/27",
+      "summary": "港股上市公司发布分红或派息公告。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "分红",
+        "港股"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/08/27/us-iran-war-trump-hormuz-attack-mine-.html",
+      "title_cn": "Tanker attack tests Trump’s claim that Hormuz is a 'functioning strait'",
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/27",
-      "summary": "中国7月规模以上工业企业利润同比增长11.2%，增速降至7个月以来最低。",
-      "importance": 2,
+      "summary": "油轮在霍尔木兹海峡遇袭事件，考验特朗普此前关于该海峡\"运行正常\"的表态。",
+      "importance": 3,
       "rank": 0,
       "tags": [
-        "宏观",
-        "中国",
-        "工业利润"
+        "能源",
+        "地缘政治",
+        "中东"
       ],
       "locale": "overseas",
       "market": "us"
@@ -321,48 +469,63 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/26",
-      "summary": "Meta同意以约167亿美元与美国加州等多州就社交媒体成瘾诉讼达成和解。",
+      "summary": "Meta与美国加州等州就社交媒体成瘾诉讼达成和解，和解金额达167亿美元。",
       "importance": 2,
       "rank": 0,
       "tags": [
-        "美股",
+        "科技",
         "诉讼",
-        "科技"
+        "美股"
       ],
       "locale": "overseas",
       "market": "us"
     },
     {
-      "url": "https://www.cnbc.com/2026/08/26/okta-okta-earnings-q2-2027.html",
-      "title_cn": "Okta pops 20% after topping estimates as AI threat spikes demand for identity security",
-      "source": "CNBC Top Stories",
-      "source_type": "media",
-      "date": "08/26",
-      "summary": "Okta财报超预期，受AI驱动的身份安全需求拉动，股价盘后上涨约20%。",
-      "importance": 2,
-      "rank": 0,
-      "tags": [
-        "美股",
-        "财报",
-        "网络安全",
-        "AI"
-      ],
-      "locale": "overseas",
-      "market": "us"
-    },
-    {
-      "url": "https://www.cnbc.com/2026/08/26/trump-lisa-cook-federal-reserve.html",
-      "title_cn": "Fed Gov Lisa Cook’s lawyer fires back at Trump's renewed threat to oust her",
+      "url": "https://www.cnbc.com/2026/08/27/zai-shares-surge-new-ai-model-using-chinese-chips.html",
+      "title_cn": "Z.ai shares surge 8% after releasing new AI model running only on Chinese chips",
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/27",
-      "summary": "美联储理事Lisa Cook的律师就特朗普再次威胁解除其职务作出回应。",
+      "summary": "中国AI公司Z.ai发布新AI模型，且该模型完全运行于中国国产芯片，股价上涨8%。",
       "importance": 2,
       "rank": 0,
       "tags": [
-        "美联储",
-        "美股",
-        "政治"
+        "AI",
+        "国产芯片",
+        "中概股"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/08/26/salesforce-crm-q2-earnings-report-2027.html",
+      "title_cn": "Salesforce stock jumps 12% on AI growth and Anthropic investment gain",
+      "source": "CNBC Top Stories",
+      "source_type": "media",
+      "date": "08/27",
+      "summary": "Salesforce因AI业务增长及对Anthropic投资的估值上升，股价上涨12%。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "AI",
+        "财报",
+        "美股"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/08/27/europe-gas-storage-prices-winter-lng.html",
+      "title_cn": "Europe’s gas stores are running low — and prices could top 100 euros this winter",
+      "source": "CNBC Top Stories",
+      "source_type": "media",
+      "date": "08/27",
+      "summary": "欧洲天然气库存告急，市场担忧今冬气价可能突破每兆瓦时100欧元。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "能源",
+        "欧洲"
       ],
       "locale": "overseas",
       "market": "us"
