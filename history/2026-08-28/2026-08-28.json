@@ -112,7 +112,7 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/27",
-      "summary": "针对\"A股未盈利企业无法上市\"的传闻，知情人士回应称相关说法不准确。",
+      "summary": "针对\"A股未盈利企业无法上市\"的传闻，知情人士回应称相关报道不准确，A股对未盈利企业的上市通道并未关闭。",
       "importance": 2,
       "rank": 0,
       "tags": [
@@ -128,12 +128,12 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/27",
-      "summary": "特朗普就美国电力电网中的外国制造设备宣布\"国家紧急状态\"，中国外交部对此作出回应。",
+      "summary": "特朗普就美国电力电网中的外国制造设备宣布\"国家紧急状态\"，中国外交部回应称此举泛化国家安全概念，中方将采取必要措施维护自身正当权益。",
       "importance": 2,
       "rank": 0,
       "tags": [
         "政策",
-        "中美关系",
+        "贸易",
         "能源"
       ],
       "locale": "national",
@@ -145,13 +145,30 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/27",
-      "summary": "8月27日沪指涨逾1%，科创50指数大涨近4%，半导体板块集体爆发。",
-      "importance": 3,
+      "summary": "8月27日A股放量上涨，沪指涨逾1%，科创50指数大涨近4%，半导体板块集体爆发领涨市场。",
+      "importance": 2,
       "rank": 0,
       "tags": [
         "A股",
         "半导体",
-        "AI"
+        "市场行情"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202608273856994327.html",
+      "title_cn": "美国签令限制外国电网设备多家上市公司回应",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "08/27",
+      "summary": "美国签署行政令限制外国电网设备进入美国电力系统，多家A股上市公司回应称对美业务占比较小或暂无影响。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "政策",
+        "贸易",
+        "能源"
       ],
       "locale": "national",
       "market": "a-share"
@@ -162,29 +179,12 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/27",
-      "summary": "8月27日晚间沪深上市公司发布一批重大事项公告，涵盖业绩、并购、回购等事项。",
+      "summary": "8月27日晚间沪深两市多家上市公司发布重大事项公告，涵盖业绩、增减持、回购、重组等。",
       "importance": 1,
       "rank": 0,
       "tags": [
         "A股",
-        "公告"
-      ],
-      "locale": "national",
-      "market": "a-share"
-    },
-    {
-      "url": "https://finance.eastmoney.com/a/202608273856146998.html",
-      "title_cn": "中报业绩亮眼！光模块集体爆发融资客抢筹24股过亿",
-      "source": "东方财富",
-      "source_type": "media",
-      "date": "08/27",
-      "summary": "中报业绩亮眼，光模块板块集体爆发，融资客当日抢筹24只个股金额过亿元。",
-      "importance": 2,
-      "rank": 0,
-      "tags": [
-        "财报",
-        "光通信",
-        "A股"
+        "公司公告"
       ],
       "locale": "national",
       "market": "a-share"
@@ -195,12 +195,12 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/28",
-      "summary": "港交所披露易发布一项海外监管公告（交易更新）。",
+      "summary": "港股上市公司于港交所披露易发布海外监管公告，内容为交易最新情况。",
       "importance": 1,
       "rank": 0,
       "tags": [
         "港股",
-        "公告"
+        "公司公告"
       ],
       "locale": "national",
       "market": "hk"
@@ -211,12 +211,12 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/28",
-      "summary": "港交所披露易发布一项海外监管公告（其他事项）。",
+      "summary": "港股上市公司于港交所披露易发布海外监管公告（其他类）。",
       "importance": 1,
       "rank": 0,
       "tags": [
         "港股",
-        "公告"
+        "公司公告"
       ],
       "locale": "national",
       "market": "hk"
@@ -227,11 +227,12 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/28",
-      "summary": "港交所披露易发布一项内幕消息/附属公司业绩公告。",
+      "summary": "港股上市公司发布内幕消息公告，内容涉及子公司业绩结果。",
       "importance": 1,
       "rank": 0,
       "tags": [
         "港股",
+        "公司公告",
         "财报"
       ],
       "locale": "national",
@@ -243,12 +244,12 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/28",
-      "summary": "港交所披露易发布一项其他事项公告。",
+      "summary": "港股上市公司于港交所披露易发布公告（其他类杂项）。",
       "importance": 1,
       "rank": 0,
       "tags": [
         "港股",
-        "公告"
+        "公司公告"
       ],
       "locale": "national",
       "market": "hk"
@@ -259,44 +260,28 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/28",
-      "summary": "港交所披露易发布一项通函（其他）。",
+      "summary": "港股上市公司于港交所披露易发布通函（其他类）。",
       "importance": 1,
       "rank": 0,
       "tags": [
         "港股",
-        "公告"
+        "公司公告"
       ],
       "locale": "national",
       "market": "hk"
     },
     {
-      "url": "https://www.cnbc.com/2026/08/27/fed-chairman-kevin-warsh-delivers-his-key-jackson-hole-speech-friday.html",
-      "title_cn": "Fed Chairman Kevin Warsh delivers his key Jackson Hole speech Friday. Here's what to expect",
+      "url": "https://www.cnbc.com/2026/08/28/judge-blocks-pentagon-blacklist--anthropic-.html",
+      "title_cn": "Judge blocks Pentagon blacklist of Anthropic as supply chain risk",
       "source": "CNBC Top Stories",
       "source_type": "media",
-      "date": "08/27",
-      "summary": "美联储主席沃什将于周五在杰克逊霍尔年会上发表重要讲话，市场关注其政策信号。",
-      "importance": 3,
-      "rank": 0,
-      "tags": [
-        "美联储",
-        "宏观"
-      ],
-      "locale": "overseas",
-      "market": "us"
-    },
-    {
-      "url": "https://www.cnbc.com/2026/08/27/sk-hynix-ceo-says-indiana-will-be-key-memory-production-base-by-2030.html",
-      "title_cn": "SK Hynix CEO says Indiana will be key memory production base by 2030, first U.S. facility now underway",
-      "source": "CNBC Top Stories",
-      "source_type": "media",
-      "date": "08/27",
-      "summary": "SK海力士CEO表示，印第安纳州将成为2030年前的关键存储芯片生产基地，首座美国工厂已动工。",
+      "date": "08/28",
+      "summary": "美国一法官阻止五角大楼将AI公司Anthropic列入供应链风险黑名单的举措。",
       "importance": 2,
       "rank": 0,
       "tags": [
-        "半导体",
-        "存储",
+        "AI",
+        "政策",
         "美股"
       ],
       "locale": "overseas",
@@ -308,12 +293,30 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/28",
-      "summary": "在中美官员为习近平访美做准备之际，特朗普对北京的言辞进一步升级。",
+      "summary": "在中美官员就习近平访美进行会晤之际，特朗普对北京强硬表态升级。",
       "importance": 3,
       "rank": 0,
       "tags": [
         "中美关系",
-        "宏观"
+        "政策",
+        "贸易"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/08/27/sk-hynix-ceo-says-indiana-will-be-key-memory-production-base-by-2030.html",
+      "title_cn": "SK Hynix CEO says Indiana will be key memory production base by 2030, first U.S. facility now underway",
+      "source": "CNBC Top Stories",
+      "source_type": "media",
+      "date": "08/27",
+      "summary": "SK海力士CEO表示，印第安纳州将成为公司到2030年的关键存储芯片生产基地，首座美国工厂已开工建设。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "半导体",
+        "存储芯片",
+        "美股"
       ],
       "locale": "overseas",
       "market": "us"
@@ -324,7 +327,7 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/27",
-      "summary": "特朗普签署行政令，将安大略湖更名为\"美国湖\"，美加贸易战持续。",
+      "summary": "特朗普签署行政令将安大略湖更名为\"美国湖\"，美加贸易紧张局势持续升级。",
       "importance": 2,
       "rank": 0,
       "tags": [
@@ -335,17 +338,17 @@
       "market": "us"
     },
     {
-      "url": "https://www.cnbc.com/2026/08/28/chinas-super-rich-fled-singapore-now-they-want-to-come-back.html",
-      "title_cn": "China’s super-rich fled Singapore. Now they want to come back",
+      "url": "https://www.cnbc.com/2026/08/27/fed-chairman-kevin-warsh-delivers-his-key-jackson-hole-speech-friday.html",
+      "title_cn": "Fed Chairman Kevin Warsh delivers his key Jackson Hole speech Friday. Here's what to expect",
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/27",
-      "summary": "报道称此前离开新加坡的中国超级富豪希望回流。",
-      "importance": 1,
+      "summary": "美联储主席提名人选沃什（Kevin Warsh）将于周五在杰克逊霍尔年会上发表主旨演讲，市场关注其政策立场表态。",
+      "importance": 3,
       "rank": 0,
       "tags": [
-        "中概股",
-        "新加坡"
+        "美联储",
+        "宏观"
       ],
       "locale": "overseas",
       "market": "us"
