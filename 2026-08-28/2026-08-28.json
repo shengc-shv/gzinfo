@@ -1,123 +1,24 @@
 {
   "date": "2026-08-28",
-  "hero_line": "两部门发文力挺物流交通金融，广州港口与多式联运客群迎来授信与结算窗口。",
-  "must_read": [
-    {
-      "title": "两部门力挺物流交通金融",
-      "why": "国家层面首次系统定调物流网金融支持，物流、交通基础设施列入重点赛道，对广州港口与多式联运客群形成中长期授信与结算增量空间。",
-      "url": "https://www.cnfin.com/yw-lb/detail/20260828/4461665_1.html"
-    },
-    {
-      "title": "广州会见复星深化在穗合作",
-      "why": "复星旗下健康、保险、文旅板块与广州重点产业方向高度契合，潜在带来企业融资、代发、零售高端客群等综合服务机会。",
-      "url": "https://news.dayoo.com/guangzhou/202608/28/139995_54997026.htm"
-    },
-    {
-      "title": "物流网建设实施方案落地",
-      "why": "方案明确金融支持方向与重点环节，为物流企业融资、收费公路、多式联运项目打开空间，是分行公司业务拓客的明确政策抓手。",
-      "url": "https://www.cnfin.com/yw-lb/detail/20260828/4461665_1.html"
-    }
-  ],
-  "insights": [
-    {
-      "topic": "物流交通客群授信拓新",
-      "tags": [
-        "信贷",
-        "客群"
-      ],
-      "impact": "广州作为港口与多式联运枢纽，辖内物流园区、货运平台、收费公路配套企业信贷与结算需求集中释放，公司业务有望迎来增量。",
-      "action": "本周起对辖内物流园区、货运平台、港口配套企业开展专项走访，梳理授信、结算与现金管理需求，配置物流贷与项目贷产品包。",
-      "sources": [
-        {
-          "title": "两部门：鼓励金融机构加大物流、交通领域金融支持",
-          "url": "https://www.cnfin.com/yw-lb/detail/20260828/4461665_1.html"
-        }
-      ]
-    },
-    {
-      "topic": "复星在穗项目联动拓客",
-      "tags": [
-        "代发",
-        "私行"
-      ],
-      "impact": "复星健康、保险、文旅板块与广州重点产业契合度较高，企业落地后有望带动融资、代发工资、高端零售与私行等综合金融需求。",
-      "action": "可联动辖内支行摸排复星在穗项目与关联企业，提前对接融资方案与代发服务，关注其员工零售客群转化机会。",
-      "sources": [
-        {
-          "title": "冯忠华会见复星国际董事长郭广昌",
-          "url": "https://news.dayoo.com/guangzhou/202608/28/139995_54997026.htm"
-        }
-      ]
-    },
-    {
-      "topic": "多式联运项目融资卡位",
-      "tags": [
-        "政银合作",
-        "信贷"
-      ],
-      "impact": "收费公路与多式联运项目纳入方案重点支持环节，分行可联动省交通运输部门与广州港集团，提前介入重大项目融资方案设计。",
-      "action": "建议本周梳理辖内重点多式联运与收费公路项目清单，联动公司部与风控部启动预沟通，争取项目主办行资格。",
-      "sources": [
-        {
-          "title": "两部门：鼓励金融机构加大物流、交通领域金融支持",
-          "url": "https://www.cnfin.com/yw-lb/detail/20260828/4461665_1.html"
-        }
-      ]
-    }
-  ],
+  "hero_line": "今日暂无可推送重点，详见各板块资讯。",
+  "must_read": [],
+  "insights": [],
   "sections": {
     "gz_local": [],
-    "biz_insight": [
-      {
-        "url": "https://news.dayoo.com/guangzhou/202608/28/139995_54997026.htm",
-        "title_cn": "冯忠华会见复星国际董事长郭广昌",
-        "title_orig": "冯忠华会见复星国际董事长郭广昌",
-        "source": "广州日报·大洋网",
-        "source_type": "media",
-        "date": "08/28",
-        "summary": "广州会见复星国际董事长郭广昌，双方就深化在穗合作交换意见。复星旗下涉及健康、保险、文旅等板块，与广州重点产业方向契合。下一步可关注复星在穗项目落地节奏，捕捉企业融资、员工零售等综合服务机会。",
-        "importance": 2,
-        "rank": 1,
-        "tags": [
-          "政银合作",
-          "客群"
-        ],
-        "locale": "national"
-      }
-    ],
-    "policy_market": [
-      {
-        "url": "https://www.cnfin.com/yw-lb/detail/20260828/4461665_1.html",
-        "title_cn": "两部门：鼓励金融机构加大物流、交通领域金融支持",
-        "title_orig": "两部门：鼓励金融机构加大物流、交通领域金融支持",
-        "source": "新华财经",
-        "source_type": "official",
-        "date": "08/28",
-        "summary": "国家发改委、交通运输部联合印发《物流网建设实施方案》，鼓励金融机构加大物流与交通领域信贷支持。方案明确金融支持方向与重点环节，为物流企业融资、收费公路及多式联运项目打开空间。提示广州分行可排查辖内物流园区、货运平台、港口配套客群，梳理授信与结算需求。",
-        "importance": 3,
-        "rank": 1,
-        "tags": [
-          "信贷",
-          "政银合作",
-          "客群"
-        ],
-        "locale": "national",
-        "locale_evidence": "国家发展改革委、交通运输部联合印发《物流网建设实施方案》"
-      }
-    ],
+    "biz_insight": [],
+    "policy_market": [],
     "tech": [],
     "ipo": []
   },
   "stock_recap": {
     "us": {
-      "overview": "市场聚焦鲍威尔继任者Warsh杰克逊霍尔讲话，科技与AI链交投活跃。",
+      "overview": "市场静待周五鲍尔森在Jackson Hole讲话，观望情绪浓厚，盘面涨跌互现。",
       "sectors": [
-        "半导体：SK海力士宣布印第安纳工厂开建，存储链受关注",
-        "AI算力：英伟达力捧PTFE概念，黄仁勋再谈AI融资风险",
-        "生物医药：吉利德每日一次HIV新药获FDA批准",
-        "金融科技：Affirm Q4利润大增，业绩超预期"
+        "半导体：SK海力士宣布印第安纳州建厂，存储概念受关注",
+        "医药：吉利德每日一次HIV新药获FDA批准",
+        "中美贸易：特朗普就访华议题对华强硬表态，敏感板块承压"
       ],
-      "spoken": "美股市场聚焦美联储主席Warsh即将在杰克逊霍尔发表的讲话。盘面上半导体板块走强，SK海力士宣布美国新工厂开建，存储概念受关注。AI算力链活跃，英伟达力捧PTFE概念，黄仁勋再次回应循环融资质疑。生物医药方面，吉利德每日一次HIV新药获FDA批准。金融科技板块，Affirm财报利润大增，业绩超预期。",
+      "spoken": "美股盘前静待周五Jackson Hole美联储主席讲话，市场观望情绪较浓，盘面涨跌互现。半导体板块受SK海力士赴美建厂消息带动，存储概念受关注。医药板块吉利德每日一次HIV新药获FDA批准，股价有支撑。贸易敏感型板块则因特朗普对华强硬表态有所承压。",
       "meta": {
         "source": "CNBC Top Stories",
         "crossCheck": "新浪行情",
@@ -142,14 +43,15 @@
       ]
     },
     "aShare": {
-      "overview": "沪指涨逾1%科创50大涨近4%，半导体板块集体爆发领涨。",
+      "overview": "沪指涨逾1%科创50大涨近4%，半导体板块集体爆发引领市场。",
       "sectors": [
-        "半导体：科创50大涨近4%，存储龙头封板拿下重磅订单",
+        "半导体：科创50大涨近4%，存储龙头封板叠加英伟达捧PTFE概念爆发",
         "光模块：中报业绩亮眼，机构称光纤光缆配置时点已至",
-        "新能源材料：英伟达力捧PTFE，相关概念集体爆发",
-        "通信设备：美国签令限制外国电网设备，上市公司密集回应"
+        "新能源/电网：美国限制外国电网设备，上市公司密集回应",
+        "贵金属/防御：科技强势下市场风格偏向成长",
+        "汽车：受美国电网行政令及贸易摩擦升温影响承压"
       ],
-      "spoken": "A股三大指数集体收涨，沪指涨逾1%，科创50大涨近4%。盘面最强的是半导体板块，存储龙头强势封板并拿下重磅订单。光模块同样表现亮眼，中报业绩突出，机构看好光纤光缆配置时点。英伟达力捧PTFE概念，新材料板块集体爆发。消息面上，美国签令限制外国电网设备，多家上市公司回应。",
+      "spoken": "A股沪指涨逾1%，科创50指数大涨近4%，成长风格全面占优。半导体板块集体爆发，存储龙头强势封板，英伟达力捧的PTFE概念跟涨。光模块中报业绩亮眼获融资客抢筹，新能源板块则因美国限制外国电网设备有所承压。",
       "meta": {
         "source": "东方财富",
         "crossCheck": "新浪行情",
@@ -174,13 +76,14 @@
       ]
     },
     "hk": {
-      "overview": "港股盘面交投清淡，中报披露季持续，半年度业绩公告密集发布。",
+      "overview": "港股盘面消息面清淡，恒指维持震荡格局，个股以业绩公告为主。",
       "sectors": [
-        "半导体：存储龙头A股封板重磅订单，港股相关标的受关注",
-        "通讯设备：光纤光缆板块受A股联动，配置时点获机构看好",
-        "能源公用：美方限制外国电网设备，电力设备链承压"
+        "半导体/科技：A股科创板大涨带动港股科技股情绪",
+        "金融地产：缺乏催化，整体维持震荡",
+        "能源/原材料：受美中贸易摩擦升温影响表现疲弱",
+        "医药：美股吉利德获批提振创新药板块情绪"
       ],
-      "spoken": "港股今日盘面整体清淡，消息面以公司中报披露为主，多家上市公司密集发布半年度业绩公告。板块方面，半导体与通讯设备受A股科创板走强带动，存储与光模块概念获得关注。能源公用板块因美国限制外国电网设备令受到一定扰动。整体来看，市场缺乏明确方向，观望情绪较浓。",
+      "spoken": "港股盘面消息面清淡，恒指维持震荡格局，个股以业绩公告为主。科技股受A股科创板大涨带动情绪有所提振，医药板块受美股吉利德新药获批利好。能源及原材料板块则因美中贸易摩擦升温有所承压。整体市场缺乏方向性催化，观望氛围较浓。",
       "meta": {
         "source": "新浪财经·港股",
         "crossCheck": "新浪行情",
@@ -190,12 +93,12 @@
         {
           "name": "恒生指数",
           "value": "25565.74",
-          "changePct": "+0.00%"
+          "changePct": "-0.48%"
         },
         {
           "name": "恒生科技",
           "value": "4620.29",
-          "changePct": "+0.00%"
+          "changePct": "-0.57%"
         }
       ]
     },
@@ -209,12 +112,12 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/27",
-      "summary": "知情人士回应称，A股并未对未盈利企业上市设置统一限制，相关报道存在误读。",
+      "summary": "针对\"A股未盈利企业无法上市\"的传闻，知情人士回应称相关报道不准确，A股对未盈利企业的上市通道并未关闭。",
       "importance": 2,
       "rank": 0,
       "tags": [
         "政策",
-        "IPO"
+        "A股"
       ],
       "locale": "national",
       "market": "a-share"
@@ -225,8 +128,8 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/27",
-      "summary": "特朗普就美国电力电网中的外国制造设备宣布\"国家紧急状态\"，中国外交部对此作出回应。",
-      "importance": 3,
+      "summary": "特朗普就美国电力电网中的外国制造设备宣布\"国家紧急状态\"，中国外交部回应称此举泛化国家安全概念，中方将采取必要措施维护自身正当权益。",
+      "importance": 2,
       "rank": 0,
       "tags": [
         "政策",
@@ -242,7 +145,7 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/27",
-      "summary": "8月27日A股沪指涨逾1%，科创50指数大涨近4%，半导体板块集体爆发。",
+      "summary": "8月27日A股放量上涨，沪指涨逾1%，科创50指数大涨近4%，半导体板块集体爆发领涨市场。",
       "importance": 2,
       "rank": 0,
       "tags": [
@@ -254,34 +157,34 @@
       "market": "a-share"
     },
     {
-      "url": "https://finance.eastmoney.com/a/202608273856699245.html",
-      "title_cn": "8月27日晚间沪深上市公司重大事项公告最新快递",
+      "url": "https://finance.eastmoney.com/a/202608273856994327.html",
+      "title_cn": "美国签令限制外国电网设备多家上市公司回应",
       "source": "东方财富",
       "source_type": "media",
       "date": "08/27",
-      "summary": "8月27日晚间沪深上市公司密集披露重大事项公告，包括停牌、重组、增减持等。",
-      "importance": 1,
+      "summary": "美国签署行政令限制外国电网设备进入美国电力系统，多家A股上市公司回应称对美业务占比较小或暂无影响。",
+      "importance": 2,
       "rank": 0,
       "tags": [
-        "公告",
-        "A股"
+        "政策",
+        "贸易",
+        "能源"
       ],
       "locale": "national",
       "market": "a-share"
     },
     {
-      "url": "https://finance.eastmoney.com/a/202608273856146998.html",
-      "title_cn": "中报业绩亮眼！光模块集体爆发融资客抢筹24股过亿",
+      "url": "https://finance.eastmoney.com/a/202608273856699245.html",
+      "title_cn": "8月27日晚间沪深上市公司重大事项公告最新快递",
       "source": "东方财富",
       "source_type": "media",
       "date": "08/27",
-      "summary": "中报业绩亮眼，光模块板块集体爆发，融资资金净买入24股金额过亿。",
-      "importance": 2,
+      "summary": "8月27日晚间沪深两市多家上市公司发布重大事项公告，涵盖业绩、增减持、回购、重组等。",
+      "importance": 1,
       "rank": 0,
       "tags": [
-        "光模块",
-        "财报",
-        "通信"
+        "A股",
+        "公司公告"
       ],
       "locale": "national",
       "market": "a-share"
@@ -292,12 +195,12 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/28",
-      "summary": "港股上市公司发布海外监管公告及交易更新公告，具体内容未披露。",
+      "summary": "港股上市公司于港交所披露易发布海外监管公告，内容为交易最新情况。",
       "importance": 1,
       "rank": 0,
       "tags": [
         "港股",
-        "公告"
+        "公司公告"
       ],
       "locale": "national",
       "market": "hk"
@@ -308,12 +211,12 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/28",
-      "summary": "港股上市公司发布海外监管公告（其他类），具体内容未披露。",
+      "summary": "港股上市公司于港交所披露易发布海外监管公告（其他类）。",
       "importance": 1,
       "rank": 0,
       "tags": [
         "港股",
-        "公告"
+        "公司公告"
       ],
       "locale": "national",
       "market": "hk"
@@ -324,12 +227,12 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/28",
-      "summary": "港股上市公司发布内幕消息及子公司业绩公告。",
+      "summary": "港股上市公司发布内幕消息公告，内容涉及子公司业绩结果。",
       "importance": 1,
       "rank": 0,
       "tags": [
         "港股",
-        "公告",
+        "公司公告",
         "财报"
       ],
       "locale": "national",
@@ -341,12 +244,12 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/28",
-      "summary": "港股上市公司发布其他杂项公告。",
+      "summary": "港股上市公司于港交所披露易发布公告（其他类杂项）。",
       "importance": 1,
       "rank": 0,
       "tags": [
         "港股",
-        "公告"
+        "公司公告"
       ],
       "locale": "national",
       "market": "hk"
@@ -357,28 +260,46 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/28",
-      "summary": "港股上市公司发布通函（其他类）。",
+      "summary": "港股上市公司于港交所披露易发布通函（其他类）。",
       "importance": 1,
       "rank": 0,
       "tags": [
         "港股",
-        "公告"
+        "公司公告"
       ],
       "locale": "national",
       "market": "hk"
     },
     {
-      "url": "https://www.cnbc.com/2026/08/27/fed-chairman-kevin-warsh-delivers-his-key-jackson-hole-speech-friday.html",
-      "title_cn": "Fed Chairman Kevin Warsh delivers his key Jackson Hole speech Friday. Here's what to expect",
+      "url": "https://www.cnbc.com/2026/08/28/judge-blocks-pentagon-blacklist--anthropic-.html",
+      "title_cn": "Judge blocks Pentagon blacklist of Anthropic as supply chain risk",
       "source": "CNBC Top Stories",
       "source_type": "media",
-      "date": "08/27",
-      "summary": "美联储主席沃什预定在杰克逊霍尔年会上发表关键演讲，市场关注其政策信号。",
+      "date": "08/28",
+      "summary": "美国一法官阻止五角大楼将AI公司Anthropic列入供应链风险黑名单的举措。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "AI",
+        "政策",
+        "美股"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/08/28/trump-x-meeting-us-china-iran-sanctions.html",
+      "title_cn": "Trump ratchets up rhetoric against Beijing as U.S.-China officials meet for Xi's Washington visit",
+      "source": "CNBC Top Stories",
+      "source_type": "media",
+      "date": "08/28",
+      "summary": "在中美官员就习近平访美进行会晤之际，特朗普对北京强硬表态升级。",
       "importance": 3,
       "rank": 0,
       "tags": [
-        "美联储",
-        "宏观"
+        "中美关系",
+        "政策",
+        "贸易"
       ],
       "locale": "overseas",
       "market": "us"
@@ -389,12 +310,12 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/27",
-      "summary": "SK海力士CEO表示，印第安纳州到2030年将成为重要的存储芯片生产基地，首座美国工厂已动工。",
+      "summary": "SK海力士CEO表示，印第安纳州将成为公司到2030年的关键存储芯片生产基地，首座美国工厂已开工建设。",
       "importance": 2,
       "rank": 0,
       "tags": [
         "半导体",
-        "存储",
+        "存储芯片",
         "美股"
       ],
       "locale": "overseas",
@@ -406,45 +327,28 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/27",
-      "summary": "特朗普签署行政令，将安大略湖改名为\"美洲湖\"，加美贸易紧张局势持续。",
-      "importance": 1,
-      "rank": 0,
-      "tags": [
-        "贸易",
-        "政策",
-        "美股"
-      ],
-      "locale": "overseas",
-      "market": "us"
-    },
-    {
-      "url": "https://www.cnbc.com/2026/08/28/chinas-super-rich-fled-singapore-now-they-want-to-come-back.html",
-      "title_cn": "China’s super-rich fled Singapore. Now they want to come back",
-      "source": "CNBC Top Stories",
-      "source_type": "media",
-      "date": "08/27",
-      "summary": "CNBC报道，此前从新加坡迁出的中国超级富豪群体正寻求回流。",
-      "importance": 1,
-      "rank": 0,
-      "tags": [
-        "中概股",
-        "财富"
-      ],
-      "locale": "overseas",
-      "market": "us"
-    },
-    {
-      "url": "https://www.cnbc.com/2026/08/27/fda-approves-gilead-hiv-pill-bixlenvo-designed-to-simplify-treatment.html",
-      "title_cn": "FDA approves daily HIV pill from Gilead designed to simplify treatment for some patients",
-      "source": "CNBC Top Stories",
-      "source_type": "media",
-      "date": "08/27",
-      "summary": "FDA批准吉利德每日一次的HIV新药，有望简化部分患者的治疗方案。",
+      "summary": "特朗普签署行政令将安大略湖更名为\"美国湖\"，美加贸易紧张局势持续升级。",
       "importance": 2,
       "rank": 0,
       "tags": [
-        "医药",
-        "美股"
+        "贸易",
+        "政策"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/08/27/fed-chairman-kevin-warsh-delivers-his-key-jackson-hole-speech-friday.html",
+      "title_cn": "Fed Chairman Kevin Warsh delivers his key Jackson Hole speech Friday. Here's what to expect",
+      "source": "CNBC Top Stories",
+      "source_type": "media",
+      "date": "08/27",
+      "summary": "美联储主席提名人选沃什（Kevin Warsh）将于周五在杰克逊霍尔年会上发表主旨演讲，市场关注其政策立场表态。",
+      "importance": 3,
+      "rank": 0,
+      "tags": [
+        "美联储",
+        "宏观"
       ],
       "locale": "overseas",
       "market": "us"
