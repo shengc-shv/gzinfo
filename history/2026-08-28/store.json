@@ -1,6 +1,6 @@
 {
   "date": "2026-08-28",
-  "updatedAt": "2026-08-28T02:08:52.545Z",
+  "updatedAt": "2026-08-28T02:39:00.921Z",
   "executive": {
     "hero_line": "",
     "must_read": [],
@@ -9,13 +9,14 @@
   },
   "stock_recap": {
     "us": {
-      "overview": "市场静待周五鲍尔森在Jackson Hole讲话，观望情绪浓厚，盘面涨跌互现。",
+      "overview": "市场聚焦鲍威尔继任者Warsh杰克逊霍尔讲话，科技与地缘博弈交织盘面。",
       "sectors": [
-        "半导体：SK海力士宣布印第安纳州建厂，存储概念受关注",
-        "医药：吉利德每日一次HIV新药获FDA批准",
-        "中美贸易：特朗普就访华议题对华强硬表态，敏感板块承压"
+        "半导体：SK海力士宣布印第安纳为关键存储基地，产能扩张预期升温",
+        "AI与监管：法院阻止五角大楼将Anthropic列入供应链黑名单，AI概念情绪改善",
+        "能源地缘：伊朗将霍尔木兹海峡重开与结束地区战争挂钩，伊朗冲突变量持续",
+        "医药：吉利德每日HIV新药获FDA批准，相关个股受关注"
       ],
-      "spoken": "美股盘前静待周五Jackson Hole美联储主席讲话，市场观望情绪较浓，盘面涨跌互现。半导体板块受SK海力士赴美建厂消息带动，存储概念受关注。医药板块吉利德每日一次HIV新药获FDA批准，股价有支撑。贸易敏感型板块则因特朗普对华强硬表态有所承压。",
+      "spoken": "美股盘前聚焦美联储主席Warsh杰克逊霍尔讲话，科技与地缘博弈交织。法院阻止五角大楼将Anthropic列入供应链黑名单，AI概念情绪有所改善。SK海力士宣布印第安纳为关键存储基地，半导体产能扩张预期升温。伊朗将霍尔木兹海峡重开与结束地区战争挂钩，地缘风险变量持续。吉利德每日HIV新药获FDA批准，医药板块受到关注。",
       "meta": {
         "source": "CNBC Top Stories",
         "crossCheck": "新浪行情",
@@ -40,15 +41,15 @@
       ]
     },
     "aShare": {
-      "overview": "沪指涨逾1%科创50大涨近4%，半导体板块集体爆发引领市场。",
+      "overview": "沪指涨逾1%，科创50大涨近4%，半导体板块集体爆发引领市场。",
       "sectors": [
-        "半导体：科创50大涨近4%，存储龙头封板叠加英伟达捧PTFE概念爆发",
-        "光模块：中报业绩亮眼，机构称光纤光缆配置时点已至",
-        "新能源/电网：美国限制外国电网设备，上市公司密集回应",
-        "贵金属/防御：科技强势下市场风格偏向成长",
-        "汽车：受美国电网行政令及贸易摩擦升温影响承压"
+        "半导体：科创板大涨近4%，存储芯片业绩爆发成主引擎",
+        "光模块：中报业绩亮眼叠加英伟达力捧PTFE催化，集体走强",
+        "锂矿：锂矿龙头净利同比增超4900%，获险资新进重仓",
+        "地产：瑞安房地产称楼市接近筑底，但板块整体仍偏弱",
+        "光纤光缆：机构称配置时点已至，迎来重磅催化"
       ],
-      "spoken": "A股沪指涨逾1%，科创50指数大涨近4%，成长风格全面占优。半导体板块集体爆发，存储龙头强势封板，英伟达力捧的PTFE概念跟涨。光模块中报业绩亮眼获融资客抢筹，新能源板块则因美国限制外国电网设备有所承压。",
+      "spoken": "A股沪指涨逾1%，科创50指数大涨近4%，半导体板块集体爆发引领市场。存储芯片业绩同比增超22倍，光模块中报亮眼叠加英伟达力捧PTFE催化同步走强。锂矿龙头净利大增超49倍获险资新进重仓。地产板块瑞安表态接近筑底但仍偏弱，光纤光缆迎重磅催化机构称配置时点已至。",
       "meta": {
         "source": "东方财富",
         "crossCheck": "新浪行情",
@@ -73,14 +74,14 @@
       ]
     },
     "hk": {
-      "overview": "港股盘面消息面清淡，恒指维持震荡格局，个股以业绩公告为主。",
+      "overview": "港股盘面缺乏方向性催化，上市公司密集披露中期业绩与关联交易公告。",
       "sectors": [
-        "半导体/科技：A股科创板大涨带动港股科技股情绪",
-        "金融地产：缺乏催化，整体维持震荡",
-        "能源/原材料：受美中贸易摩擦升温影响表现疲弱",
-        "医药：美股吉利德获批提振创新药板块情绪"
+        "地产：龙头表态楼市接近筑底，关注业绩兑现节奏",
+        "半导体：受A股存储芯片爆发联动，板块情绪受到提振",
+        "新能源：锂矿龙头业绩大增，港股相关标的有望联动",
+        "金融：半年报密集披露期，业绩分化主导个股表现"
       ],
-      "spoken": "港股盘面消息面清淡，恒指维持震荡格局，个股以业绩公告为主。科技股受A股科创板大涨带动情绪有所提振，医药板块受美股吉利德新药获批利好。能源及原材料板块则因美中贸易摩擦升温有所承压。整体市场缺乏方向性催化，观望氛围较浓。",
+      "spoken": "港股盘面缺乏方向性催化，上市公司密集披露中期业绩与关联交易公告。地产龙头表态楼市接近筑底，关注业绩兑现节奏。半导体受A股存储芯片业绩爆发联动，板块情绪有所提振。锂矿龙头净利大增，新能源相关标的有望联动。半年报密集披露期，业绩分化主导个股表现。",
       "meta": {
         "source": "新浪财经·港股",
         "crossCheck": "新浪行情",
@@ -90,12 +91,12 @@
         {
           "name": "恒生指数",
           "value": "25565.74",
-          "changePct": "-0.48%"
+          "changePct": "+0.02%"
         },
         {
           "name": "恒生科技",
           "value": "4620.29",
-          "changePct": "-0.57%"
+          "changePct": "+0.18%"
         }
       ]
     },
@@ -104,28 +105,29 @@
   },
   "stock_news": [
     {
-      "url": "https://finance.eastmoney.com/a/202608273855960739.html",
-      "title_cn": "知情人士回应“A股未盈利企业无法上市”",
-      "source": "东方财富",
-      "source_type": "media",
-      "date": "08/27",
-      "summary": "针对\"A股未盈利企业无法上市\"的传闻，知情人士回应称相关报道不准确，A股对未盈利企业的上市通道并未关闭。",
-      "importance": 2,
-      "rank": 0,
-      "tags": [
-        "政策",
-        "A股"
-      ],
-      "locale": "national",
-      "market": "a-share"
-    },
-    {
       "url": "https://finance.eastmoney.com/a/202608273856312185.html",
       "title_cn": "特朗普就美国电力电网中的外国制造设备宣布“国家紧急状态”外交部回应",
       "source": "东方财富",
       "source_type": "media",
       "date": "08/27",
-      "summary": "特朗普就美国电力电网中的外国制造设备宣布\"国家紧急状态\"，中国外交部回应称此举泛化国家安全概念，中方将采取必要措施维护自身正当权益。",
+      "summary": "特朗普就美国电力电网中的外国制造设备宣布\"国家紧急状态\"，中国外交部就此作出回应。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "政策",
+        "贸易",
+        "能源"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202608273856994327.html",
+      "title_cn": "美国签令限制外国电网设备多家上市公司回应",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "08/27",
+      "summary": "美国签署行政令限制外国电网设备，多家A股上市公司对此作出回应。",
       "importance": 2,
       "rank": 0,
       "tags": [
@@ -142,30 +144,13 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/27",
-      "summary": "8月27日A股放量上涨，沪指涨逾1%，科创50指数大涨近4%，半导体板块集体爆发领涨市场。",
-      "importance": 2,
+      "summary": "8月27日A股沪指涨逾1%，科创50指数大涨近4%，半导体板块集体爆发。",
+      "importance": 3,
       "rank": 0,
       "tags": [
         "A股",
         "半导体",
-        "市场行情"
-      ],
-      "locale": "national",
-      "market": "a-share"
-    },
-    {
-      "url": "https://finance.eastmoney.com/a/202608273856994327.html",
-      "title_cn": "美国签令限制外国电网设备多家上市公司回应",
-      "source": "东方财富",
-      "source_type": "media",
-      "date": "08/27",
-      "summary": "美国签署行政令限制外国电网设备进入美国电力系统，多家A股上市公司回应称对美业务占比较小或暂无影响。",
-      "importance": 2,
-      "rank": 0,
-      "tags": [
-        "政策",
-        "贸易",
-        "能源"
+        "大盘"
       ],
       "locale": "national",
       "market": "a-share"
@@ -176,12 +161,12 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/27",
-      "summary": "8月27日晚间沪深两市多家上市公司发布重大事项公告，涵盖业绩、增减持、回购、重组等。",
+      "summary": "8月27日晚间沪深上市公司密集披露重大事项公告。",
       "importance": 1,
       "rank": 0,
       "tags": [
         "A股",
-        "公司公告"
+        "公告"
       ],
       "locale": "national",
       "market": "a-share"
@@ -192,13 +177,13 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/27",
-      "summary": "中报披露季光模块板块业绩亮眼集体爆发，融资资金抢筹24只个股，单只净买入均超过1亿元。",
+      "summary": "光模块板块中报业绩亮眼集体爆发，融资客单日抢筹24股金额过亿。",
       "importance": 2,
       "rank": 0,
       "tags": [
+        "光模块",
         "财报",
-        "光通信",
-        "A股"
+        "融资"
       ],
       "locale": "national",
       "market": "a-share"
@@ -209,12 +194,12 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/28",
-      "summary": "特朗普签署行政令将安大略湖更名为\"美国湖\"，美加贸易战进一步升级。",
+      "summary": "特朗普签署行政令将安大略湖更名为\"美国湖\"，美加贸易战持续升温。",
       "importance": 2,
       "rank": 0,
       "tags": [
-        "贸易",
-        "政策"
+        "政策",
+        "贸易"
       ],
       "locale": "national",
       "market": "a-share"
@@ -225,30 +210,13 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/27",
-      "summary": "英伟达在产品中力推PTFE材料，相关A股概念股集体爆发，板块多股涨停。",
+      "summary": "英伟达力捧PTFE材料，相关概念股集体爆发。",
       "importance": 2,
       "rank": 0,
       "tags": [
         "AI",
         "半导体",
-        "A股"
-      ],
-      "locale": "national",
-      "market": "a-share"
-    },
-    {
-      "url": "https://finance.eastmoney.com/a/202608273856145425.html",
-      "title_cn": "两则重磅催化市场站回“光”里！机构称光纤光缆配置时点已至(附股)",
-      "source": "东方财富",
-      "source_type": "media",
-      "date": "08/27",
-      "summary": "受AI算力需求驱动，光纤光缆板块迎来催化，机构研报称该板块配置时点已至并列出相关标的。",
-      "importance": 2,
-      "rank": 0,
-      "tags": [
-        "光通信",
-        "AI",
-        "A股"
+        "材料"
       ],
       "locale": "national",
       "market": "a-share"
@@ -259,13 +227,61 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/28",
-      "summary": "某存储芯片牛股公布中报，净利润超36亿元，同比增长超过2200%，业绩大幅超预期。",
+      "summary": "存储芯片牛股公布业绩，上半年净赚超36亿元，同比增长超2200%。",
       "importance": 3,
       "rank": 0,
       "tags": [
+        "存储芯片",
         "财报",
-        "半导体",
-        "存储芯片"
+        "半导体"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202608273856145425.html",
+      "title_cn": "两则重磅催化市场站回“光”里！机构称光纤光缆配置时点已至(附股)",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "08/27",
+      "summary": "受两则重磅事件催化，光纤光缆板块站上风口，机构称板块配置时点已至。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "光通信",
+        "光纤光缆"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202608283857152139.html",
+      "title_cn": "净利润大增超4900%锂矿龙头获险资新进重仓！20股险资持仓环比翻倍（附名单）",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "08/28",
+      "summary": "锂矿龙头净利润同比增长超4900%，获险资新进重仓；20股险资持仓环比翻倍。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "锂矿",
+        "财报",
+        "保险资金"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202608283857746997.html",
+      "title_cn": "瑞安房地产罗康瑞：楼市差不多到筑底阶段",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "08/28",
+      "summary": "瑞安房地产罗康瑞表示，楼市差不多到筑底阶段。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "地产"
       ],
       "locale": "national",
       "market": "a-share"
@@ -276,29 +292,11 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/28",
-      "summary": "中信建投研报指出，办公软件有望成为新一轮B端的平台级产品和新流量入口。",
+      "summary": "中信建投研报认为，办公有望成为新一轮B端的平台级产品及新流量入口。",
       "importance": 1,
       "rank": 0,
       "tags": [
-        "AI",
         "软件",
-        "研报"
-      ],
-      "locale": "national",
-      "market": "a-share"
-    },
-    {
-      "url": "https://finance.eastmoney.com/a/202608283857336162.html",
-      "title_cn": "中信证券：伴随FDE交付效率改善预计头部CSP、平台应用软件厂商业绩将跟随受益",
-      "source": "东方财富",
-      "source_type": "media",
-      "date": "08/28",
-      "summary": "中信证券研报认为，伴随FDE交付效率改善，预计头部CSP及平台应用软件厂商业绩将跟随受益。",
-      "importance": 1,
-      "rank": 0,
-      "tags": [
-        "AI",
-        "云服务",
         "研报"
       ],
       "locale": "national",
@@ -310,12 +308,12 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/28",
-      "summary": "港股上市公司于港交所披露易发布海外监管公告，内容为交易最新情况。",
+      "summary": "港交所披露易发布海外监管公告——交易更新。",
       "importance": 1,
       "rank": 0,
       "tags": [
         "港股",
-        "公司公告"
+        "公告"
       ],
       "locale": "national",
       "market": "hk"
@@ -326,12 +324,12 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/28",
-      "summary": "港股上市公司于港交所披露易发布海外监管公告（其他类）。",
+      "summary": "港交所披露易发布海外监管公告——其他事项。",
       "importance": 1,
       "rank": 0,
       "tags": [
         "港股",
-        "公司公告"
+        "公告"
       ],
       "locale": "national",
       "market": "hk"
@@ -342,12 +340,12 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/28",
-      "summary": "港股上市公司发布内幕消息公告，内容涉及子公司业绩结果。",
+      "summary": "港交所披露易发布内幕消息/子公司业绩公告。",
       "importance": 1,
       "rank": 0,
       "tags": [
         "港股",
-        "公司公告",
+        "公告",
         "财报"
       ],
       "locale": "national",
@@ -359,12 +357,12 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/28",
-      "summary": "港股上市公司于港交所披露易发布公告（其他类杂项）。",
+      "summary": "港交所披露易发布公告及通告——其他杂项。",
       "importance": 1,
       "rank": 0,
       "tags": [
         "港股",
-        "公司公告"
+        "公告"
       ],
       "locale": "national",
       "market": "hk"
@@ -375,12 +373,12 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/28",
-      "summary": "港股上市公司于港交所披露易发布通函（其他类）。",
+      "summary": "港交所披露易发布通函——其他事项。",
       "importance": 1,
       "rank": 0,
       "tags": [
         "港股",
-        "公司公告"
+        "公告"
       ],
       "locale": "national",
       "market": "hk"
@@ -391,12 +389,12 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/28",
-      "summary": "港股上市公司于港交所披露易发布通函（其他类）。",
+      "summary": "港交所披露易发布通函——其他事项。",
       "importance": 1,
       "rank": 0,
       "tags": [
         "港股",
-        "公司公告"
+        "公告"
       ],
       "locale": "national",
       "market": "hk"
@@ -407,12 +405,13 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/28",
-      "summary": "港股上市公司于港交所披露易发布中期/半年度报告。",
+      "summary": "港交所披露易发布中期/半年度财务报告及ESG信息。",
       "importance": 1,
       "rank": 0,
       "tags": [
         "港股",
-        "财报"
+        "财报",
+        "ESG"
       ],
       "locale": "national",
       "market": "hk"
@@ -423,12 +422,12 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/28",
-      "summary": "港股上市公司于港交所披露易发布海外监管公告，内容为业务最新情况。",
+      "summary": "港交所披露易发布海外监管公告——业务更新。",
       "importance": 1,
       "rank": 0,
       "tags": [
         "港股",
-        "公司公告"
+        "公告"
       ],
       "locale": "national",
       "market": "hk"
@@ -439,12 +438,12 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/28",
-      "summary": "港股上市公司于港交所披露易发布通函（其他类）。",
+      "summary": "港交所披露易发布通函——其他事项。",
       "importance": 1,
       "rank": 0,
       "tags": [
         "港股",
-        "公司公告"
+        "公告"
       ],
       "locale": "national",
       "market": "hk"
@@ -455,12 +454,12 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/28",
-      "summary": "港股上市公司于港交所披露易发布通函（其他类）。",
+      "summary": "港交所披露易发布通函——其他事项。",
       "importance": 1,
       "rank": 0,
       "tags": [
         "港股",
-        "公司公告"
+        "公告"
       ],
       "locale": "national",
       "market": "hk"
@@ -471,12 +470,12 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/28",
-      "summary": "港股上市公司发布公告，内容涉及关连交易/须披露交易/持续关连交易。",
+      "summary": "港交所披露易发布关联交易/须披露交易/持续关联交易公告。",
       "importance": 1,
       "rank": 0,
       "tags": [
         "港股",
-        "公司公告"
+        "关联交易"
       ],
       "locale": "national",
       "market": "hk"
@@ -487,12 +486,13 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/28",
-      "summary": "港股上市公司于港交所披露易发布中期/半年度报告。",
+      "summary": "港交所披露易发布中期/半年度财务报告及ESG信息。",
       "importance": 1,
       "rank": 0,
       "tags": [
         "港股",
-        "财报"
+        "财报",
+        "ESG"
       ],
       "locale": "national",
       "market": "hk"
@@ -503,7 +503,7 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/28",
-      "summary": "美国一法官阻止五角大楼将AI公司Anthropic列入供应链风险黑名单的举措。",
+      "summary": "美国法官阻止五角大楼将AI公司Anthropic列入供应链风险黑名单。",
       "importance": 2,
       "rank": 0,
       "tags": [
@@ -520,13 +520,30 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/28",
-      "summary": "在中美官员就习近平访美进行会晤之际，特朗普对北京强硬表态升级。",
+      "summary": "在中美官员为习近平访美做准备之际，特朗普对北京的言论进一步升级。",
       "importance": 3,
       "rank": 0,
       "tags": [
         "中美关系",
         "政策",
-        "贸易"
+        "中概股"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/08/28/us-iran-war-trump-hormuz-oman-centcom.html",
+      "title_cn": "Iran links Hormuz reopening to ending regional wars as Trump reportedly rejects return to June deal",
+      "source": "CNBC Top Stories",
+      "source_type": "media",
+      "date": "08/28",
+      "summary": "伊朗将霍尔木兹海峡重新开放与结束地区战争挂钩，特朗普据报拒绝回到6月协议。",
+      "importance": 3,
+      "rank": 0,
+      "tags": [
+        "地缘政治",
+        "能源",
+        "原油"
       ],
       "locale": "overseas",
       "market": "us"
@@ -537,12 +554,12 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/27",
-      "summary": "SK海力士CEO表示，印第安纳州将成为公司到2030年的关键存储芯片生产基地，首座美国工厂已开工建设。",
+      "summary": "SK海力士CEO表示，印第安纳州到2030年将成为重要存储芯片生产基地，首座美国工厂已动工。",
       "importance": 2,
       "rank": 0,
       "tags": [
-        "半导体",
         "存储芯片",
+        "半导体",
         "美股"
       ],
       "locale": "overseas",
@@ -554,12 +571,12 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/27",
-      "summary": "特朗普签署行政令将安大略湖更名为\"美国湖\"，美加贸易紧张局势持续升级。",
+      "summary": "特朗普签署行政令将安大略湖更名为\"美国湖\"，正值美加贸易战持续。",
       "importance": 2,
       "rank": 0,
       "tags": [
-        "贸易",
-        "政策"
+        "政策",
+        "贸易"
       ],
       "locale": "overseas",
       "market": "us"
@@ -570,11 +587,12 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/27",
-      "summary": "美联储主席提名人选沃什（Kevin Warsh）将于周五在杰克逊霍尔年会上发表主旨演讲，市场关注其政策立场表态。",
+      "summary": "美联储主席沃什将于周五在杰克逊霍尔年会上发表关键演讲，市场密切关注。",
       "importance": 3,
       "rank": 0,
       "tags": [
         "美联储",
+        "货币政策",
         "宏观"
       ],
       "locale": "overseas",
@@ -586,12 +604,11 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/27",
-      "summary": "报道称部分中国超高净值人士此前从新加坡撤离，目前希望重返新加坡市场。",
+      "summary": "报道指中国超级富豪曾离开新加坡，现希望返回。",
       "importance": 1,
       "rank": 0,
       "tags": [
         "中概股",
-        "新加坡",
         "财富"
       ],
       "locale": "overseas",
@@ -603,29 +620,12 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/27",
-      "summary": "美国FDA批准吉利德（Gilead）每日一次的HIV口服药片，旨在简化部分患者的治疗方案。",
+      "summary": "FDA批准吉利德每日一次的HIV药物，旨在简化部分患者的治疗方案。",
       "importance": 2,
       "rank": 0,
       "tags": [
         "医药",
-        "美股"
-      ],
-      "locale": "overseas",
-      "market": "us"
-    },
-    {
-      "url": "https://www.cnbc.com/2026/08/28/deepseek-founder-liang-wenfeng-high-flyer-china-tech-ipos-funding.html",
-      "title_cn": "DeepSeek looks for fresh capital as founder’s quant empire navigates China’s choppy IPO market",
-      "source": "CNBC Top Stories",
-      "source_type": "media",
-      "date": "08/28",
-      "summary": "AI公司DeepSeek寻求新一轮融资，其创始人旗下量化基金业务正应对中国波动的IPO市场环境。",
-      "importance": 2,
-      "rank": 0,
-      "tags": [
-        "AI",
-        "融资",
-        "中概股"
+        "FDA"
       ],
       "locale": "overseas",
       "market": "us"
@@ -636,13 +636,12 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/27",
-      "summary": "据《纽约时报》报道，小特朗普建议共和党各州总检察长不要对预测市场进行打压。",
+      "summary": "据《纽约时报》报道，小唐纳德·特朗普建议共和党州检察长不要打击预测市场。",
       "importance": 1,
       "rank": 0,
       "tags": [
-        "预测市场",
         "政策",
-        "美股"
+        "预测市场"
       ],
       "locale": "overseas",
       "market": "us"
@@ -653,13 +652,13 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/27",
-      "summary": "预测市场押注美联储提名人沃什在杰克逊霍尔演讲中的表态及可能引发的市场反应。",
+      "summary": "预测市场押注沃什杰克逊霍尔演讲内容及对市场可能的反应。",
       "importance": 2,
       "rank": 0,
       "tags": [
         "美联储",
-        "宏观",
-        "预测市场"
+        "预测市场",
+        "宏观"
       ],
       "locale": "overseas",
       "market": "us"
@@ -670,13 +669,12 @@
       "source": "Investing.com News",
       "source_type": "media",
       "date": "08/28",
-      "summary": "维珍澳洲发布2026下半年财报电话会纪要，公司业绩表现强劲。",
+      "summary": "维珍澳洲召开财报电话会议，公布2026年下半年业绩表现强劲。",
       "importance": 1,
       "rank": 0,
       "tags": [
         "财报",
-        "航空",
-        "美股"
+        "航空"
       ],
       "locale": "overseas",
       "market": "us"
@@ -687,12 +685,12 @@
       "source": "Investing.com News",
       "source_type": "media",
       "date": "08/28",
-      "summary": "Shine Justice发布2026下半年财报电话会纪要，基础业务业绩较上年同期走强。",
+      "summary": "Shine Justice召开财报电话会议，公布2026年下半年基础业绩走强。",
       "importance": 1,
       "rank": 0,
       "tags": [
         "财报",
-        "美股"
+        "法律服务"
       ],
       "locale": "overseas",
       "market": "us"
