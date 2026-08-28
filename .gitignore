@@ -31,3 +31,4 @@
 
 # pre-analysis runtime artifact (analyze-gz.ts output, regenerated per run)
 /data/gz-analysis.json
+ai-workspace/

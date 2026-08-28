@@ -15,9 +15,7 @@
     "build-site": "node scripts/build-site.mjs",
     "test": "node --import tsx --test \"tests/**/*.test.ts\"",
     "open": "node scripts/open-report.mjs",
-    "tts-fallback": "tsx scripts/tts-fallback.ts",
-    "feedback-report": "tsx scripts/feedback-report.ts",
-    "feedback-insights": "tsx scripts/feedback-insights.ts"
+    "tts-fallback": "tsx scripts/tts-fallback.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.96.0",

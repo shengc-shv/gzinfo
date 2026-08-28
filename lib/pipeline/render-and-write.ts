@@ -19,6 +19,18 @@ import type { AudioMeta } from "../audio/audio";
 import type { ArticleInput, DailyReport } from "../types";
 import type { DailyContext } from "./context";
 
+/**
+ * 原子写：先写 `${target}.tmp`，再 rename 到最终路径。
+ * rename 在同一文件系统上是原子操作，避免写大文件中途崩溃留下"半个报告"
+ * （有 json 没 html / 写一半的 json 损坏等情况）。
+ * 崩溃残留的 `.tmp` 无害，下次运行会被覆盖。
+ */
+function atomicWrite(target: string, content: string): void {
+  const tmp = `${target}.tmp`;
+  fs.writeFileSync(tmp, content, "utf8");
+  fs.renameSync(tmp, target);
+}
+
 export interface RenderAndWriteInput {
   /** 最终 report（含 side outputs） */
   report: DailyReport;
@@ -49,17 +61,16 @@ export async function renderAndWrite(
   const d = path.join(REPORTS_DIR, date);
   fs.mkdirSync(d, { recursive: true });
   const b = path.join(d, date);
-  fs.writeFileSync(`${b}.json`, JSON.stringify(report, null, 2), "utf8");
+  atomicWrite(`${b}.json`, JSON.stringify(report, null, 2));
   // Sidecar with the rolling article list (today + past-30d) + LLM-attached
   // summary, so scripts/render.ts can rebuild HTML/MD for UI iteration
   // without re-fetching or re-calling the LLM.
-  fs.writeFileSync(
+  atomicWrite(
     `${b}-articles.json`,
     JSON.stringify({ date, articles: rolling }, null, 2),
-    "utf8",
   );
-  fs.writeFileSync(`${b}.html`, html, "utf8");
-  if (md) fs.writeFileSync(`${b}.md`, md, "utf8");
+  atomicWrite(`${b}.html`, html);
+  if (md) atomicWrite(`${b}.md`, md);
   ctx.log.info(
     "render",
     `wrote ${b}.{json,html${md ? ",md" : ""},articles.json}（唯一存储 data/history/reports/）`,
@@ -67,10 +78,9 @@ export async function renderAndWrite(
 
   // ③ 导出归一化全量池（关键词漏斗后），供"预分析"任务或人工核查比对
   fs.mkdirSync("data", { recursive: true });
-  fs.writeFileSync(
+  atomicWrite(
     "data/fetched-articles.json",
     JSON.stringify(filteredArticles, null, 2),
-    "utf8",
   );
   ctx.log.info(
     "render",

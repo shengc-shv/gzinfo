@@ -3,8 +3,8 @@
  *
  * 背景：每日 daily 跑时，sina-a-stock 等 7 源只给「当日新文」。前一天抓的条目
  * 进入 article-history.json（7 天窗口可用），但如果它们从未被 LLM 预分析过
- * （ai_relevant=null / summary 缺失）→ mergeRolling 把它们合入 sections 后，render
- * 阶段用 `if (!summary) continue` 踢出（避免空卡），最终用户看不到这些条目。
+ * （ai_relevant=null / summary/excerpt 缺失）→ mergeRolling 把它们合入 sections 后，
+ * render 阶段用 `if (!summary) continue` 踢出（避免空卡），最终用户看不到这些条目。
  *
  * 例如用户给的 URL：
  *   https://finance.sina.com.cn/jjxw/2026-08-27/doc-iniptaff5800386.shtml
@@ -12,7 +12,8 @@
  *   → 8-28 报告 sections 里被 line 1305 踢出。
  *
  * 本脚本：扫描 history 中 ai_relevant=null 或 subcategory=null 或 summary 缺失
- * 的条目，LLM 逐条补标（ai_relevant + subcategory + summary），写回 article-history.json。
+ * 或 excerpt 缺失的条目，LLM 逐条补标（ai_relevant + subcategory + summary + excerpt），
+ * 写回 article-history.json。
  *
  * 与 scripts/retag-relevance.ts 区别：retag-relevance 是清理无相关条目（强制 ai_relevant=false）；
  *                  retag-fill  是给空条目打标（标 ai_relevant=true/false + subcategory + summary）。
@@ -45,16 +46,17 @@ interface HistoryEntry {
 const SYSTEM_PROMPT =
   "你是股份行广州分行零售研判编辑。逐条给 history 补 ai_relevant/subcategory/summary 三个字段。严格按 schema 输出 JSON 数组。";
 
-const USER_TEMPLATE = `请对以下每条资讯补三个字段（输出 JSON 数组，每条对应一条，顺序与输入一致）：
+const USER_TEMPLATE = `请对以下每条资讯补四个字段（输出 JSON 数组，每条对应一条，顺序与输入一致）：
 - ai_relevant (boolean): 与银行零售/对公业务/分行决策有参考价值则 true；纯噪声（娱乐/无关地区/纯行政/已废弃话题）则 false
 - subcategory (string): 归到 biz_insight / policy_market / gz_local / gz_wealth / gz_credit / tech / ipo / gd-ipo 之一；不确定时给 "uncategorized"
 - summary (string, 30-70 字): 银行视角一句话摘要
+- excerpt (string, 30-90 字): 用于 render 阶段兜底（无 excerpt 会被 line 1305 踢出）— 简述这条新闻的关键信息（与 summary 区别：summary 是"对本行意义"，excerpt 是"新闻本身内容"）
 
-输入（JSON 数组，每条含 url/title/excerpt/sourceId）：
+输入（JSON 数组，每条含 url/title/sourceId — excerpt 可选作为参考）：
 {ITEMS_JSON}
 
 输出 STRICTLY 一个 JSON 数组（无 markdown 代码块）：
-[{"url":"...","ai_relevant":true,"subcategory":"...","summary":"..."}, ...]`;
+[{"url":"...","ai_relevant":true,"subcategory":"...","summary":"...","excerpt":"..."}, ...]`;
 
 function chunk<T>(arr: T[], n: number): T[][] {
   const out: T[][] = [];
@@ -66,6 +68,8 @@ function needRetag(e: HistoryEntry): boolean {
   if (e.ai_relevant !== true) return true;
   if (!e.subcategory) return true;
   if (!e.summary || !e.summary.trim()) return true;
+  // B 2026-08-28：excerpt 也纳入补标（history 中 excerpt 空 → mergeRolling 时 summary 兜底也空 → 板块看不到）
+  if (typeof e.excerpt !== "string" || !e.excerpt.trim()) return true;
   return false;
 }
 
@@ -166,6 +170,11 @@ async function main() {
       }
       if (d.subcategory) e.subcategory = d.subcategory;
       if (d.summary) e.summary = d.summary;
+      // B：excerpt 补（保证 mergeRolling 不被 line 1305 踢出）
+      if (d.excerpt && (typeof e.excerpt !== "string" || !e.excerpt.trim())) {
+        e.excerpt = d.excerpt;
+        written++;
+      }
     }
     fs.writeFileSync(HIST_PATH, JSON.stringify(hist, null, 2), "utf8");
     console.log(`[retag-fill] 写回 ${HIST_PATH}，变更 ${written} 条 ai_relevant`);

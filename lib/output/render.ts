@@ -37,15 +37,7 @@ export type { SourceGroup, SubGroup, RawByCategory } from "./render/cards";
 import { TIER_COLORS, THEME_CSS } from "./render/theme";
 import type { AudioMeta } from "../audio/audio";
 import { selectTopMustRead } from "../ai/select-top";
-import type { FeedbackSection } from "../feedback/storage";
-import {
-  renderCardFeedbackBar,
-  renderAudioFeedbackBar,
-  renderFeedbackFooter,
-  generateInlineFeedbackScript,
-  generateAudioHighlightScript,
-  FEEDBACK_CSS,
-} from "../feedback/inline-script";
+import { generateAudioHighlightScript, AUDIO_HIGHLIGHT_CSS } from "../feedback/inline-script";
 import { getReportTz } from "../utils";
 import type { Category, SourceDef } from "../sources/types";
 import { SOURCE_TIER_LABELS, type SourceTier } from "../sources/tiers";
@@ -831,7 +823,6 @@ const MARKET_BADGE: Record<string, { label: string; cls: string }> = {
 export function renderReportItemHtml(
   item: ReportItem,
   showSource = true,
-  section: FeedbackSection | "" = "",
 ): string {
   const title = escapeHtml(item.title_cn || item.title_orig || "");
   const url = escapeHtml(item.url);
@@ -844,13 +835,11 @@ export function renderReportItemHtml(
     .join("");
   const mkt = item.market ? MARKET_BADGE[item.market] : undefined;
   const mktBadge = mkt ? `<span class="mkt-badge ${mkt.cls}">${mkt.label}</span>` : "";
-  const fbBar = section ? renderCardFeedbackBar(item.url, section) : "";
-  return `<article class="brief${item.importance === 3 ? " must" : ""}" data-fb-card data-fb-section="${escapeHtml(section)}" data-source="${item.source_type}" data-tags="${(item.tags ?? []).join(" ")}" data-market="${escapeHtml(item.market ?? "")}">
+  return `<article class="brief${item.importance === 3 ? " must" : ""}" data-source="${item.source_type}" data-tags="${(item.tags ?? []).join(" ")}" data-market="${escapeHtml(item.market ?? "")}">
   <div class="bm">${mktBadge}<span class="src-badge ${badge.cls}">${badge.label}</span>${showSource && item.source ? `<span>${escapeHtml(item.source)}</span>` : ""}${time ? `<span>${time}</span>` : ""}${item.importance === 3 ? `<span class="imp-badge">必知</span>` : ""}</div>
   <h3><a href="${url}" target="_blank" rel="noopener noreferrer">${title}</a></h3>
   ${summary ? `<p class="sum">${summary}</p>` : ""}
   ${tags ? `<div class="tags">${tags}</div>` : ""}
-  ${fbBar}
 </article>`;
 }
 
@@ -860,7 +849,6 @@ const DEPT_TAGS = new Set(["财富", "私行", "客群", "信贷"]);
 export function renderReportCardList(
   items: ReportItem[],
   showSource = true,
-  section: FeedbackSection | "" = "",
 ): string {
   if (items.length === 0) return `<p class="empty">${STR.emptySource}</p>`;
   // 稳定排序：带 4 部门零售标签的排前，无标签的沉底（同组内保持原顺序：今日 rank / 时间）。
@@ -869,11 +857,11 @@ export function renderReportCardList(
   const sorted = [...items].sort((a, b) => hasTag(a) - hasTag(b));
   const top = sorted.slice(0, 5);
   const more = sorted.slice(5);
-  let html = top.map((a) => renderReportItemHtml(a, showSource, section)).join("\n");
+  let html = top.map((a) => renderReportItemHtml(a, showSource)).join("\n");
   if (more.length > 0) {
     html +=
       more
-        .map((a) => renderReportItemHtml(a, showSource, section).replace('<article class="brief', '<article class="brief more'))
+        .map((a) => renderReportItemHtml(a, showSource).replace('<article class="brief', '<article class="brief more'))
         .join("\n") +
       `<button class="expand-btn" type="button">展开其余 ${more.length} 条</button>`;
   }
@@ -1033,11 +1021,10 @@ function renderReportExec(report: DailyReport): string {
       const inner = m.url
         ? `<a class="must-body must-link" href="${escapeHtml(m.url)}" target="_blank" rel="noopener">${body}</a>`
         : `<div class="must-body">${body}</div>`;
-      const fb = m.url ? renderCardFeedbackBar(m.url, "must_read") : "";
       const isTop = m.url && topMustUrls.has(m.url);
       const topBadge = isTop ? `<span class="must-top-badge" title="今日三件事：行长音频重点">三件事</span>` : "";
       const cls = isTop ? "must-card must-top" : "must-card";
-      return `<li class="${cls}" data-fb-card data-fb-section="must_read" data-audio-section="must" ${isTop ? 'data-top-must="true"' : ""}><span class="must-index">${i + 1}</span>${inner}${topBadge}${fb}</li>`;
+      return `<li class="${cls}" data-audio-section="must" ${isTop ? 'data-top-must="true"' : ""}><span class="must-index">${i + 1}</span>${inner}${topBadge}</li>`;
     })
     .join("");
   const insights = report.insights
@@ -1049,8 +1036,7 @@ function renderReportExec(report: DailyReport): string {
         : "";
       // 用 topic 作为 feedback key（insights 没有 url 字段；topic 在 insight 列表内唯一性靠 .sources[0].url 兜底）
       const fbKey = (it.sources && it.sources[0]?.url) || `insight:${it.topic}`;
-      const fb = renderCardFeedbackBar(fbKey, "insights");
-      return `<article class="insight" data-fb-card data-fb-section="insights" data-audio-section="insight">
+      return `<article class="insight" data-audio-section="insight">
         ${(it.tags ?? []).length > 0
           ? `<div class="insight-tags">${(it.tags ?? [])
               .map((t) => `<span class="tag ${tagClsOf(t)}">${escapeHtml(t)}</span>`)
@@ -1059,7 +1045,6 @@ function renderReportExec(report: DailyReport): string {
         <h3>${escapeHtml(it.topic)}${srcMarks}</h3>
         ${it.impact ? `<p><b>影响：</b>${escapeHtml(it.impact)}</p>` : ""}
         ${it.action ? `<p><b>建议：</b>${escapeHtml(it.action)}</p>` : ""}
-        ${fb}
       </article>`;
     })
     .join("");
@@ -1076,14 +1061,12 @@ function renderReportExec(report: DailyReport): string {
       ? `<span class="risk-source-badge risk-source-${r.source.toLowerCase()}">${r.source === "T1" ? "官方" : r.source === "T1.5" ? "准官方" : "媒体"}</span>`
       : "";
     const fbKey = (r.sources && r.sources[0]?.url) || r.url || `risk:${r.topic}`;
-    const fb = renderCardFeedbackBar(fbKey, "risk" as FeedbackSection);
-    return `<article class="risk-card" data-fb-card data-fb-section="risk" data-audio-section="risk">
+    return `<article class="risk-card" data-audio-section="risk">
         <div class="risk-header">⚠️ 风险预警${sourceBadge}${srcMarks}</div>
         <h3>${escapeHtml(r.topic)}</h3>
         ${r.evidence ? `<p><b>依据：</b>${escapeHtml(r.evidence)}</p>` : ""}
         ${r.impact ? `<p><b>影响：</b>${escapeHtml(r.impact)}</p>` : ""}
         ${r.action ? `<p><b>建议：</b>${escapeHtml(r.action)}</p>` : ""}
-        ${fb}
       </article>`;
   })();
   return `<section class="exec-summary">
@@ -1373,6 +1356,8 @@ export function mergeStoredExecutive(
   // 标题 → url 回匹配：先宽松前缀包含（store 标题常是 sections 标题的精简版，
   // 如「8月LPR不变，房贷或续降」⊂「8月LPR保持不变，今年房贷还能否下调？」），
   // 再 Dice≥0.4 兜底（措辞改写宽容）。
+  // 不可变：复制入参，全程只改 out，最后返回 out（不污染调用方的 report）
+  const out: DailyReport = { ...report };
   const allItems: ReportItem[] = SECTIONS.flatMap((s) => report.sections[s] ?? []);
   const matchUrl = (title: string): string | undefined => {
     if (!title) return undefined;
@@ -1399,7 +1384,7 @@ export function mergeStoredExecutive(
     if (!url) continue; // 无法定位到报告内条目 → 丢弃（宁缺毋滥）
     must.push({ url, why: m.why, ...(m.title ? { title: m.title } : {}) });
   }
-  if (must.length > 0) report.must_read = must;
+  if (must.length > 0) out.must_read = must;
 
   // insights 回填（tag[] → tags[]，违禁过滤；sources：store 已含（生成时回链），原样透传）
   const insights: ReportInsight[] = [];
@@ -1416,7 +1401,7 @@ export function mergeStoredExecutive(
       ...(sources.length > 0 ? { sources } : {}),
     });
   }
-  if (insights.length > 0) report.insights = insights;
+  if (insights.length > 0) out.insights = insights;
 
   // M 层：风险回填（store.json 复用路径，SKIP_AI 必走此处）。evidence/impact/action 任一违禁 → 整条丢弃。
   if (exec.risk && exec.risk.topic) {
@@ -1426,7 +1411,7 @@ export function mergeStoredExecutive(
       const sources = Array.isArray(r.sources) && r.sources.length > 0
         ? r.sources.slice(0, 3).filter((s) => s && s.url).map((s) => ({ title: s.title || "", url: s.url }))
         : [];
-      report.risk = {
+      out.risk = {
         topic: r.topic,
         evidence: r.evidence || "",
         impact: r.impact || "",
@@ -1448,13 +1433,13 @@ export function mergeStoredExecutive(
     /今日暂无可推送重点/.test(report.hero_line);
   if (heroIsWeakFallback) {
     if (exec.hero_line) {
-      report.hero_line = exec.hero_line;
+      out.hero_line = exec.hero_line;
     } else if (must.length > 0) {
       const it = allItems.find((x) => x.url === must[0].url);
-      if (it) report.hero_line = `今日关注：${it.title_cn || it.title_orig || ""}`.slice(0, 70);
+      if (it) out.hero_line = `今日关注：${it.title_cn || it.title_orig || ""}`.slice(0, 70);
     }
   }
-  return report;
+  return out;
 }
 
 export function renderHtml(
@@ -1503,13 +1488,13 @@ export function renderHtml(
   })();
 
   const tabs = [
-    { id: "p-gz", label: "广州本地", section: "gz_local" as FeedbackSection, cls: "var(--c-gz)", count: gzLocal.length, items: gzLocal },
-    { id: "p-stock", label: "股市动态", section: "stock_news" as FeedbackSection, cls: "var(--c-trading)", count: stockNews.length, items: stockNews },
-    { id: "p-biz", label: "业务启示", section: "biz_insight" as FeedbackSection, cls: "var(--c-biz)", count: bizInsight.length, items: bizInsight },
-    { id: "p-pol", label: "政策与市场", section: "policy_market" as FeedbackSection, cls: "var(--c-pol)", count: policyMarket.length, items: policyMarket },
-    { id: "p-tech", label: "科技前沿", section: "tech" as FeedbackSection, cls: "var(--c-tech)", count: techAll.length, items: techAll },
+    { id: "p-gz", label: "广州本地", section: "gz_local", cls: "var(--c-gz)", count: gzLocal.length, items: gzLocal },
+    { id: "p-stock", label: "股市动态", section: "stock_news", cls: "var(--c-trading)", count: stockNews.length, items: stockNews },
+    { id: "p-biz", label: "业务启示", section: "biz_insight", cls: "var(--c-biz)", count: bizInsight.length, items: bizInsight },
+    { id: "p-pol", label: "政策与市场", section: "policy_market", cls: "var(--c-pol)", count: policyMarket.length, items: policyMarket },
+    { id: "p-tech", label: "科技前沿", section: "tech", cls: "var(--c-tech)", count: techAll.length, items: techAll },
     // 2026-08-25 用户决定：IPO 功能全部废弃（明天重新设计方案），tab 隐藏（代码保留）
-    // { id: "p-ipo", label: "IPO动态", section: "ipo" as FeedbackSection, cls: "var(--c-ipo)", count: ipoAll.length, items: ipoAll },
+    // { id: "p-ipo", label: "IPO动态", section: "ipo", cls: "var(--c-ipo)", count: ipoAll.length, items: ipoAll },
   ].filter((t) => t.count > 0);
 
   const totalItems = gzLocal.length + bizInsight.length + policyMarket.length + techAll.length;
@@ -1548,16 +1533,15 @@ export function renderHtml(
 <meta name="twitter:image" content="${shareBase}/og-image.png">
 <style>
 ${THEME_CSS}
-${FEEDBACK_CSS}
+${AUDIO_HIGHLIGHT_CSS}
   </style>
 </head>
 <body>
 <main>
-  ${opts.audio ? `<div class="player-card">
+    ${opts.audio ? `<div class="player-card">
     <div class="player-title"><span class="ic">🎧</span> 今日语音简报 <span class="player-dur">${escapeHtml(opts.audio.duration)}</span>${opts.audio.backend ? `<span class="player-badge player-badge-${opts.audio.backend}">${opts.audio.backend === "tencent" ? "腾讯合成" : "开源合成"}</span>` : ""}</div>
     <audio controls preload="none" src="${escapeHtml(opts.audio.src)}" id="audio-player"></audio>
     ${opts.audio.segments && opts.audio.segments.length ? `<script type="application/json" id="audio-segments">${escapeHtml(JSON.stringify(opts.audio.segments))}</script>` : ""}
-    ${renderAudioFeedbackBar()}
   </div>` : ""}
   <!-- 报头：今日定调 + 数据截至 -->
   <header class="masthead">
@@ -1578,7 +1562,7 @@ ${FEEDBACK_CSS}
 
   ${tabs.map((t, i) => `<section class="panel${i === 0 ? " active" : ""}" id="${t.id}">
     ${t.id === "p-stock" ? renderStockFilterBar() : renderFilterBarForPanel(t.items)}
-    ${renderReportCardList(t.items, true, t.section)}
+    ${renderReportCardList(t.items, true)}
   </section>`).join("")}
 
   <footer>
@@ -1674,10 +1658,6 @@ ${FEEDBACK_CSS}
       card.classList.toggle('filtered-out', !ok);
     });
   }
-</script>
-${renderFeedbackFooter()}
-<script>
-${generateInlineFeedbackScript(date)}
 </script>
 ${opts.audio?.segments && opts.audio.segments.length ? `<script>
 ${generateAudioHighlightScript()}

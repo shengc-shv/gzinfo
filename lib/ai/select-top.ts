@@ -7,15 +7,13 @@
  * 评分维度（按权重从高到低）：
  *  1. importance（AI 在 PASS1 给出 1/2/3；3=今日必知，2=默认，1=可归档）
  *  2. 部门 tag 命中（个贷/财富/私行/客群 之一）—— 行长 5 分钟核心
- *  3. 反馈数据：24h 内 👍 +2 / 👎 -2（必须接 data/feedback/ 才能生效）
- *  4. 板块多样化：避免 3 条都来自同一 section（每条重复 section -3）
- *  5. 位置偏置：AI 给出的前几条略加权（must_read[0] +1、[1] +0.5）
+ *  3. 板块多样化：避免 3 条都来自同一 section（每条重复 section -3）
+ *  4. 位置偏置：AI 给出的前几条略加权（must_read[0] +1、[1] +0.5）
  *
  * 返回 { top, rationale }：top 是 topN 条；rationale 是简短说明（调试/UI 显示）
  */
 
 import type { ReportItem, ReportMustRead } from "../types";
-import type { FeedbackEntry } from "../feedback/storage";
 
 /** 4 大零售部门 tag（与 render.ts DEPT_TAGS 一致） */
 const DEPT_TAGS = new Set(["财富", "私行", "客群", "信贷"]);
@@ -23,8 +21,6 @@ const DEPT_TAGS = new Set(["财富", "私行", "客群", "信贷"]);
 export interface SelectTopOptions {
   /** 默认 3；可临时调整为 5（调试） */
   topN?: number;
-  /** 仅统计最近 N 小时的反馈（默认 24） */
-  feedbackWindowHours?: number;
   /** 板块多样化惩罚（默认 -3 / 同 section 重复） */
   sectionDiversityPenalty?: number;
   /** 部门 tag 命中加成（默认 +3） */
@@ -46,37 +42,18 @@ function findSourceItem(
   return sourceItems.find((it) => it.url === url);
 }
 
-/** 反馈 → url score（+2 👍 / -2 👎），按 url 聚合（最近 N 小时） */
-function feedbackScoreByUrl(
-  feedback: FeedbackEntry[],
-  windowHours: number,
-): Map<string, number> {
-  const out = new Map<string, number>();
-  if (!feedback || feedback.length === 0) return out;
-  const cutoff = Date.now() - windowHours * 3600_000;
-  for (const f of feedback) {
-    if (f.ts < cutoff) continue;
-    if (f.section !== "must_read") continue;
-    const cur = out.get(f.url) ?? 0;
-    out.set(f.url, cur + (f.vote === "up" ? 2 : -2));
-  }
-  return out;
-}
-
 /**
- * 给定 must_read 列表 + sourceItems + feedback，按 N 维度评分选 top N。
+ * 给定 must_read 列表 + sourceItems，按 N 维度评分选 top N。
  * 返回 { top, rationale } —— top 是 ReportMustRead[]（保持原顺序，传递给 audio/render）；
  * rationale 是调试用字符串数组（与 top 一一对应，说明每条的加分来源）。
  */
 export function selectTopMustRead(
   mustRead: ReportMustRead[],
   sourceItems: ReportItem[],
-  feedback: FeedbackEntry[] = [],
   opts: SelectTopOptions = {},
 ): { top: ReportMustRead[]; rationale: string[] } {
   const {
     topN = 3,
-    feedbackWindowHours = 24,
     sectionDiversityPenalty = -3,
     deptBonus = 3,
   } = opts;
@@ -86,8 +63,6 @@ export function selectTopMustRead(
       rationale: mustRead.map(() => "已 ≤ topN，原样保留"),
     };
   }
-
-  const fbScore = feedbackScoreByUrl(feedback, feedbackWindowHours);
 
   // 第一轮：单条评分
   const scored: RankedItem<ReportMustRead>[] = mustRead.map((m, idx) => {
@@ -108,14 +83,7 @@ export function selectTopMustRead(
       reasons.push(`部门 tag +${deptBonus}`);
     }
 
-    // 3) 反馈（24h 👍/👎）
-    const fb = fbScore.get(m.url ?? "") ?? 0;
-    if (fb !== 0) {
-      score += fb;
-      reasons.push(fb > 0 ? `👍 +${fb}` : `👎 ${fb}`);
-    }
-
-    // 4) 位置偏置（AI 排序前几条略加）
+    // 3) 位置偏置（AI 排序前几条略加）
     if (idx === 0) { score += 1; reasons.push("AI 排序 #1 +1"); }
     else if (idx === 1) { score += 0.5; reasons.push("AI 排序 #2 +0.5"); }
 

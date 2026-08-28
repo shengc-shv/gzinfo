@@ -4,10 +4,11 @@ import fs from "node:fs";
 import path from "node:path";
 
 import { sources, loadAllSources } from "../lib/sources/registry";
-import { SOURCE_ROUTE } from "../lib/sources/constants";
-import { fetchSource } from "../lib/sources/dispatch";
-import { fetchCrawledArticles } from "../lib/sources/crawlers";
 import type { ArticleInput } from "../lib/types";
+import { ingestAll } from "../lib/pipeline/ingest";
+import { ConsoleLogger, type DailyContext, type Tier } from "../lib/pipeline/context";
+import type { HistoryStore } from "../lib/output/history";
+import type { AiAssetStore } from "../lib/ai/assets";
 import { renderHtml } from "../lib/output/render";
 import { buildNoAiReport } from "../lib/output/report-from-articles";
 import { DISPLAY_WINDOW_DAYS } from "../lib/output/render/cards";
@@ -25,7 +26,7 @@ import {
   dedupeAgainstHistory,
   type HistorySimilarEntry,
 } from "../lib/ingest/dedup-similar";
-import { filterByWindow, toMergeArticle, dedupeByUrl } from "../lib/ingest/merge";
+import { filterByWindow } from "../lib/ingest/merge";
 import type { FilterResult, RawArticleInput } from "../lib/filters/types";
 import { REPORTS_DIR } from "../lib/output/paths";
 import { todayKey } from "../lib/utils";
@@ -39,61 +40,32 @@ async function main() {
   const date = todayKey();
   let articles: ArticleInput[] = [];
 
-  // ----- 加载爬虫数据（M3-A：进程内 runner，与 daily.ts 同入口，不再读 JSON 中间文件）-----
-  // OFFLINE 模式不访问网络：纯历史渲染，跳过爬虫抓取（与下方 fetchSource 同策略）。
+  // ----- 采集（复用 daily.ts 的 ingestAll：24 源并发 Promise.allSettled + 爬虫合并 + tier 补齐）-----
+  // 一并修掉旧 dry-run 漏掉 crawled.stocks（昨日股市）的 bug：ingestAll 已含三类爬虫合并。
+  // OFFLINE 模式不访问网络：纯历史渲染，跳过采集（与 daily.ts 一致）。
   const isOffline = process.env.OFFLINE === 'true';
   if (!isOffline) {
-    const crawled = await fetchCrawledArticles().catch((e: any) => {
-      console.warn('  ⚠️ 爬虫抓取失败（跳过爬虫源）:', e?.message ?? e);
-      return { ipo: [], gz: [] };
-    });
-    // IPO / 新股（crawled-articles.json 等价路径，mode=ipo）
-    if (crawled.ipo.length) {
-      const { merged, added } = dedupeByUrl(articles, crawled.ipo.map((it) => toMergeArticle(it, 'ipo')));
-      articles = merged;
-      console.log(`  ✅ 加载爬虫(IPO/新股)数据 ${added} 条`);
-    }
-    // 广州商机（crawled-gz.json 等价路径，mode=gz；category 按集中路由表 SOURCE_ROUTE 判定）
-    if (crawled.gz.length) {
-      const regCat = (id?: string) => (id ? SOURCE_ROUTE[id]?.category : undefined);
-      const { merged, added } = dedupeByUrl(
-        articles,
-        crawled.gz.map((it) => toMergeArticle(it, 'gz', { gzCategory: regCat(it.sourceId) })),
-      );
-      articles = merged;
-      console.log(`  ✅ 加载广州商机数据 ${added} 条`);
-    }
+    // 最小 ctx：ingestAll 只用 sources / tierBySource / errors，不触发凭证校验或 AI。
+    const ctx: DailyContext = {
+      startTime: new Date(),
+      date,
+      mode: { kind: 'ai' },
+      sources: loadAllSources(),
+      tierBySource: (() => {
+        const m = new Map<string, Tier>();
+        for (const s of loadAllSources()) if (s.tier) m.set(s.id, s.tier);
+        return m;
+      })(),
+      history: {} as HistoryStore,
+      aiAssets: {} as AiAssetStore,
+      errors: [],
+      log: new ConsoleLogger('[dry-run]'),
+    };
+    const ing = await ingestAll(ctx);
+    articles = ing.articles;
+    console.log(`  [dry-run] 采集合并完成: ${articles.length} 条`);
   } else {
-    console.log('  ℹ️ OFFLINE 模式：跳过爬虫抓取（与 fetchSource 同策略）');
-  }
-
-  // 抓取所有 enabled 数据源（OFFLINE=true 时跳过：纯历史渲染，不访问网络）
-  if (!isOffline) {
-    const enabled = sources.filter((s) => s.enabled !== false);
-    for (const source of enabled) {
-      try {
-        const items = await fetchSource(source);
-        console.log(`  ${source.id.padEnd(20)} ${items.length}`);
-        // 无发布时间 → 回退采集时间（本次抓取时刻）
-        // 2026-08-27 核心规则：源级无 publishedAt 直接丢弃（不写 fetchedAt 兜底）
-        const valid = items.filter((it) => it.publishedAt);
-        const dropped = items.length - valid.length;
-        if (dropped > 0) {
-          console.log(`    (无发布时间丢弃 ${dropped} 条 — 2026-08-27 核心规则)`);
-        }
-        articles.push(
-          ...valid.map((it) => ({
-            ...it,
-            source: source.name,
-          })),
-        );
-      } catch (e) {
-        const msg = e instanceof Error ? e.message : String(e);
-        console.error(`  ${source.id.padEnd(20)} FAILED — ${msg}`);
-      }
-    }
-  } else {
-    console.log(`  ℹ️ OFFLINE 模式：跳过全部网络抓取，仅用本地数据文件 + 历史缓存渲染`);
+    console.log('  ℹ️ OFFLINE 模式：跳过爬虫抓取与网络抓取（与 daily.ts 一致）');
   }
 
   // —— 关键词漏斗（与 daily.ts 一致，边界③最前端，零成本）：银行零售关键词体系硬过滤 ——

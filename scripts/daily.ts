@@ -14,10 +14,36 @@ import type { DailyReport, ArticleInput } from "../lib/types";
 import type { HistoryStore } from "../lib/output/history";
 import type { CrawledArticle } from "../lib/ingest/merge";
 import type { FilterResult } from "../lib/filters/types";
+import type { DailyContext } from "../lib/pipeline/context";
 
-async function main() {
+/**
+ * 可注入依赖（e2e 测试用）：默认走真实函数；测试时替换网络/磁盘边界。
+ * 仅暴露真正的副作用边界——采集（网络）、AI 管线（LLM）、side-outputs（LLM）、
+ * 历史写盘、AI 资产写回、产物写盘。其余确定性阶段（runFilterPipeline /
+ * applyDisplayCaps / 音频跳过）不注入，测试中也跑真实代码。
+ */
+export interface RunDailyDeps {
+  ingestAll?: typeof ingestAll;
+  runAiPipeline?: typeof runAiPipeline;
+  buildSideOutputs?: typeof buildSideOutputs;
+  mergeRollingAndSaveHistory?: typeof mergeRollingAndSaveHistory;
+  saveAiAssets?: typeof saveAiAssets;
+  renderAndWrite?: typeof renderAndWrite;
+}
+
+export async function runDaily(
+  ctxArg?: DailyContext,
+  deps: RunDailyDeps = {},
+): Promise<void> {
+  const ingestAllFn = deps.ingestAll ?? ingestAll;
+  const runAiPipelineFn = deps.runAiPipeline ?? runAiPipeline;
+  const buildSideOutputsFn = deps.buildSideOutputs ?? buildSideOutputs;
+  const mergeRollingAndSaveHistoryFn =
+    deps.mergeRollingAndSaveHistory ?? mergeRollingAndSaveHistory;
+  const saveAiAssetsFn = deps.saveAiAssets ?? saveAiAssets;
+  const renderAndWriteFn = deps.renderAndWrite ?? renderAndWrite;
   // 启动：凭证校验 + 加载缓存 + 构建 mode + 构建 tier 索引（PR1）
-  const ctx = await bootstrap();
+  const ctx = ctxArg ?? (await bootstrap());
   const date = ctx.date;
   console.log(`[daily] ${date} — fetching sources…\n`);
 
@@ -32,7 +58,7 @@ async function main() {
   // ① 采集 + 归一化（PR2；T7 已并发化 fetchAllSources）
   let ingested: { articles: ArticleInput[]; rawArticles: ArticleInput[]; crawled: { ipo: CrawledArticle[]; gz: CrawledArticle[]; stocks: CrawledArticle[] } } | null = null;
   try {
-    ingested = await ingestAll(ctx);
+    ingested = await ingestAllFn(ctx);
   } catch (e) {
     stageError("ingest", e);
     if (!ingested) throw e;  // ingest 是最关键阶段，失败则终止
@@ -52,7 +78,7 @@ async function main() {
   // ③ AI 管线（PR4；runLlm 已有 3 次重试 + 指数退避）
   let report: DailyReport | null = null;
   try {
-    report = await runAiPipeline(articles, ctx);
+    report = await runAiPipelineFn(articles, ctx);
   } catch (e) {
     stageError("ai", e);
     throw e;  // AI 失败是致命（必读/商机/风险都依赖 LLM 输出）
@@ -61,7 +87,7 @@ async function main() {
   // ④ 历史写盘 + 滚动列表 + 近7天并入（PR4）
   let step: { history: HistoryStore; rolling: ArticleInput[]; report: DailyReport; nowIso: string } | null = null;
   try {
-    step = mergeRollingAndSaveHistory(report, articles, ctx);
+    step = mergeRollingAndSaveHistoryFn(report, articles, ctx);
   } catch (e) {
     stageError("history", e);
     throw e;
@@ -72,7 +98,7 @@ async function main() {
   //    B-1：filterResults 透传给 executive-summary，LLM 用其喂 risk 段
   let finalReport: DailyReport = mergedReport;
   try {
-    finalReport = await buildSideOutputs(
+    finalReport = await buildSideOutputsFn(
       mergedReport,
       step.history,
       articles,
@@ -95,7 +121,7 @@ async function main() {
       ...(dailyPrev ?? {}),
       updatedAt: nowIso,
     };
-    saveAiAssets(aiAssets);
+    saveAiAssetsFn(aiAssets);
     ctx.log.info("ai", `AI 资产账本已更新: ${Object.keys(aiAssets).length} 键`);
   } catch (e) {
     stageError("ai-assets", e);
@@ -119,7 +145,7 @@ async function main() {
 
   // ⑨ 渲染 + 写盘（PR5；唯一存储 + sidecar + 导出全量池）
   try {
-    await renderAndWrite(
+    await renderAndWriteFn(
       { report: cappedReport, rolling, audio, filteredArticles: articles },
       ctx,
     );
@@ -142,9 +168,15 @@ async function main() {
   }
 }
 
-main()
-  .then(() => process.exit(0))
-  .catch((e) => {
-    console.error(`[daily] FAILED:`, e);
-    process.exit(1);
-  });
+// 仅在以 `tsx scripts/daily.ts` 直接运行时自执行；被测试 import 时不触发真实管线
+const isMain =
+  process.argv[1] !== undefined &&
+  import.meta.url === `file://${process.argv[1]}`;
+if (isMain) {
+  runDaily()
+    .then(() => process.exit(0))
+    .catch((e) => {
+      console.error(`[daily] FAILED:`, e);
+      process.exit(1);
+    });
+}

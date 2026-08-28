@@ -108,3 +108,19 @@ sources.config.json   # SINGLE SOURCE OF TRUTH for the source registry
 - `FORKING.md` — common customizations (LLM provider, sources, layout, styling)
 - `.claude/skills/gzcmbdf3/SKILL.md` — fuller operational reference (Claude Code auto-loads it; other agents can read it directly)
 - `sources.config.json` — see what sources look like in practice
+- `ai-workspace/README.md` — multi-agent relay-dev protocol (see below)
+
+## Multi-agent collaboration (`ai-workspace/`)
+
+This repo supports multiple AI agents接力开发同一份代码。协作规范集中在 `ai-workspace/`：
+
+- `README.md` — 协议总纲：会话开始/结束动作、日志/状态文件位置、认领任务流程
+- `PRINCIPLES.md` — 7 项设计检查清单（改方案前逐条过，任何一项答"否"就重新设计）
+- `ARCHITECTURE.md` — 协作边界与模块契约
+- `CONTEXT.md` / `STATE.md` — 当前焦点与共享状态（会话末更新，权威状态只在 ai-workspace）
+- `TASKS.md` — 待办清单（P0/P1/P2 分级）
+- `CONVENTIONS.md` — 代码/日志约定
+- `DECISIONS.md` — 已拍板决策（编号 D-001+，推翻前必先读原理由）
+- `log/` — 每次会话的 `YYYY-MM-DD-<agent>-<topic>.md` 日志（套用 README 模板）
+
+**约定**：任何 Agent 介入开发，先按 `ai-workspace/README.md` 的顺序读 PRINCIPLES → ARCHITECTURE → CONTEXT → STATE → TASKS → CONVENTIONS，认领任务后再动手；远程 push / 触发 GitHub Actions dispatch 等外部动作须先获用户口头授权。

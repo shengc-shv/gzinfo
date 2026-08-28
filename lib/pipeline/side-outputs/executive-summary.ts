@@ -67,8 +67,7 @@ export async function buildExecutiveSummary(
   if (ctx.mode.kind === "skip-ai") {
     if (stored && (stored.must_read?.length || stored.insights?.length)) {
       const before = { must: report.must_read.length, ins: report.insights.length };
-      const next: DailyReport = { ...report };
-      mergeStoredExecutive(next, stored);
+      const next = mergeStoredExecutive(report, stored);
       ctx.log.info(
         "exec",
         `🧠 SKIP_AI 复用 store.json 执行摘要：必读 ${before.must}→${next.must_read.length} / 商机 ${before.ins}→${next.insights.length}`,
@@ -87,9 +86,8 @@ export async function buildExecutiveSummary(
   // REGEN_EXEC=1 显式声明"重生成"，与默认行为等价（用于脚本可读性）
   const regenMode = process.env.REGEN_EXEC ?? "1";  // 默认 "1"（重新生成）
   if (regenMode === "0" && stored && (stored.hero_line || stored.must_read?.length || stored.insights?.length)) {
-    const next: DailyReport = { ...report };
+    const next = mergeStoredExecutive(report, stored);
     if (stored.hero_line) next.hero_line = stored.hero_line;
-    mergeStoredExecutive(next, stored);
     ctx.log.info(
       "exec",
       `🧠 AI 模式 + REGEN_EXEC=0 复用 store.json 执行摘要：${stored.must_read?.length ?? 0} 必读 / ${stored.insights?.length ?? 0} 商机`,
