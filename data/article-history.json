@@ -179,18 +179,6 @@
     "firstSeenAt": "2026-08-26T09:21:36.486Z",
     "lastSeenAt": "2026-08-26T09:21:36.486Z"
   },
-  "https://www.cnbc.com/2026/08/25/amazon-service-that-jeff-bezos-called-artificial-ai-is-shutting-down.html": {
-    "title": "Amazon service Bezos once called 'artificial artificial intelligence' is shutting down",
-    "url": "https://www.cnbc.com/2026/08/25/amazon-service-that-jeff-bezos-called-artificial-ai-is-shutting-down.html",
-    "sourceId": "cnbc-top",
-    "source": "CNBC Top Stories",
-    "category": "stocks",
-    "subcategory": "us",
-    "excerpt": "Mechanical Turk launched in 2005 as a way to farm out tasks that are easy for humans to complete but too challenging for computers.",
-    "publishedAt": "2026-08-26T00:34:03.000Z",
-    "firstSeenAt": "2026-08-26T09:21:36.486Z",
-    "lastSeenAt": "2026-08-26T09:21:36.486Z"
-  },
   "https://www.investing.com/news/commodities-news/european-gas-slumps-3-as-middle-east-ceasefire-hopes-unwind-supply-risk-premium-4876517": {
     "title": "European gas Slumps 3% as Middle East ceasefire hopes unwind supply risk premium",
     "url": "https://www.investing.com/news/commodities-news/european-gas-slumps-3-as-middle-east-ceasefire-hopes-unwind-supply-risk-premium-4876517",
@@ -6248,5 +6236,149 @@
     "publishedAt": "2026-08-28T00:00:00.000Z",
     "firstSeenAt": "2026-08-28T00:28:03.198Z",
     "lastSeenAt": "2026-08-28T00:28:03.198Z"
+  },
+  "https://www.cnfin.com/yw-lb/detail/20260828/4461639_1.html": {
+    "title": "财报季与产业盛会共振 AI算力与具身智能双线并进",
+    "url": "https://www.cnfin.com/yw-lb/detail/20260828/4461639_1.html",
+    "sourceId": "cnfin",
+    "source": "新华财经",
+    "category": "finance",
+    "subcategory": "cn-finance",
+    "excerpt": "",
+    "publishedAt": "2026-08-28T00:00:00.000Z",
+    "firstSeenAt": "2026-08-28T00:38:45.533Z",
+    "lastSeenAt": "2026-08-28T00:38:45.533Z"
+  },
+  "https://www.cnfin.com/hg-lb/detail/20260828/4461626_1.html": {
+    "title": "国家医保局召开医保促进“十五五”医药产业高质量发展座谈会",
+    "url": "https://www.cnfin.com/hg-lb/detail/20260828/4461626_1.html",
+    "sourceId": "cnfin",
+    "source": "新华财经",
+    "category": "finance",
+    "subcategory": "cn-finance",
+    "excerpt": "",
+    "publishedAt": "2026-08-28T00:00:00.000Z",
+    "firstSeenAt": "2026-08-28T00:38:45.533Z",
+    "lastSeenAt": "2026-08-28T00:38:45.533Z"
+  },
+  "https://www.stcn.com/article/detail/4149321.html": {
+    "title": "鹏辉能源：海外市场户储尤其是工商业储能增速预计比较高",
+    "url": "https://www.stcn.com/article/detail/4149321.html",
+    "sourceId": "stcn",
+    "source": "证券时报",
+    "category": "finance",
+    "subcategory": "cn-finance",
+    "excerpt": "",
+    "publishedAt": "2026-08-28T08:33:00.000Z",
+    "firstSeenAt": "2026-08-28T00:38:45.533Z",
+    "lastSeenAt": "2026-08-28T00:38:45.533Z"
+  },
+  "https://www.stcn.com/article/detail/4149318.html": {
+    "title": "昨夜，芯片股大涨！美联储官员最新发声，事关加息",
+    "url": "https://www.stcn.com/article/detail/4149318.html",
+    "sourceId": "stcn",
+    "source": "证券时报",
+    "category": "finance",
+    "subcategory": "cn-finance",
+    "excerpt": "",
+    "publishedAt": "2026-08-28T08:26:00.000Z",
+    "firstSeenAt": "2026-08-28T00:38:45.533Z",
+    "lastSeenAt": "2026-08-28T00:38:45.533Z"
+  },
+  "https://www.stcn.com/article/detail/4144140.html": {
+    "title": "鹏辉能源：储能主业强势领跑 归母净利润大增1025.39%",
+    "url": "https://www.stcn.com/article/detail/4144140.html",
+    "sourceId": "stcn",
+    "source": "证券时报",
+    "category": "finance",
+    "subcategory": "cn-finance",
+    "excerpt": "",
+    "publishedAt": "2026-08-28T00:19:00.000Z",
+    "firstSeenAt": "2026-08-28T00:38:45.533Z",
+    "lastSeenAt": "2026-08-28T00:38:45.533Z"
+  },
+  "https://www.stcn.com/article/detail/4144137.html": {
+    "title": "东箭科技：深化“6+1+1”海外战略 稳健笃行蓄势前行",
+    "url": "https://www.stcn.com/article/detail/4144137.html",
+    "sourceId": "stcn",
+    "source": "证券时报",
+    "category": "finance",
+    "subcategory": "cn-finance",
+    "excerpt": "",
+    "publishedAt": "2026-08-28T00:16:00.000Z",
+    "firstSeenAt": "2026-08-28T00:38:45.533Z",
+    "lastSeenAt": "2026-08-28T00:38:45.533Z"
+  },
+  "https://www.stcn.com/article/detail/4143887.html": {
+    "title": "长联科技：上半年营收同比增长18.73% 中期分红回报股东",
+    "url": "https://www.stcn.com/article/detail/4143887.html",
+    "sourceId": "stcn",
+    "source": "证券时报",
+    "category": "finance",
+    "subcategory": "cn-finance",
+    "excerpt": "",
+    "publishedAt": "2026-08-27T22:44:00.000Z",
+    "firstSeenAt": "2026-08-28T00:38:45.533Z",
+    "lastSeenAt": "2026-08-28T00:38:45.533Z"
+  },
+  "https://www.stcn.com/article/detail/4143370.html": {
+    "title": "三和管桩：上半年盈利过千万 “六张网”建设或打开需求空间",
+    "url": "https://www.stcn.com/article/detail/4143370.html",
+    "sourceId": "stcn",
+    "source": "证券时报",
+    "category": "finance",
+    "subcategory": "cn-finance",
+    "excerpt": "",
+    "publishedAt": "2026-08-27T22:15:00.000Z",
+    "firstSeenAt": "2026-08-28T00:38:45.533Z",
+    "lastSeenAt": "2026-08-28T00:38:45.533Z"
+  },
+  "https://www.stcn.com/article/detail/4143394.html": {
+    "title": "马可波罗披露半年报：规模优势夯实根基 科技创新引领升级",
+    "url": "https://www.stcn.com/article/detail/4143394.html",
+    "sourceId": "stcn",
+    "source": "证券时报",
+    "category": "finance",
+    "subcategory": "cn-finance",
+    "excerpt": "",
+    "publishedAt": "2026-08-27T21:14:00.000Z",
+    "firstSeenAt": "2026-08-28T00:38:45.533Z",
+    "lastSeenAt": "2026-08-28T00:38:45.533Z"
+  },
+  "https://www.stcn.com/article/detail/4143298.html": {
+    "title": "广汽集团与广东石油签署战略合作协议",
+    "url": "https://www.stcn.com/article/detail/4143298.html",
+    "sourceId": "stcn",
+    "source": "证券时报",
+    "category": "finance",
+    "subcategory": "cn-finance",
+    "excerpt": "",
+    "publishedAt": "2026-08-27T20:25:00.000Z",
+    "firstSeenAt": "2026-08-28T00:38:45.533Z",
+    "lastSeenAt": "2026-08-28T00:38:45.533Z"
+  },
+  "https://news.southcn.com/node_812903b83a/4a53837b19.shtml": {
+    "title": "个人养老金产品全分析！来看看哪种最适合你？",
+    "url": "https://news.southcn.com/node_812903b83a/4a53837b19.shtml",
+    "sourceId": "southcn",
+    "source": "南方网·经济",
+    "category": "gz",
+    "subcategory": "gz-media",
+    "excerpt": "",
+    "publishedAt": "2026-08-27T22:59:00.000Z",
+    "firstSeenAt": "2026-08-28T00:38:45.533Z",
+    "lastSeenAt": "2026-08-28T00:38:45.533Z"
+  },
+  "https://news.southcn.com/node_812903b83a/bdb64eda58.shtml": {
+    "title": "让机器人在“虚拟世界”练出真本事！自变量发布WALL-SS自回归世界模型",
+    "url": "https://news.southcn.com/node_812903b83a/bdb64eda58.shtml",
+    "sourceId": "southcn",
+    "source": "南方网·经济",
+    "category": "gz",
+    "subcategory": "gz-media",
+    "excerpt": "",
+    "publishedAt": "2026-08-27T22:34:00.000Z",
+    "firstSeenAt": "2026-08-28T00:38:45.533Z",
+    "lastSeenAt": "2026-08-28T00:38:45.533Z"
   }
 }
