@@ -95,7 +95,8 @@ export function toMergeArticle(
     source: item.source || (mode === "ipo" ? "广东本地爬虫" : "广州商机"),
     title: item.title || "无标题",
     url: item.url || "",
-    excerpt: item.excerpt || "",
+    // B：excerpt fallback（2026-08-28 用户反馈）：无 excerpt 时用 title 前 90 字符占位
+    excerpt: item.excerpt?.trim() || item.title?.slice(0, 90) || "",
     publishedAt: resolvedPub ? new Date(resolvedPub) : undefined,
     // 2026-08-27 核心规则：无发布时间直接 discarded — 上游调用方（fetchCrawledArticles
     // 入口或 filter 阶段 no-date-fallback）负责丢弃，不再写 fetchedAt 兜底。

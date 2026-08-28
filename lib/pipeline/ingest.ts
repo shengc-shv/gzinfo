@@ -80,6 +80,11 @@ async function fetchAllSources(ctx: DailyContext): Promise<ArticleInput[]> {
           ...it,
           source: source.name,
           tier: source.tier,
+          // B：excerpt fallback（2026-08-28 用户反馈：用户给的 URL 抓时 excerpt 空，
+          //   history 写入后 mergeRolling 看 summary 为空踢出 → 板块看不到）。
+          //   无 excerpt 时用 title 前 90 字符占位（保证 history.excerpt 非空）。
+          //   RSS 解析/scrape 列表页可能没 description，纯标题足够给 LLM 标 summary。
+          excerpt: it.excerpt?.trim() || it.title?.slice(0, 90) || "",
         })),
       );
     } else {
