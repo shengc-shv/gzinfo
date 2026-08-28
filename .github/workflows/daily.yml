@@ -366,8 +366,10 @@ jobs:
         run: npm run build-site
 
       # 检查 gh-pages 当日报告是否已存在（一天最多发布一次）
+      # 2026-08-28 用户反馈：'我手动选的，是全局最高变量' —— manual 触发 inputs.publish=true
+      # 必须强制发布（覆盖已发布），不再 silent skip。'已发布跳过' 只对 schedule 触发生效。
       - name: Check if today's report already published
-        if: ${{ github.event_name == 'schedule' || inputs.publish == true }}
+        if: github.event_name == 'schedule'
         id: published-check
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -388,7 +390,11 @@ jobs:
           fi
 
       - name: Publish to gh-pages
-        if: (github.event_name == 'schedule' || inputs.publish == true) && steps.published-check.outputs.should-publish == 'true'
+        # manual 触发 inputs.publish=true → 强制发布（用户选择 = 全局最高变量，覆盖已发布）
+        # schedule 触发 → 必须先过 published-check（已发布则跳过）
+        if: >-
+          (github.event_name == 'schedule' && steps.published-check.outputs.should-publish == 'true')
+          || inputs.publish == true
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
