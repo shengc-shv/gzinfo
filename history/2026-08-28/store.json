@@ -1,96 +1,171 @@
 {
   "date": "2026-08-28",
-  "updatedAt": "2026-08-28T00:23:22.781Z",
+  "updatedAt": "2026-08-28T00:28:41.840Z",
   "executive": {
-    "hero_line": "贷款贴息新政落地叠加理财信披升级，分行零售进件与合规口径需同步调优。",
-    "spoken_hero": "今天最值得关注的是贷款贴息新政在多家银行集中落地，财政贴息联动银行信贷，零售客户经理应在进件端优先匹配贴息产品。同时，理财信披新规也正式生效，财富线在销售话术上要同步校准，避免合规踩雷。",
+    "hero_line": "",
     "must_read": [
       {
-        "title": "贷款贴息新政落地",
-        "why": "财政贴息与银行信贷联动撬动消费贷和经营贷需求，零售端贴息产品价格优势凸显，分行需统一产品口径抢抓窗口。",
-        "url": "https://www.cnfin.com/yw-lb/detail/20260828/4461584_1.html"
+        "title": "信托三分类过渡期收官，标品成基本盘",
+        "why": "34万亿信托业完成分类重塑，标品、净值化产品占比上升，财富端货架逻辑变，分行私行需更新配置工具与产品风险标签。",
+        "url": "https://finance.sina.com.cn/roll/2026-08-27/doc-iniptafc9016345.shtml"
       },
       {
-        "title": "大资管十年规模178万亿",
-        "why": "理财子与公募基金在零售客群竞争最直接，代销话语权争夺加剧，分行财富线应借此优化代销产品池结构。",
-        "url": "https://finance.sina.com.cn/roll/2026-08-27/doc-inipuqhm5141072.shtml"
+        "title": "券商中报三看点，财富管理转型承压",
+        "why": "券商系公募与ETF代销渠道格局正在演化，第三方代销竞争加剧，分行财富条线需关注代销格局变化与议价能力。",
+        "url": "https://www.stcn.com/article/detail/4149228.html"
       },
       {
-        "title": "理财信披新规正式落地",
-        "why": "风险揭示、底层资产、费率结构全面透明化要求升级，分行销售流程与双录话术需对照新规调整。",
-        "url": "https://finance.sina.com.cn/roll/2026-08-27/doc-inipuiyp9117851.shtml"
-      },
-      {
-        "title": "一手房按揭断贷风险升温",
-        "why": "项目烂尾与资金监管不到位情形下，信贷资产质量与客户还款能力同步承压，分行房贷准入与尽调需前置。",
-        "url": "https://m.21jingji.com/article/20260827/herald/2f6c12d9874430edd6a8141631a501cf.html"
+        "title": "基金中报首披盈利客户占比",
+        "why": "基金赚钱效应指标首次公开透明化，倒逼销售端强化投资者陪伴，分行可参考新指标重塑选品与持营逻辑。",
+        "url": "https://www.stcn.com/article/detail/4149222.html"
       }
     ],
-    "spoken_must_read": "贷款贴息新政在多家银行集中落地，零售端贴息产品价格优势凸显，分行可考虑统一口径抢抓窗口。大资管规模突破178万亿，理财子与公募在零售客群上贴身竞争，财富线应优化代销产品池结构。理财信披新规正式落地，销售话术与双录流程需对照新规做调整。一手房断贷话题升温，房贷准入与资金监管环节的尽调应前置。绩优基金陆续放开限购，财富团队可留意代销清单的接入机会。",
+    "spoken_must_read": "信托三分类过渡期收官，标品渐成基本盘，私行货架逻辑变了，建议分行更新高净值客户固收+与TOF配置工具清单。\n上市券商中报三看点，财富管理转型承压，券商系公募与ETF代销格局正在演化，零售条线值得持续跟踪。\n基金中报首次披露盈利客户占比，赚钱效应透明化，财富端在选品与客户陪伴上有抓手可借力。\n整体看资管行业向净值化、标品化集中，分行财富与私行条线需重新梳理产品矩阵与风险标签。",
     "insights": [
       {
-        "topic": "贴息产品进件优先匹配",
-        "impact": "贴息后消费贷与小微经营贷实际融资成本下降，叠加广州本地消费旺季临近，进件转化率有望提升。",
-        "action": "本周起零售客户经理在进件端优先匹配贴息名单产品，消费分期与小微经营贷双线推进。",
+        "topic": "私行货架适配标品化新规",
+        "impact": "信托三分类收官后，标品与净值化产品成为基本盘，传统非标融资类收缩，私行原有产品货架需结构性更新以匹配高净值客户需求。",
+        "action": "财富部本周组织一次产品梳理，更新私行客户经理的标品、固收+、TOF配置工具清单与风险标签话术，提示客户经理做一次存量客户的产品复检。",
         "tag": [
-          "信贷",
-          "客群"
+          "私行",
+          "财富"
         ],
         "sources": [
           {
-            "title": "银行落实贷款贴息新政 财政资金激活消费与实体经济",
-            "url": "https://www.cnfin.com/yw-lb/detail/20260828/4461584_1.html"
+            "title": "信托业三分类过渡期收官观察：规模增至34万亿元，标品渐成基本盘",
+            "url": "https://finance.sina.com.cn/roll/2026-08-27/doc-iniptafc9016345.shtml"
           }
         ]
       },
       {
-        "topic": "限购松绑基金接入高净值",
-        "impact": "绩优基金重新打开申购反映管理人信心修复，为高净值客户资产再配置提供新工具。",
-        "action": "财富团队梳理代销清单中已放宽限购的绩优基金，今起对私行客户做资产再配置沟通。",
+        "topic": "基金赚钱效应指标用于选品",
+        "impact": "基金中报首披盈利客户占比，基民真实赚钱效应透明化，分行基金代销可借此强化长期持有理念与客户信任。",
+        "action": "财富部可将盈利客户占比纳入基金优选池筛选参考，对持仓客户做一次盈利体验检视，强化定投与长期陪伴话术。",
+        "tag": [
+          "财富"
+        ],
+        "sources": [
+          {
+            "title": "基金中报新指标首次亮相：到底有多少基民赚了钱？",
+            "url": "https://www.stcn.com/article/detail/4149222.html"
+          }
+        ]
+      },
+      {
+        "topic": "券商代销渠道竞争演化跟踪",
+        "impact": "券商中报显示财富管理转型与投行承压并存，券商系公募与ETF代销渠道议价能力可能变化，分行代销合作格局需提前研判。",
+        "action": "财富部可考虑对头部券商系公募与ETF供应商做一次代销费率与服务评估，为下半年代销招标与合作优化做准备。",
         "tag": [
           "财富",
-          "私行"
+          "竞对动态"
         ],
         "sources": [
           {
-            "title": "市场信心重塑 绩优基金悄然重新\"打开大门\"",
-            "url": "https://finance.sina.com.cn/stock/stockzmt/2026-08-28/doc-inipvmnc5711310.shtml"
-          }
-        ]
-      },
-      {
-        "topic": "理财销售话术对照新规",
-        "impact": "信披新规要求底层资产、费率结构、风险揭示全面透明，分行若未及时校准易触发销售合规风险。",
-        "action": "财富管理部本周内组织理财经理对照新规更新双录话术与宣传材料，存量产品逐支复核。",
-        "tag": [
-          "财富",
-          "监管"
-        ],
-        "sources": [
-          {
-            "title": "农银理财详解信披新规落地：一场以投资者为中心的资管变革",
-            "url": "https://finance.sina.com.cn/roll/2026-08-27/doc-inipuiyp9117851.shtml"
-          }
-        ]
-      },
-      {
-        "topic": "一手房按揭准入与监管排查",
-        "impact": "断贷风险在烂尾项目与资金监管不到位情形下放大，分行信贷资产质量与客户还款能力可能同步承压。",
-        "action": "房贷团队本周对合作楼盘准入与资金监管环节做一次专项排查，关注存量客户断供苗头。",
-        "tag": [
-          "住房金融",
-          "信贷"
-        ],
-        "sources": [
-          {
-            "title": "一手房按揭\"断贷\" 损失由谁承担？",
-            "url": "https://m.21jingji.com/article/20260827/herald/2f6c12d9874430edd6a8141631a501cf.html"
+            "title": "上市券商中期业绩呈现三大看点",
+            "url": "https://www.stcn.com/article/detail/4149228.html"
           }
         ]
       }
     ],
-    "spoken_insights": "贴息新政落地，零售客户经理进件端可优先匹配贴息名单产品，消费分期与小微经营贷双线推进。绩优基金陆续放开限购，财富团队今起对私行客户做资产再配置沟通。理财信披新规生效，财富管理部本周内组织理财经理更新双录话术与宣传材料。一手房断贷话题升温，房贷团队本周对合作楼盘准入与资金监管做专项排查。",
+    "spoken_insights": "信托新规落地，私行货架要重新组装，财富部本周更新标品与TOF配置工具清单。\n基金赚钱效应指标首次披露，财富端可把盈利客户占比纳入选品，强化客户长期持有陪伴。\n券商系公募与ETF代销格局在变，财富部可考虑评估头部供应商议价能力，为下半年合作优化铺垫。",
     "guangdong_ipo": null
+  },
+  "stock_recap": {
+    "us": {
+      "overview": "Jackson Hole前周美股涨跌互现，软件与零售领涨。",
+      "sectors": [
+        "软件：Salesforce财报后暴涨22%，引领板块走强",
+        "零售：Gap任命新CEO股价飙升12%",
+        "半导体：英伟达财报打消看空叙事，存储链SK海力士扩产",
+        "医药：吉利德HIV新药获FDA批准",
+        "银行/金融：Fed主席Warsh讲话受市场关注"
+      ],
+      "spoken": "美股三大指数涨跌互现，市场聚焦Jackson Hole联储主席Warsh讲话。Salesforce财报暴涨两成二，引领软件板块走强；Gap换帅股价飙升，零售股活跃。英伟达财报打消看空叙事，存储与半导体情绪回暖。整体盘面科技、消费双线领涨。",
+      "meta": {
+        "source": "CNBC Top Stories",
+        "crossCheck": "新浪行情",
+        "date": "2026-08-27"
+      },
+      "indices": [
+        {
+          "name": "道琼斯",
+          "value": "53569.44",
+          "changePct": "+0.20%"
+        },
+        {
+          "name": "纳斯达克",
+          "value": "26541.35",
+          "changePct": "+1.57%"
+        },
+        {
+          "name": "标普500",
+          "value": "7730.99",
+          "changePct": "+0.72%"
+        }
+      ]
+    },
+    "aShare": {
+      "overview": "沪指涨逾1%科创50大涨近4%，半导体存储全线爆发。",
+      "sectors": [
+        "半导体：科创50暴涨近4%，板块集体爆发",
+        "存储：2000亿龙头封板，存储三巨头产能售罄",
+        "光模块：中报业绩亮眼，融资客抢筹",
+        "光纤光缆：重磅催化下机构看好配置时点",
+        "贵金属/美元：管涛称美元大概率维持震荡"
+      ],
+      "spoken": "A股沪指涨逾一个百分点，科创五十指数大涨近四个点。半导体板块集体爆发，存储龙头强势封板，三巨头产能售罄，短缺行情延续。光模块中报业绩亮眼，融资客抢筹过亿，机构看好光纤光缆配置时点。盘面科技成长全面领涨，量能活跃。",
+      "meta": {
+        "source": "东方财富",
+        "crossCheck": "新浪行情",
+        "date": "2026-08-28"
+      },
+      "indices": [
+        {
+          "name": "上证指数",
+          "value": "3956.57",
+          "changePct": "+1.13%"
+        },
+        {
+          "name": "深证成指",
+          "value": "14048.88",
+          "changePct": "+1.50%"
+        },
+        {
+          "name": "创业板指",
+          "value": "3473.36",
+          "changePct": "+1.71%"
+        }
+      ]
+    },
+    "hk": {
+      "overview": "港股盘面交投清淡，公告密集披露无明显方向。",
+      "sectors": [
+        "科技/半导体：受A股存储与半导体爆发带动情绪回暖",
+        "中报股：多家公司密集披露半年报",
+        "新能源/海外业务：海外监管公告与子公司业绩披露",
+        "地产/消费：缺乏催化，表现平淡"
+      ],
+      "spoken": "港股盘面交投清淡，市场聚焦密集披露的中报与子公司业绩公告。科技与半导体板块受A股存储链爆发带动，情绪有所回暖。海外业务更新与关联交易公告增多，地产消费缺乏明显催化。整体盘面涨跌互现，等待方向。",
+      "meta": {
+        "source": "新浪财经·港股",
+        "crossCheck": "新浪行情",
+        "date": "2026-08-28"
+      },
+      "indices": [
+        {
+          "name": "恒生指数",
+          "value": "25652.97",
+          "changePct": "-0.34%"
+        },
+        {
+          "name": "恒生科技",
+          "value": "4626.15",
+          "changePct": "-0.13%"
+        }
+      ]
+    },
+    "quoteChannel": "新浪行情",
+    "quoteDate": "2026-08-27"
   },
   "stock_news": [
     {
@@ -99,7 +174,7 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/27",
-      "summary": "针对市场传闻\"A股未盈利企业无法上市\"，知情人士作出回应，相关信息以官方发布为准。",
+      "summary": "针对市场流传的\"A股未盈利企业无法上市\"传闻，相关知情人士作出回应，否认相关说法。",
       "importance": 2,
       "rank": 0,
       "tags": [
@@ -115,13 +190,12 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/27",
-      "summary": "特朗普就美国电力电网中的外国制造设备宣布\"国家紧急状态\"，中国外交部作出回应。",
+      "summary": "特朗普就美国电力电网中的外国制造设备宣布\"国家紧急状态\"，中国外交部对此作出回应。",
       "importance": 2,
       "rank": 0,
       "tags": [
         "政策",
-        "中美关系",
-        "能源"
+        "中概股"
       ],
       "locale": "national",
       "market": "a-share"
@@ -132,13 +206,12 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/27",
-      "summary": "8月27日A股沪指收涨逾1%，科创50指数大涨近4%，半导体板块整体爆发。",
+      "summary": "8月27日A股主要指数上涨，沪指涨逾1%，科创50指数大涨近4%，半导体板块集体爆发。",
       "importance": 3,
       "rank": 0,
       "tags": [
         "A股",
-        "半导体",
-        "科创板"
+        "半导体"
       ],
       "locale": "national",
       "market": "a-share"
@@ -149,7 +222,7 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/27",
-      "summary": "8月27日晚间沪深上市公司密集发布重大事项公告，包括业绩、重组、增减持等。",
+      "summary": "8月27日晚间沪深上市公司发布一批重大事项公告，涉及停牌、减持、回购、增发出售等多种事项。",
       "importance": 1,
       "rank": 0,
       "tags": [
@@ -165,13 +238,13 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/27",
-      "summary": "中报业绩亮眼，光模块板块集体爆发，融资客抢筹24只个股金额过亿元。",
+      "summary": "光模块板块中报业绩亮眼，板块集体上涨，融资客当日净买入金额过亿元的个股达24只。",
       "importance": 2,
       "rank": 0,
       "tags": [
         "财报",
-        "光通信",
-        "A股"
+        "光模块",
+        "AI"
       ],
       "locale": "national",
       "market": "a-share"
@@ -182,13 +255,12 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/27",
-      "summary": "受两则重磅事件催化，光通信板块站上风口，机构称光纤光缆配置时点已至。",
+      "summary": "光纤光缆板块受两则重磅催化消息刺激走强，有机构称该板块配置时点已至。",
       "importance": 2,
       "rank": 0,
       "tags": [
         "光通信",
-        "A股",
-        "机构观点"
+        "通信"
       ],
       "locale": "national",
       "market": "a-share"
@@ -199,13 +271,12 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/27",
-      "summary": "某2000亿市值存储龙头1分钟内封涨停板，并拿下重磅订单。",
+      "summary": "市值约2000亿元的存储龙头股价1分钟内封涨停板，盘中拿下重磅订单。",
       "importance": 2,
       "rank": 0,
       "tags": [
         "存储",
-        "半导体",
-        "A股"
+        "半导体"
       ],
       "locale": "national",
       "market": "a-share"
@@ -216,12 +287,12 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/27",
-      "summary": "英伟达力捧PTFE材料，相关概念股集体爆发。",
+      "summary": "受英伟达力捧PTFE材料影响，A股相关PTFE概念股集体爆发。",
       "importance": 2,
       "rank": 0,
       "tags": [
-        "AI",
         "半导体",
+        "AI",
         "材料"
       ],
       "locale": "national",
@@ -233,13 +304,12 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/27",
-      "summary": "英伟达CEO黄仁勋再次回应\"循环融资\"质疑，称AI行业需巨额投入相关风险很低。",
+      "summary": "英伟达CEO黄仁勋再次回应\"循环融资\"质疑，称AI行业需要巨额资金，相关风险很低。",
       "importance": 2,
       "rank": 0,
       "tags": [
         "AI",
-        "英伟达",
-        "中概股"
+        "英伟达"
       ],
       "locale": "national",
       "market": "a-share"
@@ -250,13 +320,12 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/27",
-      "summary": "存储三巨头产能售罄，摩根大通预测存储芯片短缺仍将延续。",
+      "summary": "存储三巨头产能售罄，摩根大通预测存储芯片短缺仍将延续，A股相关概念股受关注。",
       "importance": 2,
       "rank": 0,
       "tags": [
         "存储",
-        "半导体",
-        "机构观点"
+        "半导体"
       ],
       "locale": "national",
       "market": "a-share"
@@ -267,8 +336,8 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/28",
-      "summary": "产业资本近期持续入市，被市场解读为传递积极信号。",
-      "importance": 1,
+      "summary": "近期产业资本加大入市力度，被市场解读为传递积极信号。",
+      "importance": 2,
       "rank": 0,
       "tags": [
         "A股",
@@ -283,13 +352,12 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/28",
-      "summary": "华福证券管涛观点：多空因素交织下，美元指数大概率维持震荡走势。",
+      "summary": "华福证券管涛表示，在多空因素交织背景下，美元指数大概率将维持震荡走势。",
       "importance": 1,
       "rank": 0,
       "tags": [
         "外汇",
-        "美元",
-        "机构观点"
+        "美元"
       ],
       "locale": "national",
       "market": "a-share"
@@ -300,7 +368,7 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/28",
-      "summary": "港交所披露易发布某公司海外监管公告——交易动态更新。",
+      "summary": "港交所披露易收到一份海外监管公告——交易最新情况通报。",
       "importance": 1,
       "rank": 0,
       "tags": [
@@ -316,7 +384,7 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/28",
-      "summary": "港交所披露易发布某公司海外监管公告——其他事项。",
+      "summary": "港交所披露易收到一份海外监管公告——其他类事项。",
       "importance": 1,
       "rank": 0,
       "tags": [
@@ -332,13 +400,12 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/28",
-      "summary": "港交所披露易发布某公司内幕信息及附属公司业绩公告。",
+      "summary": "港交所披露易收到一份内幕消息/子公司业绩公告。",
       "importance": 1,
       "rank": 0,
       "tags": [
         "港股",
-        "财报",
-        "公告"
+        "财报"
       ],
       "locale": "national",
       "market": "hk"
@@ -349,7 +416,7 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/28",
-      "summary": "港交所披露易发布某公司公告——其他杂项事项。",
+      "summary": "港交所披露易收到一份其他杂项公告。",
       "importance": 1,
       "rank": 0,
       "tags": [
@@ -365,7 +432,7 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/28",
-      "summary": "港交所披露易发布某公司通函——其他事项。",
+      "summary": "港交所披露易收到一份通函（其他类）。",
       "importance": 1,
       "rank": 0,
       "tags": [
@@ -381,7 +448,7 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/28",
-      "summary": "港交所披露易发布某公司通函——其他事项。",
+      "summary": "港交所披露易收到一份通函（其他类）。",
       "importance": 1,
       "rank": 0,
       "tags": [
@@ -397,13 +464,12 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/28",
-      "summary": "港交所披露易发布某公司中期/半年度财务报告。",
+      "summary": "港交所披露易披露一份中期/半年度报告。",
       "importance": 1,
       "rank": 0,
       "tags": [
         "港股",
-        "财报",
-        "ESG"
+        "财报"
       ],
       "locale": "national",
       "market": "hk"
@@ -414,7 +480,7 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/28",
-      "summary": "港交所披露易发布某公司海外监管公告——业务更新。",
+      "summary": "港交所披露易收到一份海外监管公告——业务最新情况通报。",
       "importance": 1,
       "rank": 0,
       "tags": [
@@ -430,7 +496,7 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/28",
-      "summary": "港交所披露易发布某公司通函——其他事项。",
+      "summary": "港交所披露易收到一份通函（其他类）。",
       "importance": 1,
       "rank": 0,
       "tags": [
@@ -446,7 +512,7 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/28",
-      "summary": "港交所披露易发布某公司通函——其他事项。",
+      "summary": "港交所披露易收到一份通函（其他类）。",
       "importance": 1,
       "rank": 0,
       "tags": [
@@ -462,13 +528,12 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/28",
-      "summary": "港交所披露易发布某公司公告，涉及关连交易/须披露交易/持续关连交易。",
+      "summary": "港交所披露易收到一份关联交易/可披露交易/持续关联交易公告。",
       "importance": 1,
       "rank": 0,
       "tags": [
         "港股",
-        "关联交易",
-        "公告"
+        "关联交易"
       ],
       "locale": "national",
       "market": "hk"
@@ -479,13 +544,12 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/28",
-      "summary": "港交所披露易发布某公司中期/半年度财务报告。",
+      "summary": "港交所披露易披露一份中期/半年度报告。",
       "importance": 1,
       "rank": 0,
       "tags": [
         "港股",
-        "财报",
-        "ESG"
+        "财报"
       ],
       "locale": "national",
       "market": "hk"
@@ -496,12 +560,11 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/27",
-      "summary": "美联储主席Kevin Warsh将于周五在杰克逊霍尔年会上发表主旨演讲，市场关注其政策表态。",
+      "summary": "美联储主席凯文·沃什将于周五在杰克逊霍尔年会上发表主旨演讲，市场关注其政策表态。",
       "importance": 3,
       "rank": 0,
       "tags": [
         "美联储",
-        "美股",
         "宏观"
       ],
       "locale": "overseas",
@@ -513,13 +576,12 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/27",
-      "summary": "SK海力士CEO表示，印第安纳州将成为2030年关键内存生产基地，首座美国工厂正在建设中。",
+      "summary": "SK海力士CEO表示，印第安纳州将成为其到2030年的关键存储芯片生产基地，首座美国工厂已开建。",
       "importance": 2,
       "rank": 0,
       "tags": [
-        "半导体",
         "存储",
-        "美股"
+        "半导体"
       ],
       "locale": "overseas",
       "market": "us"
@@ -530,13 +592,12 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/27",
-      "summary": "特朗普签署行政命令，将安大略湖更名为\"美洲湖\"，正值美加贸易摩擦持续。",
+      "summary": "特朗普签署行政令，将安大略湖更名为\"美利坚湖\"，背景为其对加贸易战持续。",
       "importance": 1,
       "rank": 0,
       "tags": [
         "政策",
-        "中美关系",
-        "美股"
+        "贸易"
       ],
       "locale": "overseas",
       "market": "us"
@@ -547,12 +608,12 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/27",
-      "summary": "FDA批准吉利德每日一次的HIV口服药物，旨在简化部分患者的治疗方案。",
+      "summary": "美国FDA批准吉利德一款每日一次的HIV药物，旨在简化部分患者的治疗方案。",
       "importance": 2,
       "rank": 0,
       "tags": [
         "医药",
-        "美股"
+        "FDA"
       ],
       "locale": "overseas",
       "market": "us"
@@ -563,13 +624,12 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/27",
-      "summary": "SpaceX股价出现罕见波动，引发期权交易者关注。",
+      "summary": "SpaceX股价出现罕见异常波动，引起期权交易员关注。",
       "importance": 2,
       "rank": 0,
       "tags": [
         "美股",
-        "期权",
-        "航天"
+        "SpaceX"
       ],
       "locale": "overseas",
       "market": "us"
@@ -580,13 +640,12 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/27",
-      "summary": "Gap公司任命新的Old Navy CEO以重振该品牌，股价应声上涨12%。",
-      "importance": 2,
+      "summary": "Gap股价上涨12%，公司在任命新的Old Navy CEO以重振该低迷品牌。",
+      "importance": 1,
       "rank": 0,
       "tags": [
         "美股",
-        "消费",
-        "零售"
+        "消费"
       ],
       "locale": "overseas",
       "market": "us"
@@ -597,12 +656,12 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/27",
-      "summary": "Salesforce财报后股价飙升22%，创下历史第二大单日涨幅，带领软件板块整体走强。",
+      "summary": "Salesforce股价大涨22%，创其历史上第二大单日涨幅，带动软件板块整体走强。",
       "importance": 3,
       "rank": 0,
       "tags": [
-        "财报",
         "美股",
+        "财报",
         "软件"
       ],
       "locale": "overseas",
@@ -614,13 +673,12 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/27",
-      "summary": "据《纽约时报》报道，小特朗普建议共和党州检察长不要反对预测市场监管。",
+      "summary": "据《纽约时报》报道，小特朗普建议共和党各州总检察长不要反对预测市场（prediction markets）业务。",
       "importance": 1,
       "rank": 0,
       "tags": [
-        "政策",
         "美股",
-        "预测市场"
+        "政策"
       ],
       "locale": "overseas",
       "market": "us"
@@ -631,13 +689,12 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/27",
-      "summary": "预测市场押注美联储主席Warsh在杰克逊霍尔讲话的措辞及可能引发的市场反应。",
+      "summary": "预测市场押注沃什讲话内容及其可能引发的市场反应。",
       "importance": 2,
       "rank": 0,
       "tags": [
         "美联储",
-        "美股",
-        "预测市场"
+        "宏观"
       ],
       "locale": "overseas",
       "market": "us"
@@ -648,13 +705,13 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/27",
-      "summary": "CNBC评论员Jim Cramer表示，英伟达与Salesforce的财报击破了市场两大看空叙事。",
-      "importance": 1,
+      "summary": "财经评论员Jim Cramer表示，英伟达和Salesforce的财报打破了市场上两种看空叙事。",
+      "importance": 2,
       "rank": 0,
       "tags": [
-        "AI",
         "美股",
-        "评论"
+        "财报",
+        "AI"
       ],
       "locale": "overseas",
       "market": "us"
@@ -665,7 +722,7 @@
       "source": "Investing.com News",
       "source_type": "media",
       "date": "08/27",
-      "summary": "IREN公布2026财年Q4业绩，营收不及预期，公司继续扩展AI云业务。",
+      "summary": "IREN公布2026财年第四季度财报，营收不及预期，但AI云业务持续扩张。",
       "importance": 1,
       "rank": 0,
       "tags": [
@@ -682,13 +739,12 @@
       "source": "Investing.com News",
       "source_type": "media",
       "date": "08/27",
-      "summary": "Affirm公布2026财年Q4业绩，盈利大幅增长，营收与利润均超市场预期。",
-      "importance": 2,
+      "summary": "Affirm公布2026财年第四季度财报，利润大幅增长，业绩超市场预期。",
+      "importance": 1,
       "rank": 0,
       "tags": [
         "财报",
-        "美股",
-        "金融科技"
+        "美股"
       ],
       "locale": "overseas",
       "market": "us"
