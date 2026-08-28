@@ -24,10 +24,16 @@ on:
     - cron: '40 * * * *'
   workflow_dispatch:
     inputs:
+      # 2026-08-28 用户需求：3 个开关独立可选，手动选的优先级最高
+      # （即显式 false/true 覆盖 schedule 默认）。
       skip_ai:
         description: '跳过全部 LLM 调用（复用历史缓存摘要，零 AI 成本；等价原 test2/无 AI 验证）'
         type: boolean
         default: false
+      audio:
+        description: '生成新音频（false = 跳过音频合成，页面不挂播放器；用于只想看报告文字时省 TTS 成本）'
+        type: boolean
+        default: true
       publish:
         description: '发布到 gh-pages（false = 仅验证 + 上传 artifact，不发布；等价原 test1）'
         type: boolean
@@ -253,6 +259,7 @@ jobs:
       - name: Generate today's report
         env:
           SKIP_AI: ${{ inputs.skip_ai && 'true' || '' }}
+          AUDIO_ENABLED: ${{ inputs.audio && 'true' || 'false' }}
           LLM_BACKEND: ${{ vars.LLM_BACKEND || 'anthropic' }}
           LLM_MODEL: ${{ vars.LLM_MODEL }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}

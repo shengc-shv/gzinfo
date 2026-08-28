@@ -160,17 +160,19 @@ export async function fetchMarketQuotes(quoteDate: string): Promise<QuoteResult 
   const hk: IndexQuote[] = [];
   for (const d of HK_DEFS) {
     const f = parseOne(d.code);
-    // 港股：f[6] = 最新价，f[3] = 昨收；涨跌幅 = (f[6]-f[3])/f[3]
-    // ⚠️ 须盘前跑（CI 09:10），否则 f[6] 是盘中实时价，涨跌幅反映盘中而非昨收
-    if (f && f[3] && f[6]) {
+    // 港股 hq 字段顺序（2026-08-28 实测，港股与 A股字段顺序不同）：
+    //   f[0]=symbol  f[1]=name  f[2]=current  f[3]=prev_close（昨收）
+    //   f[8]=changePct%  f[17]=date  f[18]=time
+    // 取「昨日收盘」标准：f[3]（昨收点位）+ f[8]（API 直接给的涨跌幅）。
+    // 注意：f[2] 是 current（盘前 = 昨收，但盘中 = 实时价），所以绝不能用 f[2] 算昨收。
+    if (f && f[3] && f[8] !== undefined) {
       const yest = parseFloat(f[3]);
-      const latest = parseFloat(f[6]);
-      if (yest && latest) {
-        const changePctNum = ((latest - yest) / yest) * 100;
+      const changePct = parseFloat(f[8]);
+      if (yest && !Number.isNaN(changePct)) {
         hk.push({
           name: d.name,
-          value: fmtNum(f[6]),
-          changePct: fmtPct(changePctNum.toFixed(2)),
+          value: yest.toFixed(2),
+          changePct: fmtPct(changePct.toFixed(2)),
         });
       }
     }

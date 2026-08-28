@@ -24,6 +24,11 @@ export async function synthesizeAudioIfAny(
   ctx: DailyContext,
 ): Promise<AudioMeta | undefined> {
   const date = ctx.date;
+  // 2026-08-28 用户需求：audio 开关（AUDIO_ENABLED=false 跳过 TTS 成本）
+  if (process.env.AUDIO_ENABLED === "false") {
+    ctx.log.info("audio", "AUDIO_ENABLED=false：跳过音频合成（页面不出播放器）");
+    return undefined;
+  }
   try {
     const execAudio = loadStore(date);
     if (!execAudio) {
