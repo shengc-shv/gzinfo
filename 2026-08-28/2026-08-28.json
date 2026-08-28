@@ -1,24 +1,132 @@
 {
   "date": "2026-08-28",
-  "hero_line": "今日暂无可推送重点，详见各板块资讯。",
-  "must_read": [],
-  "insights": [],
+  "hero_line": "信银理财含权产品规模暴增3000亿，股份行财富赛道重新洗牌，分行需评估本行含权产品竞争力。",
+  "must_read": [
+    {
+      "title": "信银理财规模跃居第二",
+      "why": "权益类理财在股份行体系加速放量，反映财富管理赛道竞争逻辑生变，分行需重新校准高净值客户产品供给策略。",
+      "url": "https://www.stcn.com/article/detail/4149556.html"
+    },
+    {
+      "title": "中小银行股权拍卖遇冷",
+      "why": "区域银行股权流动性低迷与估值修复缓慢并存，提示分行关注城商行股东客户股权变现与资产配置需求中的服务机会与潜在风险。",
+      "url": "https://m.21jingji.com/article/20260828/herald/a7a45cd56c17b22c3a1875c3dda3aac3.html"
+    }
+  ],
+  "insights": [
+    {
+      "topic": "银发客群政务服务升级",
+      "tags": [
+        "客群",
+        "财富"
+      ],
+      "impact": "广州市老年人优待卡实现即办即取，政务服务效率提升带动网点老年客户触达频次增加，为银发客群一站式金融与权益服务打开新入口。",
+      "action": "本周可联动周边网点摸排老年客户到店情况，针对银发客群推出专属理财与便利金融权益包，提升黏性。",
+      "sources": [
+        {
+          "title": "广州市老年人优待卡服务升级 新办补办均可即办即取",
+          "url": "https://news.dayoo.com/guangzhou/202608/28/139995_54997058.htm"
+        }
+      ]
+    },
+    {
+      "topic": "含权理财产品竞品跟进",
+      "tags": [
+        "财富",
+        "私行"
+      ],
+      "impact": "信银理财含权产品规模暴增3000亿元，对私行及高净值客户的吸引力增强，本行若不快速跟进可能面临客户与资金双流失。",
+      "action": "本周财富部可参考信银产品矩阵，加快评估本行含权产品供给，必要时引入绩优含权产品补齐货架。",
+      "sources": [
+        {
+          "title": "信银理财规模跃居第二，含权产品暴增3000亿元，做对了什么？",
+          "url": "https://www.stcn.com/article/detail/4149556.html"
+        }
+      ]
+    },
+    {
+      "topic": "中小银行股权变现商机",
+      "tags": [
+        "客群",
+        "信贷"
+      ],
+      "impact": "中小银行股权拍卖频繁流拍，相关股东客户存在资产变现与重新配置需求，分行可挖掘股权质押融资与资产配置两类业务机会。",
+      "action": "公司部可联动网点梳理本地区城商行股东客户名单，本周主动对接股权变现与综合金融服务需求。",
+      "sources": [
+        {
+          "title": "四次拍卖三次折戟！中小银行股权拍卖为何频频遇冷？",
+          "url": "https://m.21jingji.com/article/20260828/herald/a7a45cd56c17b22c3a1875c3dda3aac3.html"
+        }
+      ]
+    }
+  ],
   "sections": {
-    "gz_local": [],
-    "biz_insight": [],
+    "gz_local": [
+      {
+        "url": "https://news.dayoo.com/guangzhou/202608/28/139995_54997058.htm",
+        "title_cn": "广州市老年人优待卡服务升级 新办补办均可即办即取",
+        "title_orig": "广州市老年人优待卡服务升级 新办补办均可即办即取",
+        "source": "广州日报·大洋网",
+        "source_type": "media",
+        "date": "08/28",
+        "summary": "广州市老年人优待卡新办、补办均实现即办即取，服务效率明显提升。面向本地老年群体的政务服务正持续优化办卡体验。可结合网点客群摸排，挖掘银发客户一站式金融与权益服务机会，提升老年客群黏性。",
+        "importance": 2,
+        "rank": 1,
+        "tags": [
+          "养老",
+          "客群"
+        ],
+        "locale": "gz",
+        "locale_evidence": "广州市老年人优待卡服务升级"
+      }
+    ],
+    "biz_insight": [
+      {
+        "url": "https://www.stcn.com/article/detail/4149556.html",
+        "title_cn": "信银理财规模跃居第二，含权产品暴增3000亿元，做对了什么？",
+        "title_orig": "信银理财规模跃居第二，含权产品暴增3000亿元，做对了什么？",
+        "source": "证券时报",
+        "source_type": "media",
+        "date": "08/28",
+        "summary": "信银理财管理规模跃居行业第二，含权产品规模暴增3000亿元，反映权益类理财在股份行体系中加速放量。头部股份行正以含权策略抢占财富管理增量。可参考其产品矩阵思路，评估本行含权产品对私行及高净值客户的适配度。",
+        "importance": 3,
+        "rank": 1,
+        "tags": [
+          "财富",
+          "竞对动态"
+        ],
+        "locale": "national"
+      },
+      {
+        "url": "https://m.21jingji.com/article/20260828/herald/a7a45cd56c17b22c3a1875c3dda3aac3.html",
+        "title_cn": "四次拍卖三次折戟！中小银行股权拍卖为何频频遇冷？",
+        "title_orig": "四次拍卖三次折戟！中小银行股权拍卖为何频频遇冷？",
+        "source": "21世纪经济报道·金融",
+        "source_type": "media",
+        "date": "08/28",
+        "summary": "中小银行股权司法拍卖频繁流拍，四次拍卖三次折戟，折射区域银行股权流动性持续低迷、估值修复缓慢。对分行而言，需关注潜在城商行股东客户在股权变现、资产配置上的服务机会与风险信号。",
+        "importance": 2,
+        "rank": 2,
+        "tags": [
+          "竞对动态"
+        ],
+        "locale": "national"
+      }
+    ],
     "policy_market": [],
     "tech": [],
     "ipo": []
   },
   "stock_recap": {
     "us": {
-      "overview": "市场静待周五鲍尔森在Jackson Hole讲话，观望情绪浓厚，盘面涨跌互现。",
+      "overview": "美股市场等待沃什Jackson Hole讲话，盘中观望情绪升温。",
       "sectors": [
-        "半导体：SK海力士宣布印第安纳州建厂，存储概念受关注",
-        "医药：吉利德每日一次HIV新药获FDA批准",
-        "中美贸易：特朗普就访华议题对华强硬表态，敏感板块承压"
+        "科技/AI芯片：SK海力士宣布印第安纳工厂开建，存储芯片产能主线受关注",
+        "贵金属/避险：美元走弱预期下黄金股受关注",
+        "地缘风险：美伊霍尔木兹僵局与中美关系紧张压制风险偏好",
+        "金融监管：特朗普长子敦促各州不打压预测市场，衍生品监管议题升温"
       ],
-      "spoken": "美股盘前静待周五Jackson Hole美联储主席讲话，市场观望情绪较浓，盘面涨跌互现。半导体板块受SK海力士赴美建厂消息带动，存储概念受关注。医药板块吉利德每日一次HIV新药获FDA批准，股价有支撑。贸易敏感型板块则因特朗普对华强硬表态有所承压。",
+      "spoken": "美股市场等待美联储主席沃什在Jackson Hole的讲话，整体观望情绪升温。盘面上存储芯片受SK海力士扩产消息提振，AI算力主线获关注；地缘端美伊霍尔木兹僵局与中美博弈压制风险偏好。美元走弱预期下贵金属板块走强，金融监管端预测市场监管议题持续发酵。",
       "meta": {
         "source": "CNBC Top Stories",
         "crossCheck": "新浪行情",
@@ -43,17 +151,16 @@
       ]
     },
     "aShare": {
-      "overview": "沪指涨逾1%科创50大涨近4%，半导体板块集体爆发引领市场。",
+      "overview": "A股结构性行情延续，科技与黄金板块表现强势。",
       "sectors": [
-        "半导体：科创50大涨近4%，存储龙头封板叠加英伟达捧PTFE概念爆发",
-        "光模块：中报业绩亮眼，机构称光纤光缆配置时点已至",
-        "新能源/电网：美国限制外国电网设备，上市公司密集回应",
-        "贵金属/防御：科技强势下市场风格偏向成长",
-        "汽车：受美国电网行政令及贸易摩擦升温影响承压"
+        "网络安全：受OpenAI智能体安全事件催化，麒麟信安20CM涨停，软件开发ETF涨超3%",
+        "贵金属/黄金股：美元信用受质疑叠加金价逻辑，深中华A七连板",
+        "光通信/液冷：AI算力扩张带动光通信进入业绩兑现期，液冷需求放量",
+        "粮食：粮食ETF标的指数冲击五连涨"
       ],
-      "spoken": "A股沪指涨逾1%，科创50指数大涨近4%，成长风格全面占优。半导体板块集体爆发，存储龙头强势封板，英伟达力捧的PTFE概念跟涨。光模块中报业绩亮眼获融资客抢筹，新能源板块则因美国限制外国电网设备有所承压。",
+      "spoken": "A股结构性行情延续，科技与黄金板块表现强势。网络安全受OpenAI智能体安全事件催化，麒麟信安二十厘米涨停，软件ETF涨超三个百分点。美元信用受质疑叠加金价走强，黄金股扎堆涨停，深中华A连板七次。AI算力扩张带动光通信进入业绩兑现期，液冷需求同步放量，粮食板块也走出连阳行情。",
       "meta": {
-        "source": "东方财富",
+        "source": "新浪财经·A股",
         "crossCheck": "新浪行情",
         "date": "2026-08-28"
       },
@@ -76,14 +183,13 @@
       ]
     },
     "hk": {
-      "overview": "港股盘面消息面清淡，恒指维持震荡格局，个股以业绩公告为主。",
+      "overview": "港股市场今日无重大宏观驱动，个股公告与中期业绩披露为主。",
       "sectors": [
-        "半导体/科技：A股科创板大涨带动港股科技股情绪",
-        "金融地产：缺乏催化，整体维持震荡",
-        "能源/原材料：受美中贸易摩擦升温影响表现疲弱",
-        "医药：美股吉利德获批提振创新药板块情绪"
+        "中期业绩披露：多家公司密集发布半年报与ESG报告",
+        "公告类交易：港交所披露易出现多则海外监管公告与子公司业绩",
+        "结构性改革：港交所回应创业板与主板合并传闻，制度变化受关注"
       ],
-      "spoken": "港股盘面消息面清淡，恒指维持震荡格局，个股以业绩公告为主。科技股受A股科创板大涨带动情绪有所提振，医药板块受美股吉利德新药获批利好。能源及原材料板块则因美中贸易摩擦升温有所承压。整体市场缺乏方向性催化，观望氛围较浓。",
+      "spoken": "港股今日缺乏重磅宏观驱动，盘面以个股公告与中期业绩披露为主线。多家公司密集发布半年报和ESG报告，海外监管公告与子公司业绩公告也集中涌现。港交所回应了创业板与主板合并的市场传闻，制度改革预期受到关注，整体成交氛围偏观望。",
       "meta": {
         "source": "新浪财经·港股",
         "crossCheck": "新浪行情",
@@ -93,12 +199,12 @@
         {
           "name": "恒生指数",
           "value": "25565.74",
-          "changePct": "-0.48%"
+          "changePct": "+0.13%"
         },
         {
           "name": "恒生科技",
           "value": "4620.29",
-          "changePct": "-0.57%"
+          "changePct": "+0.09%"
         }
       ]
     },
@@ -107,87 +213,133 @@
   },
   "stock_news": [
     {
-      "url": "https://finance.eastmoney.com/a/202608273855960739.html",
-      "title_cn": "知情人士回应“A股未盈利企业无法上市”",
-      "source": "东方财富",
+      "url": "https://finance.sina.com.cn/money/fund/etf/2026-08-28/doc-inipvrtx8968815.shtml",
+      "title_cn": "OpenAI智能体入侵系统？网络安全概念爆发，麒麟信安20CM涨停！软件开发ETF华宝（159036）标的指数涨超3%",
+      "source": "新浪财经·A股",
       "source_type": "media",
-      "date": "08/27",
-      "summary": "针对\"A股未盈利企业无法上市\"的传闻，知情人士回应称相关报道不准确，A股对未盈利企业的上市通道并未关闭。",
+      "date": "08/28",
+      "summary": "受OpenAI智能体相关网络安全担忧催化，A股网络安全概念走强，麒麟信安20CM涨停，软件开发ETF华宝（159036）标的指数涨超3%。",
       "importance": 2,
       "rank": 0,
       "tags": [
-        "政策",
-        "A股"
+        "网络安全",
+        "AI",
+        "软件"
       ],
       "locale": "national",
       "market": "a-share"
     },
     {
-      "url": "https://finance.eastmoney.com/a/202608273856312185.html",
-      "title_cn": "特朗普就美国电力电网中的外国制造设备宣布“国家紧急状态”外交部回应",
-      "source": "东方财富",
+      "url": "https://finance.sina.com.cn/roll/2026-08-28/doc-inipvmmz8920263.shtml",
+      "title_cn": "香港创业板与主板合并？港交所回应来了",
+      "source": "新浪财经·A股",
       "source_type": "media",
-      "date": "08/27",
-      "summary": "特朗普就美国电力电网中的外国制造设备宣布\"国家紧急状态\"，中国外交部回应称此举泛化国家安全概念，中方将采取必要措施维护自身正当权益。",
+      "date": "08/28",
+      "summary": "针对市场传闻的香港创业板与主板合并事项，港交所作出回应。",
       "importance": 2,
       "rank": 0,
       "tags": [
-        "政策",
-        "贸易",
-        "能源"
+        "港交所",
+        "资本市场改革"
       ],
       "locale": "national",
       "market": "a-share"
     },
     {
-      "url": "https://finance.eastmoney.com/a/202608273856285573.html",
-      "title_cn": "沪指涨逾1%科创50指数大涨近4%半导体板块爆发",
-      "source": "东方财富",
+      "url": "https://finance.sina.com.cn/jjxw/2026-08-28/doc-inipuuqq0595164.shtml",
+      "title_cn": "8月223家公司获外资机构调研",
+      "source": "新浪财经·A股",
       "source_type": "media",
-      "date": "08/27",
-      "summary": "8月27日A股放量上涨，沪指涨逾1%，科创50指数大涨近4%，半导体板块集体爆发领涨市场。",
-      "importance": 2,
-      "rank": 0,
-      "tags": [
-        "A股",
-        "半导体",
-        "市场行情"
-      ],
-      "locale": "national",
-      "market": "a-share"
-    },
-    {
-      "url": "https://finance.eastmoney.com/a/202608273856994327.html",
-      "title_cn": "美国签令限制外国电网设备多家上市公司回应",
-      "source": "东方财富",
-      "source_type": "media",
-      "date": "08/27",
-      "summary": "美国签署行政令限制外国电网设备进入美国电力系统，多家A股上市公司回应称对美业务占比较小或暂无影响。",
-      "importance": 2,
-      "rank": 0,
-      "tags": [
-        "政策",
-        "贸易",
-        "能源"
-      ],
-      "locale": "national",
-      "market": "a-share"
-    },
-    {
-      "url": "https://finance.eastmoney.com/a/202608273856699245.html",
-      "title_cn": "8月27日晚间沪深上市公司重大事项公告最新快递",
-      "source": "东方财富",
-      "source_type": "media",
-      "date": "08/27",
-      "summary": "8月27日晚间沪深两市多家上市公司发布重大事项公告，涵盖业绩、增减持、回购、重组等。",
+      "date": "08/28",
+      "summary": "8月以来共有223家A股公司获得外资机构调研。",
       "importance": 1,
       "rank": 0,
       "tags": [
-        "A股",
-        "公司公告"
+        "外资",
+        "调研"
       ],
       "locale": "national",
       "market": "a-share"
+    },
+    {
+      "url": "https://finance.sina.com.cn/stock/zqgd/2026-08-28/doc-inipvmmz4784868.shtml",
+      "title_cn": "香港创业板与主板合并？港交所回应来了",
+      "source": "新浪财经·A股",
+      "source_type": "media",
+      "date": "08/28",
+      "summary": "与第1条为同一新闻：港交所就香港创业板与主板合并传闻作出回应。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "港交所",
+        "资本市场改革"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.sina.com.cn/roll/2026-08-28/doc-inipvmmz8886582.shtml",
+      "title_cn": "公募基金2026年首批半年报陆续披露 到底有多少基民赚了钱？",
+      "source": "新浪财经·A股",
+      "source_type": "media",
+      "date": "08/28",
+      "summary": "公募基金2026年首批半年报陆续披露，市场关注期内基民盈亏情况。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "公募基金",
+        "财报"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0828/2026082800215.pdf",
+      "title_cn": "Circulars - [Other]",
+      "source": "港交所披露易",
+      "source_type": "media",
+      "date": "08/28",
+      "summary": "港交所披露易发布一则Circulars（其他类）公告。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "港股",
+        "公告"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0828/2026082800213.pdf",
+      "title_cn": "Circulars - [Other]",
+      "source": "港交所披露易",
+      "source_type": "media",
+      "date": "08/28",
+      "summary": "港交所披露易发布一则Circulars（其他类）公告。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "港股",
+        "公告"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0828/2026082800209.pdf",
+      "title_cn": "Financial Statements/ESG Information - [Interim/Half-Year Report]",
+      "source": "港交所披露易",
+      "source_type": "media",
+      "date": "08/28",
+      "summary": "港交所披露易发布一则中期/半年度报告。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "港股",
+        "财报"
+      ],
+      "locale": "national",
+      "market": "hk"
     },
     {
       "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0828/2026082800155.pdf",
@@ -195,12 +347,12 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/28",
-      "summary": "港股上市公司于港交所披露易发布海外监管公告，内容为交易最新情况。",
+      "summary": "港交所披露易发布一则海外监管公告（交易更新）。",
       "importance": 1,
       "rank": 0,
       "tags": [
         "港股",
-        "公司公告"
+        "交易更新"
       ],
       "locale": "national",
       "market": "hk"
@@ -211,61 +363,12 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/28",
-      "summary": "港股上市公司于港交所披露易发布海外监管公告（其他类）。",
+      "summary": "港交所披露易发布一则海外监管公告（其他类）。",
       "importance": 1,
       "rank": 0,
       "tags": [
         "港股",
-        "公司公告"
-      ],
-      "locale": "national",
-      "market": "hk"
-    },
-    {
-      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0828/2026082800145.pdf",
-      "title_cn": "Announcements and Notices - [Inside Information / Results of a Subsidiary]",
-      "source": "港交所披露易",
-      "source_type": "media",
-      "date": "08/28",
-      "summary": "港股上市公司发布内幕消息公告，内容涉及子公司业绩结果。",
-      "importance": 1,
-      "rank": 0,
-      "tags": [
-        "港股",
-        "公司公告",
-        "财报"
-      ],
-      "locale": "national",
-      "market": "hk"
-    },
-    {
-      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0828/2026082800143.pdf",
-      "title_cn": "Announcements and Notices - [Other - Miscellaneous]",
-      "source": "港交所披露易",
-      "source_type": "media",
-      "date": "08/28",
-      "summary": "港股上市公司于港交所披露易发布公告（其他类杂项）。",
-      "importance": 1,
-      "rank": 0,
-      "tags": [
-        "港股",
-        "公司公告"
-      ],
-      "locale": "national",
-      "market": "hk"
-    },
-    {
-      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0828/2026082800141.pdf",
-      "title_cn": "Circulars - [Other]",
-      "source": "港交所披露易",
-      "source_type": "media",
-      "date": "08/28",
-      "summary": "港股上市公司于港交所披露易发布通函（其他类）。",
-      "importance": 1,
-      "rank": 0,
-      "tags": [
-        "港股",
-        "公司公告"
+        "公告"
       ],
       "locale": "national",
       "market": "hk"
@@ -276,7 +379,7 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/28",
-      "summary": "美国一法官阻止五角大楼将AI公司Anthropic列入供应链风险黑名单的举措。",
+      "summary": "美国一名法官阻止五角大楼将AI公司Anthropic列入供应链风险黑名单。",
       "importance": 2,
       "rank": 0,
       "tags": [
@@ -293,13 +396,29 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/28",
-      "summary": "在中美官员就习近平访美进行会晤之际，特朗普对北京强硬表态升级。",
+      "summary": "在中美官员为习近平访美做准备之际，特朗普对北京言辞再度升级。",
       "importance": 3,
       "rank": 0,
       "tags": [
         "中美关系",
-        "政策",
-        "贸易"
+        "政策"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/08/28/us-iran-war-trump-hormuz-oman-centcom.html",
+      "title_cn": "Iran links Hormuz reopening to ending regional wars as Trump reportedly rejects return to June deal",
+      "source": "CNBC Top Stories",
+      "source_type": "media",
+      "date": "08/28",
+      "summary": "伊朗将霍尔木兹海峡重新开放与结束地区战争挂钩；据报特朗普拒绝回到6月协议。",
+      "importance": 3,
+      "rank": 0,
+      "tags": [
+        "地缘政治",
+        "能源",
+        "中东"
       ],
       "locale": "overseas",
       "market": "us"
@@ -310,7 +429,7 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/27",
-      "summary": "SK海力士CEO表示，印第安纳州将成为公司到2030年的关键存储芯片生产基地，首座美国工厂已开工建设。",
+      "summary": "SK海力士CEO表示，印第安纳州到2030年将成为关键存储芯片生产基地，首座美国工厂已在建设中。",
       "importance": 2,
       "rank": 0,
       "tags": [
@@ -327,28 +446,12 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/27",
-      "summary": "特朗普签署行政令将安大略湖更名为\"美国湖\"，美加贸易紧张局势持续升级。",
-      "importance": 2,
+      "summary": "特朗普签署行政令，将安大略湖更名为\"美洲湖\"，正值美加贸易摩擦持续之际。",
+      "importance": 1,
       "rank": 0,
       "tags": [
-        "贸易",
+        "贸易摩擦",
         "政策"
-      ],
-      "locale": "overseas",
-      "market": "us"
-    },
-    {
-      "url": "https://www.cnbc.com/2026/08/27/fed-chairman-kevin-warsh-delivers-his-key-jackson-hole-speech-friday.html",
-      "title_cn": "Fed Chairman Kevin Warsh delivers his key Jackson Hole speech Friday. Here's what to expect",
-      "source": "CNBC Top Stories",
-      "source_type": "media",
-      "date": "08/27",
-      "summary": "美联储主席提名人选沃什（Kevin Warsh）将于周五在杰克逊霍尔年会上发表主旨演讲，市场关注其政策立场表态。",
-      "importance": 3,
-      "rank": 0,
-      "tags": [
-        "美联储",
-        "宏观"
       ],
       "locale": "overseas",
       "market": "us"
