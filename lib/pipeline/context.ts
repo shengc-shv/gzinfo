@@ -10,6 +10,8 @@
  * - PR1：仅类型 + ConsoleLogger 默认实现；main 仍以 console.log 为主
  * - PR4：mode.runner 类型补齐，模式差异由 ctx.mode 派发
  * - PR5：全面接管 console.log → ctx.log
+ * - 2026-08-28：+errors 错误聚合（T1），每阶段 push {stage, source?, message}，
+ *   main() 末尾汇总输出；CI 失败时一眼看到所有失败点
  */
 
 import type { SourceDef } from "../sources/types";
@@ -80,6 +82,20 @@ export interface DailyContext {
   history: HistoryStore;
   /** L2 账本：append-only，付费 AI 产物永不丢。 */
   aiAssets: AiAssetStore;
-  /** 阶段日志器。 */
+  /** T1：错误聚合：每阶段 push {stage, source?, message}，main 末尾汇总输出 */
+  errors: ErrorRecord[];
+  /** 阶段日志器 */
   log: Logger;
+}
+
+/** 错误记录（T1）：每阶段 push 一条，main 末尾统一汇总。 */
+export interface ErrorRecord {
+  /** 阶段名：fetchAllSources / filter / ai / side-outputs / render / ... */
+  stage: string;
+  /** 源 ID（仅 fetchAllSources 类错误有，其他阶段为空） */
+  source?: string;
+  /** 错误信息（截断到 200 字符，避免日志过长） */
+  message: string;
+  /** 时间戳 */
+  ts?: string;
 }

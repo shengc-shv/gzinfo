@@ -111,5 +111,7 @@ export async function bootstrap(): Promise<DailyContext> {
     history,
     aiAssets,
     log: new ConsoleLogger("[daily]"),
+    // T1：空数组起步，每阶段 push；main 末尾统一汇总
+    errors: [],
   };
 }

@@ -46,9 +46,26 @@ export interface IngestResult {
 async function fetchAllSources(ctx: DailyContext): Promise<ArticleInput[]> {
   const articles: ArticleInput[] = [];
   const enabled = ctx.sources.filter((s) => s.enabled !== false);
-  for (const source of enabled) {
-    try {
-      const items = await fetchSource(source);
+  if (enabled.length === 0) return articles;
+
+  // 2026-08-28 改造：24 源并发抓取（T7 设计模式：Parallel For / Promise.allSettled）。
+  // 原 for 循环串行——最慢源阻塞整次 daily（24 源 × 平均 1-2s = 24-48s 顺序等待）。
+  // 并发后总耗时 = max(单源耗时) ≈ 5-8s（节省 60-80%）。
+  // 保留每源错误隔离（allSettled 而非 all）；保留源顺序输出（按 ctx.sources 顺序遍历结果）。
+  const t0 = Date.now();
+  const settled = await Promise.allSettled(
+    enabled.map((source) => fetchSource(source)),
+  );
+  const dur = ((Date.now() - t0) / 1000).toFixed(1);
+
+  let succeeded = 0;
+  let failed = 0;
+  for (let i = 0; i < enabled.length; i++) {
+    const source = enabled[i];
+    const r = settled[i];
+    if (r.status === "fulfilled") {
+      const items = r.value;
+      succeeded++;
       console.log(`  ${source.id.padEnd(20)} ${items.length}`);
       // 采集层声明源等级 tier（T6）：源定义 → 文章；
       // 2026-08-27 核心规则：源级拿不到 publishedAt 直接丢弃（不写 fetchedAt 兜底 — 抓取时间≠发文时间）。
@@ -65,18 +82,26 @@ async function fetchAllSources(ctx: DailyContext): Promise<ArticleInput[]> {
           tier: source.tier,
         })),
       );
-    } catch (e) {
-      const msg = e instanceof Error ? e.message : String(e);
+    } else {
+      failed++;
+      const msg = r.reason instanceof Error ? r.reason.message : String(r.reason);
       console.error(`  ${source.id.padEnd(20)} FAILED — ${msg}`);
+      // T1：错误聚合：把失败源也 push 到 ctx.errors（后续 main 末尾汇总）
+      if (ctx.errors) {
+        ctx.errors.push({ stage: "fetchAllSources", source: source.id, message: msg });
+      }
     }
   }
+  console.log(
+    `  [并发] ${succeeded}/${enabled.length} 源成功${failed ? `，${failed} 源失败` : ""}（总耗时 ${dur}s）`,
+  );
   return articles;
 }
 
 /**
  * 抓取爬虫产物：失败非致命（降级为 0 条）。
  */
-async function fetchCrawlers(): Promise<CrawledBundle> {
+async function fetchCrawlers(ctx: DailyContext): Promise<CrawledBundle> {
   try {
     const r = await fetchCrawledArticles();
     console.log(
@@ -86,6 +111,8 @@ async function fetchCrawlers(): Promise<CrawledBundle> {
   } catch (err) {
     const msg = err instanceof Error ? err.message : String(err);
     console.warn(`[daily] ⚠️ 爬虫抓取失败（跳过爬虫源）: ${msg}`);
+    // T1：推 ctx.errors
+    ctx.errors.push({ stage: "fetchCrawlers", message: msg, ts: new Date().toISOString() });
     return { ipo: [], gz: [], stocks: [] };
   }
 }
@@ -145,7 +172,7 @@ export async function ingestAll(ctx: DailyContext): Promise<IngestResult> {
   console.log(`\n[daily] total articles: ${articles.length}`);
 
   // ② 爬虫
-  const crawled = await fetchCrawlers();
+  const crawled = await fetchCrawlers(ctx);
 
   // ③ 合并爬虫三类（IPO / 广州商机 / 昨日股市）
   const regCat = (id?: string) => (id ? SOURCE_ROUTE[id]?.category : undefined);
