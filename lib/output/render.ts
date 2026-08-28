@@ -1136,6 +1136,11 @@ function renderStockRecap(report: DailyReport): string {
         return `<li class="stock-card stock-card--${cls}" data-audio-section="stock"><header class="stock-card-head">${label}</header><p class="stock-empty">暂无数据</p>${indices}${meta}</li>`;
       }
       const overview = card.overview || card.spoken || "";
+      // 大盘解读权威源（2026-08-29 用户：港股大盘解读应锚定新浪财经等收评/总结报告）
+      // 卡内展示「直接看原报告」入口，让行长不必另去检索即可读权威解读。
+      const sourceReport = card.sourceReport
+        ? `<a class="stock-source-report" href="${escapeHtml(card.sourceReport.url)}" target="_blank" rel="noopener">📄 原报告：${escapeHtml(card.sourceReport.title)}</a>`
+        : "";
       // 关键板块总结：最多取 3 条，避免「具体的板块细节」挤占顶部复盘卡
       // （细节下沉到底部「股市动态」消息清单，2026-08-25 用户要求）
       const sectors = card.sectors.length
@@ -1148,6 +1153,7 @@ function renderStockRecap(report: DailyReport): string {
         <header class="stock-card-head">${label}</header>
         ${indices}
         ${overview ? `<p class="stock-overview"><span class="stock-sec-label">大盘一句话总结</span>${escapeHtml(overview)}</p>` : ""}
+        ${sourceReport}
         ${sectors}
         ${meta}
       </li>`;

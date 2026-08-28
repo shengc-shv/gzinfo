@@ -40,6 +40,10 @@ function stripTags(s: string): string {
     .trim();
 }
 
+/** 大盘收评/总结类（恒指收评、港股收评、港股市场综述、盘后复盘等）——最贴合「大盘解读」主源 */
+const RECAP_PRIORITY_RE =
+  /收评|综述|盘点|盘后|复盘|收市|收盘点评|港股收评|市场总结|港股分析|大势研判/;
+
 function validDate(raw: string): string {
   const m = raw.match(/^(\d{4})-(\d{2})-(\d{2})$/);
   if (!m) return "";
@@ -139,10 +143,14 @@ export class SinaHkStockCrawler extends BaseCrawler {
       });
     }
 
-    // 按日期倒序，限 maxItems
-    this.results.sort((a, b) =>
-      (b.publishedAt ?? "").localeCompare(a.publishedAt ?? ""),
-    );
+    // 排序：大盘收评/总结类优先（最贴合「大盘解读」主源），其次按日期倒序；限 maxItems
+    const prio = (t: string): number => (RECAP_PRIORITY_RE.test(t) ? 1 : 0);
+    this.results.sort((a, b) => {
+      const pa = prio(a.title);
+      const pb = prio(b.title);
+      if (pa !== pb) return pb - pa;
+      return (b.publishedAt ?? "").localeCompare(a.publishedAt ?? "");
+    });
     if (this.results.length > this.maxItems) this.results.length = this.maxItems;
 
     console.log(

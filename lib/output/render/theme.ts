@@ -376,6 +376,13 @@ export const THEME_CSS = `
   .stock-card--a .stock-card-head::before { background: var(--c-gz); }
   .stock-card--hk .stock-card-head::before { background: var(--c-ipo); }
   .stock-overview { margin: 0; font-size: 0.8rem; color: var(--fg-soft); line-height: 1.6; }
+  .stock-source-report {
+    display: inline-block; margin: 0.35rem 0 0.1rem; font-size: 0.74rem; line-height: 1.4;
+    color: var(--accent); text-decoration: none; border: 1px solid var(--accent-soft, var(--accent));
+    border-radius: 6px; padding: 0.22rem 0.5rem; background: var(--accent-bg, transparent);
+    max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+  }
+  .stock-source-report:hover { text-decoration: underline; opacity: 0.85; }
   .stock-sectors { margin-top: 0.1rem; }
   .stock-sec-label {
     display: block; font-size: 0.68rem; color: var(--muted); font-weight: 600;

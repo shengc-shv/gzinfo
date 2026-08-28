@@ -14,9 +14,11 @@ import {
   loadStore,
   generateExecutiveSummary,
   writeStore,
+  buildExecutiveFromScores,
+  applyRelevanceGuardrail,
 } from "../../ai/executive-summary";
 import { mergeStoredExecutive } from "../../output/render";
-import { buildTwoDayExecPool } from "../../ai/exec-pool";
+import { buildTwoDayExecPool, collectTwoDayArticles } from "../../ai/exec-pool";
 import type { HistoryStore } from "../../output/history";
 import type { FilterResult } from "../../filters/types";
 import type { DailyContext } from "../context";
@@ -62,6 +64,10 @@ export async function buildExecutiveSummary(
 ): Promise<DailyReport> {
   const date = ctx.date;
   const stored = loadStore(date);
+  // 两天（今天 + 昨天）可评分池：兜底与护栏都基于它。
+  // 必要性：用户 6-8 点跑，跨天判重后「今天」常只剩十余条低信号新条目，
+  // 只看今天会让兜底产出空必读；昨日白天的重要条目须从历史库捞回（2026-08-29）。
+  const twoDayPool = collectTwoDayArticles({ history, articles, today: date });
 
   // SKIP_AI 分支：仅复用 store，不调 LLM
   if (ctx.mode.kind === "skip-ai") {
@@ -78,6 +84,18 @@ export async function buildExecutiveSummary(
       "exec",
       `ℹ️ SKIP_AI 无 store.json 执行摘要可复用（history/${date}/store.json 缺失或为空）`,
     );
+    // 评分层兜底：无 store 时用分行相关性评分器确定性生成必读/商机，
+    // 保证 SKIP_AI 下报告也以客户为中心（不空、不靠运气、房贷40年型必然置顶）。
+    // 输入用「今天+昨天」两天池（twoDayPool），覆盖凌晨突发与昨日白天重要条目。
+    const fallback = buildExecutiveFromScores(twoDayPool, date);
+    if (fallback.must_read.length || fallback.insights.length) {
+      const next = mergeStoredExecutive(report, fallback);
+      ctx.log.info(
+        "exec",
+        `🧠 SKIP_AI 评分层兜底生成：必读 ${next.must_read.length} / 商机 ${next.insights.length}`,
+      );
+      return next;
+    }
     return report;
   }
 
@@ -105,13 +123,16 @@ export async function buildExecutiveSummary(
     if (riskCandidates.length > 0) {
       ctx.log.info("exec", `🎯 关键词层风险候选 ${riskCandidates.length} 条（喂给 LLM）`);
     }
-    const exec = await generateExecutiveSummary({
+    let exec = await generateExecutiveSummary({
       date,
       finance: pool.finance,
       gz: pool.gz,
       ...(riskCandidates.length > 0 ? { riskCandidates } : {}),
     });
     if (exec) {
+      // 评分护栏：LLM 生成后按分行相关性重排必读 + 强制顶入硬规则条目，
+      // 让「客户中心」不依赖 LLM 临场发挥（房贷40年型不可能被埋）。
+      exec = applyRelevanceGuardrail(exec, twoDayPool);
       const next: DailyReport = { ...report };
       if (exec.hero_line) next.hero_line = exec.hero_line;
       const mustRead = exec.must_read

@@ -1,11 +1,87 @@
 {
   "date": "2026-08-28",
-  "updatedAt": "2026-08-28T02:39:00.921Z",
+  "updatedAt": "2026-08-28T15:21:47.461Z",
   "executive": {
-    "hero_line": "",
-    "must_read": [],
-    "insights": [],
-    "guangdong_ipo": null
+    "hero_line": "央行、金监总局联合发文，个人房贷最长期限由30年延至40年、月供约降15%，存量房贷可协商重组，零售信贷迎重磅政策窗口；消费贷/房贷贴息同步扩面，建议分行双线触达；美联储偏鹰致黄金与芯片重挫，分行财富条线关注贵金属波动。",
+    "must_read": [
+      {
+        "title": "房贷最长期限由30年延至40年（央行、金监总局联合发文）",
+        "url": "https://m.21jingji.com/article/20260828/herald/4d54db9f723a832ad12f048b9f9a9064.html",
+        "why": "个贷期限30→40年、月供约降15%，存量房贷可协商重组；建议分行零售条线评估灵活还款产品（如前5年只还息），并梳理存量按揭客户重定价与重组触达，承接释放出的购房及改善性需求。"
+      },
+      {
+        "title": "实探消费贷贴息“扩围提额” 银行：系统已自动适配",
+        "url": "https://finance.sina.com.cn/jjxw/2026-08-28/doc-inipvfek0399471.shtml",
+        "why": "直接影响分行消费贷投放与中收，须本周启动存量客户触达办理贴息。"
+      },
+      {
+        "title": "交通银行广东分行及三支行共被罚130万，涉个人贷款业务违规等",
+        "url": "https://m.21jingji.com/article/20260828/herald/b6177351180f45296f8f7376c5bb91a0.html",
+        "why": "广州本地监管处罚，支行个贷三查与资金流向须立即复核防复制。"
+      },
+      {
+        "title": "国家金融监督管理总局印发《信托公司开展房地产领域信托业务管理办法（试行）》",
+        "url": "https://finance.sina.com.cn/trust/roll/2026-08-28/doc-inipwtfr9906577.shtml",
+        "why": "私行代销地产信托合规口径生变，须重检高净值客群底层资产。"
+      },
+      {
+        "title": "“先登记，后转让”成铁律 银行业信贷资产流转新规实施在即",
+        "url": "https://finance.sina.com.cn/roll/2026-08-28/doc-inipvmmz8913370.shtml",
+        "why": "对公盘活存量优化资本占用有了新规，须前置梳理可流转资产。"
+      },
+      {
+        "title": "深夜，美联储主席发声！黄金大跌、芯片巨头重挫",
+        "url": "https://finance.sina.com.cn/wm/2026-08-28/doc-inipwxpp9793231.shtml",
+        "why": "贵金属与跨境客群波动加大，分行须做风险适配与客户沟通。"
+      }
+    ],
+    "insights": [
+      {
+        "topic": "消费贷贴息扩面",
+        "tag": [
+          "信贷",
+          "财富"
+        ],
+        "impact": "超300万人已享贴息，财政激活消费，分行消费贷与财富联动窗口打开。",
+        "action": "建议分行零售条线本周梳理存量消费贷清单，主动触达符合条件客户办理贴息，转化中收与黏性。"
+      },
+      {
+        "topic": "房贷贴息多地落地",
+        "tag": [
+          "信贷",
+          "房地产"
+        ],
+        "impact": "年内超20城推房贷贴息降购房成本，本地若跟进将释放按揭需求。",
+        "action": "建议分行按揭条线跟踪广州是否跟进，提前储备贴息客群方案把握刚需窗口。"
+      },
+      {
+        "topic": "黄金高位与贵金属经营",
+        "tag": [
+          "财富",
+          "贵金属"
+        ],
+        "impact": "金价4600美元、积存金克价重返千元，贵金属客群经营升温但波动加大。",
+        "action": "建议分行借势做客户分层配置与定投引导，严履行适当性并提示回撤风险。"
+      },
+      {
+        "topic": "私行赛道县域下沉",
+        "tag": [
+          "私行",
+          "客群"
+        ],
+        "impact": "农商行抢滩38万亿私行、深耕县域高净值，本地高净值竞争加剧。",
+        "action": "建议广州分行私行强化大湾区产业客群与家族office服务，守住本地基本盘。"
+      },
+      {
+        "topic": "理财业绩基准换锚",
+        "tag": [
+          "财富",
+          "理财"
+        ],
+        "impact": "8月超3000只理财切换基准，代销收益预期重构。",
+        "action": "建议分行财富条线逐只复核在售产品基准变化，向客户清晰沟通避免误读。"
+      }
+    ]
   },
   "stock_recap": {
     "us": {
@@ -189,120 +265,6 @@
       "market": "a-share"
     },
     {
-      "url": "https://finance.eastmoney.com/a/202608283857073980.html",
-      "title_cn": "特朗普签署行政令将安大略湖更名为“美国湖”美加贸易战持续升温",
-      "source": "东方财富",
-      "source_type": "media",
-      "date": "08/28",
-      "summary": "特朗普签署行政令将安大略湖更名为\"美国湖\"，美加贸易战持续升温。",
-      "importance": 2,
-      "rank": 0,
-      "tags": [
-        "政策",
-        "贸易"
-      ],
-      "locale": "national",
-      "market": "a-share"
-    },
-    {
-      "url": "https://finance.eastmoney.com/a/202608273856574933.html",
-      "title_cn": "英伟达力捧PTFE！相关概念集体爆发",
-      "source": "东方财富",
-      "source_type": "media",
-      "date": "08/27",
-      "summary": "英伟达力捧PTFE材料，相关概念股集体爆发。",
-      "importance": 2,
-      "rank": 0,
-      "tags": [
-        "AI",
-        "半导体",
-        "材料"
-      ],
-      "locale": "national",
-      "market": "a-share"
-    },
-    {
-      "url": "https://finance.eastmoney.com/a/202608283857027470.html",
-      "title_cn": "存储芯片牛股公布“炸裂”业绩：净赚超36亿元同比增长超2200%！",
-      "source": "东方财富",
-      "source_type": "media",
-      "date": "08/28",
-      "summary": "存储芯片牛股公布业绩，上半年净赚超36亿元，同比增长超2200%。",
-      "importance": 3,
-      "rank": 0,
-      "tags": [
-        "存储芯片",
-        "财报",
-        "半导体"
-      ],
-      "locale": "national",
-      "market": "a-share"
-    },
-    {
-      "url": "https://finance.eastmoney.com/a/202608273856145425.html",
-      "title_cn": "两则重磅催化市场站回“光”里！机构称光纤光缆配置时点已至(附股)",
-      "source": "东方财富",
-      "source_type": "media",
-      "date": "08/27",
-      "summary": "受两则重磅事件催化，光纤光缆板块站上风口，机构称板块配置时点已至。",
-      "importance": 2,
-      "rank": 0,
-      "tags": [
-        "光通信",
-        "光纤光缆"
-      ],
-      "locale": "national",
-      "market": "a-share"
-    },
-    {
-      "url": "https://finance.eastmoney.com/a/202608283857152139.html",
-      "title_cn": "净利润大增超4900%锂矿龙头获险资新进重仓！20股险资持仓环比翻倍（附名单）",
-      "source": "东方财富",
-      "source_type": "media",
-      "date": "08/28",
-      "summary": "锂矿龙头净利润同比增长超4900%，获险资新进重仓；20股险资持仓环比翻倍。",
-      "importance": 2,
-      "rank": 0,
-      "tags": [
-        "锂矿",
-        "财报",
-        "保险资金"
-      ],
-      "locale": "national",
-      "market": "a-share"
-    },
-    {
-      "url": "https://finance.eastmoney.com/a/202608283857746997.html",
-      "title_cn": "瑞安房地产罗康瑞：楼市差不多到筑底阶段",
-      "source": "东方财富",
-      "source_type": "media",
-      "date": "08/28",
-      "summary": "瑞安房地产罗康瑞表示，楼市差不多到筑底阶段。",
-      "importance": 1,
-      "rank": 0,
-      "tags": [
-        "地产"
-      ],
-      "locale": "national",
-      "market": "a-share"
-    },
-    {
-      "url": "https://finance.eastmoney.com/a/202608283857339985.html",
-      "title_cn": "中信建投：办公有望成为新一轮B端的平台级产品及新流量入口",
-      "source": "东方财富",
-      "source_type": "media",
-      "date": "08/28",
-      "summary": "中信建投研报认为，办公有望成为新一轮B端的平台级产品及新流量入口。",
-      "importance": 1,
-      "rank": 0,
-      "tags": [
-        "软件",
-        "研报"
-      ],
-      "locale": "national",
-      "market": "a-share"
-    },
-    {
       "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0828/2026082800155.pdf",
       "title_cn": "Announcements and Notices - [Overseas Regulatory Announcement - Trading Update]",
       "source": "港交所披露易",
@@ -379,120 +341,6 @@
       "tags": [
         "港股",
         "公告"
-      ],
-      "locale": "national",
-      "market": "hk"
-    },
-    {
-      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0828/2026082800139.pdf",
-      "title_cn": "Circulars - [Other]",
-      "source": "港交所披露易",
-      "source_type": "media",
-      "date": "08/28",
-      "summary": "港交所披露易发布通函——其他事项。",
-      "importance": 1,
-      "rank": 0,
-      "tags": [
-        "港股",
-        "公告"
-      ],
-      "locale": "national",
-      "market": "hk"
-    },
-    {
-      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0828/2026082800135.pdf",
-      "title_cn": "Financial Statements/ESG Information - [Interim/Half-Year Report]",
-      "source": "港交所披露易",
-      "source_type": "media",
-      "date": "08/28",
-      "summary": "港交所披露易发布中期/半年度财务报告及ESG信息。",
-      "importance": 1,
-      "rank": 0,
-      "tags": [
-        "港股",
-        "财报",
-        "ESG"
-      ],
-      "locale": "national",
-      "market": "hk"
-    },
-    {
-      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0828/2026082800127.pdf",
-      "title_cn": "Announcements and Notices - [Overseas Regulatory Announcement - Business Update]",
-      "source": "港交所披露易",
-      "source_type": "media",
-      "date": "08/28",
-      "summary": "港交所披露易发布海外监管公告——业务更新。",
-      "importance": 1,
-      "rank": 0,
-      "tags": [
-        "港股",
-        "公告"
-      ],
-      "locale": "national",
-      "market": "hk"
-    },
-    {
-      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0828/2026082800117.pdf",
-      "title_cn": "Circulars - [Other]",
-      "source": "港交所披露易",
-      "source_type": "media",
-      "date": "08/28",
-      "summary": "港交所披露易发布通函——其他事项。",
-      "importance": 1,
-      "rank": 0,
-      "tags": [
-        "港股",
-        "公告"
-      ],
-      "locale": "national",
-      "market": "hk"
-    },
-    {
-      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0828/2026082800115.pdf",
-      "title_cn": "Circulars - [Other]",
-      "source": "港交所披露易",
-      "source_type": "media",
-      "date": "08/28",
-      "summary": "港交所披露易发布通函——其他事项。",
-      "importance": 1,
-      "rank": 0,
-      "tags": [
-        "港股",
-        "公告"
-      ],
-      "locale": "national",
-      "market": "hk"
-    },
-    {
-      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0828/2026082800113.pdf",
-      "title_cn": "Announcements and Notices - [Connected Transaction / Discloseable Transaction / Continuing Connected Transaction]",
-      "source": "港交所披露易",
-      "source_type": "media",
-      "date": "08/28",
-      "summary": "港交所披露易发布关联交易/须披露交易/持续关联交易公告。",
-      "importance": 1,
-      "rank": 0,
-      "tags": [
-        "港股",
-        "关联交易"
-      ],
-      "locale": "national",
-      "market": "hk"
-    },
-    {
-      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0828/2026082800111.pdf",
-      "title_cn": "Financial Statements/ESG Information - [Interim/Half-Year Report]",
-      "source": "港交所披露易",
-      "source_type": "media",
-      "date": "08/28",
-      "summary": "港交所披露易发布中期/半年度财务报告及ESG信息。",
-      "importance": 1,
-      "rank": 0,
-      "tags": [
-        "港股",
-        "财报",
-        "ESG"
       ],
       "locale": "national",
       "market": "hk"
@@ -577,120 +425,6 @@
       "tags": [
         "政策",
         "贸易"
-      ],
-      "locale": "overseas",
-      "market": "us"
-    },
-    {
-      "url": "https://www.cnbc.com/2026/08/27/fed-chairman-kevin-warsh-delivers-his-key-jackson-hole-speech-friday.html",
-      "title_cn": "Fed Chairman Kevin Warsh delivers his key Jackson Hole speech Friday. Here's what to expect",
-      "source": "CNBC Top Stories",
-      "source_type": "media",
-      "date": "08/27",
-      "summary": "美联储主席沃什将于周五在杰克逊霍尔年会上发表关键演讲，市场密切关注。",
-      "importance": 3,
-      "rank": 0,
-      "tags": [
-        "美联储",
-        "货币政策",
-        "宏观"
-      ],
-      "locale": "overseas",
-      "market": "us"
-    },
-    {
-      "url": "https://www.cnbc.com/2026/08/28/chinas-super-rich-fled-singapore-now-they-want-to-come-back.html",
-      "title_cn": "China’s super-rich fled Singapore. Now they want to come back",
-      "source": "CNBC Top Stories",
-      "source_type": "media",
-      "date": "08/27",
-      "summary": "报道指中国超级富豪曾离开新加坡，现希望返回。",
-      "importance": 1,
-      "rank": 0,
-      "tags": [
-        "中概股",
-        "财富"
-      ],
-      "locale": "overseas",
-      "market": "us"
-    },
-    {
-      "url": "https://www.cnbc.com/2026/08/27/fda-approves-gilead-hiv-pill-bixlenvo-designed-to-simplify-treatment.html",
-      "title_cn": "FDA approves daily HIV pill from Gilead designed to simplify treatment for some patients",
-      "source": "CNBC Top Stories",
-      "source_type": "media",
-      "date": "08/27",
-      "summary": "FDA批准吉利德每日一次的HIV药物，旨在简化部分患者的治疗方案。",
-      "importance": 2,
-      "rank": 0,
-      "tags": [
-        "医药",
-        "FDA"
-      ],
-      "locale": "overseas",
-      "market": "us"
-    },
-    {
-      "url": "https://www.cnbc.com/2026/08/27/trump-jr-told-gop-state-attorneys-general-dont-fight-prediction-markets-nyt-reports.html",
-      "title_cn": "Donald Trump Jr. told Republican state attorneys not to fight prediction markets, NY Times reports",
-      "source": "CNBC Top Stories",
-      "source_type": "media",
-      "date": "08/27",
-      "summary": "据《纽约时报》报道，小唐纳德·特朗普建议共和党州检察长不要打击预测市场。",
-      "importance": 1,
-      "rank": 0,
-      "tags": [
-        "政策",
-        "预测市场"
-      ],
-      "locale": "overseas",
-      "market": "us"
-    },
-    {
-      "url": "https://www.cnbc.com/2026/08/27/what-warsh-will-say-and-how-the-market-will-react-according-to-prediction-markets.html",
-      "title_cn": "What Warsh will say and how the market will react, according to prediction markets",
-      "source": "CNBC Top Stories",
-      "source_type": "media",
-      "date": "08/27",
-      "summary": "预测市场押注沃什杰克逊霍尔演讲内容及对市场可能的反应。",
-      "importance": 2,
-      "rank": 0,
-      "tags": [
-        "美联储",
-        "预测市场",
-        "宏观"
-      ],
-      "locale": "overseas",
-      "market": "us"
-    },
-    {
-      "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-virgin-australia-posts-strong-h2-2026-results-93CH-4880426",
-      "title_cn": "Earnings call transcript: Virgin Australia posts strong H2 2026 results",
-      "source": "Investing.com News",
-      "source_type": "media",
-      "date": "08/28",
-      "summary": "维珍澳洲召开财报电话会议，公布2026年下半年业绩表现强劲。",
-      "importance": 1,
-      "rank": 0,
-      "tags": [
-        "财报",
-        "航空"
-      ],
-      "locale": "overseas",
-      "market": "us"
-    },
-    {
-      "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-shine-justice-posts-stronger-underlying-h2-2026-results-93CH-4880424",
-      "title_cn": "Earnings call transcript: Shine Justice posts stronger underlying H2 2026 results",
-      "source": "Investing.com News",
-      "source_type": "media",
-      "date": "08/28",
-      "summary": "Shine Justice召开财报电话会议，公布2026年下半年基础业绩走强。",
-      "importance": 1,
-      "rank": 0,
-      "tags": [
-        "财报",
-        "法律服务"
       ],
       "locale": "overseas",
       "market": "us"

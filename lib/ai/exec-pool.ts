@@ -171,6 +171,77 @@ export function buildTwoDayExecPool(opts: BuildTwoDayExecPoolOpts): ExecPoolResu
   return { finance, gz };
 }
 
+/**
+ * 收集「今天 + 昨天」两天的**可评分**文章池（供评分层兜底 / 护栏使用）。
+ *
+ * 与 buildTwoDayExecPool 的区别：本函数**不要求条目已有 summary**
+ * （SKIP_AI 下历史条目普遍无摘要，buildTwoDayExecPool 会因无摘要全部滤掉），
+ * 因此可在零 LLM 下驱动 scoreBranchRelevance 兜底生成必读/商机。
+ *
+ * 必要性（2026-08-29 实测）：用户 6-8 点跑，跨天判重后「今天」常只剩 10 余条新条目，
+ * 且多为低信号 → 只看今天的兜底会产出空必读。昨日白天的重要条目虽被判重剔除出当日池，
+ * 但仍在历史库中，必须捞回才能覆盖「今天+昨天」两天。
+ *
+ * 来源：本次抓取 articles（今天）+ 历史库 history（补回昨日）。按 url 去重。
+ */
+export interface ScorablePoolEntry {
+  title: string;
+  category?: string;
+  subcategory?: string;
+  source?: string;
+  sourceId?: string;
+  summary?: string;
+  url?: string;
+  locale?: string;
+}
+
+export function collectTwoDayArticles(opts: {
+  history?: Record<string, ExecPoolHistoryEntry>;
+  articles?: ExecPoolArticle[];
+  today?: string;
+}): ScorablePoolEntry[] {
+  const tz = getReportTz();
+  const tk = opts.today ?? todayKey();
+  const yk = shiftDayKey(tk, -1);
+  const out = new Map<string, ScorablePoolEntry>();
+  const inWindow = (iso: string | Date | undefined): boolean => {
+    const k = dateKeyOf(iso, tz);
+    return k === tk || k === yk;
+  };
+
+  // 今天：本次抓取（经窗口/判重后的保留条目）
+  for (const a of opts.articles ?? []) {
+    if (!a.url || !inWindow(a.publishedAt)) continue;
+    const x = a as unknown as { subcategory?: string; source?: string; sourceId?: string; locale?: string };
+    out.set(a.url, {
+      title: a.title ?? "",
+      category: a.category,
+      ...(x.subcategory ? { subcategory: x.subcategory } : {}),
+      ...(x.source ? { source: x.source } : {}),
+      ...(x.sourceId ? { sourceId: x.sourceId } : {}),
+      ...(a.summary ? { summary: a.summary } : {}),
+      ...(x.locale ? { locale: x.locale } : {}),
+      url: a.url,
+    });
+  }
+  // 昨天（及今天）：历史库补回被跨天判重剔除的条目
+  for (const [url, e] of Object.entries(opts.history ?? {})) {
+    if (out.has(url) || !inWindow(e.publishedAt)) continue;
+    const x = e as unknown as { source?: string; sourceId?: string; locale?: string };
+    out.set(url, {
+      title: e.title ?? "",
+      category: e.category,
+      ...(e.subcategory ? { subcategory: e.subcategory } : {}),
+      ...(x.source ? { source: x.source } : {}),
+      ...(x.sourceId ? { sourceId: x.sourceId } : {}),
+      ...(e.summary ? { summary: e.summary } : {}),
+      ...(x.locale ? { locale: x.locale } : {}),
+      url,
+    });
+  }
+  return [...out.values()];
+}
+
 /** YYYY-MM-DD 加减 n 天，返回 YYYY-MM-DD（纯字符串运算，规避时区）。 */
 function shiftDayKey(key: string, deltaDays: number): string {
   const [y, m, d] = key.split("-").map(Number);

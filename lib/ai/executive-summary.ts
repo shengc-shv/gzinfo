@@ -1,6 +1,12 @@
 import { runLlm } from "./llm";
 import { extractJson } from "./json-util";
 import { titleSimilarityDice } from "../ingest/dedup-similar";
+import {
+  rankByRelevance,
+  scoreBranchRelevance,
+  type BranchRelevance,
+  type ScorableArticle,
+} from "./relevance-score";
 import fs from "node:fs";
 import path from "node:path";
 
@@ -77,7 +83,11 @@ export interface ExecSummaryInput {
 const SYSTEM_PROMPT =
   "你是股份行广州分行零售决策简报主编。基于当日信息生成「今日必读」与「商机提示」，面向分行信息技术部领导和分管零售的行领导，严格按用户要求输出 JSON。";
 
-const RULES = `你是股份行广州分行零售决策简报的主编。系统面向分行信息技术部领导和分管零售的行领导，核心诉求：更快掌握宏观经济变化、政府政策变化、市场变化，从而挖掘更多客户、发现更多商机。
+const RULES = `你是股份行广州分行零售决策简报的主编。系统面向分行信息技术部领导和分管零售的行领导（即零售分管行长，关注整个零售条线，而非某个部门总经理），核心诉求：更快掌握宏观经济变化、政府政策变化、市场变化，从而挖掘更多客户、发现更多商机。
+
+业务线全覆盖要求（极重要）：读者是零售分管行长，必读与商机须覆盖零售多条业务线，不得只堆个贷/住房金融。财富管理、私人银行、客群经营与新获客、信用卡、代发、养老、住房金融、消费信贷——这些零售条线地位同等，命中高信号时须与房贷/信贷同优先级置顶；若输入中同时存在房贷政策与财富/私行/获客信号，应分别选取、均衡呈现（例如必读里既有房贷40年新规，也应有财富/私行/获客类高信号）。
+
+时间窗口要求（极重要）：必读与商机须覆盖「今天 + 昨天」两天的信息——既含今日凌晨突发的政策/市场信号，也含昨日白天发布、今天仍在生效的重要条目。不要只基于今天单日挑条目；昨天白天的重要宏观政策、权威机构报告若今天仍具决策价值，应纳入。
 
 基于输入的当日条目（宏观政策 + 广州商机 + 市场总览 + IPO），输出五部分：
 
@@ -366,6 +376,263 @@ export function loadStore(
  * - 正常（无 forceRegen）：优先复用持久化，缺失才回退 generate。
  * 纯函数，便于单测；daily.ts 调用。
  */
+/**
+ * 把一条分行相关性评分「翻译」成必读卡可展示的 why（客户中心视角）。
+ */
+function synthMustReadWhy(rel: BranchRelevance): string {
+  const lines = rel.businessLines.join("/");
+  const head =
+    rel.authority >= 0.95 ? "国家核心监管新政" : rel.authority >= 0.8 ? "监管/地方级信号" : "市场信号";
+  const tail = rel.override ? "建议分行评估对客与产品影响" : `直击${lines}业务`;
+  return `${head}（${lines}）：${tail}`.slice(0, 60);
+}
+
+/**
+ * 评分层兜底生成器（SKIP_AI 无 store.json 时调用）。
+ *
+ * 关键价值：让「客户中心」在零 LLM 下也是结构化的——按分行相关性
+ * 确定性选出 top 必读/商机/风险，报告永不空、且房贷40年这类硬规则条目
+ * 必然置顶。与 LLM 路径产物同形（ExecutiveSummary），下游 mergeStoredExecutive 直接消费。
+ */
+
+/** 显著关键词（金融实体/数字/政策动作）——用于兜底去重「同事件不同措辞」的报道 */
+const SALIENT_KW = [
+  "房贷", "按揭", "住房", "期限", "40年", "30年", "信托", "罚", "处罚", "违规",
+  "消费贷", "贴息", "LPR", "降息", "降准", "私行", "理财", "黄金", "外汇", "REITs",
+  "IPO", "上市", "科创", "湾区", "广州", "广东",
+];
+
+/**
+ * 零售核心条线（行长 5 分钟视角）：必读与商机都先按条线均衡各取 1 条。
+ * 用户 2026-08-29 拍板：客群 / 财富 / 私行 / 信贷（含住房金融）应各有一条出现在
+ * 必读和商机——除非该条线确实没有达标内容（有阈值把关，不硬凑）。
+ */
+const BALANCED_LINES = ["财富", "私行", "客群", "信贷"];
+
+/**
+ * 「均衡优先 + 按重要性补位」选取（2026-08-29 用户拍板）：
+ *   轮次一：核心条线各取 1 条**已达标**（调用方按 tier 过滤过）的条目 → 保证条线均衡；
+ *   轮次二：剩余名额按相关性分数（重要性）补齐 → 保证重要信号不被埋。
+ * 另做「同事件去重」：共享 ≥2 个显著关键词的报道视为同一事件，只留最相关一条
+ * （比字面 Dice 更能识别「同事件不同措辞」，如房贷40年的多个变体）。
+ */
+function balancedPick(
+  ranked: Array<{ article: ScorableArticle; relevance: BranchRelevance }>,
+  limit: number,
+): Array<{ article: ScorableArticle; relevance: BranchRelevance }> {
+  // 同事件去重
+  const seenSigs: string[][] = [];
+  const kept: Array<{ article: ScorableArticle; relevance: BranchRelevance }> = [];
+  for (const r of ranked) {
+    const sig = SALIENT_KW.filter((k) => r.article.title.includes(k));
+    if (seenSigs.some((s) => s.filter((k) => sig.includes(k)).length >= 2)) continue;
+    seenSigs.push(sig);
+    kept.push(r);
+  }
+  const picked: Array<{ article: ScorableArticle; relevance: BranchRelevance }> = [];
+  // 轮次一：核心条线各取 1 条。该条线有 must_read 档就用它，没有才退到 insight 档
+  // （保证「有达标内容就先给一条」，不会因某条线整体分数偏低而轮空）。
+  for (const line of BALANCED_LINES) {
+    if (picked.length >= limit) break;
+    const cand =
+      kept.find(
+        (r) =>
+          !picked.includes(r) &&
+          r.relevance.tier === "must_read" &&
+          r.relevance.businessLines.includes(line),
+      ) ??
+      kept.find(
+        (r) =>
+          !picked.includes(r) &&
+          r.relevance.tier === "insight" &&
+          r.relevance.businessLines.includes(line),
+      );
+    if (cand) picked.push(cand);
+  }
+  // 轮次二：先补齐「尚未覆盖」的核心条线（避免被单一高分条线挤掉），
+  // 再按分数（重要性）补满剩余名额——must_read 档优先，再 insight 档。
+  const covered = new Set(picked.flatMap((r) => r.relevance.businessLines));
+  const rest = kept.filter((r) => !picked.includes(r));
+  for (const line of BALANCED_LINES) {
+    if (picked.length >= limit) break;
+    if (covered.has(line)) continue;
+    const cand =
+      rest.find(
+        (r) =>
+          !picked.includes(r) &&
+          r.relevance.tier === "must_read" &&
+          r.relevance.businessLines.includes(line),
+      ) ??
+      rest.find((r) => !picked.includes(r) && r.relevance.businessLines.includes(line));
+    if (cand) picked.push(cand);
+  }
+  const restMust = rest.filter(
+    (r) => !picked.includes(r) && r.relevance.tier === "must_read",
+  );
+  const restOther = rest.filter(
+    (r) => !picked.includes(r) && r.relevance.tier !== "must_read",
+  );
+  for (const r of [...restMust, ...restOther]) {
+    if (picked.length >= limit) break;
+    picked.push(r);
+  }
+  return picked;
+}
+
+export function buildExecutiveFromScores(
+  articles: Array<{
+    title?: string;
+    category?: string;
+    subcategory?: string;
+    source?: string;
+    sourceId?: string;
+    summary?: string;
+    url?: string;
+    locale?: string;
+  }>,
+  _date: string,
+): ExecutiveSummary {
+  const pool: ScorableArticle[] = (articles ?? [])
+    .filter((a) => a && a.title)
+    .map((a) => ({
+      title: a.title!,
+      category: a.category,
+      subcategory: a.subcategory,
+      sourceId: a.sourceId ?? a.source,
+      summary: a.summary,
+      url: a.url,
+      locale: a.locale,
+    }));
+  const ranked = rankByRelevance(pool);
+  // 必读：从 must_read / insight 档里选（阈值把关：drop/context 档不进必读）。
+  // 均衡优先：核心条线各取 1 条，再按重要性补齐（2026-08-29 用户拍板）。
+  const mr = balancedPick(
+    ranked.filter(
+      (r) =>
+        (r.relevance.tier === "must_read" || r.relevance.tier === "insight") &&
+        // 外埠区域性银行只作参考 → 不占必读名额（2026-08-29 用户：无本地借鉴意义）
+        !r.relevance.foreignRegional,
+    ),
+    5,
+  );
+  const must_read = mr.map((r) => ({
+    title: r.article.title,
+    why: synthMustReadWhy(r.relevance),
+    ...(r.article.url ? { url: r.article.url } : {}),
+  }));
+  // 风险先定位：原则 3 要求风险与商机严格错开，同一事件不重复出现在两个板块。
+  const rk = ranked.find((r) => r.relevance.vertical === "risk");
+  // 商机：同样均衡优先；与必读、风险都错开（原则 3）。
+  const mrSet = new Set(mr);
+  const ins = balancedPick(
+    ranked.filter(
+      (r) =>
+        !mrSet.has(r) &&
+        r !== rk &&
+        (r.relevance.tier === "insight" || r.relevance.tier === "must_read"),
+    ),
+    5,
+  );
+  const insights = ins.map((r) => ({
+    topic: r.article.title.slice(0, 15),
+    impact: `对广州分行${r.relevance.businessLines.join("/")}业务有潜在影响`,
+    action: `建议分行关注${r.relevance.businessLines[0] ?? "相关"}动向并评估动作`,
+  }));
+  const risk = rk
+    ? {
+        topic: rk.article.title.slice(0, 15),
+        evidence: rk.article.title,
+        impact: "对分行相关条线需关注合规与风险敞口",
+        action: "建议对应条线评估并制定应对",
+        ...(rk.article.url ? { url: rk.article.url } : {}),
+      }
+    : undefined;
+  const top = ranked[0];
+  const hero_line = top ? `今日分行焦点：${top.article.title.slice(0, 26)}` : "";
+  return {
+    hero_line,
+    must_read,
+    insights,
+    ...(risk ? { risk } : {}),
+  };
+}
+
+/**
+ * 评分护栏（AI 模式 LLM 生成后调用）。
+ *
+ * 作用：
+ *  1) 按分行相关性对必读重排序——客户中心条目（房贷40年型）必然上浮；
+ *  2) 强制把「硬规则」命中的池内文章顶入必读（若 LLM 漏选，杜绝被埋）。
+ * 不改动 insights/risk/hero_line（那些是 LLM 的语义富化，护栏只管「排序与兜底置顶」）。
+ */
+export function applyRelevanceGuardrail(
+  exec: ExecutiveSummary,
+  articlePool: Array<{
+    title?: string;
+    category?: string;
+    subcategory?: string;
+    source?: string;
+    sourceId?: string;
+    summary?: string;
+    url?: string;
+    locale?: string;
+  }>,
+): ExecutiveSummary {
+  if (!exec || !Array.isArray(exec.must_read)) return exec;
+  const pool: ScorableArticle[] = (articlePool ?? [])
+    .filter((a) => a && a.title)
+    .map((a) => ({
+      title: a.title!,
+      category: a.category,
+      subcategory: a.subcategory,
+      sourceId: a.sourceId ?? a.source,
+      summary: a.summary,
+      url: a.url,
+      locale: a.locale,
+    }));
+
+  // 1) 为每条必读打分（基于标题+why，无需 LLM 标签）
+  const scored = exec.must_read.map((m) => ({
+    m,
+    rel: scoreBranchRelevance({ title: m.title, summary: m.why, url: m.url }),
+  }));
+
+  // 2) 强制把「硬规则」命中的池内文章顶入必读（若 LLM 漏选）
+  const covered = new Set<string>();
+  for (const s of scored) covered.add(s.m.url ?? s.m.title);
+  const forced: Array<{ title: string; why: string; url?: string }> = [];
+  for (const a of pool) {
+    if (forced.length + scored.length >= 5) break;
+    const rel = scoreBranchRelevance(a);
+    if (
+      rel.tier === "must_read" &&
+      rel.override &&
+      a.url &&
+      !covered.has(a.url) &&
+      !covered.has(a.title)
+    ) {
+      forced.push({ title: a.title, why: synthMustReadWhy(rel), url: a.url });
+      covered.add(a.url);
+      covered.add(a.title);
+    }
+  }
+
+  // 3) 合并去重 + 按分行相关性降序重排
+  const merged = [...forced, ...scored.map((s) => s.m)];
+  const seen = new Set<string>();
+  const dedup = merged.filter((m) => {
+    const k = m.url ?? m.title;
+    if (seen.has(k)) return false;
+    seen.add(k);
+    return true;
+  });
+  const scoreOf = (m: { title: string; why?: string; url?: string }) =>
+    scoreBranchRelevance({ title: m.title, summary: m.why, url: m.url }).score;
+  dedup.sort((a, b) => scoreOf(b) - scoreOf(a));
+
+  return { ...exec, must_read: dedup.slice(0, 5) };
+}
+
 export async function selectExecutiveSummary(opts: {
   skipAi: boolean;
   persisted: ExecutiveSummary | undefined;

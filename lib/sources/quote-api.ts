@@ -5,8 +5,8 @@
  *  - A股：新浪 K线接口（money.finance.sina.com.cn）按目标交易日精确匹配，
  *    点位+涨跌幅一律走日K线 → 与抓取时刻彻底解耦，绝不错日
  *    （原计划用东方财富 push2his，CI/GA 跑出 Empty reply，放弃）
- *  - 港股：新浪 hq.sinajs.cn f[6]=最新价、f[3]=昨收；涨跌幅 = (f[6]-f[3])/f[3]
- *    **须盘前跑（CI 09:10），否则 f[6] 为盘中实时价，涨跌幅反映盘中而非昨日收盘**
+ *  - 港股：新浪 hq.sinajs.cn f[6]=收盘（盘后/盘前均为收盘价）、f[3]=昨收；涨跌幅 = (f[6]-f[3])/f[3]
+ *    **f[6] 仅在交易时段内才是实时价；CI 须盘前/盘后跑，取到的才是真实收盘**（用户 6-8 点跑恰好为收盘）
  *  - 美股：新浪 hq.sinajs.cn f[1]=最新收盘、f[2]=涨跌幅（北京时间白天稳定 = 上一美股交易日）
  *
  * 任何一步失败均优雅降级（该市场/该卡缺字段，不阻断整页）。
@@ -160,20 +160,26 @@ export async function fetchMarketQuotes(quoteDate: string): Promise<QuoteResult 
   const hk: IndexQuote[] = [];
   for (const d of HK_DEFS) {
     const f = parseOne(d.code);
-    // 港股 hq 字段顺序（2026-08-28 实测，港股与 A股字段顺序不同）：
-    //   f[0]=symbol  f[1]=name  f[2]=current  f[3]=prev_close（昨收）
-    //   f[8]=changePct%  f[17]=date  f[18]=time
-    // 取「昨日收盘」标准：f[3]（昨收点位）+ f[8]（API 直接给的涨跌幅）。
-    // 注意：f[2] 是 current（盘前 = 昨收，但盘中 = 实时价），所以绝不能用 f[2] 算昨收。
-    if (f && f[3] && f[8] !== undefined) {
-      const yest = parseFloat(f[3]);
-      const changePct = parseFloat(f[8]);
-      if (yest && !Number.isNaN(changePct)) {
-        hk.push({
-          name: d.name,
-          value: yest.toFixed(2),
-          changePct: fmtPct(changePct.toFixed(2)),
-        });
+    // 港股 hq 字段顺序（2026-08-29 实测 hq.sinajs.cn，港股与 A股字段顺序不同）：
+    //   f[0]=symbol  f[1]=name  f[2]=今开  f[3]=昨收  f[4]=最高  f[5]=最低
+    //   f[6]=现价/收盘（盘后=收盘价）  f[7]=涨跌点  f[8]=涨跌%  f[17]=日期  f[18]=时间
+    // 收盘复盘：点位取 f[6]（收盘），涨跌幅自 (f[6]-f[3])/f[3] 计算——
+    // 保证「点位」与「涨跌幅」同源（都基于 收盘 vs 昨收），不再出现
+    // 「点位=昨收、涨跌幅=收盘vs昨收」的错配（2026-08-29 用户实测：原 f[3] 当点位导致涨跌幅不是收盘时点值）。
+    // 盘后/盘前 f[6] 即收盘价，与 A股 K线口径一致；f[8] 作为兜底（实测两者一致）。
+    if (f && f[6] && f[3]) {
+      const close = parseFloat(f[6]);
+      const prevClose = parseFloat(f[3]);
+      if (close && prevClose) {
+        const chg = ((close - prevClose) / prevClose) * 100;
+        const changePct = Number.isFinite(chg) ? chg : parseFloat(f[8]);
+        if (Number.isFinite(changePct)) {
+          hk.push({
+            name: d.name,
+            value: close.toFixed(2),
+            changePct: fmtPct(changePct.toFixed(2)),
+          });
+        }
       }
     }
   }

@@ -48,7 +48,8 @@ const SYSTEM_PROMPT =
 const RULES = `你是证券市场播报编辑。系统面向分行内部资讯听众（非投资建议），核心诉求：用最短篇幅讲清「昨天市场怎么走、什么板块强/弱」。
 
 基于输入的「美股 / A股 / 港股」三组新闻条目（每组是原始标题+摘要，可能为空），分别为三个市场生成一张「股市解读」卡，每张卡含：
-- overview（大盘一句话总结，单句 ≤35字）：概括该市场主要指数的涨跌方向与幅度（如"三大指数集体收跌""恒指涨1.2%"），以及最关键的 1 个驱动因素（美联储/地缘/重磅个股/政策）。若无明确指数涨跌数据，据输入条目客观描述盘面强弱（如"科技股领跌、能源走强"）。严禁写成多句、严禁与 sectors 重复。
+- overview（大盘一句话总结，单句 ≤35字）：概括该市场主要指数的涨跌方向与幅度（如"三大指数集体收跌""恒指涨1.2%"），以及最关键的 1 个驱动因素（美联储/地缘/重磅个股/政策）。若无明确指数涨跌数据，据输入条目客观描述盘面强弱（如"科技股领跌、能源走弱"）。严禁写成多句、严禁与 sectors 重复。
+- **港股 overview 必须锚定权威收评（2026-08-29 用户要求）**：若输入港股条目中含「收评/综述/复盘」类（标题含"恒指收评""港股收评""港股市场综述"等），overview 须直接提炼该收评的大盘结论（恒指/恒科涨跌 + 收评给出的核心驱动），不得凭零散个股新闻另起炉灶；若无收评类条目，则据恒指/恒科指数点位与板块客观描述。
 - sectors（关键板块，3-5 个）：列出当日表现最强的 1-2 个板块与最弱的 1-2 个板块（如"半导体：英伟达财报后大涨""房地产：政策预期落空走弱"），每个板块一句话点明原因。板块名用中文（"半导体""新能源""金融""医药"），不要英文 ticker。
 - spoken（口播稿，纯口语 ≤120 字）：把 overview+sectors 浓缩成主播语态的完整句，先讲涨跌概况再点关键板块，句号收尾、可直接朗读。
 - spoken 语气对齐内部「今日必读」栏目风格：精炼、客观、陈述式（如"美股三大指数涨跌不一，科技股领涨""A股沪指收跌，贵金属逆市走强"），不铺陈、不抒情、不喊话。
@@ -108,6 +109,20 @@ function normalizeCard(parsed: unknown): MarketCard {
     : [];
   const spoken = typeof p.spoken === "string" && p.spoken.trim() ? p.spoken.trim() : undefined;
   return { overview, sectors, spoken };
+}
+
+/**
+ * 港股大盘解读权威源：从输入港股条目中挑「收评/综述/复盘」类（标题命中 RECAP 关键词、
+ * 且有 url）最新一条，作为 HK 卡「直接看原报告」入口；并作为 LLM 生成 overview 的基准。
+ * 2026-08-29 用户：港股大盘解读应锚定新浪财经等权威收评，而非凭零散个股新闻拼凑。
+ */
+const HK_RECAP_RE = /收评|综述|盘点|盘后|复盘|收市|收盘点评|港股收评|市场总结|港股分析|大势研判/;
+export function findHkRecapReport(items: StockItem[]): { title: string; url: string } | undefined {
+  const cands = items
+    .filter((it) => it.url && HK_RECAP_RE.test(it.title))
+    .sort((a, b) => (b.publishedAt ?? "").localeCompare(a.publishedAt ?? ""));
+  const best = cands[0];
+  return best ? { title: best.title, url: best.url } : undefined;
 }
 
 /**
@@ -188,6 +203,8 @@ export async function generateStockRecap(
     recap.us.meta = buildMeta(input.us, quotes?.channel);
     recap.aShare.meta = buildMeta(input.aShare, quotes?.channel);
     recap.hk.meta = buildMeta(input.hk, quotes?.channel);
+    // 港股大盘解读权威源：锚定新浪财经等收评/总结报告（卡内展示「直接看原报告」入口）
+    recap.hk.sourceReport = findHkRecapReport(input.hk);
     // 行情指数（新浪行情 API，非 LLM）：挂到三卡 + 顶层来源/取值日，随 store 持久化、SKIP_AI 复用
     if (quotes) {
       recap.aShare.indices = quotes.quotes.aShare;

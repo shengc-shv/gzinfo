@@ -21,6 +21,7 @@ import {
   loadStockRecap,
   selectStockRecap,
   synthesizeFallbackCard,
+  findHkRecapReport,
   type StockItem,
 } from "../../ai/stock-recap";
 import { filterByWindow } from "../../ingest/merge";
@@ -102,6 +103,18 @@ export async function buildStockRecap(
       recap.us = synthesizeFallbackCard(recap.us, quotes.quotes.us) ?? recap.us;
       recap.aShare = synthesizeFallbackCard(recap.aShare, quotes.quotes.aShare) ?? recap.aShare;
       recap.hk = synthesizeFallbackCard(recap.hk, quotes.quotes.hk) ?? recap.hk;
+    }
+    // 港股大盘解读权威源：无论 AI/SKIP_AI，均从 hkItems 锚定新浪财经等收评/总结报告，
+    // 卡内展示「直接看原报告」入口（2026-08-29 用户：港股大盘解读应以此为准）。
+    recap.hk.sourceReport = findHkRecapReport(hkItems);
+    // SKIP_AI 复用 store 时 store 里可能没存指数块 → 用本次抓取的 quotes 补齐，
+    // 保证「收盘点位 + 涨跌幅」筹码在三种模式下都展示完整（2026-08-29）。
+    if (quotes) {
+      recap.us.indices = recap.us.indices ?? quotes.quotes.us;
+      recap.aShare.indices = recap.aShare.indices ?? quotes.quotes.aShare;
+      recap.hk.indices = recap.hk.indices ?? quotes.quotes.hk;
+      recap.quoteChannel = recap.quoteChannel ?? quotes.channel;
+      recap.quoteDate = recap.quoteDate ?? quotes.date;
     }
     if (!skipAi) {
       writeStockRecap(date, recap);
