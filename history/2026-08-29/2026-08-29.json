@@ -1,103 +1,114 @@
 {
   "date": "2026-08-29",
-  "hero_line": "房贷40年新政与稳楼市组合拳同日落地，叠加美联储鹰派表态，分行需在按揭灵活还款、消费贷贴息扩面与跨境资产配置三线同时接招。",
+  "hero_line": "房贷新规与稳楼市组合拳齐发，零售条线需在风险底线内抢抓改善型客群与按揭灵活还款窗口。",
   "must_read": [
     {
-      "title": "美联储主席鹰派发声全球资产跳水",
-      "why": "黄金、芯片股、外币资产同步承压，私行跨境配置与QDII敞口需前置提示客户并调整推介话术。",
-      "url": "https://www.stcn.com/article/detail/4155602.html"
+      "title": "多部委稳楼市组合拳落地",
+      "why": "需求、供给、融资三端同步发力，定调长期主义，分行宜提前备齐本地落地后的客户答疑与产品组合口径。",
+      "url": "https://finance.cctv.com/2026/08/29/ARTIhxs9dk1G5wuBvnJ4OsIV260829.shtml"
     },
     {
-      "title": "房贷期限延至40年新政落地",
-      "why": "按揭月供下降释放改善型需求，重塑开发商白名单与个贷产品设计逻辑，零售需评估灵活还款与重定价触达。",
+      "title": "房贷期限延至40年，百万月供省600",
+      "why": "按揭产品定价与还款结构重塑，零售条线需评估前低后高、只还息等灵活方案，梳理存量客户重定价与重组触达。",
       "url": "https://www.stcn.com/article/detail/4153528.html"
     },
     {
-      "title": "消费贷贴息扩围提额银行系统已适配",
-      "why": "大行已通跑贴息扩面，零售本周须锁定贴息客群清单并做交叉销售，抢中收与黏性。",
-      "url": "https://finance.sina.com.cn/jjxw/2026-08-28/doc-inipvfek0399471.shtml"
+      "title": "央行金监总局同步出手，长期主义定调",
+      "why": "降门槛与防风险并重，分行可在底线内优化二套及改善型客群准入模型，承接被释放的需求。",
+      "url": "https://finance.cctv.com/2026/08/29/ARTIFZq4HYeQoIa1d7FOzU9L260829.shtml"
     },
     {
-      "title": "信贷资产流转强制登记新规将实施",
-      "why": "对公条线盘活存量与缓释资本占用有了新通道，影响对公客户经营策略与综合服务方案。",
-      "url": "https://finance.sina.com.cn/roll/2026-08-28/doc-inipvmmz8913370.shtml"
+      "title": "美联储主席偏鹰，全球风险资产跳水",
+      "why": "外币理财、QDII与黄金贵金属敞口受波及，财富与私行条线需重新审视跨境及商品类产品的客户适配口径。",
+      "url": "https://www.stcn.com/article/detail/4155602.html"
     },
     {
-      "title": "多部委稳楼市组合拳",
-      "why": "商品房所见即所得、信贷与交付保障联动，按揭准入与开发商筛选须同步校准，规避交付端风险。",
-      "url": "https://finance.eastmoney.com/a/202608293858978022.html"
+      "title": "按揭制度28年首修，项目达标才还贷",
+      "why": "从主体信用转向项目情况，个贷与合规条线须联动研判在穗预售项目准入与资金流向管控口径。",
+      "url": "https://m.21jingji.com/article/20260829/herald/ed0b1ba73ae05fbc410ccfed25e6bfaf.html"
     }
   ],
   "insights": [
     {
-      "topic": "工行828财富季同业抢客",
+      "topic": "消费贷贴息对标扩面",
+      "tags": [
+        "信贷",
+        "竞对动态"
+      ],
+      "impact": "中行披露超300万人已享贴息并将四维发力，国有大行正以价格与场景抢占消费贷客户，股份行若不跟进将面临优质客户流失。",
+      "action": "本周内对照大行贴息范围与额度，财富与个贷联动梳理目标客群清单，加快贴息+财富组合产品的交叉销售落地。",
+      "sources": [
+        {
+          "title": "中行蔡钊答21：超300万人享消费贷贴息，未来四维发力扩内需",
+          "url": "https://m.21jingji.com/article/20260829/herald/79afb0b60610c629b6867110f2fdebb5.html"
+        }
+      ]
+    },
+    {
+      "topic": "高股息组合借势险企分红",
       "tags": [
         "财富",
         "私行"
       ],
-      "impact": "同业季末集中营销财富客户，分行若不主动应对将面临AUM与中收双重流失，私行与财富端压力上升。",
-      "action": "本周财富部可启动季末客户提升专项，联动基金、保险、贵金属做交叉销售，重点守住私行与中高端客群。",
+      "impact": "五大险企上半年净利增近八成、中期分红390亿，叠加邮储分红比例提至31%，市场高股息预期持续升温，财富端有结构性机会。",
+      "action": "本周内盘点和补足代销清单中的高股息理财、险企资管与红利基金组合，面向私行与财富客户做主动推介。",
       "sources": [
         {
-          "title": "工商银行“828·工银财富季”活动正式启动，万家基金同心同行！",
-          "url": "https://www.stcn.com/article/detail/4149210.html"
-        }
-      ]
-    },
-    {
-      "topic": "消费贷贴息扩围提额落地",
-      "tags": [
-        "信贷",
-        "客群"
-      ],
-      "impact": "贴息直接降低客户融资成本，是拉升消费贷规模与黏性的窗口期；同业大行已跑通系统，分行跟进速度决定份额。",
-      "action": "本周零售部梳理存量消费贷客户清单，主动触达符合贴息资质者办理，联动信用卡与财富产品做交叉转化。",
-      "sources": [
-        {
-          "title": "实探消费贷贴息“扩围提额” 银行：系统已自动适配",
-          "url": "https://finance.sina.com.cn/jjxw/2026-08-28/doc-inipvfek0399471.shtml"
+          "title": "五大险企上半年净利合计超3100亿，同比增长近80%，派发390亿中期红包",
+          "url": "https://finance.sina.com.cn/jjxw/2026-08-29/doc-inipywer9018201.shtml"
         },
         {
-          "title": "中行蔡钊答21：超300万人享消费贷贴息，未来四维发力扩内需",
-          "url": "https://m.21jingji.com/article/20260828/herald/79afb0b60610c629b6867110f2fdebb5.html"
+          "title": "邮储银行：分红比例提至31%、息差降幅趋缓，管理层释放企稳信号",
+          "url": "https://m.21jingji.com/article/20260829/herald/4d0583bb78e23dad0476c13dfca7433b.html"
         }
       ]
     },
     {
-      "topic": "房贷40年新政与本地贴息跟进",
+      "topic": "灵活还款承接改善型需求",
       "tags": [
         "住房金融",
         "信贷"
       ],
-      "impact": "广州是否跟进贴息叠加40年新政，决定改善型客户回流节奏，是分行按揭与开发商存客策略的关键变量。",
-      "action": "本周个贷部跟踪广州跟进进度，提前储备贴息客群方案，同步评估前N年只还息产品与开发商白名单联动更新。",
+      "impact": "房贷期限延至40年叠加多地贴息，按揭客户对月供敏感度上升，纯等额本息产品对改善型与二套客户吸引力下降。",
+      "action": "个贷部本周评估前低后高、只还息等灵活还款产品试点，联动支行梳理在途改善型客户，做差异化方案储备。",
       "sources": [
+        {
+          "title": "两部门：个人住房贷款期限延至最长40年",
+          "url": "https://www.stcn.com/article/detail/4153528.html"
+        },
         {
           "title": "降低居民购房成本 多地推出住房贷款贴息政策",
           "url": "https://www.stcn.com/article/detail/4149230.html"
-        },
-        {
-          "title": "重磅！房贷期限延至40年",
-          "url": "https://m.21jingji.com/article/20260828/herald/4d54db9f723a832ad12f048b9f9a9064.html"
         }
       ]
     },
     {
-      "topic": "贵金属与跨境资产波动应对",
+      "topic": "对公联动盘活房企存量资产",
       "tags": [
-        "私行",
-        "财富"
+        "信贷",
+        "私行"
       ],
-      "impact": "美联储偏鹰推升美元、压低黄金，私行客户对美元资产咨询量可能上行，单一商品敞口产品需规避。",
-      "action": "本周私行部更新跨境与贵金属推介话术，做好客户风险适配，对高净值客群前置沟通汇率与波动。",
+      "impact": "监管支持上市房企合理融资、风控逻辑从主体信用转向项目情况，为分行公司条线盘活存量项目贷与并购业务提供新切口。",
+      "action": "公司部本周内梳理存量房企项目贷客户清单，筛选可盘活资产标的，联动投行与私行设计综合服务方案。",
       "sources": [
         {
-          "title": "深夜，美联储主席发声！黄金大跌、芯片巨头重挫",
-          "url": "https://finance.sina.com.cn/wm/2026-08-28/doc-inipwxpp9793231.shtml"
-        },
+          "title": "从主体信用转向项目情况 支持上市房企合理融资进一步盘活存量资产",
+          "url": "https://www.cnfin.com/yw-lb/detail/20260829/4462329_1.html"
+        }
+      ]
+    },
+    {
+      "topic": "基金投顾强化持有期陪伴",
+      "tags": [
+        "财富",
+        "客群"
+      ],
+      "impact": "央视关注基金赚钱与基民收益偏离，新指标或将重塑行业考核口径，财富端单纯销量导向面临客户信任压力。",
+      "action": "财富部可借机将基金投顾与持有期陪伴服务纳入考核口径，本月起对代销产品做持有期回访与定投引导试点。",
+      "sources": [
         {
-          "title": "沃什杰克逊霍尔首秀震惊市场：美联储要准备开始加息吗？",
-          "url": "https://finance.eastmoney.com/a/202608293859092920.html"
+          "title": "\"基金赚钱≠你赚钱\"！这个新指标很关键！",
+          "url": "https://finance.cctv.com/2026/08/29/ARTI3wz6sAwk5a7DSiDzBF4I260829.shtml"
         }
       ]
     }
@@ -105,6 +116,23 @@
   "sections": {
     "gz_local": [],
     "biz_insight": [
+      {
+        "url": "https://m.21jingji.com/article/20260829/herald/4d0583bb78e23dad0476c13dfca7433b.html",
+        "title_cn": "邮储银行：分红比例提至31%、息差降幅趋缓，管理层释放企稳信号",
+        "title_orig": "分红比例提至31%、息差降幅趋缓 邮储银行管理层释放企稳信号",
+        "source": "21世纪经济报道·金融",
+        "source_type": "media",
+        "date": "08/29",
+        "summary": "邮储银行半年报分红比例提至31%，管理层称息差降幅趋缓。所以呢：股份行财富端可借同业高分红预期升温契机，强化高股息理财与基金组合的代销推动。",
+        "importance": 2,
+        "rank": 1,
+        "tags": [
+          "竞对动态",
+          "市场",
+          "客群"
+        ],
+        "locale": "national"
+      },
       {
         "url": "https://m.21jingji.com/article/20260828/herald/2d1a1dafd11f6e55846f4700d7cf3f5f.html",
         "title_cn": "银行落实贷款贴息新政 财政资金激活消费与实体经济",
@@ -114,7 +142,7 @@
         "date": "08/28",
         "summary": "财政贴息新政落地，银行同步对接激活消费与实体融资；分行宜将贴息窗口与经营贷消费贷组合推介，借政策红利提升客群覆盖与贷款投放。",
         "importance": 2,
-        "rank": 1,
+        "rank": 2,
         "tags": [
           "信贷"
         ],
@@ -129,7 +157,7 @@
         "date": "08/28",
         "summary": "信托业首部房地产信托业务管理办法试行，规范存量与新增地产信托；私行代销固收类信托须重检底层资产与合规口径，防范地产风险向高净值客群外溢。",
         "importance": 2,
-        "rank": 2,
+        "rank": 3,
         "tags": [
           "财富"
         ],
@@ -144,7 +172,7 @@
         "date": "08/28",
         "summary": "央行、金监总局联合印发《关于改革完善房地产信贷管理 推动加快构建房地产发展新模式的意见》：个人住房贷款最长期限由30年延长至40年，给予借贷双方更大灵活度，具体期限由购房人与银行协商；据测算百万房贷（利率约3%、等额本息）月供可降约600元、年省现金流约7600元。同步明确：开发贷实行主办银行制；现房销售放贷在销售备案后、预售在竣工备案后；存量房贷借款人阶段性还款困难的可与银行协商延期/展期/延迟还本。建议分行零售条线评估“前N年只还息”等灵活还款产品，并梳理存量按揭客户重定价与重组触达，承接释放出的购房与改善性需求。",
         "importance": 2,
-        "rank": 3,
+        "rank": 4,
         "tags": [
           "信贷"
         ],
@@ -159,7 +187,7 @@
         "date": "08/28",
         "summary": "央行、金监总局联合印发《关于改革完善房地产信贷管理 推动加快构建房地产发展新模式的意见》：个人住房贷款最长期限由30年延长至40年，给予借贷双方更大灵活度，具体期限由购房人与银行协商；据测算百万房贷（利率约3%、等额本息）月供可降约600元、年省现金流约7600元。同步明确：开发贷实行主办银行制；现房销售放贷在销售备案后、预售在竣工备案后；存量房贷借款人阶段性还款困难的可与银行协商延期/展期/延迟还本。建议分行零售条线评估“前N年只还息”等灵活还款产品，并梳理存量按揭客户重定价与重组触达，承接释放出的购房与改善性需求。",
         "importance": 2,
-        "rank": 4,
+        "rank": 5,
         "tags": [
           "信贷"
         ],
@@ -174,7 +202,7 @@
         "date": "08/28",
         "summary": "美联储主席讲话偏鹰，黄金大跌芯片股重挫；建议分行提示黄金积存与贵金属客群关注波动，理财推介规避单一商品敞口做好风险适配。",
         "importance": 2,
-        "rank": 5,
+        "rank": 6,
         "tags": [
           "财富"
         ],
@@ -189,7 +217,7 @@
         "date": "08/28",
         "summary": "中行披露超300万人已享消费贷贴息，将从场景产品渠道生态四维扩内需；建议分行对标大行节奏，加快消费贷贴息客户扩面与财富联动。",
         "importance": 2,
-        "rank": 6,
+        "rank": 7,
         "tags": [
           "信贷"
         ],
@@ -204,7 +232,7 @@
         "date": "08/28",
         "summary": "深市蓝筹新景象丨不拼规模，拼利润率！生物医",
         "importance": 2,
-        "rank": 7,
+        "rank": 8,
         "tags": [],
         "locale": "national"
       },
@@ -217,7 +245,7 @@
         "date": "08/28",
         "summary": "创业板首家晶圆制造企业，取得IPO注册批文！",
         "importance": 2,
-        "rank": 8,
+        "rank": 9,
         "tags": [],
         "locale": "national"
       },
@@ -230,63 +258,164 @@
         "date": "08/28",
         "summary": "水性功能材料“小巨人” 华大海天登陆北交所",
         "importance": 2,
-        "rank": 9,
+        "rank": 10,
         "tags": [],
         "locale": "national"
       }
     ],
     "policy_market": [
       {
-        "url": "https://www.stcn.com/article/detail/4155726.html",
-        "title_cn": "三部门完善商品房销售制度 实现\"所见即所得\"",
-        "title_orig": "三部门完善商品房销售制度 实现\"所见即所得\"",
+        "url": "https://www.stcn.com/article/detail/4161481.html",
+        "title_cn": "四大行半年报：派息率31%，合计分红超1900亿，净息差集体企稳",
+        "title_orig": "四大行半年报来了！派息率31%，合计分红超1900亿！净息差集体企稳…来看五大看点",
         "source": "证券时报",
         "source_type": "media",
         "date": "08/29",
-        "summary": "三部门联合完善商品房销售制度，推动'所见即所得'落地，规范交付标准与销售行为。多部委同步发力稳楼市，政策形成组合拳。所以呢：按揭一线需关注交付标准变化对客户购房决策的影响，个贷与开发商存客策略可同步调整。",
+        "summary": "四大行半年报派息率31%，合计分红超1900亿，净息差集体出现企稳信号。所以呢：负债端定价压力或边际缓解，资产端可研究跟进国有大行对优质按揭与消费贷的定价策略。",
         "importance": 3,
         "rank": 1,
         "tags": [
-          "住房金融",
-          "监管合规",
-          "信贷"
+          "财富",
+          "市场",
+          "竞对动态",
+          "客群"
         ],
         "locale": "national",
-        "locale_evidence": "三部门完善商品房销售制度"
+        "locale_evidence": "四大行半年报全国性数据，派息率、净息差等"
       },
       {
-        "url": "https://finance.eastmoney.com/a/202608293858978022.html",
-        "title_cn": "多部委集体发力稳楼市这轮政策\"组合拳\"力度几何？",
-        "title_orig": "多部委集体发力稳楼市这轮政策\"组合拳\"力度几何？",
-        "source": "东方财富",
+        "url": "https://finance.cctv.com/2026/08/29/ARTIhxs9dk1G5wuBvnJ4OsIV260829.shtml",
+        "title_cn": "多部委集体发力稳楼市，这轮政策\"组合拳\"力度几何？",
+        "title_orig": "多部委集体发力稳楼市，这轮政策\"组合拳\"力度几何？",
+        "source": "央视财经",
         "source_type": "media",
         "date": "08/29",
-        "summary": "多部委近期集中出台稳楼市政策，从供给、需求、监管多端协同发力。组合拳覆盖商品房销售制度、信贷与交付保障等环节。所以呢：可与'所见即所得'制度交叉看，重点梳理按揭准入与开发商白名单的联动更新。",
+        "summary": "多部委同步出台稳楼市政策，覆盖需求端、供给端与融资端。所以呢：分行个贷与财富条线宜紧盯后续地方落地细则，提前梳理客户答疑口径。",
         "importance": 2,
         "rank": 2,
         "tags": [
           "住房金融",
           "信贷"
         ],
-        "locale": "national",
-        "locale_evidence": "多部委集体发力稳楼市这轮政策\"组合拳\""
+        "locale": "national"
       },
       {
-        "url": "https://finance.eastmoney.com/a/202608293859092920.html",
-        "title_cn": "沃什杰克逊霍尔首秀震惊市场：美联储要准备开始加息吗？",
-        "title_orig": "沃什杰克逊霍尔首秀震惊市场：美联储要准备开始加息吗？",
-        "source": "东方财富",
+        "url": "https://m.21jingji.com/article/20260829/herald/0e16e55153cb8dd08e9cc5164864ec69.html",
+        "title_cn": "房贷年限由最高30年调至40年，100万房贷实测：月供降600多，总利息增加",
+        "title_orig": "房贷年限由最高30年调至40年，100万房贷实测：月供降600多，总利息增加",
+        "source": "21世纪经济报道·金融",
         "source_type": "media",
         "date": "08/29",
-        "summary": "美联储沃什在杰克逊霍尔年会上首次公开亮相，表态偏鹰，市场对加息预期迅速升温，全球资产价格出现明显波动。所以呢：结售汇与外币理财客户需提示汇率波动窗口，私行端可关注美元资产配置咨询量变化。",
+        "summary": "住房按揭贷款期限上限由此前最高30年延长至40年，100万贷款月供降600余元，但总利息相应上升。所以呢：客户经理在面签时可按客户月供承受力与总成本偏好双向测算。",
         "importance": 2,
         "rank": 3,
+        "tags": [
+          "住房金融",
+          "消费贷",
+          "信贷"
+        ],
+        "locale": "national"
+      },
+      {
+        "url": "https://m.21jingji.com/article/20260829/herald/ed0b1ba73ae05fbc410ccfed25e6bfaf.html",
+        "title_cn": "个人房贷制度28年来首次大修！项目达标后才开始还贷",
+        "title_orig": "个人房贷制度28年来首次大修！项目达标后才开始还贷",
+        "source": "21世纪经济报道·金融",
+        "source_type": "media",
+        "date": "08/29",
+        "summary": "个人住房按揭制度迎来28年来首次大修，购房者有望在项目达标后才进入还贷期。所以呢：分行个贷与合规条线需联动，研判新制度对在穗预售项目按揭准入和资金流向的影响。",
+        "importance": 2,
+        "rank": 4,
+        "tags": [
+          "住房金融",
+          "监管合规",
+          "信贷"
+        ],
+        "locale": "national"
+      },
+      {
+        "url": "https://www.cnfin.com/yw-lb/detail/20260829/4462329_1.html",
+        "title_cn": "从主体信用转向项目情况 支持上市房企合理融资进一步盘活存量资产",
+        "title_orig": "从主体信用转向项目情况 支持上市房企合理融资进一步盘活存量资产",
+        "source": "新华财经",
+        "source_type": "media",
+        "date": "08/29",
+        "summary": "监管明确支持上市房企合理融资，风控逻辑从主体信用向项目情况迁移，进一步推动存量资产盘活。所以呢：分行公司条线可梳理存量项目贷客户的可盘活资产名单。",
+        "importance": 2,
+        "rank": 5,
+        "tags": [
+          "住房金融",
+          "信贷"
+        ],
+        "locale": "national"
+      },
+      {
+        "url": "https://finance.cctv.com/2026/08/29/ARTIFZq4HYeQoIa1d7FOzU9L260829.shtml",
+        "title_cn": "央行、金融监管总局出手稳楼市，降门槛与防风险并重，楼市进入\"长期主义\"",
+        "title_orig": "央行、金融监管总局出手稳楼市，降门槛与防风险并重，楼市进入\"长期主义\"",
+        "source": "央视财经",
+        "source_type": "official",
+        "date": "08/29",
+        "summary": "央行与金融监管总局同步推出稳楼市举措，强调降门槛与防风险并重，定调长期主义。所以呢：分行可在风险底线内研究优化二套与改善型客群的准入模型。",
+        "importance": 2,
+        "rank": 6,
+        "tags": [
+          "住房金融",
+          "监管合规",
+          "信贷"
+        ],
+        "locale": "national"
+      },
+      {
+        "url": "https://finance.cctv.com/2026/08/29/ARTI3wz6sAwk5a7DSiDzBF4I260829.shtml",
+        "title_cn": "\"基金赚钱≠你赚钱\"！这个新指标很关键！",
+        "title_orig": "\"基金赚钱≠你赚钱\"！这个新指标很关键！",
+        "source": "央视财经",
+        "source_type": "media",
+        "date": "08/29",
+        "summary": "央视关注基金赚钱与基民实际收益的偏离，新指标或推动行业考核口径调整。所以呢：财富端可借机强化基金投顾与持有期陪伴服务，弱化单纯销量导向。",
+        "importance": 2,
+        "rank": 7,
+        "tags": [
+          "财富",
+          "市场",
+          "客群"
+        ],
+        "locale": "national"
+      },
+      {
+        "url": "https://finance.sina.com.cn/jjxw/2026-08-29/doc-inipywer9018201.shtml",
+        "title_cn": "五大险企上半年净利合计超3100亿，同比增长近80%，派发390亿中期红包",
+        "title_orig": "日赚17.5亿！A股五大险企上半年净利合计超3100亿，同比大增近80%，390亿中期\"红包\"来了",
+        "source": "新浪财经·A股",
+        "source_type": "media",
+        "date": "08/29",
+        "summary": "A股五大险企上半年净利合计超3100亿，同比增长近80%，中期分红合计390亿。所以呢：保险代销条线可借上市险企高分红与业绩催化，包装保障+财富类组合方案。",
+        "importance": 2,
+        "rank": 8,
         "tags": [
           "市场",
           "客群"
         ],
+        "locale": "national"
+      },
+      {
+        "url": "https://finance.sina.com.cn/roll/2026-08-28/doc-inipvmnc5659115.shtml",
+        "title_cn": "8月超3000只银行理财公告",
+        "title_orig": "8月超3000只银行理财公告",
+        "source": "新浪财经·银行频道",
+        "source_type": "media",
+        "date": "08/28",
+        "summary": "8月银行理财产品公告数量超过3000只，产品运作与净值披露节奏明显加快。所以呢：代销与自营理财条线需关注密集公告背后的净值波动，备好客户沟通口径。",
+        "importance": 1,
+        "rank": 9,
+        "tags": [
+          "财富",
+          "市场",
+          "客群"
+        ],
         "locale": "national",
-        "locale_evidence": "美联储要准备开始加息"
+        "locale_evidence": "8月银行理财市场公告数据，全国性市场资讯"
       },
       {
         "url": "https://www.stcn.com/article/detail/4155602.html",
@@ -297,7 +426,7 @@
         "date": "08/28",
         "summary": "美联储主席重磅发声偏鹰，全球风险资产全线跳水；分行须提示外币理财与QDII客群关注汇率与波动审慎管理跨境产品敞口。",
         "importance": 2,
-        "rank": 4,
+        "rank": 10,
         "tags": [],
         "locale": "national"
       },
@@ -310,7 +439,7 @@
         "date": "08/28",
         "summary": "央行、金监总局联合印发《关于改革完善房地产信贷管理 推动加快构建房地产发展新模式的意见》：个人住房贷款最长期限由30年延长至40年，给予借贷双方更大灵活度，具体期限由购房人与银行协商；据测算百万房贷（利率约3%、等额本息）月供可降约600元、年省现金流约7600元。同步明确：开发贷实行主办银行制；现房销售放贷在销售备案后、预售在竣工备案后；存量房贷借款人阶段性还款困难的可与银行协商延期/展期/延迟还本。建议分行零售条线评估“前N年只还息”等灵活还款产品，并梳理存量按揭客户重定价与重组触达，承接释放出的购房与改善性需求。",
         "importance": 2,
-        "rank": 5,
+        "rank": 11,
         "tags": [
           "信贷"
         ],
@@ -325,7 +454,7 @@
         "date": "08/28",
         "summary": "工行启动财富季营销万家基金联动获客；广州分行财富条线应关注同业活动节奏，借季末窗口做客户提升与产品交叉销售守住存款AUM。",
         "importance": 2,
-        "rank": 6,
+        "rank": 12,
         "tags": [
           "财富"
         ],
@@ -340,7 +469,7 @@
         "date": "08/28",
         "summary": "年内超20城落地房贷贴息直接降居民购房成本；分行按揭条线应跟踪本地是否跟进，提前储备贴息客群方案把握刚需与改善型贷款窗口。",
         "importance": 2,
-        "rank": 7,
+        "rank": 13,
         "tags": [
           "信贷"
         ],
@@ -355,7 +484,7 @@
         "date": "08/28",
         "summary": "财政贴息新政落地，银行同步对接激活消费与实体融资；分行宜将贴息窗口与经营贷消费贷组合推介，借政策红利提升客群覆盖与贷款投放。",
         "importance": 2,
-        "rank": 8,
+        "rank": 14,
         "tags": [
           "信贷"
         ],
@@ -370,7 +499,7 @@
         "date": "08/28",
         "summary": "年内超20城落地房贷贴息直接降居民购房成本；分行按揭条线应跟踪本地是否跟进，提前储备贴息客群方案把握刚需与改善型贷款窗口。",
         "importance": 2,
-        "rank": 9,
+        "rank": 15,
         "tags": [
           "信贷"
         ],
@@ -385,7 +514,7 @@
         "date": "08/28",
         "summary": "信贷资产流转将强制登记后转让，银行不良与收益权出表更规范；分行对公条线应前置梳理可流转资产，借新规盘活存量优化资本占用。",
         "importance": 2,
-        "rank": 10,
+        "rank": 16,
         "tags": [
           "信贷"
         ],
@@ -400,7 +529,7 @@
         "date": "08/28",
         "summary": "消费贷贴息扩围提额，银行系统已自动适配客户资质；分行零售条线本周梳理存量消费贷客户清单，主动触达符合条件者办理贴息，转化中收与黏性。",
         "importance": 2,
-        "rank": 11,
+        "rank": 17,
         "tags": [
           "信贷"
         ],
@@ -415,7 +544,7 @@
         "date": "08/28",
         "summary": "交行广东分行及三家支行因个贷业务违规等被罚130万；广州支行须立即复核个贷三查与资金流向留痕，避免同类监管处罚在分行复制。",
         "importance": 2,
-        "rank": 12,
+        "rank": 18,
         "tags": [
           "信贷"
         ],
@@ -430,7 +559,7 @@
         "date": "08/28",
         "summary": "江苏银行对公扩表但零售承压，披露经营贷风险并力推财富转化；广州分行宜借鉴其零售修复路径强化经营贷穿透审查提升财富中收占比。",
         "importance": 2,
-        "rank": 13,
+        "rank": 19,
         "tags": [
           "财富",
           "信贷",
@@ -447,24 +576,9 @@
         "date": "08/28",
         "summary": "央行、金监总局联合印发《关于改革完善房地产信贷管理 推动加快构建房地产发展新模式的意见》：个人住房贷款最长期限由30年延长至40年，给予借贷双方更大灵活度，具体期限由购房人与银行协商；据测算百万房贷（利率约3%、等额本息）月供可降约600元、年省现金流约7600元。同步明确：开发贷实行主办银行制；现房销售放贷在销售备案后、预售在竣工备案后；存量房贷借款人阶段性还款困难的可与银行协商延期/展期/延迟还本。建议分行零售条线评估“前N年只还息”等灵活还款产品，并梳理存量按揭客户重定价与重组触达，承接释放出的购房与改善性需求。",
         "importance": 2,
-        "rank": 14,
+        "rank": 20,
         "tags": [
           "信贷"
-        ],
-        "locale": "national"
-      },
-      {
-        "url": "https://www.stcn.com/article/detail/4137917.html",
-        "title_cn": "农商行抢滩38万亿元私行赛道，深耕县域高净值群体",
-        "source": "证券时报",
-        "source_type": "media",
-        "tier": "T2",
-        "date": "08/27",
-        "summary": "农商行切入38万亿私行赛道下沉县域高净值客群；广州分行私行须差异化竞争，强化大湾区产业客群经营与家族office服务守住本地基本盘。",
-        "importance": 2,
-        "rank": 15,
-        "tags": [
-          "私行"
         ],
         "locale": "national"
       }
@@ -472,33 +586,19 @@
     "tech": [],
     "ipo": []
   },
-  "risk": {
-    "topic": "交行广东分行个贷违规被罚130万",
-    "evidence": "交通银行广东分行及三家支行因个人贷款业务违规等被罚130万元，反映三查与资金流向留痕仍存薄弱环节。",
-    "impact": "对零售个贷：广州分行个贷三查口径须立即复核，避免同类处罚在本地复制。对风控：消费贷与经营贷资金流向穿透须强化，防范外部检查联动问责。",
-    "action": "个贷部本周内开展全辖个贷三查与资金流向留痕专项复核；风控部同步排查消费贷与经营贷合作机构准入与贷后管理，对疑似违规及时整改。",
-    "source": "T2",
-    "sources": [
-      {
-        "title": "交通银行广东分行及三支行共被罚130万，涉个人贷款业务违规等",
-        "url": "https://m.21jingji.com/article/20260828/herald/b6177351180f45296f8f7376c5bb91a0.html"
-      }
-    ]
-  },
   "stock_recap": {
     "us": {
-      "overview": "美股情绪回暖，波动率指数创年内新低，关注沃什杰克逊霍尔讲话。",
+      "overview": "美股盘面承压，科技股遭AI与社交媒体担忧双重夹击。",
       "sectors": [
-        "能源：特朗普宣布委内瑞拉650亿桶石油协议提振板块",
-        "科技：苹果上调Apple TV及Apple One订阅价格",
-        "农产品：玉米小麦期价飙至三年新高",
-        "贵金属：美联储沃什强化通胀警告支撑金价"
+        "科技：AI焦虑叠加社交媒体监管担忧领跌大盘",
+        "能源：委内瑞拉石油储备协议提振传统油气",
+        "金融：伯克希尔股价平淡、IMF及汇率博弈牵动情绪"
       ],
-      "spoken": "美股市场情绪回暖，波动率指数触及年内低点。能源板块受特朗普与委内瑞拉达成650亿桶石油协议提振走强，科技股方面苹果上调订阅价格受到关注。农产品板块玉米和小麦期价升至三年高位，贵金属则在沃什强化通胀警告下获得支撑，市场静待今晚杰克逊霍尔年会信号。",
+      "spoken": "美股盘面整体承压，科技股在AI泡沫担忧与社交媒体监管风声下领跌。能源板块因特朗普宣布委内瑞拉石油大单走强，金融板块则受伯克希尔股价平淡及汇率博弈影响缺乏方向。",
       "meta": {
         "source": "CNBC Top Stories",
         "crossCheck": "新浪行情",
-        "date": "2026-08-28"
+        "date": "2026-08-29"
       },
       "indices": [
         {
@@ -519,17 +619,17 @@
       ]
     },
     "aShare": {
-      "overview": "A股沪指震荡整理、创业板跌逾1%，粮食概念逆势走强。",
+      "overview": "A股半年报季亮点纷呈，金融与存储芯片成最强主线。",
       "sectors": [
-        "粮食：全球粮价走高带动种业粮食股大涨",
-        "房地产：央行将房贷期限延长至40年，现房销售制度完善",
-        "半导体：长鑫科技上半年净利776亿同比扭亏",
-        "机器人：发改委提醒因地制宜、防止一哄而上",
-        "MLCC：三星电机Q4涨价预期催热产业链"
+        "存储芯片：长鑫科技业绩炸裂、外资看好国产存储",
+        "金融：五大险企日赚17.5亿、广发证券净利翻倍",
+        "券商重仓：二季报加码金融与医药生物",
+        "人形机器人：宇树科技登陆科创板",
+        "医药：片仔癀业绩降势未止、结构矛盾待解"
       ],
-      "spoken": "A股沪指震荡整理，创业板指跌逾1%，盘面分化明显。粮食概念股在全球粮价创新高带动下逆势走强。房地产板块迎来政策利好，央行将房贷期限延长至40年并推进现房销售。半导体方面长鑫科技上半年大额扭亏提振人气，机器人产业则被发改委提醒防止盲目跟风。MLCC涨价预期也吸引融资客提前布局。",
+      "spoken": "A股半年报季持续发酵，存储芯片和金融板块成最强主线。长鑫科技业绩亮眼、外资看好国产存储，五大险企日赚17.5亿，广发证券净利翻倍。券商二季报加码金融与医药，宇树科技登陆科创板，片仔癀业绩仍承压。",
       "meta": {
-        "source": "东方财富",
+        "source": "新浪财经·A股",
         "crossCheck": "新浪行情",
         "date": "2026-08-29"
       },
@@ -552,13 +652,13 @@
       ]
     },
     "hk": {
-      "overview": "港股盘面交投清淡，上市公司密集披露中期业绩。",
+      "overview": "港股半年报披露密集，企业中期业绩与治理事项集中公告。",
       "sectors": [
-        "地产与金融：多家公司密集发布中期业绩及股东变动公告",
-        "消费与科技：部分公司召开股东特别大会审议董事变更等议案",
-        "公用事业：半年报披露窗口期持续，多数公司完成业绩公告"
+        "中期业绩：多公司密集发布半年度业绩",
+        "公司治理：股东会与董事变更事项集中",
+        "财报披露：半年报及ESG报告陆续发布"
       ],
-      "spoken": "港股市场进入中期业绩密集披露期，板块表现平稳。多家上市公司集中发布半年度业绩报告，部分公司同步公告董事变更及股东特别大会结果。市场关注点主要集中在企业盈利兑现情况，整体盘面缺乏明显方向，以个股业绩驱动为主。",
+      "spoken": "港股市场以半年报披露为主线，多家上市公司密集公告中期业绩，股东会结果与董事变更事项也集中发布，市场关注企业盈利与治理动态。整体盘面以业绩驱动为主，方向有待进一步明朗。",
       "meta": {
         "source": "新浪财经·港股",
         "crossCheck": "新浪行情",
@@ -586,81 +686,83 @@
   },
   "stock_news": [
     {
-      "url": "https://finance.eastmoney.com/a/202608283858435272.html",
-      "title_cn": "央行：将个人住房贷款期限由最长30年延长至最长40年",
-      "source": "东方财富",
+      "url": "https://finance.sina.com.cn/wm/2026-08-29/doc-inipxusx3926120.shtml",
+      "title_cn": "营收涨8倍、半年狂赚776亿元！A股“一哥”长鑫科技业绩炸裂，股民直呼“当之无愧的股王”",
+      "source": "新浪财经·A股",
       "source_type": "media",
-      "date": "08/28",
-      "summary": "央行宣布将个人住房贷款最长期限由30年延长至40年，以降低购房者月供压力。",
-      "importance": 3,
-      "rank": 0,
-      "tags": [
-        "政策",
-        "地产"
-      ],
-      "locale": "national",
-      "market": "a-share"
-    },
-    {
-      "url": "https://finance.eastmoney.com/a/202608283857886579.html",
-      "title_cn": "沃什杰克逊霍尔首秀今晚来袭美股如何走？历史数据这样说",
-      "source": "东方财富",
-      "source_type": "media",
-      "date": "08/28",
-      "summary": "美联储理事沃什将在杰克逊霍尔年会上首次发表讲话，市场关注其货币政策立场对美股影响。",
-      "importance": 2,
-      "rank": 0,
-      "tags": [
-        "宏观",
-        "美联储"
-      ],
-      "locale": "national",
-      "market": "a-share"
-    },
-    {
-      "url": "https://finance.eastmoney.com/a/202608283858251987.html",
-      "title_cn": "三部门：完善商品住房销售制度有力有序推行商品住房现房销售",
-      "source": "东方财富",
-      "source_type": "media",
-      "date": "08/28",
-      "summary": "住建部等三部门发文完善商品住房销售制度，有序推进商品住房现房销售。",
-      "importance": 3,
-      "rank": 0,
-      "tags": [
-        "政策",
-        "地产"
-      ],
-      "locale": "national",
-      "market": "a-share"
-    },
-    {
-      "url": "https://finance.eastmoney.com/a/202608283858328281.html",
-      "title_cn": "长鑫科技：上半年归母净利润776.05亿元同比扭亏为盈",
-      "source": "东方财富",
-      "source_type": "media",
-      "date": "08/28",
-      "summary": "长鑫科技披露上半年业绩，归母净利润776.05亿元，同比扭亏为盈。",
+      "date": "08/29",
+      "summary": "长鑫科技发布上市后首份半年报，上半年营收同比涨8倍至776亿元，业绩表现强劲。",
       "importance": 3,
       "rank": 0,
       "tags": [
         "财报",
-        "半导体"
+        "半导体",
+        "存储"
       ],
       "locale": "national",
       "market": "a-share"
     },
     {
-      "url": "https://finance.eastmoney.com/a/202608283858072733.html",
-      "title_cn": "沪指震荡整理创业板指跌逾1%粮食概念股大涨",
-      "source": "东方财富",
+      "url": "https://finance.sina.com.cn/jjxw/2026-08-29/doc-inipxqkz4039060.shtml",
+      "title_cn": "广发证券上半年净利增80%至116.52亿元，交易及机构业务收入近乎翻倍",
+      "source": "新浪财经·A股",
       "source_type": "media",
-      "date": "08/28",
-      "summary": "8月28日A股震荡整理，沪指基本持平，创业板指跌逾1%，粮食概念股逆势大涨。",
+      "date": "08/29",
+      "summary": "广发证券发布半年报，上半年净利润同比增长80%至116.52亿元，交易及机构业务收入接近翻倍。",
       "importance": 2,
       "rank": 0,
       "tags": [
-        "A股",
-        "粮食"
+        "财报",
+        "券商"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.sina.com.cn/jjxw/2026-08-29/doc-inipxcvf8941874.shtml",
+      "title_cn": "长鑫科技上市后首份半年报亮眼 外资看好国产存储资产",
+      "source": "新浪财经·A股",
+      "source_type": "media",
+      "date": "08/29",
+      "summary": "长鑫科技上市后首份半年报业绩亮眼，外资机构表达对国产存储资产的看好。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "半导体",
+        "存储",
+        "财报"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.sina.com.cn/roll/2026-08-29/doc-inipxqkz4027113.shtml",
+      "title_cn": "A股“重回报”生态成型",
+      "source": "新浪财经·A股",
+      "source_type": "media",
+      "date": "08/29",
+      "summary": "A股市场\"重回报\"生态逐步成型，多家上市公司加大分红和回购力度。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "政策",
+        "分红"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.sina.com.cn/stock/zqgd/2026-08-29/doc-inipxusx3926881.shtml",
+      "title_cn": "2家A股公司，拟重大资产重组！",
+      "source": "新浪财经·A股",
+      "source_type": "media",
+      "date": "08/29",
+      "summary": "2家A股公司公告拟进行重大资产重组。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "重组",
+        "并购"
       ],
       "locale": "national",
       "market": "a-share"
@@ -671,11 +773,10 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/28",
-      "summary": "港交所披露易发布上市公司中期业绩公告。",
+      "summary": "港股上市公司发布中期业绩公告（港交所披露易）。",
       "importance": 1,
       "rank": 0,
       "tags": [
-        "港股",
         "财报"
       ],
       "locale": "national",
@@ -687,11 +788,10 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/28",
-      "summary": "港交所披露易发布上市公司中期业绩公告。",
+      "summary": "港股上市公司发布中期业绩公告（港交所披露易）。",
       "importance": 1,
       "rank": 0,
       "tags": [
-        "港股",
         "财报"
       ],
       "locale": "national",
@@ -703,11 +803,10 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/28",
-      "summary": "港交所披露易发布上市公司中期业绩公告。",
+      "summary": "港股上市公司发布中期业绩公告（港交所披露易）。",
       "importance": 1,
       "rank": 0,
       "tags": [
-        "港股",
         "财报"
       ],
       "locale": "national",
@@ -719,11 +818,10 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/28",
-      "summary": "港交所披露易发布上市公司中期业绩公告。",
+      "summary": "港股上市公司发布中期业绩公告（港交所披露易）。",
       "importance": 1,
       "rank": 0,
       "tags": [
-        "港股",
         "财报"
       ],
       "locale": "national",
@@ -735,15 +833,30 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/28",
-      "summary": "港交所披露易发布上市公司董事名单及角色职能公告。",
+      "summary": "港股公司发布董事名单及角色与职能公告（港交所披露易）。",
       "importance": 1,
       "rank": 0,
       "tags": [
-        "港股",
         "公司治理"
       ],
       "locale": "national",
       "market": "hk"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/08/29/tech-backlash-ai-data-centers-elections.html",
+      "title_cn": "Tech backlash reaches fever pitch as AI angst collides with social media fears",
+      "source": "CNBC Top Stories",
+      "source_type": "media",
+      "date": "08/29",
+      "summary": "AI焦虑叠加社交媒体担忧，科技板块面临强烈反弹压力。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "AI",
+        "科技"
+      ],
+      "locale": "overseas",
+      "market": "us"
     },
     {
       "url": "https://www.cnbc.com/2026/08/28/trump-announces-deal-with-venezuela-to-secure-more-than-65-billion-barrels-of-oil-reserves.html",
@@ -751,76 +864,60 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/28",
-      "summary": "特朗普宣布与委内瑞拉达成协议，委内瑞拉将向美国开放逾650亿桶石油储备。",
+      "summary": "特朗普宣布与委内瑞拉达成协议，确保超过650亿桶石油储备供应。",
       "importance": 3,
       "rank": 0,
       "tags": [
         "能源",
-        "地缘政治"
+        "地缘政治",
+        "石油"
       ],
       "locale": "overseas",
       "market": "us"
     },
     {
-      "url": "https://www.cnbc.com/2026/08/28/bessent-warren-yen-intervention-treasury-japan.html",
-      "title_cn": "Bessent attacks Warren over yen intervention query, offers ‘Foreign Exchange for Dummies’ lesson",
+      "url": "https://www.cnbc.com/2026/08/29/goodyear-turnaround-cash-debt.html",
+      "title_cn": "Goodyear burning rubber and cash as turnaround plan continues",
       "source": "CNBC Top Stories",
       "source_type": "media",
-      "date": "08/28",
-      "summary": "美国财长Bessent就日元干预问题回击参议员Warren，并提供外汇基础知识科普。",
+      "date": "08/29",
+      "summary": "固特异（Goodyear）转型计划持续推进，但公司仍在大量消耗现金。",
       "importance": 1,
       "rank": 0,
       "tags": [
-        "宏观",
+        "财报",
+        "汽车"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/08/29/iran-trade-sanctions-dollar-oil-exports.html",
+      "title_cn": "Iran trade falls as Supreme Leader Khamenei urges less reliance on the U.S. dollar",
+      "source": "CNBC Top Stories",
+      "source_type": "media",
+      "date": "08/29",
+      "summary": "伊朗最高领袖哈梅内伊呼吁减少对美元依赖，伊朗与美国贸易额下降。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "地缘政治",
         "外汇"
       ],
       "locale": "overseas",
       "market": "us"
     },
     {
-      "url": "https://www.cnbc.com/2026/08/28/kevin-warsh-jackson-hole-fed-inflation-rate-hike.html",
-      "title_cn": "Analysis: Kevin Warsh sharpens inflation warning at Jackson Hole, signaling possible rate hike",
+      "url": "https://www.cnbc.com/2026/08/29/k-shaped-economy-c-shaped-e-shape.html",
+      "title_cn": "K, C or E? Why economists can’t agree on the shape of today’s economy",
       "source": "CNBC Top Stories",
       "source_type": "media",
-      "date": "08/28",
-      "summary": "美联储理事沃什在杰克逊霍尔年会上强化通胀警告，市场解读其暗示可能加息。",
-      "importance": 3,
+      "date": "08/29",
+      "summary": "经济学家对美国经济形态判断分歧，K型、C型或E型复苏路径争议持续。",
+      "importance": 1,
       "rank": 0,
       "tags": [
-        "宏观",
-        "美联储"
-      ],
-      "locale": "overseas",
-      "market": "us"
-    },
-    {
-      "url": "https://www.cnbc.com/2026/08/28/corn-and-wheat-prices-jump-to-highest-prices-in-more-than-three-years.html",
-      "title_cn": "Corn and wheat prices jump to highest prices in more than three years",
-      "source": "CNBC Top Stories",
-      "source_type": "media",
-      "date": "08/28",
-      "summary": "美国玉米和小麦期货价格升至逾三年新高。",
-      "importance": 2,
-      "rank": 0,
-      "tags": [
-        "农产品",
-        "期货"
-      ],
-      "locale": "overseas",
-      "market": "us"
-    },
-    {
-      "url": "https://www.cnbc.com/2026/08/28/stock-traders-warm-up-to-warsh-as-volatility-index-touches-year-to-date-low.html",
-      "title_cn": "Stock traders warm up to Warsh as volatility index touches year-to-date low",
-      "source": "CNBC Top Stories",
-      "source_type": "media",
-      "date": "08/28",
-      "summary": "市场对沃什好感度回升，VIX波动率指数触及年内低点。",
-      "importance": 2,
-      "rank": 0,
-      "tags": [
-        "美股",
-        "美联储"
+        "宏观经济"
       ],
       "locale": "overseas",
       "market": "us"
