@@ -1,10 +1,11 @@
 /**
  * 展示层限额（PR5 抽出，PR4 内联在 main 的 50 行块）。
  *
- * 业务逻辑（2026-08-25 用户指令：行长每天最多看 5 分钟，几百条无意义）：
- * - 每源 ≤10 条，但**按价值排序选取**（importance 必知>默认>折叠 + 广州本地 + 业务线挂钩 优先），
- *   再按板块 rank 恢复顺序；
- * - 每板块总量 ≤ N（gz ≤15 / biz ≤30 / policy ≤30）；
+ * 业务逻辑（2026-08-25 用户指令：行长每天最多看 5 分钟，几百条无意义；
+ * 2026-08-29 P0 收敛：信息精确性>信息丰富性 + 价值优先）：
+ * - 每源 ≤4 条（保来源多样性，避免单一媒体占满板块），但**按价值排序选取**
+ *   （importance 必知>默认>折叠 + 广州本地 + 业务线挂钩 优先），再按板块 rank 恢复顺序；
+ * - 每板块总量 ≤ N（gz ≤10 / biz ≤8 / policy ≤12）；
  * - 股市新闻面板每市场 ≤5（三张解读卡已有板块总结，下面不堆几十条）。
  *
  * 返回新 report（不 mutate 入参）。
@@ -51,9 +52,9 @@ export function applyDisplayCaps(report: DailyReport, ctx: DailyContext): DailyR
   const sec = report.sections as unknown as Record<string, ReportItem[]>;
   const newSections = {
     ...report.sections,
-    gz_local: capSrc(sec.gz_local ?? [], 10, 15),
-    biz_insight: capSrc(sec.biz_insight ?? [], 10, 30),
-    policy_market: capSrc(sec.policy_market ?? [], 10, 30),
+    gz_local: capSrc(sec.gz_local ?? [], 4, 10),
+    biz_insight: capSrc(sec.biz_insight ?? [], 4, 8),
+    policy_market: capSrc(sec.policy_market ?? [], 4, 12),
   };
 
   // 股市新闻面板：每市场 ≤5
