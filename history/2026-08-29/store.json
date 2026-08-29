@@ -1,18 +1,803 @@
 {
   "date": "2026-08-29",
-  "updatedAt": "2026-08-28T17:06:55.922Z",
+  "updatedAt": "2026-08-29T00:23:09.323Z",
+  "executive": {
+    "hero_line": "房贷40年新政与稳楼市组合拳同日落地，叠加美联储鹰派表态，分行需在按揭灵活还款、消费贷贴息扩面与跨境资产配置三线同时接招。",
+    "spoken_hero": "今天最值得盯的是房贷最长40年新政落地，叠加多部委稳楼市组合拳与美联储鹰派表态，资产价格波动加大。分行零售端要在按揭灵活还款产品、消费贷贴息扩面、跨境理财风险提示三线同步接招，季末守住AUM。",
+    "must_read": [
+      {
+        "title": "美联储主席鹰派发声全球资产跳水",
+        "why": "黄金、芯片股、外币资产同步承压，私行跨境配置与QDII敞口需前置提示客户并调整推介话术。",
+        "url": "https://www.stcn.com/article/detail/4155602.html"
+      },
+      {
+        "title": "房贷期限延至40年新政落地",
+        "why": "按揭月供下降释放改善型需求，重塑开发商白名单与个贷产品设计逻辑，零售需评估灵活还款与重定价触达。",
+        "url": "https://www.stcn.com/article/detail/4153528.html"
+      },
+      {
+        "title": "消费贷贴息扩围提额银行系统已适配",
+        "why": "大行已通跑贴息扩面，零售本周须锁定贴息客群清单并做交叉销售，抢中收与黏性。",
+        "url": "https://finance.sina.com.cn/jjxw/2026-08-28/doc-inipvfek0399471.shtml"
+      },
+      {
+        "title": "信贷资产流转强制登记新规将实施",
+        "why": "对公条线盘活存量与缓释资本占用有了新通道，影响对公客户经营策略与综合服务方案。",
+        "url": "https://finance.sina.com.cn/roll/2026-08-28/doc-inipvmmz8913370.shtml"
+      },
+      {
+        "title": "多部委稳楼市组合拳",
+        "why": "商品房所见即所得、信贷与交付保障联动，按揭准入与开发商筛选须同步校准，规避交付端风险。",
+        "url": "https://finance.eastmoney.com/a/202608293858978022.html"
+      }
+    ],
+    "spoken_must_read": "房贷最长40年新政落地，零售条线要评估灵活还款与重定价触达，抢占改善型需求。多部委稳楼市组合拳同步发力，按揭准入与开发商白名单需联动校准，规避交付端风险。美联储主席鹰派表态，全球资产跳水，私行跨境与QDII敞口要前置提示客户。消费贷贴息扩围提额，大行已跑通，本周分行须锁定贴息客群清单做交叉销售。信贷资产流转新规即将实施，对公条线可借机盘活存量优化资本占用。",
+    "insights": [
+      {
+        "topic": "工行828财富季同业抢客",
+        "impact": "同业季末集中营销财富客户，分行若不主动应对将面临AUM与中收双重流失，私行与财富端压力上升。",
+        "action": "本周财富部可启动季末客户提升专项，联动基金、保险、贵金属做交叉销售，重点守住私行与中高端客群。",
+        "tag": [
+          "财富",
+          "私行"
+        ],
+        "sources": [
+          {
+            "title": "工商银行“828·工银财富季”活动正式启动，万家基金同心同行！",
+            "url": "https://www.stcn.com/article/detail/4149210.html"
+          }
+        ]
+      },
+      {
+        "topic": "消费贷贴息扩围提额落地",
+        "impact": "贴息直接降低客户融资成本，是拉升消费贷规模与黏性的窗口期；同业大行已跑通系统，分行跟进速度决定份额。",
+        "action": "本周零售部梳理存量消费贷客户清单，主动触达符合贴息资质者办理，联动信用卡与财富产品做交叉转化。",
+        "tag": [
+          "信贷",
+          "客群"
+        ],
+        "sources": [
+          {
+            "title": "实探消费贷贴息“扩围提额” 银行：系统已自动适配",
+            "url": "https://finance.sina.com.cn/jjxw/2026-08-28/doc-inipvfek0399471.shtml"
+          },
+          {
+            "title": "中行蔡钊答21：超300万人享消费贷贴息，未来四维发力扩内需",
+            "url": "https://m.21jingji.com/article/20260828/herald/79afb0b60610c629b6867110f2fdebb5.html"
+          }
+        ]
+      },
+      {
+        "topic": "房贷40年新政与本地贴息跟进",
+        "impact": "广州是否跟进贴息叠加40年新政，决定改善型客户回流节奏，是分行按揭与开发商存客策略的关键变量。",
+        "action": "本周个贷部跟踪广州跟进进度，提前储备贴息客群方案，同步评估前N年只还息产品与开发商白名单联动更新。",
+        "tag": [
+          "住房金融",
+          "信贷"
+        ],
+        "sources": [
+          {
+            "title": "降低居民购房成本 多地推出住房贷款贴息政策",
+            "url": "https://www.stcn.com/article/detail/4149230.html"
+          },
+          {
+            "title": "重磅！房贷期限延至40年",
+            "url": "https://m.21jingji.com/article/20260828/herald/4d54db9f723a832ad12f048b9f9a9064.html"
+          }
+        ]
+      },
+      {
+        "topic": "贵金属与跨境资产波动应对",
+        "impact": "美联储偏鹰推升美元、压低黄金，私行客户对美元资产咨询量可能上行，单一商品敞口产品需规避。",
+        "action": "本周私行部更新跨境与贵金属推介话术，做好客户风险适配，对高净值客群前置沟通汇率与波动。",
+        "tag": [
+          "私行",
+          "财富"
+        ],
+        "sources": [
+          {
+            "title": "深夜，美联储主席发声！黄金大跌、芯片巨头重挫",
+            "url": "https://finance.sina.com.cn/wm/2026-08-28/doc-inipwxpp9793231.shtml"
+          },
+          {
+            "title": "沃什杰克逊霍尔首秀震惊市场：美联储要准备开始加息吗？",
+            "url": "https://finance.eastmoney.com/a/202608293859092920.html"
+          }
+        ]
+      }
+    ],
+    "spoken_insights": "工行828财富季启动，财富部本周可启动季末客户提升专项，守住私行与中高端AUM。消费贷贴息扩围提额已落地，零售部梳理存量客户清单主动触达，联动信用卡与财富交叉转化。房贷40年叠加本地贴息窗口，个贷部提前储备贴息客群与灵活还款产品。美联储偏鹰贵金属与跨境承压，私行部更新推介话术，前置沟通汇率与波动。",
+    "risk": {
+      "topic": "交行广东分行个贷违规被罚130万",
+      "evidence": "交通银行广东分行及三家支行因个人贷款业务违规等被罚130万元，反映三查与资金流向留痕仍存薄弱环节。",
+      "impact": "对零售个贷：广州分行个贷三查口径须立即复核，避免同类处罚在本地复制。对风控：消费贷与经营贷资金流向穿透须强化，防范外部检查联动问责。",
+      "action": "个贷部本周内开展全辖个贷三查与资金流向留痕专项复核；风控部同步排查消费贷与经营贷合作机构准入与贷后管理，对疑似违规及时整改。",
+      "source": "T2",
+      "sources": [
+        {
+          "title": "交通银行广东分行及三支行共被罚130万，涉个人贷款业务违规等",
+          "url": "https://m.21jingji.com/article/20260828/herald/b6177351180f45296f8f7376c5bb91a0.html"
+        }
+      ]
+    },
+    "spoken_risk": "今天有1个需要警惕：交行广东分行因个贷违规被罚130万，三查与资金流向仍是薄弱环节。个贷部本周内开展全辖三查与资金留痕专项复核，风控部同步排查消费贷与经营贷合作机构，及时整改避免复制。",
+    "guangdong_ipo": null
+  },
   "stock_recap": {
     "us": {
-      "overview": "",
-      "sectors": []
+      "overview": "美股情绪回暖，波动率指数创年内新低，关注沃什杰克逊霍尔讲话。",
+      "sectors": [
+        "能源：特朗普宣布委内瑞拉650亿桶石油协议提振板块",
+        "科技：苹果上调Apple TV及Apple One订阅价格",
+        "农产品：玉米小麦期价飙至三年新高",
+        "贵金属：美联储沃什强化通胀警告支撑金价"
+      ],
+      "spoken": "美股市场情绪回暖，波动率指数触及年内低点。能源板块受特朗普与委内瑞拉达成650亿桶石油协议提振走强，科技股方面苹果上调订阅价格受到关注。农产品板块玉米和小麦期价升至三年高位，贵金属则在沃什强化通胀警告下获得支撑，市场静待今晚杰克逊霍尔年会信号。",
+      "meta": {
+        "source": "CNBC Top Stories",
+        "crossCheck": "新浪行情",
+        "date": "2026-08-28"
+      },
+      "indices": [
+        {
+          "name": "道琼斯",
+          "value": "53559.99",
+          "changePct": "-0.02%"
+        },
+        {
+          "name": "纳斯达克",
+          "value": "26402.42",
+          "changePct": "-0.52%"
+        },
+        {
+          "name": "标普500",
+          "value": "7711.76",
+          "changePct": "-0.25%"
+        }
+      ]
     },
     "aShare": {
-      "overview": "",
-      "sectors": []
+      "overview": "A股沪指震荡整理、创业板跌逾1%，粮食概念逆势走强。",
+      "sectors": [
+        "粮食：全球粮价走高带动种业粮食股大涨",
+        "房地产：央行将房贷期限延长至40年，现房销售制度完善",
+        "半导体：长鑫科技上半年净利776亿同比扭亏",
+        "机器人：发改委提醒因地制宜、防止一哄而上",
+        "MLCC：三星电机Q4涨价预期催热产业链"
+      ],
+      "spoken": "A股沪指震荡整理，创业板指跌逾1%，盘面分化明显。粮食概念股在全球粮价创新高带动下逆势走强。房地产板块迎来政策利好，央行将房贷期限延长至40年并推进现房销售。半导体方面长鑫科技上半年大额扭亏提振人气，机器人产业则被发改委提醒防止盲目跟风。MLCC涨价预期也吸引融资客提前布局。",
+      "meta": {
+        "source": "东方财富",
+        "crossCheck": "新浪行情",
+        "date": "2026-08-29"
+      },
+      "indices": [
+        {
+          "name": "上证指数",
+          "value": "3952.18",
+          "changePct": "-0.11%"
+        },
+        {
+          "name": "深证成指",
+          "value": "13953.07",
+          "changePct": "-0.68%"
+        },
+        {
+          "name": "创业板指",
+          "value": "3424.40",
+          "changePct": "-1.41%"
+        }
+      ]
     },
     "hk": {
-      "overview": "",
-      "sectors": []
+      "overview": "港股盘面交投清淡，上市公司密集披露中期业绩。",
+      "sectors": [
+        "地产与金融：多家公司密集发布中期业绩及股东变动公告",
+        "消费与科技：部分公司召开股东特别大会审议董事变更等议案",
+        "公用事业：半年报披露窗口期持续，多数公司完成业绩公告"
+      ],
+      "spoken": "港股市场进入中期业绩密集披露期，板块表现平稳。多家上市公司集中发布半年度业绩报告，部分公司同步公告董事变更及股东特别大会结果。市场关注点主要集中在企业盈利兑现情况，整体盘面缺乏明显方向，以个股业绩驱动为主。",
+      "meta": {
+        "source": "新浪财经·港股",
+        "crossCheck": "新浪行情",
+        "date": "2026-08-29"
+      },
+      "sourceReport": {
+        "title": "港股收评：恒指涨0.07% 科指跌0.33% 科网股分化 黄金股逆势上涨",
+        "url": "https://finance.sina.com.cn/stock/hkstock/marketalerts/2026-08-28/doc-inipwhrt5709607.shtml"
+      },
+      "indices": [
+        {
+          "name": "恒生指数",
+          "value": "25584.79",
+          "changePct": "+0.07%"
+        },
+        {
+          "name": "恒生科技",
+          "value": "4605.15",
+          "changePct": "-0.33%"
+        }
+      ]
+    },
+    "quoteChannel": "新浪行情",
+    "quoteDate": "2026-08-28"
+  },
+  "stock_news": [
+    {
+      "url": "https://finance.eastmoney.com/a/202608283858435272.html",
+      "title_cn": "央行：将个人住房贷款期限由最长30年延长至最长40年",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "08/28",
+      "summary": "央行宣布将个人住房贷款最长期限由30年延长至40年，以降低购房者月供压力。",
+      "importance": 3,
+      "rank": 0,
+      "tags": [
+        "政策",
+        "地产"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202608283857886579.html",
+      "title_cn": "沃什杰克逊霍尔首秀今晚来袭美股如何走？历史数据这样说",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "08/28",
+      "summary": "美联储理事沃什将在杰克逊霍尔年会上首次发表讲话，市场关注其货币政策立场对美股影响。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "宏观",
+        "美联储"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202608283858251987.html",
+      "title_cn": "三部门：完善商品住房销售制度有力有序推行商品住房现房销售",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "08/28",
+      "summary": "住建部等三部门发文完善商品住房销售制度，有序推进商品住房现房销售。",
+      "importance": 3,
+      "rank": 0,
+      "tags": [
+        "政策",
+        "地产"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202608283858328281.html",
+      "title_cn": "长鑫科技：上半年归母净利润776.05亿元同比扭亏为盈",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "08/28",
+      "summary": "长鑫科技披露上半年业绩，归母净利润776.05亿元，同比扭亏为盈。",
+      "importance": 3,
+      "rank": 0,
+      "tags": [
+        "财报",
+        "半导体"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202608283858072733.html",
+      "title_cn": "沪指震荡整理创业板指跌逾1%粮食概念股大涨",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "08/28",
+      "summary": "8月28日A股震荡整理，沪指基本持平，创业板指跌逾1%，粮食概念股逆势大涨。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "A股",
+        "粮食"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202608283858579037.html",
+      "title_cn": "8月28日晚间沪深上市公司重大事项公告最新快递",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "08/28",
+      "summary": "8月28日晚间沪深上市公司密集发布重大事项公告，包括业绩、增减持、回购等。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "A股",
+        "公告"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202608283857764454.html",
+      "title_cn": "三星电机调涨Q4报价！MLCC产业或进入涨价循环融资客提前埋伏这7股",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "08/28",
+      "summary": "三星电机拟上调第四季度MLCC报价，市场预期MLCC产业进入涨价周期。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "半导体",
+        "涨价"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202608283857797771.html",
+      "title_cn": "发改委：发展机器人产业必须因地制宜防止盲目跟风、一哄而上",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "08/28",
+      "summary": "发改委表示发展机器人产业须因地制宜，防止盲目跟风、一哄而上。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "政策",
+        "机器人"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202608283857898437.html",
+      "title_cn": "海外龙头业绩印证产业逻辑网络安全将成AI支出“下一站”？(附股)",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "08/28",
+      "summary": "海外网络安全龙头业绩印证AI驱动安全支出增长逻辑，市场关注网络安全或成AI下一受益方向。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "AI",
+        "网络安全"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202608283857749446.html",
+      "title_cn": "杰克逊霍尔年会隆重召开！今晚22点全球等沃什给个“答案”",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "08/28",
+      "summary": "杰克逊霍尔全球央行年会开幕，沃什讲话于北京时间22时进行，全球市场关注其政策信号。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "宏观",
+        "美联储"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202608293858894772.html",
+      "title_cn": "牛散也会“踩雷”不要盲目跟风抄作业",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "08/29",
+      "summary": "市场评论指出知名个人投资者也频繁\"踩雷\"，提醒散户勿盲目跟随其持仓操作。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "A股",
+        "风险"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202608283858058896.html",
+      "title_cn": "杨德龙：风险是涨出来的机会是跌出来的",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "08/28",
+      "summary": "券商分析师杨德龙发文表示，风险是涨出来的、机会是跌出来的。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "A股",
+        "评论"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0828/2026082804284.pdf",
+      "title_cn": "Announcements and Notices - [Interim Results]",
+      "source": "港交所披露易",
+      "source_type": "media",
+      "date": "08/28",
+      "summary": "港交所披露易发布上市公司中期业绩公告。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "港股",
+        "财报"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0828/2026082804282.pdf",
+      "title_cn": "Announcements and Notices - [Interim Results]",
+      "source": "港交所披露易",
+      "source_type": "media",
+      "date": "08/28",
+      "summary": "港交所披露易发布上市公司中期业绩公告。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "港股",
+        "财报"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0828/2026082804280.pdf",
+      "title_cn": "Announcements and Notices - [Interim Results]",
+      "source": "港交所披露易",
+      "source_type": "media",
+      "date": "08/28",
+      "summary": "港交所披露易发布上市公司中期业绩公告。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "港股",
+        "财报"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0828/2026082804276.pdf",
+      "title_cn": "Announcements and Notices - [Interim Results]",
+      "source": "港交所披露易",
+      "source_type": "media",
+      "date": "08/28",
+      "summary": "港交所披露易发布上市公司中期业绩公告。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "港股",
+        "财报"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0828/2026082804274.pdf",
+      "title_cn": "Announcements and Notices - [List of Directors and their Role and Function]",
+      "source": "港交所披露易",
+      "source_type": "media",
+      "date": "08/28",
+      "summary": "港交所披露易发布上市公司董事名单及角色职能公告。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "港股",
+        "公司治理"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0828/2026082804272.pdf",
+      "title_cn": "Announcements and Notices - [Results of EGM/SGM / Change in Directors or of Important Executive Functions or Responsibilities / Change of Audit Committee Member / Change of Nomination Committee Member / Change of Remuneration Committee Member]",
+      "source": "港交所披露易",
+      "source_type": "media",
+      "date": "08/28",
+      "summary": "港股上市公司发布股东大会决议、董事变更及审核/提名/薪酬委员会成员变动公告。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "港股",
+        "公司治理"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0828/2026082804270.pdf",
+      "title_cn": "Announcements and Notices - [Results of EGM/SGM]",
+      "source": "港交所披露易",
+      "source_type": "media",
+      "date": "08/28",
+      "summary": "港交所披露易发布上市公司股东特别大会决议结果公告。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "港股",
+        "公司治理"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0828/2026082804268.pdf",
+      "title_cn": "Announcements and Notices - [Interim Results]",
+      "source": "港交所披露易",
+      "source_type": "media",
+      "date": "08/28",
+      "summary": "港交所披露易发布上市公司中期业绩公告。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "港股",
+        "财报"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0828/2026082804266.pdf",
+      "title_cn": "Announcements and Notices - [Interim Results]",
+      "source": "港交所披露易",
+      "source_type": "media",
+      "date": "08/28",
+      "summary": "港交所披露易发布上市公司中期业绩公告。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "港股",
+        "财报"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0828/2026082804264.pdf",
+      "title_cn": "Announcements and Notices - [Interim Results]",
+      "source": "港交所披露易",
+      "source_type": "media",
+      "date": "08/28",
+      "summary": "港交所披露易发布上市公司中期业绩公告。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "港股",
+        "财报"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0828/2026082804262.pdf",
+      "title_cn": "Announcements and Notices - [Interim Results / Change of Audit Committee Member / Change of Nomination Committee Member / Change of Remuneration Committee Member]",
+      "source": "港交所披露易",
+      "source_type": "media",
+      "date": "08/28",
+      "summary": "港股上市公司发布中期业绩及审核/提名/薪酬委员会成员变动公告。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "港股",
+        "财报"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0828/2026082804260.pdf",
+      "title_cn": "Financial Statements/ESG Information - [Interim/Half-Year Report]",
+      "source": "港交所披露易",
+      "source_type": "media",
+      "date": "08/28",
+      "summary": "港交所披露易发布上市公司中期/半年度财务报告及ESG信息。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "港股",
+        "财报"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/08/28/trump-announces-deal-with-venezuela-to-secure-more-than-65-billion-barrels-of-oil-reserves.html",
+      "title_cn": "Trump announces deal with Venezuela to secure more than 65 billion barrels of oil reserves",
+      "source": "CNBC Top Stories",
+      "source_type": "media",
+      "date": "08/28",
+      "summary": "特朗普宣布与委内瑞拉达成协议，委内瑞拉将向美国开放逾650亿桶石油储备。",
+      "importance": 3,
+      "rank": 0,
+      "tags": [
+        "能源",
+        "地缘政治"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/08/28/bessent-warren-yen-intervention-treasury-japan.html",
+      "title_cn": "Bessent attacks Warren over yen intervention query, offers ‘Foreign Exchange for Dummies’ lesson",
+      "source": "CNBC Top Stories",
+      "source_type": "media",
+      "date": "08/28",
+      "summary": "美国财长Bessent就日元干预问题回击参议员Warren，并提供外汇基础知识科普。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "宏观",
+        "外汇"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/08/28/kevin-warsh-jackson-hole-fed-inflation-rate-hike.html",
+      "title_cn": "Analysis: Kevin Warsh sharpens inflation warning at Jackson Hole, signaling possible rate hike",
+      "source": "CNBC Top Stories",
+      "source_type": "media",
+      "date": "08/28",
+      "summary": "美联储理事沃什在杰克逊霍尔年会上强化通胀警告，市场解读其暗示可能加息。",
+      "importance": 3,
+      "rank": 0,
+      "tags": [
+        "宏观",
+        "美联储"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/08/28/corn-and-wheat-prices-jump-to-highest-prices-in-more-than-three-years.html",
+      "title_cn": "Corn and wheat prices jump to highest prices in more than three years",
+      "source": "CNBC Top Stories",
+      "source_type": "media",
+      "date": "08/28",
+      "summary": "美国玉米和小麦期货价格升至逾三年新高。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "农产品",
+        "期货"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/08/28/stock-traders-warm-up-to-warsh-as-volatility-index-touches-year-to-date-low.html",
+      "title_cn": "Stock traders warm up to Warsh as volatility index touches year-to-date low",
+      "source": "CNBC Top Stories",
+      "source_type": "media",
+      "date": "08/28",
+      "summary": "市场对沃什好感度回升，VIX波动率指数触及年内低点。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "美股",
+        "美联储"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/08/28/apple-tv-one-price-hike-us.html",
+      "title_cn": "Apple hikes subscription prices for Apple TV and Apple One in the U.S.",
+      "source": "CNBC Top Stories",
+      "source_type": "media",
+      "date": "08/28",
+      "summary": "苹果在美国上调Apple TV及Apple One订阅套餐价格。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "科技",
+        "消费"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/08/28/mark-walter-delaware-life-truist-fifth-third-banks.html",
+      "title_cn": "Mark Walter's insurer Delaware Life sees two banks pause sale of its products amid probes",
+      "source": "CNBC Top Stories",
+      "source_type": "media",
+      "date": "08/28",
+      "summary": "Mark Walter旗下保险公司Delaware Life因相关调查，已有2家银行暂停其产品销售。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "金融",
+        "保险"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/08/28/trump-hush-money-federal-court.html",
+      "title_cn": "Trump loses bid to transfer New York hush money case to federal court",
+      "source": "CNBC Top Stories",
+      "source_type": "media",
+      "date": "08/28",
+      "summary": "特朗普试图将纽约\"封口费\"案件转移至联邦法院的请求被驳回。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "法律",
+        "政治"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/08/28/how-taylor-farms-became-integral-to-americas-food-supply-system.html",
+      "title_cn": "How Taylor Farms became integral to America's food supply system",
+      "source": "CNBC Top Stories",
+      "source_type": "media",
+      "date": "08/28",
+      "summary": "CNBC深度报道Taylor Farms在美国食品供应链中的关键角色。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "消费",
+        "食品"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/08/28/imax-sale-potential-buyers.html",
+      "title_cn": "Imax says it's open to a sale. Why is no one buying?",
+      "source": "CNBC Top Stories",
+      "source_type": "media",
+      "date": "08/28",
+      "summary": "Imax表示对被收购持开放态度，但目前尚无买家出手。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "并购",
+        "传媒"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.investing.com/news/insider-trading-news/rocket-lab-coo-frank-klein-sells-237-million-of-rklb-common-stock-93CH-4881886",
+      "title_cn": "Rocket Lab COO Frank Klein sells $2.37 million of RKLB common stock",
+      "source": "Investing.com News",
+      "source_type": "media",
+      "date": "08/28",
+      "summary": "Rocket Lab首席运营官Frank Klein减持公司普通股，套现237万美元。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "减持",
+        "航天"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.investing.com/news/insider-trading-news/life-time-group-director-danhakl-sells-1261m-in-shares-93CH-4881885",
+      "title_cn": "Life time group director Danhakl sells $126.1m in shares",
+      "source": "Investing.com News",
+      "source_type": "media",
+      "date": "08/28",
+      "summary": "Life Time集团董事Danhakl减持公司股份，套现1.261亿美元。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "减持",
+        "消费"
+      ],
+      "locale": "overseas",
+      "market": "us"
     }
-  }
+  ]
 }
