@@ -2,66 +2,6 @@
   "date": "2026-08-29",
   "articles": [
     {
-      "sourceId": "stcn",
-      "title": "二季度业绩超预期、毛利率展望下调 英伟达回应供给制约问题",
-      "url": "https://www.stcn.com/article/detail/4138687.html",
-      "excerpt": "",
-      "publishedAt": "2026-08-27T15:14:00.000Z",
-      "category": "finance",
-      "source": "证券时报",
-      "fetchedToday": false,
-      "subcategory": "cn-finance",
-      "relevant": false
-    },
-    {
-      "sourceId": "stcn",
-      "title": "索菲亚直营渠道营收逆势增长 存量市场布局提速",
-      "url": "https://www.stcn.com/article/detail/4138619.html",
-      "excerpt": "",
-      "publishedAt": "2026-08-27T15:11:00.000Z",
-      "category": "finance",
-      "source": "证券时报",
-      "fetchedToday": false,
-      "subcategory": "cn-finance",
-      "relevant": false
-    },
-    {
-      "sourceId": "stcn",
-      "title": "多点突破全域布局，岭南股份上半年营收净利双增",
-      "url": "https://www.stcn.com/article/detail/4138673.html",
-      "excerpt": "",
-      "publishedAt": "2026-08-27T15:03:00.000Z",
-      "category": "finance",
-      "source": "证券时报",
-      "fetchedToday": false,
-      "subcategory": "cn-finance",
-      "relevant": false
-    },
-    {
-      "sourceId": "stcn",
-      "title": "威胜控股上半年收入同比增长约23% 数据中心相关中标订单同比增153%",
-      "url": "https://www.stcn.com/article/detail/4138674.html",
-      "excerpt": "",
-      "publishedAt": "2026-08-27T15:03:00.000Z",
-      "category": "finance",
-      "source": "证券时报",
-      "fetchedToday": false,
-      "subcategory": "cn-finance",
-      "relevant": false
-    },
-    {
-      "sourceId": "stcn",
-      "title": "持续加大AI投入 创想三维上半年研发开支大增37.6%",
-      "url": "https://www.stcn.com/article/detail/4138675.html",
-      "excerpt": "",
-      "publishedAt": "2026-08-27T15:02:00.000Z",
-      "category": "finance",
-      "source": "证券时报",
-      "fetchedToday": false,
-      "subcategory": "cn-finance",
-      "relevant": false
-    },
-    {
       "sourceId": "southcn",
       "title": "2025年我国经济发展新动能指数保持较快增长 专家解读→",
       "url": "https://news.southcn.com/node_812903b83a/4b84dd8bdd.shtml",
@@ -79,66 +19,6 @@
       "url": "https://www.stcn.com/article/detail/4138722.html",
       "excerpt": "",
       "publishedAt": "2026-08-27T15:44:00.000Z",
-      "category": "finance",
-      "source": "证券时报",
-      "fetchedToday": false,
-      "subcategory": "cn-finance",
-      "relevant": false
-    },
-    {
-      "sourceId": "stcn",
-      "title": "小鹏X-Foresight预测世界模型首次上车，可推演6秒未来",
-      "url": "https://www.stcn.com/article/detail/4138708.html",
-      "excerpt": "",
-      "publishedAt": "2026-08-27T15:39:00.000Z",
-      "category": "finance",
-      "source": "证券时报",
-      "fetchedToday": false,
-      "subcategory": "cn-finance",
-      "relevant": false
-    },
-    {
-      "sourceId": "stcn",
-      "title": "三未信安取得FIPS 140-3 Level 3认证，全球化布局再落关键一子",
-      "url": "https://www.stcn.com/article/detail/4138697.html",
-      "excerpt": "",
-      "publishedAt": "2026-08-27T15:39:00.000Z",
-      "category": "finance",
-      "source": "证券时报",
-      "fetchedToday": false,
-      "subcategory": "cn-finance",
-      "relevant": false
-    },
-    {
-      "sourceId": "stcn",
-      "title": "18金16银12铜 智元首次出征机器人运动会位列金牌榜奖牌榜双第一",
-      "url": "https://www.stcn.com/article/detail/4138594.html",
-      "excerpt": "",
-      "publishedAt": "2026-08-27T15:32:00.000Z",
-      "category": "finance",
-      "source": "证券时报",
-      "fetchedToday": false,
-      "subcategory": "cn-finance",
-      "relevant": false
-    },
-    {
-      "sourceId": "stcn",
-      "title": "第六届“湘”当自觉自信自强网络主题宣传活动走进益阳 陈克明食品以品质匠心夯实“大厨房食品”版图",
-      "url": "https://www.stcn.com/article/detail/4138682.html",
-      "excerpt": "",
-      "publishedAt": "2026-08-27T15:30:00.000Z",
-      "category": "finance",
-      "source": "证券时报",
-      "fetchedToday": false,
-      "subcategory": "cn-finance",
-      "relevant": false
-    },
-    {
-      "sourceId": "stcn",
-      "title": "华虹宏力2026年上半年销售收入与出货量双双创新高，连续10个季度营收环比攀升",
-      "url": "https://www.stcn.com/article/detail/4138657.html",
-      "excerpt": "",
-      "publishedAt": "2026-08-27T15:28:00.000Z",
       "category": "finance",
       "source": "证券时报",
       "fetchedToday": false,
@@ -497,18 +377,6 @@
       "fetchedToday": false,
       "subcategory": "policy_market",
       "relevant": true
-    },
-    {
-      "sourceId": "fed-press",
-      "title": "Federal Reserve Board issues enforcement action with former employee of Banco Popular de Puerto Rico",
-      "url": "https://www.federalreserve.gov/newsevents/pressreleases/enforcement20260827a.htm",
-      "excerpt": "Federal Reserve Board issues enforcement action with former employee of Banco Popular de Puerto Rico",
-      "publishedAt": "2026-08-27T15:00:00.000Z",
-      "category": "finance",
-      "source": "Federal Reserve Press Releases",
-      "fetchedToday": false,
-      "subcategory": "news",
-      "relevant": false
     },
     {
       "sourceId": "stcn",
@@ -6823,6 +6691,42 @@
       "source": "新浪财经·A股",
       "fetchedToday": true,
       "subcategory": "a-share"
+    },
+    {
+      "sourceId": "investing-news",
+      "title": "What do households want from the UK Budget?",
+      "url": "https://www.investing.com/news/economy-news/what-do-households-want-from-the-uk-budget-4881983",
+      "excerpt": "What do households want from the UK Budget?",
+      "publishedAt": "2026-08-29T15:10:02.000Z",
+      "category": "stocks",
+      "subcategory": "us",
+      "source": "Investing.com News",
+      "tier": "T2",
+      "fetchedToday": true
+    },
+    {
+      "sourceId": "21jingji-finance",
+      "title": "邮储银行行长芦苇：发展非息收入不是短期冲规模",
+      "url": "https://m.21jingji.com/article/20260829/herald/9bbb27732302023d76575482d74b9d2d.html",
+      "excerpt": "【21财经·金融】邮储银行行长芦苇：发展非息收入不是短期冲规模",
+      "category": "gz",
+      "publishedAt": "2026-08-29T00:00:00.000Z",
+      "source": "21世纪经济报道·金融",
+      "tier": "T2",
+      "fetchedToday": true,
+      "subcategory": "cn-finance"
+    },
+    {
+      "sourceId": "21jingji-finance",
+      "title": "邮储银行行长芦苇：分红比例进一步提高至31%",
+      "url": "https://m.21jingji.com/article/20260829/herald/31f814a0940a24d9e203fdb31ac0a2fd.html",
+      "excerpt": "【21财经·金融】邮储银行行长芦苇：分红比例进一步提高至31%",
+      "category": "gz",
+      "publishedAt": "2026-08-29T00:00:00.000Z",
+      "source": "21世纪经济报道·金融",
+      "tier": "T2",
+      "fetchedToday": true,
+      "subcategory": "cn-finance"
     }
   ]
 }
