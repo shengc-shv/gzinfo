@@ -2,12 +2,13 @@ name: Daily Brief
 
 # Generate a fresh daily report and publish to GitHub Pages.
 #
-# Schedule: 每小时 :10 和 :40 触发（UTC，= 北京时间每小时 :10/:40）——每小时都触发
-# 用于监测 cron 是否正常工作（Actions 列表每小时都应有 run 记录）；真正放行由 gate 决定：
-#   - REPORT_TIMES（默认 "9:10,9:40"，北京时间 HH:MM 逗号列表）+ WINDOW_MIN 容差窗口
-#     （默认 30 分钟）过滤：cron 触发延迟到目标点 ±30 分钟内都会放行（9:10 → 8:40-9:40；
-#     9:40 → 9:10-10:10）；9:10 成功发布后 9:40 因「当日已发布」自动跳过作兜底
-#   - 当日报告已发布到 gh-pages 则跳过（一天最多构建一次，9:10 失败则 9:40 兜底补跑）
+# Schedule: 每 15 分钟触发一次（UTC）——一是监测 cron 是否正常，二是提高命中放行窗口的概率
+#   （GitHub schedule 为 best-effort，实测丢触发率约 70%，窗口内多打几次才稳）。
+# 真正放行由 gate 决定：
+#   - REPORT_TIMES（默认 "7:00"，北京时间 HH:MM 逗号列表）+ WINDOW_MIN 容差窗口
+#     （默认 60 分钟）：目标点 ±60 分钟内触发均放行（7:00 → 北京时间 6:00-8:00）
+#     —— 即 6-8 点之间任意一次 cron 触发都会构建报告（2026-08-29 用户定）
+#   - 窗口内每次命中都跑 build（全 AI 标新数据）；「一天最多发布一次」由 publish 步骤把控
 #   - 并发检查：同 workflow 前一 run 仍在 in_progress 则本次直接跳过
 #     （用 Actions API 而非 concurrency —— concurrency 是 QUEUE 延迟，不是 SKIP）
 # workflow_dispatch 手动触发有两个开关：
@@ -18,10 +19,12 @@ name: Daily Brief
 
 on:
   schedule:
-    # 每小时第 10 分 / 第 40 分（UTC；北京 = UTC+8，即每小时 :10/:40），
-    # gate 只放行 REPORT_TIMES 配置的北京时间点（默认 9:10 / 9:40）
-    - cron: '10 * * * *'
-    - cron: '40 * * * *'
+    # 每 15 分钟一次（UTC）。
+    # 放行窗口为北京时间 6:00-8:00 = UTC 22:00-00:00（跨 UTC 日界），
+    # 窗口内共 8 个触发点（22:00 / 22:15 / ... / 23:45），
+    # 配合 GitHub 约 70% 的丢触发率，仍能大概率命中（原 :10/:40 一天仅 2 个点，太容易全丢）。
+    # gate 只放行 REPORT_TIMES 配置的北京时间点（默认 7:00，±WINDOW_MIN=60 分钟）
+    - cron: '*/15 * * * *'
   workflow_dispatch:
     inputs:
       # 2026-08-28 用户需求：3 个开关独立可选，手动选的优先级最高
@@ -84,10 +87,10 @@ jobs:
           fi
 
           TZ_VAL="${REPORT_TZ:-Asia/Shanghai}"
-          TIMES_VAL="${REPORT_TIMES:-9:10,9:40}"
+          TIMES_VAL="${REPORT_TIMES:-7:00}"
           DAYS_VAL="${REPORT_DAYS:-*}"
 
-          # %-H: GNU date 无前导零（GitHub ubuntu 支持），与配置 "9:10" 匹配
+          # %-H: GNU date 无前导零（GitHub ubuntu 支持），与配置 "7:00" 匹配
           NOW_HM=$(TZ="$TZ_VAL" date +%-H:%M)
           NOW_DOW=$(TZ="$TZ_VAL" date +%w)
           NOW_PRINT=$(TZ="$TZ_VAL" date '+%Y-%m-%d %H:%M %Z')
@@ -95,12 +98,12 @@ jobs:
           echo "Now in $TZ_VAL: $NOW_PRINT (time=$NOW_HM, dow=$NOW_DOW)"
           echo "Configured REPORT_TIMES='$TIMES_VAL', REPORT_DAYS='$DAYS_VAL'"
 
-          # Time match（2026-08-20 修复）：GitHub Actions 的 schedule 触发有排队延迟
-          # （实测 20-50 分钟，run 常在 :3x-:5x 才启动），分钟级精确匹配（"9:10"）永远
+          # Time match（2026-08-20 修复；2026-08-29 放宽）：GitHub Actions 的 schedule 触发有排队延迟
+          # （实测 20-50 分钟，run 常在 :3x-:5x 才启动），分钟级精确匹配（"7:00"）永远
           # 命中不了 → 自动发布从未成功。改为「目标时刻 ± WINDOW_MIN 分钟」窗口匹配
-          # （默认 30：9:10 → 8:40-9:40 放行；9:40 → 9:10-10:10 放行）。
-          # 一天最多构建一次由下方「当日已发布」检查兜底，窗口重叠不会重复发布。
-          WINDOW_MIN="${WINDOW_MIN:-30}"
+          # （2026-08-29 起默认 60：7:00 → 北京时间 6:00-8:00 放行，即 6-8 点间任意触发都构建）。
+          # cron 同步加密到 15 分钟一次：窗口内 8 个触发点，即便 GitHub 丢掉大部分也能命中。
+          WINDOW_MIN="${WINDOW_MIN:-60}"
           NOW_TOTAL=$(( $(TZ="$TZ_VAL" date +%-H) * 60 + $(TZ="$TZ_VAL" date +%-M) ))
           time_match=false
           IFS=',' read -ra TLIST <<< "$TIMES_VAL"
@@ -143,8 +146,8 @@ jobs:
           # 2026-08-27 改：gate 只看 time+day match，不再检查「当日已发布」——
           # build 每次时间窗触发都跑（全 AI 标 fresh data）。
           # 「一天最多发布一次」挪到 publish 步骤（不影响 build）：
-          #   9:10 触发：build（AI）+ publish（如未发）
-          #   9:40 触发：build（AI，标新抓数据）+ publish 跳过（如 9:10 已发）
+          #   窗口内首次命中（北京 6:00-8:00 间某次 15 分钟触发）：build（AI）+ publish（如未发）
+          #   窗口内后续命中：build（AI，标新抓数据）+ publish 跳过（如当天已发）
           # 这保证：无论 SKIP_AI 何时发布，新抓数据都保证被全 AI 标过。
           if [ "$time_match" = "true" ] && [ "$day_match" = "true" ]; then
             echo "✓ Time & day match — proceeding to build (full AI)"
