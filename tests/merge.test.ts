@@ -112,8 +112,24 @@ test("toMergeArticle: 默认值映射（sourceId/source/title/category/excerpt�
   assert.equal(a.title, "T");
   assert.equal(a.url, "u1");
   assert.equal(a.category, "gz");
-  assert.equal(a.excerpt, "");
+  // B：excerpt fallback（2026-08-28 用户反馈）：无 excerpt 时用 title 前 90 字符占位，
+  // 保证下游（渲染摘要/关键词漏斗）总有正文可用，不再是空串。
+  assert.equal(a.excerpt, "T");
   assert.ok(a.publishedAt instanceof Date);
+});
+
+test("toMergeArticle: excerpt 有值则原样保留；无 excerpt 且无原始 title 则为空串", () => {
+  const withExcerpt = toMergeArticle(
+    { url: "u1b", title: "T", excerpt: "  正文摘录  ", publishedAt: "2026-08-19T00:00:00Z" },
+    "gz",
+  );
+  assert.equal(withExcerpt.excerpt, "正文摘录", "excerpt 应 trim 后原样保留");
+
+  // fallback 取的是**原始** title，不是 title 的默认值「无标题」：
+  // 故无 excerpt 且无原始 title → excerpt 为空串（避免下游卡片摘要变成「无标题」）
+  const neither = toMergeArticle({ url: "u1c", publishedAt: "2026-08-19T00:00:00Z" }, "gz");
+  assert.equal(neither.title, "无标题");
+  assert.equal(neither.excerpt, "", "无 excerpt 且无原始 title → 空串（不回退到'无标题'占位）");
 });
 
 test("toMergeArticle: ipo 模式默认 sourceId 与 source 标签", () => {
