@@ -97,12 +97,13 @@ test("与今日成稿 URL 去重（今日优先）", () => {
 });
 
 test("并入门槛三态（2026-08-29 方案③）：false 硬排除 / true 无条件并 / 未打标需过分行相关性门槛", () => {
-  const report = { ...emptyReport, sections: { ...emptyReport.sections, policy_market: [] as ReportItem[] } };
+  const report = { ...emptyReport, sections: { ...emptyReport.sections, policy_market: [] as ReportItem[], biz_insight: [] as ReportItem[] } };
   const rolling: ArticleInput[] = [
     // 1) ai_relevant===false → 硬排除（与放宽前一致，始终是硬门槛）
     mkArticle({ url: "https://h/x", title: "某娱乐新闻", category: "finance", summary: "无关内容", sourceId: "media-src", relevant: false }),
-    // 2) ai_relevant===true → 无条件并入；自身评分再低（本例 drop 21）也不再过评分器
-    mkArticle({ url: "https://h/y", title: "同业动态", category: "finance", summary: "相关摘要", sourceId: "media-src", relevant: true }),
+    // 2) ai_relevant===true → 无条件并入；自身评分再低（本例 drop 21）也不再过评分器。
+    //    板块按内容判定：无广州锚/政策词 → 业务启示（2026-08-29 无状态源红线）
+    mkArticle({ url: "https://h/y", title: "同业动态观察", category: "finance", summary: "相关摘要", sourceId: "media-src", relevant: true }),
     // 3) 未打标 + 业务相关（消费贷贴息，评分 must_read 74 / 业务线[信贷]）→ 并入
     mkArticle({
       url: "https://h/z",
@@ -124,7 +125,10 @@ test("并入门槛三态（2026-08-29 方案③）：false 硬排除 / true 无�
   ];
   mergeRollingIntoReport(report, rolling, tierMap);
   const urls = report.sections.policy_market.map((i) => i.url).sort();
-  assert.deepEqual(urls, ["https://h/y", "https://h/z"], "true 无条件并入 + 未打标相关并入；false 与未打标噪声均排除");
+  assert.deepEqual(urls, ["https://h/z"], "true 无条件并入 + 未打标相关并入；false 与未打标噪声均排除");
+  // 无状态源红线：板块按内容判定——「同业动态观察」无政策/市场词 → 业务启示（不再 category 驱动）
+  const bizUrls = report.sections.biz_insight.map((i) => i.url);
+  assert.ok(bizUrls.includes("https://h/y"), "无政策/市场内容词的条目 → 业务启示（内容判定）");
 });
 
 test("退化卡片守卫（2026-08-29）：有效摘要与标题完全相同则跳过", () => {
@@ -193,8 +197,8 @@ test("无摘要时摘录 excerpt 前 90 字；无摘要且无正文则跳过", (
 test("source_type 按 tier 推断（T1→official / T2→media）", () => {
   const report = { ...emptyReport, sections: { ...emptyReport.sections, policy_market: [] as ReportItem[] } };
   const rolling: ArticleInput[] = [
-    mkArticle({ url: "https://h/o", title: "官方政策", category: "finance", summary: "官方摘要", sourceId: "gov-src" }),
-    mkArticle({ url: "https://h/m", title: "媒体报道", category: "finance", summary: "媒体摘要", sourceId: "media-src" }),
+    mkArticle({ url: "https://h/o", title: "央行发布房贷新政", category: "finance", summary: "官方摘要", sourceId: "gov-src" }),
+    mkArticle({ url: "https://h/m", title: "媒体报道房贷新政", category: "finance", summary: "媒体摘要", sourceId: "media-src" }),
   ];
   mergeRollingIntoReport(report, rolling, tierMap);
   const official = report.sections.policy_market.find((i) => i.url === "https://h/o");
@@ -205,12 +209,12 @@ test("source_type 按 tier 推断（T1→official / T2→media）", () => {
   assert.equal(media.source_type, "media");
 });
 
-test("subcategory 映射为中文部门 tag（无 gz-* 原始字段）", () => {
-  const report = { ...emptyReport, sections: { ...emptyReport.sections, biz_insight: [] as ReportItem[] } };
+test("业务线 tag 由标题内容判定（2026-08-29 无状态源红线：不再由 subcategory 定义）", () => {
+  const report = { ...emptyReport, sections: { ...emptyReport.sections, gz_local: [] as ReportItem[] } };
   const rolling: ArticleInput[] = [
     mkArticle({
       url: "https://h/w",
-      title: "广州财富管理新规",
+      title: "广州财富管理新规出台",
       category: "gz",
       subcategory: "gz-wealth",
       subcategories: ["gz-wealth", "gz-private"],
@@ -221,7 +225,8 @@ test("subcategory 映射为中文部门 tag（无 gz-* 原始字段）", () => {
   mergeRollingIntoReport(report, rolling, tierMap);
   const item = report.sections.gz_local[0];
   assert.ok(item, "gz 条目应并入");
-  assert.deepEqual(item.tags, ["财富", "私行"]);
+  // 标题含「财富」→ 财富标签（内容判定）；subcategory gz-private 不再贡献「私行」
+  assert.deepEqual(item.tags, ["财富"]);
   assert.ok(!JSON.stringify(item).includes("gz-wealth"), "不应外露 gz-* 原始字段");
 });
 

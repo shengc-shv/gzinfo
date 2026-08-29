@@ -175,7 +175,9 @@ export class BaseCrawler {
       title: item.title || "无标题",
       url: item.url || "",
       excerpt: item.excerpt || "",
-      publishedAt: item.publishedAt || new Date().toISOString(),
+      // 时间真实性红线（2026-08-25 用户要求，2026-08-29 强化）：不允许用抓取时间
+      // 兜底 publishedAt —— 没有明确发布时间的条目由上游 ingest 丢弃，绝不伪造时间。
+      publishedAt: item.publishedAt,
       source: this.name,
       // 子类可给每条结果带上 sourceId，daily.ts 据此路由到对应二级标签
       ...(item.sourceId ? { sourceId: item.sourceId } : {}),

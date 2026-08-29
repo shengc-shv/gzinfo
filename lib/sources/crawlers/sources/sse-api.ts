@@ -125,9 +125,10 @@ export class SSEAPICrawler extends BaseCrawler {
         const name = item.secName || "";
         const title = item.announcementTitle || "";
         const ts = Number(item.announcementTime) || 0;
-        const pubDate = ts
-          ? new Date(ts).toISOString().slice(0, 10)
-          : new Date().toISOString().slice(0, 10);
+        // 时间真实性红线（2026-08-25 用户要求，2026-08-29 强化）：接口未给发布时间 →
+        // 该条废弃（不产出），绝不回退用抓取日（new Date()）兜底。
+        if (!ts) continue;
+        const pubDate = new Date(ts).toISOString().slice(0, 10);
         if (ts) oldestTs = Math.min(oldestTs, ts);
 
         // 仅保留真正的上交所代码（6/9 开头），剔除深交所 0/3

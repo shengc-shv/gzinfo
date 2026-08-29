@@ -125,10 +125,12 @@ export class BSEAPICrawler extends BaseCrawler {
         const reg = await regionOf(stockCode, "BJ");
 
         // 日期
+        // 时间真实性红线（2026-08-25 用户要求，2026-08-29 强化）：接口未给发布时间 →
+        // 该条废弃（不产出），绝不回退用抓取日（new Date()）兜底。
         const pubDate =
           (item.publishDate || "").match(/(\d{4}-\d{2}-\d{2})/)?.[1] ||
-          (item.pubDate ? new Date(item.pubDate).toISOString().slice(0, 10) : "") ||
-          new Date().toISOString().slice(0, 10);
+          (item.pubDate ? new Date(item.pubDate).toISOString().slice(0, 10) : "");
+        if (!pubDate) continue;
         if (new Date(pubDate) < sevenDaysAgo) continue;
 
         seen.add(stockCode);

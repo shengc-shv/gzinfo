@@ -24,17 +24,8 @@ export const TAG_TO_DEPT: Record<string, string> = {
   // 粤：不映射 → 独立地域维度，仅展示、不归类、不进 5 维筛选
 };
 
-/** subcategory（gz-/cn- 前缀）→ 部门。cn-* 为历史残留，保留映射不影响（线上已 0 数据）。 */
-const SUB_TO_DEPT: Record<string, string> = {
-  "gz-wealth": "财富",
-  "cn-wealth": "财富",
-  "gz-credit": "信贷",
-  "cn-credit": "信贷",
-  "gz-private": "私行",
-  "cn-private": "私行",
-  "gz-customer": "客群",
-  "cn-customer": "客群",
-};
+// （2026-08-29 删除 SUB_TO_DEPT：subcategory（gz-/cn- 前缀）→ 部门 的映射已移除——
+//  无状态源架构红线：业务线标签不得由数据源分类定义，一律由内容（标题关键词/自由标签）判定。）
 
 /** 结构类型：任何带 subcategory/subcategories/tags/title/summary 的对象都能喂进来 */
 interface Taggable {
@@ -57,20 +48,12 @@ const TEXT_TO_DEPT: Array<[RegExp, string]> = [
 
 /**
  * 双标构造：返回去重后的标签数组，同时包含
- *  - 部门（来自 subcategory 映射 + 标题/摘要关键词推断）
+ *  - 部门（来自标题关键词推断 + 自由标签映射；**不来自 subcategory** ——
+ *    2026-08-29 无状态源架构红线：业务线标签不得由数据源分类定义）
  *  - 原始自由标签（用于卡片展示，含粤/监管合规等）
  *  - 自由标签经 TAG_TO_DEPT 产生的部门
  */
 export function rollUpTags(a: Taggable): string[] {
-  const subs =
-    a.subcategories && a.subcategories.length > 0
-      ? a.subcategories
-      : a.subcategory
-        ? [a.subcategory]
-        : [];
-  const deptFromSub = Array.from(
-    new Set(subs.map((s) => SUB_TO_DEPT[s]).filter((t): t is string => Boolean(t))),
-  );
   const free = Array.isArray(a.tags) ? a.tags : [];
   const deptFromFree = Array.from(
     new Set(free.map((t) => TAG_TO_DEPT[t]).filter((t): t is string => Boolean(t))),
@@ -81,5 +64,5 @@ export function rollUpTags(a: Taggable): string[] {
   const deptFromText = Array.from(
     new Set(TEXT_TO_DEPT.filter(([re]) => re.test(text)).map(([, d]) => d)),
   );
-  return Array.from(new Set([...deptFromSub, ...deptFromText, ...free, ...deptFromFree]));
+  return Array.from(new Set([...deptFromText, ...free, ...deptFromFree]));
 }

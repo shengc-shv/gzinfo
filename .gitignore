@@ -32,3 +32,6 @@
 # pre-analysis runtime artifact (analyze-gz.ts output, regenerated per run)
 /data/gz-analysis.json
 ai-workspace/
+
+# WorkBuddy 本地协作记忆（不入公开仓库）
+.workbuddy/

@@ -30,14 +30,14 @@ const pass2Items = [
   { url: "https://a/2", title_cn: "央行宣布降准", title_orig: "", source: "央行", source_type: "official", date: "08/21", tags: [], locale: "national", locale_evidence: "", section: "policy_market", raw_text: "央行宣布降准0.5个百分点，释放长期资金约1万亿元。" },
 ];
 
-test("PASS1: 裸数组提示被正确解析为全 keep 并按 category 归板块", async () => {
+test("PASS1: 裸数组提示被正确解析为全 keep 并按内容归板块（2026-08-29 无状态源红线）", async () => {
   const runner = makeSkipAiRunner();
   const out: any = JSON.parse(await runner(PASS1_SYSTEM, buildPass1User(JSON.stringify(pass1Articles))));
   assert.ok(Array.isArray(out.items) && out.items.length === 4, "应解析出 4 条（裸数组不再是 0）");
   const byUrl = new Map<string, any>(out.items.map((i: any) => [i.url, i] as [string, any]));
   assert.equal(byUrl.get("https://a/1").keep, true);
-  assert.equal(byUrl.get("https://a/1").section, "biz_insight"); // gz 保守归业务启示
-  assert.equal(byUrl.get("https://a/2").section, "policy_market");
+  assert.equal(byUrl.get("https://a/1").section, "gz_local"); // 广州锚+房贷业务 → 广州本地（内容判定）
+  assert.equal(byUrl.get("https://a/2").section, "policy_market"); // 降准 → 政策与市场（内容判定）
   assert.equal(byUrl.get("https://a/3").section, "tech");
   assert.equal(byUrl.get("https://a/4").section, "ipo");
 });
@@ -55,17 +55,17 @@ test("PASS1: relevantUrls 白名单 → 只保留历史库 ai_relevant=true 的�
   assert.equal(out2.items.length, 4);
 });
 
-test("PASS1: gz_hint 条目 → 广州本地板块 + locale=gz（提权生效）", async () => {
+test("PASS1: 广州锚+业务线内容 → 广州本地板块 + locale=gz（2026-08-29 无状态源红线：内容判定取代 gz_hint 提权）", async () => {
   const runner = makeSkipAiRunner();
   const gzHintArticles = [
-    { url: "https://dayoo/1", title: "琶洲算法大赛上线", source: "广州日报·大洋网", date: "08/21", raw_text: "琶洲算法大赛今日开幕", category: "gz", gz_hint: true },
-    { url: "https://southcn/2", title: "前7月广东规上工业增加值同比增长5.7%", source: "南方网", date: "08/21", raw_text: "广东工业数据", category: "gz" },
+    { url: "https://dayoo/1", title: "广州海珠区发布金融业词元八条", source: "广州日报·大洋网", date: "08/21", raw_text: "海珠区金融政策", category: "gz", gz_hint: true },
+    { url: "https://southcn/2", title: "多只固收+黄金理财产品净值修复", source: "南方网", date: "08/21", raw_text: "黄金理财全国新闻", category: "gz" },
   ];
   const out: any = JSON.parse(await runner(PASS1_SYSTEM, buildPass1User(JSON.stringify(gzHintArticles))));
   const byUrl = new Map<string, any>(out.items.map((i: any) => [i.url, i] as [string, any]));
-  assert.equal(byUrl.get("https://dayoo/1").section, "gz_local", "gz_hint → 广州本地");
-  assert.equal(byUrl.get("https://dayoo/1").locale, "gz", "gz_hint → locale=gz");
-  assert.equal(byUrl.get("https://southcn/2").section, "biz_insight", "无 gz_hint → gz 保守归业务启示");
+  assert.equal(byUrl.get("https://dayoo/1").section, "gz_local", "广州锚+金融业务 → 广州本地");
+  assert.equal(byUrl.get("https://dayoo/1").locale, "gz", "广州锚 → locale=gz");
+  assert.equal(byUrl.get("https://southcn/2").section, "biz_insight", "无广州锚 → 业务启示（内容判定）");
   assert.equal(byUrl.get("https://southcn/2").locale, "national");
 });
 

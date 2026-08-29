@@ -126,7 +126,10 @@ export class CnfinCrawler extends BaseCrawler {
       const title = stripTags(m[4]);
       if (!title) continue;
       const url = `${CNFIN_BASE}/${prefix}-lb/detail/${date8}/${id}_1.html`;
-      const date = normalizeDate(date8) || new Date().toISOString().slice(0, 10);
+      // 时间真实性红线（2026-08-25 用户要求，2026-08-29 强化）：URL 路径日期
+      // 解析失败（非法日期）→ 该条废弃，不产出，绝不回退用抓取日（new Date()）兜底。
+      const date = normalizeDate(date8);
+      if (!date) continue;
       out.push({ title, url, date });
     }
     return out;

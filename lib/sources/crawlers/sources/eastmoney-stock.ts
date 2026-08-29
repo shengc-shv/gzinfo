@@ -50,12 +50,12 @@ export class EastMoneyStockCrawler extends BaseCrawler {
       if (!title) continue;
       // URL 内嵌日期 YYYYMMDD（18 位：8 位日期 + 10 位流水号）
       const d = link.match(/\/a\/(\d{8})\d{10}\.html/);
-      let publishedAt: string | undefined;
-      if (d) {
-        publishedAt = `${d[1].slice(0, 4)}-${d[1].slice(4, 6)}-${d[1].slice(6, 8)}`;
-      }
-      // 窗口过滤：无日期者保留（宁可保留），有日期且早于 cutoff 跳过，避免陈旧项泄漏
-      if (publishedAt) {
+      // 时间真实性红线（2026-08-25 用户要求，2026-08-29 强化）：URL 无内嵌日期 →
+      // 该条废弃（不产出），绝不「无日期者保留」靠下游兜底，也不回退用抓取日。
+      if (!d) continue;
+      const publishedAt = `${d[1].slice(0, 4)}-${d[1].slice(4, 6)}-${d[1].slice(6, 8)}`;
+      // 窗口过滤：有日期且早于 cutoff 跳过，避免陈旧项泄漏
+      {
         const cutoff = new Date();
         cutoff.setDate(cutoff.getDate() - this.windowDays);
         const pd = new Date(publishedAt);

@@ -9,23 +9,20 @@
 import type { ArticleInput, DailyReport, ReportItem, ReportSectionKey } from "../types";
 import { rollUpTags } from "../classify/tag-rollup";
 import { dedupeSections } from "./dedupe-sections";
+import { isGzLocalCandidate, isPolicyMarketCandidate } from "./render/cards";
 
-/** 旧采集分类 → 新管线渲染板块（无 AI 兜底映射）。 */
-export function categoryToSection(cat?: string): ReportSectionKey {
-  switch (cat) {
-    case "tech":
-      return "tech";
-    case "ipo":
-    case "gd-ipo":
-      return "ipo";
-    case "gz":
-      return "biz_insight";
-    case "finance":
-    case "politics":
-      return "policy_market";
-    default:
-      return "biz_insight";
-  }
+/**
+ * 旧采集分类 → 新管线渲染板块（无 AI 兜底映射）。
+ * 无状态源架构红线（2026-08-29 用户）：板块归属一律由**内容判定**，数据源分类
+ * 只是采集元数据。tech/ipo 是独立内容栏目按类别归栏；其余统一内容判定：
+ *  广州锚+业务线 → gz_local；外地地名/政策动作/全国市场信号 → policy_market；否则 biz_insight。
+ */
+export function categoryToSection(cat?: string, title = "", excerpt = ""): ReportSectionKey {
+  if (cat === "tech") return "tech";
+  if (cat === "ipo" || cat === "gd-ipo") return "ipo";
+  if (isGzLocalCandidate(title, excerpt)) return "gz_local";
+  if (isPolicyMarketCandidate(title, excerpt)) return "policy_market";
+  return "biz_insight";
 }
 
 function mmdd(d: Date | undefined): string {
@@ -45,7 +42,8 @@ export function buildNoAiReport(articles: ArticleInput[]): DailyReport {
   };
   let rank = 0;
   for (const a of articles) {
-    const sec = categoryToSection(a.category);
+    // 无状态源架构红线（2026-08-29 用户）：板块归属由内容判定，category 只是采集元数据。
+    const sec = categoryToSection(a.category, a.title_cn || a.title || "", a.excerpt || "");
     const d = a.publishedAt ?? a.fetchedAt;
     const summarySrc = a as { summary?: string; excerpt?: string; title: string };
     const summary = (summarySrc.summary || summarySrc.excerpt || summarySrc.title || "").slice(0, 90);
@@ -59,7 +57,10 @@ export function buildNoAiReport(articles: ArticleInput[]): DailyReport {
       importance: 2,
       rank: ++rank,
       tags: rollUpTags(a),
-      locale: "national",
+      // 无状态源架构红线：locale 由内容判定（广州锚），不依赖数据源分类。
+      locale: isGzLocalCandidate(a.title_cn || a.title || "", a.excerpt || "")
+        ? "gz"
+        : "national",
     };
     sections[sec].push(item);
   }

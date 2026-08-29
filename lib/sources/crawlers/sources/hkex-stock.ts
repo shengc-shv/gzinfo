@@ -73,7 +73,9 @@ export class HKEXStockCrawler extends BaseCrawler {
             pubDate = `${dateMatch[3]}-${dateMatch[2]}-${dateMatch[1]}`;
           }
         } else {
-          pubDate = new Date().toISOString().slice(0, 10);
+          // 时间真实性红线（2026-08-25 用户要求，2026-08-29 强化）：接口未给发布时间 →
+          // 该条废弃（不产出），绝不回退用抓取日（new Date()）兜底。
+          continue;
         }
 
         // 窗口过滤：只保留最近 windowDays 天

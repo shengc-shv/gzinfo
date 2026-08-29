@@ -7,6 +7,7 @@
 import { runPass1, type LlmRunner, type Pass1Input } from "./pass1";
 import { runPass2, ensureSchema, finalizeRanks } from "./pass2";
 import { rollUpTags } from "../classify/tag-rollup";
+import { isGzLocalCandidate, isPolicyMarketCandidate } from "../output/render/cards";
 import {
   validateReport,
   ALLOWED_TAGS,
@@ -23,22 +24,18 @@ const MAX_PASS2_RETRY = 2;
 const R9_THRESHOLD = 0.8;
 const HERO_FALLBACK = "今日暂无可推送重点，详见各板块资讯。";
 
-/** SKIP_AI 模式（无 LLM）下的文章原始分类 → 板块启发式映射。 */
-function categoryToSection(cat?: string): ReportSectionKey {
-  switch (cat) {
-    case "tech":
-      return "tech";
-    case "ipo":
-    case "gd-ipo":
-      return "ipo";
-    case "gz":
-      return "biz_insight"; // 无法判断 locale，保守归业务启示
-    case "finance":
-    case "politics":
-      return "policy_market";
-    default:
-      return "biz_insight";
-  }
+/**
+ * SKIP_AI 模式（无 LLM）下的文章原始分类 → 板块启发式映射。
+ * 无状态源架构红线（2026-08-29 用户）：板块归属一律由**内容判定**，数据源分类只是
+ * 采集元数据。tech/ipo 是独立内容栏目按类别归栏；其余统一内容判定：
+ *  广州锚+业务线 → gz_local；外地地名/政策动作/全国市场信号 → policy_market；否则 biz_insight。
+ */
+function categoryToSection(cat?: string, title = "", excerpt = ""): ReportSectionKey {
+  if (cat === "tech") return "tech";
+  if (cat === "ipo" || cat === "gd-ipo") return "ipo";
+  if (isGzLocalCandidate(title, excerpt)) return "gz_local";
+  if (isPolicyMarketCandidate(title, excerpt)) return "policy_market";
+  return "biz_insight";
 }
 
 /**
@@ -87,12 +84,16 @@ export function makeSkipAiRunner(
           .map((it: any) => ({
             url: it.url,
             keep: true,
-            // gz_hint 提权（2026-08-21）：标题含广州锚词 → 广州本地板块 + locale=gz，
-            // 否则 gz 保守归业务启示（无法判断 locale 时宁缺毋滥）。
-            section: it.gz_hint ? "gz_local" : categoryToSection(it.category),
+            // 无状态源架构红线（2026-08-29 用户）：板块归属由内容判定——
+            // gz_hint（标题广州锚+业务线）→ 广州本地；否则内容判定（广州锚/政策词/市场信号），
+            // 不再以 category 分流（category 只是采集元数据）。
+            section: categoryToSection(it.category, it.title || "", it.raw_text || ""),
             source_type: "media",
-            locale: it.gz_hint ? "gz" : "national",
-            locale_evidence: it.gz_hint ? (it.title || "").slice(0, 40) : "",
+            // locale 同样内容判定（广州锚 → gz），不依赖采集分类。
+            locale: isGzLocalCandidate(it.title || "", it.raw_text || "") ? "gz" : "national",
+            locale_evidence: isGzLocalCandidate(it.title || "", it.raw_text || "")
+              ? (it.title || "").slice(0, 40)
+              : "",
             tags: rollUpTags(it),
             title_cn: it.title || "",
             title_orig: "",

@@ -140,6 +140,36 @@ export function isGzLocalCandidate(title: string, excerpt = ""): boolean {
   return GZ_ANCHOR_RE.test(text) && GZ_BUSINESS_RE.test(text);
 }
 
+/**
+ * 政策与市场板块的内容判定（2026-08-29 无状态源架构红线：板块归属由内容判定，
+ * 不依赖数据源分类）。标题/摘要命中任一：
+ *  - 外地地名锚（FOREIGN_REGION 语义：全国性政策/事件）
+ *  - 政策动作词（发文/办法/通知/实施/监管…）
+ *  - 全国市场词（利率/楼市/股市/债市…）
+ * 即归「政策与市场」；否则归「业务启示」。
+ */
+export function isPolicyMarketCandidate(title: string, excerpt = ""): boolean {
+  const text = `${title} ${excerpt}`;
+  return (
+    FOREIGN_REGION_RE.test(text) ||
+    POLICY_ACTION_RE.test(text) ||
+    MARKET_SIGNAL_RE.test(text)
+  );
+}
+
+/** 外地地名锚（广州本地严格过滤用）：命中任一 → 全国/外地政策，归政策与市场。 */
+export const FOREIGN_REGION_RE =
+  /上海|北京|深圳|江苏|浙江|南京|苏州|杭州|宁波|成都|重庆|天津|武汉|长沙|合肥|青岛|济南|福州|厦门|昆明|西安|郑州|东莞|佛山|珠海|中山|惠州|汕头|湛江|茂名|肇庆|江门|清远|韶关|梅州|河源|阳江|揭阳|汕尾|潮州|云浮|广东/;
+
+/** 政策动作词（内容判定：发文/新规/实施类） */
+export const POLICY_ACTION_RE =
+  /新规|发文|意见|办法|通知|印发|出台|发布|实施|监管|政策|方案|规划|指引|细则|试点|扩容|放宽|收紧|下调|上调|降息|降准|贴息|重组|调整|落地|延长|推出|宣布|要求|规定|条例|法规/;
+
+/** 全国市场信号词（内容判定：政策敏感的市场/信贷类词；不含纯行情词——
+ *  黄金/理财/基金/股市涨跌等属「业务启示」软资讯，不吸走 policy_market 稀缺位） */
+export const MARKET_SIGNAL_RE =
+  /利率|LPR|房贷|按揭|楼市|房价|购房|房地产|贷款|信贷|降息|降准|贴息|存款准备金|汇率|外汇|宏观|稳增长|扩内需|消费贷|经营贷|普惠|减税|退税|专项债|国债发行|万亿|基准利率/;
+
 /** 来源徽章（2026-08-21 重构 #12：来源降级为卡片左上角徽章，扫一眼即知可信度） */
 export function srcBadgeOf(a: ArticleInput): { label: string; cls: string } {
   const sid = a.sourceId || "";

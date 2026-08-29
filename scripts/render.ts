@@ -18,10 +18,10 @@ async function main() {
   const date = todayKey();
   const articles: ArticleInput[] = [];
 
-  // ----- 加载爬虫数据（广东IPO）—— M3-A：进程内 runner，与 daily.ts 同入口，不再读 JSON 中间文件 -----
+  // ----- 加载爬虫数据（广州商机 + 广东IPO）—— M3-A：进程内 runner，与 daily.ts 同入口，不再读 JSON 中间文件 -----
   const crawled = await fetchCrawledArticles().catch((e: any) => {
     console.warn("  ⚠️ 爬虫抓取失败（跳过爬虫源）:", e?.message ?? e);
-    return { ipo: [], gz: [] };
+    return { ipo: [], gz: [], stocks: [] };
   });
   if (crawled.ipo.length) {
     let count = 0;
@@ -34,7 +34,9 @@ async function main() {
         title: item.title || "无标题",
         url: item.url || "",
         excerpt: item.excerpt || "",
-        publishedAt: item.publishedAt ? new Date(item.publishedAt) : new Date(),
+        // 时间真实性红线（2026-08-25 用户要求，2026-08-29 强化）：无明确发布时间 →
+        // 不写 publishedAt（undefined），由下游渲染按无日期处理，绝不 new Date() 兜底。
+        publishedAt: item.publishedAt ? new Date(item.publishedAt) : undefined,
         category: "gd-ipo",
         summary: item.summary || "",
       });
@@ -43,6 +45,30 @@ async function main() {
     console.log(`  ✅ 加载爬虫数据 ${count} 条（跳过 ${crawled.ipo.length - count} 条重复）`);
   } else {
     console.log(`  ℹ️ 爬虫无 IPO/新股数据（或抓取失败）`);
+  }
+  // 2026-08-29 修复：加载广州本地爬虫数据（dayoo/cnr/southcn 等）——
+  // 此前只处理 crawled.ipo，crawled.gz 被忽略 → `npm run render` 渲染时广州本地恒空。
+  if (crawled.gz.length) {
+    let count = 0;
+    for (const item of crawled.gz) {
+      const exists = articles.some((a) => a.url === item.url);
+      if (exists) continue;
+      articles.push({
+        sourceId: item.sourceId || "gz-crawler",
+        source: item.source || "广州本地爬虫",
+        title: item.title || "无标题",
+        url: item.url || "",
+        excerpt: item.excerpt || "",
+        publishedAt: item.publishedAt ? new Date(item.publishedAt) : undefined,
+        category: (item.category || "gz") as "gz",
+        summary: item.summary || "",
+        ...(item.subcategory ? { subcategory: item.subcategory } : {}),
+      });
+      count++;
+    }
+    console.log(`  ✅ 加载广州本地爬虫数据 ${count} 条（跳过 ${crawled.gz.length - count} 条重复）`);
+  } else {
+    console.log(`  ℹ️ 爬虫无广州本地数据（或抓取失败）`);
   }
 
   // 抓取所有 enabled 数据源

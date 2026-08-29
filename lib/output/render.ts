@@ -22,6 +22,7 @@ import {
   TECH_MAIN_SUBS,
   sortByTierAndTime,
   isGzLocalCandidate,
+  isPolicyMarketCandidate,
   renderCardList,
   escapeHtml,
   type SourceGroup,
@@ -417,16 +418,12 @@ export function groupRaw(
     // 「业务启示/科技前沿」等对分行有价值的精选流，demo 要求科技前沿只留与分行
     // 有真实连接点的内容（算力金融化/数据治理），故不再豁免参考区。
     if (a.relevant === false) continue;
-    // gz 杂讯兜底（不依赖 LLM）：AI 未明确判相关(relevant!==true) 且标题命中
-    // 城市治理/民生杂讯词（电费补贴/招聘/摆卖/殡葬/诊所备案等）→ 过滤。
+    // 杂讯兜底（不依赖 LLM，2026-08-29 无状态源架构红线：不再以 category==="gz" 为前提，
+    // 判定本身就是内容词表——城市治理/民生杂讯词命中即过滤，对所有采集分类统一生效）：
+    // AI 未明确判相关(relevant!==true) 且标题命中电费补贴/招聘/摆卖/殡葬/诊所备案等 → 过滤。
     // 南沙/政府列表页会长期挂旧政策文件库存，LLM 分类偶有漏网（ai_relevant=null），
     // 此兜底保证垃圾内容绝不进商机面板。
-    if (
-      a.category === "gz" &&
-      a.relevant !== true &&
-      GZ_NOISE_RE.test(a.title)
-    )
-      continue;
+    if (a.relevant !== true && GZ_NOISE_RE.test(a.title)) continue;
     if (a.category === "politics" && isSportsArticle(a.title)) continue;
     if (
       (a.sourceId === "v2ex-hot" || a.sourceId === "linuxdo") &&
@@ -1219,42 +1216,28 @@ export function mergeRollingIntoReport(
 ): DailyReport {
   const sectionOf = (a: ArticleInput): ReportSectionKey | null => {
     const title = a.title_cn || a.title || "";
-    // 广州本地严格过滤（demo 整改点④：宁缺毋滥）。判定只看**标题**——
-    // 事件主体必须本身含广州锚（广州/海珠/琶洲/天河等），与采集分类无关：
-    // 广州市政府批复（SOURCE_ROUTE 归 finance/gz-policy）标题含「广州」→ 进 gz_local。
-    // 摘要里的「广州」是 AI 解读视角（「分行应跟踪广州房贷…」），不代表事件在广州。
-    // tech/ipo 保持独立板块（demo：科技前沿、IPO动态 各自成栏）。
-    if (a.category !== "tech" && a.category !== "ipo" && a.category !== "gd-ipo") {
-      // 2026-08-29 加业务相关性门槛：仅「广州锚 + 与银行业务相关」进广州本地板块
-      // （植物园志愿者/公安通告/学校上新等本地生活政务不占该板块）
-      if (isGzLocalCandidate(title)) return "gz_local";
-    }
-    switch (a.category) {
-      case "gz": {
-        // 本地采集源混入的全国财经（财联社/同花顺）：标题含外地地名 → 全国政策；
-        // 无锚（黄金/理财等）→ 业务启示。避免「点进去全是上海/江苏/黄金理财」。
-        if (FOREIGN_REGION_RE.test(title)) return "policy_market";
-        return "biz_insight";
+    // 无状态源架构红线（2026-08-29 用户）：最终板块归属一律由**内容判定**，
+    // 数据源的 category/subcategory 只是采集元数据，不得决定渲染分类。
+    // tech/ipo 是独立内容栏目（科技前沿/IPO 动态），按内容类别归栏，其余全走内容判定。
+    if (a.category === "tech") return "tech";
+    if (a.category === "ipo" || a.category === "gd-ipo") {
+      // 2026-08-23：已上市公司资本运作公告（定增/审核问询/购买资产/解禁等）不进 IPO 动态，
+      // 与 PASS1/groupRaw 分流口径一致（诺思兰德「审核问询函」等不再污染 IPO 板块）。
+      if (
+        IPO_CAPITAL_ACT_RE.test(`${title} ${a.excerpt || ""}`) &&
+        !IPO_FLOW_RE.test(`${title} ${a.excerpt || ""}`)
+      ) {
+        return null;
       }
-      case "finance":
-      case "politics":
-        return "policy_market";
-      case "tech":
-        return "tech";
-      case "ipo":
-      case "gd-ipo":
-        // 2026-08-23：已上市公司资本运作公告（定增/审核问询/购买资产/解禁等）不进 IPO 动态，
-        // 与 PASS1/groupRaw 分流口径一致（诺思兰德「审核问询函」等不再污染 IPO 板块）。
-        if (
-          IPO_CAPITAL_ACT_RE.test(`${title} ${a.excerpt || ""}`) &&
-          !IPO_FLOW_RE.test(`${title} ${a.excerpt || ""}`)
-        ) {
-          return null;
-        }
-        return "ipo";
-      default:
-        return "biz_insight";
+      return "ipo";
     }
+    // 广州本地：只看标题内容（广州锚 + 银行业务线），与采集分类无关——
+    // 广州市政府批复（SOURCE_ROUTE 归 finance）标题含「广州」→ 进 gz_local。
+    // 摘要里的「广州」是 AI 解读视角（「分行应跟踪广州房贷…」），不代表事件在广州。
+    if (isGzLocalCandidate(title)) return "gz_local";
+    // 政策与市场：内容判定（外地地名/政策动作/全国市场信号）→ 政策与市场；否则业务启示。
+    if (isPolicyMarketCandidate(title, a.excerpt || "")) return "policy_market";
+    return "biz_insight";
   };
   const seen = new Set<string>();
   for (const sec of SECTIONS) {
@@ -1339,7 +1322,8 @@ export function mergeRollingIntoReport(
       importance: 2,
       rank: 0,
       tags: rollUpTags(a),
-      locale: a.category === "gz" ? "gz" : "national",
+      // 无状态源架构红线（2026-08-29 用户）：locale 由内容判定（广州锚），不依赖采集分类。
+      locale: isGzLocalCandidate(a.title_cn || a.title || "") ? "gz" : "national",
     });
     rankKey.set(a.url, (a.publishedAt ?? a.fetchedAt)?.getTime() ?? 0);
     seen.add(a.url);

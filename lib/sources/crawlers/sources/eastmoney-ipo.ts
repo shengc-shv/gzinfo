@@ -69,9 +69,10 @@ export class EastMoneyIPOCrawler extends BaseCrawler {
         const orgCode = item.ORG_CODE || "";
 
         // 解析日期
-        const pubDate =
-          (recordDate || "").match(/(\d{4}-\d{2}-\d{2})/)?.[1] ||
-          new Date().toISOString().slice(0, 10);
+        // 时间真实性红线（2026-08-25 用户要求，2026-08-29 强化）：接口未给发布时间 →
+        // 该条废弃（不产出），绝不回退用抓取日（new Date()）兜底。
+        const pubDate = (recordDate || "").match(/(\d{4}-\d{2}-\d{2})/)?.[1] || "";
+        if (!pubDate) continue;
 
         // 过滤 7 天前的数据
         const itemDate = new Date(pubDate);
