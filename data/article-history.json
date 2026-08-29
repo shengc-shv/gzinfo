@@ -1,17 +1,4 @@
 {
-  "https://www.cnbc.com/2026/08/27/fed-chairman-kevin-warsh-delivers-his-key-jackson-hole-speech-friday.html": {
-    "title": "Fed Chairman Kevin Warsh delivers his key Jackson Hole speech Friday. Here's what to expect",
-    "url": "https://www.cnbc.com/2026/08/27/fed-chairman-kevin-warsh-delivers-his-key-jackson-hole-speech-friday.html",
-    "sourceId": "cnbc-top",
-    "source": "CNBC Top Stories",
-    "category": "stocks",
-    "subcategory": "us",
-    "excerpt": "Prior Fed chairs have used the speech as an opportunity to lay out broad policy frameworks and intentions.",
-    "publishedAt": "2026-08-27T22:58:01.000Z",
-    "firstSeenAt": "2026-08-28T00:22:32.987Z",
-    "lastSeenAt": "2026-08-28T00:22:32.987Z",
-    "ai_relevant": false
-  },
   "https://finance.sina.com.cn/stock/hkstock/ggscyd/2026-08-28/doc-inipvmmz4789777.shtml": {
     "title": "赤峰黄金获摩根大通增持约145.54万股 每股作价约44.90港元",
     "url": "https://finance.sina.com.cn/stock/hkstock/ggscyd/2026-08-28/doc-inipvmmz4789777.shtml",
@@ -731,59 +718,6 @@
     "publishedAt": "2026-08-28T00:16:00.000Z",
     "firstSeenAt": "2026-08-28T00:38:45.533Z",
     "lastSeenAt": "2026-08-28T00:38:45.533Z",
-    "ai_relevant": false
-  },
-  "https://www.stcn.com/article/detail/4143887.html": {
-    "title": "长联科技：上半年营收同比增长18.73% 中期分红回报股东",
-    "url": "https://www.stcn.com/article/detail/4143887.html",
-    "sourceId": "stcn",
-    "source": "证券时报",
-    "category": "finance",
-    "subcategory": "cn-finance",
-    "excerpt": "",
-    "publishedAt": "2026-08-27T22:44:00.000Z",
-    "firstSeenAt": "2026-08-28T00:38:45.533Z",
-    "lastSeenAt": "2026-08-28T00:38:45.533Z",
-    "ai_relevant": false
-  },
-  "https://news.southcn.com/node_812903b83a/4a53837b19.shtml": {
-    "title": "个人养老金产品全分析！来看看哪种最适合你？",
-    "url": "https://news.southcn.com/node_812903b83a/4a53837b19.shtml",
-    "sourceId": "southcn",
-    "source": "南方网·经济",
-    "category": "gz",
-    "subcategory": "biz_insight",
-    "excerpt": "个人养老金产品全分析：各类产品差异、适合人群与开户缴存要点。",
-    "publishedAt": "2026-08-27T22:59:00.000Z",
-    "firstSeenAt": "2026-08-28T00:38:45.533Z",
-    "lastSeenAt": "2026-08-28T00:38:45.533Z",
-    "ai_relevant": true,
-    "summary": "个人养老金是零售AUM重点抓手，分行可据此做客群分层推荐，推动开户缴存与长期资金沉淀。"
-  },
-  "https://news.southcn.com/node_812903b83a/bdb64eda58.shtml": {
-    "title": "让机器人在“虚拟世界”练出真本事！自变量发布WALL-SS自回归世界模型",
-    "url": "https://news.southcn.com/node_812903b83a/bdb64eda58.shtml",
-    "sourceId": "southcn",
-    "source": "南方网·经济",
-    "category": "gz",
-    "subcategory": "gz-media",
-    "excerpt": "",
-    "publishedAt": "2026-08-27T22:34:00.000Z",
-    "firstSeenAt": "2026-08-28T00:38:45.533Z",
-    "lastSeenAt": "2026-08-28T00:38:45.533Z",
-    "ai_relevant": false
-  },
-  "https://www.cnbc.com/2026/08/28/chinas-super-rich-fled-singapore-now-they-want-to-come-back.html": {
-    "title": "China’s super-rich fled Singapore. Now they want to come back",
-    "url": "https://www.cnbc.com/2026/08/28/chinas-super-rich-fled-singapore-now-they-want-to-come-back.html",
-    "sourceId": "cnbc-top",
-    "source": "CNBC Top Stories",
-    "category": "stocks",
-    "subcategory": "us",
-    "excerpt": "Wealthy Chinese are reconsidering Singapore as Beijing’s offshore wealth scrutiny and geopolitical risks make alternatives less attractive.",
-    "publishedAt": "2026-08-27T23:51:49.000Z",
-    "firstSeenAt": "2026-08-28T00:53:47.139Z",
-    "lastSeenAt": "2026-08-28T00:53:47.139Z",
     "ai_relevant": false
   },
   "https://finance.sina.com.cn/jjxw/2026-08-28/doc-inipvmnh0316734.shtml": {
@@ -7233,5 +7167,101 @@
     "publishedAt": "2026-08-28T00:00:00.000Z",
     "firstSeenAt": "2026-08-29T22:29:23.494Z",
     "lastSeenAt": "2026-08-29T22:29:23.494Z"
+  },
+  "https://www.investing.com/news/stock-market-news/ais-memory-stack-what-investors-need-to-know-4882003": {
+    "title": "AI’s memory stack: What investors need to know",
+    "url": "https://www.investing.com/news/stock-market-news/ais-memory-stack-what-investors-need-to-know-4882003",
+    "sourceId": "investing-news",
+    "source": "Investing.com News",
+    "category": "stocks",
+    "subcategory": "us",
+    "excerpt": "AI’s memory stack: What investors need to know",
+    "publishedAt": "2026-08-29T23:16:41.000Z",
+    "firstSeenAt": "2026-08-29T23:52:52.016Z",
+    "lastSeenAt": "2026-08-29T23:52:52.016Z"
+  },
+  "https://finance.sina.com.cn/stock/s/2026-08-30/doc-inipzxrx3045481.shtml": {
+    "title": "美联储踢皮球！黄金和半导体暴跌",
+    "url": "https://finance.sina.com.cn/stock/s/2026-08-30/doc-inipzxrx3045481.shtml",
+    "sourceId": "sina-money",
+    "source": "新浪财经·理财保险",
+    "category": "gz",
+    "subcategory": "cn-finance",
+    "excerpt": "【财富管理】美联储踢皮球！黄金和半导体暴跌",
+    "publishedAt": "2026-08-30T00:00:00.000Z",
+    "firstSeenAt": "2026-08-29T23:52:52.016Z",
+    "lastSeenAt": "2026-08-29T23:52:52.016Z"
+  },
+  "https://finance.eastmoney.com/a/202608303859339192.html": {
+    "title": "集齐CPO、人形机器人、汽车电子等热门题材这只龙头股火了（附名单）",
+    "url": "https://finance.eastmoney.com/a/202608303859339192.html",
+    "sourceId": "eastmoney-stock",
+    "source": "东方财富",
+    "category": "stocks",
+    "subcategory": "a-share",
+    "excerpt": "集齐CPO、人形机器人、汽车电子等热门题材这只龙头股火了（附名单）",
+    "publishedAt": "2026-08-30T00:00:00.000Z",
+    "firstSeenAt": "2026-08-29T23:52:52.016Z",
+    "lastSeenAt": "2026-08-29T23:52:52.016Z"
+  },
+  "https://finance.eastmoney.com/a/202608303859333047.html": {
+    "title": "巴克莱拆解AI经济账：模型公司每赚100美元云厂商拿走近40美元",
+    "url": "https://finance.eastmoney.com/a/202608303859333047.html",
+    "sourceId": "eastmoney-stock",
+    "source": "东方财富",
+    "category": "stocks",
+    "subcategory": "a-share",
+    "excerpt": "巴克莱拆解AI经济账：模型公司每赚100美元云厂商拿走近40美元",
+    "publishedAt": "2026-08-30T00:00:00.000Z",
+    "firstSeenAt": "2026-08-29T23:52:52.016Z",
+    "lastSeenAt": "2026-08-29T23:52:52.016Z"
+  },
+  "https://finance.eastmoney.com/a/202608293859147450.html": {
+    "title": "利好来了！A股大牛股，密集公告！扭亏即暴赚、最猛狂增1212%……",
+    "url": "https://finance.eastmoney.com/a/202608293859147450.html",
+    "sourceId": "eastmoney-stock",
+    "source": "东方财富",
+    "category": "stocks",
+    "subcategory": "a-share",
+    "excerpt": "利好来了！A股大牛股，密集公告！扭亏即暴赚、最猛狂增1212%……",
+    "publishedAt": "2026-08-29T00:00:00.000Z",
+    "firstSeenAt": "2026-08-29T23:52:52.016Z",
+    "lastSeenAt": "2026-08-29T23:52:52.016Z"
+  },
+  "https://finance.eastmoney.com/a/202608293859320361.html": {
+    "title": "长鑫存储起诉美国五角大楼",
+    "url": "https://finance.eastmoney.com/a/202608293859320361.html",
+    "sourceId": "eastmoney-stock",
+    "source": "东方财富",
+    "category": "stocks",
+    "subcategory": "a-share",
+    "excerpt": "长鑫存储起诉美国五角大楼",
+    "publishedAt": "2026-08-29T00:00:00.000Z",
+    "firstSeenAt": "2026-08-29T23:52:52.016Z",
+    "lastSeenAt": "2026-08-29T23:52:52.016Z"
+  },
+  "https://finance.eastmoney.com/a/202608303859334765.html": {
+    "title": "环球下周看点：8月非农数据重磅来袭博通财报接棒英伟达",
+    "url": "https://finance.eastmoney.com/a/202608303859334765.html",
+    "sourceId": "eastmoney-stock",
+    "source": "东方财富",
+    "category": "stocks",
+    "subcategory": "a-share",
+    "excerpt": "环球下周看点：8月非农数据重磅来袭博通财报接棒英伟达",
+    "publishedAt": "2026-08-30T00:00:00.000Z",
+    "firstSeenAt": "2026-08-29T23:52:52.016Z",
+    "lastSeenAt": "2026-08-29T23:52:52.016Z"
+  },
+  "https://finance.sina.com.cn/stock/zqgd/2026-08-30/doc-inipzxrx3056940.shtml": {
+    "title": "太“壕”了！券商大手笔，中期分红将超273亿元！",
+    "url": "https://finance.sina.com.cn/stock/zqgd/2026-08-30/doc-inipzxrx3056940.shtml",
+    "sourceId": "sina-a-stock",
+    "source": "新浪财经·A股",
+    "category": "stocks",
+    "subcategory": "a-share",
+    "excerpt": "太“壕”了！券商大手笔，中期分红将超273亿元！",
+    "publishedAt": "2026-08-30T00:00:00.000Z",
+    "firstSeenAt": "2026-08-29T23:52:52.016Z",
+    "lastSeenAt": "2026-08-29T23:52:52.016Z"
   }
 }

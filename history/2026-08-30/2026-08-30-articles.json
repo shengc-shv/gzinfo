@@ -2,18 +2,6 @@
   "date": "2026-08-30",
   "articles": [
     {
-      "sourceId": "cnbc-top",
-      "title": "Fed Chairman Kevin Warsh delivers his key Jackson Hole speech Friday. Here's what to expect",
-      "url": "https://www.cnbc.com/2026/08/27/fed-chairman-kevin-warsh-delivers-his-key-jackson-hole-speech-friday.html",
-      "excerpt": "Prior Fed chairs have used the speech as an opportunity to lay out broad policy frameworks and intentions.",
-      "publishedAt": "2026-08-27T22:58:01.000Z",
-      "category": "stocks",
-      "source": "CNBC Top Stories",
-      "fetchedToday": false,
-      "subcategory": "us",
-      "relevant": false
-    },
-    {
       "sourceId": "sina-money",
       "title": "赤峰黄金获摩根大通增持约145.54万股 每股作价约44.90港元",
       "url": "https://finance.sina.com.cn/stock/hkstock/ggscyd/2026-08-28/doc-inipvmmz4789777.shtml",
@@ -677,55 +665,6 @@
       "source": "证券时报",
       "fetchedToday": false,
       "subcategory": "cn-finance",
-      "relevant": false
-    },
-    {
-      "sourceId": "stcn",
-      "title": "长联科技：上半年营收同比增长18.73% 中期分红回报股东",
-      "url": "https://www.stcn.com/article/detail/4143887.html",
-      "excerpt": "",
-      "publishedAt": "2026-08-27T22:44:00.000Z",
-      "category": "finance",
-      "source": "证券时报",
-      "fetchedToday": false,
-      "subcategory": "cn-finance",
-      "relevant": false
-    },
-    {
-      "sourceId": "southcn",
-      "title": "个人养老金产品全分析！来看看哪种最适合你？",
-      "url": "https://news.southcn.com/node_812903b83a/4a53837b19.shtml",
-      "excerpt": "个人养老金产品全分析：各类产品差异、适合人群与开户缴存要点。",
-      "publishedAt": "2026-08-27T22:59:00.000Z",
-      "category": "gz",
-      "summary": "个人养老金是零售AUM重点抓手，分行可据此做客群分层推荐，推动开户缴存与长期资金沉淀。",
-      "source": "南方网·经济",
-      "fetchedToday": false,
-      "subcategory": "biz_insight",
-      "relevant": true
-    },
-    {
-      "sourceId": "southcn",
-      "title": "让机器人在“虚拟世界”练出真本事！自变量发布WALL-SS自回归世界模型",
-      "url": "https://news.southcn.com/node_812903b83a/bdb64eda58.shtml",
-      "excerpt": "",
-      "publishedAt": "2026-08-27T22:34:00.000Z",
-      "category": "gz",
-      "source": "南方网·经济",
-      "fetchedToday": false,
-      "subcategory": "gz-media",
-      "relevant": false
-    },
-    {
-      "sourceId": "cnbc-top",
-      "title": "China’s super-rich fled Singapore. Now they want to come back",
-      "url": "https://www.cnbc.com/2026/08/28/chinas-super-rich-fled-singapore-now-they-want-to-come-back.html",
-      "excerpt": "Wealthy Chinese are reconsidering Singapore as Beijing’s offshore wealth scrutiny and geopolitical risks make alternatives less attractive.",
-      "publishedAt": "2026-08-27T23:51:49.000Z",
-      "category": "stocks",
-      "source": "CNBC Top Stories",
-      "fetchedToday": false,
-      "subcategory": "us",
       "relevant": false
     },
     {
@@ -6466,10 +6405,9 @@
       "excerpt": "OpenAI plans to end model access through Cursor on Nov. 12, citing concerns after SpaceX’s $60 billion acquisition of the coding startup.",
       "publishedAt": "2026-08-29T19:06:22.000Z",
       "category": "stocks",
-      "subcategory": "us",
       "source": "CNBC Top Stories",
-      "tier": "T2",
-      "fetchedToday": true
+      "fetchedToday": false,
+      "subcategory": "us"
     },
     {
       "sourceId": "cnbc-top",
@@ -6478,10 +6416,9 @@
       "excerpt": "The park service is backing the arch, despite finding that it would adversely affect historic sightlines and other visual relationships among nearby landmarks.",
       "publishedAt": "2026-08-29T18:23:57.000Z",
       "category": "stocks",
-      "subcategory": "us",
       "source": "CNBC Top Stories",
-      "tier": "T2",
-      "fetchedToday": true
+      "fetchedToday": false,
+      "subcategory": "us"
     },
     {
       "sourceId": "cnbc-top",
@@ -6490,10 +6427,9 @@
       "excerpt": "The Trump administration is considering a Yosemite land exchange that could give a developer more direct park access.",
       "publishedAt": "2026-08-29T18:21:49.000Z",
       "category": "stocks",
-      "subcategory": "us",
       "source": "CNBC Top Stories",
-      "tier": "T2",
-      "fetchedToday": true
+      "fetchedToday": false,
+      "subcategory": "us"
     },
     {
       "sourceId": "cnbc-top",
@@ -6502,10 +6438,9 @@
       "excerpt": "For the past year, markets have vaporized roughly $2 trillion in software value by asking the wrong question about AI.",
       "publishedAt": "2026-08-29T13:00:01.000Z",
       "category": "stocks",
-      "subcategory": "us",
       "source": "CNBC Top Stories",
-      "tier": "T2",
-      "fetchedToday": true
+      "fetchedToday": false,
+      "subcategory": "us"
     },
     {
       "sourceId": "cnbc-top",
@@ -6514,10 +6449,9 @@
       "excerpt": "\"Meta is seeking to ensure its competitors will face the same rules,\" one business professor told CNBC after Meta called on rivals to protect children online.",
       "publishedAt": "2026-08-29T05:00:01.000Z",
       "category": "stocks",
-      "subcategory": "us",
       "source": "CNBC Top Stories",
-      "tier": "T2",
-      "fetchedToday": true
+      "fetchedToday": false,
+      "subcategory": "us"
     },
     {
       "sourceId": "investing-news",
@@ -6526,10 +6460,9 @@
       "excerpt": "Iceland counts votes in tight referendum on EU membership talks",
       "publishedAt": "2026-08-29T22:00:29.000Z",
       "category": "stocks",
-      "subcategory": "us",
       "source": "Investing.com News",
-      "tier": "T2",
-      "fetchedToday": true
+      "fetchedToday": false,
+      "subcategory": "us"
     },
     {
       "sourceId": "investing-news",
@@ -6538,10 +6471,9 @@
       "excerpt": "Russia stocks lower at close of trade; MOEX Russia Index unchanged",
       "publishedAt": "2026-08-29T21:20:03.000Z",
       "category": "stocks",
-      "subcategory": "us",
       "source": "Investing.com News",
-      "tier": "T2",
-      "fetchedToday": true
+      "fetchedToday": false,
+      "subcategory": "us"
     },
     {
       "sourceId": "investing-news",
@@ -6550,10 +6482,9 @@
       "excerpt": "Warsh at Jackson Hole: 8 key takeaways",
       "publishedAt": "2026-08-29T20:34:12.000Z",
       "category": "stocks",
-      "subcategory": "us",
       "source": "Investing.com News",
-      "tier": "T2",
-      "fetchedToday": true
+      "fetchedToday": false,
+      "subcategory": "us"
     },
     {
       "sourceId": "investing-news",
@@ -6562,10 +6493,9 @@
       "excerpt": "UAE investigates Egypt’s Banque Misr after U.S. moves to block dollar clearing",
       "publishedAt": "2026-08-29T20:27:39.000Z",
       "category": "stocks",
-      "subcategory": "us",
       "source": "Investing.com News",
-      "tier": "T2",
-      "fetchedToday": true
+      "fetchedToday": false,
+      "subcategory": "us"
     },
     {
       "sourceId": "investing-news",
@@ -6574,10 +6504,9 @@
       "excerpt": "What’s in store for the week ahead",
       "publishedAt": "2026-08-29T20:07:15.000Z",
       "category": "stocks",
-      "subcategory": "us",
       "source": "Investing.com News",
-      "tier": "T2",
-      "fetchedToday": true
+      "fetchedToday": false,
+      "subcategory": "us"
     },
     {
       "sourceId": "investing-news",
@@ -6586,10 +6515,9 @@
       "excerpt": "Bitcoin consolidates between $77.2K-$78.7K: Hourly levels",
       "publishedAt": "2026-08-29T19:02:26.000Z",
       "category": "stocks",
-      "subcategory": "us",
       "source": "Investing.com News",
-      "tier": "T2",
-      "fetchedToday": true
+      "fetchedToday": false,
+      "subcategory": "us"
     },
     {
       "sourceId": "investing-news",
@@ -6598,10 +6526,9 @@
       "excerpt": "Iran foreign trade plunges 35% under US blockade as six-month war drags on",
       "publishedAt": "2026-08-29T18:55:43.000Z",
       "category": "stocks",
-      "subcategory": "us",
       "source": "Investing.com News",
-      "tier": "T2",
-      "fetchedToday": true
+      "fetchedToday": false,
+      "subcategory": "us"
     },
     {
       "sourceId": "investing-news",
@@ -6610,10 +6537,9 @@
       "excerpt": "GM deal with workers would add Sierra pickup assembly to Canadian plant despite US tariff ",
       "publishedAt": "2026-08-29T18:24:27.000Z",
       "category": "stocks",
-      "subcategory": "us",
       "source": "Investing.com News",
-      "tier": "T2",
-      "fetchedToday": true
+      "fetchedToday": false,
+      "subcategory": "us"
     },
     {
       "sourceId": "investing-news",
@@ -6622,6 +6548,83 @@
       "excerpt": "Glencore takes $480 mln provision on Radiant World exposure - Bloomberg",
       "publishedAt": "2026-08-29T17:38:55.000Z",
       "category": "stocks",
+      "source": "Investing.com News",
+      "fetchedToday": false,
+      "subcategory": "us"
+    },
+    {
+      "sourceId": "sina-money",
+      "title": "ETF #股票#财经 #投资#基金 #ETF",
+      "url": "http://finance.sina.com.cn/money/fund/video/2026-08-30/detail-inipztiz3162485.d.html",
+      "excerpt": "【财富管理】ETF #股票#财经 #投资#基金 #ETF",
+      "publishedAt": "2026-08-30T00:00:00.000Z",
+      "category": "gz",
+      "source": "新浪财经·理财保险",
+      "fetchedToday": false,
+      "subcategory": "cn-finance"
+    },
+    {
+      "sourceId": "21jingji-finance",
+      "title": "一地发布公积金新政，异地贷款范围扩展至全国",
+      "url": "https://m.21jingji.com/article/20260829/herald/89dafec4b39fe8fc5a7348a95ce10af7.html",
+      "excerpt": "【21财经·金融】一地发布公积金新政，异地贷款范围扩展至全国",
+      "publishedAt": "2026-08-29T00:00:00.000Z",
+      "category": "gz",
+      "source": "21世纪经济报道·金融",
+      "fetchedToday": false,
+      "subcategory": "cn-finance"
+    },
+    {
+      "sourceId": "eastmoney-stock",
+      "title": "覆铜板龙头年内第七次涨价产业链公司回应",
+      "url": "https://finance.eastmoney.com/a/202608293859172846.html",
+      "excerpt": "覆铜板龙头年内第七次涨价产业链公司回应",
+      "publishedAt": "2026-08-29T00:00:00.000Z",
+      "category": "stocks",
+      "source": "东方财富",
+      "fetchedToday": false,
+      "subcategory": "a-share"
+    },
+    {
+      "sourceId": "eastmoney-stock",
+      "title": "68家公募上半年“赚钱榜”出炉：广发反超易方达登顶，招商、博时跌出“十强”",
+      "url": "https://finance.eastmoney.com/a/202608293859101677.html",
+      "excerpt": "68家公募上半年“赚钱榜”出炉：广发反超易方达登顶，招商、博时跌出“十强”",
+      "publishedAt": "2026-08-29T00:00:00.000Z",
+      "category": "stocks",
+      "source": "东方财富",
+      "fetchedToday": false,
+      "subcategory": "a-share"
+    },
+    {
+      "sourceId": "sina-a-stock",
+      "title": "数字人民币业务运营机构为何再扩容",
+      "url": "https://finance.sina.com.cn/jjxw/2026-08-30/doc-inipztiz8427507.shtml",
+      "excerpt": "数字人民币业务运营机构为何再扩容",
+      "publishedAt": "2026-08-30T00:00:00.000Z",
+      "category": "stocks",
+      "source": "新浪财经·A股",
+      "fetchedToday": false,
+      "subcategory": "a-share"
+    },
+    {
+      "sourceId": "sina-a-stock",
+      "title": "A股突变，全天跳水！背后发生了什么？",
+      "url": "https://finance.sina.com.cn/jjxw/2026-08-28/doc-inipwait9052158.shtml",
+      "excerpt": "A股突变，全天跳水！背后发生了什么？",
+      "publishedAt": "2026-08-28T00:00:00.000Z",
+      "category": "stocks",
+      "source": "新浪财经·A股",
+      "fetchedToday": false,
+      "subcategory": "a-share"
+    },
+    {
+      "sourceId": "investing-news",
+      "title": "AI’s memory stack: What investors need to know",
+      "url": "https://www.investing.com/news/stock-market-news/ais-memory-stack-what-investors-need-to-know-4882003",
+      "excerpt": "AI’s memory stack: What investors need to know",
+      "publishedAt": "2026-08-29T23:16:41.000Z",
+      "category": "stocks",
       "subcategory": "us",
       "source": "Investing.com News",
       "tier": "T2",
@@ -6629,9 +6632,9 @@
     },
     {
       "sourceId": "sina-money",
-      "title": "ETF #股票#财经 #投资#基金 #ETF",
-      "url": "http://finance.sina.com.cn/money/fund/video/2026-08-30/detail-inipztiz3162485.d.html",
-      "excerpt": "【财富管理】ETF #股票#财经 #投资#基金 #ETF",
+      "title": "美联储踢皮球！黄金和半导体暴跌",
+      "url": "https://finance.sina.com.cn/stock/s/2026-08-30/doc-inipzxrx3045481.shtml",
+      "excerpt": "【财富管理】美联储踢皮球！黄金和半导体暴跌",
       "category": "gz",
       "publishedAt": "2026-08-30T00:00:00.000Z",
       "source": "新浪财经·理财保险",
@@ -6640,23 +6643,37 @@
       "subcategory": "cn-finance"
     },
     {
-      "sourceId": "21jingji-finance",
-      "title": "一地发布公积金新政，异地贷款范围扩展至全国",
-      "url": "https://m.21jingji.com/article/20260829/herald/89dafec4b39fe8fc5a7348a95ce10af7.html",
-      "excerpt": "【21财经·金融】一地发布公积金新政，异地贷款范围扩展至全国",
-      "category": "gz",
-      "publishedAt": "2026-08-29T00:00:00.000Z",
-      "source": "21世纪经济报道·金融",
+      "sourceId": "eastmoney-stock",
+      "source": "东方财富",
+      "title": "集齐CPO、人形机器人、汽车电子等热门题材这只龙头股火了（附名单）",
+      "url": "https://finance.eastmoney.com/a/202608303859339192.html",
+      "excerpt": "集齐CPO、人形机器人、汽车电子等热门题材这只龙头股火了（附名单）",
+      "publishedAt": "2026-08-30T00:00:00.000Z",
+      "category": "stocks",
+      "summary": "",
       "tier": "T2",
       "fetchedToday": true,
-      "subcategory": "cn-finance"
+      "subcategory": "a-share"
     },
     {
       "sourceId": "eastmoney-stock",
       "source": "东方财富",
-      "title": "覆铜板龙头年内第七次涨价产业链公司回应",
-      "url": "https://finance.eastmoney.com/a/202608293859172846.html",
-      "excerpt": "覆铜板龙头年内第七次涨价产业链公司回应",
+      "title": "巴克莱拆解AI经济账：模型公司每赚100美元云厂商拿走近40美元",
+      "url": "https://finance.eastmoney.com/a/202608303859333047.html",
+      "excerpt": "巴克莱拆解AI经济账：模型公司每赚100美元云厂商拿走近40美元",
+      "publishedAt": "2026-08-30T00:00:00.000Z",
+      "category": "stocks",
+      "summary": "",
+      "tier": "T2",
+      "fetchedToday": true,
+      "subcategory": "a-share"
+    },
+    {
+      "sourceId": "eastmoney-stock",
+      "source": "东方财富",
+      "title": "利好来了！A股大牛股，密集公告！扭亏即暴赚、最猛狂增1212%……",
+      "url": "https://finance.eastmoney.com/a/202608293859147450.html",
+      "excerpt": "利好来了！A股大牛股，密集公告！扭亏即暴赚、最猛狂增1212%……",
       "publishedAt": "2026-08-29T00:00:00.000Z",
       "category": "stocks",
       "summary": "",
@@ -6667,9 +6684,9 @@
     {
       "sourceId": "eastmoney-stock",
       "source": "东方财富",
-      "title": "68家公募上半年“赚钱榜”出炉：广发反超易方达登顶，招商、博时跌出“十强”",
-      "url": "https://finance.eastmoney.com/a/202608293859101677.html",
-      "excerpt": "68家公募上半年“赚钱榜”出炉：广发反超易方达登顶，招商、博时跌出“十强”",
+      "title": "长鑫存储起诉美国五角大楼",
+      "url": "https://finance.eastmoney.com/a/202608293859320361.html",
+      "excerpt": "长鑫存储起诉美国五角大楼",
       "publishedAt": "2026-08-29T00:00:00.000Z",
       "category": "stocks",
       "summary": "",
@@ -6678,11 +6695,11 @@
       "subcategory": "a-share"
     },
     {
-      "sourceId": "sina-a-stock",
-      "source": "新浪财经·A股",
-      "title": "数字人民币业务运营机构为何再扩容",
-      "url": "https://finance.sina.com.cn/jjxw/2026-08-30/doc-inipztiz8427507.shtml",
-      "excerpt": "数字人民币业务运营机构为何再扩容",
+      "sourceId": "eastmoney-stock",
+      "source": "东方财富",
+      "title": "环球下周看点：8月非农数据重磅来袭博通财报接棒英伟达",
+      "url": "https://finance.eastmoney.com/a/202608303859334765.html",
+      "excerpt": "环球下周看点：8月非农数据重磅来袭博通财报接棒英伟达",
       "publishedAt": "2026-08-30T00:00:00.000Z",
       "category": "stocks",
       "summary": "",
@@ -6693,10 +6710,10 @@
     {
       "sourceId": "sina-a-stock",
       "source": "新浪财经·A股",
-      "title": "A股突变，全天跳水！背后发生了什么？",
-      "url": "https://finance.sina.com.cn/jjxw/2026-08-28/doc-inipwait9052158.shtml",
-      "excerpt": "A股突变，全天跳水！背后发生了什么？",
-      "publishedAt": "2026-08-28T00:00:00.000Z",
+      "title": "太“壕”了！券商大手笔，中期分红将超273亿元！",
+      "url": "https://finance.sina.com.cn/stock/zqgd/2026-08-30/doc-inipzxrx3056940.shtml",
+      "excerpt": "太“壕”了！券商大手笔，中期分红将超273亿元！",
+      "publishedAt": "2026-08-30T00:00:00.000Z",
       "category": "stocks",
       "summary": "",
       "tier": "T2",
