@@ -16,6 +16,7 @@ import {
   writeStore,
   buildExecutiveFromScores,
   applyRelevanceGuardrail,
+  dedupeExecutiveCrossSection,
 } from "../../ai/executive-summary";
 import { mergeStoredExecutive } from "../../output/render";
 import { buildTwoDayExecPool, collectTwoDayArticles } from "../../ai/exec-pool";
@@ -133,6 +134,8 @@ export async function buildExecutiveSummary(
       // 评分护栏：LLM 生成后按分行相关性重排必读 + 强制顶入硬规则条目，
       // 让「客户中心」不依赖 LLM 临场发挥（房贷40年型不可能被埋）。
       exec = applyRelevanceGuardrail(exec, twoDayPool);
+      // B7 边界互斥守卫：同一事件不得既必读/商机又风险（确定性去重，不靠 LLM 自觉）。
+      exec = dedupeExecutiveCrossSection(exec);
       const next: DailyReport = { ...report };
       if (exec.hero_line) next.hero_line = exec.hero_line;
       const mustRead = exec.must_read

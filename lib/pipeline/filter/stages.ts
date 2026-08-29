@@ -36,6 +36,7 @@ import {
 import { DISPLAY_WINDOW_DAYS } from "../../output/render/cards";
 import { FETCH_WINDOW_DAYS } from "../../output/history";
 import { capLightAiSources, LIGHT_AI_MAX_PER_SOURCE } from "../../ai/light-ai";
+import { scoreBranchRelevance } from "../../ai/relevance-score";
 import type { ArticleInput } from "../../types";
 import type { FilterStage } from "./types";
 
@@ -234,7 +235,22 @@ const perSourceCapStage: FilterStage = {
   name: "per-source-cap-10",
   apply: (articles, ctx) => {
     const before = articles.length;
-    const out = capLightAiSources(articles, ctx.allSourceIds, LIGHT_AI_MAX_PER_SOURCE);
+    // 2026-08-29 价值预筛：每源限额不再「取最新」，改用分行相关性评分降序——
+    // 高分行相关性条目优先进 AI，低价值条目让位（命中「价值优先」+「节约AI」）。
+    const out = capLightAiSources(
+      articles,
+      ctx.allSourceIds,
+      LIGHT_AI_MAX_PER_SOURCE,
+      (a) =>
+        scoreBranchRelevance({
+          title: a.title_cn ?? a.title ?? "",
+          summary: a.summary ?? "",
+          sourceId: a.source,
+          category: a.category,
+          subcategory: a.subcategory,
+          url: a.url,
+        }).score,
+    );
     if (out.length < before) {
       ctx.log.info(
         "filter",

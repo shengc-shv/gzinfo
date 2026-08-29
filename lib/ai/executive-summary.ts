@@ -193,6 +193,31 @@ export function resolveInsightSources(
     .map(({ title, url }) => ({ title, url }));
 }
 
+/**
+ * B7 边界互斥守卫（确定性，不依赖 LLM）：同一事件不得既进 must_read/insights 又进 risk。
+ * 用标题 Dice 相似度（阈值）+ 含子串关系判定「同一事件」，命中则丢弃 risk（置 undefined），
+ * 杜绝「同样一件事」在必读与风险两个板块重复呈现，违反「精确性>丰富性」。
+ * 只删 risk：must_read（宏观）与 insights（落地动作）本就是两块、允许共存。
+ */
+export function dedupeExecutiveCrossSection(exec: ExecutiveSummary): ExecutiveSummary {
+  if (!exec.risk) return exec;
+  const norm = (s: string) =>
+    s.replace(/[^\p{L}\p{N}]+/gu, "").toLowerCase();
+  const sigs = new Set<string>();
+  for (const m of exec.must_read) sigs.add(norm(m.title));
+  for (const i of exec.insights) sigs.add(norm(i.topic));
+  const rt = norm(exec.risk.topic);
+  if (!rt) return exec;
+  const CROSS_DICE = 0.5;
+  for (const s of sigs) {
+    if (!s) continue;
+    if (titleSimilarityDice(rt, s) >= CROSS_DICE) return { ...exec, risk: undefined };
+    if (rt.length >= 4 && s.length >= 4 && (rt.includes(s) || s.includes(rt)))
+      return { ...exec, risk: undefined };
+  }
+  return exec;
+}
+
 export async function generateExecutiveSummary(
   input: ExecSummaryInput,
 ): Promise<ExecutiveSummary | null> {

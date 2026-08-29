@@ -19,13 +19,18 @@ export interface LightAiArticle {
 }
 
 /**
- * 对 lightAi 源按 sourceId 分组、每源保留最新 maxPer 条；其余源原样保留。
- * 用于降 AI 管线 token 占用：低命中率源只取少量最新条目送 PASS1。
+ * 对 lightAi 源按 sourceId 分组、每源保留 maxPer 条；其余源原样保留。
+ * 用于降 AI 管线 token 占用：低命中率源只取少量条目送 PASS1。
+ *
+ * 排序键（2026-08-29 价值预筛）：传入 scorer 时按「分行相关性评分」降序取，
+ * 无 scorer 时退化为「最新优先」。让高分行相关性条目优先进 AI（命中「价值优先」+
+ * 「节约AI」），低价值条目让位；同分时仍按发布时间倒序保证新事件不漏。
  */
 export function capLightAiSources<T extends LightAiArticle>(
   articles: T[],
   lightSet: Set<string>,
   maxPer: number,
+  scorer?: (a: T) => number,
 ): T[] {
   const lightGroups = new Map<string, T[]>();
   const others: T[] = [];
@@ -40,9 +45,12 @@ export function capLightAiSources<T extends LightAiArticle>(
   }
   const capped: T[] = [];
   for (const items of lightGroups.values()) {
-    items.sort(
-      (x, y) => (y.publishedAt?.getTime() ?? 0) - (x.publishedAt?.getTime() ?? 0),
-    );
+    items.sort((x, y) => {
+      const sx = scorer ? scorer(x) : (x.publishedAt?.getTime() ?? 0);
+      const sy = scorer ? scorer(y) : (y.publishedAt?.getTime() ?? 0);
+      if (sy !== sx) return sy - sx;
+      return (y.publishedAt?.getTime() ?? 0) - (x.publishedAt?.getTime() ?? 0);
+    });
     capped.push(...items.slice(0, maxPer));
   }
   return [...others, ...capped];

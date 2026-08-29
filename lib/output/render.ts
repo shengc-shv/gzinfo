@@ -1527,15 +1527,17 @@ export function renderHtml(
     return `${mm}月${dd}日 星期${w}`;
   })();
 
+  // 2026-08-29 原则5 失败可见：gz_local 板块即使 0 条也常驻展示并显式提示「今日无广州本地要闻」，
+  // 避免静默消失让行长误以为系统缺数/漏采（其余板块仍按 count>0 取舍）。
   const tabs = [
-    { id: "p-gz", label: "广州本地", section: "gz_local", cls: "var(--c-gz)", count: gzLocal.length, items: gzLocal },
-    { id: "p-stock", label: "股市动态", section: "stock_news", cls: "var(--c-trading)", count: stockNews.length, items: stockNews },
-    { id: "p-biz", label: "业务启示", section: "biz_insight", cls: "var(--c-biz)", count: bizInsight.length, items: bizInsight },
-    { id: "p-pol", label: "政策与市场", section: "policy_market", cls: "var(--c-pol)", count: policyMarket.length, items: policyMarket },
-    { id: "p-tech", label: "科技前沿", section: "tech", cls: "var(--c-tech)", count: techAll.length, items: techAll },
+    { id: "p-gz", label: "广州本地", section: "gz_local", cls: "var(--c-gz)", count: gzLocal.length, items: gzLocal, alwaysShow: true, emptyHint: "今日暂无广州本地要闻（本地源未捕捉到高价值广州事件）。大湾区/广东要闻可在「政策与市场」查看。" },
+    { id: "p-stock", label: "股市动态", section: "stock_news", cls: "var(--c-trading)", count: stockNews.length, items: stockNews, alwaysShow: false, emptyHint: "今日暂无股市动态" },
+    { id: "p-biz", label: "业务启示", section: "biz_insight", cls: "var(--c-biz)", count: bizInsight.length, items: bizInsight, alwaysShow: false, emptyHint: "今日暂无业务启示" },
+    { id: "p-pol", label: "政策与市场", section: "policy_market", cls: "var(--c-pol)", count: policyMarket.length, items: policyMarket, alwaysShow: false, emptyHint: "今日暂无政策与市场动态" },
+    { id: "p-tech", label: "科技前沿", section: "tech", cls: "var(--c-tech)", count: techAll.length, items: techAll, alwaysShow: false, emptyHint: "今日暂无科技前沿" },
     // 2026-08-25 用户决定：IPO 功能全部废弃（明天重新设计方案），tab 隐藏（代码保留）
     // { id: "p-ipo", label: "IPO动态", section: "ipo", cls: "var(--c-ipo)", count: ipoAll.length, items: ipoAll },
-  ].filter((t) => t.count > 0);
+  ].filter((t) => t.count > 0 || t.alwaysShow);
 
   const totalItems = gzLocal.length + bizInsight.length + policyMarket.length + techAll.length;
   // 数据截止时间用北京时间（Asia/Shanghai，UTC+8 无夏令时）。此前 toTimeString()
@@ -1602,7 +1604,7 @@ ${AUDIO_HIGHLIGHT_CSS}
 
   ${tabs.map((t, i) => `<section class="panel${i === 0 ? " active" : ""}" id="${t.id}">
     ${t.id === "p-stock" ? renderStockFilterBar() : renderFilterBarForPanel(t.items)}
-    ${renderReportCardList(t.items, true)}
+    ${t.items.length ? renderReportCardList(t.items, true) : `<p class="empty-hint">${escapeHtml(t.emptyHint || "今日暂无相关内容")}</p>`}
   </section>`).join("")}
 
   <footer>
@@ -1737,7 +1739,10 @@ export function renderMarkdown(report: DailyReport, date: string): string {
   ];
   for (const [label, key] of secMap) {
     const items = report.sections?.[key] ?? [];
-    if (items.length === 0) continue;
+    if (items.length === 0) {
+      if (key === "gz_local") blocks.push(`## 广州本地\n\n（今日无广州本地要闻）\n`);
+      continue;
+    }
     const body = items
       .map(
         (it) =>

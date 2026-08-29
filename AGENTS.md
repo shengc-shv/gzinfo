@@ -24,7 +24,7 @@ scripts/
   _env.ts             # dotenv preload — imported FIRST by every entry script
   daily.ts            # main pipeline (5-8 min, ~6 LLM calls)
   dry-run.ts          # fetch-only validation (~30s, no LLM)
-  render.ts           # re-render HTML/MD from cached sidecar (~1s)
+  render.ts           # re-render HTML/MD (re-runs ingestion/fetch, then renders — NOT a pure cache re-render)
   regen-trading.ts    # rerun just the trading commentary
   regen-enrich.ts     # top up missing summaries for a subgroup
   build-site.mjs      # generate index.html + archive.html for static hosting
@@ -65,7 +65,7 @@ sources.config.json   # SINGLE SOURCE OF TRUTH for the source registry
 |---|---|---|
 | Full pipeline | `npm run daily` | ~5-8 min, ~6 LLM calls |
 | Fetch-only sanity check | `npm run dry-run` | ~30s, no LLM |
-| Re-render from cache | `npm run render [date]` | <1s |
+| Re-render report | `npm run render [date]` | 联网重抓+渲染（非纯缓存） |
 | Re-run trading section | `npm run regen-trading [date]` | ~2 min, 1 LLM call |
 | Top up missing summaries | `npm run regen-enrich <cat:sub> [date]` | ~30s, 1 LLM call |
 | Static-site generator | `npm run build-site` | <1s |
@@ -91,7 +91,7 @@ sources.config.json   # SINGLE SOURCE OF TRUTH for the source registry
 1. `logs/daily-<YYYY-MM-DD>.log` — full pipeline output for that day (date in local time, NOT UTC)
 2. `logs/llm-calls.jsonl` — every LLM call with input size, latency, success, error category
 3. `npm run quota-report` — usage summary by backend
-4. If a tab renders wrong but the data is right, `npm run render` (1s) usually fixes display-only bugs without rerunning LLM
+4. If a tab renders wrong but the data is right, `npm run render` re-renders from a fresh fetch (it re-runs ingestion, not just a cache) to fix display-only bugs without rerunning LLM
 
 ## What NOT to do
 
