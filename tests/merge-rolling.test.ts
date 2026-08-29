@@ -127,6 +127,56 @@ test("并入门槛三态（2026-08-29 方案③）：false 硬排除 / true 无�
   assert.deepEqual(urls, ["https://h/y", "https://h/z"], "true 无条件并入 + 未打标相关并入；false 与未打标噪声均排除");
 });
 
+test("退化卡片守卫（2026-08-29）：有效摘要与标题完全相同则跳过", () => {
+  // 注意：category=finance 映射到 policy_market（不是 biz_insight）
+  const report = { ...emptyReport, sections: { ...emptyReport.sections, policy_market: [] as ReportItem[] } };
+  const rolling: ArticleInput[] = [
+    // excerpt 被 fallback 回退成 title（见 lib/ingest/merge.ts）→ 摘要=标题，零信息增量 → 跳过
+    mkArticle({
+      url: "https://h/deg1",
+      title: "银行业禁业惩戒的闭环正在形成",
+      category: "finance",
+      excerpt: "银行业禁业惩戒的闭环正在形成",
+      sourceId: "media-src",
+    }),
+    // 有真实摘要（与标题不同）→ 正常并入
+    mkArticle({
+      url: "https://h/ok1",
+      title: "六大行“升级”两类贷款贴息安排",
+      category: "finance",
+      summary: "提额扩面，消费贷与经营贷贴息，分行应跟进",
+      sourceId: "media-src",
+    }),
+  ];
+  mergeRollingIntoReport(report, rolling, tierMap);
+  const urls = report.sections.policy_market.map((i) => i.url);
+  assert.ok(!urls.includes("https://h/deg1"), "摘要=标题的退化卡片应跳过");
+  assert.ok(urls.includes("https://h/ok1"), "有真实摘要的条目应正常并入");
+});
+
+test("退化卡片守卫：摘要为「【标签】+标题」复读也要跳过（标签前缀不可绕过守卫）", () => {
+  const report = { ...emptyReport, sections: { ...emptyReport.sections, policy_market: [] as ReportItem[] } };
+  // 历史库实况：未打标条目 summary 为空、excerpt 是「【财富管理】+原标题」占位，
+  // 渲染时 summary 回退用 excerpt → 若不剥离标签前缀比较，这类复读卡片会绕过守卫。
+  const title = "深夜，利空突袭，黄金直线跳水！美联储主席沃什释放鹰派信号";
+  const rolling: ArticleInput[] = [
+    mkArticle({
+      url: "https://h/tag1",
+      title,
+      category: "finance",
+      summary: "",
+      excerpt: `【财富管理】${title}`,
+      sourceId: "media-src",
+    }),
+  ];
+  mergeRollingIntoReport(report, rolling, tierMap);
+  const urls = report.sections.policy_market.map((i) => i.url);
+  assert.ok(
+    !urls.includes("https://h/tag1"),
+    "「【标签】+标题」的复读摘要应被守卫拦下（剥离前缀后与标题相同）",
+  );
+});
+
 test("无摘要时摘录 excerpt 前 90 字；无摘要且无正文则跳过", () => {
   const report = { ...emptyReport, sections: { ...emptyReport.sections, tech: [] as ReportItem[] } };
   const rolling: ArticleInput[] = [

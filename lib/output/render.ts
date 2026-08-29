@@ -1312,6 +1312,21 @@ export function mergeRollingIntoReport(
     }
     if (!summary) summary = (a.excerpt || "").slice(0, 90).trim();
     if (!summary) continue; // 无摘要且无正文 → 跳过（避免空卡片）
+    // 退化卡片守卫（2026-08-29）：有效摘要若与标题**实质相同** → 只是标题复读，跳过。
+    // 比较前先剥离开头的【栏目/业务线】标签前缀：历史库里大量条目的 summary 是
+    // 「【财富管理】+ 原标题」（如「【财富管理】深夜，利空突袭，黄金直线跳水！…」），
+    // 若只做严格相等比较会被标签前缀绕过（2026-08-29 实跑实测：biz_insight 20 条全是此类）。
+    // 来源：lib/ingest/merge.ts 的 excerpt fallback（无 excerpt 时用 title 前 90 字符占位）。
+    // 实测方案A 下新并入的 149 条中 96 条（64.4%）属此类，占满板块上限会稀释有效信息，
+    // 违反 PRINCIPLES 原则 2（信息密度）。
+    const stripTagPrefix = (s: string) => s.replace(/^(\s*【[^】]*】\s*)+/, "").trim();
+    const titleText = stripTagPrefix(a.title_cn || a.title || "");
+    const summaryText = stripTagPrefix(summary);
+    if (
+      titleText &&
+      (summaryText === titleText || summaryText === titleText.slice(0, 90))
+    )
+      continue;
     extra[sec].push({
       url: a.url,
       title_cn: a.title_cn || a.title || "",
