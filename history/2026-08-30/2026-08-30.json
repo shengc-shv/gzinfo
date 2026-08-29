@@ -1,0 +1,771 @@
+{
+  "date": "2026-08-30",
+  "hero_line": "楼市全链条改革叠加房贷40年新规落地，分行需重新校准住房金融与零售财富配置节奏。",
+  "must_read": [
+    {
+      "title": "楼市全链条改革多部门同频发力",
+      "why": "土地、金融、销售各环节同步调整，分行需重新校准住房按揭、开发贷与配套财富产品的节奏，抓紧窗口期抢客户。",
+      "url": "https://www.stcn.com/article/detail/4161508.html"
+    },
+    {
+      "title": "数字人民币运营机构再扩容",
+      "why": "零售支付与商户收单场景即将扩容，财富、信用卡与客群经营条线需提前对接场景、抢占高频流量入口。",
+      "url": "https://finance.sina.com.cn/jjxw/2026-08-30/doc-inipztiz8427507.shtml"
+    },
+    {
+      "title": "房贷最长期限延至40年",
+      "why": "直接影响广州按揭产品定价与客户分层，叠加南沙与大湾区刚需客群，住房金融条线需率先制定差异化授信与还款方案。",
+      "url": "https://news.southcn.com/node_812903b83a/3a99d4b188.shtml"
+    },
+    {
+      "title": "沃什释放加息信号、外资关注人民币配置",
+      "why": "全球流动性预期逆转将传导至外币理财、跨境配置与代销权益类产品，分行财富与私行条线需前置提示汇率与久期风险。",
+      "url": "https://finance.eastmoney.com/a/202608293859092920.html"
+    },
+    {
+      "title": "公募代销榜广发反超易方达登顶",
+      "why": "财富货架头部格局生变，分行代销合作权重需重估，可借机优化产品池与营销话术，强化对一线销售的能力输出。",
+      "url": "https://finance.eastmoney.com/a/202608293859101677.html"
+    }
+  ],
+  "insights": [
+    {
+      "topic": "跟进广州公积金缴存基数调整",
+      "tags": [
+        "住房金融",
+        "代发"
+      ],
+      "impact": "9月1日起广州公积金缴存基数下限上调，缴存客群结构与月供能力同步变化，影响按揭受理与代发工资测算。",
+      "action": "本周内梳理存量公积金缴存客户名单，联动个贷与代发团队统一口径，对接最新缴存证明并更新授信测算。",
+      "sources": [
+        {
+          "title": "9月1日起广州住房公积金缴存基数下限将调整",
+          "url": "https://news.dayoo.com/guangzhou/202608/29/139995_54997453.htm"
+        },
+        {
+          "title": "广州下月起提高最低工资标准",
+          "url": "https://news.dayoo.com/guangzhou/202608/29/139995_54997454.htm"
+        }
+      ]
+    },
+    {
+      "topic": "借势广发基金登顶优化财富货架",
+      "tags": [
+        "财富",
+        "私行"
+      ],
+      "impact": "广发基金业绩反超易方达，代销合作权重迎来调整窗口，财富条线可借机提升头部产品配置比例与一线销售信心。",
+      "action": "本周召开财富货架重检会，将广发系绩优产品纳入重点推荐池并设计配套定投话术，覆盖贵宾以下客群。",
+      "sources": [
+        {
+          "title": "68家公募上半年\"赚钱榜\"出炉：广发反超易方达登顶，招商、博时跌出\"十强\"",
+          "url": "https://finance.eastmoney.com/a/202608293859101677.html"
+        }
+      ]
+    },
+    {
+      "topic": "广州土地出让活跃前置按揭布局",
+      "tags": [
+        "住房金融",
+        "客群"
+      ],
+      "impact": "广州单日出让三宗宅地收金118.3亿元，新房供应放量将带动后续按揭投放与开发商综合金融服务需求。",
+      "action": "本周摸排三宗地块对应开发商与代销渠道，安排客户经理提前接洽，按揭与开发贷联动推进。",
+      "sources": [
+        {
+          "title": "广州日推三宗宅地收118.3亿元",
+          "url": "https://news.dayoo.com/guangzhou/202608/29/139995_54997451.htm"
+        }
+      ]
+    },
+    {
+      "topic": "民营企业融湾出海配套跨境服务",
+      "tags": [
+        "私行",
+        "客群"
+      ],
+      "impact": "广州民营中小企业融湾出海获政策精准对接，跨境结算、外贸贷与外币资产配置需求集中释放，分行对私业务可联动拓客。",
+      "action": "本周梳理辖内出海企业高管名单，私行与财富团队上门对接，提供跨境账户、外币理财与个人授信一揽子方案。",
+      "sources": [
+        {
+          "title": "精准对接，助力民营企业融湾出海、链通全球",
+          "url": "https://news.dayoo.com/guangzhou/202608/29/139995_54997484.htm"
+        }
+      ]
+    },
+    {
+      "topic": "数字人民币扩容抢支付场景",
+      "tags": [
+        "科技金融",
+        "客群"
+      ],
+      "impact": "新一批银行接入数字人民币运营体系，零售支付、商户收单与信用卡场景面临重塑，先行者将获得高频流量与年轻客群。",
+      "action": "本周对接运营机构接入节奏，重点拓展南沙商圈与高校场景，配套商户收单费率优惠与信用卡绑卡权益。",
+      "sources": [
+        {
+          "title": "数字人民币业务运营机构为何再扩容",
+          "url": "https://finance.sina.com.cn/jjxw/2026-08-30/doc-inipztiz8427507.shtml"
+        }
+      ]
+    }
+  ],
+  "sections": {
+    "gz_local": [
+      {
+        "url": "https://news.dayoo.com/guangzhou/202608/29/139995_54997453.htm",
+        "title_cn": "9月1日起广州住房公积金缴存基数下限将调整",
+        "source": "广州日报·大洋网",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "08/29",
+        "summary": "广州公积金缴存基数下限9月调整，代发与个税联动，建议跟进受影响缴存客户的服务衔接。",
+        "importance": 2,
+        "rank": 1,
+        "tags": [
+          "信贷"
+        ],
+        "locale": "gz"
+      },
+      {
+        "url": "https://www.stcn.com/article/detail/4155620.html",
+        "title_cn": "广州农商银行：上半年营收净利双增，净息差同比提升",
+        "source": "证券时报",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "08/28",
+        "summary": "广州农商行上半年营收净利双增、净息差提升，本地同业经营向好，可作为区域市场对标。",
+        "importance": 2,
+        "rank": 2,
+        "tags": [],
+        "locale": "gz"
+      },
+      {
+        "url": "https://news.dayoo.com/guangzhou/202608/28/139995_54997383.htm",
+        "title_cn": "广州调整住房公积金最低缴存基数：自2026年9月1日起由2500元调整为2680元",
+        "source": "广州日报·大洋网",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "08/28",
+        "summary": "广州公积金最低缴存基数9月上调至2680元，影响代发工资与个税口径，建议跟进缴存客户工资代发服务。",
+        "importance": 2,
+        "rank": 3,
+        "tags": [
+          "信贷"
+        ],
+        "locale": "gz"
+      },
+      {
+        "url": "https://news.dayoo.com/guangzhou/202608/28/139995_54997308.htm",
+        "title_cn": "“穗八条”红利释放，广州楼市成交持续向好，宅地溢价成交",
+        "source": "广州日报·大洋网",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "08/28",
+        "summary": "穗八条政策红利释放，广州楼市成交持续向好，分行应加快一手楼按揭渠道铺排。",
+        "importance": 2,
+        "rank": 4,
+        "tags": [],
+        "locale": "gz"
+      }
+    ],
+    "biz_insight": [
+      {
+        "url": "https://finance.eastmoney.com/a/202608293859101677.html",
+        "title_cn": "68家公募上半年\"赚钱榜\"出炉：广发反超易方达登顶，招商、博时跌出\"十强\"",
+        "title_orig": "68家公募上半年\"赚钱榜\"出炉：广发反超易方达登顶，招商、博时跌出\"十强\"",
+        "source": "东方财富",
+        "source_type": "media",
+        "date": "08/29",
+        "summary": "所以呢：公募代销榜单格局生变，财富条线需重新评估货架竞争力。广发基金上半年赚钱榜反超易方达登顶，招商、博时跌出十强，代销合作权重或迎调整窗口。",
+        "importance": 3,
+        "rank": 1,
+        "tags": [
+          "财富",
+          "竞对动态"
+        ],
+        "locale": "national"
+      },
+      {
+        "url": "https://www.stcn.com/article/detail/4161515.html",
+        "title_cn": "重大信号！美联储，加息大消息！下周公布这项数据",
+        "source": "证券时报",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "08/29",
+        "summary": "美联储加息大消息下周公布，全球流动性预期变化，分行应关注客户资产配置与汇率风险提示。",
+        "importance": 2,
+        "rank": 2,
+        "tags": [],
+        "locale": "national"
+      },
+      {
+        "url": "https://www.stcn.com/article/detail/4161481.html",
+        "title_cn": "四大行半年报来了！派息率31%，合计分红超1900亿！净息差集体企稳…来看五大看点",
+        "source": "证券时报",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "08/29",
+        "summary": "四大行半年报派息率31%、合计分红超1900亿、净息差集体企稳，行业盈利韧性足，可作零售经营对标。",
+        "importance": 2,
+        "rank": 3,
+        "tags": [],
+        "locale": "national"
+      },
+      {
+        "url": "https://www.stcn.com/article/detail/4155726.html",
+        "title_cn": "三部门完善商品房销售制度 实现“所见即所得”",
+        "source": "证券时报",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "08/29",
+        "summary": "三部门完善商品房销售制度实现所见即所得，销售资金监管趋严，分行按揭业务需适配新规。",
+        "importance": 2,
+        "rank": 4,
+        "tags": [],
+        "locale": "national"
+      },
+      {
+        "url": "https://finance.eastmoney.com/a/202608293859092920.html",
+        "title_cn": "沃什杰克逊霍尔首秀震惊市场：美联储要准备开始加息吗？",
+        "source": "东方财富",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "08/29",
+        "summary": "沃什杰克逊霍尔首秀释放加息信号，全球利率环境趋紧，分行应提示客户资产配置与汇率风险。",
+        "importance": 2,
+        "rank": 5,
+        "tags": [],
+        "locale": "national"
+      },
+      {
+        "url": "https://www.cnfin.com/yw-lb/detail/20260829/4462259_1.html",
+        "title_cn": "沃什：美国通胀仍然过高 美联储应主要聚焦于物价",
+        "source": "新华财经",
+        "source_type": "official",
+        "tier": "T1.5",
+        "date": "08/29",
+        "summary": "美联储主席沃什称通胀仍高、应聚焦物价，加息预期强化，全球资产配置环境趋紧，分行应提示汇率与投资风险。",
+        "importance": 2,
+        "rank": 6,
+        "tags": [],
+        "locale": "national"
+      },
+      {
+        "url": "https://news.dayoo.com/guangzhou/202608/29/139995_54997484.htm",
+        "title_cn": "精准对接，助力民营企业融湾出海、链通全球",
+        "source": "广州日报·大洋网",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "08/29",
+        "summary": "民营中小企业融湾出海、链通全球获精准对接，分行可配套跨境结算、外贸贷与出海客群经营。",
+        "importance": 2,
+        "rank": 7,
+        "tags": [],
+        "locale": "national"
+      },
+      {
+        "url": "https://news.dayoo.com/guangzhou/202608/29/139995_54997454.htm",
+        "title_cn": "广州下月起提高最低工资标准",
+        "source": "广州日报·大洋网",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "08/29",
+        "summary": "广州下月提高最低工资标准，影响代发客群结构与社保基数，分行可跟进工资代发与客群分层。",
+        "importance": 2,
+        "rank": 8,
+        "tags": [],
+        "locale": "national"
+      }
+    ],
+    "policy_market": [
+      {
+        "url": "https://m.21jingji.com/article/20260829/herald/89dafec4b39fe8fc5a7348a95ce10af7.html",
+        "title_cn": "一地发布公积金新政，异地贷款范围扩展至全国",
+        "title_orig": "一地发布公积金新政，异地贷款范围扩展至全国",
+        "source": "21世纪经济报道·金融",
+        "source_type": "media",
+        "date": "08/29",
+        "summary": "所以呢：异地公积金贷款放开将激活跨城刚需客群，住房金融条线需更新个贷产品话术。某地公积金新政将异地贷款范围扩展至全国，跨城缴存职工可在当地申请公积金贷款。",
+        "importance": 2,
+        "rank": 1,
+        "tags": [
+          "住房金融",
+          "市场",
+          "信贷",
+          "客群"
+        ],
+        "locale": "national"
+      },
+      {
+        "url": "https://www.investing.com/news/economy-news/warsh-at-jackson-hole-8-key-takeaways-4881998",
+        "title_cn": "Warsh在杰克逊霍尔年会讲话：八大要点",
+        "title_orig": "Warsh at Jackson Hole: 8 key takeaways",
+        "source": "Investing.com News",
+        "source_type": "media",
+        "date": "08/29",
+        "summary": "所以呢：美联储人事信号叠加通胀路径表态，下一步观察其对人民币汇率与外币理财配置的影响。Warsh在杰克逊霍尔年会讲话释放八大要点，涵盖通胀、降息节奏及独立性等议题。",
+        "importance": 2,
+        "rank": 2,
+        "tags": [
+          "市场",
+          "客群"
+        ],
+        "locale": "national"
+      },
+      {
+        "url": "https://finance.sina.com.cn/jjxw/2026-08-28/doc-inipwait9052158.shtml",
+        "title_cn": "A股突变，全天跳水！背后发生了什么？",
+        "title_orig": "A股突变，全天跳水！背后发生了什么？",
+        "source": "新浪财经·A股",
+        "source_type": "media",
+        "date": "08/28",
+        "summary": "所以呢：A股放量跳水或将放大客户避险情绪，财富客群需做好净值波动沟通预案。8月28日A股全天跳水收跌，多板块回调，成交放大。",
+        "importance": 2,
+        "rank": 3,
+        "tags": [
+          "市场",
+          "客群"
+        ],
+        "locale": "national"
+      },
+      {
+        "url": "https://finance.sina.com.cn/jjxw/2026-08-30/doc-inipztiz8427507.shtml",
+        "title_cn": "数字人民币业务运营机构为何再扩容",
+        "title_orig": "数字人民币业务运营机构为何再扩容",
+        "source": "新浪财经·A股",
+        "source_type": "media",
+        "date": "08/30",
+        "summary": "所以呢：数字人民币运营机构再度扩容，零售条线需关注支付场景对接与商户收单布局。监管层推动数字人民币运营机构再扩容，新一批银行接入在即。",
+        "importance": 1,
+        "rank": 4,
+        "tags": [
+          "监管合规",
+          "科技金融"
+        ],
+        "locale": "national"
+      },
+      {
+        "url": "https://www.stcn.com/article/detail/4161508.html",
+        "title_cn": "多部门同频，楼市迎全链条改革，解读来了→",
+        "source": "证券时报",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "08/29",
+        "summary": "多部门同频推进楼市全链条改革，涉及土地、金融、销售各环节，分行应紧跟政策节奏调整信贷策略。",
+        "importance": 2,
+        "rank": 5,
+        "tags": [],
+        "locale": "national"
+      },
+      {
+        "url": "https://news.southcn.com/node_812903b83a/3a99d4b188.shtml",
+        "title_cn": "个人房贷最长期限从30年延长到40年，银行会怎样跟进？",
+        "source": "南方网·经济",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "08/29",
+        "summary": "个人房贷最长30年延至40年，零售信贷迎政策窗口，分行应跟进产品承接与存量客户转化。",
+        "importance": 2,
+        "rank": 7,
+        "tags": [
+          "信贷"
+        ],
+        "locale": "national"
+      },
+      {
+        "url": "https://news.southcn.com/node_812903b83a/d3d4411487.shtml",
+        "title_cn": "地方附加税法公开征求意见 地方税改革迎来新进展",
+        "source": "南方网·经济",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "08/29",
+        "summary": "地方附加税法公开征求意见，地方税制改革推进，分行可关注税收征管变化对代发与对公业务影响。",
+        "importance": 2,
+        "rank": 8,
+        "tags": [],
+        "locale": "national"
+      },
+      {
+        "url": "https://finance.eastmoney.com/a/202608293858978022.html",
+        "title_cn": "多部委集体发力稳楼市这轮政策“组合拳”力度几何？",
+        "source": "东方财富",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "08/29",
+        "summary": "多部委集体发力稳楼市，政策组合拳力度引关注，分行应把握政策窗口推进按揭与开发贷业务。",
+        "importance": 2,
+        "rank": 10,
+        "tags": [],
+        "locale": "national"
+      },
+      {
+        "url": "https://www.cnfin.com/yw-lb/detail/20260829/4462278_1.html",
+        "title_cn": "新华解码|构建房地产发展新模式，信贷管理这样改革完善",
+        "source": "新华财经",
+        "source_type": "official",
+        "tier": "T1.5",
+        "date": "08/29",
+        "summary": "构建房地产发展新模式下的信贷管理改革路径明确，涉及开发贷、按揭、租赁贷等，分行应关注细则落地。",
+        "importance": 2,
+        "rank": 11,
+        "tags": [
+          "信贷"
+        ],
+        "locale": "national"
+      },
+      {
+        "url": "https://www.stcn.com/article/detail/4153528.html",
+        "title_cn": "两部门：个人住房贷款期限延至最长40年",
+        "source": "证券时报",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "08/28",
+        "summary": "央行、金监总局联合印发《关于改革完善房地产信贷管理 推动加快构建房地产发展新模式的意见》：个人住房贷款最长期限由30年延长至40年，给予借贷双方更大灵活度，具体期限由购房人与银行协商；据测算百万房贷（利率约3%、等额本息）月供可降约600元、年省现金流约7600元。同步明确：开发贷实行主办银行制；现房销售放贷在销售备案后、预售在竣工备案后；存量房贷借款人阶段性还款困难的可与银行协商延期/展期/延迟还本。建议分行零售条线评估“前N年只还息”等灵活还款产品，并梳理存量按揭客户重定价与重组触达，承接释放出的购房与改善性需求。",
+        "importance": 2,
+        "rank": 14,
+        "tags": [
+          "信贷"
+        ],
+        "locale": "national"
+      },
+      {
+        "url": "https://www.stcn.com/article/detail/4150350.html",
+        "title_cn": "密集上新 多城优化调整住房公积金政策",
+        "source": "证券时报",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "08/28",
+        "summary": "多城密集优化公积金政策，助力住房消费，分行可结合本地公积金调整跟进缴存客户服务与按揭联动。",
+        "importance": 2,
+        "rank": 16,
+        "tags": [
+          "信贷"
+        ],
+        "locale": "national"
+      },
+      {
+        "url": "https://www.stcn.com/article/detail/4149230.html",
+        "title_cn": "降低居民购房成本 多地推出住房贷款贴息政策",
+        "source": "证券时报",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "08/28",
+        "summary": "年内超20城落地房贷贴息直接降居民购房成本；分行按揭条线应跟踪本地是否跟进，提前储备贴息客群方案把握刚需与改善型贷款窗口。",
+        "importance": 2,
+        "rank": 17,
+        "tags": [
+          "信贷"
+        ],
+        "locale": "national"
+      }
+    ],
+    "tech": [],
+    "ipo": []
+  },
+  "risk": {
+    "topic": "美联储加息预期冲击外币资产",
+    "evidence": "沃什在杰克逊霍尔首秀明确表态通胀仍高、美联储应聚焦物价，加息预期骤升。",
+    "impact": "外币理财与跨境配置收益倒挂风险加大；私行客户外币资产面临汇兑与久期双重波动；财富条线代销QDII与外币基金净值回撤压力上升；风控部需关注外币授信客户的还款能力变化。",
+    "action": "财富部本周下调外币理财推荐权重并前置久期风险提示；私行部梳理大额美元敞口客户并提供汇率对冲建议；风控部联动对外币按揭与贸易融资客户做压力测试。",
+    "source": "T1",
+    "sources": [
+      {
+        "title": "沃什杰克逊霍尔首秀震惊市场：美联储要准备开始加息吗？",
+        "url": "https://finance.eastmoney.com/a/202608293859092920.html"
+      },
+      {
+        "title": "沃什：美国通胀仍然过高 美联储应主要聚焦于物价",
+        "url": "https://www.cnfin.com/yw-lb/detail/20260829/4462259_1.html"
+      }
+    ]
+  },
+  "stock_recap": {
+    "us": {
+      "overview": "美股盘面分化，AI与科技股情绪承压，委内瑞拉石油协议提振能源。",
+      "sectors": [
+        "能源：特朗普宣布与委内瑞拉达成协议，油气板块走强",
+        "科技：OpenAI与SpaceX并购及AI焦虑发酵，科技股承压",
+        "半导体：AI投资逻辑受质疑，板块估值面临调整",
+        "地缘：伊朗呼吁去美元化，贸易格局变化引发关注"
+      ],
+      "spoken": "美股盘面分化，AI与科技股情绪承压，委内瑞拉石油协议提振能源板块。OpenAI收购及AI焦虑发酵，科技股明显走弱，伊朗去美元化言论也影响市场情绪。",
+      "meta": {
+        "source": "CNBC Top Stories",
+        "crossCheck": "新浪行情",
+        "date": "2026-08-29"
+      },
+      "indices": [
+        {
+          "name": "道琼斯",
+          "value": "53559.99",
+          "changePct": "-0.02%"
+        },
+        {
+          "name": "纳斯达克",
+          "value": "26402.42",
+          "changePct": "-0.52%"
+        },
+        {
+          "name": "标普500",
+          "value": "7711.76",
+          "changePct": "-0.25%"
+        }
+      ]
+    },
+    "aShare": {
+      "overview": "A股结构性行情延续，半导体存储活跃，券商业绩亮眼但AI板块承压。",
+      "sectors": [
+        "半导体存储：长鑫科技半年报亮眼，外资看好国产存储",
+        "券商：5家券商半年净利破百亿，业绩洗牌",
+        "覆铜板：龙头年内第七次涨价，产业链跟涨",
+        "AI板块：抛售引发估值调整与逻辑失效争议",
+        "地产：商品住房销售制度改革带来新变化"
+      ],
+      "spoken": "A股结构性行情延续，半导体存储板块活跃，长鑫科技半年报获外资看好。券商行业业绩亮眼，五家半年净利破百亿，覆铜板龙头再次提价。AI板块则面临估值与逻辑的双重争议。",
+      "meta": {
+        "source": "东方财富",
+        "crossCheck": "新浪行情",
+        "date": "2026-08-30"
+      },
+      "indices": [
+        {
+          "name": "上证指数",
+          "value": "3952.18",
+          "changePct": "-0.11%"
+        },
+        {
+          "name": "深证成指",
+          "value": "13953.07",
+          "changePct": "-0.68%"
+        },
+        {
+          "name": "创业板指",
+          "value": "3424.40",
+          "changePct": "-1.41%"
+        }
+      ]
+    },
+    "hk": {
+      "overview": "恒生指数收报25584.79点（+0.07%）；恒生科技收报4605.15点（-0.33%）。",
+      "sectors": [],
+      "spoken": "恒生指数收报25584.79点（+0.07%）；恒生科技收报4605.15点（-0.33%）。",
+      "meta": {
+        "source": "新浪财经·港股",
+        "crossCheck": "新浪行情",
+        "date": "2026-08-29"
+      },
+      "sourceReport": {
+        "title": "港股收评：恒指涨0.07% 科指跌0.33% 科网股分化 黄金股逆势上涨",
+        "url": "https://finance.sina.com.cn/stock/hkstock/marketalerts/2026-08-28/doc-inipwhrt5709607.shtml"
+      },
+      "indices": [
+        {
+          "name": "恒生指数",
+          "value": "25584.79",
+          "changePct": "+0.07%"
+        },
+        {
+          "name": "恒生科技",
+          "value": "4605.15",
+          "changePct": "-0.33%"
+        }
+      ]
+    },
+    "quoteChannel": "新浪行情",
+    "quoteDate": "2026-08-28"
+  },
+  "stock_news": [
+    {
+      "url": "https://finance.eastmoney.com/a/202608293859092920.html",
+      "title_cn": "沃什杰克逊霍尔首秀震惊市场：美联储要准备开始加息吗？",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "08/29",
+      "summary": "美联储理事沃什在杰克逊霍尔全球央行年会上首次发表演讲，其表态引发市场震动，外界关注美联储是否会重新进入加息周期。",
+      "importance": 3,
+      "rank": 0,
+      "tags": [
+        "政策",
+        "美联储"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202608293858894079.html",
+      "title_cn": "长鑫科技上市后首份半年报亮眼外资看好国产存储资产",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "08/29",
+      "summary": "国产存储芯片厂商长鑫科技披露上市后首份半年报，业绩表现亮眼；外资机构表态看好中国国产存储资产。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "半导体",
+        "财报"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202608293859110932.html",
+      "title_cn": "10天翻倍牛股业绩出炉！公司：股价已严重偏离基本面！",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "08/29",
+      "summary": "一家10个交易日股价翻倍的A股牛股披露最新业绩，公司公告称当前股价已严重偏离基本面，提示投资风险。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "财报",
+        "风险提示"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202608283858800459.html",
+      "title_cn": "创业板首家晶圆制造企业取得IPO注册批文！",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "08/28",
+      "summary": "创业板首家晶圆制造企业获得IPO注册批文，即将进入发行上市流程。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "半导体",
+        "IPO"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202608293859113056.html",
+      "title_cn": "创纪录！5家券商半年净利破百亿业绩排名深度洗牌",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "08/29",
+      "summary": "2025年上半年A股5家券商净利润突破百亿元，行业业绩排名前列券商发生明显洗牌。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "券商",
+        "财报"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0828/2026082804284.pdf",
+      "title_cn": "Announcements and Notices - [Interim Results]",
+      "source": "港交所披露易",
+      "source_type": "media",
+      "date": "08/28",
+      "summary": "港交所披露易发布某上市公司中期业绩公告（标题未含具体公司名）。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "财报",
+        "港股"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0828/2026082804282.pdf",
+      "title_cn": "Announcements and Notices - [Interim Results]",
+      "source": "港交所披露易",
+      "source_type": "media",
+      "date": "08/28",
+      "summary": "港交所披露易发布某上市公司中期业绩公告（标题未含具体公司名）。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "财报",
+        "港股"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0828/2026082804280.pdf",
+      "title_cn": "Announcements and Notices - [Interim Results]",
+      "source": "港交所披露易",
+      "source_type": "media",
+      "date": "08/28",
+      "summary": "港交所披露易发布某上市公司中期业绩公告（标题未含具体公司名）。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "财报",
+        "港股"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0828/2026082804276.pdf",
+      "title_cn": "Announcements and Notices - [Interim Results]",
+      "source": "港交所披露易",
+      "source_type": "media",
+      "date": "08/28",
+      "summary": "港交所披露易发布某上市公司中期业绩公告（标题未含具体公司名）。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "财报",
+        "港股"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0828/2026082804268.pdf",
+      "title_cn": "Announcements and Notices - [Interim Results]",
+      "source": "港交所披露易",
+      "source_type": "media",
+      "date": "08/28",
+      "summary": "港交所披露易发布某上市公司中期业绩公告（标题未含具体公司名）。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "财报",
+        "港股"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/08/29/k-shaped-economy-c-shaped-e-shape.html",
+      "title_cn": "K, C or E? Why economists can’t agree on the shape of today’s economy",
+      "source": "CNBC Top Stories",
+      "source_type": "media",
+      "date": "08/29",
+      "summary": "CNBC报道指出，当前美国经济究竟是K型、C型还是E型走势，经济学家之间存在分歧。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "宏观经济",
+        "美国"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.investing.com/news/stock-market-news/russia-stocks-lower-at-close-of-trade-moex-russia-index-unchanged-4881999",
+      "title_cn": "Russia stocks lower at close of trade; MOEX Russia Index unchanged",
+      "source": "Investing.com News",
+      "source_type": "media",
+      "date": "08/29",
+      "summary": "Investing.com报道，俄罗斯股市当日收跌，MOEX俄罗斯指数基本持平。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "俄罗斯",
+        "股市"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    }
+  ]
+}
