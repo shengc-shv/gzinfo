@@ -20,6 +20,12 @@ const IPO_KEYWORDS = [
   "public offer", "initial public offering",
 ];
 
+/** P1③ 披露易占位公告判定：整条标题仅为 [XXX] 方括号占位（无公司名），如 "[Interim Results]"/"[List of Directors]"。
+ * 这类公告对零售分管行长零信息量，且会被送进 AI 归纳浪费额度，直接在采集端丢弃。 */
+export function isHkexPlaceholderTitle(title: string): boolean {
+  return /^\[[^\]]{1,60}\]$/.test(title.trim());
+}
+
 export class HKEXStockCrawler extends BaseCrawler {
   /** 只保留最近 N 天公告（披露易接口返回 ~500 条，需窗口过滤避免淹没管线）。
    *  用 3 天而非 2 天：CI 多在周一/节后首跑，上一港股交易日是周五（距抓取日 3 个日历日），
@@ -60,6 +66,8 @@ export class HKEXStockCrawler extends BaseCrawler {
       for (const item of list) {
         const title = item.lTxt || item.sTxt || "";
         const shortTitle = item.sTxt || "";
+        // P1③ 丢弃无公司名的披露易占位公告（如 "[Interim Results]"），直接废弃不进管线
+        if (isHkexPlaceholderTitle(title)) continue;
         // 跳过 IPO 相关公告（避免与港交所IPO爬虫重复归桶）
         const lower = title.toLowerCase();
         if (IPO_KEYWORDS.some((k) => lower.includes(k))) continue;

@@ -819,13 +819,28 @@ const MARKET_BADGE: Record<string, { label: string; cls: string }> = {
 };
 
 
+/** P2⑤ 板块卡「所以呢」摘要上限 50 字（首句即结论/落点，截断优先保留首句完整）。
+ * 仅作用于板块卡（gz_local/biz/policy/tech/ipo），必读/商机/风险走其他渲染路径，不受影响。 */
+function capSummary(s: string, max = 50): string {
+  const t = (s || "").trim();
+  if (t.length <= max) return t;
+  const cut = t.slice(0, max);
+  const lastPunct = Math.max(
+    cut.lastIndexOf("。"),
+    cut.lastIndexOf("！"),
+    cut.lastIndexOf("？"),
+    cut.lastIndexOf("；"),
+  );
+  return (lastPunct > 4 ? cut.slice(0, lastPunct + 1) : cut) + "…";
+}
+
 export function renderReportItemHtml(
   item: ReportItem,
   showSource = true,
 ): string {
   const title = escapeHtml(item.title_cn || item.title_orig || "");
   const url = escapeHtml(item.url);
-  const summary = item.summary ? escapeHtml(item.summary) : "";
+  const summary = item.summary ? escapeHtml(capSummary(item.summary)) : "";
   const time = item.date ? escapeHtml(item.date) : "";
   const official = item.source_type === "official";
   const badge = official ? { label: "官方", cls: "src-official" } : { label: "媒体", cls: "src-media" };

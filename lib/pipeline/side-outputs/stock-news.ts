@@ -67,6 +67,27 @@ function collect(
 }
 
 /**
+ * P1④ 美股/港股 二次业务相关性过滤（纯函数，不耗 AI）。
+ * 只留能挂钩客群/财富/私行/信贷/市场涨跌的条目；砍掉纯地缘/海外个股等弱相关噪声
+ * （Buffett 96岁、伊朗去美元化、Trump 石油协议类）。A股为内地零售主战场，不过滤。
+ */
+const STOCK_BIZ_KW = [
+  "财富", "私行", "理财", "保险", "基金", "黄金", "贵金属", "存款", "房贷", "消费贷",
+  "经营贷", "信贷", "普惠", "客群", "高净值", "零售", "降息", "加息", "利率", "汇率",
+  "人民币", "港元", "结售汇", "QDII", "分红", "股息", "回购", "港股通", "南向", "北水",
+  "外资", "资金", "券商", "投行", "资本市场", "科创", "专精特新",
+];
+const STOCK_MARKET_KW = [
+  "涨", "跌", "收评", "收盘", "盘", "指数", "恒指", "上证", "纳指", "道指", "标普",
+  "板块", "成交", "市值", "业绩", "盈警", "盈喜", "财报", "破发", "创新高", "波动", "异动",
+];
+export function stockNewsRelevant(n: StockNewsItem): boolean {
+  if (n.market === "a-share") return true; // A股为内地零售主战场，不过滤
+  const t = `${n.title_cn || ""}${n.summary || ""}`;
+  return STOCK_BIZ_KW.some((k) => t.includes(k)) || STOCK_MARKET_KW.some((k) => t.includes(k));
+}
+
+/**
  * 生成股市消息清单并写入 report.stock_news。
  * 返回新 report（不 mutate 入参）。空输入 → 返回原 report。
  */
@@ -112,9 +133,17 @@ export async function buildStockNews(
       `🧹 股市动态剔除 ${news.length - dedupedNews.length} 条已在主板块出现的宏观政策条目`,
     );
   }
+  // P1④ 美股/港股 二次业务相关性过滤：砍掉纯地缘/海外个股等弱相关噪声（纯函数，不耗 AI）
+  const relNews = dedupedNews.filter(stockNewsRelevant);
+  if (relNews.length !== dedupedNews.length) {
+    ctx.log.info(
+      "stock-news",
+      `🧹 美股/港股弱相关过滤 ${dedupedNews.length - relNews.length} 条（纯地缘/海外个股噪声）`,
+    );
+  }
   ctx.log.info(
     "stock-news",
-    `📋 股市消息清单构建：${dedupedNews.filter((n) => n.market === "a-share").length} A股 / ${dedupedNews.filter((n) => n.market === "hk").length} 港股 / ${dedupedNews.filter((n) => n.market === "us").length} 美股`,
+    `📋 股市消息清单构建：${relNews.filter((n) => n.market === "a-share").length} A股 / ${relNews.filter((n) => n.market === "hk").length} 港股 / ${relNews.filter((n) => n.market === "us").length} 美股`,
   );
-  return { ...report, stock_news: dedupedNews };
+  return { ...report, stock_news: relNews };
 }
