@@ -3,7 +3,7 @@
  * 验证（2026-08-21 用户诉求）：
  *  - 历史符合要求条目（AI 相关、有摘要/可摘录）并入对应板块
  *  - 与今日成稿 URL 去重（今日优先）
- *  - ai_relevant===false 的历史条目不并入
+ *  - ai_relevant===false 的历史条目不并入；ai_relevant===null（未打标）的历史条目需过分行相关性门槛（tier!=="drop"）才并入（2026-08-29 方案③ 放宽）
  *  - 有摘要用摘要、无则摘录 excerpt 前 90 字
  *  - source_type 按 tier 推断（T1/T1.5 → official）
  *  - subcategory 映射为中文部门 tag（财富/信贷/私行/客群，无 gz-* 原始字段）
@@ -96,16 +96,35 @@ test("与今日成稿 URL 去重（今日优先）", () => {
   assert.equal(report.sections.policy_market[1].rank, 2);
 });
 
-test("仅 ai_relevant=true 的历史条目并入（false 与未打标 None 均排除）", () => {
+test("并入门槛三态（2026-08-29 方案③）：false 硬排除 / true 无条件并 / 未打标需过分行相关性门槛", () => {
   const report = { ...emptyReport, sections: { ...emptyReport.sections, policy_market: [] as ReportItem[] } };
   const rolling: ArticleInput[] = [
+    // 1) ai_relevant===false → 硬排除（与放宽前一致，始终是硬门槛）
     mkArticle({ url: "https://h/x", title: "某娱乐新闻", category: "finance", summary: "无关内容", sourceId: "media-src", relevant: false }),
+    // 2) ai_relevant===true → 无条件并入；自身评分再低（本例 drop 21）也不再过评分器
     mkArticle({ url: "https://h/y", title: "同业动态", category: "finance", summary: "相关摘要", sourceId: "media-src", relevant: true }),
-    mkArticle({ url: "https://h/z", title: "未打标条目", category: "finance", summary: "未判内容", sourceId: "media-src", relevant: undefined as unknown as boolean }), // 显式 None
+    // 3) 未打标 + 业务相关（消费贷贴息，评分 must_read 74 / 业务线[信贷]）→ 并入
+    mkArticle({
+      url: "https://h/z",
+      title: "六大行“升级”两类贷款贴息安排",
+      category: "finance",
+      summary: "提额扩面，消费贷与经营贷贴息",
+      sourceId: "media-src",
+      relevant: undefined as unknown as boolean,
+    }),
+    // 4) 未打标 + 噪声（个股财报，评分 drop 21）→ 挡住，守 08-21「宁缺毋滥」
+    mkArticle({
+      url: "https://h/w",
+      title: "九毛九上半年营收下降13.2%",
+      category: "finance",
+      summary: "主品牌主动闭店阶段基本结束",
+      sourceId: "media-src",
+      relevant: undefined as unknown as boolean,
+    }),
   ];
   mergeRollingIntoReport(report, rolling, tierMap);
-  assert.equal(report.sections.policy_market.length, 1);
-  assert.equal(report.sections.policy_market[0].url, "https://h/y");
+  const urls = report.sections.policy_market.map((i) => i.url).sort();
+  assert.deepEqual(urls, ["https://h/y", "https://h/z"], "true 无条件并入 + 未打标相关并入；false 与未打标噪声均排除");
 });
 
 test("无摘要时摘录 excerpt 前 90 字；无摘要且无正文则跳过", () => {

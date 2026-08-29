@@ -37,6 +37,8 @@ export type { SourceGroup, SubGroup, RawByCategory } from "./render/cards";
 import { TIER_COLORS, THEME_CSS } from "./render/theme";
 import type { AudioMeta } from "../audio/audio";
 import { selectTopMustRead } from "../ai/select-top";
+// 分行相关性评分器（纯函数、不调 LLM）：用于「未打标历史条目」的并入门槛（2026-08-29 方案③）
+import { scoreBranchRelevance } from "../ai/relevance-score";
 import { generateAudioHighlightScript, AUDIO_HIGHLIGHT_CSS } from "../feedback/inline-script";
 import { getReportTz } from "../utils";
 import type { Category, SourceDef } from "../sources/types";
@@ -1205,7 +1207,7 @@ const IPO_FLOW_RE =
  * 规则：
  * - 与今日成稿 URL 去重（今日优先）；
  * - 历史条目按发布时间倒序追加到板块末尾（今日 AI 条目保持 rank 在前）；
- * - ai_relevant===false（AI 判无关）的历史条目不并入；
+ * - ai_relevant===false（AI 判无关）的历史条目不并入；ai_relevant===null（未打标，retag-fill 覆盖低）的历史条目需过分行相关性门槛（评分器 tier!=="drop"）才并入（2026-08-29 方案③ 放宽，救 gz_local 空/板块偏薄，同时挡住个股财报类噪声）；
  * - summary 优先取历史库缓存摘要（预分析回填），否则摘录 excerpt；
  * - source_type 按源等级 tier 推断（T1/T1.5 → official，其余 → media）；
  * - tags 由 subcategory 映射为中文部门 tag（财富/信贷/私行/客群）。
@@ -1270,10 +1272,26 @@ export function mergeRollingIntoReport(
   const rankKey = new Map<string, number>(); // url → 发布时间戳，用于板块内排序
   for (const a of rolling) {
     if (!a.url || seen.has(a.url)) continue; // 今日已展示 → 跳过
-    // 「符合要求」= AI 判定与银行业务相关（预分析打标 ai_relevant=true）。
-    // 未打标（None）与明确无关（false）一律不并入——宁缺毋滥，
-    // 避免比亚迪车展/科大讯飞这类未判条目混入政策与市场面板（2026-08-21 用户）。
-    if (a.relevant !== true) continue;
+    // 「符合要求」三态（2026-08-29 方案③，放宽覆盖但守业务相关性）：
+    //  1. ai_relevant===true  → 无条件并入（与放宽前一致）；
+    //  2. ai_relevant===false → 排除（AI 明确判无关，始终是硬门槛）；
+    //  3. ai_relevant===null（未打标）→ 需过「分行相关性」门槛才并入（下方评分判定）。
+    // 背景：历史库 96% 未打标，放宽前条目池仅 25 条 → 板块几乎只含今日新条目、gz_local 常空。
+    // 但不能裸放行：实测 305 条未打标条目里 156 条是个股财报（九毛九/周六福/东方盛虹半年报）
+    // 与外文股市噪声，裸放行会把它们灌满政策与市场/业务启示，违反 08-21「宁缺毋滥」
+    // 与「业务启示必须能挂钩客群/财富/私行/信贷」的业务相关性红线。
+    // 故未打标条目卡 tier!=="drop"（实测：挡掉 156 条噪声，放行 149 条带业务线标签的相关条目）。
+    if (a.relevant === false) continue;
+    if (a.relevant !== true) {
+      const rel = scoreBranchRelevance({
+        title: a.title_cn || a.title || "",
+        category: a.category,
+        subcategory: a.subcategory,
+        sourceId: a.sourceId,
+        summary: a.summary,
+      });
+      if (rel.tier === "drop") continue;
+    }
     const sec = sectionOf(a);
     if (!sec) continue;
     const d = a.publishedAt ?? a.fetchedAt;
