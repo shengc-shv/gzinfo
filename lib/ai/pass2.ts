@@ -13,6 +13,7 @@ import { extractJson } from "./json-util";
 import { ALLOWED_TAGS, SECTIONS } from "./validator";
 import { buildPass2User, PASS2_SYSTEM } from "./prompts";
 import { rollUpTags } from "../classify/tag-rollup";
+import { dedupeSections } from "../output/dedupe-sections";
 import { type LlmRunner } from "./pass1";
 import type {
   DailyReport,
@@ -122,6 +123,9 @@ export async function runPass2(
       sections[sec].push(assembleItem({ base }, ai));
     }
   }
+  // 扎口：跨板块去重（2026-08-29）——同一事件只在一个板块出现，
+  // 避免房贷40年这类政策同时出现在政策/商机/股市等多个板块。
+  dedupeSections(sections);
 
   const insights = Array.isArray(parsed?.insights)
     ? parsed.insights

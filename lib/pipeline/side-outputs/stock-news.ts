@@ -15,6 +15,7 @@ import type { ArticleInput, DailyReport, StockNewsItem } from "../../types";
 import type { CrawledArticle } from "../../ingest/merge";
 import { filterByWindow } from "../../ingest/merge";
 import { analyzeStockNews, writeStockNews, loadStockNews } from "../../ai/stock-news-analysis";
+import { filterStockNewsAgainstSections } from "../../output/dedupe-sections";
 import type { DailyContext } from "../context";
 
 interface CrawledSubset {
@@ -102,9 +103,18 @@ export async function buildStockNews(
     news = await analyzeStockNews(rawNews);
     writeStockNews(ctx.date, news);
   }
+  // 2026-08-29 用户：房贷40年出现在「股市动态」很奇怪。
+  // 股市动态只承载市场/板块/个股信号——剔除已在主板块（政策/商机/本地等）出现的宏观政策条目。
+  const dedupedNews = filterStockNewsAgainstSections(news, report.sections);
+  if (dedupedNews.length !== news.length) {
+    ctx.log.info(
+      "stock-news",
+      `🧹 股市动态剔除 ${news.length - dedupedNews.length} 条已在主板块出现的宏观政策条目`,
+    );
+  }
   ctx.log.info(
     "stock-news",
-    `📋 股市消息清单构建：${news.filter((n) => n.market === "a-share").length} A股 / ${news.filter((n) => n.market === "hk").length} 港股 / ${news.filter((n) => n.market === "us").length} 美股`,
+    `📋 股市消息清单构建：${dedupedNews.filter((n) => n.market === "a-share").length} A股 / ${dedupedNews.filter((n) => n.market === "hk").length} 港股 / ${dedupedNews.filter((n) => n.market === "us").length} 美股`,
   );
-  return { ...report, stock_news: news };
+  return { ...report, stock_news: dedupedNews };
 }

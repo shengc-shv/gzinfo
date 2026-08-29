@@ -189,8 +189,8 @@ test("历史条目按发布时间倒序追加", () => {
 test("category=gz 严格过滤：标题含广州锚→gz_local；外地地名→policy_market；其余→业务启示", () => {
   const report = { ...emptyReport, sections: { ...emptyReport.sections, gz_local: [] as ReportItem[], biz_insight: [] as ReportItem[], policy_market: [] as ReportItem[] } };
   const rolling: ArticleInput[] = [
-    // 真广州（标题含海珠）→ gz_local
-    mkArticle({ url: "https://h/gz1", title: "广州海珠区发布词元八条", category: "gz", summary: "海珠区政策", sourceId: "gov-src" }),
+    // 真广州（标题含海珠 + 金融业务语义，2026-08-29 起要求业务相关性门槛）→ gz_local
+    mkArticle({ url: "https://h/gz1", title: "广州海珠区发布金融业词元八条", category: "gz", summary: "海珠区金融政策", sourceId: "gov-src" }),
     // 外地地名（上海）→ policy_market（全国政策），即使摘要提「广州」也不进 gz_local
     mkArticle({ url: "https://h/sh", title: "上海优化个人住房信贷政策", category: "gz", summary: "上海政策，分行应跟踪广州房贷", sourceId: "media-src" }),
     // 无锚（黄金理财）→ 业务启示
@@ -208,7 +208,7 @@ test("category=gz 严格过滤：标题含广州锚→gz_local；外地地名→
 test("finance 类但标题含广州锚（如广州市政府批复）→ gz_local", () => {
   const report = { ...emptyReport, sections: { ...emptyReport.sections, gz_local: [] as ReportItem[], policy_market: [] as ReportItem[] } };
   const rolling: ArticleInput[] = [
-    mkArticle({ url: "https://h/gz2", title: "广州市人民政府关于同意海珠区规划成果的批复", category: "finance", summary: "市政府批复", sourceId: "gov-src" }),
+    mkArticle({ url: "https://h/gz2", title: "广州市人民政府关于海珠区城市更新项目资金的批复", category: "finance", summary: "市政府批复", sourceId: "gov-src" }),
     mkArticle({ url: "https://h/pol", title: "央行宣布降准", category: "finance", summary: "全国政策", sourceId: "gov-src" }),
   ];
   mergeRollingIntoReport(report, rolling, tierMap);

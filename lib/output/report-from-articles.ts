@@ -8,6 +8,7 @@
  */
 import type { ArticleInput, DailyReport, ReportItem, ReportSectionKey } from "../types";
 import { rollUpTags } from "../classify/tag-rollup";
+import { dedupeSections } from "./dedupe-sections";
 
 /** 旧采集分类 → 新管线渲染板块（无 AI 兜底映射）。 */
 export function categoryToSection(cat?: string): ReportSectionKey {
@@ -62,5 +63,7 @@ export function buildNoAiReport(articles: ArticleInput[]): DailyReport {
     };
     sections[sec].push(item);
   }
+  // 扎口：跨板块去重（2026-08-29）——与 AI 路径（pass2）保持同一行为
+  dedupeSections(sections);
   return { date: "", hero_line: "", must_read: [], insights: [], sections };
 }

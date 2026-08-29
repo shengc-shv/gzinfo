@@ -21,7 +21,7 @@ import {
   CATEGORY_DIGEST_LABELS,
   TECH_MAIN_SUBS,
   sortByTierAndTime,
-  GZ_ANCHOR_RE,
+  isGzLocalCandidate,
   renderCardList,
   escapeHtml,
   type SourceGroup,
@@ -1223,7 +1223,9 @@ export function mergeRollingIntoReport(
     // 摘要里的「广州」是 AI 解读视角（「分行应跟踪广州房贷…」），不代表事件在广州。
     // tech/ipo 保持独立板块（demo：科技前沿、IPO动态 各自成栏）。
     if (a.category !== "tech" && a.category !== "ipo" && a.category !== "gd-ipo") {
-      if (GZ_ANCHOR_RE.test(title)) return "gz_local";
+      // 2026-08-29 加业务相关性门槛：仅「广州锚 + 与银行业务相关」进广州本地板块
+      // （植物园志愿者/公安通告/学校上新等本地生活政务不占该板块）
+      if (isGzLocalCandidate(title)) return "gz_local";
     }
     switch (a.category) {
       case "gz": {

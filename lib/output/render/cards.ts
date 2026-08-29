@@ -126,6 +126,20 @@ export function formatDate(d: Date | undefined): string {
 export const GZ_ANCHOR_RE =
   /广州|穗|天河|海珠|越秀|荔湾|白云|黄埔|番禺|南沙|增城|从化|花都|琶洲|珠江新城|白鹅潭|广州开发区|中新知识城/;
 
+/**
+ * 广州本地业务相关性红线（2026-08-29 用户拍板：广州本地板块须与客群/财富/私行/信贷挂钩）。
+ * 「广州本地」是稀缺位，植物园志愿者、公安暂停服务、学校上新这类本地生活政务
+ * 虽含广州锚，但与零售银行业务无关，不应占用该板块（宁缺毋滥的补充门槛）。
+ */
+export const GZ_BUSINESS_RE =
+  /银行|信贷|房贷|按揭|消费|理财|财富|私行|基金|保险|投资|金融|楼市|购房|房地产|房价|IPO|上市|融资|企业|商户|就业|消费券|补贴|利率|存款|黄金|代发|客群|公积金|税务|社保|外贸|出口|制造|经济|项目|商圈/;
+
+/** 是否为「广州本地板块」候选：内容含广州锚 + 与银行业务相关（两个条件都按内容判定）。 */
+export function isGzLocalCandidate(title: string, excerpt = ""): boolean {
+  const text = `${title} ${excerpt}`;
+  return GZ_ANCHOR_RE.test(text) && GZ_BUSINESS_RE.test(text);
+}
+
 /** 来源徽章（2026-08-21 重构 #12：来源降级为卡片左上角徽章，扫一眼即知可信度） */
 export function srcBadgeOf(a: ArticleInput): { label: string; cls: string } {
   const sid = a.sourceId || "";

@@ -69,6 +69,56 @@ export function titleSimilarityDice(a: string, b: string): number {
   return dice(titleBigrams(a), titleBigrams(b));
 }
 
+// ---------------------------------------------------------------------------
+// 事件指纹（2026-08-29）：合并「同事件不同措辞」
+// ---------------------------------------------------------------------------
+/**
+ * 背景：字面 bigram Dice 对「同事件不同措辞」几乎失效——实测「重磅！房贷期限延至40年」
+ * 与「央行两部门：房贷最长可贷40年」的 Dice 仅 0.21-0.29，远低于阈值 0.7，
+ * 导致同一政策被 4-7 家媒体各转述一次就各保留一条（用户反馈：房贷40年出现 7 次）。
+ *
+ * 方案：改用「显著关键词 + 数字锚点」签名。两标题共享 ≥2 个锚点即判为同一事件。
+ * 该判据已在本项目评分兜底（buildExecutiveFromScores）中验证有效。
+ */
+const EVENT_ANCHORS = [
+  "央行", "人民银行", "金融监管总局", "金监总局", "国务院", "证监会", "发改委", "财政部", "住建部", "外汇局", "美联储",
+  "房贷", "按揭", "抵押贷", "个贷", "住房贷款", "房地产信贷", "楼市", "购房", "房抵", "存量房贷", "商品房",
+  "消费贷", "经营贷", "小微贷", "普惠", "信贷", "LPR", "降息", "降准", "利率", "贴息",
+  "理财", "基金", "黄金", "保险", "存款", "资管", "信托", "REITs", "ETF", "债基",
+  "私行", "高净值", "家族信托", "客群", "获客", "新客", "开户", "代发", "信用卡", "养老",
+  "罚", "处罚", "违规", "整改", "通报", "不良", "逾期", "违约", "爆雷",
+  "IPO", "上市", "过会", "注册", "招股", "申购", "敲钟", "北交所", "科创板", "创业板",
+  "广州", "广东", "大湾区", "南沙", "粤",
+];
+
+/** 数字锚点：40年 / 30年 / 5000元 / 1.5% / 38万亿 等——用于区分不同力度的同类政策。 */
+function numericAnchors(title: string): string[] {
+  const out: string[] = [];
+  const re = /(\d+(?:\.\d+)?)\s*(年|个月|%|％|元|万元|亿元|万亿元|万亿|基点|bp|BP|倍|个百分点|‰)/g;
+  let m: RegExpExecArray | null;
+  while ((m = re.exec(title))) out.push(m[1] + m[2]);
+  return out;
+}
+
+/** 事件指纹：标题包含的显著锚点集合（关键词 + 数字锚点，数字锚点带 # 前缀区分）。 */
+export function eventFingerprint(title: string): Set<string> {
+  const fp = new Set<string>();
+  for (const k of EVENT_ANCHORS) if (title.includes(k)) fp.add(k);
+  for (const n of numericAnchors(title)) fp.add("#" + n);
+  return fp;
+}
+
+/** 两标题是否为「同一事件」：共享锚点数 ≥ minShared（默认 2）。 */
+export function sameEvent(a: string, b: string, minShared = 2): boolean {
+  if (!a || !b) return false;
+  const fa = eventFingerprint(a);
+  const fb = eventFingerprint(b);
+  if (fa.size === 0 || fb.size === 0) return false;
+  let shared = 0;
+  for (const k of fa) if (fb.has(k)) shared++;
+  return shared >= minShared;
+}
+
 /** tier 优先级排序权重（越小越优先保留）。 */
 function tierWeight(tier: SourceTier | undefined): number {
   if (tier === undefined) return SOURCE_TIERS.length; // 无等级垫底
@@ -110,6 +160,13 @@ export function dedupeByTitleSimilarity(
       }
       // 2) 标题相似度达阈值 → 归一簇（捕捉跨源同事件）
       if (titleSimilarity(a.title, reps[i].title) >= threshold) {
+        clusters[i].push(a);
+        placed = true;
+        break;
+      }
+      // 3) 事件指纹命中 → 归一簇（2026-08-29：捕捉「同事件不同措辞」，
+      //    字面 Dice 对这类改写几乎失效，实测仅 0.21-0.29）
+      if (sameEvent(a.title, reps[i].title)) {
         clusters[i].push(a);
         placed = true;
         break;

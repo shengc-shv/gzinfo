@@ -12,7 +12,7 @@
 import type { ArticleInput, DailyReport } from "../types";
 import type { Pass1Input } from "../ai/pass1";
 import {
-  GZ_ANCHOR_RE,
+  isGzLocalCandidate,
 } from "../output/render/cards";
 import { LIGHT_AI_SOURCES, LIGHT_AI_RAW_CAP } from "../ai/light-ai";
 import { generateDaily, makeSkipAiRunner } from "../ai/pipeline";
@@ -35,7 +35,9 @@ function toPass1Input(a: ArticleInput): Pass1Input {
     category: a.category,
     // gz_hint 提权（2026-08-21 第二梯队）：标题命中广州锚词 → 标记，降低被
     // 保留标准第2~4条门槛刷掉的概率，Pass 1 倾向判 locale=gz / section=gz_local。
-    gz_hint: GZ_ANCHOR_RE.test(a.title) || undefined,
+    // 2026-08-29 加业务相关性门槛：只对「广州锚 + 与客群/财富/私行/信贷挂钩」的内容
+    // 提权（植物园志愿者/公安通告/学校上新等本地生活政务不占广州本地名额）。
+    gz_hint: isGzLocalCandidate(a.title, a.excerpt ?? "") || undefined,
   };
 }
 
