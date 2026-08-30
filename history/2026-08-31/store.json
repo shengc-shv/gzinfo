@@ -1,111 +1,120 @@
 {
   "date": "2026-08-31",
-  "updatedAt": "2026-08-30T23:37:09.333Z",
+  "updatedAt": "2026-08-30T23:57:59.621Z",
   "executive": {
-    "hero_line": "房贷延期至40年与楼市全链条改革同频落地，叠加六大行净息差企稳，分行零售'信贷+财富'双线迎政策窗口。",
-    "spoken_hero": "今天三条主线同时落地：房贷最长延到40年，楼市全链条改革同步推进，六大行净息差企稳、分红超2200亿。对分行来说，信贷端要赶紧把产品和话术跟上，财富端则可借大行高分红的故事做资产配置，本周两条线都要动起来。",
+    "hero_line": "房地产信贷全链条改革落地，房贷期限延至40年与封顶预售并行，分行须同步重检按揭久期与项目准入。",
+    "spoken_hero": "楼市全链条改革今天正式落地，房贷最长期限从30年延至40年，封顶预售与现房销售同步推进，分行个贷与定价部门需尽快评估长周期按揭对净息差的影响，重检准入与首付逻辑。",
     "must_read": [
       {
-        "title": "房贷期限延至40年",
-        "why": "按揭供给侧再松绑，一线城市带看量回升，分行住房金融产品设计与存量客户转化须快速跟进。",
-        "url": "https://news.southcn.com/node_812903b83a/3a99d4b188.shtml"
+        "title": "资本市场政策加码支持楼市新模式",
+        "why": "REITs与并购工具扩容，分行公司条线可联动券商梳理存量资产盘活与并购融资机会，撬动对公与私行联动。",
+        "url": "https://www.stcn.com/article/detail/4161501.html"
       },
       {
-        "title": "楼市全链条改革",
-        "why": "土地、金融、销售全链条同步发力，地产链估值修复预期升温，分行代销端需提前备好风险揭示与适配话术。",
-        "url": "https://www.stcn.com/article/detail/4161508.html"
+        "title": "封顶预售与现房销售并行",
+        "why": "项目交付节点与开发商资质成为按揭审批新维度，分行可优先评估广州现房项目准入，规避烂尾带来的不良与声誉风险。",
+        "url": "https://www.cnfin.com/hg-lb/detail/20260831/4462511_1.html"
       },
       {
-        "title": "六大行净息差企稳",
-        "why": "国有大行盈利能力修复、合计分红超2200亿，财富端高分红配置叙事走强，可借势做强存续期理财与定投。",
-        "url": "https://www.cnfin.com/yw-lb/detail/20260831/4462475_1.html"
+        "title": "房贷期限延至最长40年",
+        "why": "长周期按揭直接拉低月供门槛但放大久期风险，分行需重检NIM测算与首付准入逻辑，防止优质客户被同业长周期产品截流。",
+        "url": "https://www.stcn.com/article/detail/4164743.html"
       },
       {
-        "title": "财富业务从卖产品转做配置",
-        "why": "行业经营范式切换，理财经理考核与培训体系可向AUM增速、配置率倾斜，分行财富转型节奏要提速。",
-        "url": "https://www.stcn.com/article/detail/4162903.html"
+        "title": "四大行半年报：净息差集体企稳",
+        "why": "行业盈利韧性释放积极信号，可作分行零售存款定价、产品结构与中收对标参考。",
+        "url": "https://www.stcn.com/article/detail/4161481.html"
+      },
+      {
+        "title": "8月公募基金发行降温",
+        "why": "客户风险偏好回落，财富条线需检视在售基金货架与定投话术，避免新发遇冷拖累代销中收。",
+        "url": "https://www.stcn.com/article/detail/4164759.html"
       }
     ],
-    "spoken_must_read": "房贷最长延到40年，一线带看量回升，分行住房金融产品与话术要尽快跟上。楼市全链条改革同步落地，地产链估值修复预期升温，代销端要提前做风险揭示。六大行净息差企稳、合计分红超2200亿，财富端高分红故事走强，存续期理财与定投可借势发力。行业从卖产品转向做配置，理财经理考核可向AUM增速、配置率倾斜，财富转型要提速。",
+    "spoken_must_read": "房贷期限延至40年，分行需重检净息差测算与首付准入。封顶预售与现房销售并行，按揭审批须前置项目交付节点与开发商资质。公募基金发行降温，财富条线应检视货架与定投话术防中收下滑。资本市场加码支持楼市新模式，公司条线可联动券商盘活存量资产。四大行净息差集体企稳，可作分行定价与中收对标参考。",
     "insights": [
       {
-        "topic": "房贷40年新规承接",
-        "impact": "按揭产品期限结构发生根本变化，分行需在额度测算、风险定价、月供压力测试上同步调整，避免优质客户流失至同业。",
-        "action": "本周完成40年期产品上线与话术统一，存量按揭客户经理可主动触达，提示改善型客户把握政策窗口。",
+        "topic": "长周期按揭客群再定位",
+        "impact": "40年期产品降低月供门槛，利好刚需与改善型客户提前入市，但分行需警惕久期拉长带来的早偿与不良尾部风险。",
+        "action": "本周启动存量按揭客户画像筛选，对收入稳定、首付比例35%以上的优质客群优先推送40年期产品；同步调整定价模型测算不同久期下的NIM敏感度。",
         "tag": [
           "住房金融",
           "信贷"
         ],
         "sources": [
           {
-            "title": "个人房贷最长期限从30年延长到40年，银行会怎样跟进？",
-            "url": "https://news.southcn.com/node_812903b83a/3a99d4b188.shtml"
-          }
-        ]
-      },
-      {
-        "topic": "高分红配置窗口",
-        "impact": "六大行合计派息超2200亿、派息率31%，为财富端提供稀缺的高分红底仓资产，利于私行客户做大类配置。",
-        "action": "财富部可考虑以国有大行股为底仓，搭配高股息策略基金，本周内推送给私行及高净值客户的资产配置方案。",
-        "tag": [
-          "财富",
-          "私行"
-        ],
-        "sources": [
-          {
-            "title": "四大行半年报来了！派息率31%，合计分红超1900亿！净息差集体企稳…来看五大看点",
-            "url": "https://www.stcn.com/article/detail/4161481.html"
+            "title": "两部门改革完善房地产信贷管理：个人住房贷款期限延至最长40年",
+            "url": "https://www.stcn.com/article/detail/4164743.html"
           },
           {
-            "title": "净息差企稳修复 分红超2200亿元——六大行上半年营收净利全员双增",
-            "url": "https://www.cnfin.com/yw-lb/detail/20260831/4462475_1.html"
+            "title": "封顶预售与现房销售并行 全链条夯实购房人权益保障",
+            "url": "https://www.cnfin.com/hg-lb/detail/20260831/4462511_1.html"
           }
         ]
       },
       {
-        "topic": "支付牌照动态监管收紧",
-        "impact": "支付牌照中止与不予续展案例再现，分行零售收单、代扣及第三方支付合作方的合规边界需重检。",
-        "action": "本周可梳理存量收单与代扣合作机构资质，对接续期与备选方案提前做评估，避免合作断档影响商户经营。",
+        "topic": "广州现房项目按揭白名单",
+        "impact": "封顶预售与现房并行后，开发商品牌与交付能力成为竞争点，分行可借此切入优质开发商核心项目，绑定一手优质客源。",
+        "action": "本周联动广州区域头部开发商梳理现房项目清单，优先评估央企国企及本土稳健民企项目准入；同步制定差异化审批绿色通道话术。",
         "tag": [
-          "监管",
-          "客群"
+          "住房金融",
+          "政银合作"
         ],
         "sources": [
           {
-            "title": "又现支付牌照中止、不予续展，行业\"动态监管\"深化",
-            "url": "https://m.21jingji.com/article/20260830/herald/05615282423d0e0e88176b94a1c1d83a.html"
+            "title": "封顶预售与现房销售并行 全链条夯实购房人权益保障",
+            "url": "https://www.cnfin.com/hg-lb/detail/20260831/4462511_1.html"
+          },
+          {
+            "title": "多部门同频，楼市迎全链条改革，解读来了→",
+            "url": "https://www.stcn.com/article/detail/4161508.html"
           }
         ]
       },
       {
-        "topic": "资产配置转型提速",
-        "impact": "行业经营逻辑从卖单品转向做配置，理财经理产能与客户黏性将更依赖AUM增速与配置率，倒逼分行考核体系调整。",
+        "topic": "财富货架调优应对发行降温",
+        "impact": "新发基金遇冷背景下，客户更倾向稳健配置与存量持营，分行若不及时调整货架将面临中收与客户黏性双降。",
+        "action": "本周内财富部重新梳理在售基金货架，重点配置债基与红利低波产品；同步对近6个月新发遇冷品类启动定投陪伴话术，引导客户从单笔申购转向长期定投。",
         "tag": [
           "财富",
           "客群"
         ],
         "sources": [
           {
-            "title": "净息差大面积回暖 上市银行从“卖产品”转向“做配置”",
-            "url": "https://www.stcn.com/article/detail/4162903.html"
+            "title": "8月公募基金发行市场降温",
+            "url": "https://www.stcn.com/article/detail/4164759.html"
+          }
+        ]
+      },
+      {
+        "topic": "REITs与并购融资联动机会",
+        "impact": "资本市场工具扩容为分行打开房企存量资产盘活与产业链并购融资空间，可联动对公与私行做深房地产链条综合服务。",
+        "action": "本周由公司部牵头梳理广州本地房企与基建REITs储备项目清单，同步联动私行端挖掘高净值客户Pre-REITs配置需求。",
+        "tag": [
+          "财富",
+          "政银合作"
+        ],
+        "sources": [
+          {
+            "title": "资本市场政策加码 助力构建房地产发展新模式",
+            "url": "https://www.stcn.com/article/detail/4161501.html"
           }
         ]
       }
     ],
-    "spoken_insights": "房贷40年新规落地，分行产品与话术本周要跟上，存量客户经理可主动触达改善型客户。高分红窗口打开，可考虑以国有大行股为底仓推送给私行客户。支付牌照动态监管收紧，存量收单与代扣合作方资质本周梳理一遍。财富业务从卖产品转向做配置，理财经理考核本周可向AUM与配置率倾斜。",
+    "spoken_insights": "长周期按揭拉低月供，分行可对收入稳定的优质存量客户优先推送40年期产品。封顶预售与现房并行，按揭审批前置项目交付与开发商资质，广州现房项目可优先准入。公募发行降温，财富条线本周调货架、重点配债基与红利低波、定投陪伴。REITs与并购工具扩容，公司条线可联动私行挖Pre-REITs配置需求。",
     "guangdong_ipo": null
   },
   "stock_recap": {
     "us": {
-      "overview": "美股盘面分化，科技股受美联储信号扰动走弱，能源与防御板块相对走强。",
+      "overview": "美股盘面承压，英伟达高位回撤，美联储路径与中东局势扰动市场。",
       "sectors": [
-        "科技：英伟达周五冲高回落，美联储信号成主要扰动",
-        "保险：安拟170亿美元收购USI，行业并购升温",
-        "金融：贝森特G20言论关注对华贸易壁垒",
-        "地缘：美军打击伊朗霍尔木兹附近火箭发射器",
-        "能源：地缘溢价升温推升板块关注度"
+        "科技：英伟达财报后高位回落，拖累半导体板块",
+        "保险：安拟170亿美元收购USI，板块并购题材升温",
+        "能源：美军打击伊朗霍尔木兹海峡火箭发射器，地缘溢价上升",
+        "贸易：财长Bessent呼吁G20对华加征关税，贸易摩擦预期升温"
       ],
-      "spoken": "美股盘面涨跌互现，科技股在美联储信号扰动下走弱，英伟达周五冲高回落。保险板块受安拟170亿美元收购案提振，金融与贸易板块聚焦贝森特G20表态。能源与地缘防御方向因美军打击伊朗而走强。整体来看，市场风格偏向防御，成长股承压。",
+      "spoken": "美股盘面承压，英伟达高位回撤拖累科技股。美联储路径与美军打击伊朗致地缘风险升温，保险板块因安拟收购USI走强，贸易摩擦预期再度抬头。",
       "meta": {
         "source": "CNBC Top Stories",
         "crossCheck": "新浪行情",
@@ -130,15 +139,14 @@
       ]
     },
     "aShare": {
-      "overview": "A股8月收官在即，周末政策利好密集落地，市场对9月行情预期偏积极。",
+      "overview": "A股迎来九月行情展望，房地产政策组合拳落地，二次探底后机构预期回暖。",
       "sectors": [
-        "房地产：政策组合拳落地，板块迎多重利好催化",
-        "新能源：阳光电源中报承压，国内及中东收入大幅下滑",
-        "券商策略：机构普遍认为二次探底后反弹有望延续至9月下旬",
-        "MSCI：智谱等33只中国股票9月正式纳入，增量配置可期",
-        "银行宏观：隔夜逆回购高频操作释放流动性管理信号"
+        "房地产：周末政策组合拳落地，板块预期改善",
+        "新能源：阳光电源中报营收净利双降，板块承压",
+        "消费电子：京东方中报净利润增六成，业绩驱动",
+        "券商：中报披露收官，低估值策略获机构看好"
       ],
-      "spoken": "A股八月收官在即，周末政策端多箭齐发，房地产迎来组合拳利好，机构普遍预期九月行情可以更积极一些。MSCI纳入智谱等三十三只中国股票，带来增量配置预期。新能源板块仍有结构性压力，光伏龙头中报明显承压。券商策略普遍认为二次探底兑现后，反弹有望持续到九月下旬。",
+      "spoken": "A股进入九月行情窗口，周末房地产政策组合拳落地提振预期。机构普遍认为二次探底后反弹有望延续至九月下旬，低估值策略明显占优。",
       "meta": {
         "source": "东方财富",
         "crossCheck": "新浪行情",
@@ -163,13 +171,13 @@
       ]
     },
     "hk": {
-      "overview": "港股盘面整体清淡，恒指缺乏明确方向，资金观望情绪较浓。",
+      "overview": "港股盘面交投清淡，MSCI纳入新成员提振中小盘，关注中报披露收官。",
       "sectors": [
-        "上市公司公告：中报分红与股份回购披露密集",
-        "公司治理：多家海外监管公告聚焦治理事项",
-        "业绩披露：板块处于中报密集披露窗口期"
+        "MSCI概念：智谱等33只中国股票正式纳入MSCI指数",
+        "回购：多家公司密集披露股份回购，提振信心",
+        "中报：上市公司中期业绩密集披露，业绩分化加大"
       ],
-      "spoken": "港股盘面消息清淡，恒指缺乏明确方向，市场观望情绪较浓。当前板块处于中报披露密集窗口，多家公司陆续公布中期业绩与分红安排。回购公告数量平稳，整体市场以个股消息驱动为主，指数层面暂无显著催化。",
+      "spoken": "港股盘面交投清淡，MSCI纳入新成员为中小盘带来增量资金，多家公司密集回购提振市场情绪，中报披露收官下业绩分化加大。",
       "meta": {
         "source": "新浪财经·港股",
         "crossCheck": "新浪行情",
@@ -198,7 +206,7 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/30",
-      "summary": "周末政策汇总：房地产迎来多重利好\"组合拳\"，涉及需求端、供给端及融资端多项措施，具体细则待官方文件披露。",
+      "summary": "周末政策面汇总，房地产市场迎来多项政策协同发布的\"组合拳\"，涉及供给、需求及融资等多个维度。",
       "importance": 3,
       "rank": 0,
       "tags": [
@@ -214,12 +222,11 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/30",
-      "summary": "8月30日晚间沪深上市公司密集发布重大事项公告，包括业绩、增减持、重组等动态。",
-      "importance": 2,
+      "summary": "8月30日晚间沪深两市上市公司集中披露重大事项公告，涵盖业绩、并购、股权变动等。",
+      "importance": 1,
       "rank": 0,
       "tags": [
-        "公告",
-        "A股"
+        "公告"
       ],
       "locale": "national",
       "market": "a-share"
@@ -230,12 +237,12 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/30",
-      "summary": "机构展望9月A股行情：受政策面与资金面共振影响，主流观点认为市场情绪可以更积极一些。",
+      "summary": "周末多重消息集中落地，机构对A股9月行情展望普遍偏积极，认为可适度提升风险偏好。",
       "importance": 2,
       "rank": 0,
       "tags": [
-        "A股",
-        "策略"
+        "策略",
+        "宏观"
       ],
       "locale": "national",
       "market": "a-share"
@@ -246,12 +253,12 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/30",
-      "summary": "马斯克公开回应称对相关矛盾\"毫不在意\"，事件具体背景涉及舆论对峙升级。",
+      "summary": "马斯克公开回应相关争议，表态\"毫不在意\"，市场关注事件后续走向。",
       "importance": 1,
       "rank": 0,
       "tags": [
-        "人物",
-        "科技"
+        "科技",
+        "海外"
       ],
       "locale": "national",
       "market": "a-share"
@@ -262,13 +269,27 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/30",
-      "summary": "阳光电源2025年上半年营收与净利润同比双降，其中国内收入近乎腰斩，中东地区收入暴跌约九成。",
-      "importance": 3,
+      "summary": "阳光电源2025年上半年营收与净利润同比双降，国内收入近乎腰斩，中东收入同比暴跌约九成。",
+      "importance": 2,
       "rank": 0,
       "tags": [
         "财报",
-        "新能源",
-        "光伏"
+        "新能源"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202608303859501114.html",
+      "title_cn": "多赚5800亿！A股中报全榜单来了",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "08/30",
+      "summary": "A股中报披露收官，全部上市公司合计净利润较上一年同期多赚约5800亿元，全榜单出炉。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "财报"
       ],
       "locale": "national",
       "market": "a-share"
@@ -279,11 +300,10 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/30",
-      "summary": "十大机构策略观点：在二次探底兑现后，市场反弹行情有望持续至9月下旬。",
+      "summary": "十大机构观点认为，市场二次探底已基本兑现，反弹行情有望延续至9月下旬。",
       "importance": 2,
       "rank": 0,
       "tags": [
-        "A股",
         "策略"
       ],
       "locale": "national",
@@ -295,28 +315,11 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/30",
-      "summary": "申万宏源策略团队判断：A股二次探底已经兑现，反弹窗口期可能延续至9月下旬。",
-      "importance": 2,
+      "summary": "申万宏源策略团队发布观点，称二次探底兑现后，市场反弹可能持续到9月下旬。",
+      "importance": 1,
       "rank": 0,
       "tags": [
-        "A股",
         "策略"
-      ],
-      "locale": "national",
-      "market": "a-share"
-    },
-    {
-      "url": "https://finance.eastmoney.com/a/202608303859501114.html",
-      "title_cn": "多赚5800亿！A股中报全榜单来了",
-      "source": "东方财富",
-      "source_type": "media",
-      "date": "08/30",
-      "summary": "A股中报披露收官，全市场上市公司合计净利润同比多赚约5800亿元，具体榜单已发布。",
-      "importance": 3,
-      "rank": 0,
-      "tags": [
-        "财报",
-        "A股"
       ],
       "locale": "national",
       "market": "a-share"
@@ -327,13 +330,12 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/30",
-      "summary": "MSCI指数调整正式生效，智谱等33只中国股票被纳入，相关投资机会成为下周关注焦点。",
-      "importance": 3,
+      "summary": "MSCI指数季度调整生效，包括智谱在内的33只中国股票被正式纳入，相关投资机会受关注。",
+      "importance": 2,
       "rank": 0,
       "tags": [
         "MSCI",
-        "中概股",
-        "AI"
+        "中概股"
       ],
       "locale": "national",
       "market": "a-share"
@@ -344,13 +346,12 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/30",
-      "summary": "京东方A发布2026年半年报，净利润同比增长约六成，市场关注其盈利质量与可持续性。",
+      "summary": "京东方发布2026年半年报，净利润同比增长约六成，市场关注其盈利质量与可持续性。",
       "importance": 2,
       "rank": 0,
       "tags": [
         "财报",
-        "半导体",
-        "显示面板"
+        "半导体"
       ],
       "locale": "national",
       "market": "a-share"
@@ -361,11 +362,10 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/30",
-      "summary": "十大券商策略观点：当前市场风格快速轮动，低估值策略明显占优。",
-      "importance": 2,
+      "summary": "十大券商策略普遍认为，当前市场行情快速轮动，低估值策略相对占优。",
+      "importance": 1,
       "rank": 0,
       "tags": [
-        "A股",
         "策略"
       ],
       "locale": "national",
@@ -377,15 +377,122 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/31",
-      "summary": "央行近期高频开展隔夜逆回购操作，市场关注其释放的流动性与利率信号。",
+      "summary": "央行近期在公开市场开展高频隔夜逆回购操作，市场关注其释放的流动性信号。",
       "importance": 2,
       "rank": 0,
       "tags": [
         "货币政策",
-        "流动性"
+        "宏观"
       ],
       "locale": "national",
       "market": "a-share"
+    },
+    {
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0831/2026083100238.htm",
+      "title_cn": "Announcements and Notices - [Overseas Regulatory Announcement - Board/Supervisory Board Resolutions]",
+      "source": "港交所披露易",
+      "source_type": "media",
+      "date": "08/31",
+      "summary": "港股上市公司发布海外监管公告，内容涉及董事会/监事会决议。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "公告"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0831/2026083100188.htm",
+      "title_cn": "Documents on Display",
+      "source": "港交所披露易",
+      "source_type": "media",
+      "date": "08/31",
+      "summary": "港股上市公司按披露要求提交可供查阅的文件（Documents on Display）。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "公告"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0831/2026083100185.pdf",
+      "title_cn": "Proxy Forms",
+      "source": "港交所披露易",
+      "source_type": "media",
+      "date": "08/31",
+      "summary": "港股上市公司发布股东大会代表委任表格（Proxy Forms）。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "公告"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0831/2026083100181.pdf",
+      "title_cn": "Announcements and Notices - [Notice of EGM/SGM]",
+      "source": "港交所披露易",
+      "source_type": "media",
+      "date": "08/31",
+      "summary": "港股上市公司公告召开股东特别大会或类别股东大会（EGM/SGM）。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "公告"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0831/2026083100179.pdf",
+      "title_cn": "Announcements and Notices - [Interim Results]",
+      "source": "港交所披露易",
+      "source_type": "media",
+      "date": "08/31",
+      "summary": "港股上市公司发布中期业绩公告（Interim Results）。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "财报"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0831/2026083100175.pdf",
+      "title_cn": "Announcements and Notices - [Capital Reorganisation / Closure of Books or Change of Book Closure Period]",
+      "source": "港交所披露易",
+      "source_type": "media",
+      "date": "08/31",
+      "summary": "港股上市公司公告进行资本重组或调整/暂停办理股份过户登记手续。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "公告",
+        "资本运作"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0831/2026083100174.htm",
+      "title_cn": "Announcements and Notices - [Overseas Regulatory Announcement - Board/Supervisory Board Resolutions / Overseas Regulatory Announcement - Corporate Governance Related Matters]",
+      "source": "港交所披露易",
+      "source_type": "media",
+      "date": "08/31",
+      "summary": "港股上市公司发布海外监管公告，涵盖董事会/监事会决议及公司治理相关事项。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "公告",
+        "公司治理"
+      ],
+      "locale": "national",
+      "market": "hk"
     },
     {
       "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0831/2026083100171.pdf",
@@ -393,11 +500,10 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/31",
-      "summary": "港股上市公司在港交所披露易发布海外监管公告（其他类）。",
+      "summary": "港股上市公司发布其他类别的海外监管公告（Overseas Regulatory Announcement - Other）。",
       "importance": 1,
       "rank": 0,
       "tags": [
-        "港股",
         "公告"
       ],
       "locale": "national",
@@ -409,11 +515,10 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/31",
-      "summary": "港交所披露易公布可供查阅的公司文件（Documents on Display）。",
+      "summary": "港股上市公司按要求提交另一批可供查阅的披露文件（Documents on Display）。",
       "importance": 1,
       "rank": 0,
       "tags": [
-        "港股",
         "公告"
       ],
       "locale": "national",
@@ -425,12 +530,12 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/31",
-      "summary": "港股上市公司发布次日披露回报表，涉及股份回购或其他事项。",
+      "summary": "港股上市公司披露次日披露报表，内容涉及股份回购及其他事项。",
       "importance": 1,
       "rank": 0,
       "tags": [
-        "港股",
-        "回购"
+        "回购",
+        "公告"
       ],
       "locale": "national",
       "market": "hk"
@@ -441,12 +546,12 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/31",
-      "summary": "港股上市公司发布分红或派息相关公告。",
+      "summary": "港股上市公司发布股息或分派公告（Dividend or Distribution）。",
       "importance": 1,
       "rank": 0,
       "tags": [
-        "港股",
-        "分红"
+        "分红",
+        "公告"
       ],
       "locale": "national",
       "market": "hk"
@@ -457,125 +562,13 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/31",
-      "summary": "港股上市公司发布中期业绩、分红及暂停办理股份过户登记手续的综合公告。",
-      "importance": 2,
+      "summary": "港股上市公司集中披露中期业绩、股息分派以及股份过户登记安排调整等公告。",
+      "importance": 1,
       "rank": 0,
       "tags": [
-        "港股",
         "财报",
-        "分红"
-      ],
-      "locale": "national",
-      "market": "hk"
-    },
-    {
-      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0831/2026083100126.htm",
-      "title_cn": "Announcements and Notices - [Overseas Regulatory Announcement - Other]",
-      "source": "港交所披露易",
-      "source_type": "media",
-      "date": "08/31",
-      "summary": "港股上市公司发布海外监管公告（其他类）。",
-      "importance": 1,
-      "rank": 0,
-      "tags": [
-        "港股",
+        "分红",
         "公告"
-      ],
-      "locale": "national",
-      "market": "hk"
-    },
-    {
-      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0831/2026083100124.htm",
-      "title_cn": "Announcements and Notices - [Overseas Regulatory Announcement - Other]",
-      "source": "港交所披露易",
-      "source_type": "media",
-      "date": "08/31",
-      "summary": "港股上市公司发布海外监管公告（其他类）。",
-      "importance": 1,
-      "rank": 0,
-      "tags": [
-        "港股",
-        "公告"
-      ],
-      "locale": "national",
-      "market": "hk"
-    },
-    {
-      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0831/2026083100122.htm",
-      "title_cn": "Announcements and Notices - [Overseas Regulatory Announcement - Corporate Governance Related Matters]",
-      "source": "港交所披露易",
-      "source_type": "media",
-      "date": "08/31",
-      "summary": "港股上市公司发布海外监管公告，涉及公司治理相关事项。",
-      "importance": 1,
-      "rank": 0,
-      "tags": [
-        "港股",
-        "公司治理"
-      ],
-      "locale": "national",
-      "market": "hk"
-    },
-    {
-      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0831/2026083100120.htm",
-      "title_cn": "Announcements and Notices - [Overseas Regulatory Announcement - Other]",
-      "source": "港交所披露易",
-      "source_type": "media",
-      "date": "08/31",
-      "summary": "港股上市公司发布海外监管公告（其他类）。",
-      "importance": 1,
-      "rank": 0,
-      "tags": [
-        "港股",
-        "公告"
-      ],
-      "locale": "national",
-      "market": "hk"
-    },
-    {
-      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0831/2026083100118.htm",
-      "title_cn": "Announcements and Notices - [Overseas Regulatory Announcement - Trading Update]",
-      "source": "港交所披露易",
-      "source_type": "media",
-      "date": "08/31",
-      "summary": "港股上市公司发布海外监管公告，涉及交易情况更新。",
-      "importance": 1,
-      "rank": 0,
-      "tags": [
-        "港股",
-        "公告"
-      ],
-      "locale": "national",
-      "market": "hk"
-    },
-    {
-      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0831/2026083100116.htm",
-      "title_cn": "Announcements and Notices - [Overseas Regulatory Announcement - Trading Update]",
-      "source": "港交所披露易",
-      "source_type": "media",
-      "date": "08/31",
-      "summary": "港股上市公司发布海外监管公告，涉及交易情况更新。",
-      "importance": 1,
-      "rank": 0,
-      "tags": [
-        "港股",
-        "公告"
-      ],
-      "locale": "national",
-      "market": "hk"
-    },
-    {
-      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0831/2026083100114.htm",
-      "title_cn": "Announcements and Notices - [Overseas Regulatory Announcement - Board/Supervisory Board Resolutions]",
-      "source": "港交所披露易",
-      "source_type": "media",
-      "date": "08/31",
-      "summary": "港股上市公司发布海外监管公告，披露董事会或监事会决议事项。",
-      "importance": 1,
-      "rank": 0,
-      "tags": [
-        "港股",
-        "公司治理"
       ],
       "locale": "national",
       "market": "hk"
@@ -586,11 +579,10 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/30",
-      "summary": "曾打赢烟草巨头诉讼的律师考虑用类似策略起诉Meta及社交媒体平台。",
+      "summary": "曾成功对抗大型烟草公司的律师，正研究以类似策略对Meta及社交媒体平台提起诉讼。",
       "importance": 1,
       "rank": 0,
       "tags": [
-        "美股",
         "科技",
         "诉讼"
       ],
@@ -603,12 +595,11 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/30",
-      "summary": "美军在霍尔木兹海峡附近袭击伊朗火箭发射装置，地缘紧张局势升级。",
+      "summary": "美军在霍尔木兹海峡附近打击伊朗火箭发射装置，地缘紧张局势升级。",
       "importance": 3,
       "rank": 0,
       "tags": [
         "地缘政治",
-        "中东",
         "能源"
       ],
       "locale": "overseas",
@@ -620,11 +611,10 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/30",
-      "summary": "怡安（Aon）接近达成约170亿美元的交易，拟从KKR手中收购保险经纪公司USI。",
-      "importance": 3,
+      "summary": "据《华尔街日报》报道，保险经纪公司Aon接近达成以约170亿美元从KKR手中收购保险经纪商USI的交易。",
+      "importance": 2,
       "rank": 0,
       "tags": [
-        "美股",
         "并购",
         "保险"
       ],
@@ -637,11 +627,11 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/30",
-      "summary": "特朗普批评NBC的选举相关言论；美财政部拒绝部分NYT、WSJ、Bloomberg记者参加G20的采访资格。",
-      "importance": 2,
+      "summary": "特朗普批评NBC的选举相关言论；美国财政部拒绝向部分《纽约时报》《华尔街日报》和彭博社的G20参会记者发放采访证。",
+      "importance": 1,
       "rank": 0,
       "tags": [
-        "美国政治",
+        "政治",
         "媒体"
       ],
       "locale": "overseas",
@@ -653,12 +643,12 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/30",
-      "summary": "新加坡通过财政与文化等综合措施应对人口老龄化带来的潜在人口危机。",
+      "summary": "新加坡从财政与文化层面综合施策，以应对人口老龄化带来的结构性挑战。",
       "importance": 1,
       "rank": 0,
       "tags": [
-        "新加坡",
-        "人口"
+        "人口",
+        "宏观"
       ],
       "locale": "overseas",
       "market": "us"
@@ -669,12 +659,12 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/30",
-      "summary": "特朗普曾推广的Freedom Fuel加油站被分销商指控拖欠油款。",
+      "summary": "特朗普曾推广的Freedom Fuel加油站被分销商指控拖欠油款，加油站仍在销售相关汽油。",
       "importance": 1,
       "rank": 0,
       "tags": [
-        "美国政治",
-        "能源"
+        "能源",
+        "纠纷"
       ],
       "locale": "overseas",
       "market": "us"
@@ -685,11 +675,12 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/29",
-      "summary": "尽管国家公园管理局评估项目对历史遗址存在\"不利影响\"，仍支持特朗普提出的250英尺高纪念拱门建设。",
+      "summary": "尽管相关评估指出250英尺高拱门项目可能对历史遗址产生不利影响，美国国家公园管理局仍表态支持特朗普的该项目。",
       "importance": 1,
       "rank": 0,
       "tags": [
-        "美国政治"
+        "政治",
+        "基建"
       ],
       "locale": "overseas",
       "market": "us"
@@ -700,11 +691,12 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/29",
-      "summary": "特朗普政府正权衡通过土地置换，为私营开发商在优胜美地国家公园修建通行道路提供便利。",
+      "summary": "特朗普政府正考虑以约塞米蒂国家公园土地置换方式，为私人开发商换取通行道路用地。",
       "importance": 1,
       "rank": 0,
       "tags": [
-        "美国政治"
+        "政治",
+        "地产"
       ],
       "locale": "overseas",
       "market": "us"
@@ -715,13 +707,13 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/30",
-      "summary": "英伟达股价周五盘中大幅反转，市场分析认为美联储相关信号是主要诱因。",
-      "importance": 3,
+      "summary": "英伟达股价上周五盘中急转下跌，分析认为美联储相关信号可能是引发抛售的关键因素。",
+      "importance": 2,
       "rank": 0,
       "tags": [
-        "美股",
         "AI",
-        "美联储"
+        "半导体",
+        "美股"
       ],
       "locale": "overseas",
       "market": "us"
@@ -732,11 +724,10 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/30",
-      "summary": "冰岛民众拒绝重新启动加入欧盟的谈判，尽管面临特朗普对格陵兰岛的相关威胁。",
+      "summary": "冰岛民众投票否决重启加入欧盟的谈判，尽管此前特朗普曾就格陵兰问题向丹麦施压。",
       "importance": 1,
       "rank": 0,
       "tags": [
-        "欧洲",
         "地缘政治"
       ],
       "locale": "overseas",
@@ -748,12 +739,11 @@
       "source": "Investing.com News",
       "source_type": "media",
       "date": "08/30",
-      "summary": "美国财长Bessent表示，G20成员国应考虑对中国加征更多贸易壁垒以削减贸易失衡。",
-      "importance": 3,
+      "summary": "美国财政部长Bessent表示，G20国家应考虑对中国加征更多贸易壁垒，以缩小贸易失衡。",
+      "importance": 2,
       "rank": 0,
       "tags": [
-        "中美贸易",
-        "G20",
+        "贸易",
         "政策"
       ],
       "locale": "overseas",
@@ -765,12 +755,12 @@
       "source": "Investing.com News",
       "source_type": "media",
       "date": "08/30",
-      "summary": "美国财长Bessent称近期日元走势\"相当可控\"，并不属于无序波动。",
+      "summary": "美国财政部长Bessent称近期日元汇率波动\"相对受控\"，并不构成无序走势。",
       "importance": 2,
       "rank": 0,
       "tags": [
         "外汇",
-        "日本"
+        "宏观"
       ],
       "locale": "overseas",
       "market": "us"
