@@ -86,3 +86,45 @@ export function filterStockNewsAgainstSections<T extends { title_cn?: string; ti
     return !secTitles.some((k) => sameEvent(t, k));
   });
 }
+
+/**
+ * 跨层级去重（2026-08-30 用户：房贷40年既进必读又进政策市场，读者看好几遍）。
+ *
+ * 背景：`dedupeSections` 只遍历 policy_market/gz_local/biz_insight/tech/ipo 这 5 个**资讯板块**，
+ * `must_read`/`insights` 是 DailyReport 顶层字段，不在其范围内 → 必读头条与资讯板块同事件重复。
+ *
+ * 规则：以 `must_read` 标题作为「已见事件」种子，移除资讯板块里与必读**同一事件**的条目
+ * （同事件 = 事件指纹共享 ≥2 锚点，即 dedupeSections 的 sameEvent 判定）。
+ *   - 必读是行长 3 分钟头条提炼，资讯板块是其详情展开；同一事件在必读已顶到头条后，
+ *     资讯板块再列一条是冗余（必读卡带原文链接，点进去即看详情）。
+ *   - 仅以 must_read 为种子，**不动 insights**：商机洞察与政策原文是互补视角（解读 vs 原文），不强行去重。
+ *
+ * 纯函数：不 mutate 入参，返回新 report（sections 为新数组引用）。
+ */
+export function dedupeExecAgainstSections(report: DailyReport): DailyReport {
+  const seeds = (report.must_read ?? [])
+    .map((m) => m.title)
+    .filter((t): t is string => typeof t === "string" && t.length > 0);
+  if (seeds.length === 0) return report;
+
+  const nextSections = { ...report.sections };
+  let removed = 0;
+  for (const sec of SECTION_PRIORITY) {
+    const items = nextSections[sec];
+    if (!Array.isArray(items)) continue;
+    const out: ReportItem[] = [];
+    for (const it of items) {
+      const t = titleOf(it);
+      if (t && seeds.some((k) => sameEvent(t, k))) {
+        removed++;
+        continue;
+      }
+      out.push(it);
+    }
+    nextSections[sec] = out;
+  }
+  if (removed > 0) {
+    // 调用方负责日志；此处仅去重并返回
+  }
+  return { ...report, sections: nextSections };
+}

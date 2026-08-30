@@ -19,6 +19,7 @@ import {
   dedupeExecutiveCrossSection,
 } from "../../ai/executive-summary";
 import { mergeStoredExecutive } from "../../output/render";
+import { dedupeExecAgainstSections } from "../../output/dedupe-sections";
 import { buildTwoDayExecPool, collectTwoDayArticles } from "../../ai/exec-pool";
 import type { HistoryStore } from "../../output/history";
 import type { FilterResult } from "../../filters/types";
@@ -64,6 +65,9 @@ export async function buildExecutiveSummary(
   filterResults?: Map<string, FilterResult>,
 ): Promise<DailyReport> {
   const date = ctx.date;
+  // 跨层级去重：必读头条已涵盖的事件，资讯板块不再重复展开（2026-08-30 用户）。
+  // 包住所有 return，确保各分支（SKIP_AI 复用/兜底、REGEN=0、AI 生成）统一生效。
+  const finalize = (r: DailyReport): DailyReport => dedupeExecAgainstSections(r);
   const stored = loadStore(date);
   // 两天（今天 + 昨天）可评分池：兜底与护栏都基于它。
   // 必要性：用户 6-8 点跑，跨天判重后「今天」常只剩十余条低信号新条目，
@@ -79,7 +83,7 @@ export async function buildExecutiveSummary(
         "exec",
         `🧠 SKIP_AI 复用 store.json 执行摘要：必读 ${before.must}→${next.must_read.length} / 商机 ${before.ins}→${next.insights.length}`,
       );
-      return next;
+      return finalize(next);
     }
     ctx.log.info(
       "exec",
@@ -95,9 +99,9 @@ export async function buildExecutiveSummary(
         "exec",
         `🧠 SKIP_AI 评分层兜底生成：必读 ${next.must_read.length} / 商机 ${next.insights.length}`,
       );
-      return next;
+      return finalize(next);
     }
-    return report;
+    return finalize(report);
   }
 
   // AI 模式：默认重新生成 LLM（更符合"AI 开 = AI 跑"的用户预期）
@@ -111,7 +115,7 @@ export async function buildExecutiveSummary(
       "exec",
       `🧠 AI 模式 + REGEN_EXEC=0 复用 store.json 执行摘要：${stored.must_read?.length ?? 0} 必读 / ${stored.insights?.length ?? 0} 商机`,
     );
-    return next;
+    return finalize(next);
   }
 
   // 生成新执行摘要
@@ -170,13 +174,13 @@ export async function buildExecutiveSummary(
         "exec",
         `🧠 必读/商机/风险(今昨2天窗口)生成：${exec.must_read.length} 必读 / ${exec.insights.length} 商机 / ${exec.risk ? 1 : 0} 风险（输入 finance ${pool.finance.length} + gz ${pool.gz}）`,
       );
-      return next;
+      return finalize(next);
     }
     ctx.log.info("exec", `ℹ️ 2天窗口执行摘要为空（沿用 PASS2 产出）`);
-    return report;
+    return finalize(report);
   } catch (e) {
     const msg = e instanceof Error ? e.message : String(e);
     ctx.log.warn("exec", `⚠️ 2天窗口执行摘要生成失败（沿用 PASS2）: ${msg}`);
-    return report;
+    return finalize(report);
   }
 }

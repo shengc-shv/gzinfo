@@ -32,6 +32,31 @@ interface CrawledSubset {
   stocks: CrawledArticle[];
 }
 
+/**
+ * 计算股市数据交易日状态（2026-08-30 用户：周末/周一报告应提示为上一开盘日数据）。
+ * - 非交易日 = 周日/周六/周一（早间市场未开，数据取上周五收盘）。
+ * - dataDate：数据实际所属交易日 = prevTradingDay(reportDate) 或 quotes.date（两者一致）。
+ * - note：非交易日给出展示文案，交易日为空串（"昨日市场复盘"即可）。
+ */
+const CN_WEEK = ["周日", "周一", "周二", "周三", "周四", "周五", "周六"];
+function formatCnDate(d: string): string {
+  const dt = new Date(d + "T00:00:00");
+  return `${dt.getMonth() + 1}月${dt.getDate()}日 ${CN_WEEK[dt.getDay()]}`;
+}
+export function computeMarketStatus(
+  reportDate: string,
+  dataDate?: string,
+): NonNullable<DailyReport["stock_recap"]>["marketStatus"] {
+  const dt = new Date(reportDate + "T00:00:00");
+  const dow = dt.getDay();
+  const isMarketClosed = dow === 0 || dow === 6 || dow === 1; // 日/六/一
+  const dd = dataDate ?? prevTradingDay(reportDate);
+  const note = isMarketClosed
+    ? `周末及周一休市时段，以下行情为上一交易日（${formatCnDate(dd)}）收盘数据`
+    : "";
+  return { isMarketClosed, reportDate, dataDate: dd, note };
+}
+
 function toStockItem(it: {
   title?: string;
   summary?: string;
@@ -125,6 +150,8 @@ export async function buildStockRecap(
     } else {
       ctx.log.info("recap", "📈 SKIP_AI 复用 store.json 股市复盘三卡");
     }
+    // 2026-08-30 用户：周末/周一报告标注股市数据为上一交易日收盘
+    recap.marketStatus = computeMarketStatus(date, quotes?.date);
     return { ...report, stock_recap: recap };
   } catch (e) {
     const msg = e instanceof Error ? e.message : String(e);

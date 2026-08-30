@@ -100,11 +100,29 @@ function numericAnchors(title: string): string[] {
   return out;
 }
 
+/**
+ * 同义词归一（2026-08-30 修复房贷40年板块内重复）：
+ * 字面值不同的语义等价锚点归一到 canonical token，否则「住房贷款」与「房贷」、
+ * 「住房公积金」与「公积金」会被当成两个独立锚点，导致同事件仅共享数字锚点（如 #40年）
+ * 被判为不同事件、漏并。归一后「两部门：个人住房贷款…40年」与「个人房贷…40年」共享
+ * {房贷, #40年} 两个锚点 → sameEvent=true → 合并。
+ */
+const ANCHOR_SYNONYMS: Array<[RegExp, string]> = [
+  [/个人住房贷款|住房贷款|住房按揭|住房抵押贷|个人住房按揭贷款/g, "房贷"],
+  [/住房公积金|个人住房公积金/g, "公积金"],
+];
+function normalizeAnchorTokens(title: string): string {
+  let s = title;
+  for (const [re, rep] of ANCHOR_SYNONYMS) s = s.replace(re, rep);
+  return s;
+}
+
 /** 事件指纹：标题包含的显著锚点集合（关键词 + 数字锚点，数字锚点带 # 前缀区分）。 */
 export function eventFingerprint(title: string): Set<string> {
+  const t = normalizeAnchorTokens(title);
   const fp = new Set<string>();
-  for (const k of EVENT_ANCHORS) if (title.includes(k)) fp.add(k);
-  for (const n of numericAnchors(title)) fp.add("#" + n);
+  for (const k of EVENT_ANCHORS) if (t.includes(k)) fp.add(k);
+  for (const n of numericAnchors(t)) fp.add("#" + n);
   return fp;
 }
 

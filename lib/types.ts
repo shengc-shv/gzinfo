@@ -122,6 +122,19 @@ export interface StockRecap {
   /** 行情数据来源与取值日（新浪行情 / 上一交易日），卡脚备注用，随 store 持久化、SKIP_AI 复用。 */
   quoteChannel?: string;
   quoteDate?: string;
+  /**
+   * 股市数据所属交易日状态（2026-08-30 用户：周末/周一报告应提示为上一开盘日数据）。
+   * - isMarketClosed：报告生成日是否非交易日（六/日/一）；此时股市数据为上一交易日收盘。
+   * - reportDate：报告生成日 YYYY-MM-DD。
+   * - dataDate：数据实际所属交易日（= 上一交易日）YYYY-MM-DD。
+   * - note：展示文案（如「周末及周一休市时段，以下行情为上一交易日（8月28日 周五）收盘数据」）；交易日为空串。
+   */
+  marketStatus?: {
+    isMarketClosed: boolean;
+    reportDate: string;
+    dataDate: string;
+    note: string;
+  };
 }
 
 /** 股市消息清单单条（底部「股市动态」面板，按 A股/港股/美股 过滤）。

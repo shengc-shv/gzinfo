@@ -287,7 +287,11 @@ export async function assembleAudioScript(
     pushSeg("港股", stockRecap.hk);
     if (segs.length) {
       const combined = truncateAtSentence(segs.join("。"), AUDIO_SPEAK_LIMITS.stock);
-      const segText = `${STOCK_TRANSITION}${combined}`;
+      // 2026-08-30 用户：周末/周一报告，口播须提示股市数据为上一交易日收盘
+      const stockPrefix = stockRecap?.marketStatus?.isMarketClosed
+        ? `${STOCK_TRANSITION}${stockRecap.marketStatus.note}。`
+        : STOCK_TRANSITION;
+      const segText = `${stockPrefix}${combined}`;
       parts.push(segText);
       partMap.stock_recap = combined;
       const dur = estimateDurationSec(segText.length);

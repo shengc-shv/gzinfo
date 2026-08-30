@@ -1173,10 +1173,14 @@ function renderStockRecap(report: DailyReport): string {
       </li>`;
     })
     .join("");
+  const ms = recap.marketStatus;
+  const stockNote = ms?.isMarketClosed
+    ? `<p class="stock-note stock-note--closed" style="color:#c8842a;font-weight:600">⚠️ ${escapeHtml(ms.note)}</p>`
+    : `<p class="stock-note">昨日市场复盘 · 涨跌概况与关键板块（AI 生成）</p>`;
   return `<section class="stock-recap">
     <div class="stock-must">
       <h3 class="exec-col-title">📊 股市解读<span class="stock-hint-inline" aria-hidden="true">← 左右滑动查看 →</span></h3>
-      <p class="stock-note">昨日市场复盘 · 涨跌概况与关键板块（AI 生成）</p>
+      ${stockNote}
       <ul class="stock-scroller">${cardHtml}</ul>
     </div>
   </section>`;
