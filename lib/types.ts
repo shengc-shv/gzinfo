@@ -127,13 +127,17 @@ export interface StockRecap {
    * - isMarketClosed：报告生成日是否非交易日（六/日/一）；此时股市数据为上一交易日收盘。
    * - reportDate：报告生成日 YYYY-MM-DD。
    * - dataDate：数据实际所属交易日（= 上一交易日）YYYY-MM-DD。
-   * - note：展示文案（如「周末及周一休市时段，以下行情为上一交易日（8月28日 周五）收盘数据」）；交易日为空串。
+   * - note：页面展示文案（如「周末及周一休市时段，以下行情为上一交易日（8月28日 周五）收盘数据」）；交易日为空串。
+   * - spokenNote：口播专用日期说明（2026-08-30 用户：口播须说清是上个交易日几月几号的情况，
+   *   故**交易日也必须带日期**，与 note 只在非交易日有内容不同）。由 computeMarketStatus 单一产出。
    */
   marketStatus?: {
     isMarketClosed: boolean;
     reportDate: string;
     dataDate: string;
-    note: string;
+    /** @deprecated 保留兼容旧 store.json；新逻辑用 spokenNote。 */
+    note?: string;
+    spokenNote?: string;
   };
 }
 

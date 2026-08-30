@@ -36,10 +36,14 @@ interface CrawledSubset {
  * 计算股市数据交易日状态（2026-08-30 用户：周末/周一报告应提示为上一开盘日数据）。
  * - 非交易日 = 周日/周六/周一（早间市场未开，数据取上周五收盘）。
  * - dataDate：数据实际所属交易日 = prevTradingDay(reportDate) 或 quotes.date（两者一致）。
- * - note：非交易日给出展示文案，交易日为空串（"昨日市场复盘"即可）。
+ * - note：页面展示文案，仅非交易日（橙字警示）；交易日为空串（页面仍显示"昨日市场复盘"）。
+ * - spokenNote：口播专用，**交易日也带日期**（2026-08-30 用户：口播须说清是上个交易日几月几号
+ *   的情况——听众所处时间不确定，只说"昨日"无法定位到具体日期）。
+ *   文案由本函数单一产出，避免 audio 侧重复实现日期格式化导致口径漂移。
  */
 const CN_WEEK = ["周日", "周一", "周二", "周三", "周四", "周五", "周六"];
-function formatCnDate(d: string): string {
+/** 统一的「X月X日 周X」中文日期格式（computeMarketStatus / 口播侧共用，避免口径漂移）。 */
+export function formatCnDate(d: string): string {
   const dt = new Date(d + "T00:00:00");
   return `${dt.getMonth() + 1}月${dt.getDate()}日 ${CN_WEEK[dt.getDay()]}`;
 }
@@ -54,7 +58,10 @@ export function computeMarketStatus(
   const note = isMarketClosed
     ? `周末及周一休市时段，以下行情为上一交易日（${formatCnDate(dd)}）收盘数据`
     : "";
-  return { isMarketClosed, reportDate, dataDate: dd, note };
+  const spokenNote = isMarketClosed
+    ? `当前为休市时段，以下行情为上一交易日，${formatCnDate(dd)}的收盘情况`
+    : `以下行情为上一交易日，${formatCnDate(dd)}的收盘情况`;
+  return { isMarketClosed, reportDate, dataDate: dd, note, spokenNote };
 }
 
 function toStockItem(it: {

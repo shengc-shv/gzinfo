@@ -19,6 +19,8 @@ import type { ReportItem, StockRecap } from "../types";
 // 2026-08-30：广东 IPO 判定统一走渲染侧内容判定（阶段强词 + 名单三层识别），
 // 避免播报与卡片两套正则口径漂移（实例：粤芯「注册申请材料已受理」曾因 IPO_KW 缺词漏捞）。
 import { isGdIpoCandidate } from "../output/render/cards";
+// 2026-08-30：股市口播按市场注入时区+日期（美股=美东 / A股港股=北京），复用统一日期格式避免漂移。
+import { formatCnDate } from "../pipeline/side-outputs/stock-recap";
 
 /** 播放器元数据：renderHtml 注入 sticky 播放器时使用。 */
 export interface AudioMeta {
@@ -278,50 +280,13 @@ export async function assembleAudioScript(
     console.warn("⚠️ 章节「风险预警」无口播稿，跳过");
   }
 
-  // —— 昨日股市解读：三市场 spoken 拼接（若有）——
-  if (stockRecap) {
-    const segs: string[] = [];
-    const pushSeg = (label: string, card: { spoken?: string }) => {
-      const s = sanitize(card.spoken ?? "");
-      if (!s) return;
-      // spoken 开头已含市场名（如"美股三大指数…"）时不重复加标签，避免"美股：美股"
-      // 去尾部句号：三市场以"。"join 拼接，避免段间双句号
-      const prefixed = (s.startsWith(label) ? s : `${label}：${s}`).replace(/[。.]+$/, "");
-      segs.push(truncateAtSentence(prefixed, Math.floor(AUDIO_SPEAK_LIMITS.stock / 3)));
-    };
-    pushSeg("美股", stockRecap.us);
-    pushSeg("A股", stockRecap.aShare);
-    pushSeg("港股", stockRecap.hk);
-    if (segs.length) {
-      const combined = truncateAtSentence(segs.join("。"), AUDIO_SPEAK_LIMITS.stock);
-      // 2026-08-30 用户：周末/周一报告，口播须提示股市数据为上一交易日收盘
-      const stockPrefix = stockRecap?.marketStatus?.isMarketClosed
-        ? `${STOCK_TRANSITION}${stockRecap.marketStatus.note}。`
-        : STOCK_TRANSITION;
-      const segText = `${stockPrefix}${combined}`;
-      parts.push(segText);
-      partMap.stock_recap = combined;
-      const dur = estimateDurationSec(segText.length);
-      segments.push({
-        id: "stock",
-        startSec: cursor,
-        durationSec: dur,
-        refs: [],
-        text: segText,
-      });
-      cursor += dur;
-      found++;
-    } else {
-      console.warn("⚠️ 章节「昨日股市解读」三市场口播稿均缺失，跳过");
-    }
-  }
-
   if (found === 0) {
     console.warn("⚠️ 今日定调/必读/洞察/股市解读口播稿全部缺失，无法生成语音播报（降级：页面不出播放器）");
     return null;
   }
 
   // —— 广东 IPO：上游优先，正则兜底 ——
+  // 2026-08-30 用户：IPO 播报放在「股市情况」之前（先讲本地商机，再讲行情）。
   let ipo = exec.guangdong_ipo?.spoken ? sanitize(exec.guangdong_ipo.spoken) : "";
   if (ipo) {
     console.log("✅ 广东IPO条目：取上游产出");
@@ -350,6 +315,55 @@ export async function assembleAudioScript(
     const dur = estimateDurationSec(segText.length);
     segments.push({ id: "ipo", startSec: cursor, durationSec: dur, refs: [], text: segText });
     cursor += dur;
+  }
+
+  // —— 昨日股市解读：三市场 spoken 拼接（若有）——
+  // 排在广东IPO之后（2026-08-30 用户：IPO 播报放在股市情况之前）。
+  // 2026-08-30 用户（tz）：美股标「美东时间」、A股/港股标「北京时间」；
+  //   同时说清是「上个交易日 X月X日」收盘（听众所处时间不确定，只说"昨日"无法定位）。
+  //   时区+日期按市场分别注入，避免一套笼统前缀（原 spokenNote）丢失时区差异。
+  if (stockRecap) {
+    const ms = stockRecap.marketStatus;
+    const cnDate = ms?.dataDate ? formatCnDate(ms.dataDate) : "";
+    const segs: string[] = [];
+    const pushSeg = (label: string, tz: string, card: { spoken?: string }) => {
+      const s = sanitize(card.spoken ?? "");
+      if (!s) return;
+      // 时区+上个交易日日期标注（缺 dataDate 时降级为无日期，旧 store.json 兼容）
+      const tzLabel = cnDate ? `（${tz}时间${cnDate}收盘）` : "";
+      let prefixed: string;
+      if (s.startsWith(label)) {
+        // spoken 已含市场名（如"美股三大指数…"），避免"美股（…）：美股"；
+        // 把时区标注插在市场名后，并剥掉紧随的标点防双冒号。
+        const rest = s.slice(label.length).replace(/^[\s：:，,、]+/, "");
+        prefixed = `${label}${tzLabel}：${rest}`;
+      } else {
+        prefixed = `${label}${tzLabel}：${s}`;
+      }
+      // 去尾部句号：三市场以"。"join 拼接，避免段间双句号
+      segs.push(truncateAtSentence(prefixed.replace(/[。.]+$/, ""), Math.floor(AUDIO_SPEAK_LIMITS.stock / 3)));
+    };
+    pushSeg("美股", "美东", stockRecap.us);
+    pushSeg("A股", "北京", stockRecap.aShare);
+    pushSeg("港股", "北京", stockRecap.hk);
+    if (segs.length) {
+      const combined = truncateAtSentence(segs.join("。"), AUDIO_SPEAK_LIMITS.stock);
+      const segText = `${STOCK_TRANSITION}${combined}`;
+      parts.push(segText);
+      partMap.stock_recap = combined;
+      const dur = estimateDurationSec(segText.length);
+      segments.push({
+        id: "stock",
+        startSec: cursor,
+        durationSec: dur,
+        refs: [],
+        text: segText,
+      });
+      cursor += dur;
+      found++;
+    } else {
+      console.warn("⚠️ 章节「昨日股市解读」三市场口播稿均缺失，跳过");
+    }
   }
 
   // v2（I-A）收尾："今天播报结束。" 取代原 CLOSER "详细内容请查看下方图文。"
@@ -384,7 +398,15 @@ export async function assembleAudioScript(
         {
           date,
           parts: partMap,
-          order: ["hero", "must_read", "insights", ...(risk ? ["risk"] : []), ...(ipo ? ["guangdong_ipo"] : [])],
+          // 2026-08-30 修正：与口播实际顺序一致（IPO 在股市之前），并补上原先遗漏的 stock_recap
+          order: [
+            "hero",
+            "must_read",
+            "insights",
+            ...(risk ? ["risk"] : []),
+            ...(ipo ? ["guangdong_ipo"] : []),
+            ...(partMap.stock_recap ? ["stock_recap"] : []),
+          ],
           // v2 段落（含 start/duration/refs，供 HTML 联动高亮）
           segments: segments.map((s) => ({ id: s.id, startSec: s.startSec, durationSec: s.durationSec, refs: s.refs })),
         },
@@ -396,7 +418,7 @@ export async function assembleAudioScript(
   }
 
   console.log(
-    `✅ 口播稿拼装完毕：${script.length} 字，${parts.length - 2} 个内容段（定调/必读/洞察/股市解读/IPO），广东IPO=${ipo ? "有" : "无"}，估算时长≈${durationSec}s`,
+    `✅ 口播稿拼装完毕：${script.length} 字，${parts.length - 2} 个内容段（定调/必读/洞察/IPO/股市解读），广东IPO=${ipo ? "有" : "无"}，估算时长≈${durationSec}s`,
   );
   return { script, parts: partMap, durationSec, segments };
 }
