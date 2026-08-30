@@ -1,62 +1,51 @@
 {
   "date": "2026-08-30",
-  "updatedAt": "2026-08-30T13:28:03.074Z",
+  "updatedAt": "2026-08-30T13:58:44.611Z",
   "executive": {
-    "hero_line": "多部委同频发力稳楼市，房贷期限延至40年、配套制度全链条改革落地，分行零售信贷与财富端双向迎来政策窗口。",
-    "spoken_hero": "今天多部委同频推出楼市组合拳，个人房贷最长期限延长到四十年，叠加销售制度与资本市场工具同步发力，分行零售信贷与财富条线都有新机会，建议零售前中后台协同抢窗口。",
+    "hero_line": "房贷40年新规与多部委稳楼市组合拳同步落地，分行须同步打通按揭、财富与获客三条线。",
+    "spoken_hero": "今天最关键的是房贷最长期限放宽到40年，加上多部委稳楼市组合拳同步发力。对分行意味着按揭、财富与新客拓展要联动推进，建议本周统一对外口径。",
     "must_read": [
       {
-        "title": "美联储沃什释放加息信号",
-        "why": "全球流动性预期收紧，私人银行与财富客户海外配置、汇率避险需求上升，分行应提前备好外币理财与结构性产品货架。",
-        "url": "https://finance.eastmoney.com/a/202608293859092920.html"
-      },
-      {
         "title": "房贷最长期限延至40年",
-        "why": "个人房贷期限延长降低月供压力、扩大可承接客群，零售信贷端需尽快完成产品改造与利率定价模型校准，存量按揭客户亦存在置换升级机会。",
+        "why": "零售信贷政策窗口打开，广州分行需评估按揭产品线调整与客群分层承接，对冲利率下行压力。",
         "url": "https://news.southcn.com/node_812903b83a/3a99d4b188.shtml"
       },
       {
-        "title": "多部委稳楼市组合拳",
-        "why": "土地、金融、销售全链条协同发力，销售资金监管趋严，分行按揭准入与开发贷风控逻辑同步调整，重点跟进核心城市优质项目。",
-        "url": "https://www.stcn.com/article/detail/4161508.html"
+        "title": "多部委稳楼市组合拳落地",
+        "why": "土地、金融、销售全链条改革同步推进，分行须联动公司、个贷、财富三端捕捉结构性机会。",
+        "url": "https://finance.eastmoney.com/a/202608293858978022.html"
       },
       {
-        "title": "资本市场工具扩容支持楼市",
-        "why": "REITs与并购重组渠道拓宽，房地产资产盘活路径丰富，分行可联动投行挖掘优质持有物业与保障房项目机会。",
+        "title": "REITs与并购工具扩容",
+        "why": "资本市场政策加码支持房地产新模式，私行与机构客户可关注存量物业盘活与配置机会。",
         "url": "https://www.stcn.com/article/detail/4161501.html"
       },
       {
+        "title": "美联储沃什释放加息信号",
+        "why": "全球流动性预期转向，分行应提前提示客户外币配置与跨境理财风险窗口。",
+        "url": "https://finance.eastmoney.com/a/202608293859092920.html"
+      },
+      {
         "title": "四大行净息差集体企稳",
-        "why": "大行净息差企稳、分红率超三成，零售AUM与高股息配置价值凸显，财富条线可借势推固收+与红利策略产品。",
+        "why": "行业盈利韧性信号明确，可作零售负债成本定价与中收拓展的对标参考。",
         "url": "https://www.stcn.com/article/detail/4161481.html"
       }
     ],
-    "spoken_must_read": "房贷最长期限延至四十年，零售信贷端需尽快完成产品改造与定价校准，存量客户存在置换升级空间。\n多部委稳楼市组合拳落地，销售资金监管趋严，按揭准入与开发贷风控逻辑要同步跟上。\n美联储沃什释放加息信号，私行与财富客户海外配置与汇率避险需求上行，外币货架要提前备齐。\n四大行净息差集体企稳、分红率超三成，财富条线可借势推固收+与红利策略。\n资本市场工具扩容支持楼市，REITs与并购重组带来资产盘活新机会，可联动投行挖掘。",
+    "spoken_must_read": "房贷最长期限放宽到40年，零售信贷迎政策窗口，建议分行评估产品线调整。\n多部委稳楼市组合拳同步发力，土地金融销售全链条推进，分行应联动公司个贷财富三端捕捉机会。\nREITs与并购重组工具扩容，私行与机构客户可关注存量物业盘活机会。\n美联储沃什释放加息信号，全球流动性预期转向，分行需提前提示客户外币资产与跨境理财风险。\n四大行净息差集体企稳，可作零售负债定价与中收拓展的对标参考。",
     "insights": [
       {
-        "topic": "公积金缴存基数下限调整",
-        "impact": "9月1日起广州公积金缴存基数下限上调，直接影响代发工资客户月供测算与个税联动，零售代发与个贷联动空间扩大。",
-        "action": "本周起对受影响的代发单位客户逐一回访，结合40年期按揭新政同步推送产品升级方案，重点覆盖年轻缴存客群。",
+        "topic": "公积金基数下限9月调整",
+        "impact": "广州公积金缴存基数9月起调整，叠加最低工资标准上调，代发客群结构与缴存额同步变化。",
+        "action": "本周梳理代发单位触达清单，联动财富经理跟进缴存客户的产品升级与配置建议。",
         "tag": [
           "代发",
-          "住房金融"
+          "财富"
         ],
         "sources": [
           {
             "title": "9月1日起广州住房公积金缴存基数下限将调整",
             "url": "https://news.dayoo.com/guangzhou/202608/29/139995_54997453.htm"
-          }
-        ]
-      },
-      {
-        "topic": "广州最低工资标准上调",
-        "impact": "广州下月起上调最低工资，零售客群分层结构与社保基数同步变化，对代发客群、信用卡分期及小微经营贷客户影响明显。",
-        "action": "本周联动代发与卡部对蓝领、灵活就业客群做一轮分层经营，配套小额信用贷与消费分期产品包。",
-        "tag": [
-          "客群",
-          "代发"
-        ],
-        "sources": [
+          },
           {
             "title": "广州下月起提高最低工资标准",
             "url": "https://news.dayoo.com/guangzhou/202608/29/139995_54997454.htm"
@@ -64,27 +53,12 @@
         ]
       },
       {
-        "topic": "民营中小企业出海金融配套",
-        "impact": "广州精准对接民营企业融湾出海、链通全球，对公跨境结算、外贸贷与出海客群经营存在批量获客窗口。",
-        "action": "联动公司部梳理辖内出海重点客户名单，下周内推出跨境结算+外贸贷组合方案，零售端可承接股东及高管私行服务。",
-        "tag": [
-          "私行",
-          "客群"
-        ],
-        "sources": [
-          {
-            "title": "精准对接，助力民营企业融湾出海、链通全球",
-            "url": "https://news.dayoo.com/guangzhou/202608/29/139995_54997484.htm"
-          }
-        ]
-      },
-      {
-        "topic": "广州推三宗宅地揽金118亿",
-        "impact": "广州单日三宗宅地收金118.3亿元，土地端回暖直接带动后续开发贷与按揭投放，重点项目营销窗口期前置。",
-        "action": "本周内由支行对接名单内房企与项目方，提前锁定按揭合作份额与开发贷意向，同步切入项目代发。",
+        "topic": "广州土拍单日收金118亿",
+        "impact": "三宗宅地高溢价成交，后续按揭投放与开发贷跟进空间打开，分行前置布局项目合作有助锁定份额。",
+        "action": "公司部与个贷部本周联合走访拿地房企，对接开发贷与项目按揭预审。",
         "tag": [
           "住房金融",
-          "政银合作"
+          "信贷"
         ],
         "sources": [
           {
@@ -94,12 +68,42 @@
         ]
       },
       {
-        "topic": "券商交易外接规则落地",
-        "impact": "券商外接规则强调公平对待接入客户，零售代销与合作渠道合规要求抬升，需排查存量合作机构接入流程。",
-        "action": "本周由合规牵头对合作券商与三方代销机构做一轮接入合规排查，重点关注客户数据回流与风险隔离。",
+        "topic": "商品房销售资金监管升级",
+        "impact": "三部门推所见即所得制度，销售资金监管趋严，按揭准入与开发商白名单同步收紧。",
+        "action": "风控与个贷联合梳理合作开发商白名单，提前向优质项目倾斜按揭额度。",
         "tag": [
-          "监管",
+          "住房金融",
+          "信贷"
+        ],
+        "sources": [
+          {
+            "title": "三部门完善商品房销售制度实现“所见即所得”",
+            "url": "https://www.stcn.com/article/detail/4155726.html"
+          }
+        ]
+      },
+      {
+        "topic": "民企融湾出海精准对接",
+        "impact": "民营中小企业出海获政策精准对接，跨境结算、外贸贷与外汇理财需求集中释放。",
+        "action": "本周筛选辖内科创与外贸小微企业名单，配套出海贷与外汇产品上门服务。",
+        "tag": [
+          "客群",
           "财富"
+        ],
+        "sources": [
+          {
+            "title": "精准对接，助力民营企业融湾出海、链通全球",
+            "url": "https://news.dayoo.com/guangzhou/202608/29/139995_54997484.htm"
+          }
+        ]
+      },
+      {
+        "topic": "券商交易外接规则落地",
+        "impact": "券商交易外接规则明确公平接入要求，代销与银证合作合规边界需重新评估。",
+        "action": "财富部本周排查代销合作券商接入情况，确保合规留痕与客户适当性匹配。",
+        "tag": [
+          "财富",
+          "监管"
         ],
         "sources": [
           {
@@ -109,18 +113,36 @@
         ]
       }
     ],
-    "spoken_insights": "广州公积金缴存下限9月上调，代发客户月供与个贷联动空间打开，本周可结合四十年期新政做一轮产品推送。\n广州最低工资上调，蓝领与灵活就业客群分层经营机会显现，代发与卡部联动推小额信贷与分期产品。\n民营中小企业出海获精准对接，跨境结算与外贸贷批量获客窗口打开，零售端可承接股东与高管私行服务。\n广州单日推三宗宅地收金118亿，按揭与开发贷前置锁定，本周可由支行对接项目方提前占位。\n券商外接规则落地，代销合规要求趋严，本周可由合规牵头排查合作机构接入流程与数据隔离。",
+    "spoken_insights": "广州公积金基数与最低工资9月同步上调，代发客群结构变化，本周可联动财富经理上门升级服务。\n广州单日土拍收金118亿，按揭与开发贷空间打开，公司部个贷部可联合走访拿地房企。\n商品房资金监管升级，风控与个贷可提前向白名单优质项目倾斜按揭额度。\n民企出海获政策精准对接，跨境结算与外贸贷需求集中，本周可上门配套出海产品。\n券商外接规则落地，财富部可本周排查代销合作合规情况，确保客户适当性匹配。",
+    "risk": {
+      "topic": "美联储加息预期抬头",
+      "evidence": "美联储主席沃什在杰克逊霍尔释放明确加息信号，下周关键数据公布可能进一步强化预期。",
+      "impact": "外币负债客户还款压力上升，私行客户境外配置收益波动加大，跨境理财与外汇代销需关注短期回撤，公司客户美元融资成本可能抬升。",
+      "action": "财富部本周向私行客户推送外币资产再平衡建议，公司部提示美元融资客户关注锁汇窗口，风控部同步更新汇率压力测试模型。",
+      "source": "T2",
+      "sources": [
+        {
+          "title": "沃什杰克逊霍尔首秀震惊市场：美联储要准备开始加息吗？",
+          "url": "https://finance.eastmoney.com/a/202608293859092920.html"
+        },
+        {
+          "title": "沃什：美国通胀仍然过高 美联储应主要聚焦于物价",
+          "url": "https://www.cnfin.com/yw-lb/detail/20260829/4462259_1.html"
+        }
+      ]
+    },
+    "spoken_risk": "今天需要警惕美联储加息预期抬头。\n外币客户还款压力与私行境外配置波动加大。\n财富部可本周推送外币再平衡建议，公司部提示客户关注锁汇窗口。",
     "guangdong_ipo": null
   },
   "stock_recap": {
     "us": {
-      "overview": "美股聚焦非农与博通财报，AI及关税担忧持续扰动市场",
+      "overview": "美股盘前关注关税、AI与零售财报，科技股情绪受AI焦虑压制",
       "sectors": [
-        "科技：AI争议叠加马斯克收购Cursor风波，板块情绪承压",
-        "能源：美委达成石油协议，原油储备题材受关注",
-        "消费零售：关税退税策略分化，板块走势不明朗"
+        "科技：AI焦虑与社交媒体监管担忧发酵",
+        "能源：委内瑞拉650亿桶油储协议落地，能源板块获关注",
+        "零售：关税退款处理分化，财报成看点"
       ],
-      "spoken": "美股盘前聚焦本周非农数据与博通财报接力。AI争议与科技并购消息交织，科技板块情绪承压；美委达成石油协议，能源题材受关注；零售关税退税策略分化，走势不明朗。",
+      "spoken": "美股盘前聚焦关税、AI与零售财报。科技板块受AI焦虑与社交媒体监管担忧拖累，能源板块因委内瑞拉650亿桶油储协议获关注，零售板块因关税退款处理分化、财报临近备受考验。",
       "meta": {
         "source": "CNBC Top Stories",
         "crossCheck": "新浪行情",
@@ -145,14 +167,14 @@
       ]
     },
     "aShare": {
-      "overview": "A股政策暖风频吹，9月市场预期偏积极",
+      "overview": "A股9月展望偏积极，房地产政策组合拳与半导体重组成周末主线",
       "sectors": [
         "房地产：政策组合拳落地，板块迎利好催化",
-        "半导体：龙头停牌筹划重组，行业关注度升温",
-        "贵金属及油气：霍尔木兹海峡紧张推升避险与能源题材",
-        "机器人与汽车电子：龙头股集齐多重热门题材表现活跃"
+        "半导体：500亿大牛股停牌筹划重组，板块关注度提升",
+        "贵金属与石油：霍尔木兹海峡紧张推升避险情绪",
+        "消费与AI应用：科技龙头集齐CPO、人形机器人等多重题材"
       ],
-      "spoken": "A股9月展望偏积极。房地产政策组合拳落地，板块迎利好；半导体龙头停牌筹划重组，关注度升温；霍尔木兹海峡紧张推升贵金属与油气题材；机器人、汽车电子等热门方向龙头股持续活跃。",
+      "spoken": "A股周末重磅消息密集。房地产迎来政策组合拳，半导体板块因大牛股停牌重组备受关注。霍尔木兹海峡紧张推升贵金属与石油避险情绪，机构展望9月可以更积极一些，科技龙头集齐多重热门题材。",
       "meta": {
         "source": "东方财富",
         "crossCheck": "新浪行情",
@@ -177,12 +199,13 @@
       ]
     },
     "hk": {
-      "overview": "港股盘面缺乏明确收评信息，整体观望情绪主导",
+      "overview": "港股周末无重大公开市场信息，板块整体交投清淡待节后方向",
       "sectors": [
-        "公告密集：多家公司披露中期业绩及股东大会议案",
-        "市场关注点：聚焦美股非农与A股政策催化的传导效应"
+        "科技：AI与社交媒体情绪波及港股科技龙头",
+        "能源：地缘风险升温支撑石油相关港股标的",
+        "地产：A股地产政策利好有望联动港股内房股"
       ],
-      "spoken": "港股今日缺乏明确收评指引，盘面观望情绪较浓。多家公司密集披露中期业绩与股东大会公告，指数方向待明朗；外围关注美股非农与A股政策暖风的传导影响。",
+      "spoken": "港股周末消息面清淡，披露易集中于常规公告与中期业绩。AI焦虑与地缘风险仍是关注焦点，地产板块有望受A股政策组合拳情绪联动，节后方向有待进一步催化。",
       "meta": {
         "source": "新浪财经·港股",
         "crossCheck": "新浪行情",
@@ -215,7 +238,7 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/30",
-      "summary": "据东方财富报道，周末多项房地产支持政策密集出台，形成政策\"组合拳\"，涉及房地产相关领域。",
+      "summary": "中国推出房地产政策\"组合拳\"，涉及多部委协同，从需求侧、供给侧及融资端出台多项支持措施。",
       "importance": 3,
       "rank": 0,
       "tags": [
@@ -226,34 +249,34 @@
       "market": "a-share"
     },
     {
-      "url": "https://finance.eastmoney.com/a/202608303859340222.html",
-      "title_cn": "500亿半导体大牛股筹划重大资产重组明起停牌",
-      "source": "东方财富",
-      "source_type": "media",
-      "date": "08/30",
-      "summary": "一家市值约500亿元的半导体大牛股公告筹划重大资产重组，股票将于次日起停牌。",
-      "importance": 3,
-      "rank": 0,
-      "tags": [
-        "半导体",
-        "重组",
-        "A股"
-      ],
-      "locale": "national",
-      "market": "a-share"
-    },
-    {
       "url": "https://finance.eastmoney.com/a/202608303859339716.html",
       "title_cn": "霍尔木兹海峡最新消息！伊朗：完全关闭！英国考虑对石油公司征收暴利税！世界银行警告！",
       "source": "东方财富",
       "source_type": "media",
       "date": "08/30",
-      "summary": "伊朗宣布完全关闭霍尔木兹海峡；英国考虑对石油公司征收暴利税；世界银行就此发出警告。",
+      "summary": "伊朗称将完全关闭霍尔木兹海峡；英国考虑对石油公司征收暴利税；世界银行就全球风险发出警告。",
       "importance": 3,
       "rank": 0,
       "tags": [
         "能源",
-        "地缘政治"
+        "地缘政治",
+        "宏观"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202608303859340222.html",
+      "title_cn": "500亿半导体大牛股筹划重大资产重组明起停牌",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "08/30",
+      "summary": "市值约500亿元的半导体大牛股公告筹划重大资产重组，将于次日起停牌。",
+      "importance": 3,
+      "rank": 0,
+      "tags": [
+        "半导体",
+        "重组"
       ],
       "locale": "national",
       "market": "a-share"
@@ -264,13 +287,13 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/29",
-      "summary": "长鑫存储向美国五角大楼提起诉讼。",
+      "summary": "国内存储芯片厂商长鑫存储起诉美国五角大楼，相关案件进入法律程序。",
       "importance": 2,
       "rank": 0,
       "tags": [
         "半导体",
         "中概股",
-        "贸易"
+        "中美关系"
       ],
       "locale": "national",
       "market": "a-share"
@@ -281,27 +304,12 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/30",
-      "summary": "东方财富汇总周末多项宏观与市场消息，对A股9月行情给出展望观点。",
-      "importance": 2,
+      "summary": "机构展望A股9月行情认为多重政策利好落地后，市场可更积极一些。",
+      "importance": 1,
       "rank": 0,
       "tags": [
         "A股",
         "宏观"
-      ],
-      "locale": "national",
-      "market": "a-share"
-    },
-    {
-      "url": "https://finance.eastmoney.com/a/202608303859340840.html",
-      "title_cn": "矛盾升级！马斯克回应：“毫不在意”",
-      "source": "东方财富",
-      "source_type": "media",
-      "date": "08/30",
-      "summary": "马斯克就某争议事件回应称\"毫不在意\"，相关矛盾进一步升级。",
-      "importance": 1,
-      "rank": 0,
-      "tags": [
-        "科技"
       ],
       "locale": "national",
       "market": "a-share"
@@ -312,30 +320,28 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/30",
-      "summary": "东方财富汇总8月30日晚间沪深上市公司重大事项公告。",
-      "importance": 2,
+      "summary": "沪深两市8月30日晚间发布一批上市公司重大事项公告，涵盖重组、回购、增减持等。",
+      "importance": 1,
       "rank": 0,
       "tags": [
         "A股",
-        "公告"
+        "公司公告"
       ],
       "locale": "national",
       "market": "a-share"
     },
     {
-      "url": "https://finance.eastmoney.com/a/202608303859334765.html",
-      "title_cn": "环球下周看点：8月非农数据重磅来袭博通财报接棒英伟达",
+      "url": "https://finance.eastmoney.com/a/202608303859340840.html",
+      "title_cn": "矛盾升级！马斯克回应：“毫不在意”",
       "source": "东方财富",
       "source_type": "media",
       "date": "08/30",
-      "summary": "下周全球市场关注美国8月非农就业数据以及博通财报，后者被视为英伟达之后AI芯片板块的下一个验证点。",
-      "importance": 3,
+      "summary": "马斯克对外界质疑回应\"毫不在意\"，双方矛盾公开升级。",
+      "importance": 1,
       "rank": 0,
       "tags": [
-        "美股",
-        "财报",
-        "AI",
-        "宏观"
+        "科技",
+        "中概股"
       ],
       "locale": "national",
       "market": "a-share"
@@ -346,13 +352,29 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/30",
-      "summary": "美联储理事沃什为9月加息敞开大门，美联储可能面临巨大政治压力。",
+      "summary": "美联储理事沃什表态为9月加息打开大门，美联储或面临较大政治压力。",
       "importance": 3,
       "rank": 0,
       "tags": [
-        "美股",
+        "美联储",
+        "宏观"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202608303859334765.html",
+      "title_cn": "环球下周看点：8月非农数据重磅来袭博通财报接棒英伟达",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "08/30",
+      "summary": "下周全球市场关注美国8月非农就业数据，同时博通财报将接棒英伟达成为科技板块焦点。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
         "宏观",
-        "美联储"
+        "财报",
+        "半导体"
       ],
       "locale": "national",
       "market": "a-share"
@@ -363,13 +385,13 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/30",
-      "summary": "A股一只龙头股同时覆盖CPO、人形机器人、汽车电子等热门题材，受到市场关注。",
+      "summary": "市场梳理同时覆盖CPO、人形机器人、汽车电子等热门题材的相关概念龙头股名单。",
       "importance": 1,
       "rank": 0,
       "tags": [
-        "A股",
         "AI",
-        "机器人"
+        "人形机器人",
+        "汽车"
       ],
       "locale": "national",
       "market": "a-share"
@@ -380,7 +402,7 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/30",
-      "summary": "评论文章指出传统IT范式难以应对AI带来的新机遇。",
+      "summary": "评论指出传统IT架构与思维模式难以适配AI时代的新业务场景。",
       "importance": 1,
       "rank": 0,
       "tags": [
@@ -396,13 +418,12 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/29",
-      "summary": "美联储理事沃什在某讲话中25次提及通胀但避谈\"美债风暴\"，意在维护美联储独立性。",
+      "summary": "沃什在讲话中25次提及通胀但回避\"美债风暴\"话题，被解读为意在维护美联储独立性。",
       "importance": 2,
       "rank": 0,
       "tags": [
-        "美股",
-        "宏观",
-        "美联储"
+        "美联储",
+        "宏观"
       ],
       "locale": "national",
       "market": "a-share"
@@ -413,12 +434,12 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/30",
-      "summary": "港交所披露易刊出某上市公司依据特别授权发行股份的公告。",
+      "summary": "港交所披露易发布某公司根据特定授权发行股份的公告及通知。",
       "importance": 1,
       "rank": 0,
       "tags": [
         "港股",
-        "公告"
+        "公司公告"
       ],
       "locale": "national",
       "market": "hk"
@@ -429,12 +450,12 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/30",
-      "summary": "港交所披露易刊出海外监管公告，涉及董事会决议、公司治理、证券发行及交易更新等多类事项。",
+      "summary": "港股上市公司发布海外监管公告，涉及董事会决议、公司治理、发行证券及交易更新等多项内容。",
       "importance": 1,
       "rank": 0,
       "tags": [
         "港股",
-        "公告"
+        "公司公告"
       ],
       "locale": "national",
       "market": "hk"
@@ -445,7 +466,7 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/30",
-      "summary": "港交所披露易刊出某上市公司的股息或分派公告。",
+      "summary": "港股上市公司发布股息或分派公告。",
       "importance": 1,
       "rank": 0,
       "tags": [
@@ -461,12 +482,12 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/30",
-      "summary": "港交所披露易刊出上市公司代表委任表格。",
+      "summary": "港交所披露易披露代表委任表格（Proxy Forms）相关公告。",
       "importance": 1,
       "rank": 0,
       "tags": [
         "港股",
-        "公告"
+        "公司公告"
       ],
       "locale": "national",
       "market": "hk"
@@ -477,7 +498,7 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/30",
-      "summary": "港交所披露易刊出某上市公司中期业绩公告。",
+      "summary": "港股上市公司公布中期业绩公告。",
       "importance": 1,
       "rank": 0,
       "tags": [
@@ -493,12 +514,12 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/30",
-      "summary": "港交所披露易刊出股东特别大会通知及暂停办理股份过户登记相关公告。",
+      "summary": "港股上市公司发布股东特别大会/特别股东大会通知及暂停办理股份过户登记。",
       "importance": 1,
       "rank": 0,
       "tags": [
         "港股",
-        "公告"
+        "公司公告"
       ],
       "locale": "national",
       "market": "hk"
@@ -509,12 +530,12 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/30",
-      "summary": "港交所披露易刊出海外监管公告（其他类别）。",
+      "summary": "港股上市公司发布海外监管公告——其他事项。",
       "importance": 1,
       "rank": 0,
       "tags": [
         "港股",
-        "公告"
+        "公司公告"
       ],
       "locale": "national",
       "market": "hk"
@@ -525,12 +546,12 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/30",
-      "summary": "港交所披露易刊出某上市公司通函，涉及章程文件修订及其他事项。",
+      "summary": "港股上市公司发布通函，涉及修订组织章程文件及其他事项。",
       "importance": 1,
       "rank": 0,
       "tags": [
         "港股",
-        "公告"
+        "公司公告"
       ],
       "locale": "national",
       "market": "hk"
@@ -541,12 +562,12 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/30",
-      "summary": "港交所披露易刊出某上市公司董事或重要执行职能/责任变更公告。",
+      "summary": "港股上市公司披露董事或重要行政人员职能变更公告。",
       "importance": 1,
       "rank": 0,
       "tags": [
         "港股",
-        "公告"
+        "公司公告"
       ],
       "locale": "national",
       "market": "hk"
@@ -557,12 +578,12 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/30",
-      "summary": "港交所披露易刊出海外监管公告，涉及董事会决议事项。",
+      "summary": "港股上市公司发布海外监管公告——董事会决议。",
       "importance": 1,
       "rank": 0,
       "tags": [
         "港股",
-        "公告"
+        "公司公告"
       ],
       "locale": "national",
       "market": "hk"
@@ -573,12 +594,12 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/30",
-      "summary": "港交所披露易刊出某上市公司章程文件修订公告。",
+      "summary": "港股上市公司发布修订组织章程文件的公告。",
       "importance": 1,
       "rank": 0,
       "tags": [
         "港股",
-        "公告"
+        "公司公告"
       ],
       "locale": "national",
       "market": "hk"
@@ -589,7 +610,7 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/30",
-      "summary": "港交所披露易刊出另一家上市公司中期业绩公告。",
+      "summary": "港股上市公司公布中期业绩公告。",
       "importance": 1,
       "rank": 0,
       "tags": [
@@ -605,13 +626,12 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/30",
-      "summary": "CNBC报道，美国零售商在处理关税退款的方式上分化明显，财报呈现\"自选式\"分化。",
-      "importance": 2,
+      "summary": "美国零售商在处理关税退款时采取差异化策略，被业内形容为\"自主选择\"式财报。",
+      "importance": 1,
       "rank": 0,
       "tags": [
-        "美股",
         "关税",
-        "零售"
+        "消费"
       ],
       "locale": "overseas",
       "market": "us"
@@ -622,11 +642,10 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/30",
-      "summary": "曾击败大型烟草公司的诉讼律师考虑将类似策略用于Meta等社交媒体公司。",
-      "importance": 1,
+      "summary": "曾击败大型烟草公司的律师考虑用相似诉讼策略挑战Meta及社交媒体平台。",
+      "importance": 2,
       "rank": 0,
       "tags": [
-        "美股",
         "科技",
         "诉讼"
       ],
@@ -639,12 +658,11 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/30",
-      "summary": "冰岛民众投票否决重新启动加入欧盟的谈判，尽管面临特朗普就格陵兰问题发出的威胁。",
+      "summary": "冰岛民众在公投中拒绝就重新加入欧盟开启谈判，尽管面临特朗普就格陵兰问题的施压。",
       "importance": 1,
       "rank": 0,
       "tags": [
-        "地缘政治",
-        "欧盟"
+        "地缘政治"
       ],
       "locale": "overseas",
       "market": "us"
@@ -655,13 +673,13 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/30",
-      "summary": "美加贸易战新关税壁垒将影响经济关键金属的流通与定价。",
+      "summary": "美加贸易战新关税壁垒升级，对关键金属供应和经济产生连锁影响。",
       "importance": 2,
       "rank": 0,
       "tags": [
-        "美股",
         "关税",
-        "金属"
+        "金属",
+        "贸易"
       ],
       "locale": "overseas",
       "market": "us"
@@ -672,12 +690,12 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/30",
-      "summary": "CNBC援引华尔街分析师建议，推荐三只适合稳健收益的股息股。",
+      "summary": "华尔街分析师推荐三只股息股票，认为其能提供稳定收益。",
       "importance": 1,
       "rank": 0,
       "tags": [
         "美股",
-        "分红"
+        "股息"
       ],
       "locale": "overseas",
       "market": "us"
@@ -688,12 +706,11 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/29",
-      "summary": "据CNBC报道，OpenAI将在Cursor被马斯克旗下SpaceX收购后终止对其模型访问。",
-      "importance": 3,
+      "summary": "OpenAI将在马斯克旗下SpaceX收购Cursor后终止对Cursor的模型访问权限。",
+      "importance": 2,
       "rank": 0,
       "tags": [
         "AI",
-        "美股",
         "科技"
       ],
       "locale": "overseas",
@@ -705,11 +722,10 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/29",
-      "summary": "美国国家公园管理局尽管承认存在\"不利影响\"，仍支持特朗普提出的250英尺高纪念拱门方案。",
+      "summary": "美国国家公园管理局支持特朗普提议的250英尺高拱门项目，尽管承认对历史景观存在不利影响。",
       "importance": 1,
       "rank": 0,
       "tags": [
-        "美股",
         "政策"
       ],
       "locale": "overseas",
@@ -721,7 +737,7 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/29",
-      "summary": "特朗普政府考虑以土地置换方式让某私人开发商取得通往优胜美地的通道。",
+      "summary": "特朗普政府考虑以约塞米蒂国家公园土地置换方式为私人开发商提供通行道路。",
       "importance": 1,
       "rank": 0,
       "tags": [
@@ -736,13 +752,13 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/29",
-      "summary": "AI焦虑与社交媒体担忧情绪叠加，美国科技股遭遇强烈反弹。",
+      "summary": "科技板块遭遇强烈逆风，AI焦虑与社交媒体监管担忧叠加，行业情绪明显升温。",
       "importance": 2,
       "rank": 0,
       "tags": [
-        "美股",
         "AI",
-        "科技"
+        "科技",
+        "美股"
       ],
       "locale": "overseas",
       "market": "us"
@@ -753,46 +769,44 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/30",
-      "summary": "特朗普宣布与委内瑞拉达成协议，将锁定超过650亿桶石油储量。",
+      "summary": "特朗普宣布与委内瑞拉达成协议，将保障超过650亿桶原油储备的供应。",
       "importance": 3,
       "rank": 0,
       "tags": [
         "能源",
-        "地缘政治",
-        "美股"
+        "地缘政治"
       ],
       "locale": "overseas",
       "market": "us"
     },
     {
-      "url": "https://www.investing.com/news/economy-news/jobs-report-broadcom-results-pose-next-hurdles-for-stock-market-rally-4882045",
-      "title_cn": "Jobs report, Broadcom results pose next hurdles for stock market rally",
+      "url": "https://www.investing.com/news/earnings/liberty-live-in-spotlight-as-earnings-test-profitability-path-93CH-4882049",
+      "title_cn": "Liberty Live in spotlight as earnings test profitability path",
       "source": "Investing.com News",
       "source_type": "media",
       "date": "08/30",
-      "summary": "Investing.com报道，美国非农就业报告与博通财报将成为美股上涨势头的下一考验。",
-      "importance": 3,
-      "rank": 0,
-      "tags": [
-        "美股",
-        "财报",
-        "宏观",
-        "AI"
-      ],
-      "locale": "overseas",
-      "market": "us"
-    },
-    {
-      "url": "https://www.investing.com/news/stock-market-news/saudi-arabia-stocks-lower-at-close-of-trade-tadawul-all-share-down-071-4882044",
-      "title_cn": "Saudi Arabia stocks lower at close of trade; Tadawul All Share down 0.71%",
-      "source": "Investing.com News",
-      "source_type": "media",
-      "date": "08/30",
-      "summary": "Investing.com报道，沙特阿拉伯股市收跌，Tadawul All Share指数下跌0.71%。",
+      "summary": "Liberty Live业绩成为市场焦点，投资者关注其盈利路径是否走通。",
       "importance": 1,
       "rank": 0,
       "tags": [
-        "新兴市场"
+        "美股",
+        "财报"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.investing.com/news/earnings/liberty-live-earnings-ahead-can-q2-deliver-turnaround-93CH-4882048",
+      "title_cn": "Liberty Live earnings ahead: Can Q2 deliver turnaround?",
+      "source": "Investing.com News",
+      "source_type": "media",
+      "date": "08/30",
+      "summary": "Liberty Live将发布二季度财报，市场关注其能否实现业绩反转。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "美股",
+        "财报"
       ],
       "locale": "overseas",
       "market": "us"
