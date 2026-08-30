@@ -973,5 +973,20 @@
       "zh"
     ],
     "notes": "昨日股市·A股交叉验证源（2026-08-25 新增）：lib/sources/crawlers/sources/sina-a-stock.ts 抓新浪财经A股频道列表页，匹配 dated doc 链接 + A股相关性过滤（标题含A股关键词或6位A股代码，排除港股/美股标记）+ 3天窗口；与 eastmoney-stock 构成 A股双源独立验证。config 仅供 tier/knownSourceIds 识别，不直接 scrape。"
+  },
+  {
+    "id": "em-declare",
+    "role": "crawled-input",
+    "tier": "T1.5",
+    "name": "东财IPO在审(广东)",
+    "type": "api",
+    "url": "file://./data/crawled-articles.json",
+    "category": "gd-ipo",
+    "subcategory": "ipo-tutoring",
+    "enabled": false,
+    "locales": [
+      "zh"
+    ],
+    "notes": "2026-08-30 重新激活 gd-ipo：东财在审企业表 RPT_IPO_DECORGNEWEST（REG_ADDRESS=广东 660家）爬虫产物路由源；覆盖受理→问询→过会→提交注册→注册生效整段在审生命周期（旧源漏网）。"
   }
 ]

@@ -16,6 +16,8 @@ export const DEFAULT_GZ_SOURCE_ID = "gz-local";
 
 /** 归一化 region 分流的目标分类。 */
 export const REGION_GZ: Category = "gz";
+/** 广东（非广州辖区）企业 → 「广东地区IPO」板块（2026-08-30 重新激活 gd-ipo）。 */
+export const REGION_GD_IPO: Category = "gd-ipo";
 export const REGION_IPO: Category = "ipo";
 
 /** 分类渲染/处理顺序（与 render.ts 的分类面板顺序一致）。 */

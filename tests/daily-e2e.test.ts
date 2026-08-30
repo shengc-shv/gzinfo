@@ -24,6 +24,21 @@ import type { AiAssetStore } from "../lib/ai/assets";
 // 避免音频合成走网络：显式关闭
 process.env.AUDIO_ENABLED = "false";
 
+// mock 日期动态化（2026-08-30 修复时间漂移）：filterByWindow 等窗口逻辑用 Date.now()
+// 而非 ctx.date 计算 cutoff，固定 mock 日期（曾用 2026-08-28）会随真实日期推移出窗，
+// 导致 happy path 断言「过滤后条目数=2」在真实日期过窗后失败（2→0）。
+// 任何真实运行时刻，今天 07:00 都在 2 天窗口内 → 测试不再随日期漂移。
+const todayStart = (): Date => {
+  const d = new Date();
+  return new Date(d.getFullYear(), d.getMonth(), d.getDate());
+};
+const dateKey = (d: Date): string => {
+  const y = d.getFullYear();
+  const m = String(d.getMonth() + 1).padStart(2, "0");
+  const day = String(d.getDate()).padStart(2, "0");
+  return `${y}-${m}-${day}`;
+};
+
 const silentLog: Logger = {
   info: () => {},
   warn: () => {},
@@ -32,8 +47,8 @@ const silentLog: Logger = {
 
 function makeCtx(): DailyContext {
   return {
-    startTime: new Date("2026-08-28T08:00:00+08:00"),
-    date: "2026-08-28",
+    startTime: new Date(todayStart().getTime() + 8 * 3_600_000),
+    date: dateKey(todayStart()),
     mode: { kind: "ai" },
     sources: [],
     tierBySource: new Map(),
@@ -44,7 +59,7 @@ function makeCtx(): DailyContext {
   };
 }
 
-const pub = new Date("2026-08-28T07:00:00+08:00");
+const pub = new Date(todayStart().getTime() + 7 * 3_600_000);
 
 const mockArticles: ArticleInput[] = [
   {
@@ -66,7 +81,7 @@ const mockArticles: ArticleInput[] = [
 ] as ArticleInput[];
 
 const mockReport: DailyReport = {
-  date: "2026-08-28",
+  date: dateKey(todayStart()),
   hero_line: "今日定调",
   must_read: [
     { url: "https://example.com/a", why: "重要" },

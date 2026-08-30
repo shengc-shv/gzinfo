@@ -13,6 +13,7 @@ import {
   DEFAULT_GZ_SOURCE_ID,
   DEFAULT_SCRAPER_SOURCE_ID,
   REGION_GZ,
+  REGION_GD_IPO,
   REGION_IPO,
   rewriteGzPrefix,
 } from "../sources/constants";
@@ -34,6 +35,13 @@ export interface CrawledArticle {
   summary?: string;
   /** 源等级（T6）：T1 官方一手 / T1.5 准官方·机构一手 / T2 媒体·智库。 */
   tier?: SourceTier;
+  /**
+   * 注册省份（结构化地域信号，gdIpo 三道闸第一优先级，2026-08-30 爬虫透传）。
+   * 例：东财在审企业表 REG_ADDRESS 字段值为 "广东"。
+   */
+  registeredProvince?: string;
+  /** 已知股票代码（可选，供广东判定离线精确匹配）。 */
+  stockCode?: string;
 }
 
 /** 爬虫数据的两条进入路径：IPO/新股（mode=ipo）与广州商机（mode=gz）。 */
@@ -50,6 +58,10 @@ export interface MergeArticle {
   category: Category;
   summary: string;
   tier?: SourceTier;
+  /** 注册省份结构化信号（透传爬虫产物，供 gdIpo 三道闸第一优先级判定）。 */
+  registeredProvince?: string;
+  /** 已知股票代码（透传，供广东判定离线精确匹配）。 */
+  stockCode?: string;
 }
 
 export interface RouteOpts {
@@ -61,7 +73,9 @@ export interface RouteOpts {
 
 /**
  * region 分流 + 前缀改写（原 daily.ts 第 400-402 行逻辑的纯函数版）。
- * - ipo 模式：region==='gz' → category='gz' 且 sourceId `gd-`→`gz-` 改写；否则 category='ipo' 不改写。
+ * - ipo 模式：region==='gz' → category='gz' 且 sourceId `gd-`→`gz-` 改写；
+ *   region==='gd' → category='gd-ipo'（广东企业，进「广东地区IPO」板块，2026-08-30 重启）；
+ *   否则 category='ipo'（全国 IPO/新股）不改写。
  * - gz 模式：sourceId 原样保留，category 用 gzCategory ?? 'gz'。
  */
 export function routeRegion(
@@ -70,7 +84,8 @@ export function routeRegion(
   opts: RouteOpts = {},
 ): { sourceId: string; category: Category } {
   if (mode === "ipo") {
-    const category = opts.region === "gz" ? REGION_GZ : REGION_IPO;
+    const category =
+      opts.region === "gz" ? REGION_GZ : opts.region === "gd" ? REGION_GD_IPO : REGION_IPO;
     const sourceId = category === REGION_GZ ? rewriteGzPrefix(srcId) : srcId;
     return { sourceId, category };
   }
@@ -103,6 +118,8 @@ export function toMergeArticle(
     category,
     summary: item.summary || "",
     ...(item.tier ? { tier: item.tier } : {}),
+    ...(item.registeredProvince ? { registeredProvince: item.registeredProvince } : {}),
+    ...(item.stockCode ? { stockCode: item.stockCode } : {}),
   };
 }
 

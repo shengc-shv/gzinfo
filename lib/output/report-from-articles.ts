@@ -9,17 +9,25 @@
 import type { ArticleInput, DailyReport, ReportItem, ReportSectionKey } from "../types";
 import { rollUpTags } from "../classify/tag-rollup";
 import { dedupeSections } from "./dedupe-sections";
-import { isGzLocalCandidate, isPolicyMarketCandidate } from "./render/cards";
+import {
+  isGdIpoCandidate,
+  isGzLocalCandidate,
+  isPolicyMarketCandidate,
+} from "./render/cards";
 
 /**
  * 旧采集分类 → 新管线渲染板块（无 AI 兜底映射）。
  * 无状态源架构红线（2026-08-29 用户）：板块归属一律由**内容判定**，数据源分类
  * 只是采集元数据。tech/ipo 是独立内容栏目按类别归栏；其余统一内容判定：
- *  广州锚+业务线 → gz_local；外地地名/政策动作/全国市场信号 → policy_market；否则 biz_insight。
+ *  广东企业 IPO 进展（名单+阶段词）→ ipo；广州锚+业务线 → gz_local；
+ *  外地地名/政策动作/全国市场信号 → policy_market；否则 biz_insight。
  */
 export function categoryToSection(cat?: string, title = "", excerpt = ""): ReportSectionKey {
   if (cat === "tech") return "tech";
   if (cat === "ipo" || cat === "gd-ipo") return "ipo";
+  // 2026-08-30：媒体源报道的广东企业 IPO 动态（注册生效/辅导备案/过会等，
+  // 东财在审表状态滞后时由媒体报道补位）→ 内容判定归 IPO 动态板块。
+  if (isGdIpoCandidate(title, excerpt)) return "ipo";
   if (isGzLocalCandidate(title, excerpt)) return "gz_local";
   if (isPolicyMarketCandidate(title, excerpt)) return "policy_market";
   return "biz_insight";

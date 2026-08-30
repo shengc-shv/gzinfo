@@ -21,6 +21,7 @@ import {
   CATEGORY_DIGEST_LABELS,
   TECH_MAIN_SUBS,
   sortByTierAndTime,
+  isGdIpoCandidate,
   isGzLocalCandidate,
   isPolicyMarketCandidate,
   renderCardList,
@@ -1250,6 +1251,9 @@ export function mergeRollingIntoReport(
       }
       return "ipo";
     }
+    // 2026-08-30：媒体源报道的广东企业 IPO 动态（注册生效/辅导备案/过会等，
+    // 东财在审表状态滞后时由媒体报道补位）→ 内容判定归 IPO 动态板块。
+    if (isGdIpoCandidate(title, a.excerpt || "")) return "ipo";
     // 广州本地：只看标题内容（广州锚 + 银行业务线），与采集分类无关——
     // 广州市政府批复（SOURCE_ROUTE 归 finance）标题含「广州」→ 进 gz_local。
     // 摘要里的「广州」是 AI 解读视角（「分行应跟踪广州房贷…」），不代表事件在广州。

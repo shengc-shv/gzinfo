@@ -16,6 +16,9 @@ import { runLlm } from "../ai/llm";
 import { aiEnabled } from "../ai/mode";
 import type { ExecutiveSummary } from "../ai/executive-summary";
 import type { ReportItem, StockRecap } from "../types";
+// 2026-08-30：广东 IPO 判定统一走渲染侧内容判定（阶段强词 + 名单三层识别），
+// 避免播报与卡片两套正则口径漂移（实例：粤芯「注册申请材料已受理」曾因 IPO_KW 缺词漏捞）。
+import { isGdIpoCandidate } from "../output/render/cards";
 
 /** 播放器元数据：renderHtml 注入 sticky 播放器时使用。 */
 export interface AudioMeta {
@@ -118,16 +121,20 @@ export function formatDuration(secs: number): string {
   return `约 ${m} 分 ${s} 秒`;
 }
 
-const GD = /广东|广州/;
-const IPO_KW = /IPO|上市|过会|申购|招股|注册生效|敲钟|递表/i;
-
-/** 从 IPO 板块条目里挑出「广东/广州企业 + IPO 进展」的线索（兜底用）。 */
-function detectGdIpo(ipoItems: ReportItem[]): string[] {
+/**
+ * 从 IPO 板块条目里挑出「广东/广州企业 + IPO 进展」的线索（兜底用）。
+ * 2026-08-30 升级：广东企业判定从「标题含广东/广州字样」升级为名单三层识别
+ * （企业名/别名/城市，见 lib/sources/guangdong-registry.json）——
+ * 「粤芯半导体：注册申请材料已受理」这类标题无地域字样的广东企业不再漏掉。
+ * 判定复用渲染侧 isGdIpoCandidate（IPO_PROGRESS_RE + isGuangdongEnterprise），单一口径。
+ */
+export function detectGdIpo(ipoItems: ReportItem[]): string[] {
   const out: string[] = [];
   for (const it of ipoItems) {
-    const plain = `${it.title_cn || ""} ${it.summary || ""}`.trim();
-    if (plain && GD.test(plain) && IPO_KW.test(plain)) {
-      out.push(plain.slice(0, 200));
+    const title = it.title_cn || "";
+    const summary = it.summary || "";
+    if (isGdIpoCandidate(title, summary)) {
+      out.push(`${title} ${summary}`.trim().slice(0, 200));
       if (out.length >= 5) break;
     }
   }

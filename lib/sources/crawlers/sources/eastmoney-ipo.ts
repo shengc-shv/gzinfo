@@ -111,6 +111,10 @@ export class EastMoneyIPOCrawler extends BaseCrawler {
           excerpt,
           publishedAt: pubDate,
           sourceId: "em-ipo",
+          // 2026-08-30：本条已按广东城市关键词过滤（公司名/派出机构），产出即广东企业 →
+          // region='gd' 由 merge.routeRegion 归「广东地区IPO」板块（stage-tutoring 辅导栏）。
+          region: "gd",
+          registeredProvince: "广东",
         });
       }
 

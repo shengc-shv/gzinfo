@@ -28,6 +28,10 @@ export type CrawlerResult = {
   category?: string;
   summary?: string;
   subcategory?: string;
+  // 2026-08-30 广东 IPO 重构：在审/辅导企业带注册地省份与证券代码（内容判定用，
+  // 见 merge.ts CrawledArticle 同名字段；无状态源红线：仅作采集元数据透传，不驱动分类）
+  registeredProvince?: string;
+  stockCode?: string;
 };
 
 export interface CrawlerOptions {
@@ -183,6 +187,9 @@ export class BaseCrawler {
       ...(item.sourceId ? { sourceId: item.sourceId } : {}),
       // region: 'gd' 广东（进「广东地区IPO」）/ 'nation' 全国（进「全国IPO/新股」）
       ...(item.region ? { region: item.region } : {}),
+      // 2026-08-30：在审/辅导企业注册地省份 + 证券代码透传（merge 归一化用）
+      ...(item.registeredProvince ? { registeredProvince: item.registeredProvince } : {}),
+      ...(item.stockCode ? { stockCode: item.stockCode } : {}),
     }));
   }
 }

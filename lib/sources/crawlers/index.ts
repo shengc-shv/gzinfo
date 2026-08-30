@@ -9,10 +9,7 @@
  */
 import type { CrawledArticle } from "../../ingest/merge";
 import { BaseCrawler } from "./base-crawler";
-import { HKEXCrawler } from "./sources/hkex-ipo";
-import { SSEAPICrawler } from "./sources/sse-api";
-import { SZSEAPICrawler } from "./sources/szse-api-crawler";
-import { BSEAPICrawler } from "./sources/bse-api";
+import { EastMoneyDeclareCrawler } from "./sources/eastmoney-declare";
 import { EastMoneyIPOCrawler } from "./sources/eastmoney-ipo";
 import { GzStatsCrawler } from "./sources/gz-stats";
 import { GzGovCrawler } from "./sources/gz-gov";
@@ -60,10 +57,21 @@ function dedupeByUrl<T extends { url?: string }>(items: T[]): T[] {
 }
 
 export async function fetchCrawledArticles(): Promise<CrawledBundle> {
-  // —— IPO / 新股（2026-08-25 用户决定：全部 IPO 功能废弃，明天重新设计；代码保留）——
-  // 停用 HKEXCrawler / SSEAPICrawler / SZSEAPICrawler / BSEAPICrawler / EastMoneyIPOCrawler
-  // 2026-08-25 用户红线：IPO 相关功能全部废弃（数据太老/方案要重设计），不抓取、不渲染
-  const ipoCrawlers: BaseCrawler[] = [];
+  // —— IPO / 新股（2026-08-30 重新激活，方案见 ai-workspace/log/2026-08-29-*-gz-sources-research.md）——
+  // 2026-08-25 曾全部停用（数据太老/方案要重设计）；08-30 数据源检视后按新方案恢复：
+  //   ✅ EastMoneyDeclareCrawler（新增，主源）：东财在审企业表 RPT_IPO_DECORGNEWEST，
+  //      REG_ADDRESS="广东" 过滤 → 覆盖【受理→问询→过会→提交注册→注册生效】整段在审生命周期
+  //      （旧源全部漏掉粤芯这类在审/注册企业），region='gd' 进「广东地区IPO」。
+  //   ✅ EastMoneyIPOCrawler（恢复）：东财辅导备案表，广东关键词过滤，region='gd' 进辅导栏。
+  //   ⏸ 停用（文件保留）：HKEXCrawler（港股披露易，对 A 股在审无意义）/ SSEAPI·SZSEAPI
+  //      （巨潮 cninfo 只能检索**已上市**证券，对在审企业无效）/ BSEAPICrawler（北交所发行期）。
+  //   ⏸ 证监会「同意注册批复」栏目（csrc.gov.cn）：官方注册生效即时源，但 Tengine WAF
+  //      （acw_tc 校验）本地 curl 302 被拦，暂不可达；注册生效动态由「东财状态更新 + 媒体源
+  //      内容判定 isGdIpoCandidate」双保险覆盖，待 WAF 绕过方案（local-acquire）再接入。
+  const ipoCrawlers: BaseCrawler[] = [
+    new EastMoneyDeclareCrawler(),
+    new EastMoneyIPOCrawler(),
+  ];
 
   const ipo: CrawledArticle[] = [];
   for (const crawler of ipoCrawlers) {

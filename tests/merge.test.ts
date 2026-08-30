@@ -83,12 +83,20 @@ test("routeRegion(ipo): gz region → gz- 前缀改写 + category=gz", () => {
   });
 });
 
-test("routeRegion(ipo): 非 gz / 缺省 region → 不改写 + category=ipo", () => {
-  assert.deepEqual(routeRegion("gd-sse", "ipo", { region: "gd" }), {
+test("routeRegion(ipo): gd region → category=gd-ipo（2026-08-30 重启「广东地区IPO」）", () => {
+  // 广东企业（非广州辖区）→ 进「广东地区IPO」板块，sourceId 不改写
+  assert.deepEqual(routeRegion("em-declare", "ipo", { region: "gd" }), {
+    sourceId: "em-declare",
+    category: "gd-ipo",
+  });
+});
+
+test("routeRegion(ipo): 缺省 region → 不改写 + category=ipo", () => {
+  assert.deepEqual(routeRegion("gd-sse", "ipo"), {
     sourceId: "gd-sse",
     category: "ipo",
   });
-  assert.deepEqual(routeRegion("gd-sse", "ipo"), {
+  assert.deepEqual(routeRegion("gd-sse", "ipo", { region: "nation" }), {
     sourceId: "gd-sse",
     category: "ipo",
   });
@@ -144,4 +152,25 @@ test("toMergeArticle: tier 透传（T6 数据契约）", () => {
   assert.equal(a.tier, "T1");
   const b = toMergeArticle({ url: "u4", title: "T" }, "gz");
   assert.equal(b.tier, undefined);
+});
+
+test("toMergeArticle: registeredProvince / stockCode 透传（2026-08-30 gd-ipo 结构化信号）", () => {
+  const a = toMergeArticle(
+    {
+      url: "u5",
+      title: "粤芯半导体：IPO注册生效（拟创业板）",
+      publishedAt: "2026-08-28",
+      region: "gd",
+      registeredProvince: "广东",
+      stockCode: "301612",
+    },
+    "ipo",
+  );
+  assert.equal(a.category, "gd-ipo", "region=gd → 进广东地区IPO板块");
+  assert.equal(a.registeredProvince, "广东");
+  assert.equal(a.stockCode, "301612");
+  // 未提供 → 不产生字段
+  const b = toMergeArticle({ url: "u6", title: "T" }, "ipo");
+  assert.equal(b.registeredProvince, undefined);
+  assert.equal(b.stockCode, undefined);
 });

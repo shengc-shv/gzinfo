@@ -9,6 +9,8 @@ import { TIER_COLORS } from "./theme";
 import { SOURCE_TIER_LABELS, SOURCE_TIER_ORDER, type SourceTier } from "../../sources/tiers";
 import { REPORT_LOCALE } from "../../sources/registry";
 import { getReportTz } from "../../utils";
+// 2026-08-30：广东企业判定（名单公司名/城市/代码三层），用于媒体源报道的广东企业 IPO 动态路由
+import { isGuangdongEnterprise } from "../../sources/guangdong.mjs";
 
 // ----- types -----
 export type SourceGroup = {
@@ -169,6 +171,26 @@ export const POLICY_ACTION_RE =
  *  黄金/理财/基金/股市涨跌等属「业务启示」软资讯，不吸走 policy_market 稀缺位） */
 export const MARKET_SIGNAL_RE =
   /利率|LPR|房贷|按揭|楼市|房价|购房|房地产|贷款|信贷|降息|降准|贴息|存款准备金|汇率|外汇|宏观|稳增长|扩内需|消费贷|经营贷|普惠|减税|退税|专项债|国债发行|万亿|基准利率/;
+
+/**
+ * IPO 阶段强词（内容判定用，2026-08-30 新增）：仅「企业 IPO 进展类」事件。
+ * 刻意不含泛化词「上市/IPO」裸词，避免「上市培育计划」「IPO 培训」类政务/活动新闻
+ * 被拉进 IPO 动态板块；须与名单企业名/城市判定（isGuangdongEnterprise）组合使用。
+ */
+export const IPO_PROGRESS_RE =
+  /注册生效|同意注册|IPO注册|首次公开发行|过会|上会|上市委|提交注册|注册申请|辅导备案|IPO辅导|辅导验收|招股|申购|路演|敲钟|新股上市|递表|拟上市|发行审核|发行注册|注册制上市/;
+
+/**
+ * 「广东企业 IPO 动态」内容判定（2026-08-30，无状态源红线合规：纯内容判定）：
+ * 媒体源（证券时报/财联社等）会即时报道「证监会同意粤芯半导体IPO注册」这类注册生效事件
+ * ——东财在审表状态滞后（实测粤芯 08-28 批复，表里还停在 08-20），需要媒体报道补位。
+ * 判定：① 广东企业（名单公司名/别名/广东城市词，三层识别）② 标题/摘要含 IPO 阶段强词。
+ * 命中 → 归「IPO 动态」板块（sectionOf / categoryToSection 在 policy_market 判定前调用）。
+ */
+export function isGdIpoCandidate(title: string, excerpt = ""): boolean {
+  const text = `${title} ${excerpt}`;
+  return IPO_PROGRESS_RE.test(text) && isGuangdongEnterprise(text);
+}
 
 /** 来源徽章（2026-08-21 重构 #12：来源降级为卡片左上角徽章，扫一眼即知可信度） */
 export function srcBadgeOf(a: ArticleInput): { label: string; cls: string } {
