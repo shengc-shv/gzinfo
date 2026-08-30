@@ -67,7 +67,7 @@ export const AUDIO_SPEAK_LIMITS = {
 // v2（I-A 用户要求）：去掉"行长"等称呼；最后用"今天播报结束"作为收尾，不下命令。
 const OPENER = "早上好。";
 const CLOSER = "今天播报结束。";
-const IPO_TRANSITION = "接下去关注广东IPO企业动态。";
+const IPO_TRANSITION = "最近一周有IPO动态的广东企业。";
 /** 股市解读段：语气与「今日必读」同风格（客观、精炼、陈述式），过场语与必读/洞察并列。 */
 const STOCK_TRANSITION = "接下去是股市解读。";
 /** 中文 TTS 语速估算（字/秒）：腾讯 Speed=1（1.2 倍）实测约 5.3 字/秒，取 5.2 便于徽标时长贴近实际（2026-08-24 校准）。 */
