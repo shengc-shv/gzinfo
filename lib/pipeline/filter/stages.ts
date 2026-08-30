@@ -229,15 +229,23 @@ const crossDayDedupStage: FilterStage = {
       url: e.url,
       tier: ctx.tierBySource.get(e.sourceId),
     }));
+    // 2026-08-30 修复（BUG B）：IPO 类（gd-ipo/ipo）是「最近一周动态」滚动视图，
+    // 同一家企业在 7 天窗口内每天重抓都应持续展示，不应被「历史库已覆盖」判重剔除
+    // （否则会出现「抓取 N 条但报告 0 条」）。故 IPO 类豁免跨天去重，其余保持原规则。
+    const ipo = articles.filter((a) => a.category === "gd-ipo" || a.category === "ipo");
+    const others = articles.filter(
+      (a) => a.category !== "gd-ipo" && a.category !== "ipo",
+    );
     const before = articles.length;
-    const { kept, removed } = dedupeAgainstHistory(articles, histSim, { maxPerTheme: 2 });
+    const { kept, removed } = dedupeAgainstHistory(others, histSim, { maxPerTheme: 2 });
+    const out = [...ipo, ...kept];
     if (removed.length > 0) {
       ctx.log.info(
         "filter",
-        `🔄 跨天标题判重: ${before} → ${kept.length} 条（历史库已覆盖 ${removed.length} 条重复主题）`,
+        `🔄 跨天标题判重: ${before} → ${out.length} 条（历史库已覆盖 ${removed.length} 条重复主题；IPO 类豁免）`,
       );
     }
-    return kept;
+    return out;
   },
 };
 

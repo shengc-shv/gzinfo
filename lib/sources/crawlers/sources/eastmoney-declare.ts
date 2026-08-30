@@ -97,6 +97,7 @@ export class EastMoneyDeclareCrawler extends BaseCrawler {
       const short = shortCompanyName(org);
       const market = String(r.PREDICT_LISTING_MARKET || "A股").trim();
       const sponsor = String(r.RECOMMEND_ORG || "").trim();
+      const code = String(r.SECURITY_CODE || "").trim();
       const label = STATE_LABELS[state] || state || "IPO动态";
       const title = `${short}：${label}（拟${market}）`;
       const excerpt = [
@@ -107,10 +108,13 @@ export class EastMoneyDeclareCrawler extends BaseCrawler {
         .filter(Boolean)
         .join("｜");
 
+      // 唯一 URL（2026-08-30 修复 BUG A）：东财在审列表页是同一条列表 URL，若所有条目
+      // 共用会被 fetchCrawledArticles 的 dedupeByUrl 合并成 1 条 → 多家广东企业被压成 1 家。
+      // 用「列表页 + #企业简称/代码」锚点保证每条唯一且仍可点击跳转列表页。
+      const anchor = encodeURIComponent(code || short);
       out.push({
         title,
-        // 东财新股数据中心在审列表页（各交易所合并视图）
-        url: "https://data.eastmoney.com/xg/xg/",
+        url: `https://data.eastmoney.com/xg/xg/#${anchor}`,
         excerpt,
         publishedAt: endDate,
         sourceId: "em-declare",
