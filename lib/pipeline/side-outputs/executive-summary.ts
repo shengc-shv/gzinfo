@@ -172,7 +172,7 @@ export async function buildExecutiveSummary(
       writeStore(date, exec);
       ctx.log.info(
         "exec",
-        `🧠 必读/商机/风险(今昨2天窗口)生成：${exec.must_read.length} 必读 / ${exec.insights.length} 商机 / ${exec.risk ? 1 : 0} 风险（输入 finance ${pool.finance.length} + gz ${pool.gz}）`,
+        `🧠 必读/商机/风险(今昨2天窗口)生成：${exec.must_read.length} 必读 / ${exec.insights.length} 商机 / ${exec.risk ? 1 : 0} 风险（输入 finance ${pool.finance.length} + gz ${pool.gz.length}）`,
       );
       return finalize(next);
     }
