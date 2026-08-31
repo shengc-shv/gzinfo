@@ -365,9 +365,11 @@ export async function assembleAudioScript(
       // 去尾部句号：三市场以"。"join 拼接，避免段间双句号
       segs.push(truncateAtSentence(prefixed.replace(/[。.]+$/, ""), Math.floor(AUDIO_SPEAK_LIMITS.stock / 3)));
     };
-    pushSeg("美股", "美东", stockRecap.us);
+    // 口播次序：A股 → 港股 → 美股（2026-08-31 用户：统一从A股到港股再到美股，
+    // 按听众熟悉度与国内优先排序，与报告页 tab 展示顺序一致）
     pushSeg("A股", "北京", stockRecap.aShare);
     pushSeg("港股", "北京", stockRecap.hk);
+    pushSeg("美股", "美东", stockRecap.us);
     if (segs.length) {
       const combined = truncateAtSentence(segs.join("。"), AUDIO_SPEAK_LIMITS.stock);
       const segText = `${stockIntro}${combined}`;

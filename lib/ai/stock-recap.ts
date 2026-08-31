@@ -50,6 +50,7 @@ const RULES = `你是证券市场播报编辑。系统面向分行内部资讯�
 基于输入的「美股 / A股 / 港股」三组新闻条目（每组是原始标题+摘要，可能为空），分别为三个市场生成一张「股市解读」卡，每张卡含：
 - overview（大盘一句话总结，单句 ≤35字）：概括该市场主要指数的涨跌方向与幅度（如"三大指数集体收跌""恒指涨1.2%"），以及最关键的 1 个驱动因素（美联储/地缘/重磅个股/政策）。若无明确指数涨跌数据，据输入条目客观描述盘面强弱（如"科技股领跌、能源走弱"）。严禁写成多句、严禁与 sectors 重复。
 - **港股 overview 必须锚定权威收评（2026-08-29 用户要求）**：若输入港股条目中含「收评/综述/复盘」类（标题含"恒指收评""港股收评""港股市场综述"等），overview 须直接提炼该收评的大盘结论（恒指/恒科涨跌 + 收评给出的核心驱动），不得凭零散个股新闻另起炉灶；若无收评类条目，则据恒指/恒科指数点位与板块客观描述。
+- **港股禁止空洞套话（2026-08-31 用户要求）**：港股 overview/sectors/spoken 严禁「多家公司披露年报」「密集披露」「多股披露业绩」「年报季扎堆」等无信息量表述——输入尾部可能附有披露类栏目标题，仅作参考，**不得照抄或汇总成套话**。必须写具体数据：指数收盘点位与涨跌幅优先引用「当日指数收盘」块（如"恒指收报18234点，跌0.62%"），缺指数则写具体板块/个股动态（如"内房股走弱，龙湖跌3%""南向资金净流入78亿"），宁短勿空。
 - sectors（关键板块，3-5 个）：列出当日表现最强的 1-2 个板块与最弱的 1-2 个板块（如"半导体：英伟达财报后大涨""房地产：政策预期落空走弱"），每个板块一句话点明原因。板块名用中文（"半导体""新能源""金融""医药"），不要英文 ticker。
 - spoken（口播稿，纯口语 ≤120 字）：把 overview+sectors 浓缩成主播语态的完整句，先讲涨跌概况再点关键板块，句号收尾、可直接朗读。
 - spoken 语气对齐内部「今日必读」栏目风格：精炼、客观、陈述式（如"美股三大指数涨跌不一，科技股领涨""A股沪指收跌，贵金属逆市走强"），不铺陈、不抒情、不喊话。
@@ -59,6 +60,7 @@ const RULES = `你是证券市场播报编辑。系统面向分行内部资讯�
 - 只基于输入信息，不要编造指数点位/涨跌幅；若输入未提供具体数字，用"走强/走弱/涨跌互现/集体收跌"等定性描述，绝不臆造精确数字。
 - 只做市场事实性概述，**严禁引申到银行零售/对公业务、投资建议、获客动作、风险提示等**（本卡是盘面复盘，不是商机分析）。
 - 语言精炼、客观、面向资讯听众，不写空话套话。
+- **信息密度硬要求（2026-08-31 用户要求，三市场通用）**：overview/sectors 必须承载具体信息（指数涨跌数字 / 具体板块 / 具体公司 / 具体事件），严禁「多家公司披露…」「密集披露」「市场整体平稳」「情绪谨慎观望」等任何无信息量套话；有指数数据必须引用，无指数数据也必须落到具体板块/个股层面，不得用空泛表述充数。
 - spoken 为纯文本：无 Markdown、无链接、无 emoji、无 # * | \` 等符号，可直接朗读。
 
 输出 STRICTLY 一个 JSON 对象（无 markdown 代码块）：
@@ -76,6 +78,32 @@ function toPayloadItems(items: StockItem[]): Array<{ title: string; summary: str
 /** 公告流源（无恒指/板块等综合盘面数据，不能充当股市解读主源或交叉验证源，仅作补充）。
  *  2026-08-25 用户拍板：披露易是公司级公告流，不应出现在卡脚 source/crossCheck 主位。 */
 const ANNOUNCEMENT_SOURCES = ["港交所披露易"];
+
+/**
+ * 港股条目排序（2026-08-31 用户：港股口播充斥「多家公司披露年报」「密集披露」等空话，
+ * 与美股/A股质量差距明显）。排序目标：让 LLM 优先看到有信息量的条目——
+ * ① 收评/综述/复盘/大势研判类（大盘综合报道，信息密度最高）→ 最前；
+ * ② 具体公司/板块/资金动态类 → 其次；
+ * ③ 空泛披露类（标题命中「多家/密集/多股/集体/陆续/扎堆/披露季/年报季」等栏目级套话）
+ *    与公告流（港交所披露易，公司级英文公告）→ 压到最后。
+ * 同类内按 publishedAt 降序（最新在前）。仅排序不删除，避免丢信息。
+ */
+const HK_BLURB_RE = /多家|密集|多股|集体|陆续|批量|扎堆|相继|纷纷|披露季|年报季|业绩集中|集中披露/;
+export function rankHkStockItems(items: StockItem[]): StockItem[] {
+  const score = (it: StockItem): number => {
+    const t = it.title ?? "";
+    const s = it.source ?? "";
+    if (HK_RECAP_RE.test(t)) return 3; // 收评/综述/复盘类：大盘综合报道优先
+    if (HK_BLURB_RE.test(t) || ANNOUNCEMENT_SOURCES.includes(s)) return 1; // 空泛披露/公告流压后
+    return 2; // 具体公司/板块/资金动态
+  };
+  return [...items]
+    .map((it) => ({ it, sc: score(it) }))
+    .sort(
+      (a, b) => b.sc - a.sc || (b.it.publishedAt ?? "").localeCompare(a.it.publishedAt ?? ""),
+    )
+    .map((x) => x.it);
+}
 
 /** 卡脚小字备注：来源网站（新闻综合主源）+ 交叉验证网站（指数核验源）+ 数据时间（条目最新日期）。
  *  - source：取首个「非公告流」源（真正贡献盘面解读素材的综合新闻源，如港股=新浪港股）；
@@ -160,17 +188,38 @@ export async function generateStockRecap(
   input: StockRecapInput,
   quotes?: QuoteResult | null,
 ): Promise<StockRecap | null> {
+  // 港股输入先排序（收评优先、空泛披露/公告流压后），保证 slice(0,12) 后 LLM 优先看到有信息量的条目
   const payload = {
     date: input.date,
     us: toPayloadItems(input.us),
     aShare: toPayloadItems(input.aShare),
-    hk: toPayloadItems(input.hk),
+    hk: toPayloadItems(rankHkStockItems(input.hk)),
   };
+  // 当日指数收盘（权威行情核验）注入 prompt：LLM 写大盘涨跌有据可依，
+  // 不再只能凭新闻标题猜（2026-08-31 用户：港股空话多因缺具体数据）。
+  const indexLines: string[] = [];
+  if (quotes) {
+    const groups: Array<[string, IndexQuote[]]> = [
+      ["A股", quotes.quotes.aShare],
+      ["港股", quotes.quotes.hk],
+      ["美股", quotes.quotes.us],
+    ];
+    for (const [label, qs] of groups) {
+      if (qs.length) {
+        indexLines.push(
+          `${label}：${qs.map((q) => `${q.name} ${q.value}点${q.changePct ? `（${q.changePct}）` : ""}`).join("、")}`,
+        );
+      }
+    }
+  }
   const userPrompt = [
     RULES,
     "",
     `当日股市条目（JSON）：`,
     JSON.stringify(payload),
+    "",
+    `当日指数收盘（权威行情核验，写各市场大盘涨跌时优先引用；未列出的市场表示本轮未取到指数）：`,
+    ...(indexLines.length ? indexLines : ["（本轮未取到指数数据，只能据新闻条目定性描述）"]),
     "",
     '请输出 {"us":{...},"aShare":{...},"hk":{...}}，三市场各含 overview(单句大盘总结≤35字)/sectors(3-5个)/spoken(≤120字纯口语)。输入为空的市场输出空卡。',
   ].join("\n");
