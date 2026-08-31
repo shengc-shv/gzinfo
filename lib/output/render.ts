@@ -42,7 +42,7 @@ import { selectTopMustRead } from "../ai/select-top";
 // 分行相关性评分器（纯函数、不调 LLM）：用于「未打标历史条目」的并入门槛（2026-08-29 方案③）
 import { scoreBranchRelevance } from "../ai/relevance-score";
 import { generateAudioHighlightScript, AUDIO_HIGHLIGHT_CSS } from "../feedback/inline-script";
-import { getReportTz } from "../utils";
+import { getReportTz, todayKey } from "../utils";
 import type { Category, SourceDef } from "../sources/types";
 import { SOURCE_TIER_LABELS, type SourceTier } from "../sources/tiers";
 import { CATEGORY_ORDER } from "../sources/constants";
@@ -1305,9 +1305,9 @@ export function mergeRollingIntoReport(
     const sec = sectionOf(a);
     if (!sec) continue;
     const d = a.publishedAt ?? a.fetchedAt;
-    const mmdd = d
-      ? `${String(d.getMonth() + 1).padStart(2, "0")}/${String(d.getDate()).padStart(2, "0")}`
-      : "";
+    // 卡片日期与窗口判定同口径（报告时区 Asia/Shanghai），避免 UTC 下跨日错位
+    // （如北京时间 08-30 02:00 存为 08-29 18:00Z → UTC getDate 误显 08/29）。
+    const mmdd = d ? todayKey(d).slice(5).replace("-", "/") : "";
     const tier = a.tier ?? tierBySource.get(a.sourceId);
     // 2026-08-23：历史缓存摘要地域一致性兜底（R3 扩展）——标题无粤地名但摘要声称
     // 「广东/广州…企业」（如北交所全国公告被模板标成「广东企业」）→ 摘要疑误，

@@ -19,6 +19,32 @@ import {
 } from "../sources/constants";
 import { extractDateFromUrl, isWithinCalendarDays } from "../utils";
 
+/**
+ * 国内/香港源（+08:00）的裸时间字符串按北京时间解释（2026-08-31 修复时区偏移 bug）。
+ *
+ * 背景：stcn/southcn 等爬虫从详情页抓出的发布时间是「2026-08-29 20:37」这类**无时区后缀**
+ * 的裸时间（北京时间）。归一化时 `new Date("2026-08-29 20:37")` 在 CI（UTC）下被当成 UTC
+ * → 存成 `2026-08-29T20:37Z`；换算到报告时区(Asia/Shanghai) = 08-30 04:37 → 2 天窗口
+ * （今天+昨天）误判为「昨天」→ 晚间发布的文章被错放进次日报告（如 08-29 晚的证券时报稿
+ * 混入 08-31 报告）。用户 2026-08-31 点原文核实确为 8/29，根因为爬虫把北京时间当 UTC 存。
+ *
+ * 修复：裸时间（含 HH:MM 且无时区后缀）强制补 `+08:00`；已有 `Z`/`±HH:MM` 后缀的不动
+ * （API 源返回的合法 ISO）；纯日期（无时间）不动（date-only 在 UTC 下即当天 00:00，
+ * 上海时区同日，无偏移）。
+ */
+function normalizePubTime(s: string | undefined): string | undefined {
+  if (!s) return s;
+  const t = s.trim();
+  if (
+    /^\d{4}-\d{2}-\d{2}[ T]\d{2}:\d{2}(:\d{2})?$/.test(t) &&
+    !/[Zz]|[+-]\d{2}:?\d{2}$/.test(t)
+  ) {
+    return t.replace(" ", "T") + "+08:00";
+  }
+  return t;
+}
+
+
 /** TS 爬虫产物（fetchCrawledArticles() 的条目；原 .mjs 爬虫 crawled-*.json 的等价结构）。 */
 export interface CrawledArticle {
   sourceId?: string;
@@ -118,7 +144,7 @@ export function toMergeArticle(
     url: item.url || "",
     // B：excerpt fallback（2026-08-28 用户反馈）：无 excerpt 时用 title 前 90 字符占位
     excerpt: item.excerpt?.trim() || item.title?.slice(0, 90) || "",
-    publishedAt: resolvedPub ? new Date(resolvedPub) : undefined,
+    publishedAt: resolvedPub ? new Date(normalizePubTime(resolvedPub)) : undefined,
     // 2026-08-27 核心规则：无发布时间直接 discarded — 上游调用方（fetchCrawledArticles
     // 入口或 filter 阶段 no-date-fallback）负责丢弃，不再写 fetchedAt 兜底。
     category,

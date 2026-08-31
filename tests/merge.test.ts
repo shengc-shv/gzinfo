@@ -172,3 +172,32 @@ test("toMergeArticle: registeredProvince / stockCode 透传（2026-08-30 gd-ipo 
   assert.equal(b.registeredProvince, undefined);
   assert.equal(b.stockCode, undefined);
 });
+
+test("toMergeArticle: 裸北京时间（无时区）按 +08:00 解释（2026-08-31 时区偏移修复）", () => {
+  // stcn/southcn 等爬虫抓到「2026-08-29 20:37」这类裸时间（北京时间），
+  // 必须按 +08:00 存，否则 CI(UTC) 下 new Date 当 UTC → 偏移 +8h → 上海时区日期+1天，
+  // 晚间发布的文章被 2 天窗口误放（如 08-29 晚稿混入 08-31 报告）。
+  const a = toMergeArticle(
+    { url: "u-tz", title: "T", sourceId: "stcn", publishedAt: "2026-08-29 20:37" },
+    "gz",
+  );
+  assert.ok(a.publishedAt instanceof Date);
+  assert.equal(
+    a.publishedAt.toISOString(),
+    "2026-08-29T12:37:00.000Z",
+    "北京时间 08-29 20:37 应存为 UTC 12:37（而非被当 UTC 误存 20:37）",
+  );
+  // 已带 Z 的合法 ISO 不动（不二次偏移）
+  const b = toMergeArticle(
+    { url: "u-tz2", title: "T", sourceId: "stcn", publishedAt: "2026-08-29T12:37:00.000Z" },
+    "gz",
+  );
+  assert.equal(b.publishedAt.toISOString(), "2026-08-29T12:37:00.000Z");
+  // 纯日期（无时间）保持 UTC 当天 00:00，上海时区同日（无偏移）
+  const c = toMergeArticle(
+    { url: "u-tz3", title: "T", sourceId: "stcn", publishedAt: "2026-08-29" },
+    "gz",
+  );
+  assert.equal(c.publishedAt.toISOString(), "2026-08-29T00:00:00.000Z");
+});
+
