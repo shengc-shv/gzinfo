@@ -142,7 +142,11 @@ test("detectGdIpo / buildGdIpoSpoken：靠「粤」标识别，不被 IPO_PROGRE
   const spoken = buildGdIpoSpoken(items);
   assert.ok(spoken.length > 0, "应产出确定性口播稿");
   assert.ok(!spoken.includes("（"), "口播稿不含括号修饰");
-  assert.equal(spoken, "尚睿科技，IPO已受理");
+  // 2026-08-31 增强：口播须带出 注册地/行业/上市地/进展 属性
+  assert.equal(
+    spoken,
+    "尚睿科技，注册地广东，科技行业，拟在北交所IPO，目前IPO已受理",
+  );
 });
 
 test("IPO_PROGRESS_RE：覆盖 IPO受理 / IPO问询 两种在审高频状态", () => {
@@ -160,7 +164,7 @@ test("IPO_PROGRESS_RE：覆盖 IPO受理 / IPO问询 两种在审高频状态", 
   );
 });
 
-test("buildGdIpoSpoken：超过 2 家收尾「等N家」且总长不超过 50 字", () => {
+test("buildGdIpoSpoken：带出属性 + 超过 2 家收尾「等N家」", () => {
   const items = ["A", "B", "C", "D"].map((n, i) => ({
     url: `u${i}`,
     title_cn: `${n}科技：IPO已受理（拟北交所）`,
@@ -174,6 +178,10 @@ test("buildGdIpoSpoken：超过 2 家收尾「等N家」且总长不超过 50 �
     locale: "national" as const,
   }));
   const spoken = buildGdIpoSpoken(items);
-  assert.equal(spoken, "A科技，IPO已受理；B科技，IPO已受理；等4家");
-  assert.ok(spoken.length <= 50);
+  assert.ok(spoken.includes("注册地广东"), "应带出注册地");
+  assert.ok(spoken.includes("拟在北交所IPO"), "应带出上市地（北交）");
+  assert.ok(spoken.includes("科技行业"), "应带出行业（公司名推断）");
+  assert.ok(spoken.endsWith("等4家"), "多于2家收尾「等N家」");
+  // 上限交由 audio.ts 的 AUDIO_SPEAK_LIMITS.ipo（100）统一截断，此处只验证不超长失控
+  assert.ok(spoken.length <= 100);
 });

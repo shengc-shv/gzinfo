@@ -121,7 +121,7 @@ const RULES = `你是股份行广州分行零售决策简报的主编。系统�
    - sources：来源链接数组（1-3 条，evidence 依据的输入条目，原样复制 {title,url}）
    ；并配套口播稿 spoken_risk（≤80 字，结构"今天有 1 个需要警惕：[topic]，[impact 一句话]，[action 一句话]"，纯口语、无链接/无 Markdown/无 emoji，每句独立成句、句号收尾）。当日无突出风险时，risk 设为 null（不要硬编），spoken_risk 省略。
 
-4. guangdong_ipo（广东/广州企业 IPO 动态，1 条或 null）：若输入 ipo 条目中存在"广东/广州企业"的 IPO 相关进展，则产出 guangdong_ipo.spoken（≤60字，说清企业名称、上市板块与最新进展，一两句话）；若无广东/广州 IPO 动态，则 guangdong_ipo 设为 null（不要编造）。
+4. guangdong_ipo（广东/广州企业 IPO 动态，1 条或 null）：若输入 ipo 条目中存在"广东/广州企业"的 IPO 相关进展，则产出 guangdong_ipo.spoken（≤90字，说清企业名称、注册地、所属行业、上市地（深交/北交/上交/境外）、最新进展，一两句话）；若无广东/广州 IPO 动态，则 guangdong_ipo 设为 null（不要编造）。
    - 算作"IPO 进展"的阶段（2026-08-31 补全，覆盖在审企业全生命周期）：**受理 / 问询** / 过会 / 提交注册 / 注册生效 / 辅导备案 / 招股 / 申购 / 上市敲钟
    - 特别注意：输入里的东财在审表条目常是"IPO已受理""IPO问询中"这类**早期在审状态**——同样算 IPO 进展，不要因为没到"过会/注册"就判为无动态返回 null。
 

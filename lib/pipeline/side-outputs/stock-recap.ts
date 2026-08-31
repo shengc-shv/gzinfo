@@ -47,6 +47,11 @@ export function formatCnDate(d: string): string {
   const dt = new Date(d + "T00:00:00");
   return `${dt.getMonth() + 1}月${dt.getDate()}日 ${CN_WEEK[dt.getDay()]}`;
 }
+/** 简化的「X月X日」中文日期（口播「下面是X月X日股市收盘信息」专用，不带星期）。 */
+export function formatCnDateShort(d: string): string {
+  const dt = new Date(d + "T00:00:00");
+  return `${dt.getMonth() + 1}月${dt.getDate()}日`;
+}
 export function computeMarketStatus(
   reportDate: string,
   dataDate?: string,

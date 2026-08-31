@@ -20,7 +20,7 @@ import type { ReportItem, StockRecap } from "../types";
 // 避免播报与卡片两套正则口径漂移（实例：粤芯「注册申请材料已受理」曾因 IPO_KW 缺词漏捞）。
 import { isGdIpoCandidate } from "../output/render/cards";
 // 2026-08-30：股市口播按市场注入时区+日期（美股=美东 / A股港股=北京），复用统一日期格式避免漂移。
-import { formatCnDate } from "../pipeline/side-outputs/stock-recap";
+import { formatCnDate, formatCnDateShort } from "../pipeline/side-outputs/stock-recap";
 // 2026-08-30：广东IPO 口播改为确定性拼装（免 LLM）。原因：相关性 LLM 会把 gd-ipo 条目
 // 整体丢弃（CI run 33315502473 line 828-829 实证），exec.guangdong_ipo.spoken 恒为空；
 // 板块改为 side-output 直接构建后，口播必须能脱离 LLM 独立产出，否则「广东IPO=无」。
@@ -62,18 +62,18 @@ export interface AudioSegment {
  *  v2（I-A）：hero 上调以容纳"早上好" + 整段定调；insights 略减让位给可能的 ipo 段。 */
 export const AUDIO_SPEAK_LIMITS = {
   hero: 90,
-  must_read: 280,
-  insights: 200,
-  ipo: 50,
-  stock: 220,
+  must_read: 250,
+  insights: 190,
+  ipo: 100,
+  stock: 200,
 } as const;
 
 // v2（I-A 用户要求）：去掉"行长"等称呼；最后用"今天播报结束"作为收尾，不下命令。
 const OPENER = "早上好。";
 const CLOSER = "今天播报结束。";
 const IPO_TRANSITION = "最近一周有IPO动态的广东企业。";
-/** 股市解读段：语气与「今日必读」同风格（客观、精炼、陈述式），过场语与必读/洞察并列。 */
-const STOCK_TRANSITION = "接下去是股市解读。";
+/** 股市解读段：开场语同时承担「IPO→股市」链接词 + 点明交易日（用户 2026-08-31 要求：
+ *  「下面是8月28日股市收盘信息」），与下方每市场时区标注并存。具体文案在拼装时按 dataDate 动态生成。 */
 /** 中文 TTS 语速估算（字/秒）：腾讯 Speed=1（1.2 倍）实测约 5.3 字/秒，取 5.2 便于徽标时长贴近实际（2026-08-24 校准）。 */
 const CHARS_PER_SEC = 5.2;
 
@@ -342,6 +342,11 @@ export async function assembleAudioScript(
   if (stockRecap) {
     const ms = stockRecap.marketStatus;
     const cnDate = ms?.dataDate ? formatCnDate(ms.dataDate) : "";
+    // 2026-08-31 用户：口播须点明具体交易日，且作为 IPO→股市 的链接词。
+    // 例：「下面是8月28日股市收盘信息。」
+    const stockIntro = ms?.dataDate
+      ? `下面是${formatCnDateShort(ms.dataDate)}股市收盘信息。`
+      : "下面是股市收盘信息。";
     const segs: string[] = [];
     const pushSeg = (label: string, tz: string, card: { spoken?: string }) => {
       const s = sanitize(card.spoken ?? "");
@@ -365,7 +370,7 @@ export async function assembleAudioScript(
     pushSeg("港股", "北京", stockRecap.hk);
     if (segs.length) {
       const combined = truncateAtSentence(segs.join("。"), AUDIO_SPEAK_LIMITS.stock);
-      const segText = `${STOCK_TRANSITION}${combined}`;
+      const segText = `${stockIntro}${combined}`;
       parts.push(segText);
       partMap.stock_recap = combined;
       const dur = estimateDurationSec(segText.length);
