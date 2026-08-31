@@ -8,7 +8,7 @@ import { STR, SUBCATEGORY_ORDER, SUBCATEGORY_LABELS } from "./i18n";
 import { TIER_COLORS } from "./theme";
 import { SOURCE_TIER_LABELS, SOURCE_TIER_ORDER, type SourceTier } from "../../sources/tiers";
 import { REPORT_LOCALE } from "../../sources/registry";
-import { getReportTz } from "../../utils";
+import { getReportTz, isWithinCalendarDays } from "../../utils";
 // 2026-08-30：广东企业判定（名单公司名/城市/代码三层），用于媒体源报道的广东企业 IPO 动态路由
 import { isGuangdongEnterprise } from "../../sources/guangdong.mjs";
 
@@ -366,14 +366,10 @@ export function sortByTierAndTime<T extends ArticleInput>(list: T[]): T[] {
  * 兜底（采集时间不是发布时间）。
  */
 export function filterRecentDays(sources: SourceGroup[], days = DISPLAY_WINDOW_DAYS): SourceGroup[] {
-  const cutoff = Date.now() - days * 86_400_000;
+  // 日历日窗口（2026-08-31 修复）：发布日期(报告时区)∈ 最近 days 个日历日，替代 48h 滑动。
+  // 与抓取/滚动窗口口径统一（今天+昨天，days=2）。
   return sources.map((s) => {
-    const items = s.items
-      .filter((a) => {
-        const t = a.publishedAt;
-        if (!t) return false; // 时间红线：无真实发布时间 → 丢弃
-        return t.getTime() >= cutoff;
-      });
+    const items = s.items.filter((a) => isWithinCalendarDays(a.publishedAt, days));
     return { ...s, items: sortByTierAndTime(items) };
   });
 }

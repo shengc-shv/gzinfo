@@ -1218,8 +1218,9 @@ const IPO_FLOW_RE =
  */
 
 /**
- * 把滚动历史（近 2 天，buildRolling 产物——buildRolling 按 FETCH_WINDOW_DAYS=2 取
- * publishedAt/lastSeenAt ≤2 天的历史条目；2026-08-25 核实修正，原注释误写"近 7 天"）中
+ * 把滚动历史（报告时区**日历日** 今天+昨天，buildRolling 产物——buildRolling 按
+ * FETCH_WINDOW_DAYS=2 取发布日期 ∈ {今天,昨天} 的历史条目；2026-08-25 核实修正原
+ * 误写"近 7 天"，2026-08-31 由 48h 滑动窗口改为日历日窗口，避免前天信息混入）中
  * 「符合要求」的条目并入 report.sections，
  * 使渲染展示过去符合要求的资讯（有摘要用摘要、无则摘录原文前 90 字），而非仅今日 AI 成稿。
  * （2026-08-21 用户：过去符合要求的都展示 + 区分零售各部门呈现。）

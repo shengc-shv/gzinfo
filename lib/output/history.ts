@@ -21,13 +21,12 @@ import type { ArticleInput } from "../types";
 import type { Category } from "../sources/types";
 import { SOURCE_ROUTE } from "../sources/constants";
 import { loadAllSources } from "../sources/registry";
-import { todayKey } from "../utils";
+import { todayKey, isWithinCalendarDays } from "../utils";
 
 const HISTORY_PATH = path.resolve(process.cwd(), "data/article-history.json");
 /** 抓取窗口（天）：daily 源层前置窗口过滤 + 滚动历史(buildRolling/pruneHistory)
  *  均以此为准——只抓取/展示今天 + 昨天的日期范围（用户 2026-08-22 要求：抓 2 天）。 */
 export const FETCH_WINDOW_DAYS = 2;
-const MAX_AGE_MS = FETCH_WINDOW_DAYS * 86_400_000;
 
 export interface HistoryEntry {
   title: string;
@@ -77,26 +76,28 @@ export function loadHistory(): HistoryStore {
 }
 
 /**
- * Whether a history entry still belongs in the rolling window.
+ * 滚动窗口判定（2026-08-31 由 48h 滑动窗口改为**日历日窗口**）。
  *
- * The window is measured by the article's **occurrence time** (`publishedAt`),
- * NOT the analysis time (`lastSeenAt`). An item is "fresh" if its publish date
- * is within the last FETCH_WINDOW_DAYS.
- * 时间红线（2026-08-29 用户）：**无真实发布时间的条目一律剔除，不回退 lastSeenAt**。
- * 例外：发布时间为未来（agePub<0，源站时区错误）仍回退 lastSeenAt 兜底——这属于
- * 「发布时间异常」而非「无发布时间」，是必要的容错（D，2026-08-20）。
+ * 条目的发布日期在报告时区(REPORT_TZ)下 ∈ {今天, 昨天}（FETCH_WINDOW_DAYS=2）即在窗口内，
+ * 严格对应漏斗三「今天新增 + 昨天有效」语义（用户 2026-08-29 拍板）。
+ * 此前 48h 滑动窗口（Date.now()-2*86400000）在早间 run 会把「前天」条目（如 31 号早跑时
+ * 29 号发布的条目距当时仅 1.3–2 天）误判为有效，导致 29 号信息混入 31 号报告。
+ *
+ * 以**发生时间** publishedAt 为准，非分析时间 lastSeenAt。
+ * 时间红线（2026-08-29 用户）：**无真实发布时间的条目一律剔除**。
+ * 例外：发布时间为未来（源站时区错误）→ 回退 lastSeenAt 日历日判定（属「发布时间异常」
+ * 而非「无发布时间」，必要容错，2026-08-20）。
  */
 function isFreshEntry(e: HistoryEntry): boolean {
-  const now = Date.now();
-  const agePub = e.publishedAt ? now - Date.parse(e.publishedAt) : null;
-  // 时间红线：无真实发布时间 → 直接剔除，不回退 lastSeenAt
-  if (agePub === null) return false;
-  const ageSeen = e.lastSeenAt ? now - Date.parse(e.lastSeenAt) : null;
-  // 发布时间为未来（异常/源站时区错误）→ 不按发布时间判新鲜，回退用 lastSeenAt，
-  // 避免 agePub<0 永远 <= MAX_AGE_MS 导致该条目永不进入 7 天裁剪（D，2026-08-20）。
-  if (agePub >= 0) return agePub <= MAX_AGE_MS;
-  if (ageSeen !== null && !Number.isNaN(ageSeen)) return ageSeen <= MAX_AGE_MS;
-  return false;
+  // 时间红线：无真实发布时间 → 直接剔除
+  if (!e.publishedAt) return false;
+  const pubKey = todayKey(new Date(e.publishedAt));
+  const todayKeyStr = todayKey();
+  // 发布时间为未来（异常/源站时区错误）→ 不按发布时间判新鲜，回退 lastSeenAt
+  if (pubKey > todayKeyStr) {
+    return e.lastSeenAt ? isWithinCalendarDays(e.lastSeenAt, FETCH_WINDOW_DAYS) : false;
+  }
+  return isWithinCalendarDays(e.publishedAt, FETCH_WINDOW_DAYS);
 }
 
 /** Drop entries outside the rolling window — measured by occurrence time (publishedAt). */
@@ -150,10 +151,10 @@ export function buildRolling(
     map.set(e.url, entryToArticle(e, isToday));
   }
   for (const a of today) {
-    // 当天抓到的旧链接（publishedAt 超 7 天窗口，如 RSS 滚动列表里的老文章、
-    // 爬虫列表页里的 2025 年旧数据）：不属于「当天/过去7天」简报，直接丢弃不进渲染。
+    // 当天抓到的旧链接（publishedAt 不在日历窗口 今天+昨天 内，如 RSS 滚动列表里的老文章、
+    // 爬虫列表页里的旧数据）：不属于「今天/昨天」简报，直接丢弃不进渲染。
     // 无 publishedAt 的条目不受此限制（无法判断发文时间，靠 fetchedToday 归属）。
-    if (a.publishedAt && Date.now() - a.publishedAt.getTime() > MAX_AGE_MS) continue;
+    if (a.publishedAt && !isWithinCalendarDays(a.publishedAt, FETCH_WINDOW_DAYS)) continue;
     // Today's items win on URL collision, but keep the history's per-item
     // AI analysis (subcategory / relevance / summary) when today's fetch
     // didn't carry one — otherwise real-time fetches would wipe it.

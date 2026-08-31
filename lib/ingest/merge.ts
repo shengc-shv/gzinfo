@@ -17,7 +17,7 @@ import {
   REGION_IPO,
   rewriteGzPrefix,
 } from "../sources/constants";
-import { extractDateFromUrl } from "../utils";
+import { extractDateFromUrl, isWithinCalendarDays } from "../utils";
 
 /** TS 爬虫产物（fetchCrawledArticles() 的条目；原 .mjs 爬虫 crawled-*.json 的等价结构）。 */
 export interface CrawledArticle {
@@ -161,11 +161,7 @@ export function filterByWindow<T extends { publishedAt?: Date | string }>(
   articles: T[],
   days = 7,
 ): T[] {
-  const cutoff = Date.now() - days * 86_400_000;
-  return articles.filter((a) => {
-    const raw = a.publishedAt;
-    if (!raw) return false; // 时间红线：无真实发布时间 → 丢弃
-    const t = typeof raw === "string" ? new Date(raw).getTime() : raw.getTime();
-    return !Number.isNaN(t) && t >= cutoff;
-  });
+  // 日历日窗口（2026-08-31 修复）：发布日期(报告时区)∈ 最近 days 个日历日，替代 48h 滑动。
+  // 时间红线：无真实发布时间 → 丢弃（isWithinCalendarDays 内部处理）。
+  return articles.filter((a) => isWithinCalendarDays(a.publishedAt, days));
 }

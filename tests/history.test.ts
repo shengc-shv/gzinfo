@@ -31,12 +31,12 @@ test("pruneHistory: 抓取窗口边界——窗口内保留、窗口外剔除", 
   const now = Date.now();
   const store: HistoryStore = {
     fresh: mk("fresh", { publishedAt: iso(now - 1 * DAY) }), // 1天 → 保留
-    boundary: mk("boundary", { publishedAt: iso(now - 2 * DAY + 60_000) }), // 2天-1min → 保留
+    boundary: mk("boundary", { publishedAt: iso(now - 1 * DAY) }), // 昨天（日历窗口内 今天+昨天）→ 保留
     stale: mk("stale", { publishedAt: iso(now - 3 * DAY) }), // 3天 → 剔除
   };
   const out = pruneHistory(store);
   assert.ok(out.fresh, "1天前应保留");
-  assert.ok(out.boundary, "2天边界内应保留");
+  assert.ok(out.boundary, "昨天(日历窗口内)应保留");
   assert.ok(!out.stale, "3天前应剔除");
 });
 
