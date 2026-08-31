@@ -11,9 +11,10 @@
     "quota-report": "tsx scripts/quota-report.ts",
     "sources": "tsx scripts/sources.ts",
     "sources:check": "tsx scripts/sources.ts check",
+    "analyze:dirty": "tsx scripts/analyze-dirty-data.ts",
     "deploy": "node scripts/deploy.mjs",
     "build-site": "node scripts/build-site.mjs",
-    "test": "node --import tsx --test \"tests/**/*.test.ts\"",
+    "test": "node --experimental-test-module-mocks --import tsx --test \"tests/**/*.test.ts\"",
     "open": "node scripts/open-report.mjs",
     "tts-fallback": "tsx scripts/tts-fallback.ts"
   },

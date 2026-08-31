@@ -140,6 +140,31 @@ export async function buildExecutiveSummary(
       ...(pool.ipo.length > 0 ? { ipo: pool.ipo } : {}),
       ...(riskCandidates.length > 0 ? { riskCandidates } : {}),
     });
+
+    // 兜底（2026-08-31 修复）：LLM 静默返回空（空池 / 网络异常被吞 / 只回 1 条 IPO 类弱信号）
+    // → 用「今天 + 昨天」2 天评分池确定性生成必读/商机/定调，保证「今日分析/定调」永不空、
+    // 且与下方展示条目一致。与 SKIP_AI 分支共用同一 scorer，两条路径口径统一。
+    const llHasContent = !!exec && ((exec.must_read?.length ?? 0) > 0 || (exec.insights?.length ?? 0) > 0);
+    if (!llHasContent) {
+      const fb = buildExecutiveFromScores(twoDayPool, date);
+      ctx.log.info(
+        "exec",
+        `🔁 LLM 执行摘要为空/过薄，回退 2 天评分兜底（finance ${pool.finance.length}+gz ${pool.gz.length} → 必读 ${fb.must_read.length}/商机 ${fb.insights.length}）`,
+      );
+      if (!exec) {
+        exec = fb;
+      } else {
+        // LLM 只回了弱信号（如仅 1 条 IPO 类定调、必读/商机空）→ 必读/商机/定调
+        // 全用 2 天评分兜底（保证非空 + 与下方展示一致），仅保留 LLM 可能有效的
+        // 风险 / IPO 口播段
+        exec = {
+          ...fb,
+          ...(exec.risk ? { risk: exec.risk } : {}),
+          ...(exec.guangdong_ipo ? { guangdong_ipo: exec.guangdong_ipo } : {}),
+        };
+      }
+    }
+
     if (exec) {
       // 评分护栏：LLM 生成后按分行相关性重排必读 + 强制顶入硬规则条目，
       // 让「客户中心」不依赖 LLM 临场发挥（房贷40年型不可能被埋）。
@@ -151,6 +176,8 @@ export async function buildExecutiveSummary(
       const mustRead = exec.must_read
         .filter((m) => !!m.url)
         .map((m) => ({ title: m.title, why: m.why, url: m.url as string }));
+      // 兜底条目（评分器生成）可能无 url；有 url 才写盘（ReportMustRead.url 必填），
+      // 全部无 url 时保留 report 原值，避免必读被静默清空
       if (mustRead.length) next.must_read = mustRead;
       if (exec.insights.length) {
         next.insights = exec.insights.map((it) => ({
@@ -186,7 +213,25 @@ export async function buildExecutiveSummary(
     return finalize(report);
   } catch (e) {
     const msg = e instanceof Error ? e.message : String(e);
-    ctx.log.warn("exec", `⚠️ 2天窗口执行摘要生成失败（沿用 PASS2）: ${msg}`);
+    ctx.log.warn("exec", `⚠️ 2天窗口执行摘要生成失败: ${msg}`);
+    // 2026-08-31：LLM 抛错同样回退 2 天评分兜底 —— 与「LLM 返回空」同口径，
+    // 保证「今日分析/定调」永不空且与下方展示一致（此前沿用 PASS2 会重现薄产出问题）。
+    try {
+      const fb = buildExecutiveFromScores(twoDayPool, date);
+      if (fb.must_read.length || fb.insights.length) {
+        const next = mergeStoredExecutive(report, fb);
+        ctx.log.info(
+          "exec",
+          `🔁 LLM 异常回退 2 天评分兜底：必读 ${next.must_read.length} / 商机 ${next.insights.length}`,
+        );
+        return finalize(next);
+      }
+    } catch (e2) {
+      ctx.log.warn(
+        "exec",
+        `⚠️ 评分兜底也失败（沿用 PASS2）: ${e2 instanceof Error ? e2.message : String(e2)}`,
+      );
+    }
     return finalize(report);
   }
 }

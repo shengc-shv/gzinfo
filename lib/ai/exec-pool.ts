@@ -16,12 +16,15 @@
  */
 import { getReportTz, todayKey } from "../utils";
 import type { DailyReport, ReportSectionKey } from "../types";
+import { scoreBranchRelevance } from "./relevance-score";
 
 /** 持久化历史库条目（article-history.json 单条子集）。 */
 export interface ExecPoolHistoryEntry {
   publishedAt?: string | Date;
   category?: string;
   summary?: string;
+  /** 采集到的原文摘要。未打标条目普遍无 summary，用 excerpt 兜底（实测 305/305 有 excerpt）。 */
+  excerpt?: string;
   ai_relevant?: boolean;
   title?: string;
   subcategory?: string;
@@ -86,6 +89,21 @@ const SECTION_TO_CAT: Record<ReportSectionKey, "finance" | "gz" | null> = {
 };
 
 const RELEVANT_CAT = new Set(["finance", "gz"]);
+
+/**
+ * 严格池低于该条数时启用「宽松兜底池」。
+ *
+ * 2026-08-31 实测：同一天重复运行 CI 时跨天判重会把抓取几乎全部剔除（155 → 8 条），
+ * PASS2 几乎无产出；而严格池要求「AI 摘要 + ai_relevant=true」，两天窗口内仅 5 条满足
+ * （264 条未打标、仅 5 条有 summary）→ exec 池接近空 → generateExecutiveSummary 按
+ * 「无则 null、不要编造」恒回 null → 定调/必读/商机全部落空，与下方展示的滚动并入
+ * 条目严重不一致（展示 18 条、 exec 池 0 条）。
+ * 取 3：少于 3 条时 LLM 无法形成有意义的定调与必读。
+ */
+const MIN_STRICT_ITEMS = 3;
+
+/** 宽松兜底池上限，控制 LLM 提示词体积（实测两天窗口内约 132 条候选）。 */
+const MAX_RELAXED_ITEMS = 24;
 
 export interface BuildTwoDayExecPoolOpts {
   history: Record<string, ExecPoolHistoryEntry>;
@@ -177,7 +195,149 @@ export function buildTwoDayExecPool(opts: BuildTwoDayExecPoolOpts): ExecPoolResu
     (info.cat === "finance" ? finance : gz).push(entry);
   }
 
+  // 兜底：严格池过薄 → 用「今天 + 昨天」两天汇总补齐（2026-08-31 修复）。
+  // 噪声控制沿用展示层滚动并入（D-008）的三态门槛，避免灌入个股半年报/外文股市噪声。
+  if (finance.length + gz.length < MIN_STRICT_ITEMS) {
+    const used = new Set<string>();
+    for (const it of [...finance, ...gz]) if (it.url) used.add(it.url);
+    for (const r of buildRelaxedTwoDayPool(opts, tz, tk, yk, used)) {
+      (r.cat === "finance" ? finance : gz).push(r.item);
+    }
+  }
+
   return { finance, gz, ipo: buildIpoPool(opts) };
+}
+
+/**
+ * 宽松兜底池：从「今天 articles + 昨天/今天 history」捞回两天窗口内的 finance|gz 条目。
+ *
+ * 与严格池的区别：**不要求 AI 摘要、不要求 ai_relevant=true** —— 实测两天窗口内
+ * 275 条里 264 条未打标、仅 5 条有 summary，严格口径几乎全灭。摘要用
+ * `summary || excerpt || title` 兜底（history 305/305 有 excerpt，且为真实内容）。
+ *
+ * 噪声控制沿用展示层 D-008 的三态门槛：
+ *   ai_relevant=true 放行 / false 硬排除 / 未打标需 scoreBranchRelevance().tier !== "drop"。
+ * 排序：有 AI 摘要优先 → 档位（must_read > insight > context）→ 分行相关性分数。
+ */
+function buildRelaxedTwoDayPool(
+  opts: BuildTwoDayExecPoolOpts,
+  /** 报告时区；REPORT_TZ 未设置时为 undefined（Intl 回落到系统时区，与 dateKeyOf 一致）。 */
+  tz: string | undefined,
+  /** 今天日期键。单测注入 today 时可能为 undefined，此时窗口比较恒 false（保守）。 */
+  tk: string | undefined,
+  yk: string | undefined,
+  used: Set<string>,
+): Array<{ cat: "finance" | "gz"; item: ExecPoolItem }> {
+  const inWindow = (iso: string | Date | undefined): boolean => {
+    const k = dateKeyOf(iso, tz);
+    // 无发布时间 → 无法判定是否落在两天窗口内，一律不纳入（遵守「时间真实性」红线，
+    // 绝不用抓取时间兜底）。
+    if (!k) return false;
+    return k === tk || k === yk;
+  };
+  const TIER_PRIO: Record<string, number> = { must_read: 0, insight: 1, context: 2, drop: 3 };
+  const seen = new Set<string>();
+  const cands: Array<{
+    cat: "finance" | "gz";
+    item: ExecPoolItem;
+    hasSummary: boolean;
+    prio: number;
+    score: number;
+  }> = [];
+
+  const consider = (
+    raw: {
+      url?: string;
+      title?: string;
+      summary?: string;
+      excerpt?: string;
+      category?: string;
+      subcategory?: string;
+      publishedAt?: string | Date;
+      ai_relevant?: boolean;
+    },
+    /** true=今日抓取条目（天然属"今天"，仅在有发布时间且超窗口时排除）；
+     *  false=历史库条目（走严格窗口 + 硬排除）。今日旁路对应 report.sections 的
+     *  todayUrls：避免"无发布时间"被 inWindow 误杀导致 2 天池静默落空。 */
+    fromToday: boolean,
+  ): void => {
+    const url = raw.url;
+    if (!url || seen.has(url) || used.has(url)) return;
+    const cat = RELEVANT_CAT.has(raw.category ?? "") ? (raw.category as "finance" | "gz") : null;
+    if (!cat) return;
+    if (fromToday) {
+      // 今日抓取：有发布时间但超 2 天窗口才排除；无发布时间（时间红线不允许补抓取日）
+      // 一律按"今天"纳入，与 todayUrls 旁路口径一致，杜绝"今日抓取内容被静默丢弃"。
+      if (raw.publishedAt) {
+        const k = dateKeyOf(raw.publishedAt, tz);
+        if (k !== tk && k !== yk) return;
+      }
+    } else {
+      if (raw.ai_relevant === false) return; // 硬排除（历史已判为不相关）
+      if (!inWindow(raw.publishedAt)) return; // 只看今天 + 昨天
+    }
+    const summary = (raw.summary ?? "").trim();
+    const scored = scoreBranchRelevance({
+      title: raw.title ?? "",
+      ...(summary ? { summary } : {}),
+      ...(raw.category ? { category: raw.category } : {}),
+      ...(raw.subcategory ? { subcategory: raw.subcategory } : {}),
+    });
+    // 三态门槛（与展示层滚动并入同口径）：已打标 true 放行；未打标需非 drop 档。
+    if (raw.ai_relevant !== true && scored.tier === "drop") return;
+    seen.add(url);
+    cands.push({
+      cat,
+      item: {
+        title: raw.title ?? "",
+        summary: summary || (raw.excerpt ?? "").trim() || raw.title || "",
+        url,
+      },
+      hasSummary: !!summary,
+      prio: TIER_PRIO[scored.tier] ?? 2,
+      score: scored.score,
+    });
+  };
+
+  // 今天：本次抓取（经 9 道过滤后保留的条目）—— 按"今日"纳入（见 consider 的 fromToday 旁路）
+  for (const a of opts.articles) {
+    const x = a as unknown as { subcategory?: string };
+    consider(
+      {
+        url: a.url,
+        title: a.title_cn || a.title,
+        ...(a.summary ? { summary: a.summary } : {}),
+        ...(a.excerpt ? { excerpt: a.excerpt } : {}),
+        ...(a.category ? { category: a.category } : {}),
+        ...(x.subcategory ? { subcategory: x.subcategory } : {}),
+        ...(a.publishedAt ? { publishedAt: a.publishedAt } : {}),
+      },
+      true,
+    );
+  }
+  // 昨天（以及今天被跨天判重剔除的）：历史库补回 —— 走严格窗口 + 硬排除
+  for (const [url, e] of Object.entries(opts.history)) {
+    consider(
+      {
+        url,
+        ...(e.title ? { title: e.title } : {}),
+        ...(e.summary ? { summary: e.summary } : {}),
+        ...(e.excerpt ? { excerpt: e.excerpt } : {}),
+        ...(e.category ? { category: e.category } : {}),
+        ...(e.subcategory ? { subcategory: e.subcategory } : {}),
+        ...(e.publishedAt ? { publishedAt: e.publishedAt } : {}),
+        ...(e.ai_relevant === undefined ? {} : { ai_relevant: e.ai_relevant }),
+      },
+      false,
+    );
+  }
+
+  cands.sort((a, b) => {
+    if (a.hasSummary !== b.hasSummary) return a.hasSummary ? -1 : 1;
+    if (a.prio !== b.prio) return a.prio - b.prio;
+    return b.score - a.score;
+  });
+  return cands.slice(0, MAX_RELAXED_ITEMS).map((c) => ({ cat: c.cat, item: c.item }));
 }
 
 /**
@@ -261,8 +421,11 @@ export function collectTwoDayArticles(opts: {
   };
 
   // 今天：本次抓取（经窗口/判重后的保留条目）
+  // 今日抓取条目天然属"今天"：有发布时间且超 2 天窗口才排除；无发布时间按"今天"纳入
+  // （时间红线不补抓取日，但也不能因缺发布时间被静默丢弃，否则 SKIP_AI 兜底池随之落空）。
   for (const a of opts.articles ?? []) {
-    if (!a.url || !inWindow(a.publishedAt)) continue;
+    if (!a.url) continue;
+    if (a.publishedAt && !inWindow(a.publishedAt)) continue;
     const x = a as unknown as { subcategory?: string; source?: string; sourceId?: string; locale?: string };
     out.set(a.url, {
       title: a.title ?? "",
