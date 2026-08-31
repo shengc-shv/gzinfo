@@ -58,10 +58,7 @@ function collect(
   win: number,
   cap: number,
 ): StockNewsItem[] {
-  return filterByWindow(
-    items as Array<{ publishedAt?: Date | string; fetchedAt?: Date }>,
-    win,
-  )
+  return filterByWindow(items, win)
     .map((a) => toNewsItem(a, market))
     .slice(0, cap);
 }

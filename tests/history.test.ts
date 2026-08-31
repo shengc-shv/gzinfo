@@ -40,15 +40,19 @@ test("pruneHistory: 抓取窗口边界——窗口内保留、窗口外剔除", 
   assert.ok(!out.stale, "3天前应剔除");
 });
 
-test("pruneHistory: 无 publishedAt 回退 lastSeenAt", () => {
+test("pruneHistory: 无 publishedAt 直接剔除（时间红线，不回退 lastSeenAt）", () => {
   const now = Date.now();
   const out = pruneHistory({
+    "seen-recent": mk("seen-recent", {
+      publishedAt: undefined,
+      lastSeenAt: iso(now - 1 * DAY),
+    }),
     "seen-old": mk("seen-old", {
       publishedAt: undefined,
       lastSeenAt: iso(now - 10 * DAY),
     }),
   });
-  assert.deepEqual(out, {}, "lastSeenAt 超窗口应剔除");
+  assert.deepEqual(out, {}, "无 publishedAt 不论 lastSeenAt 新旧均剔除");
 });
 
 test("pruneHistory: 空输入返回空对象，不抛错", () => {

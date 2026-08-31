@@ -362,16 +362,16 @@ export function sortByTierAndTime<T extends ArticleInput>(list: T[]): T[] {
 /**
  * 保留每个源中「最近 days 天」的条目，并按 sortByTierAndTime 排序
  * （tier 权威等级 + 发布时间，只有日期的放最后）。
- * 时间判定统一为 `publishedAt ?? fetchedAt`（2026-08-19 用户确认：
- * 没有发布时间的采用信息采集时间）；两者皆无的保留（时间未知）。
+ * 时间红线（2026-08-29 用户）：无真实发布时间的条目一律丢弃，不回退 fetchedAt
+ * 兜底（采集时间不是发布时间）。
  */
 export function filterRecentDays(sources: SourceGroup[], days = DISPLAY_WINDOW_DAYS): SourceGroup[] {
   const cutoff = Date.now() - days * 86_400_000;
   return sources.map((s) => {
     const items = s.items
       .filter((a) => {
-        const t = a.publishedAt ?? a.fetchedAt;
-        if (!t) return true;
+        const t = a.publishedAt;
+        if (!t) return false; // 时间红线：无真实发布时间 → 丢弃
         return t.getTime() >= cutoff;
       });
     return { ...s, items: sortByTierAndTime(items) };

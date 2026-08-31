@@ -144,18 +144,18 @@ export function dedupeByUrl<T extends { url: string }>(
  * 动机（2026-08-19 用户反馈）：rss 流会混入 7 天前甚至更早的旧文，其 URL 不在
  * 7 天历史缓存 → 被误判为「新条目」进 AI 分类（白花模型费用），且会显示在当日
  * 面板。过滤后：旧文不进 AI、不展示。
- * 时间判定统一为 `publishedAt ?? fetchedAt`（2026-08-19 用户确认：无发布时间
- * 采用信息采集时间）；两者皆无的条目保留（时间未知，宁可保留）。
+ * 时间红线（2026-08-29 用户）：**无真实发布时间的条目一律丢弃，不回退 fetchedAt
+ * 兜底**（采集时间不是发布时间）。源层 ingest.ts:73 已弃无日期条目，此处兜底清理。
  */
-export function filterByWindow<T extends { publishedAt?: Date | string; fetchedAt?: Date }>(
+export function filterByWindow<T extends { publishedAt?: Date | string }>(
   articles: T[],
   days = 7,
 ): T[] {
   const cutoff = Date.now() - days * 86_400_000;
   return articles.filter((a) => {
-    const raw = a.publishedAt ?? a.fetchedAt;
-    if (!raw) return true;
+    const raw = a.publishedAt;
+    if (!raw) return false; // 时间红线：无真实发布时间 → 丢弃
     const t = typeof raw === "string" ? new Date(raw).getTime() : raw.getTime();
-    return Number.isNaN(t) || t >= cutoff;
+    return !Number.isNaN(t) && t >= cutoff;
   });
 }

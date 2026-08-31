@@ -188,7 +188,7 @@ test("财经面板「国家政策」sub-tab 计数同口径：只算最近 2 天
   assert.ok(!html.includes('<span class="count">3</span>'), "不应把超窗口条目计入 cn-policy 计数");
 });
 
-test("filterRecentDays: 无发布时间 → 按采集时间 fetchedAt 排序与窗口（不垫底、不误弃）", () => {
+test("filterRecentDays: 无发布时间 → 丢弃（时间红线，不回退 fetchedAt，不计入窗口）", () => {
   const now = new Date();
   const day = 86_400_000;
   const subs: SubGroup[] = [
@@ -200,11 +200,11 @@ test("filterRecentDays: 无发布时间 → 按采集时间 fetchedAt 排序与�
           sourceId: "test-src",
           sourceName: "测试源",
           items: [
-            // 无 publishedAt：采集于 1 小时前 → 应排第一（按采集时间回退）
+            // 无 publishedAt：采集于 1 小时前 → 时间红线丢弃
             { ...item("https://x/f1", "无发布时间·今天采集", "tech"), publishedAt: undefined, fetchedAt: new Date(now.getTime() - 3_600_000) },
-            // 有发布时间：发布 2 小时前 → 第二
+            // 有发布时间：发布 2 小时前 → 保留
             { ...item("https://x/p1", "有发布时间·2小时前", "tech"), publishedAt: new Date(now.getTime() - 2 * 3_600_000) },
-            // 采集于 5 天前（超窗口）→ 不计入
+            // 无 publishedAt：采集于 5 天前 → 时间红线丢弃
             { ...item("https://x/f2", "无发布时间·5天前采集", "tech"), publishedAt: undefined, fetchedAt: new Date(now.getTime() - 5 * day) },
           ],
         },
@@ -224,12 +224,10 @@ test("filterRecentDays: 无发布时间 → 按采集时间 fetchedAt 排序与�
     },
   ];
   const html = renderRawCategoryPanel("tech", subs, "2026-08-19");
-  // 计数只算 2 天窗口内（1h + 2h = 2 条，5 天前采集的不计）
-  assert.ok(html.includes('data-sub="cn-tech" data-cat="tech">技术动态<span class="count">2</span>'), "无发布时间条目按 fetchedAt 判定窗口（5天前采集不计入）");
-  // 顺序（2026-08-21 用户规则）：有发布时间(2h前) 优先；无发布时间(采集1h前) 沉底
-  const order = html.indexOf("无发布时间·今天采集");
-  const order2 = html.indexOf("有发布时间·2小时前");
-  assert.ok(order !== -1 && order2 !== -1 && order2 < order, "无发布时间条目沉底（有时分 > 只有日期 > 无发布时间）");
+  // 仅「有发布时间·2小时前」计入窗口（2 条无发布时间按时间红线丢弃）
+  assert.ok(html.includes('data-sub="cn-tech" data-cat="tech">技术动态<span class="count">1</span>'), "无发布时间条目不计入窗口（时间红线丢弃）");
+  assert.ok(html.indexOf("无发布时间·今天采集") === -1, "无发布时间条目不渲染");
+  assert.ok(html.indexOf("无发布时间·5天前采集") === -1, "无发布时间条目不渲染");
 });
 
 test("formatDate: 只有日期（UTC零点/北京零点）→ 展示日期；有真实时分 → 展示时分", () => {

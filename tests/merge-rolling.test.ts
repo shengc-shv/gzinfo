@@ -260,7 +260,7 @@ test("历史条目按发布时间倒序追加", () => {
   assert.deepEqual(titles, ["今日条目", "较新政策", "较早政策"]);
 });
 
-test("category=gz 严格过滤：标题含广州锚→gz_local；外地地名→policy_market；其余→业务启示", () => {
+test("归板块靠标题内容判定（category 仅元数据）：标题含广州锚→gz_local；外地地名→policy_market；其余→业务启示", () => {
   const report = { ...emptyReport, sections: { ...emptyReport.sections, gz_local: [] as ReportItem[], biz_insight: [] as ReportItem[], policy_market: [] as ReportItem[] } };
   const rolling: ArticleInput[] = [
     // 真广州（标题含海珠 + 金融业务语义，2026-08-29 起要求业务相关性门槛）→ gz_local

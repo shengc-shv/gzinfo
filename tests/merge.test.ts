@@ -19,13 +19,13 @@ test("filterByWindow: publishedAt 早于 7 天窗口的旧文丢弃，窗口内�
     { url: "c", publishedAt: new Date(now - 6 * day) },             // 6 天前（窗口内边界）
     { url: "d", publishedAt: new Date(now - 8 * day) },             // 8 天前（超窗口）
     { url: "e", publishedAt: new Date(now - 40 * day) },            // 40 天前旧文
-    { url: "f" },                                                   // 无时间戳 → 保留
+    { url: "f" },                                                   // 无时间戳 → 时间红线丢弃
   ];
   const kept = filterByWindow(items, 7);
   assert.deepEqual(
     kept.map((x) => x.url),
-    ["a", "b", "c", "f"],
-    "窗口内 + 无时间戳保留；超窗口旧文（d/e）丢弃",
+    ["a", "b", "c"],
+    "窗口内保留；超窗口旧文（d/e）丢弃；无时间戳（f）按时间红线丢弃",
   );
 });
 
@@ -41,22 +41,20 @@ test("filterByWindow: 兼容字符串时间戳（JSON 数据）", () => {
   assert.deepEqual(kept.map((x) => x.url), ["a"]);
 });
 
-test("filterByWindow: 无发布时间 → 回退采集时间 fetchedAt 判定窗口", () => {
+test("filterByWindow: 无发布时间 → 丢弃（时间红线，不回退 fetchedAt）", () => {
   const now = Date.now();
   const day = 86_400_000;
-  const kept = filterByWindow(
-    [
-      { url: "a", fetchedAt: new Date(now) },                 // 采集于今天 → 保留
-      { url: "b", fetchedAt: new Date(now - 2 * day) },       // 采集于 2 天前 → 保留
-      { url: "c", fetchedAt: new Date(now - 40 * day) },      // 采集于 40 天前 → 丢弃
-      { url: "d" },                                           // 两者皆无 → 保留
-    ],
-    7,
-  );
+  const items: Array<{ url: string; publishedAt?: Date | string; fetchedAt?: Date }> = [
+    { url: "a", fetchedAt: new Date(now) },                 // 无 publishedAt → 丢弃
+    { url: "b", fetchedAt: new Date(now - 2 * day) },       // 无 publishedAt → 丢弃
+    { url: "c", fetchedAt: new Date(now - 40 * day) },      // 无 publishedAt → 丢弃
+    { url: "d" },                                           // 无 publishedAt → 丢弃
+  ];
+  const kept = filterByWindow(items, 7);
   assert.deepEqual(
     kept.map((x) => x.url),
-    ["a", "b", "d"],
-    "无 publishedAt 时按 fetchedAt 判定；两者皆无才保留",
+    [],
+    "无 publishedAt 不论 fetchedAt 与否均丢弃（时间红线）",
   );
 });
 

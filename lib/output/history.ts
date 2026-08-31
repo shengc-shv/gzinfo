@@ -81,18 +81,20 @@ export function loadHistory(): HistoryStore {
  *
  * The window is measured by the article's **occurrence time** (`publishedAt`),
  * NOT the analysis time (`lastSeenAt`). An item is "fresh" if its publish date
- * is within the last FETCH_WINDOW_DAYS. Items with no publish date (e.g. some
- * crawled datasets) fall back to `lastSeenAt` so they aren't silently dropped.
+ * is within the last FETCH_WINDOW_DAYS.
+ * 时间红线（2026-08-29 用户）：**无真实发布时间的条目一律剔除，不回退 lastSeenAt**。
+ * 例外：发布时间为未来（agePub<0，源站时区错误）仍回退 lastSeenAt 兜底——这属于
+ * 「发布时间异常」而非「无发布时间」，是必要的容错（D，2026-08-20）。
  */
 function isFreshEntry(e: HistoryEntry): boolean {
   const now = Date.now();
   const agePub = e.publishedAt ? now - Date.parse(e.publishedAt) : null;
+  // 时间红线：无真实发布时间 → 直接剔除，不回退 lastSeenAt
+  if (agePub === null) return false;
   const ageSeen = e.lastSeenAt ? now - Date.parse(e.lastSeenAt) : null;
   // 发布时间为未来（异常/源站时区错误）→ 不按发布时间判新鲜，回退用 lastSeenAt，
   // 避免 agePub<0 永远 <= MAX_AGE_MS 导致该条目永不进入 7 天裁剪（D，2026-08-20）。
-  if (agePub !== null && !Number.isNaN(agePub)) {
-    if (agePub >= 0) return agePub <= MAX_AGE_MS;
-  }
+  if (agePub >= 0) return agePub <= MAX_AGE_MS;
   if (ageSeen !== null && !Number.isNaN(ageSeen)) return ageSeen <= MAX_AGE_MS;
   return false;
 }
