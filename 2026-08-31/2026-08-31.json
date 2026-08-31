@@ -1,90 +1,8 @@
 {
   "date": "2026-08-31",
-  "hero_line": "房贷30年延至40年重塑零售信贷规则，同业竞速跟进，分行须重估产品线与客群承接路径。",
-  "must_read": [
-    {
-      "title": "房贷期限延至40年，零售信贷迎政策窗口",
-      "why": "直接拉长还款周期、降低月供门槛，年轻客群与改善型客户承接逻辑重塑，分行个贷产品线与风控参数需同步调整。",
-      "url": "https://news.southcn.com/node_812903b83a/3a99d4b188.shtml"
-    },
-    {
-      "title": "楼市全链条改革推进，土地金融销售联动",
-      "why": "监管从供给端与金融端同步发力，分行需把信贷投放节奏与房企白名单、并购贷款、REITs等工具打包看，不能只盯按揭。",
-      "url": "https://www.stcn.com/article/detail/4161508.html"
-    },
-    {
-      "title": "资本市场政策加码，REITs与并购重组扩容",
-      "why": "为房企盘活资产、补充权益资本提供新通道，分行投行与财富条线可联动挖掘公募REITs配置与并购顾问业务机会。",
-      "url": "https://www.stcn.com/article/detail/4161501.html"
-    },
-    {
-      "title": "四大行半年报派息率31%、净息差集体企稳",
-      "why": "国有大行盈利韧性确认，分行可借半年报对标自身零售存贷结构与AUM配置节奏，重点参考财富与私行客户经营。",
-      "url": "https://www.stcn.com/article/detail/4161481.html"
-    }
-  ],
-  "insights": [
-    {
-      "topic": "房贷40年新政落地承接",
-      "tags": [
-        "住房金融",
-        "财富"
-      ],
-      "impact": "直接降低月供门槛，年轻刚需与改善型客户准入拓宽，但拉长周期也压低单户收益，分行需在量价之间找平衡。",
-      "action": "本周内由个贷部牵头梳理产品细则与系统改造节点，同时与财富部联动锁定高净值客户二套房按揭+配置组合方案。",
-      "sources": [
-        {
-          "title": "个人房贷最长期限从30年延长到40年，银行会怎样跟进？",
-          "url": "https://news.southcn.com/node_812903b83a/3a99d4b188.shtml"
-        }
-      ]
-    },
-    {
-      "topic": "REITs与并购工具挖潜房企客群",
-      "tags": [
-        "住房金融",
-        "财富"
-      ],
-      "impact": "房地产发展新模式催生资产盘活与权益融资需求，分行投行、财富、对公可围绕头部房企做链式开发。",
-      "action": "可考虑联合券商对广州本地房企白名单客户摸排并购顾问与REITs战配需求，财富端同步上架公募REITs优选池。",
-      "sources": [
-        {
-          "title": "资本市场政策加码 助力构建房地产发展新模式",
-          "url": "https://www.stcn.com/article/detail/4161501.html"
-        }
-      ]
-    },
-    {
-      "topic": "全链条改革下的土地与销售联动",
-      "tags": [
-        "政银合作",
-        "信贷"
-      ],
-      "impact": "土地、金融、销售政策联动意味着房企融资渠道重构，分行可借机切入重点城市更新与收并购项目融资。",
-      "action": "提示公司部梳理广州本地城投与优质民企房企融资需求，对接并购贷款与开发贷组合包。",
-      "sources": [
-        {
-          "title": "多部门同频，楼市迎全链条改革，解读来了→",
-          "url": "https://www.stcn.com/article/detail/4161508.html"
-        }
-      ]
-    },
-    {
-      "topic": "对标四大行半年报优化财富结构",
-      "tags": [
-        "私行",
-        "财富"
-      ],
-      "impact": "大行派息率稳定、AUM增速回升，分行财富与私行需对照自身客户分层、产品货架与中收占比找差距。",
-      "action": "可由财富部牵头做一次头部大行半年报对标，重点调整私行产品货架与代销基金结构，本月内出方案。",
-      "sources": [
-        {
-          "title": "四大行半年报来了！派息率31%，合计分红超1900亿！净息差集体企稳…来看五大看点",
-          "url": "https://www.stcn.com/article/detail/4161481.html"
-        }
-      ]
-    }
-  ],
+  "hero_line": "今日初筛仅1条IPO在审信息，分行可暂作为科创客群储备线索持续跟进广发保荐的广东拟北交所项目。",
+  "must_read": [],
+  "insights": [],
   "sections": {
     "gz_local": [],
     "biz_insight": [
@@ -143,6 +61,21 @@
         "locale": "national"
       },
       {
+        "url": "https://news.southcn.com/node_812903b83a/3a99d4b188.shtml",
+        "title_cn": "个人房贷最长期限从30年延长到40年，银行会怎样跟进？",
+        "source": "南方网·经济",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "08/29",
+        "summary": "个人房贷最长30年延至40年，零售信贷迎政策窗口，分行应跟进产品承接与存量客户转化。",
+        "importance": 2,
+        "rank": 3,
+        "tags": [
+          "信贷"
+        ],
+        "locale": "national"
+      },
+      {
         "url": "https://news.southcn.com/node_812903b83a/d3d4411487.shtml",
         "title_cn": "地方附加税法公开征求意见 地方税改革迎来新进展",
         "source": "南方网·经济",
@@ -161,17 +94,18 @@
       {
         "url": "https://data.eastmoney.com/xg/xg/#A25256",
         "title_cn": "尚睿科技：IPO问询中（拟北交所）",
+        "title_orig": "尚睿科技：IPO问询中（拟北交所）",
         "source": "东财IPO在审(广东)",
         "source_type": "official",
-        "tier": "T1.5",
         "date": "08/27",
-        "summary": "注册地：广东｜保荐：广发证券股份有限公司｜更新：2026-08-27",
-        "importance": 2,
+        "summary": "注册地为广东的拟北交所企业尚睿科技由广发证券保荐，IPO处于问询阶段。可作为科创客群储备线索持续跟踪问询进展与上市节奏。",
+        "importance": 3,
         "rank": 1,
         "tags": [
           "粤"
         ],
-        "locale": "national"
+        "locale": "national",
+        "locale_evidence": "raw_text仅显示注册地：广东，未提及广州/海珠/天河/琶洲等广州地市级地名，不足以判定为广州本地企业"
       }
     ]
   },
@@ -283,7 +217,7 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/30",
-      "summary": "周末要闻汇总：监管部门对房地产出台多项政策“组合拳”，涉及需求端、供给端及融资端等多个方面。",
+      "summary": "8月30日周末多部门发布房地产领域政策\"组合拳\"，涉及信贷、限购等多项措施，市场关注其对楼市和地产板块的影响。",
       "importance": 3,
       "rank": 0,
       "tags": [
@@ -299,12 +233,12 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/30",
-      "summary": "8月30日晚间沪深上市公司发布重大事项公告，涉及重组、回购、股权变动等最新进展。",
+      "summary": "8月30日晚间沪深上市公司密集发布重大事项公告，包括业绩、分红、重组等最新进展。",
       "importance": 1,
       "rank": 0,
       "tags": [
-        "公司公告",
-        "A股"
+        "公告",
+        "财报"
       ],
       "locale": "national",
       "market": "a-share"
@@ -315,7 +249,7 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/30",
-      "summary": "机构展望9月A股市场，认为在政策利好与估值修复背景下，市场情绪可更趋积极。",
+      "summary": "券商和媒体在周末集中发声，展望A股9月行情，认为政策面与资金面共振下市场可以更积极。",
       "importance": 2,
       "rank": 0,
       "tags": [
@@ -331,12 +265,12 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/30",
-      "summary": "马斯克公开回应相关争议称\"毫不在意\"，事件涉及科技与商业领域公开矛盾的进一步升级。",
+      "summary": "特斯拉创始人马斯克就某争议事件公开回应，态度强硬表示\"毫不在意\"，事件涉及与对手的矛盾升级。",
       "importance": 1,
       "rank": 0,
       "tags": [
-        "科技",
-        "中概股"
+        "新能源车",
+        "马斯克"
       ],
       "locale": "national",
       "market": "a-share"
@@ -347,7 +281,7 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/30",
-      "summary": "A股2025年中报披露收官，全市场上市公司合计归母净利润较此前增加约5800亿元，盈利整体改善。",
+      "summary": "A股上市公司2024年中报披露收官，全榜单显示合计净利润同比增长约5800亿元，行业盈利结构分化明显。",
       "importance": 2,
       "rank": 0,
       "tags": [
@@ -363,12 +297,13 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/31",
-      "summary": "港交所披露易收录一家上市公司中期业绩公告。",
-      "importance": 1,
+      "summary": "港交所披露易发布\"中期业绩\"公告，上市公司公布最新半年度业绩数据。",
+      "importance": 2,
       "rank": 0,
       "tags": [
+        "港股",
         "财报",
-        "港股"
+        "公告"
       ],
       "locale": "national",
       "market": "hk"
@@ -379,12 +314,13 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/31",
-      "summary": "港交所披露易发布次日披露报表，显示有上市公司进行股票回购。",
-      "importance": 1,
+      "summary": "港交所披露易发布\"股份购回\"披露，上市公司在二级市场实施股票回购操作。",
+      "importance": 2,
       "rank": 0,
       "tags": [
         "港股",
-        "回购"
+        "回购",
+        "公告"
       ],
       "locale": "national",
       "market": "hk"
@@ -395,11 +331,12 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/30",
-      "summary": "据《华尔街日报》报道，怡安（AON）接近以约170亿美元从KKR手中收购保险经纪公司USI。",
+      "summary": "据《华尔街日报》报道，保险经纪公司Aon接近以约170亿美元从KKR手中收购保险经纪商USI。",
       "importance": 2,
       "rank": 0,
       "tags": [
         "并购",
+        "保险",
         "美股"
       ],
       "locale": "overseas",
@@ -411,44 +348,65 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/30",
-      "summary": "韩国美妆巨头APR股价年内累计上涨约100%，公司将于9月在美国Costco启动销售。",
+      "summary": "韩国美妆巨头APR股价年内累计上涨约100%，9月将在美国Costco渠道正式上市销售。",
       "importance": 1,
       "rank": 0,
       "tags": [
+        "美股",
         "消费",
-        "美股"
+        "韩妆"
       ],
       "locale": "overseas",
       "market": "us"
     },
     {
-      "url": "https://www.investing.com/news/economic-indicators/japan-industrial-production-unexpectedly-grows-in-july-retail-sales-surge-4882082",
-      "title_cn": "Japan industrial production unexpectedly grows in July, retail sales surge",
+      "url": "https://www.cnbc.com/2026/08/30/what-caused-nvidias-nasty-reversal-friday-look-to-the-fed-for-clues.html",
+      "title_cn": "What caused Nvidia's nasty reversal Friday? Look to the Fed for clues",
+      "source": "CNBC Top Stories",
+      "source_type": "media",
+      "date": "08/30",
+      "summary": "英伟达股价周五盘中出现明显逆转，外媒分析其背后与美联储政策信号及市场利率预期变化相关。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "美股",
+        "AI",
+        "半导体",
+        "美联储"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.investing.com/news/stock-market-news/us-stock-futures-dip-amid-renewed-iran-hostilities-4882085",
+      "title_cn": "U.S. stock futures dip amid renewed Iran hostilities",
       "source": "Investing.com News",
       "source_type": "media",
       "date": "08/31",
-      "summary": "日本7月工业产出意外环比增长，零售销售同步大幅走强，经济数据好于预期。",
+      "summary": "受伊朗紧张局势再度升温影响，美国股指期货周一盘前走弱，市场风险偏好回落。",
       "importance": 2,
       "rank": 0,
       "tags": [
-        "宏观",
-        "日本"
+        "美股",
+        "地缘政治",
+        "股指期货"
       ],
       "locale": "overseas",
       "market": "us"
     },
     {
-      "url": "https://www.investing.com/news/economy-news/bessent-says-yen-moves-pretty-contained-and-not-disorderly-4882076",
-      "title_cn": "Bessent says yen moves ’pretty contained’ and not disorderly",
+      "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-austal-posts-record-fy-2026-revenue-but-reports-loss-93CH-4882084",
+      "title_cn": "Earnings call transcript: Austal posts record FY 2026 revenue but reports loss",
       "source": "Investing.com News",
       "source_type": "media",
-      "date": "08/30",
-      "summary": "美国财长Bessent表示近期日元波动\"相当有限\"且不构成无序贬值，市场解读为对日元走势的安抚信号。",
-      "importance": 2,
+      "date": "08/31",
+      "summary": "澳大利亚造船企业Austal发布2026财年全年业绩，营收创历史新高但仍录得亏损。",
+      "importance": 1,
       "rank": 0,
       "tags": [
-        "外汇",
-        "日本"
+        "财报",
+        "造船",
+        "美股"
       ],
       "locale": "overseas",
       "market": "us"
