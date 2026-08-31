@@ -21,6 +21,7 @@ import {
   loadStockRecap,
   selectStockRecap,
   synthesizeFallbackCard,
+  synthesizeRecapFromQuotes,
   findHkRecapReport,
   type StockItem,
 } from "../../ai/stock-recap";
@@ -123,12 +124,24 @@ export async function buildStockRecap(
   const quotes = await fetchMarketQuotes(prevTradingDay(date));
 
   try {
-    const recap = await selectStockRecap({
+    let recap = await selectStockRecap({
       skipAi,
       persisted: persistedRecap,
       generate: () =>
         generateStockRecap({ date, us: usItems, aShare: aShareItems, hk: hkItems }, quotes),
     });
+    // 2026-09-01 修（股市板块初始化失败根因）：
+    // SKIP_AI 当日首次运行无 store.json → persisted=undefined → selectStockRecap 返回 null；
+    // AI 模式下 generateStockRecap 内 LLM 失败也返回 null。两者均导致股市解读区整区不渲染。
+    // 此时行情 quotes 已成功拉到 → 用指数合成最小复盘三卡（overview=指数点位+涨跌幅），
+    // 让「收盘点位+涨跌幅」筹码在 SKIP_AI 无缓存 / AI 失败两种场景下都展示完整。
+    if (!recap && quotes) {
+      recap = synthesizeRecapFromQuotes(quotes);
+      ctx.log.info(
+        "recap",
+        `📈 股市复盘：无 AI 产物，用行情指数合成最小复盘三卡（A股 ${recap.aShare.overview ? 1 : 0} / 港股 ${recap.hk.overview ? 1 : 0} / 美股 ${recap.us.overview ? 1 : 0}）`,
+      );
+    }
     if (!recap) {
       ctx.log.info("recap", "ℹ️ 股市复盘无可用输入或生成失败（跳过该区）");
       return report;
@@ -159,7 +172,7 @@ export async function buildStockRecap(
         "recap",
         `📈 股市复盘三卡生成：美股 ${usItems.length} / A股 ${aShareItems.length} / 港股 ${hkItems.length} 条输入`,
       );
-    } else {
+    } else if (persistedRecap) {
       ctx.log.info("recap", "📈 SKIP_AI 复用 store.json 股市复盘三卡");
     }
     // 2026-08-30 用户：周末/周一报告标注股市数据为上一交易日收盘

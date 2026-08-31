@@ -184,6 +184,27 @@ export function synthesizeFallbackCard(
   return synthesizeFallbackCardInternal(llmCard, quotes);
 }
 
+/**
+ * 无 AI 产物时的最小复盘合成（2026-09-01 修：股市板块初始化失败根因）。
+ * - SKIP_AI 当日首次运行无 store.json（persisted=undefined）→ selectStockRecap 返回 null；
+ * - AI 模式下 generateStockRecap 内 LLM 失败也返回 null。
+ * 两者均导致股市解读区整区不渲染。本函数用已成功拉取的行情指数合成最小复盘三卡
+ * （overview=指数点位+涨跌幅，纯事实，无投资建议），保证「收盘点位+涨跌幅」筹码
+ * 在 SKIP_AI 无缓存 / AI 失败两种场景下都展示完整。
+ * 若某市场无指数（quotes 数组空），该卡为空卡（overview=""）——由渲染层显示「暂无数据」，
+ * 不再整区跳过。
+ */
+export function synthesizeRecapFromQuotes(quotes: QuoteResult): StockRecap {
+  const emptyCard = (): MarketCard => ({ overview: "", sectors: [] });
+  return {
+    us: synthesizeFallbackCard(emptyCard(), quotes.quotes.us) ?? emptyCard(),
+    aShare: synthesizeFallbackCard(emptyCard(), quotes.quotes.aShare) ?? emptyCard(),
+    hk: synthesizeFallbackCard(emptyCard(), quotes.quotes.hk) ?? emptyCard(),
+    quoteChannel: quotes.channel,
+    quoteDate: quotes.date,
+  };
+}
+
 export async function generateStockRecap(
   input: StockRecapInput,
   quotes?: QuoteResult | null,
