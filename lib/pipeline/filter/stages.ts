@@ -1,16 +1,21 @@
 /**
- * 9 道过滤 stage 实现（PR3）。
+ * 过滤 stage 实现（3 漏斗整改中，当前 7 道；最终收敛为 3 漏斗：
+ *   漏斗一 业务相关性 = single-institution + stock-single + keyword-funnel + 相关性闸门
+ *   漏斗二 时效+去重   = pre-window + title-similarity + cross-day-dedup
+ *   漏斗三 业务价值   = per-source-cap（升级为全局价值取前））。
  *
- * 顺序与原 daily.ts main 中 105-245 行严格一致：
- *   1. pre-window-2d        —— 源层前置窗口（FETCH_WINDOW_DAYS=2）
+ * 本步（commit①）已删除冗余 Stage6（display-window-2d，与 pre-window 同为 2 天窗恒删 0）
+ * 与归位 Stage8（no-date-fallback → ingest.ts:73 源层丢弃无 publishedAt；本轮
+ * filterByWindow/filterRecentDays/isFreshEntry 已去除 fetchedAt/lastSeenAt 兜底）。
+ *
+ * 顺序：
+ *   1. pre-window-2d        —— 源层前置窗口（FETCH_WINDOW_DAYS=2；兼展示窗，IPO 7 天）
  *   2. single-institution   —— 单家非白名单金融机构新闻
  *   3. stock-single         —— 股市单股新闻（非巨头/非广州本地）
  *   4. keyword-funnel       —— 银行零售关键词漏斗（v4，五维命中 + 五商机追踪器）
  *   5. title-similarity     —— 标题相似度判重（同主题/同 tier）
- *   6. display-window-2d    —— 展示窗口（DISPLAY_WINDOW_DAYS=2，旧文过滤）
- *   7. cross-day-dedup      —— 跨天标题判重（与历史库先来者合并）
- *   8. no-date-fallback     —— 无发布时间兜底丢弃
- *   9. per-source-cap-10    —— 每源限额（每源 ≤ LIGHT_AI_MAX_PER_SOURCE=10）
+ *   6. cross-day-dedup      —— 跨天标题判重（与历史库先来者合并）
+ *   7. per-source-cap-10    —— 每源限额（每源 ≤ LIGHT_AI_MAX_PER_SOURCE=10）
  *
  * 行为差异：keyword-funnel stage 移除了原 main 中给 article 写 filterBucket/filterDimensions/
  * filterOpportunities 的"幽灵字段"——grep 验证全仓无读，**这是死代码**（与 PR1 死代码清理同性质）。
@@ -33,7 +38,6 @@ import {
   dedupeAgainstHistory,
   type HistorySimilarEntry,
 } from "../../ingest/dedup-similar";
-import { DISPLAY_WINDOW_DAYS } from "../../output/render/cards";
 import { FETCH_WINDOW_DAYS } from "../../output/history";
 import { capLightAiSources, LIGHT_AI_MAX_PER_SOURCE } from "../../ai/light-ai";
 import { scoreBranchRelevance } from "../../ai/relevance-score";
@@ -190,34 +194,6 @@ const titleSimilarityStage: FilterStage = {
 };
 
 /**
- * Stage 6：超窗口旧文过滤（展示窗口 DISPLAY_WINDOW_DAYS=2）。
- * rss 流混入的展示窗口外旧文不进 AI、不展示。
- */
-const displayWindowStage: FilterStage = {
-  name: "display-window-2d",
-  apply: (articles, ctx) => {
-    const before = articles.length;
-    // 2026-08-30 同 pre-window：IPO 类豁免 2 天展示窗、改用 7 天，避免 3–7 天前的
-    // 在审/注册生效里程碑被展示窗截掉（爬虫已预筛 7 天，数据干净）。
-    const ipo = articles.filter((a) => a.category === "gd-ipo" || a.category === "ipo");
-    const others = articles.filter(
-      (a) => a.category !== "gd-ipo" && a.category !== "ipo",
-    );
-    const out = [
-      ...filterByWindow(ipo, 7),
-      ...filterByWindow(others, DISPLAY_WINDOW_DAYS),
-    ];
-    if (out.length !== before) {
-      ctx.log.info(
-        "filter",
-        `🗓 超窗口旧文过滤: ${before} → ${out.length} 条（移除 ${before - out.length} 条超窗旧文；IPO 类按 7 天窗口豁免）`,
-      );
-    }
-    return out;
-  },
-};
-
-/**
  * Stage 7：跨天标题判重（先来后到）。
  * 新抓取 vs 历史库已有条目；历史先来者优先占位。
  */
@@ -250,26 +226,10 @@ const crossDayDedupStage: FilterStage = {
 };
 
 /**
- * Stage 8：无发布时间兜底（2026-08-21 用户要求）。
- * 无 publishedAt 的条目防御性丢弃（未来任何源若产出无日期条目，直接在此丢弃）。
- */
-const noDateFallbackStage: FilterStage = {
-  name: "no-date-fallback",
-  apply: (articles, ctx) => {
-    const before = articles.length;
-    const out = articles.filter((a) => a.publishedAt);
-    if (out.length < before) {
-      ctx.log.info(
-        "filter",
-        `⏭ 无发布时间/日期条目 ${before - out.length} 条跳过 AI 分析（兜底丢弃）`,
-      );
-    }
-    return out;
-  },
-};
-
-/**
  * Stage 9：每源限额（2026-08-25 用户指令：所有媒体源每源 ≤10 条进 LLM 分析/展示）。
+ * 注：无发布时间兜底（原 Stage8）已归位归一采集——ingest.ts:73 源层丢弃无 publishedAt，
+ * 且 filterByWindow/filterRecentDays/isFreshEntry 已去除 fetchedAt/lastSeenAt 兜底；
+ * 此处不再重复守卫。
  */
 const perSourceCapStage: FilterStage = {
   name: "per-source-cap-10",
@@ -301,15 +261,13 @@ const perSourceCapStage: FilterStage = {
   },
 };
 
-/** 9 道 stage 顺序数组。调换顺序 = 改这一行。 */
+/** 过滤 stage 顺序数组（3 漏斗整改中：删冗余 Stage6、归位 Stage8；最终收敛为 3 漏斗）。 */
 export const FILTER_STAGES: FilterStage[] = [
   preWindowStage,
   singleInstitutionStage,
   stockSingleStage,
   keywordFunnelStage,
   titleSimilarityStage,
-  displayWindowStage,
   crossDayDedupStage,
-  noDateFallbackStage,
   perSourceCapStage,
 ];
