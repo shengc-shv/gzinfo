@@ -13,9 +13,10 @@
  *   2. single-institution   —— 单家非白名单金融机构新闻
  *   3. stock-single         —— 股市单股新闻（非巨头/非广州本地）
  *   4. keyword-funnel       —— 银行零售关键词漏斗（v4，五维命中 + 五商机追踪器）
- *   5. title-similarity     —— 标题相似度判重（同主题/同 tier）
- *   6. cross-day-dedup      —— 跨天标题判重（与历史库先来者合并）
- *   7. value-top           —— 漏斗三 业务价值取前（全局按分行相关性取前 + 每源多样性封顶 + 写回 valueTag）
+ *   5. relevance-gate       —— 漏斗一确定性相关性闸门（commit④，warn-only 灰度；tier=drop 候选丢弃，IPO/参考区豁免）
+ *   6. title-similarity     —— 标题相似度判重（同主题/同 tier）
+ *   7. cross-day-dedup      —— 跨天标题判重（与历史库先来者合并）
+ *   8. value-top           —— 漏斗三 业务价值取前（全局按分行相关性取前 + 每源多样性封顶 + 写回 valueTag）
  *
  * 行为差异：keyword-funnel stage 移除了原 main 中给 article 写 filterBucket/filterDimensions/
  * filterOpportunities 的"幽灵字段"——grep 验证全仓无读，**这是死代码**（与 PR1 死代码清理同性质）。
@@ -40,7 +41,9 @@ import {
 } from "../../ingest/dedup-similar";
 import { FETCH_WINDOW_DAYS } from "../../output/history";
 import { takeTopByValue, VALUE_TOP_N, VALUE_MAX_PER_SOURCE } from "../../ai/light-ai";
+import { scoreBranchRelevance } from "../../ai/relevance-score";
 import type { ArticleInput } from "../../types";
+import type { Category } from "../../sources/types";
 import type { FilterStage } from "./types";
 
 /**
@@ -156,6 +159,78 @@ const keywordFunnelStage: FilterStage = {
 };
 
 /**
+ * 漏斗一确定性相关性闸门（2026-08-31 3漏斗整改 commit④）。
+ *
+ * 对每条「主战场」文章（非 IPO、非参考区）跑 scoreBranchRelevance，tier==="drop"
+ * （非分行相关业务，如「美股三大指数收跌」分行相关性低）→ 候选丢弃，落实漏斗一
+ * 「过滤非金融/非分行相关业务」。
+ *
+ * ⚠️ 灰度策略（必做，计划 C）：当前 RELEVANCE_GATE_DROP=false，仅 ctx.log.warn
+ * 打印「将丢弃 N 条（tier=drop）」，**不实际丢弃**，便于跑 dry-run + 正式 daily 比对
+ * 与当前 AI 口径（PASS1/PASS2 实际保留集）的 diff，确认不过杀（误杀<5%）后再置
+ * RELEVANCE_GATE_DROP=true 启用实际丢弃。
+ *
+ * 豁免：IPO 类（isIpo===true，东财在审表/交易所权威源本就是分行关注内容）；
+ * 参考区（tech/politics/ipo/gd-ipo/stocks，独立 tab 展示，非「分行强相关」但须保留）。
+ * 阶段二启用实际丢弃时，这些豁免同样适用。
+ */
+const RELEVANCE_GATE_DROP = false; // 灰度开关：false=warn-only 观测；true=实际丢弃
+const RELEVANCE_GATE_EXEMPT = new Set<Category>([
+  "tech",
+  "politics",
+  "ipo",
+  "gd-ipo",
+  "stocks",
+]);
+
+const relevanceGateStage: FilterStage = {
+  name: "relevance-gate",
+  apply: (articles, ctx) => {
+    let drop = 0;
+    const scored: Array<{ a: ArticleInput; tier: string }> = [];
+    for (const a of articles) {
+      if (a.isIpo === true || RELEVANCE_GATE_EXEMPT.has(a.category)) {
+        scored.push({ a, tier: "kept" });
+        continue;
+      }
+      const rel = scoreBranchRelevance({
+        title: a.title_cn ?? a.title ?? "",
+        summary: a.summary ?? "",
+        sourceId: a.source,
+        category: a.category,
+        subcategory: a.subcategory,
+        url: a.url,
+      });
+      if (rel.tier === "drop") drop++;
+      // 阶段二（RELEVANCE_GATE_DROP=true）才据此丢弃；当前仅统计
+      scored.push({ a, tier: rel.tier });
+    }
+    if (!RELEVANCE_GATE_DROP) {
+      if (drop > 0) {
+        ctx.log.warn(
+          "filter",
+          `⚠️ 相关性闸门(warn-only 灰度)：将丢弃 ${drop} 条（tier=drop，非分行相关业务）；当前仅观测不实际丢弃，待 dry-run 比对 diff 后启用`,
+        );
+      }
+      return articles; // 阶段一：不改变产出
+    }
+    // 阶段二：实际丢弃 tier=drop（IPO/参考区已豁免）
+    const kept: ArticleInput[] = [];
+    for (const { a, tier } of scored) {
+      if (tier === "drop") continue;
+      kept.push(a);
+    }
+    if (drop > 0) {
+      ctx.log.info(
+        "filter",
+        `🚪 相关性闸门: ${articles.length} → ${kept.length} 条（移除 ${drop} 条非分行相关业务 tier=drop；IPO/参考区豁免）`,
+      );
+    }
+    return kept;
+  },
+};
+
+/**
  * Stage 5：标题相似度判重（归一化②，漏斗之后 AI 之前）。
  * 同主题最多 maxPerTheme 条、同 tier 只留 1。
  */
@@ -243,12 +318,13 @@ const funnelValueTopStage: FilterStage = {
   },
 };
 
-/** 过滤 stage 顺序数组（3 漏斗整改中：删冗余 Stage6、归位 Stage8、漏斗三升级为全局价值取前；最终收敛为 3 漏斗）。 */
+/** 过滤 stage 顺序数组（3 漏斗整改中：删冗余 Stage6、归位 Stage8、漏斗三升级为全局价值取前、漏斗一末加相关性闸门；最终收敛为 3 漏斗）。 */
 export const FILTER_STAGES: FilterStage[] = [
   preWindowStage,
   singleInstitutionStage,
   stockSingleStage,
   keywordFunnelStage,
+  relevanceGateStage,
   titleSimilarityStage,
   crossDayDedupStage,
   funnelValueTopStage,
