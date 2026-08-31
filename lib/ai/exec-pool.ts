@@ -34,6 +34,8 @@ export interface ExecPoolArticle {
   publishedAt?: string | Date;
   category?: string;
   title?: string;
+  /** 中文化标题（ArticleInput 有；仅今日必读/商机选中的条目会被回写） */
+  title_cn?: string;
   excerpt?: string;
   summary?: string;
 }
@@ -49,6 +51,13 @@ export interface ExecPoolItem {
 export interface ExecPoolResult {
   finance: ExecPoolItem[];
   gz: ExecPoolItem[];
+  /**
+   * 广东地区 IPO 动态（2026-08-31 新增）。
+   * 单独一路：IPO 在审企业状态更新稀疏（几天一更），用 7 天窗口而非 finance/gz 的 2 天。
+   * 喂给 exec 提示词的 guangdong_ipo 槽位（该槽位此前从未拿到过输入 → LLM 恒回 null，
+   * 口播只能靠 audio.ts 的确定性兜底）。
+   */
+  ipo: ExecPoolItem[];
 }
 
 /**
@@ -168,7 +177,49 @@ export function buildTwoDayExecPool(opts: BuildTwoDayExecPoolOpts): ExecPoolResu
     (info.cat === "finance" ? finance : gz).push(entry);
   }
 
-  return { finance, gz };
+  return { finance, gz, ipo: buildIpoPool(opts) };
+}
+
+/**
+ * 广东地区 IPO 池（7 天窗口，独立于 finance/gz 的 2 天窗口）。
+ *
+ * 为什么单独一路（2026-08-31）：
+ *  - IPO 在审企业状态更新稀疏（东财在审表实测几天一更），2 天窗口会把绝大多数
+ *    在审动态滤掉 —— 与过滤层「gd-ipo 按 7 天窗口豁免」同一理由。
+ *  - `SECTION_TO_CAT.ipo = null`：IPO 不是必读/商机素材，只是口播 guangdong_ipo 段
+ *    与板块展示用，因此不并入 finance/gz，避免污染必读/商机。
+ *
+ * 来源（按优先级）：report.sections.ipo（今日 side-output 构建 + 历史滚动并入）
+ * → 不足时补 opts.articles 里的 gd-ipo/ipo 条目（摘要可能为空，用 excerpt 兜底）。
+ */
+function buildIpoPool(opts: BuildTwoDayExecPoolOpts): ExecPoolItem[] {
+  const cutoff = Date.now() - 7 * 86_400_000;
+  const inIpoWindow = (iso: string | Date | undefined): boolean => {
+    if (!iso) return true; // 无 publishedAt：今日 sections/本次抓取的条目不因此丢
+    const t = new Date(iso).getTime();
+    return Number.isNaN(t) || t >= cutoff;
+  };
+  const out = new Map<string, ExecPoolItem>();
+
+  for (const it of opts.report.sections.ipo ?? []) {
+    if (!it.url) continue;
+    const summary = (it.summary || "").trim();
+    if (!summary) continue;
+    out.set(it.url, { title: it.title_cn || it.title_orig || "", summary, url: it.url });
+  }
+  // 今日抓取的 gd-ipo/ipo 条目（sections 里可能还没有 —— 取决于 side-output 执行顺序）
+  for (const a of opts.articles) {
+    const cat = a.category ?? "";
+    if (cat !== "gd-ipo" && cat !== "ipo") continue;
+    if (!a.url || out.has(a.url)) continue;
+    if (!inIpoWindow(a.publishedAt)) continue;
+    out.set(a.url, {
+      title: a.title_cn || a.title || "",
+      summary: (a.summary || a.excerpt || "").slice(0, 120),
+      url: a.url,
+    });
+  }
+  return [...out.values()].slice(0, 20);
 }
 
 /**

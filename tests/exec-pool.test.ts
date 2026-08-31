@@ -94,6 +94,70 @@ test("时区：UTC 凌晨时间戳在 Asia/Shanghai 下日期键正确", () => {
   assert.equal(dateKeyOf("not-a-date", "Asia/Shanghai"), undefined);
 });
 
+/**
+ * 广东 IPO 池（2026-08-31 新增）。
+ * 背景：exec 提示词有 guangdong_ipo 槽位且要求「无则 null、不要编造」，但 ipo 入参
+ * 从未被传入 → LLM 恒回 null，口播只能靠 audio.ts 确定性兜底。本测试锁住该通路。
+ * 要点：IPO 用 7 天窗口（在审企业更新稀疏），且绝不并入 finance/gz 池。
+ */
+test("IPO 池：7 天窗口，且不被并入 finance/gz", () => {
+  process.env.REPORT_TZ = "Asia/Shanghai";
+  const DAY = 86_400_000;
+  const report = mkReport();
+  report.sections.ipo = [
+    mkReportItem("ipo-a", "尚睿科技：IPO问询中（拟北交所）", "注册地：广东｜更新：2026-08-27"),
+  ];
+  const arts = [
+    {
+      url: "ipo-a",
+      publishedAt: new Date(Date.now() - 3 * DAY), // 与 sections 同 url → 不重复
+      category: "gd-ipo",
+      title: "尚睿科技：IPO问询中（拟北交所）",
+      summary: "注册地：广东",
+    },
+    {
+      url: "ipo-b",
+      publishedAt: new Date(Date.now() - 5 * DAY), // 5 天前：超 2 天但仍在 7 天内 → 应纳入
+      category: "gd-ipo",
+      title: "腾信精密：IPO已受理（拟北交所）",
+      excerpt: "注册地：广东｜保荐：国泰海通",
+    },
+    {
+      url: "ipo-c",
+      publishedAt: new Date(Date.now() - 9 * DAY), // 9 天前：超 7 天 → 排除
+      category: "gd-ipo",
+      title: "某旧企业：IPO过会（拟创业板）",
+      excerpt: "注册地：广东",
+    },
+  ];
+  const res = buildTwoDayExecPool({
+    history: mkHistory(),
+    articles: arts,
+    report,
+    today: TODAY,
+  });
+  const ipoUrls = res.ipo.map((i) => i.url).sort();
+  assert.deepEqual(ipoUrls, ["ipo-a", "ipo-b"], "7 天窗口内的 gd-ipo 都应纳入，9 天前排除");
+
+  // 关键：IPO 绝不能污染必读/商机池
+  const finGz = [...res.finance, ...res.gz].map((i) => i.url);
+  assert.ok(!finGz.includes("ipo-a") && !finGz.includes("ipo-b"), "IPO 条目不得进入 finance/gz 池");
+  // 原有的 finance/gz 结果不受影响
+  assert.deepEqual(res.finance.map((i) => i.url).sort(), ["tf", "yf"]);
+  assert.deepEqual(res.gz.map((i) => i.url).sort(), ["tg", "yg"]);
+});
+
+test("IPO 池：无 IPO 条目时返回空数组（不报错）", () => {
+  process.env.REPORT_TZ = "Asia/Shanghai";
+  const res = buildTwoDayExecPool({
+    history: mkHistory(),
+    articles,
+    report: mkReport(),
+    today: TODAY,
+  });
+  assert.deepEqual(res.ipo, []);
+});
+
 test("无 publishedAt 的条目被跳过", () => {
   process.env.REPORT_TZ = "Asia/Shanghai";
   const hist: Record<string, ExecPoolHistoryEntry> = {

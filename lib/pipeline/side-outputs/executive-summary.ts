@@ -128,10 +128,16 @@ export async function buildExecutiveSummary(
     if (riskCandidates.length > 0) {
       ctx.log.info("exec", `🎯 关键词层风险候选 ${riskCandidates.length} 条（喂给 LLM）`);
     }
+    // 2026-08-31：此前漏传 ipo，exec 提示词里的 guangdong_ipo 槽位从未拿到输入 →
+    // LLM 按「无则 null、不要编造」的指令恒回 null，口播只能靠 audio.ts 确定性兜底。
+    if (pool.ipo.length > 0) {
+      ctx.log.info("exec", `🏦 广东IPO 候选 ${pool.ipo.length} 条（喂给 LLM 的 guangdong_ipo 槽位）`);
+    }
     let exec = await generateExecutiveSummary({
       date,
       finance: pool.finance,
       gz: pool.gz,
+      ...(pool.ipo.length > 0 ? { ipo: pool.ipo } : {}),
       ...(riskCandidates.length > 0 ? { riskCandidates } : {}),
     });
     if (exec) {
