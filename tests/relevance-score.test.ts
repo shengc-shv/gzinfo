@@ -129,3 +129,21 @@ test("rankByRelevance：房贷40年在同批里排第一", () => {
   assert.equal(ranked[0].article.title, MORTGAGE_40Y.title);
   assert.equal(ranked[0].relevance.tier, "must_read");
 });
+
+test("重大IPO发行/申购（燧原科技型）→ 财富商机，不再误判无关联（2026-08-31 用户核查）", () => {
+  // 燧原科技(688801.SH)是上海企业、非广东，不进「广东地区IPO」板块；
+  // 但「科创板IPO发行价142.18元、9/2申购」对招行财富管理（打新配置/新股申购客户触达）
+  // 是明确商机，按业务相关性红线应保留。修复前财富线词表缺 新股/IPO/打新/申购/发行价，
+  // 燧原被算成 businessLines=[]、score 21~25、tier drop/context 而消失。
+  const r = scoreBranchRelevance({
+    title: "燧原科技：IPO发行价格142.18元／股 申购日为2026年9月2日",
+    category: "finance",
+    sourceId: "cnfin",
+  });
+  assert.ok(r.businessLines.includes("财富"), "重大IPO/新股申购应命中财富线");
+  assert.ok(r.tier !== "drop", `补词表前 tier=context/drop，修复后应保留（实际 ${r.tier}）`);
+  assert.ok(
+    r.tier === "insight" || r.tier === "must_read",
+    `应至少 insight（实际 ${r.tier}, score=${r.score}）`,
+  );
+});
