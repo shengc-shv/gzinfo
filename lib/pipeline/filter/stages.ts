@@ -16,7 +16,7 @@
  *   5. relevance-gate       —— 漏斗一确定性相关性闸门（commit④，warn-only 灰度；tier=drop 候选丢弃，IPO/参考区豁免）
  *   6. title-similarity     —— 标题相似度判重（同主题/同 tier）
  *   7. cross-day-dedup      —— 跨天标题判重（与历史库先来者合并）
- *   8. value-top           —— 漏斗三 业务价值取前（全局按分行相关性取前 + 每源多样性封顶 + 写回 valueTag）
+ *   8. per-source-cap-10   —— 漏斗三 业务价值取前（每源 ≤ LIGHT_AI_MAX_PER_SOURCE=10，源内按分行相关性降序；保留来源多样性，不全局挤压 single 源）
  *
  * 行为差异：keyword-funnel stage 移除了原 main 中给 article 写 filterBucket/filterDimensions/
  * filterOpportunities 的"幽灵字段"——grep 验证全仓无读，**这是死代码**（与 PR1 死代码清理同性质）。
@@ -40,7 +40,7 @@ import {
   type HistorySimilarEntry,
 } from "../../ingest/dedup-similar";
 import { FETCH_WINDOW_DAYS } from "../../output/history";
-import { takeTopByValue, VALUE_TOP_N, VALUE_MAX_PER_SOURCE } from "../../ai/light-ai";
+import { capLightAiSources, LIGHT_AI_MAX_PER_SOURCE } from "../../ai/light-ai";
 import { scoreBranchRelevance } from "../../ai/relevance-score";
 import type { ArticleInput } from "../../types";
 import type { Category } from "../../sources/types";
@@ -292,33 +292,48 @@ const crossDayDedupStage: FilterStage = {
 };
 
 /**
- * 漏斗三（业务价值取前，零 AI，2026-08-31 3漏斗整改 commit③）：
- * 替代原「每源限额」——全局按分行相关性评分降序取前 VALUE_TOP_N（默认 60），
- * 叠加每源 ≤ VALUE_MAX_PER_SOURCE（默认 8）多样性封顶，并写回 valueTag（供 exec 口播消费）。
- * 符合「按业务价值优先级取靠前」；确定性、免费、可单测。
+ * 漏斗三（业务价值取前，零 AI，2026-08-31 3漏斗整改 commit③→回退）：
+ * 恢复为原「每源限额」——所有媒体源每源 ≤ LIGHT_AI_MAX_PER_SOURCE（10）条进 LLM 分析/展示，
+ * 源内按分行相关性评分降序（高价值优先、低价值让位，命中「价值优先」+「节约AI」）。
+ * 回退原因：原 commit③ 的全局 takeTopByValue（110→34）过度按分行相关性排序，把股市/广州本地
+ * 等低分行相关性但用户高关注的板块压到 0，且池子过窄导致 exec 口播「今日必读/商机洞察」主题重复。
+ * 每源限额保留来源多样性，不复现上述问题（与 2026-08-31 午间发布版本一致）。
+ * takeTopByValue 仍保留于 light-ai.ts 作为可单测工具（value-top.test.ts），但不再接入管线。
  * 注：无发布时间兜底（原 Stage8）已归位归一采集——ingest.ts:73 源层丢弃无 publishedAt，
  * 且 filterByWindow/filterRecentDays/isFreshEntry 已去除 fetchedAt/lastSeenAt 兜底；
  * 此处不再重复守卫。
  */
-const funnelValueTopStage: FilterStage = {
-  name: "value-top",
+const perSourceCapStage: FilterStage = {
+  name: "per-source-cap-10",
   apply: (articles, ctx) => {
     const before = articles.length;
-    const out = takeTopByValue(articles, {
-      topN: VALUE_TOP_N,
-      maxPerSource: VALUE_MAX_PER_SOURCE,
-    });
+    // 2026-08-29 价值预筛：每源限额源内按分行相关性评分降序——
+    // 高分行相关性条目优先进 AI，低价值条目让位（命中「价值优先」+「节约AI」）。
+    const out = capLightAiSources(
+      articles,
+      ctx.allSourceIds,
+      LIGHT_AI_MAX_PER_SOURCE,
+      (a) =>
+        scoreBranchRelevance({
+          title: a.title_cn ?? a.title ?? "",
+          summary: a.summary ?? "",
+          sourceId: a.source,
+          category: a.category,
+          subcategory: a.subcategory,
+          url: a.url,
+        }).score,
+    );
     if (out.length < before) {
       ctx.log.info(
         "filter",
-        `💎 漏斗三 业务价值取前: ${before} → ${out.length} 条（全局按分行相关性取前 ${VALUE_TOP_N}，每源≤${VALUE_MAX_PER_SOURCE} 多样性封顶，已写回 valueTag）`,
+        `🔻 每源限额: 移除 ${before - out.length} 条（全部媒体源每源≤${LIGHT_AI_MAX_PER_SOURCE} 条进 LLM 分析/展示）`,
       );
     }
     return out;
   },
 };
 
-/** 过滤 stage 顺序数组（3 漏斗整改中：删冗余 Stage6、归位 Stage8、漏斗三升级为全局价值取前、漏斗一末加相关性闸门；最终收敛为 3 漏斗）。 */
+/** 过滤 stage 顺序数组（3 漏斗整改中：删冗余 Stage6、归位 Stage8、漏斗三回退为每源限额、漏斗一末加相关性闸门；最终收敛为 3 漏斗）。 */
 export const FILTER_STAGES: FilterStage[] = [
   preWindowStage,
   singleInstitutionStage,
@@ -327,5 +342,5 @@ export const FILTER_STAGES: FilterStage[] = [
   relevanceGateStage,
   titleSimilarityStage,
   crossDayDedupStage,
-  funnelValueTopStage,
+  perSourceCapStage,
 ];
