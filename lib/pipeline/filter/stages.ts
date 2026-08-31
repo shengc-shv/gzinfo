@@ -1,8 +1,23 @@
 /**
- * 过滤 stage 实现（3 漏斗整改中，当前 7 道；最终收敛为 3 漏斗：
- *   漏斗一 业务相关性 = single-institution + stock-single + keyword-funnel + 相关性闸门
- *   漏斗二 时效+去重   = pre-window + title-similarity + cross-day-dedup
- *   漏斗三 业务价值   = per-source-cap（升级为全局价值取前））。
+ * 过滤 stage 实现（3 漏斗整改，当前 8 道）。
+ *
+ * ⚠️ 架构红线（2026-08-31 用户纠正，commit③ 回归后确立）：
+ *   本文件（FILTER_STAGES）只实现「漏斗一 + 漏斗二」，且**只吃今日新增数据**。
+ *   「漏斗三 业务价值取前」**不在本链内**——它必须对「今日新增 + 昨日有效」的
+ *   全窗口数据做价值选前，而本链在 mergeRolling 之前、根本看不到昨日数据，无法整合。
+ *   漏斗三的真实落点（在 daily.ts 下游）：
+ *     - mergeRollingIntoReport：今日 sections + 近 7 天滚动（昨日有效）并入 → 全窗口
+ *     - buildTwoDayExecPool   ：必读/商机取 今+昨 2 天窗口高信号
+ *     - applyDisplayCaps      ：对【已并入滚动的 sections】按价值（importance+广州+业务线）每板块取前
+ *   因此本链最后一道（per-source-cap）只是「每源多样性封顶 + 源内价值排序」的收尾，
+ *   用来保今日候选的来源多样性，绝不是漏斗三本身。
+ *   错误示范（commit③，已回退 0241a38）：在 FILTER_STAGES 内加一道全局 value-top
+ *   (110→34) —— 它只吃今日新增、发生在并入昨日之前，把下游整合池饿死，导致必读/洞察
+ *   挤成单主题、股市/gz 被掏空。绝不可再犯。
+ *
+ * 漏斗一 业务相关性（本链，今日新增）：single-institution + stock-single + keyword-funnel + 相关性闸门
+ * 漏斗二 时效+去重  （本链，今日新增）：pre-window + title-similarity + cross-day-dedup
+ * 漏斗三 业务价值   （下游全窗口，见上）：mergeRollingIntoReport + buildTwoDayExecPool + applyDisplayCaps
  *
  * 本步（commit①）已删除冗余 Stage6（display-window-2d，与 pre-window 同为 2 天窗恒删 0）
  * 与归位 Stage8（no-date-fallback → ingest.ts:73 源层丢弃无 publishedAt；本轮
@@ -16,7 +31,7 @@
  *   5. relevance-gate       —— 漏斗一确定性相关性闸门（commit④，warn-only 灰度；tier=drop 候选丢弃，IPO/参考区豁免）
  *   6. title-similarity     —— 标题相似度判重（同主题/同 tier）
  *   7. cross-day-dedup      —— 跨天标题判重（与历史库先来者合并）
- *   8. per-source-cap-10   —— 漏斗三 业务价值取前（每源 ≤ LIGHT_AI_MAX_PER_SOURCE=10，源内按分行相关性降序；保留来源多样性，不全局挤压 single 源）
+ *   8. per-source-cap-10   —— 收尾：每源 ≤ LIGHT_AI_MAX_PER_SOURCE=10 多样性封顶 + 源内按分行相关性降序（属漏斗一二产出今日候选的收尾，非漏斗三）
  *
  * 行为差异：keyword-funnel stage 移除了原 main 中给 article 写 filterBucket/filterDimensions/
  * filterOpportunities 的"幽灵字段"——grep 验证全仓无读，**这是死代码**（与 PR1 死代码清理同性质）。
@@ -292,16 +307,18 @@ const crossDayDedupStage: FilterStage = {
 };
 
 /**
- * 漏斗三（业务价值取前，零 AI，2026-08-31 3漏斗整改 commit③→回退）：
- * 恢复为原「每源限额」——所有媒体源每源 ≤ LIGHT_AI_MAX_PER_SOURCE（10）条进 LLM 分析/展示，
- * 源内按分行相关性评分降序（高价值优先、低价值让位，命中「价值优先」+「节约AI」）。
- * 回退原因：原 commit③ 的全局 takeTopByValue（110→34）过度按分行相关性排序，把股市/广州本地
- * 等低分行相关性但用户高关注的板块压到 0，且池子过窄导致 exec 口播「今日必读/商机洞察」主题重复。
- * 每源限额保留来源多样性，不复现上述问题（与 2026-08-31 午间发布版本一致）。
+ * 收尾：每源多样性封顶（2026-08-31 3漏斗整改 commit③→回退）：
+ * 所有媒体源每源 ≤ LIGHT_AI_MAX_PER_SOURCE（10）条进 LLM 分析/展示，源内按分行相关性评分降序
+ * （高价值优先、低价值让位，命中「价值优先」+「节约AI」）。
+ *
+ * ⚠️ 这是「漏斗一+二产出今日候选」的收尾（保来源多样性），**不是漏斗三**。
+ * 漏斗三（全窗口价值取前）必须对「今日新增 + 昨日有效」整合后做，见文件头红线说明，
+ * 由下游 mergeRollingIntoReport + buildTwoDayExecPool + applyDisplayCaps 承担。
+ *
+ * 回退原因（commit③）：原全局 takeTopByValue（110→34）只吃今日新增、发生在并入昨日之前，
+ * 把下游整合池饿死 → 必读/洞察挤成单主题、股市/gz 被掏空。每源限额保留来源多样性，
+ * 不复现上述问题（与 2026-08-31 午间发布版本一致）。
  * takeTopByValue 仍保留于 light-ai.ts 作为可单测工具（value-top.test.ts），但不再接入管线。
- * 注：无发布时间兜底（原 Stage8）已归位归一采集——ingest.ts:73 源层丢弃无 publishedAt，
- * 且 filterByWindow/filterRecentDays/isFreshEntry 已去除 fetchedAt/lastSeenAt 兜底；
- * 此处不再重复守卫。
  */
 const perSourceCapStage: FilterStage = {
   name: "per-source-cap-10",
