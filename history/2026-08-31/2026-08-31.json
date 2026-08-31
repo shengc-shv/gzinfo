@@ -1,11 +1,182 @@
 {
   "date": "2026-08-31",
-  "hero_line": "今日初筛仅1条IPO在审信息，分行可暂作为科创客群储备线索持续跟进广发保荐的广东拟北交所项目。",
-  "must_read": [],
-  "insights": [],
+  "hero_line": "房贷40年新规落地叠加销售—信贷—资本全链条松绑，住房金融重新打开窗口，分行应重新校准按揭节奏与零售客户经营策略。",
+  "must_read": [
+    {
+      "title": "央行放短收长呵护跨月资金",
+      "why": "短端宽松长端反复，分行财富与私行可借短债产品与结售汇窗口优化客户资产配置建议。",
+      "url": "https://www.cnfin.com/yw-lb/detail/20260831/4462541_1.html"
+    },
+    {
+      "title": "地产新政销售信贷资本组合拳落地",
+      "why": "涉房链条系统性松绑，对公房企融资与零售按揭两端均有窗口，分行可同步配置两端资源抓窗口。",
+      "url": "https://www.stcn.com/article/detail/4165165.html"
+    },
+    {
+      "title": "房贷最长期限延至40年",
+      "why": "零售住房贷款定价、期限、产品结构全面重塑，分行需更新房贷客户分层经营与风控测算模型，对按揭节奏再校准。",
+      "url": "https://news.southcn.com/node_812903b83a/3a99d4b188.shtml"
+    },
+    {
+      "title": "8月制造业PMI回升至49.8%",
+      "why": "制造业景气边际企稳，对公小微信贷需求修复信号偏积极，分行可观察对公贷款储备节奏与零售代发客户拓展。",
+      "url": "https://www.stcn.com/article/detail/4165168.html"
+    }
+  ],
+  "insights": [
+    {
+      "topic": "房贷40年新规抓按揭转化",
+      "tags": [
+        "住房金融",
+        "信贷"
+      ],
+      "impact": "新政降低月供门槛、释放刚需与置换客户，分行住房金融条线迎来新增量与存量客户再激活双重机会。",
+      "action": "本周起零售条线统一按揭口径，按40年期限重做客户承接力测算，并梳理两年内到期存量客户的再融资与置换需求。",
+      "sources": [
+        {
+          "title": "个人房贷最长期限从30年延长到40年，银行会怎样跟进？",
+          "url": "https://news.southcn.com/node_812903b83a/3a99d4b188.shtml"
+        },
+        {
+          "title": "房贷最长期限40年……新政下个人住房贷款还有哪些变化？",
+          "url": "https://m.21jingji.com/article/20260831/herald/85f9a8723cc083bee2ef4a519e75a0d3.html"
+        }
+      ]
+    },
+    {
+      "topic": "中欧班列十周年拓跨境客群",
+      "tags": [
+        "客群",
+        "财富"
+      ],
+      "impact": "广州跨境物流通道成熟带动外贸客群结算、外汇、融资需求上行，分行国际条线可借此拓展跨境结算与外汇衍生品配置。",
+      "action": "本周梳理广州中欧班列沿线货代、报关、外贸企业清单，安排客户经理走访并叠加代发与跨境理财通产品打包营销。",
+      "sources": [
+        {
+          "title": "广州中欧班列开行十周年 开行超3600列",
+          "url": "https://www.cnr.cn/gd/zongtaiguanzhu/20260831/t20260831_527799552.shtml"
+        }
+      ]
+    },
+    {
+      "topic": "资本市场加码盘活涉房资产",
+      "tags": [
+        "私行",
+        "财富"
+      ],
+      "impact": "REITs与并购工具扩容为涉房资产盘活打开新通道，对私行高净值客户的另类资产配置与对公房企投融资均有增量。",
+      "action": "本周研究公募REITs与房地产并购撮合业务机会，私行条线可考虑向高净值客户推送优质保障房与园区REITs配置方案。",
+      "sources": [
+        {
+          "title": "资本市场政策加码 助力构建房地产发展新模式",
+          "url": "https://www.stcn.com/article/detail/4161501.html"
+        }
+      ]
+    },
+    {
+      "topic": "同业高股息行情带私行配置",
+      "tags": [
+        "私行",
+        "财富"
+      ],
+      "impact": "中行、中信股价新高带动板块情绪，私行客户对银行股与高股息资产关注度抬升，是配置类需求外溢窗口。",
+      "action": "本周私行与财富条线梳理高股息ETF与银行股打新产品包，对权益类配置意愿上升的高净值客户做主动触达。",
+      "sources": [
+        {
+          "title": "中国银行、中信银行，历史新高",
+          "url": "https://m.21jingji.com/article/20260831/herald/badd1ef1518643cc868e83f68780c8dc.html"
+        }
+      ]
+    },
+    {
+      "topic": "广州数智城服新主体拓公私联动",
+      "tags": [
+        "代发",
+        "政银合作"
+      ],
+      "impact": "中国建筑等在穗新设数智城服资源循环公司，本地城市服务产业链增量带动上下游结算、信贷与代发需求。",
+      "action": "公司部牵头对接该主体及上下游供应商，零售条线可同步规划代发工资卡与员工财富产品批量获客方案。",
+      "sources": [
+        {
+          "title": "中国建筑等在广州成立数智城服资源循环公司",
+          "url": "https://www.stcn.com/article/detail/4165148.html"
+        }
+      ]
+    }
+  ],
   "sections": {
-    "gz_local": [],
+    "gz_local": [
+      {
+        "url": "https://www.cnr.cn/gd/zongtaiguanzhu/20260831/t20260831_527799552.shtml",
+        "title_cn": "广州中欧班列开行十周年 开行超3600列",
+        "title_orig": "广州中欧班列开行十周年 开行超3600列",
+        "source": "央广网·广东",
+        "source_type": "media",
+        "date": "08/31",
+        "summary": "广州中欧班列开行满十年，累计超3600列，国际物流通道持续成熟。跨境结算、外贸客群服务需求增长，是分行国际业务和外汇结算的拓展窗口。",
+        "importance": 2,
+        "rank": 1,
+        "tags": [
+          "粤"
+        ],
+        "locale": "gz",
+        "locale_evidence": "广州中欧班列开行十周年 开行超3600列"
+      },
+      {
+        "url": "https://www.stcn.com/article/detail/4165148.html",
+        "title_cn": "中国建筑等在广州成立数智城服资源循环公司",
+        "title_orig": "中国建筑等在广州成立数智城服资源循环公司",
+        "source": "证券时报",
+        "source_type": "media",
+        "date": "08/31",
+        "summary": "中国建筑等主体在广州新设数智城服资源循环公司，属本地城市服务与资源循环产业链布局。对公可关注该主体的上下游结算、信贷及供应链融资机会。",
+        "importance": 1,
+        "rank": 2,
+        "tags": [
+          "粤",
+          "市场",
+          "客群"
+        ],
+        "locale": "gz",
+        "locale_evidence": "中国建筑等在广州成立数智城服资源循环公司"
+      }
+    ],
     "biz_insight": [
+      {
+        "url": "https://finance.sina.com.cn/jryx/bank/2026-08-31/doc-iniqepev4627679.shtml",
+        "title_cn": "招行副行长：未来一段时间息差下行压力仍然存在，信贷需求还没有出现根本性拐点",
+        "title_orig": "招行副行长：未来一段时间息差下行压力仍然存在，信贷需求还没有出现根本性拐点",
+        "source": "新浪财经·银行频道",
+        "source_type": "media",
+        "date": "08/31",
+        "summary": "招行表态息差下行压力仍存，信贷需求未见根本性拐点。所以呢：行业整体定价仍承压，零售存款成本管控与中收拓展仍是突围重点。",
+        "importance": 2,
+        "rank": 1,
+        "tags": [
+          "竞对动态",
+          "信贷",
+          "市场",
+          "客群"
+        ],
+        "locale": "national"
+      },
+      {
+        "url": "https://finance.sina.com.cn/money/bank/bank_hydt/2026-08-30/doc-iniqacxv2971410.shtml",
+        "title_cn": "六大行营收首破2万亿",
+        "title_orig": "六大行营收首破2万亿",
+        "source": "新浪财经·银行频道",
+        "source_type": "media",
+        "date": "08/30",
+        "summary": "六大行营收合计首破2万亿，行业头部规模优势进一步巩固。股份行在零售场景、客户经营上的差异化打法将更受考验。",
+        "importance": 1,
+        "rank": 2,
+        "tags": [
+          "竞对动态",
+          "市场",
+          "客群"
+        ],
+        "locale": "national"
+      },
       {
         "url": "https://www.stcn.com/article/detail/4161515.html",
         "title_cn": "重大信号！美联储，加息大消息！下周公布这项数据",
@@ -15,7 +186,7 @@
         "date": "08/29",
         "summary": "美联储加息大消息下周公布，全球流动性预期变化，分行应关注客户资产配置与汇率风险提示。",
         "importance": 2,
-        "rank": 1,
+        "rank": 3,
         "tags": [],
         "locale": "national"
       },
@@ -28,12 +199,113 @@
         "date": "08/29",
         "summary": "四大行半年报派息率31%、合计分红超1900亿、净息差集体企稳，行业盈利韧性足，可作零售经营对标。",
         "importance": 2,
-        "rank": 2,
+        "rank": 4,
         "tags": [],
         "locale": "national"
       }
     ],
     "policy_market": [
+      {
+        "url": "https://m.21jingji.com/article/20260831/herald/8a97996072353d57dab34ab376994f83.html",
+        "title_cn": "房地产信贷新规后首个交易日银行板块走强，地产信贷逻辑将迎来根本改变",
+        "title_orig": "房地产信贷新规后首个交易日银行板块走强，地产信贷逻辑将迎来根本改变",
+        "source": "21世纪经济报道·金融",
+        "source_type": "media",
+        "date": "08/31",
+        "summary": "房地产信贷新规落地首日，银行板块整体走强，地产信贷逻辑迎来根本改变。零售住房贷款定价、期限、产品结构都将重塑，需更新房贷客户分层经营策略。",
+        "importance": 3,
+        "rank": 1,
+        "tags": [
+          "信贷",
+          "住房金融",
+          "市场",
+          "客群"
+        ],
+        "locale": "national"
+      },
+      {
+        "url": "https://www.stcn.com/article/detail/4165165.html",
+        "title_cn": "开盘，全线高开！地产新政打出组合拳，\"销售—信贷—资本\"形成闭环",
+        "title_orig": "开盘，全线高开！地产新政打出组合拳，\"销售—信贷—资本\"形成闭环",
+        "source": "证券时报",
+        "source_type": "media",
+        "date": "08/31",
+        "summary": "地产新政\"销售—信贷—资本\"组合拳落地，市场全线高开反应积极。涉房信贷链条系统性松绑，对公房企融资与零售按揭两端均有窗口机会。",
+        "importance": 2,
+        "rank": 3,
+        "tags": [
+          "信贷",
+          "住房金融",
+          "市场",
+          "客群"
+        ],
+        "locale": "national"
+      },
+      {
+        "url": "https://www.cnfin.com/yw-lb/detail/20260831/4462541_1.html",
+        "title_cn": "央行\"放短收长\"呵护跨月资金 10年期国债收益率重回1.70%关口博弈",
+        "title_orig": "【债市观察】央行\"放短收长\"呵护跨月资金 10年期国债收益率重回1.70%关口博弈",
+        "source": "新华财经",
+        "source_type": "media",
+        "date": "08/31",
+        "summary": "央行\"放短收长\"操作呵护跨月流动性，10年期国债收益率重回1.70%关口博弈。短端资金宽松长端定价反复，对客户而言结售汇窗口与短债产品配置时点值得关注。",
+        "importance": 1,
+        "rank": 4,
+        "tags": [
+          "市场",
+          "客群"
+        ],
+        "locale": "national"
+      },
+      {
+        "url": "https://www.cnfin.com/yw-lb/detail/20260831/4462556_1.html",
+        "title_cn": "8月份综合PMI产出指数为49.5% 企业生产经营景气水平总体有所回升",
+        "title_orig": "【8月份综合PMI产出指数为49.5%】国家统计局发布的数据显示，2026年8月份，综合PMI产出指数为49.5%，比上月上升0.2个百分点，我国企业生产经营景气水平总体有所回升。",
+        "source": "新华财经",
+        "source_type": "official",
+        "date": "08/31",
+        "summary": "8月综合PMI产出指数49.5%，环比上升0.2个百分点，企业生产经营景气总体回升。对公小微客群经营活力边际改善，信贷需求修复仍需观察持续性。",
+        "importance": 1,
+        "rank": 5,
+        "tags": [
+          "市场",
+          "客群"
+        ],
+        "locale": "national"
+      },
+      {
+        "url": "https://m.21jingji.com/article/20260831/herald/badd1ef1518643cc868e83f68780c8dc.html",
+        "title_cn": "中国银行、中信银行，历史新高",
+        "title_orig": "中国银行、中信银行，历史新高",
+        "source": "21世纪经济报道·金融",
+        "source_type": "media",
+        "date": "08/31",
+        "summary": "中行、中信银行股价创历史新高，银行板块估值修复行情延续。同业资本动作与高股息属性受市场追捧，板块情绪对零售客户银行股配置意愿有带动。",
+        "importance": 1,
+        "rank": 6,
+        "tags": [
+          "市场",
+          "竞对动态",
+          "客群"
+        ],
+        "locale": "national"
+      },
+      {
+        "url": "https://www.stcn.com/article/detail/4165168.html",
+        "title_cn": "8月制造业PMI回升至49.8%！国家统计局，最新发布",
+        "title_orig": "8月制造业PMI回升至49.8%！国家统计局，最新发布",
+        "source": "证券时报",
+        "source_type": "official",
+        "date": "08/31",
+        "summary": "8月制造业PMI回升至49.8%，仍处荣枯线下但环比改善+0.6个百分点。制造业景气边际企稳，对公信贷需求修复信号偏积极但力度有限。",
+        "importance": 1,
+        "rank": 7,
+        "tags": [
+          "市场",
+          "客群"
+        ],
+        "locale": "national"
+      },
       {
         "url": "https://www.stcn.com/article/detail/4161508.html",
         "title_cn": "多部门同频，楼市迎全链条改革，解读来了→",
@@ -43,7 +315,7 @@
         "date": "08/29",
         "summary": "多部门同频推进楼市全链条改革，涉及土地、金融、销售各环节，分行应紧跟政策节奏调整信贷策略。",
         "importance": 2,
-        "rank": 1,
+        "rank": 8,
         "tags": [],
         "locale": "national"
       },
@@ -56,23 +328,8 @@
         "date": "08/29",
         "summary": "资本市场政策加码支持房地产发展新模式，REITs与并购重组工具扩容，分行可关注相关资产盘活机会。",
         "importance": 2,
-        "rank": 2,
+        "rank": 9,
         "tags": [],
-        "locale": "national"
-      },
-      {
-        "url": "https://news.southcn.com/node_812903b83a/3a99d4b188.shtml",
-        "title_cn": "个人房贷最长期限从30年延长到40年，银行会怎样跟进？",
-        "source": "南方网·经济",
-        "source_type": "media",
-        "tier": "T2",
-        "date": "08/29",
-        "summary": "个人房贷最长30年延至40年，零售信贷迎政策窗口，分行应跟进产品承接与存量客户转化。",
-        "importance": 2,
-        "rank": 3,
-        "tags": [
-          "信贷"
-        ],
         "locale": "national"
       },
       {
@@ -84,40 +341,86 @@
         "date": "08/29",
         "summary": "地方附加税法公开征求意见，地方税制改革推进，分行可关注税收征管变化对代发与对公业务影响。",
         "importance": 2,
-        "rank": 4,
+        "rank": 11,
         "tags": [],
         "locale": "national"
       }
     ],
-    "tech": [],
+    "tech": [
+      {
+        "url": "https://news.dayoo.com/guangzhou/202608/31/139995_54998087.htm",
+        "title_cn": "\"光纵横\"（QPS）量子计算机在穗发布",
+        "title_orig": "\"光纵横\"（QPS）量子计算机在穗发布",
+        "source": "广州日报·大洋网",
+        "source_type": "media",
+        "date": "08/31",
+        "summary": "\"光纵横\"（QPS）量子计算机在穗发布，量子计算产业化再添本地标杆。科创客群中量子计算产业链上下游企业值得关注，是科技金融场景化营销的潜在切入点。",
+        "importance": 2,
+        "rank": 1,
+        "tags": [
+          "粤",
+          "科技金融"
+        ],
+        "locale": "national"
+      }
+    ],
     "ipo": [
+      {
+        "url": "https://finance.sina.com.cn/stock/hkstock/hkyx/2026-08-31/doc-iniqehwv7924061.shtml",
+        "title_cn": "消费股希音SHEIN同股不同权架构赴港上市 四位联创投票权约90%",
+        "title_orig": "消费股希音SHEIN同股不同权架构赴港上市 四位联创投票权约90% 港股WVR架构上市公司已追平去年全年",
+        "source": "新浪财经·港股",
+        "source_type": "media",
+        "date": "08/31",
+        "summary": "希音SHEIN以同股不同权架构赴港上市，四位联创合计投票权约90%，港股WVR上市公司数量已追平去年全年。高净值与跨境客户对消费独角兽打新配置需求上升。",
+        "importance": 2,
+        "rank": 1,
+        "tags": [
+          "市场",
+          "客群"
+        ],
+        "locale": "national"
+      },
       {
         "url": "https://data.eastmoney.com/xg/xg/#A25256",
         "title_cn": "尚睿科技：IPO问询中（拟北交所）",
-        "title_orig": "尚睿科技：IPO问询中（拟北交所）",
         "source": "东财IPO在审(广东)",
         "source_type": "official",
+        "tier": "T1.5",
         "date": "08/27",
-        "summary": "注册地为广东的拟北交所企业尚睿科技由广发证券保荐，IPO处于问询阶段。可作为科创客群储备线索持续跟踪问询进展与上市节奏。",
-        "importance": 3,
-        "rank": 1,
+        "summary": "注册地：广东｜保荐：广发证券股份有限公司｜更新：2026-08-27",
+        "importance": 2,
+        "rank": 2,
         "tags": [
           "粤"
         ],
-        "locale": "national",
-        "locale_evidence": "raw_text仅显示注册地：广东，未提及广州/海珠/天河/琶洲等广州地市级地名，不足以判定为广州本地企业"
+        "locale": "national"
+      }
+    ]
+  },
+  "risk": {
+    "topic": "招行警示息差下行与信贷需求拐点未现",
+    "evidence": "招行副行长公开表态息差下行压力仍存、信贷需求未见根本性拐点，行业定价仍承压。",
+    "impact": "零售端：存款成本上升挤压财富中收；私行端：高息存款揽新难度加大；公司端：贷款定价让利空间受限；风控端：需警惕早偿与重定价风险。",
+    "action": "零售部应加快低成本场景存款沉淀，财富部应主推中收型产品；风控部应重检按揭与消费贷早偿预案，并跟踪美联储下周数据对境内定价的传导。",
+    "source": "T2",
+    "sources": [
+      {
+        "title": "招行副行长：未来一段时间息差下行压力仍然存在，信贷需求还没有出现根本性拐点",
+        "url": "https://finance.sina.com.cn/jryx/bank/2026-08-31/doc-iniqepev4627679.shtml"
       }
     ]
   },
   "stock_recap": {
     "us": {
-      "overview": "美股周五盘面波动，英伟达高位回落拖累科技板块。",
+      "overview": "美股盘前承压，沃什鹰派发言推升加息预期、伊朗局势升级施压油价。",
       "sectors": [
-        "科技：英伟达周五大逆转，市场关注美联储政策信号",
-        "保险经纪：怡安接近170亿美元收购USI，板块并购活跃",
-        "地缘风险：美军打击伊朗火箭发射装置，避险情绪上升"
+        "科技与中概：BYD业绩承压拖累，板块情绪走弱",
+        "美元与利率：沃什讲话提振加息预期，美元近两周高位",
+        "能源：特朗普威胁打击伊朗哈尔克岛，原油供应风险升温",
+        "欧债：法国借贷成本逼近2008高位，欧元区主权债务担忧加剧"
       ],
-      "spoken": "美股周五盘面波动。科技板块承压，英伟达高位回落，市场关注美联储政策信号。保险经纪板块活跃，怡安接近170亿美元收购USI。此外，美军打击伊朗火箭发射装置，地缘风险升温。",
+      "spoken": "美股盘前情绪偏紧。美联储沃什发言推升加息预期，美元逼近两周高位；特朗普威胁打击伊朗哈尔克岛，油价地缘风险升温。科技与中概方面，BYD业绩承压拖累板块情绪。欧洲方面，法国借贷成本逼近2008年高位，主权债务担忧持续。",
       "meta": {
         "source": "CNBC Top Stories",
         "crossCheck": "新浪行情",
@@ -142,15 +445,14 @@
       ]
     },
     "aShare": {
-      "overview": "A股中报披露收官，机构展望9月可更积极，关注MSCI纳入。",
+      "overview": "A股中报季集中披露，液冷、AI芯片、铜资源等题材轮动走强。",
       "sectors": [
-        "房地产：周末政策组合拳落地，板块预期改善",
-        "银行：六大行半年营收首破两万亿，净息差分化",
-        "新能源：阳光电源业绩双降，国内及海外收入承压",
-        "MSCI概念：智谱等33只中国股票9月纳入MSCI指数",
-        "有色铜：东吴证券看好铜价，资源标的有望受益"
+        "液冷：央视利好引爆板块，千亿产业全面提速",
+        "AI芯片与光模块：国产AI芯片新股申购，龙头光模块业务快速放量",
+        "铜与覆铜板：涨价函与铜价看多预期共振，资源标的领涨",
+        "低估值蓝筹：券商策略提示低估值策略明显占优"
       ],
-      "spoken": "A股中报披露收官，六大行半年营收首破两万亿。房地产板块迎来政策组合拳，机构展望9月行情可更积极。下周关注智谱等33只股票正式纳入MSCI指数，阳光电源业绩承压，铜资源标的有望受益。",
+      "spoken": "A股中报季密集披露，市场行情快速轮动。液冷板块受央视利好引爆，AI芯片与光模块快速放量，覆铜板龙头再发涨价函、铜资源走强。券商策略指出，低估值策略明显占优。整体盘面结构性机会突出，题材多点开花。",
       "meta": {
         "source": "东方财富",
         "crossCheck": "新浪行情",
@@ -175,13 +477,14 @@
       ]
     },
     "hk": {
-      "overview": "港股盘面缺乏明确指引，公告类消息密集，方向不明。",
+      "overview": "港股盘面交投清淡，半年报披露密集，权重蓝筹业绩成焦点。",
       "sectors": [
-        "个股回购：港交所披露多笔上市公司股份回购",
-        "中报披露：多家公司陆续发布中期业绩公告",
-        "公司治理：部分海外上市公司发布董事会决议公告"
+        "新能源：比亚迪业绩受国内竞争拖累，股价承压",
+        "金融与保险：行业并购消息频出，板块结构性机会显现",
+        "科技与AI：中概科技股受外围加息预期影响，整体偏谨慎",
+        "地产与公用：业绩披露期，板块以个股行情为主"
       ],
-      "spoken": "港股盘面缺乏明确方向，公告类消息密集。多笔股份回购落地，多家公司陆续发布中期业绩。盘面整体交投清淡，资金观望情绪较浓，建议关注后续业绩兑现情况。",
+      "spoken": "港股半年报披露进入高峰。比亚迪业绩受国内竞争影响，股价走弱；保险与金融板块并购消息活跃。中概科技股受外围加息预期影响，整体情绪偏谨慎。盘面以个股业绩驱动为主，板块轮动有限。",
       "meta": {
         "source": "新浪财经·港股",
         "crossCheck": "新浪行情",
@@ -190,13 +493,13 @@
       "indices": [
         {
           "name": "恒生指数",
-          "value": "25584.79",
-          "changePct": "+0.07%"
+          "value": "25464.85",
+          "changePct": "-0.47%"
         },
         {
           "name": "恒生科技",
-          "value": "4605.15",
-          "changePct": "-0.33%"
+          "value": "4590.74",
+          "changePct": "-0.31%"
         }
       ]
     },
@@ -212,76 +515,12 @@
   },
   "stock_news": [
     {
-      "url": "https://finance.eastmoney.com/a/202608303859353849.html",
-      "title_cn": "周末要闻汇总：多箭齐发！房地产迎来政策“组合拳”",
-      "source": "东方财富",
-      "source_type": "media",
-      "date": "08/30",
-      "summary": "8月30日周末多部门发布房地产领域政策\"组合拳\"，涉及信贷、限购等多项措施，市场关注其对楼市和地产板块的影响。",
-      "importance": 3,
-      "rank": 0,
-      "tags": [
-        "地产",
-        "政策"
-      ],
-      "locale": "national",
-      "market": "a-share"
-    },
-    {
-      "url": "https://finance.eastmoney.com/a/202608303859458357.html",
-      "title_cn": "8月30日晚间沪深上市公司重大事项公告最新快递",
-      "source": "东方财富",
-      "source_type": "media",
-      "date": "08/30",
-      "summary": "8月30日晚间沪深上市公司密集发布重大事项公告，包括业绩、分红、重组等最新进展。",
-      "importance": 1,
-      "rank": 0,
-      "tags": [
-        "公告",
-        "财报"
-      ],
-      "locale": "national",
-      "market": "a-share"
-    },
-    {
-      "url": "https://finance.eastmoney.com/a/202608303859346961.html",
-      "title_cn": "周末大消息扎堆！A股9月展望：可以更积极一些",
-      "source": "东方财富",
-      "source_type": "media",
-      "date": "08/30",
-      "summary": "券商和媒体在周末集中发声，展望A股9月行情，认为政策面与资金面共振下市场可以更积极。",
-      "importance": 2,
-      "rank": 0,
-      "tags": [
-        "A股",
-        "策略展望"
-      ],
-      "locale": "national",
-      "market": "a-share"
-    },
-    {
-      "url": "https://finance.eastmoney.com/a/202608303859340840.html",
-      "title_cn": "矛盾升级！马斯克回应：“毫不在意”",
-      "source": "东方财富",
-      "source_type": "media",
-      "date": "08/30",
-      "summary": "特斯拉创始人马斯克就某争议事件公开回应，态度强硬表示\"毫不在意\"，事件涉及与对手的矛盾升级。",
-      "importance": 1,
-      "rank": 0,
-      "tags": [
-        "新能源车",
-        "马斯克"
-      ],
-      "locale": "national",
-      "market": "a-share"
-    },
-    {
       "url": "https://finance.eastmoney.com/a/202608303859501114.html",
       "title_cn": "多赚5800亿！A股中报全榜单来了",
       "source": "东方财富",
       "source_type": "media",
       "date": "08/30",
-      "summary": "A股上市公司2024年中报披露收官，全榜单显示合计净利润同比增长约5800亿元，行业盈利结构分化明显。",
+      "summary": "东方财富发布A股中报全榜单数据，显示上市公司合计净利润同比增长约5800亿元，整体盈利规模较去年明显扩大。",
       "importance": 2,
       "rank": 0,
       "tags": [
@@ -292,38 +531,167 @@
       "market": "a-share"
     },
     {
-      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0831/2026083100269.pdf",
-      "title_cn": "Announcements and Notices - [Interim Results]",
-      "source": "港交所披露易",
+      "url": "https://finance.eastmoney.com/a/202608303859458357.html",
+      "title_cn": "8月30日晚间沪深上市公司重大事项公告最新快递",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "08/30",
+      "summary": "8月30日晚间沪深上市公司密集披露重大事项公告，涉及经营、交易、人事等多类事项。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "公告",
+        "A股"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202608313859596338.html",
+      "title_cn": "年内第七涨！覆铜板龙头再发涨价函融资客紧盯多只高增长潜力股(名单)",
+      "source": "东方财富",
       "source_type": "media",
       "date": "08/31",
-      "summary": "港交所披露易发布\"中期业绩\"公告，上市公司公布最新半年度业绩数据。",
+      "summary": "覆铜板龙头年内第七次发出涨价函，产品价格继续上调，融资资金关注多只高增长潜力个股。",
       "importance": 2,
       "rank": 0,
       "tags": [
-        "港股",
+        "涨价",
+        "电子",
+        "PCB"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202608313859917290.html",
+      "title_cn": "两笔大单直线封板！央视重磅利好引爆液冷千亿产业全面提速",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "08/31",
+      "summary": "央视相关利好消息催化液冷板块，两笔大单封板，液冷千亿级产业链全面提速。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "液冷",
+        "数据中心"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202608303859492774.html",
+      "title_cn": "高盛押中大牛股本周豪取五连板！超3000亿外资A股持仓曝光",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "08/30",
+      "summary": "高盛提前布局某A股大牛股，本周连续五涨停，超3000亿元外资A股重仓股名单曝光。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "外资",
+        "A股"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0831/2026082801091.pdf",
+      "title_cn": "(Headlines Revised) Announcements and Notices - [Interim Results / Modified Report by Auditors]",
+      "source": "港交所披露易",
+      "source_type": "media",
+      "date": "08/31",
+      "summary": "港股上市公司披露中期业绩及核数师修订报告，相关标题经修订。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
         "财报",
-        "公告"
+        "港股"
       ],
       "locale": "national",
       "market": "hk"
     },
     {
-      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0831/2026083100257.pdf",
-      "title_cn": "Next Day Disclosure Returns - [Share Buyback]",
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0831/2026083100441.pdf",
+      "title_cn": "Announcements and Notices - [Interim Results]",
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/31",
-      "summary": "港交所披露易发布\"股份购回\"披露，上市公司在二级市场实施股票回购操作。",
-      "importance": 2,
+      "summary": "港股上市公司发布中期业绩公告。",
+      "importance": 1,
       "rank": 0,
       "tags": [
-        "港股",
-        "回购",
-        "公告"
+        "财报",
+        "港股"
       ],
       "locale": "national",
       "market": "hk"
+    },
+    {
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0831/2026083100425.pdf",
+      "title_cn": "Announcements and Notices - [Interim Results]",
+      "source": "港交所披露易",
+      "source_type": "media",
+      "date": "08/31",
+      "summary": "港股上市公司发布中期业绩公告。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "财报",
+        "港股"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0831/2026083100415.pdf",
+      "title_cn": "Announcements and Notices - [Interim Results]",
+      "source": "港交所披露易",
+      "source_type": "media",
+      "date": "08/31",
+      "summary": "港股上市公司发布中期业绩公告。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "财报",
+        "港股"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/08/31/jackson-hole-fed-chair-kevin-warsh-hawkish-rate-hikes-analysts.html",
+      "title_cn": "Jackson Hole analyst roundup: Warsh's speech sends hike chances higher, may put Fed `at odds' with Treasury",
+      "source": "CNBC Top Stories",
+      "source_type": "media",
+      "date": "08/31",
+      "summary": "杰克逊霍尔央行会议上沃什讲话推升加息预期，市场认为美联储或与财政部立场产生分歧。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "美联储",
+        "加息",
+        "宏观"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/08/31/byd-shares-slide-as-fierce-china-competition-dents-first-half-earnings.html",
+      "title_cn": "BYD shares slide as fierce China competition dents first-half earnings",
+      "source": "CNBC Top Stories",
+      "source_type": "media",
+      "date": "08/31",
+      "summary": "比亚迪上半年业绩受国内激烈竞争拖累，股价出现下跌。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "新能源车",
+        "中概股",
+        "财报"
+      ],
+      "locale": "overseas",
+      "market": "us"
     },
     {
       "url": "https://www.cnbc.com/2026/08/30/aon-usi-17-billion-deal-talks.html",
@@ -331,82 +699,29 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/30",
-      "summary": "据《华尔街日报》报道，保险经纪公司Aon接近以约170亿美元从KKR手中收购保险经纪商USI。",
+      "summary": "怡安接近以约170亿美元从KKR手中收购保险经纪商USI，《华尔街日报》报道。",
       "importance": 2,
       "rank": 0,
       "tags": [
         "并购",
-        "保险",
-        "美股"
+        "保险"
       ],
       "locale": "overseas",
       "market": "us"
     },
     {
-      "url": "https://www.cnbc.com/2026/08/31/k-beauty-apr-costco-launch-september.html",
-      "title_cn": "K-beauty giant APR's shares up 100% this year ahead of U.S. Costco launch in September",
-      "source": "CNBC Top Stories",
-      "source_type": "media",
-      "date": "08/30",
-      "summary": "韩国美妆巨头APR股价年内累计上涨约100%，9月将在美国Costco渠道正式上市销售。",
-      "importance": 1,
-      "rank": 0,
-      "tags": [
-        "美股",
-        "消费",
-        "韩妆"
-      ],
-      "locale": "overseas",
-      "market": "us"
-    },
-    {
-      "url": "https://www.cnbc.com/2026/08/30/what-caused-nvidias-nasty-reversal-friday-look-to-the-fed-for-clues.html",
-      "title_cn": "What caused Nvidia's nasty reversal Friday? Look to the Fed for clues",
-      "source": "CNBC Top Stories",
-      "source_type": "media",
-      "date": "08/30",
-      "summary": "英伟达股价周五盘中出现明显逆转，外媒分析其背后与美联储政策信号及市场利率预期变化相关。",
-      "importance": 2,
-      "rank": 0,
-      "tags": [
-        "美股",
-        "AI",
-        "半导体",
-        "美联储"
-      ],
-      "locale": "overseas",
-      "market": "us"
-    },
-    {
-      "url": "https://www.investing.com/news/stock-market-news/us-stock-futures-dip-amid-renewed-iran-hostilities-4882085",
-      "title_cn": "U.S. stock futures dip amid renewed Iran hostilities",
+      "url": "https://www.investing.com/news/economy-news/dollar-near-twoweek-high-as-warsh-boosts-ratehike-bets-yen-slips-past-160-4882103",
+      "title_cn": "Dollar near two-week high as Warsh boosts rate-hike bets; yen hovers near 160",
       "source": "Investing.com News",
       "source_type": "media",
       "date": "08/31",
-      "summary": "受伊朗紧张局势再度升温影响，美国股指期货周一盘前走弱，市场风险偏好回落。",
+      "summary": "美元接近两周高位，因美联储沃什讲话强化加息预期；日元徘徊在160关口附近。",
       "importance": 2,
       "rank": 0,
       "tags": [
-        "美股",
-        "地缘政治",
-        "股指期货"
-      ],
-      "locale": "overseas",
-      "market": "us"
-    },
-    {
-      "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-austal-posts-record-fy-2026-revenue-but-reports-loss-93CH-4882084",
-      "title_cn": "Earnings call transcript: Austal posts record FY 2026 revenue but reports loss",
-      "source": "Investing.com News",
-      "source_type": "media",
-      "date": "08/31",
-      "summary": "澳大利亚造船企业Austal发布2026财年全年业绩，营收创历史新高但仍录得亏损。",
-      "importance": 1,
-      "rank": 0,
-      "tags": [
-        "财报",
-        "造船",
-        "美股"
+        "外汇",
+        "美元",
+        "日元"
       ],
       "locale": "overseas",
       "market": "us"
