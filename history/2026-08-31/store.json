@@ -1,6 +1,6 @@
 {
   "date": "2026-08-31",
-  "updatedAt": "2026-08-31T00:33:59.702Z",
+  "updatedAt": "2026-08-31T00:42:35.882Z",
   "executive": {
     "hero_line": "房贷30年延至40年重塑零售信贷规则，同业竞速跟进，分行须重估产品线与客群承接路径。",
     "spoken_hero": "个人房贷最长期限从30年延长到40年，零售信贷产品逻辑正在被重写。同业大概率快速跟进，分行要尽快评估存量和新增的衔接方案。",
@@ -195,7 +195,7 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/30",
-      "summary": "周末要闻汇总：监管部门对房地产出台多项政策“组合拳”，涉及需求端、供给端及融资端等多个方面。",
+      "summary": "8月30日周末多部门发布房地产领域政策\"组合拳\"，涉及信贷、限购等多项措施，市场关注其对楼市和地产板块的影响。",
       "importance": 3,
       "rank": 0,
       "tags": [
@@ -211,12 +211,12 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/30",
-      "summary": "8月30日晚间沪深上市公司发布重大事项公告，涉及重组、回购、股权变动等最新进展。",
+      "summary": "8月30日晚间沪深上市公司密集发布重大事项公告，包括业绩、分红、重组等最新进展。",
       "importance": 1,
       "rank": 0,
       "tags": [
-        "公司公告",
-        "A股"
+        "公告",
+        "财报"
       ],
       "locale": "national",
       "market": "a-share"
@@ -227,7 +227,7 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/30",
-      "summary": "机构展望9月A股市场，认为在政策利好与估值修复背景下，市场情绪可更趋积极。",
+      "summary": "券商和媒体在周末集中发声，展望A股9月行情，认为政策面与资金面共振下市场可以更积极。",
       "importance": 2,
       "rank": 0,
       "tags": [
@@ -243,12 +243,12 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/30",
-      "summary": "马斯克公开回应相关争议称\"毫不在意\"，事件涉及科技与商业领域公开矛盾的进一步升级。",
+      "summary": "特斯拉创始人马斯克就某争议事件公开回应，态度强硬表示\"毫不在意\"，事件涉及与对手的矛盾升级。",
       "importance": 1,
       "rank": 0,
       "tags": [
-        "科技",
-        "中概股"
+        "新能源车",
+        "马斯克"
       ],
       "locale": "national",
       "market": "a-share"
@@ -259,7 +259,7 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/30",
-      "summary": "A股2025年中报披露收官，全市场上市公司合计归母净利润较此前增加约5800亿元，盈利整体改善。",
+      "summary": "A股上市公司2024年中报披露收官，全榜单显示合计净利润同比增长约5800亿元，行业盈利结构分化明显。",
       "importance": 2,
       "rank": 0,
       "tags": [
@@ -275,12 +275,13 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/30",
-      "summary": "阳光电源发布2025年半年报：上半年营收与净利润同比双降，其中国内收入同比腰斩，中东地区收入同比下滑约九成。",
+      "summary": "阳光电源发布半年报，上半年营收与净利润同比双降，其中国内收入近乎\"腰斩\"，中东市场收入暴跌约九成。",
       "importance": 2,
       "rank": 0,
       "tags": [
         "财报",
-        "新能源"
+        "新能源",
+        "光伏"
       ],
       "locale": "national",
       "market": "a-share"
@@ -291,12 +292,12 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/30",
-      "summary": "十大机构研判：A股在二次探底兑现后，反弹行情有望延续至9月下旬。",
+      "summary": "十大机构发布最新策略观点，认为A股二次探底已经兑现，市场反弹有望持续至9月下旬。",
       "importance": 2,
       "rank": 0,
       "tags": [
-        "策略展望",
-        "A股"
+        "A股",
+        "策略展望"
       ],
       "locale": "national",
       "market": "a-share"
@@ -307,12 +308,13 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/30",
-      "summary": "MSCI指数季度调整生效，智谱等33只中国股票被正式纳入，市场关注相关增量配置机会。",
+      "summary": "9月起MSCI指数将正式纳入智谱等33只中国股票，相关成分股调整生效将带来被动资金配置变化。",
       "importance": 2,
       "rank": 0,
       "tags": [
         "MSCI",
-        "中概股"
+        "中概股",
+        "资金流向"
       ],
       "locale": "national",
       "market": "a-share"
@@ -323,12 +325,13 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/30",
-      "summary": "京东方A发布2026年半年报，净利润同比增长约六成，但盈利质量与可持续性受到市场讨论。",
+      "summary": "京东方发布2026年半年报，净利润同比增长约六成，市场关注盈利增长背后的可持续性与\"含金量\"。",
       "importance": 2,
       "rank": 0,
       "tags": [
         "财报",
-        "半导体"
+        "面板",
+        "半导体显示"
       ],
       "locale": "national",
       "market": "a-share"
@@ -339,12 +342,13 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/30",
-      "summary": "六大国有行2025年半年报：合计营收首次突破2万亿元，净利润全部正增长；净息差呈现“两升四降”分化。",
+      "summary": "六大国有银行2025年半年报披露，合计营业收入首次突破2万亿元，净利润全员实现正增长，但净息差呈现\"两升四降\"分化格局。",
       "importance": 3,
       "rank": 0,
       "tags": [
+        "银行",
         "财报",
-        "银行"
+        "净息差"
       ],
       "locale": "national",
       "market": "a-share"
@@ -355,12 +359,12 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/30",
-      "summary": "十大券商策略观点：当前市场风格快速轮动，低估值策略相对占优。",
-      "importance": 1,
+      "summary": "十大券商发布策略观点，认为当前市场轮动加快，低估值策略明显占优，看好价值风格短期表现。",
+      "importance": 2,
       "rank": 0,
       "tags": [
-        "策略展望",
-        "A股"
+        "A股",
+        "策略展望"
       ],
       "locale": "national",
       "market": "a-share"
@@ -371,15 +375,32 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/31",
-      "summary": "东吴证券发布研报，看好未来两年铜价表现，认为上游资源类标的将优先受益于利润扩张。",
+      "summary": "东吴证券发布研报，看好未来两年铜价表现，认为上游资源类标的将优先享受价格上涨带来的利润弹性。",
       "importance": 1,
       "rank": 0,
       "tags": [
         "有色金属",
+        "铜",
         "策略展望"
       ],
       "locale": "national",
       "market": "a-share"
+    },
+    {
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0831/2026083100307.htm",
+      "title_cn": "Announcements and Notices - [Trading Halt]",
+      "source": "港交所披露易",
+      "source_type": "media",
+      "date": "08/31",
+      "summary": "港交所披露易发布某上市公司\"暂停买卖\"公告，具体公司及原因尚待进一步披露。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "港股",
+        "公告"
+      ],
+      "locale": "national",
+      "market": "hk"
     },
     {
       "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0831/2026083100306.htm",
@@ -387,12 +408,12 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/31",
-      "summary": "港交所披露易收录一项海外监管公告（其他类），具体内容未在标题披露。",
+      "summary": "港交所披露易收录海外监管公告（其他类），内容涉及上市公司需同步披露的境外监管信息。",
       "importance": 1,
       "rank": 0,
       "tags": [
         "港股",
-        "公司公告"
+        "公告"
       ],
       "locale": "national",
       "market": "hk"
@@ -403,12 +424,13 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/31",
-      "summary": "港交所披露易收录一项海外监管公告，涉及公司治理相关事项。",
+      "summary": "港交所披露易收录海外监管公告（公司治理事项），上市公司就治理相关事项进行信息披露。",
       "importance": 1,
       "rank": 0,
       "tags": [
         "港股",
-        "公司治理"
+        "公司治理",
+        "公告"
       ],
       "locale": "national",
       "market": "hk"
@@ -419,12 +441,13 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/31",
-      "summary": "港交所披露易收录一项海外监管公告，披露董事会或监事会决议内容。",
+      "summary": "港交所披露易收录海外监管公告（董事会/监事会决议），上市公司发布相关决议事项。",
       "importance": 1,
       "rank": 0,
       "tags": [
         "港股",
-        "公司公告"
+        "公告",
+        "公司治理"
       ],
       "locale": "national",
       "market": "hk"
@@ -435,12 +458,12 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/31",
-      "summary": "港交所披露易收录一项海外监管公告，披露公司最新经营/交易情况更新。",
+      "summary": "港交所披露易收录海外监管公告（最新经营状况），上市公司披露最新业务进展。",
       "importance": 1,
       "rank": 0,
       "tags": [
         "港股",
-        "公司公告"
+        "公告"
       ],
       "locale": "national",
       "market": "hk"
@@ -451,12 +474,12 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/31",
-      "summary": "港交所披露易收录另一项海外监管公告，披露公司最新经营/交易情况更新。",
+      "summary": "港交所披露易再次收录海外监管公告（最新经营状况），涉及另一家上市公司经营更新。",
       "importance": 1,
       "rank": 0,
       "tags": [
         "港股",
-        "公司公告"
+        "公告"
       ],
       "locale": "national",
       "market": "hk"
@@ -467,12 +490,12 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/31",
-      "summary": "港交所披露易收录一项海外监管公告（其他类），具体内容未在标题披露。",
+      "summary": "港交所披露易收录海外监管公告（其他类），内容为上市公司依规需同步披露的事项。",
       "importance": 1,
       "rank": 0,
       "tags": [
         "港股",
-        "公司公告"
+        "公告"
       ],
       "locale": "national",
       "market": "hk"
@@ -483,12 +506,12 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/31",
-      "summary": "港交所披露易收录一项海外监管公告（其他类），具体内容未在标题披露。",
+      "summary": "港交所披露易收录海外监管公告（其他类），涉及上市公司海外监管要求下的信息披露。",
       "importance": 1,
       "rank": 0,
       "tags": [
         "港股",
-        "公司公告"
+        "公告"
       ],
       "locale": "national",
       "market": "hk"
@@ -499,12 +522,12 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/31",
-      "summary": "港交所披露易收录一项港股交易情况更新公告。",
+      "summary": "港交所披露易发布\"最新经营状况\"公告，上市公司通报近期业务表现。",
       "importance": 1,
       "rank": 0,
       "tags": [
         "港股",
-        "公司公告"
+        "公告"
       ],
       "locale": "national",
       "market": "hk"
@@ -515,12 +538,13 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/31",
-      "summary": "港交所披露易收录一家上市公司中期业绩公告。",
-      "importance": 1,
+      "summary": "港交所披露易发布\"中期业绩\"公告，上市公司公布最新半年度业绩数据。",
+      "importance": 2,
       "rank": 0,
       "tags": [
+        "港股",
         "财报",
-        "港股"
+        "公告"
       ],
       "locale": "national",
       "market": "hk"
@@ -531,12 +555,12 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/31",
-      "summary": "港交所披露易收录一项海外监管公告（其他类），具体内容未在标题披露。",
+      "summary": "港交所披露易收录海外监管公告（其他类），上市公司就相关事项进行同步披露。",
       "importance": 1,
       "rank": 0,
       "tags": [
         "港股",
-        "公司公告"
+        "公告"
       ],
       "locale": "national",
       "market": "hk"
@@ -547,29 +571,13 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/31",
-      "summary": "港交所披露易发布次日披露报表，显示有上市公司进行股票回购。",
-      "importance": 1,
+      "summary": "港交所披露易发布\"股份购回\"披露，上市公司在二级市场实施股票回购操作。",
+      "importance": 2,
       "rank": 0,
       "tags": [
         "港股",
-        "回购"
-      ],
-      "locale": "national",
-      "market": "hk"
-    },
-    {
-      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0831/2026083100255.pdf",
-      "title_cn": "Financial Statements/ESG Information - [Interim/Half-Year Report]",
-      "source": "港交所披露易",
-      "source_type": "media",
-      "date": "08/31",
-      "summary": "港交所披露易收录一家上市公司中期/半年度财务报告及ESG信息。",
-      "importance": 1,
-      "rank": 0,
-      "tags": [
-        "财报",
-        "港股",
-        "ESG"
+        "回购",
+        "公告"
       ],
       "locale": "national",
       "market": "hk"
@@ -580,12 +588,13 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/30",
-      "summary": "报道关注曾击败大型烟草公司的律师，正尝试以类似诉讼策略对Meta及社交媒体平台发起挑战。",
+      "summary": "外媒报道，曾在烟草诉讼中获胜的律师正考虑以类似策略针对Meta等社交媒体平台提起诉讼。",
       "importance": 1,
       "rank": 0,
       "tags": [
         "美股",
-        "科技"
+        "科技",
+        "诉讼"
       ],
       "locale": "overseas",
       "market": "us"
@@ -596,12 +605,13 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/31",
-      "summary": "美军对位于霍尔木兹海峡附近的伊朗火箭发射装置实施打击，地缘紧张局势升级。",
+      "summary": "美国军方在霍尔木兹海峡附近对伊朗火箭发射器实施打击，地区紧张局势升级。",
       "importance": 3,
       "rank": 0,
       "tags": [
         "地缘政治",
-        "能源"
+        "中东",
+        "原油"
       ],
       "locale": "overseas",
       "market": "us"
@@ -612,11 +622,12 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/30",
-      "summary": "据《华尔街日报》报道，怡安（AON）接近以约170亿美元从KKR手中收购保险经纪公司USI。",
+      "summary": "据《华尔街日报》报道，保险经纪公司Aon接近以约170亿美元从KKR手中收购保险经纪商USI。",
       "importance": 2,
       "rank": 0,
       "tags": [
         "并购",
+        "保险",
         "美股"
       ],
       "locale": "overseas",
@@ -628,12 +639,13 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/30",
-      "summary": "韩国美妆巨头APR股价年内累计上涨约100%，公司将于9月在美国Costco启动销售。",
+      "summary": "韩国美妆巨头APR股价年内累计上涨约100%，9月将在美国Costco渠道正式上市销售。",
       "importance": 1,
       "rank": 0,
       "tags": [
+        "美股",
         "消费",
-        "美股"
+        "韩妆"
       ],
       "locale": "overseas",
       "market": "us"
@@ -644,12 +656,13 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/30",
-      "summary": "特朗普批评NBC的选举相关言论；美财政部据报取消了部分《纽约时报》《华尔街日报》及彭博记者的G20采访资格。",
+      "summary": "特朗普批评NBC有关选举的报道，美国财政部同时拒绝为部分《纽约时报》《华尔街日报》和彭博社记者发放G20采访证。",
       "importance": 1,
       "rank": 0,
       "tags": [
-        "政策",
-        "美股"
+        "美股",
+        "政治",
+        "媒体"
       ],
       "locale": "overseas",
       "market": "us"
@@ -660,11 +673,12 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/30",
-      "summary": "新加坡从财政与文化层面综合施策，以应对人口结构带来的老龄化等挑战。",
+      "summary": "新加坡出台多项财政与文化政策，以应对人口老龄化和生育率下降带来的结构性挑战。",
       "importance": 1,
       "rank": 0,
       "tags": [
-        "宏观",
+        "新加坡",
+        "人口",
         "政策"
       ],
       "locale": "overseas",
@@ -676,12 +690,13 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/29",
-      "summary": "尽管报告承认对历史遗迹存在\"不利影响\"，美国国家公园管理局仍表态支持特朗普政府提出的250英尺拱门纪念建筑项目。",
+      "summary": "美国国家公园管理局批准特朗普力推的250英尺高拱门项目，尽管评估指出对历史遗址存在不利影响。",
       "importance": 1,
       "rank": 0,
       "tags": [
-        "政策",
-        "美股"
+        "美国",
+        "政治",
+        "基建"
       ],
       "locale": "overseas",
       "market": "us"
@@ -692,12 +707,13 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/29",
-      "summary": "特朗普政府正在权衡一项约塞米蒂国家公园土地置换方案，以换取私人开发商修建通行道路。",
+      "summary": "特朗普政府正权衡以约塞米蒂国家公园土地置换方式，为某私人开发商换取通行道路。",
       "importance": 1,
       "rank": 0,
       "tags": [
-        "政策",
-        "美股"
+        "美国",
+        "政治",
+        "地产"
       ],
       "locale": "overseas",
       "market": "us"
@@ -708,12 +724,13 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/30",
-      "summary": "调查显示，特朗普曾推广的\"Freedom Fuel\"加油站所售汽油，其分销商声称存在大额欠款未支付的情况。",
+      "summary": "特朗普曾力推的Freedom Fuel加油站被曝所售汽油款项拖欠未付，事件涉及分销商与品牌方纠纷。",
       "importance": 1,
       "rank": 0,
       "tags": [
-        "能源",
-        "美股"
+        "美股",
+        "消费",
+        "能源"
       ],
       "locale": "overseas",
       "market": "us"
@@ -724,45 +741,48 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/30",
-      "summary": "英伟达股价周五出现明显逆转，市场分析认为美联储相关信号是触发抛售的关键因素。",
+      "summary": "英伟达股价周五盘中出现明显逆转，外媒分析其背后与美联储政策信号及市场利率预期变化相关。",
       "importance": 2,
       "rank": 0,
       "tags": [
-        "AI",
         "美股",
+        "AI",
+        "半导体",
         "美联储"
       ],
       "locale": "overseas",
       "market": "us"
     },
     {
-      "url": "https://www.investing.com/news/economic-indicators/japan-industrial-production-unexpectedly-grows-in-july-retail-sales-surge-4882082",
-      "title_cn": "Japan industrial production unexpectedly grows in July, retail sales surge",
+      "url": "https://www.investing.com/news/stock-market-news/us-stock-futures-dip-amid-renewed-iran-hostilities-4882085",
+      "title_cn": "U.S. stock futures dip amid renewed Iran hostilities",
       "source": "Investing.com News",
       "source_type": "media",
       "date": "08/31",
-      "summary": "日本7月工业产出意外环比增长，零售销售同步大幅走强，经济数据好于预期。",
+      "summary": "受伊朗紧张局势再度升温影响，美国股指期货周一盘前走弱，市场风险偏好回落。",
       "importance": 2,
       "rank": 0,
       "tags": [
-        "宏观",
-        "日本"
+        "美股",
+        "地缘政治",
+        "股指期货"
       ],
       "locale": "overseas",
       "market": "us"
     },
     {
-      "url": "https://www.investing.com/news/economy-news/bessent-says-yen-moves-pretty-contained-and-not-disorderly-4882076",
-      "title_cn": "Bessent says yen moves ’pretty contained’ and not disorderly",
+      "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-austal-posts-record-fy-2026-revenue-but-reports-loss-93CH-4882084",
+      "title_cn": "Earnings call transcript: Austal posts record FY 2026 revenue but reports loss",
       "source": "Investing.com News",
       "source_type": "media",
-      "date": "08/30",
-      "summary": "美国财长Bessent表示近期日元波动\"相当有限\"且不构成无序贬值，市场解读为对日元走势的安抚信号。",
-      "importance": 2,
+      "date": "08/31",
+      "summary": "澳大利亚造船企业Austal发布2026财年全年业绩，营收创历史新高但仍录得亏损。",
+      "importance": 1,
       "rank": 0,
       "tags": [
-        "外汇",
-        "日本"
+        "财报",
+        "造船",
+        "美股"
       ],
       "locale": "overseas",
       "market": "us"

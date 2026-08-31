@@ -3346,18 +3346,6 @@
     "firstSeenAt": "2026-08-31T00:17:39.928Z",
     "lastSeenAt": "2026-08-31T00:17:39.928Z"
   },
-  "https://data.eastmoney.com/xg/xg/#A25256": {
-    "title": "尚睿科技：IPO问询中（拟北交所）",
-    "url": "https://data.eastmoney.com/xg/xg/#A25256",
-    "sourceId": "em-declare",
-    "source": "东财IPO在审(广东)",
-    "category": "gd-ipo",
-    "subcategory": "ipo-tutoring",
-    "excerpt": "注册地：广东｜保荐：广发证券股份有限公司｜更新：2026-08-27",
-    "publishedAt": "2026-08-27T00:00:00.000Z",
-    "firstSeenAt": "2026-08-31T00:32:15.148Z",
-    "lastSeenAt": "2026-08-31T00:32:15.148Z"
-  },
   "https://news.southcn.com/node_812903b83a/c23c46f358.shtml": {
     "title": "解难题、送政策，看民营企业如何轻装出海",
     "url": "https://news.southcn.com/node_812903b83a/c23c46f358.shtml",
@@ -3609,5 +3597,101 @@
     "publishedAt": "2026-08-31T00:00:00.000Z",
     "firstSeenAt": "2026-08-31T00:32:15.148Z",
     "lastSeenAt": "2026-08-31T00:32:15.148Z"
+  },
+  "https://data.eastmoney.com/xg/xg/#A25256": {
+    "title": "尚睿科技：IPO问询中（拟北交所）",
+    "url": "https://data.eastmoney.com/xg/xg/#A25256",
+    "sourceId": "em-declare",
+    "source": "东财IPO在审(广东)",
+    "category": "gd-ipo",
+    "subcategory": "ipo-tutoring",
+    "excerpt": "注册地：广东｜保荐：广发证券股份有限公司｜更新：2026-08-27",
+    "publishedAt": "2026-08-27T00:00:00.000Z",
+    "firstSeenAt": "2026-08-31T00:41:49.253Z",
+    "lastSeenAt": "2026-08-31T00:41:49.253Z"
+  },
+  "https://www.investing.com/news/stock-market-news/us-stock-futures-dip-amid-renewed-iran-hostilities-4882085": {
+    "title": "U.S. stock futures dip amid renewed Iran hostilities",
+    "url": "https://www.investing.com/news/stock-market-news/us-stock-futures-dip-amid-renewed-iran-hostilities-4882085",
+    "sourceId": "investing-news",
+    "source": "Investing.com News",
+    "category": "stocks",
+    "subcategory": "us",
+    "excerpt": "U.S. stock futures dip amid renewed Iran hostilities",
+    "publishedAt": "2026-08-31T00:32:22.000Z",
+    "firstSeenAt": "2026-08-31T00:41:49.253Z",
+    "lastSeenAt": "2026-08-31T00:41:49.253Z"
+  },
+  "https://www.cnfin.com/hg-lb/detail/20260831/4462529_1.html": {
+    "title": "“沙德尔”残涡携手冷空气继续造雨 南北方多地暑热消散",
+    "url": "https://www.cnfin.com/hg-lb/detail/20260831/4462529_1.html",
+    "sourceId": "cnfin",
+    "source": "新华财经",
+    "category": "finance",
+    "subcategory": "cn-finance",
+    "excerpt": "“沙德尔”残涡携手冷空气继续造雨 南北方多地暑热消散",
+    "publishedAt": "2026-08-31T00:00:00.000Z",
+    "firstSeenAt": "2026-08-31T00:41:49.253Z",
+    "lastSeenAt": "2026-08-31T00:41:49.253Z"
+  },
+  "https://www.stcn.com/article/detail/4164777.html": {
+    "title": "43家上市券商上半年归母净利润总额同比增长49.01%",
+    "url": "https://www.stcn.com/article/detail/4164777.html",
+    "sourceId": "stcn",
+    "source": "证券时报",
+    "category": "finance",
+    "subcategory": "cn-finance",
+    "excerpt": "43家上市券商上半年归母净利润总额同比增长49.01%",
+    "publishedAt": "2026-08-31T08:24:00.000Z",
+    "firstSeenAt": "2026-08-31T00:41:49.253Z",
+    "lastSeenAt": "2026-08-31T00:41:49.253Z"
+  },
+  "https://www.stcn.com/article/detail/4164800.html": {
+    "title": "头部中资券商境外业务步入增长快车道",
+    "url": "https://www.stcn.com/article/detail/4164800.html",
+    "sourceId": "stcn",
+    "source": "证券时报",
+    "category": "finance",
+    "subcategory": "cn-finance",
+    "excerpt": "头部中资券商境外业务步入增长快车道",
+    "publishedAt": "2026-08-31T08:24:00.000Z",
+    "firstSeenAt": "2026-08-31T00:41:49.253Z",
+    "lastSeenAt": "2026-08-31T00:41:49.253Z"
+  },
+  "https://finance.sina.com.cn/jjxw/2026-08-31/doc-iniqehxc9200472.shtml": {
+    "title": "A股有望延续反弹，短期再平衡或加速",
+    "url": "https://finance.sina.com.cn/jjxw/2026-08-31/doc-iniqehxc9200472.shtml",
+    "sourceId": "sina-a-stock",
+    "source": "新浪财经·A股",
+    "category": "stocks",
+    "subcategory": "a-share",
+    "excerpt": "A股有望延续反弹，短期再平衡或加速",
+    "publishedAt": "2026-08-31T00:00:00.000Z",
+    "firstSeenAt": "2026-08-31T00:41:49.253Z",
+    "lastSeenAt": "2026-08-31T00:41:49.253Z"
+  },
+  "https://finance.sina.com.cn/wm/2026-08-31/doc-iniqehwz7598840.shtml": {
+    "title": "美银：天齐锂业半年报暴增49倍： 锂王&q",
+    "url": "https://finance.sina.com.cn/wm/2026-08-31/doc-iniqehwz7598840.shtml",
+    "sourceId": "sina-a-stock",
+    "source": "新浪财经·A股",
+    "category": "stocks",
+    "subcategory": "a-share",
+    "excerpt": "美银：天齐锂业半年报暴增49倍： 锂王&q",
+    "publishedAt": "2026-08-31T00:00:00.000Z",
+    "firstSeenAt": "2026-08-31T00:41:49.253Z",
+    "lastSeenAt": "2026-08-31T00:41:49.253Z"
+  },
+  "https://finance.sina.com.cn/stock/hkstock/ggscyd/2026-08-31/doc-iniqehwz7597586.shtml": {
+    "title": "中国宝力科技拟溢价约4.57%发行约1.33亿股认购股份 净筹约6030万港元",
+    "url": "https://finance.sina.com.cn/stock/hkstock/ggscyd/2026-08-31/doc-iniqehwz7597586.shtml",
+    "sourceId": "sina-hk-stock",
+    "source": "新浪财经·港股",
+    "category": "stocks",
+    "subcategory": "hk",
+    "excerpt": "中国宝力科技拟溢价约4.57%发行约1.33亿股认购股份 净筹约6030万港元",
+    "publishedAt": "2026-08-31T00:00:00.000Z",
+    "firstSeenAt": "2026-08-31T00:41:49.253Z",
+    "lastSeenAt": "2026-08-31T00:41:49.253Z"
   }
 }
