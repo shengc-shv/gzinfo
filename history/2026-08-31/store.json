@@ -1,132 +1,121 @@
 {
   "date": "2026-08-31",
-  "updatedAt": "2026-08-31T13:36:28.831Z",
+  "updatedAt": "2026-08-31T14:14:56.840Z",
   "executive": {
-    "hero_line": "国有大行存量房贷集体展期至40年，房贷竞争与财富再配置同时提速，分行须双线作战。",
-    "spoken_hero": "国有大行集体允许房贷展期至40年，月供压力下降、存量竞争白热化。分行零售端应在按揭续作和财富再配置两条线同时排兵。",
+    "hero_line": "消费顶层设计锚定60万亿，分红险转型重塑银保，房贷增量见顶——今日三条主线交汇，分行需重新排兵零售资产端。",
+    "spoken_hero": "今天三件事交织：消费顶层文件锚定2030年60万亿社零，分红险转型监管再加码，六大行房贷余额半年蒸发五千亿。分行可考虑零售资产端重新排兵，财富与个贷条线同步调结构。",
     "must_read": [
       {
-        "title": "房贷展期40年落地国有大行",
-        "why": "存量房贷竞争直接进入续作阶段，分行需提前测算客户留存并准备差异化方案应对同业抢客。",
-        "url": "https://m.21jingji.com/article/20260831/herald/8c0fd3993cbc1503d8640da4859d9457.html"
+        "title": "七部门发消费60万亿纲领",
+        "why": "2030年社零锚定60万亿，以旧换新成抓手，信用卡与消费信贷场景扩容迎来顶层政策窗口，分行应及早配套产品与商圈联营。",
+        "url": "https://www.stcn.com/article/detail/4166193.html"
       },
       {
-        "title": "楼市全链条改革多部门同频",
-        "why": "土地、金融、销售端同步发力，按重贷款节奏与开发商策略均需再校准，分行信贷结构调整窗口已经打开。",
-        "url": "https://www.stcn.com/article/detail/4161508.html"
+        "title": "房贷余额半年蒸发五千亿",
+        "why": "六大行按揭增量见顶信号清晰，叠加40年期限新政尚未落地，分行需提前研判存量客户重定价与二手房按揭接续策略。",
+        "url": "https://www.cnfin.com/hg-lb/detail/20260831/4463059_1.html"
       },
       {
-        "title": "资本市场加码支持房地产新模式",
-        "why": "REITs与并购重组扩容，房地产资产盘活提速，分行公司端可提前布局持有型物业与开发商上下游融资机会。",
-        "url": "https://www.stcn.com/article/detail/4161501.html"
+        "title": "分红险转型提速",
+        "why": "监管推动分红险结构调整、风险减量、大灾理赔规范，银保渠道代销逻辑与代理人生涯产品组合将同步调整，财富条线需提前培训口径。",
+        "url": "https://finance.sina.com.cn/jjxw/2026-08-31/doc-iniqfqsq4918898.shtml"
       },
       {
-        "title": "五大险企上半年投资增74.6%",
-        "why": "险资权益收益显著释放，高净值客户保险与权益资产联动推介窗口打开，分行财富端可加大分红险与基金组合配置力度。",
-        "url": "https://finance.sina.com.cn/roll/2026-08-31/doc-iniqfkkr8815043.shtml"
-      },
-      {
-        "title": "四大行净息差企稳分红超1900亿",
-        "why": "国有大行盈利韧性明确，作为分行经营对标基准，可结合分红险、稳健理财向高净值客户传递行业信心。",
-        "url": "https://www.stcn.com/article/detail/4161481.html"
+        "title": "国常会部署招商引资升级",
+        "why": "中央层面推动招商引资高质量发展，下一步观察配套细则与重点产业目录，分行对公条线可联动招商部门梳理广州园区新引入企业名单，转化为零售代发与私行来源。",
+        "url": "https://www.cnfin.com/yw-lb/detail/20260831/4463068_1.html"
       }
     ],
-    "spoken_must_read": "国有大行房贷集体展期至40年，分行零售端须提前测算续作客户留存率并准备差异化方案。\n楼市全链条改革多部门同步推进，按揭、装修贷节奏可能生变，分行信贷结构调整窗口已打开。\n五大险企上半年投资收益同比增74.6%，高净值客户保险与权益资产联动推介窗口显现，分行财富端可加大分红险与基金组合配置。\n四大行半年报净息差集体企稳、合计分红超1900亿，盈利韧性明确，可作分行经营对标。\n资本市场加码支持房地产新模式，REITs与并购工具扩容，分行公司端可关注持有型物业与上下游融资机会。",
+    "spoken_must_read": "七部门发文锚定2030年六十万亿社零，以旧换新成抓手，分行可考虑在汽车家电场景提前布卡分期与分期贴息组合。\n分红险转型监管再加码，银保代销逻辑与代理人生涯产品组合同步调整，财富条线需提前统一培训口径。\n六大行房贷余额半年缩水超五千亿，按揭增量见顶信号清晰，存量重定价与二手房接续方案本周宜摸底。\n国常会部署招商引资升级，下一步看配套细则，对公联动招商部门梳理广州园区新引入企业，可转化为代发与私行来源。",
     "insights": [
       {
-        "topic": "房贷展期后客户资产再配置",
-        "impact": "存量房贷客户月供下降后腾出可支配资金，财富端迎来保险、基金、贵金属的二次配置窗口，私行客户尤为明显。",
-        "action": "本周可对存量房贷30万元以上客户开展一对一资产检视，重点推介分红险与稳健理财组合，搭配贵金属抗通胀配置。",
+        "topic": "消费顶层方案配套商圈获客",
+        "impact": "60万亿社零纲领为消费金融与信用卡条线打开顶层政策窗口，广州本地商圈、汽车家电以旧换新场景可直接转化为分期与发卡机会。",
+        "action": "本周联合信用卡部梳理广州核心商圈及家电3C经销商名单，针对以旧换新客群设计分期满减与刷卡金组合，下周起在重点门店铺开驻点。",
         "tag": [
-          "财富",
-          "住房金融"
+          "信贷",
+          "客群"
         ],
         "sources": [
           {
-            "title": "建行、工行、交行等银行存量房贷可延长至40年！",
-            "url": "https://m.21jingji.com/article/20260831/herald/8c0fd3993cbc1503d8640da4859d9457.html"
-          },
-          {
-            "title": "A股五大险企2026年上半年投资成绩单：收益合计同比增74.6%",
-            "url": "https://finance.sina.com.cn/roll/2026-08-31/doc-iniqfkkr8815043.shtml"
+            "title": "七部门发文推动商品消费扩容升级！2030年锚定60万亿元社零总额",
+            "url": "https://www.stcn.com/article/detail/4166193.html"
           }
         ]
       },
       {
-        "topic": "险企业绩弹性释放对接私行",
-        "impact": "上市险企投资收益大幅回升，分红险与万能险产品竞争力提升，对私行高净值客户的资产配置吸引力增强。",
-        "action": "可考虑由私行部牵头，联动头部险企定制高净值专享产品包，本周内组织两场私行客户专属路演。",
+        "topic": "分红险转型口径与代销培训",
+        "impact": "分红险结构调整将改变银保渠道代销逻辑，财富条线若不及时统一口径，易引发客户投诉与代理人不合规销售。",
+        "action": "财富部本周内完成分红险新规内部培训与代销话术统一，重点针对高净值客户做好预期收益沟通，规避销售误导风险。",
         "tag": [
-          "私行",
           "财富"
         ],
         "sources": [
           {
-            "title": "A股五大险企2026年上半年投资成绩单：收益合计同比增74.6%",
-            "url": "https://finance.sina.com.cn/roll/2026-08-31/doc-iniqfkkr8815043.shtml"
+            "title": "分红险转型提速、强化风险减量和大灾理赔管理",
+            "url": "https://finance.sina.com.cn/jjxw/2026-08-31/doc-iniqfqsq4918898.shtml"
           }
         ]
       },
       {
-        "topic": "麓湖校区启用锁定开学季家庭客群",
-        "impact": "七中麓湖校区启用，越秀与麓湖周边高净值家庭客群集中出现，亲子账户、代销与留学金融需求集中爆发。",
-        "action": "提示分行本周内在麓湖校区周边三个网点布设开学季服务专区，主推亲子卡、储蓄罐与少儿教育金保险。",
+        "topic": "黄金高位震荡下的客户沟通",
+        "impact": "金价冲高回落，险资与理财子配置观点分化，客户问询量短期可能上升，财富经理若缺乏统一逻辑易引发集中赎回或冲动追高。",
+        "action": "财富条线可考虑制作黄金配置一页纸话术，结合代销黄金类理财档期组织客户沙龙，提示波动风险同时把握稳健配置机会。",
         "tag": [
-          "客群"
+          "财富"
         ],
         "sources": [
           {
-            "title": "广州中心城区又一民生实事！七中麓湖校区揭牌启用",
-            "url": "https://news.dayoo.com/guangzhou/202608/31/139995_54998327.htm"
+            "title": "黄金冲高回落！险资、理财子如何布局？",
+            "url": "https://finance.sina.com.cn/jjxw/2026-08-31/doc-iniqfear7309018.shtml"
           }
         ]
       },
       {
-        "topic": "广花城际花都沿线提前卡位",
-        "impact": "广花城际进度近七成，花都与广州中心城区通勤即将打通，花都沿线新增通勤客群与代发工资场景潜力大。",
-        "action": "本周可联动花都支行开展沿线企业走访，主推信用卡通勤权益包与代发工资开户礼包，提前锁客。",
+        "topic": "房贷存量重定价与二手房接续",
+        "impact": "六大行按揭余额半年蒸发五千亿，叠加40年期限新政悬而未决，存量客户重定价预期上升，二手房按揭将成为存量竞争主战场。",
+        "action": "个贷部本周摸底近一年到期及提前还款客户清单，提前对接二手房按揭接续方案与差异化定价，稳住优质按揭客群。",
+        "tag": [
+          "住房金融"
+        ],
+        "sources": [
+          {
+            "title": "40年房贷新政尚未落地 六大行房贷余额少了5000多亿",
+            "url": "https://www.cnfin.com/hg-lb/detail/20260831/4463059_1.html"
+          }
+        ]
+      },
+      {
+        "topic": "招商引资升级转化私行来源",
+        "impact": "国常会部署招商引资高质量发展，后续配套细则将明确重点产业目录，新引入企业高管与核心员工天然构成私行与代发客群来源。",
+        "action": "对公联动招商部门建立广州重点园区新引入企业清单，零售条线同步对接高管薪酬代发、员工批量信用卡与私行提升方案。",
         "tag": [
           "代发",
-          "信用卡"
+          "私行"
         ],
         "sources": [
           {
-            "title": "广花城际铁路（广州东站～花都天贵）建设进度近七成",
-            "url": "https://news.dayoo.com/guangzhou/202608/31/139995_54998301.htm"
-          }
-        ]
-      },
-      {
-        "topic": "美联储下周信号影响客户外汇配置",
-        "impact": "美联储关键数据下周公布，人民币汇率波动预期升温，高净值与外贸客群外汇资产再平衡需求可能集中出现。",
-        "action": "本周可对外贸代发客群与私行客户发送外汇配置提示短信，提示结汇窗口并推介结构性存款与外币理财。",
-        "tag": [
-          "财富",
-          "客群"
-        ],
-        "sources": [
-          {
-            "title": "重大信号！美联储，加息大消息！下周公布这项数据",
-            "url": "https://www.stcn.com/article/detail/4161515.html"
+            "title": "国务院常务会议研究部署促进招商引资高质量发展",
+            "url": "https://www.cnfin.com/yw-lb/detail/20260831/4463068_1.html"
           }
         ]
       }
     ],
-    "spoken_insights": "房贷展期后月供下降，存量客户腾出可支配资金，财富端可针对30万以上客户开展资产检视并推介分红险与稳健理财。\n上市险企投资收益大幅回升，私行部可联动头部险企定制高净值专享产品包，本周组织两场私行路演。\n七中麓湖校区启用，分行可在校区周边网点布设开学季服务专区，主推亲子账户与少儿教育金。\n广花城际花都段进度近七成，花都支行可联动沿线企业走访，锁住通勤客群代发工资与信用卡需求。\n美联储下周公布关键数据，外贸与私行客户外汇配置需求可能集中，分行可主动推送结汇提示与外币理财。",
+    "spoken_insights": "消费六十万亿纲领落地，分行可考虑联合信用卡部梳理广州商圈与家电经销商，针对以旧换新客群推分期满减组合。\n分红险转型监管再加码，财富部本周宜统一培训口径，重点沟通高净值客户预期收益。\n金价高位震荡，财富条线提示制作黄金配置话术，结合代销档期组织客户沙龙。\n六大行房贷余额半年蒸发五千亿，个贷部本周摸底存量客户，提前对接二手房按揭接续方案。\n国常会部署招商引资升级，对公联动招商部门梳理新引入企业，零售同步对接代发与私行提升。",
     "guangdong_ipo": {
-      "spoken": "尚睿科技拟在北交所上市，注册地位于广东，当前处于问询阶段，可持续跟进其过会节奏并关注新三板客群募资落地机会。"
+      "spoken": "广东尚睿科技IPO目前处于问询阶段，拟登陆北交所，由广发证券保荐，行业归属建议进一步核实，分行可关注其后续进展对接科技金融客群。"
     }
   },
   "stock_recap": {
     "us": {
-      "overview": "美股盘面承压，美伊冲突升级推高油价超3%。",
+      "overview": "美股盘面承压，地缘升温与九月风险预期主导情绪。",
       "sectors": [
-        "能源：美伊交火推升油价，布伦特原油涨超3%突破90美元",
-        "科技：OpenAI广告收入破十亿美元年化，AI概念受关注",
-        "保险：Aon收购USI拓展中端市场，并购活跃度走高",
-        "避险：地缘紧张叠加九月风险预警，市场情绪偏谨慎"
+        "能源：美伊冲突升级，布伦特原油涨3%突破90美元",
+        "科技：OpenAI广告业务高增提振AI概念，但特斯拉单边走强",
+        "加密货币：比特币跌破7.8万美元，避险情绪回落",
+        "保险经纪：Aon宣布收购USI，行业整合预期升温"
       ],
-      "spoken": "美股盘面承压。美伊冲突升级推高油价，布伦特原油涨超3%突破90美元，能源板块走强。科技板块受OpenAI广告收入破十亿美元年化提振，AI概念受关注。Aon收购USI，保险并购活跃。整体来看，地缘紧张叠加九月风险预警，市场情绪偏谨慎。",
+      "spoken": "美股盘面承压，地缘紧张与九月风险预期主导情绪。能源板块领涨，布伦特原油受美伊冲突刺激大涨3%。科技股分化，OpenAI广告业务高增提振AI概念，特斯拉单边走强。加密货币走弱，比特币跌破7.8万美元。保险经纪板块因Aon收购USI迎来整合预期。",
       "meta": {
         "source": "CNBC Top Stories",
         "crossCheck": "新浪行情",
@@ -135,18 +124,18 @@
       "indices": [
         {
           "name": "道琼斯",
-          "value": "53240.56",
-          "changePct": "-0.60%"
+          "value": "53206.75",
+          "changePct": "-0.66%"
         },
         {
           "name": "纳斯达克",
-          "value": "26290.00",
-          "changePct": "-0.43%"
+          "value": "26276.43",
+          "changePct": "-0.48%"
         },
         {
           "name": "标普500",
-          "value": "7676.32",
-          "changePct": "-0.46%"
+          "value": "7674.17",
+          "changePct": "-0.49%"
         }
       ]
     },
@@ -154,12 +143,12 @@
       "overview": "A股三大指数集体收涨，影视短剧概念掀起涨停潮。",
       "sectors": [
         "影视短剧：《后西游记》开播引爆，短剧概念多股涨停",
-        "液冷：央视利好消息引爆，液冷产业链全面提速",
-        "半导体：覆铜板涨价潮向上游传导，硅片迎普涨",
-        "消费：商务部等七部门发文，到2030年社零总额目标60万亿",
-        "资源：券商看好铜价表现，资源标的利润弹性凸显"
+        "液冷：央视重磅利好催化，液冷产业链全线提速",
+        "半导体：涨价潮向上游硅片传导，国产AI芯片新股申购",
+        "消费：商务部等7部门定调2030年社零60万亿目标",
+        "铜资源：券商看好铜价表现，资源标的受益"
       ],
-      "spoken": "A股三大指数集体收涨。影视短剧概念掀起涨停潮，《后西游记》开播引爆多股封板。液冷板块受央视利好提振全面提速。半导体涨价潮向上游传导，覆铜板和硅片同步走强。消费板块迎来政策利好，商务部发文明确社零目标。资源板块方面，券商看好铜价表现。整体来看，板块轮动加快，低估值策略占优。",
+      "spoken": "A股三大指数集体收涨，影视短剧概念掀起涨停潮。液冷板块受央视重磅利好催化，全线提速。半导体涨价潮向上游硅片传导，国产AI芯片新股申购受关注。消费板块迎政策利好，商务部定调2030年社零60万亿目标。铜资源板块获券商力挺，资源标的利润弹性可观。",
       "meta": {
         "source": "东方财富",
         "crossCheck": "新浪行情",
@@ -184,13 +173,14 @@
       ]
     },
     "hk": {
-      "overview": "港股盘面消息面清淡，中期业绩披露集中叠加股份回购活跃。",
+      "overview": "港股盘面观望情绪主导，中期业绩密集披露期交投谨慎。",
       "sectors": [
-        "中期业绩：港交所披露易集中披露多家公司中期业绩",
-        "股份回购：多笔股份回购披露，上市公司维护股价活跃",
-        "公司治理：多家公司召开股东特别大会事项审议"
+        "中期业绩：港交所披露多家公司半年报，业绩成关注焦点",
+        "公司治理：部分公司召开股东特别大会审议关联交易",
+        "内幕消息：个别公司发布内幕信息公告引发股价波动",
+        "新股动态：市场关注即将上市的新股申购机会"
       ],
-      "spoken": "港股盘面消息面清淡。港交所披露易集中披露多家公司中期业绩，股份回购公告密集，上市公司维护股价活跃。多家公司发布股东特别大会通知，公司治理事项有序推进。整体来看，市场进入中报密集披露期，结构性消息为主。",
+      "spoken": "港股盘面观望情绪主导，中期业绩密集披露期交投谨慎。多家公司集中发布半年报，业绩成市场关注焦点。部分公司召开股东特别大会，审议关联交易等议案。个别公司发布内幕信息公告，引发相关股价波动。投资者聚焦业绩兑现与公司治理动向，整体维持谨慎观望。",
       "meta": {
         "source": "新浪财经·港股",
         "crossCheck": "新浪行情",
@@ -219,7 +209,7 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/30",
-      "summary": "东方财富发布A股上市公司2024年中报汇总榜单，整体盈利较去年同期多赚约5800亿元，覆盖全部A股中期业绩披露。",
+      "summary": "东方财富发布A股中报全榜单数据，显示上市公司整体较往年多赚约5800亿元，汇总披露中报业绩情况。",
       "importance": 2,
       "rank": 0,
       "tags": [
@@ -235,29 +225,12 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/31",
-      "summary": "央视相关利好消息发布后，A股液冷板块两笔大单直线封板，千亿级液冷产业被指全面提速。",
+      "summary": "央视发布液冷产业重磅利好，两笔大单直线封板，带动A股液冷概念相关千亿规模产业全面提速。",
       "importance": 2,
       "rank": 0,
       "tags": [
         "液冷",
-        "数据中心",
-        "A股"
-      ],
-      "locale": "national",
-      "market": "a-share"
-    },
-    {
-      "url": "https://finance.eastmoney.com/a/202608313859596338.html",
-      "title_cn": "年内第七涨！覆铜板龙头再发涨价函融资客紧盯多只高增长潜力股(名单)",
-      "source": "东方财富",
-      "source_type": "media",
-      "date": "08/31",
-      "summary": "覆铜板龙头年内第七次发布涨价函，融资客关注多只高增长潜力股。",
-      "importance": 2,
-      "rank": 0,
-      "tags": [
-        "涨价",
-        "电子",
+        "AI",
         "A股"
       ],
       "locale": "national",
@@ -270,11 +243,28 @@
       "source_type": "media",
       "date": "08/31",
       "summary": "商务部等7部门发布政策文件，提出到2030年社会消费品零售总额目标达到约60万亿元。",
-      "importance": 3,
+      "importance": 2,
       "rank": 0,
       "tags": [
         "政策",
         "消费",
+        "A股"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202608313859596338.html",
+      "title_cn": "年内第七涨！覆铜板龙头再发涨价函融资客紧盯多只高增长潜力股(名单)",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "08/31",
+      "summary": "覆铜板龙头年内第七次发布涨价函，覆铜板价格持续上调，融资客关注多只高增长潜力个股。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "涨价",
+        "半导体",
         "A股"
       ],
       "locale": "national",
@@ -287,12 +277,11 @@
       "source_type": "media",
       "date": "08/31",
       "summary": "8月31日A股三大指数集体收涨，影视概念股掀起涨停潮。",
-      "importance": 2,
+      "importance": 1,
       "rank": 0,
       "tags": [
         "A股",
-        "影视",
-        "传媒"
+        "影视传媒"
       ],
       "locale": "national",
       "market": "a-share"
@@ -303,12 +292,11 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/31",
-      "summary": "短剧《后西游记》开播引爆短剧概念，多只相关个股涨停并获融资客追捧。",
+      "summary": "短剧《后西游记》开播引爆短剧概念股，多只相关个股涨停并获融资客追捧。",
       "importance": 1,
       "rank": 0,
       "tags": [
-        "短剧",
-        "传媒",
+        "影视传媒",
         "A股"
       ],
       "locale": "national",
@@ -320,13 +308,12 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/31",
-      "summary": "AI服务器上游某类材料需求同比增长260%，相关供应持续紧张。",
+      "summary": "AI服务器上游某关键材料需求同比暴涨260%，相关供应持续紧张，市场列出受益个股名单。",
       "importance": 2,
       "rank": 0,
       "tags": [
         "AI",
-        "半导体",
-        "A股"
+        "半导体"
       ],
       "locale": "national",
       "market": "a-share"
@@ -337,13 +324,13 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/31",
-      "summary": "本周将有3只新股开放申购，其中包括国产AI芯片龙头。",
+      "summary": "本周A股迎来3只新股申购，其中包含国产AI芯片龙头公司。",
       "importance": 2,
       "rank": 0,
       "tags": [
-        "新股",
         "AI",
-        "半导体"
+        "半导体",
+        "新股"
       ],
       "locale": "national",
       "market": "a-share"
@@ -354,7 +341,7 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/30",
-      "summary": "高盛本周押中的大牛股连续五日涨停，超3000亿元外资A股持仓数据曝光。",
+      "summary": "高盛提前押中的大牛股本周收获五连板，曝光外资持有A股规模超过3000亿元的持仓情况。",
       "importance": 2,
       "rank": 0,
       "tags": [
@@ -370,13 +357,12 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/31",
-      "summary": "半导体涨价潮向上游硅片扩散，国内厂商普遍跟进调价。",
+      "summary": "半导体涨价潮向上游传导，硅片迎来普涨，国内硅片厂商的盈利受益时点受到关注。",
       "importance": 2,
       "rank": 0,
       "tags": [
         "半导体",
-        "涨价",
-        "A股"
+        "涨价"
       ],
       "locale": "national",
       "market": "a-share"
@@ -387,7 +373,7 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/30",
-      "summary": "十大券商策略观点指出，近期A股行情快速轮动，低估值策略明显占优。",
+      "summary": "十大券商策略观点指出近期行情快速轮动，低估值策略明显占优。",
       "importance": 1,
       "rank": 0,
       "tags": [
@@ -403,7 +389,7 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/31",
-      "summary": "东吴证券发布观点，看好未来两年铜价表现，认为资源类标的有望优先享受利润。",
+      "summary": "东吴证券发布观点，看好未来两年铜价表现，认为上游资源类标的可优先享受利润弹性。",
       "importance": 1,
       "rank": 0,
       "tags": [
@@ -414,193 +400,194 @@
       "market": "a-share"
     },
     {
-      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0831/2026083102281.pdf",
-      "title_cn": "Announcements and Notices - [Interim Results / Modified Report by Auditors]",
-      "source": "港交所披露易",
-      "source_type": "media",
-      "date": "08/31",
-      "summary": "港交所披露易发布某公司公告及通函，涉及中期业绩及核数师修改报告事项。",
-      "importance": 1,
-      "rank": 0,
-      "tags": [
-        "港股",
-        "财报"
-      ],
-      "locale": "national",
-      "market": "hk"
-    },
-    {
-      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0831/2026083102279.pdf",
-      "title_cn": "Next Day Disclosure Returns - [Share Buyback]",
-      "source": "港交所披露易",
-      "source_type": "media",
-      "date": "08/31",
-      "summary": "港交所披露易出现公司次日披露报表，涉及股份回购事项。",
-      "importance": 1,
-      "rank": 0,
-      "tags": [
-        "港股",
-        "回购"
-      ],
-      "locale": "national",
-      "market": "hk"
-    },
-    {
-      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0831/2026083102277.pdf",
-      "title_cn": "Announcements and Notices - [Notice of EGM/SGM]",
-      "source": "港交所披露易",
-      "source_type": "media",
-      "date": "08/31",
-      "summary": "港交所披露易发布某公司公告，涉及股东特别大会或类别股东大会通知。",
-      "importance": 1,
-      "rank": 0,
-      "tags": [
-        "港股",
-        "公司治理"
-      ],
-      "locale": "national",
-      "market": "hk"
-    },
-    {
-      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0831/2026083102275.pdf",
-      "title_cn": "Announcements and Notices - [Delay in Results Announcement / Date of Board Meeting / Suspension]",
-      "source": "港交所披露易",
-      "source_type": "media",
-      "date": "08/31",
-      "summary": "港交所披露易出现公告，涉及业绩发布延迟、董事会会议日期及停牌事项。",
-      "importance": 1,
-      "rank": 0,
-      "tags": [
-        "港股",
-        "公司治理"
-      ],
-      "locale": "national",
-      "market": "hk"
-    },
-    {
-      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0831/2026083102269.pdf",
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0831/2026083102687.pdf",
       "title_cn": "Announcements and Notices - [Interim Results]",
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/31",
-      "summary": "港交所披露易发布某公司中期业绩公告。",
+      "summary": "港交所披露易发布某上市公司中期业绩公告（Announcements and Notices - Interim Results）。",
       "importance": 1,
       "rank": 0,
       "tags": [
-        "港股",
-        "财报"
+        "财报",
+        "港股"
       ],
       "locale": "national",
       "market": "hk"
     },
     {
-      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0831/2026083102267.pdf",
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0831/2026083102681.pdf",
+      "title_cn": "Announcements and Notices - [Results of EGM/SGM / Connected Transaction / Share Scheme]",
+      "source": "港交所披露易",
+      "source_type": "media",
+      "date": "08/31",
+      "summary": "港交所披露易发布公司公告，涉及临时股东大会/特别股东大会结果、关联交易及股份计划事项。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "公司治理",
+        "港股"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0831/2026083102679.pdf",
       "title_cn": "Circulars - [Other]",
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/31",
-      "summary": "港交所披露易发布某公司通函，类别为其他事项。",
+      "summary": "港交所披露易发布某上市公司通函（其他事项）。",
       "importance": 1,
       "rank": 0,
       "tags": [
-        "港股",
-        "公司治理"
+        "公司治理",
+        "港股"
       ],
       "locale": "national",
       "market": "hk"
     },
     {
-      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0831/2026083102265.pdf",
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0831/2026083102677.pdf",
       "title_cn": "Announcements and Notices - [Interim Results]",
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/31",
-      "summary": "港交所披露易发布某公司中期业绩公告。",
+      "summary": "港交所披露易发布某上市公司中期业绩公告。",
       "importance": 1,
       "rank": 0,
       "tags": [
-        "港股",
-        "财报"
+        "财报",
+        "港股"
       ],
       "locale": "national",
       "market": "hk"
     },
     {
-      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0831/2026083102263.pdf",
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0831/2026083102671.pdf",
       "title_cn": "Announcements and Notices - [Interim Results]",
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/31",
-      "summary": "港交所披露易发布某公司中期业绩公告。",
+      "summary": "港交所披露易发布某上市公司中期业绩公告。",
       "importance": 1,
       "rank": 0,
       "tags": [
-        "港股",
-        "财报"
+        "财报",
+        "港股"
       ],
       "locale": "national",
       "market": "hk"
     },
     {
-      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0831/2026083102259.pdf",
-      "title_cn": "Next Day Disclosure Returns - [Share Buyback]",
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0831/2026083102669.pdf",
+      "title_cn": "Circulars - [Other]",
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/31",
-      "summary": "港交所披露易出现公司次日披露报表，涉及股份回购事项。",
+      "summary": "港交所披露易发布某上市公司通函（其他事项）。",
       "importance": 1,
       "rank": 0,
       "tags": [
-        "港股",
-        "回购"
+        "公司治理",
+        "港股"
       ],
       "locale": "national",
       "market": "hk"
     },
     {
-      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0831/2026083102257.pdf",
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0831/2026083102661.pdf",
+      "title_cn": "Announcements and Notices - [Change in Directors or of Important Executive Functions or Responsibilities]",
+      "source": "港交所披露易",
+      "source_type": "media",
+      "date": "08/31",
+      "summary": "港交所披露易发布公司公告，涉及董事或重要行政职能/责任变更。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "公司治理",
+        "港股"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0831/2026083102657.pdf",
       "title_cn": "Announcements and Notices - [Interim Results]",
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/31",
-      "summary": "港交所披露易发布某公司中期业绩公告。",
+      "summary": "港交所披露易发布某上市公司中期业绩公告。",
       "importance": 1,
       "rank": 0,
       "tags": [
-        "港股",
-        "财报"
+        "财报",
+        "港股"
       ],
       "locale": "national",
       "market": "hk"
     },
     {
-      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0831/2026083102253.pdf",
-      "title_cn": "Announcements and Notices - [Dividend or Distribution]",
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0831/2026083102655.pdf",
+      "title_cn": "Announcements and Notices - [Interim Results]",
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/31",
-      "summary": "港交所披露易发布某公司公告，涉及股息或分派事项。",
+      "summary": "港交所披露易发布某上市公司中期业绩公告。",
       "importance": 1,
       "rank": 0,
       "tags": [
-        "港股",
-        "分红"
+        "财报",
+        "港股"
       ],
       "locale": "national",
       "market": "hk"
     },
     {
-      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0831/2026083102251.pdf",
-      "title_cn": "Next Day Disclosure Returns - [Share Buyback]",
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0831/2026083102653.pdf",
+      "title_cn": "Announcements and Notices - [List of Directors and their Role and Function]",
       "source": "港交所披露易",
       "source_type": "media",
       "date": "08/31",
-      "summary": "港交所披露易出现公司次日披露报表，涉及股份回购事项。",
+      "summary": "港交所披露易发布公司公告，披露最新董事名单及其角色与职能。",
       "importance": 1,
       "rank": 0,
       "tags": [
-        "港股",
-        "回购"
+        "公司治理",
+        "港股"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0831/2026083102651.pdf",
+      "title_cn": "Financial Statements/ESG Information - [Interim/Half-Year Report]",
+      "source": "港交所披露易",
+      "source_type": "media",
+      "date": "08/31",
+      "summary": "港交所披露易发布上市公司中期/半年度财务报告及ESG信息。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "财报",
+        "ESG",
+        "港股"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0831/2026083102647.pdf",
+      "title_cn": "Announcements and Notices - [Inside Information]",
+      "source": "港交所披露易",
+      "source_type": "media",
+      "date": "08/31",
+      "summary": "港交所披露易发布某上市公司内幕消息公告。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "公司治理",
+        "港股"
       ],
       "locale": "national",
       "market": "hk"
@@ -611,12 +598,12 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/31",
-      "summary": "OpenAI广告业务年化营收运行率达到10亿美元，呈现快速增长态势。",
+      "summary": "OpenAI广告业务实现快速增长，年化收入运行率达10亿美元。",
       "importance": 2,
       "rank": 0,
       "tags": [
         "AI",
-        "美股"
+        "广告"
       ],
       "locale": "overseas",
       "market": "us"
@@ -627,13 +614,12 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/31",
-      "summary": "美国与伊朗自7月以来首次互相打击，特朗普威胁针对一处战略石油枢纽。",
+      "summary": "美国与伊朗自7月以来首次互相打击，特朗普威胁打击伊朗战略石油枢纽。",
       "importance": 3,
       "rank": 0,
       "tags": [
         "地缘政治",
-        "能源",
-        "美股"
+        "能源"
       ],
       "locale": "overseas",
       "market": "us"
@@ -644,7 +630,7 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/31",
-      "summary": "CNBC评论文章提醒投资者在进入9月前保持高度警惕。",
+      "summary": "CNBC评论文章提示投资者在进入9月之际需保持高度警惕，关注季节性波动风险。",
       "importance": 1,
       "rank": 0,
       "tags": [
@@ -660,13 +646,12 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/31",
-      "summary": "保险经纪公司Aon CEO表示，将通过收购竞争对手USI打造中端市场旗舰平台。",
+      "summary": "保险经纪公司Aon宣布收购竞争对手USI，意在打造\"首屈一指的中端市场平台\"。",
       "importance": 2,
       "rank": 0,
       "tags": [
         "并购",
-        "保险",
-        "美股"
+        "保险"
       ],
       "locale": "overseas",
       "market": "us"
@@ -677,46 +662,12 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/29",
-      "summary": "OpenAI将终止向Cursor提供模型访问，Cursor已被马斯克旗下SpaceX收购。",
+      "summary": "OpenAI将终止向AI编程工具Cursor的模型访问服务，原因是Cursor被马斯克旗下SpaceX收购。",
       "importance": 2,
       "rank": 0,
       "tags": [
         "AI",
-        "并购",
-        "美股"
-      ],
-      "locale": "overseas",
-      "market": "us"
-    },
-    {
-      "url": "https://www.cnbc.com/2026/08/31/oil-prices-hormuz-iran-larak-island-centcom.html",
-      "title_cn": "Brent jumps 3% to above $90 after flare-up in U.S.-Iran hostilities",
-      "source": "CNBC Top Stories",
-      "source_type": "media",
-      "date": "08/31",
-      "summary": "受美伊冲突升级影响，布伦特原油期货上涨3%，突破每桶90美元。",
-      "importance": 3,
-      "rank": 0,
-      "tags": [
-        "原油",
-        "能源",
-        "地缘政治"
-      ],
-      "locale": "overseas",
-      "market": "us"
-    },
-    {
-      "url": "https://www.cnbc.com/2026/08/31/us-trump-hormuz-iran-kharg-larak-oil-analysts-sanctions-.html",
-      "title_cn": "U.S.-Iran escalation shows Washington's frustration with slow-moving sanctions",
-      "source": "CNBC Top Stories",
-      "source_type": "media",
-      "date": "08/31",
-      "summary": "分析指出，美伊紧张升级反映出美国对现行制裁推进缓慢的挫败感。",
-      "importance": 2,
-      "rank": 0,
-      "tags": [
-        "地缘政治",
-        "能源"
+        "并购"
       ],
       "locale": "overseas",
       "market": "us"
@@ -727,7 +678,7 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/31",
-      "summary": "美国旅游淡季窗口期正在缩短，旅客可获得的折扣也在收窄。",
+      "summary": "美国旅游淡季时间窗口正在缩短，游客可获得的淡季折扣也随之减少。",
       "importance": 1,
       "rank": 0,
       "tags": [
@@ -743,12 +694,44 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/31",
-      "summary": "曼哈顿豪宅租赁市场表现强劲，部分房源月租金达到10万美元。",
+      "summary": "曼哈顿豪宅租赁市场表现火爆，部分房源月租金达到10万美元。",
       "importance": 1,
       "rank": 0,
       "tags": [
         "地产",
-        "美股"
+        "消费"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/08/31/us-trump-hormuz-iran-kharg-larak-oil-analysts-sanctions-.html",
+      "title_cn": "U.S.-Iran escalation shows Washington's frustration with slow-moving sanctions",
+      "source": "CNBC Top Stories",
+      "source_type": "media",
+      "date": "08/31",
+      "summary": "CNBC分析指出，美国此次与伊朗冲突升级反映了华盛顿对既有制裁推进缓慢的不满。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "地缘政治",
+        "能源"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/08/31/oil-prices-hormuz-iran-larak-island-centcom.html",
+      "title_cn": "Brent jumps 3% to above $90 after flare-up in U.S.-Iran hostilities",
+      "source": "CNBC Top Stories",
+      "source_type": "media",
+      "date": "08/31",
+      "summary": "受美伊冲突升级影响，布伦特原油期货上涨3%，突破90美元/桶。",
+      "importance": 3,
+      "rank": 0,
+      "tags": [
+        "能源",
+        "原油"
       ],
       "locale": "overseas",
       "market": "us"
@@ -759,43 +742,43 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/31",
-      "summary": "仲裁机构裁定，加密交易所Gemini对Earn借贷产品崩溃不承担责任。",
+      "summary": "仲裁机构裁定加密交易所Gemini对旗下Earn借贷产品崩塌事件不承担过错责任。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "加密货币",
+        "监管"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.investing.com/news/cryptocurrency-news/bitcoin-falls-below-78k-as-rate-jitters-iran-escalation-weigh-4882178",
+      "title_cn": "Bitcoin dips below $78k amid Iran escalation, rate jitters",
+      "source": "Investing.com News",
+      "source_type": "media",
+      "date": "08/31",
+      "summary": "受美伊局势升级及利率担忧影响，比特币跌破7.8万美元。",
       "importance": 2,
       "rank": 0,
       "tags": [
         "加密货币",
-        "美股"
+        "比特币"
       ],
       "locale": "overseas",
       "market": "us"
     },
     {
-      "url": "https://www.investing.com/news/stock-market-news/openai-advertising-business-passes-1-billion-in-annual-revenue-4882849",
-      "title_cn": "OpenAI advertising business passes $1 billion in annual revenue",
+      "url": "https://www.investing.com/news/stock-market-news/why-is-tesla-stock-climbing-today-93CH-4882938",
+      "title_cn": "Why is Tesla stock climbing today?",
       "source": "Investing.com News",
       "source_type": "media",
       "date": "08/31",
-      "summary": "OpenAI广告业务年化营收已突破10亿美元。",
-      "importance": 2,
-      "rank": 0,
-      "tags": [
-        "AI",
-        "美股"
-      ],
-      "locale": "overseas",
-      "market": "us"
-    },
-    {
-      "url": "https://www.investing.com/news/stock-market-news/wall-street-analysts-bullish-on-attovia-as-itch-drug-data-fuel-biotech-optimism-4882848",
-      "title_cn": "Wall Street analysts bullish on Attovia as itch drug data fuel biotech optimism",
-      "source": "Investing.com News",
-      "source_type": "media",
-      "date": "08/31",
-      "summary": "华尔街分析师看好Attovia，其止痒药物临床数据提振生物科技板块情绪。",
+      "summary": "市场关注特斯拉当日股价上涨原因，Investing.com进行原因解读。",
       "importance": 1,
       "rank": 0,
       "tags": [
-        "医药",
+        "新能源车",
         "美股"
       ],
       "locale": "overseas",
