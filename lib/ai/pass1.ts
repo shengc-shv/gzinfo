@@ -108,8 +108,16 @@ function hitsBanned(s: string): boolean {
 }
 
 /**
- * 对单批输入调用 LLM，返回 URL → AI 判断 的字典；解析失败返回空字典（记 warn）。
+ * 对单批输入调用 LLM，返回 URL → AI 判断 的字典；解析失败重试后再放弃（记 warn）。
+ *
+ * 2026-08-31 加重试：BATCH_SIZE=30 而实际每日进管线的常只有 20 条左右 →
+ * **一批就是全部**。一次坏 JSON（实测 `Colon expected at position 2457`）就会把
+ * 当日正文整批丢弃，报告静默退化成「只有历史滚动条目」（实测 policy_market 9 → 3）。
+ * LLM 输出有随机性，重试一次通常就能拿到合法 JSON；与 PASS2 的
+ * MAX_PASS2_RETRY 回炉机制同一思路。成功路径零额外成本（只在失败时才多调一次）。
  */
+const PASS1_BATCH_RETRY = 1;
+
 async function runPass1Batch(
   batch: Pass1Input[],
   runner: LlmRunner,
@@ -124,26 +132,40 @@ async function runPass1Batch(
     ...(a.gz_hint ? { gz_hint: true } : {}),
   }));
   const userPrompt = buildPass1User(JSON.stringify(payload));
-  try {
-    const raw = await runner(PASS1_SYSTEM, userPrompt);
-    const cleaned = extractJson(raw);
-    let parsed: { items?: any[] };
+  for (let attempt = 1; attempt <= PASS1_BATCH_RETRY + 1; attempt++) {
     try {
-      parsed = JSON.parse(cleaned);
-    } catch {
-      const { jsonrepair } = await import("jsonrepair");
-      parsed = JSON.parse(jsonrepair(cleaned));
+      const raw = await runner(PASS1_SYSTEM, userPrompt);
+      const cleaned = extractJson(raw);
+      let parsed: { items?: any[] };
+      try {
+        parsed = JSON.parse(cleaned);
+      } catch {
+        const { jsonrepair } = await import("jsonrepair");
+        parsed = JSON.parse(jsonrepair(cleaned));
+      }
+      const map = new Map<string, any>();
+      for (const it of parsed.items ?? []) {
+        if (it && typeof it.url === "string") map.set(it.url, it);
+      }
+      if (map.size === 0 && batch.length > 0) {
+        // 解析成功但一条都没回 → 多半是 LLM 吐了空壳，同样按失败处理触发重试
+        throw new Error("解析成功但 items 为空（LLM 返回空壳）");
+      }
+      if (attempt > 1) {
+        console.log(`[pass1] 第 ${attempt} 次尝试成功，挽回 ${map.size} 条`);
+      }
+      return map;
+    } catch (e) {
+      const msg = e instanceof Error ? e.message : String(e);
+      if (attempt <= PASS1_BATCH_RETRY) {
+        console.warn(`[pass1] 批次解析失败（第 ${attempt} 次，重试中）: ${msg}`);
+        continue;
+      }
+      console.warn(`[pass1] 批次调用失败（${batch.length} 条按丢弃）: ${msg}`);
+      return new Map();
     }
-    const map = new Map<string, any>();
-    for (const it of parsed.items ?? []) {
-      if (it && typeof it.url === "string") map.set(it.url, it);
-    }
-    return map;
-  } catch (e) {
-    const msg = e instanceof Error ? e.message : String(e);
-    console.warn(`[pass1] 批次调用失败（${batch.length} 条按丢弃）: ${msg}`);
-    return new Map();
   }
+  return new Map();
 }
 
 /**
