@@ -11,6 +11,7 @@ import type { TickerAnalysis } from "./trading/signals";
 import type { CryptoGlobalStats } from "./trading/coingecko";
 import type { FearGreedSnapshot } from "./trading/fear-greed";
 import type { TradingCommentary, WatchlistPick } from "./ai/trading-commentary";
+import type { Tier, Vertical } from "./ai/relevance-score";
 
 export interface BriefItem {
   title: string;
@@ -196,6 +197,25 @@ export interface TradingSection {
   crypto_global?: CryptoGlobalStats;
 }
 
+/**
+ * 漏斗三（业务价值取前）写回的价值标签（2026-08-31 3漏斗整改 commit③，零 AI）。
+ * 由 `takeTopByValue` 调 `scoreBranchRelevance` 产出，确定性、可解释、免费；
+ * 供第⑤步 executive-summary（LLM 口播）直接消费 tier/businessLines/risk，
+ * 不再让 LLM 重新解读标题，口播更准、更省 token。
+ */
+export interface ValueTag {
+  /** 优先级档位（与 scoreBranchRelevance 同口径） */
+  tier: Tier;
+  /** 0-100 综合分行相关性分 */
+  score: number;
+  /** 命中的业务线（按权重降序，取前 3） */
+  businessLines: string[];
+  /** 落位建议：risk = 威胁/合规向（进风险卡） */
+  vertical: Vertical;
+  /** 是否风险/合规向 */
+  risk: boolean;
+}
+
 export interface ArticleInput extends RawArticle {
   source: string;
   /** 外文标题中文化（2026-08-21 重构 #20）：仅今日必读/商机洞察选中的条目由主编回写中文标题 */
@@ -207,4 +227,9 @@ export interface ArticleInput extends RawArticle {
    * 硬编码 `a.category === "gd-ipo" || a.category === "ipo"` 的脆弱写法。
    */
   isIpo?: boolean;
+  /**
+   * 漏斗三价值标签（2026-08-31 3漏斗整改 commit③）：经 `takeTopByValue` 取前后写回，
+   * 含 tier/score/businessLines/vertical/risk，供 exec 口播直接消费。
+   */
+  valueTag?: ValueTag;
 }

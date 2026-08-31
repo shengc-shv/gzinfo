@@ -15,7 +15,7 @@
  *   4. keyword-funnel       —— 银行零售关键词漏斗（v4，五维命中 + 五商机追踪器）
  *   5. title-similarity     —— 标题相似度判重（同主题/同 tier）
  *   6. cross-day-dedup      —— 跨天标题判重（与历史库先来者合并）
- *   7. per-source-cap-10    —— 每源限额（每源 ≤ LIGHT_AI_MAX_PER_SOURCE=10）
+ *   7. value-top           —— 漏斗三 业务价值取前（全局按分行相关性取前 + 每源多样性封顶 + 写回 valueTag）
  *
  * 行为差异：keyword-funnel stage 移除了原 main 中给 article 写 filterBucket/filterDimensions/
  * filterOpportunities 的"幽灵字段"——grep 验证全仓无读，**这是死代码**（与 PR1 死代码清理同性质）。
@@ -39,8 +39,7 @@ import {
   type HistorySimilarEntry,
 } from "../../ingest/dedup-similar";
 import { FETCH_WINDOW_DAYS } from "../../output/history";
-import { capLightAiSources, LIGHT_AI_MAX_PER_SOURCE } from "../../ai/light-ai";
-import { scoreBranchRelevance } from "../../ai/relevance-score";
+import { takeTopByValue, VALUE_TOP_N, VALUE_MAX_PER_SOURCE } from "../../ai/light-ai";
 import type { ArticleInput } from "../../types";
 import type { FilterStage } from "./types";
 
@@ -218,42 +217,33 @@ const crossDayDedupStage: FilterStage = {
 };
 
 /**
- * Stage 9：每源限额（2026-08-25 用户指令：所有媒体源每源 ≤10 条进 LLM 分析/展示）。
+ * 漏斗三（业务价值取前，零 AI，2026-08-31 3漏斗整改 commit③）：
+ * 替代原「每源限额」——全局按分行相关性评分降序取前 VALUE_TOP_N（默认 60），
+ * 叠加每源 ≤ VALUE_MAX_PER_SOURCE（默认 8）多样性封顶，并写回 valueTag（供 exec 口播消费）。
+ * 符合「按业务价值优先级取靠前」；确定性、免费、可单测。
  * 注：无发布时间兜底（原 Stage8）已归位归一采集——ingest.ts:73 源层丢弃无 publishedAt，
  * 且 filterByWindow/filterRecentDays/isFreshEntry 已去除 fetchedAt/lastSeenAt 兜底；
  * 此处不再重复守卫。
  */
-const perSourceCapStage: FilterStage = {
-  name: "per-source-cap-10",
+const funnelValueTopStage: FilterStage = {
+  name: "value-top",
   apply: (articles, ctx) => {
     const before = articles.length;
-    // 2026-08-29 价值预筛：每源限额不再「取最新」，改用分行相关性评分降序——
-    // 高分行相关性条目优先进 AI，低价值条目让位（命中「价值优先」+「节约AI」）。
-    const out = capLightAiSources(
-      articles,
-      ctx.allSourceIds,
-      LIGHT_AI_MAX_PER_SOURCE,
-      (a) =>
-        scoreBranchRelevance({
-          title: a.title_cn ?? a.title ?? "",
-          summary: a.summary ?? "",
-          sourceId: a.source,
-          category: a.category,
-          subcategory: a.subcategory,
-          url: a.url,
-        }).score,
-    );
+    const out = takeTopByValue(articles, {
+      topN: VALUE_TOP_N,
+      maxPerSource: VALUE_MAX_PER_SOURCE,
+    });
     if (out.length < before) {
       ctx.log.info(
         "filter",
-        `🔻 每源限额: 移除 ${before - out.length} 条（全部媒体源每源≤${LIGHT_AI_MAX_PER_SOURCE} 条进 LLM 分析/展示）`,
+        `💎 漏斗三 业务价值取前: ${before} → ${out.length} 条（全局按分行相关性取前 ${VALUE_TOP_N}，每源≤${VALUE_MAX_PER_SOURCE} 多样性封顶，已写回 valueTag）`,
       );
     }
     return out;
   },
 };
 
-/** 过滤 stage 顺序数组（3 漏斗整改中：删冗余 Stage6、归位 Stage8；最终收敛为 3 漏斗）。 */
+/** 过滤 stage 顺序数组（3 漏斗整改中：删冗余 Stage6、归位 Stage8、漏斗三升级为全局价值取前；最终收敛为 3 漏斗）。 */
 export const FILTER_STAGES: FilterStage[] = [
   preWindowStage,
   singleInstitutionStage,
@@ -261,5 +251,5 @@ export const FILTER_STAGES: FilterStage[] = [
   keywordFunnelStage,
   titleSimilarityStage,
   crossDayDedupStage,
-  perSourceCapStage,
+  funnelValueTopStage,
 ];
