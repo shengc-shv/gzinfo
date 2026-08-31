@@ -80,6 +80,10 @@ async function fetchAllSources(ctx: DailyContext): Promise<ArticleInput[]> {
           ...it,
           source: source.name,
           tier: source.tier,
+          // IPO 内容态（2026-08-31 3漏斗整改 commit②）：RSS/API 源直接进 articles，
+          // 不经 toMergeArticle，故此处按归一化 category=gd-ipo/ipo 兜底标注 isIpo，
+          // 供过滤层豁免单机构/相似度/跨天去重/窗口（替代原硬编码 category 字符串判断）。
+          isIpo: it.category === "gd-ipo" || it.category === "ipo",
           // B：excerpt fallback（2026-08-28 用户反馈：用户给的 URL 抓时 excerpt 空，
           //   history 写入后 mergeRolling 看 summary 为空踢出 → 板块看不到）。
           //   无 excerpt 时用 title 前 90 字符占位（保证 history.excerpt 非空）。

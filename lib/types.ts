@@ -200,4 +200,11 @@ export interface ArticleInput extends RawArticle {
   source: string;
   /** 外文标题中文化（2026-08-21 重构 #20）：仅今日必读/商机洞察选中的条目由主编回写中文标题 */
   title_cn?: string;
+  /**
+   * IPO 内容态（2026-08-31 3漏斗整改 commit②，红线：过滤行为不得依赖源分类字符串）。
+   * 归一化入口（fetchAllSources 按 category=gd-ipo/ipo、toMergeArticle 按 routeRegion 结果）
+   * 在采集期一次性标注；过滤层据此豁免单机构/标题相似度/跨天去重/源层窗口，替代原先
+   * 硬编码 `a.category === "gd-ipo" || a.category === "ipo"` 的脆弱写法。
+   */
+  isIpo?: boolean;
 }

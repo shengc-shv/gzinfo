@@ -52,13 +52,11 @@ const preWindowStage: FilterStage = {
   name: "pre-window-2d",
   apply: (articles, ctx) => {
     const before = articles.length;
-    // 2026-08-30 修复（用户：东财在审表抓取 2 条但报告 0 条）：IPO 类（gd-ipo/ipo）
+    // 2026-08-30 修复（用户：东财在审表抓取 2 条但报告 0 条）：IPO 类（isIpo 内容态，归一化入口按 gd-ipo/ipo 标注）
     // 由爬虫已按 7 天窗口 + 负面状态预筛，更新稀疏（几天一更），套用全局 2 天窗口会全被截掉。
     // 故 IPO 类用 7 天窗口，其余保持 2 天（避免 RSS 滚动列表混入旧文白抓）。
-    const ipo = articles.filter((a) => a.category === "gd-ipo" || a.category === "ipo");
-    const others = articles.filter(
-      (a) => a.category !== "gd-ipo" && a.category !== "ipo",
-    );
+    const ipo = articles.filter((a) => a.isIpo === true);
+    const others = articles.filter((a) => a.isIpo !== true);
     const out = [...filterByWindow(ipo, 7), ...filterByWindow(others, FETCH_WINDOW_DAYS)];
     if (out.length !== before) {
       ctx.log.info(
@@ -78,13 +76,11 @@ const singleInstitutionStage: FilterStage = {
   name: "single-institution",
   apply: (articles, ctx) => {
     const before = articles.length;
-    // 2026-08-30 修复（用户：东财在审表抓取 2 条但报告 0 条）：IPO 类（gd-ipo/ipo）条目
+    // 2026-08-30 修复（用户：东财在审表抓取 2 条但报告 0 条）：IPO 类（isIpo 内容态，归一化入口按 gd-ipo/ipo 标注）条目
     // excerpt 含「保荐：XX证券股份有限公司」，会被单机构过滤误判为「单家金融机构新闻」丢弃。
     // IPO 进展的保荐机构非新闻主体，故 IPO 类豁免单机构过滤，其余保持原规则。
-    const ipo = articles.filter((a) => a.category === "gd-ipo" || a.category === "ipo");
-    const others = articles.filter(
-      (a) => a.category !== "gd-ipo" && a.category !== "ipo",
-    );
+    const ipo = articles.filter((a) => a.isIpo === true);
+    const others = articles.filter((a) => a.isIpo !== true);
     const out = [...ipo, ...filterSingleInstitution(others)];
     if (out.length !== before) {
       ctx.log.info(
@@ -169,14 +165,12 @@ const titleSimilarityStage: FilterStage = {
   enabled: () => dedupSimilarEnabled(),
   apply: (articles, ctx) => {
     const dd = loadDedupConfig();
-    // 2026-08-30 修复（用户：东财在审表抓取 2 条但报告 0 条）：IPO 类（gd-ipo/ipo）两家不同企业
+    // 2026-08-30 修复（用户：东财在审表抓取 2 条但报告 0 条）：IPO 类（isIpo 内容态，归一化入口按 gd-ipo/ipo 标注）两家不同企业
     // 会共享「IPO/北交所」事件锚点被 sameEvent 判同事件、再因爬虫未带 tier 触发「同 tier 只留 1」
     // 而压成 1 条。IPO 在审企业各自独立事件，豁免标题相似度去重（爬虫已按 URL 去重；
     // 跨天去重 stage7 仍生效防同公司跨日重复），让多家企业同日均能展示。
-    const ipo = articles.filter((a) => a.category === "gd-ipo" || a.category === "ipo");
-    const others = articles.filter(
-      (a) => a.category !== "gd-ipo" && a.category !== "ipo",
-    );
+    const ipo = articles.filter((a) => a.isIpo === true);
+    const others = articles.filter((a) => a.isIpo !== true);
     const before = articles.length;
     const { kept, removed } = dedupeByTitleSimilarity(others, {
       threshold: dd.threshold,
@@ -205,13 +199,11 @@ const crossDayDedupStage: FilterStage = {
       url: e.url,
       tier: ctx.tierBySource.get(e.sourceId),
     }));
-    // 2026-08-30 修复（BUG B）：IPO 类（gd-ipo/ipo）是「最近一周动态」滚动视图，
+    // 2026-08-30 修复（BUG B）：IPO 类（isIpo 内容态，归一化入口按 gd-ipo/ipo 标注）是「最近一周动态」滚动视图，
     // 同一家企业在 7 天窗口内每天重抓都应持续展示，不应被「历史库已覆盖」判重剔除
     // （否则会出现「抓取 N 条但报告 0 条」）。故 IPO 类豁免跨天去重，其余保持原规则。
-    const ipo = articles.filter((a) => a.category === "gd-ipo" || a.category === "ipo");
-    const others = articles.filter(
-      (a) => a.category !== "gd-ipo" && a.category !== "ipo",
-    );
+    const ipo = articles.filter((a) => a.isIpo === true);
+    const others = articles.filter((a) => a.isIpo !== true);
     const before = articles.length;
     const { kept, removed } = dedupeAgainstHistory(others, histSim, { maxPerTheme: 2 });
     const out = [...ipo, ...kept];

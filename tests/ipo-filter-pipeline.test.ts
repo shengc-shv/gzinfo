@@ -8,7 +8,7 @@
  *   - single-institution：excerpt 含「保荐：XX证券股份有限公司」，被当成单家金融机构新闻丢；
  *   - title-similarity：两家不同企业共享「IPO/北交所」事件锚点被判同事件 + 爬虫未带 tier
  *     触发「同 tier 只留 1」压成 1。
- * 三处均已改为「gd-ipo/ipo 类豁免」，本测试锁住该行为，防止回退。
+ * 三处均已改为「isIpo 内容态豁免」（归一化入口按 category=gd-ipo/ipo 标注），本测试锁住该行为，防止回退。
  */
 import { test } from "node:test";
 import assert from "node:assert/strict";
@@ -45,6 +45,9 @@ const makeIpo = (over: Partial<ArticleInput>): ArticleInput =>
     url: "https://example.com/x",
     excerpt: "",
     category: "gd-ipo",
+    // 2026-08-31 3漏斗整改 commit②：过滤层改按 isIpo 内容态豁免，构造须带 isIpo:true
+    // （与运行时归一化入口 fetchAllSources/toMergeArticle 按 category=gd-ipo/ipo 标注一致）
+    isIpo: true,
     publishedAt: new Date(),
     ...over,
   }) as ArticleInput;

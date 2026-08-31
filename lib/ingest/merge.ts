@@ -62,6 +62,12 @@ export interface MergeArticle {
   registeredProvince?: string;
   /** 已知股票代码（透传，供广东判定离线精确匹配）。 */
   stockCode?: string;
+  /**
+   * IPO 内容态（2026-08-31 3漏斗整改 commit②，红线：过滤行为不得依赖源分类字符串）。
+   * routeRegion 解析出 category=gd-ipo/ipo 时为真；过滤层据此豁免单机构/相似度/
+   * 跨天去重/窗口，替代原硬编码 category 字符串判断。
+   */
+  isIpo?: boolean;
 }
 
 export interface RouteOpts {
@@ -116,6 +122,10 @@ export function toMergeArticle(
     // 2026-08-27 核心规则：无发布时间直接 discarded — 上游调用方（fetchCrawledArticles
     // 入口或 filter 阶段 no-date-fallback）负责丢弃，不再写 fetchedAt 兜底。
     category,
+    // IPO 内容态（3漏斗整改 commit②）：爬虫产物归一化时按 routeRegion 结果兜底标注，
+    // 供过滤层豁免。category 为 gd-ipo/ipo 即 IPO（region=gz 时归 gz 辖区不在此列，
+    // 与旧硬编码 category 豁免口径完全一致）。
+    ...(category === REGION_GD_IPO || category === REGION_IPO ? { isIpo: true } : {}),
     summary: item.summary || "",
     ...(item.tier ? { tier: item.tier } : {}),
     ...(item.registeredProvince ? { registeredProvince: item.registeredProvince } : {}),
