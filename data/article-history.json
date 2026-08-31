@@ -5617,18 +5617,6 @@
     "firstSeenAt": "2026-08-31T22:45:33.684Z",
     "lastSeenAt": "2026-08-31T22:45:33.684Z"
   },
-  "https://data.eastmoney.com/xg/xg/#A25256": {
-    "title": "尚睿科技：IPO问询中（拟北交所）",
-    "url": "https://data.eastmoney.com/xg/xg/#A25256",
-    "sourceId": "em-declare",
-    "source": "东财IPO在审(广东)",
-    "category": "gd-ipo",
-    "subcategory": "ipo-tutoring",
-    "excerpt": "注册地：广东｜保荐：广发证券股份有限公司｜更新：2026-08-27",
-    "publishedAt": "2026-08-27T00:00:00.000Z",
-    "firstSeenAt": "2026-08-31T22:53:09.020Z",
-    "lastSeenAt": "2026-08-31T22:53:09.020Z"
-  },
   "https://www.stcn.com/article/detail/4166438.html": {
     "title": "中控技术2026年半年报：工业AI已成核心增长引擎 转型工业AI价值服务商",
     "url": "https://www.stcn.com/article/detail/4166438.html",
@@ -5748,5 +5736,101 @@
     "publishedAt": "2026-08-31T00:00:00.000Z",
     "firstSeenAt": "2026-08-31T22:53:09.020Z",
     "lastSeenAt": "2026-08-31T22:53:09.020Z"
+  },
+  "https://data.eastmoney.com/xg/xg/#A25256": {
+    "title": "尚睿科技：IPO问询中（拟北交所）",
+    "url": "https://data.eastmoney.com/xg/xg/#A25256",
+    "sourceId": "em-declare",
+    "source": "东财IPO在审(广东)",
+    "category": "gd-ipo",
+    "subcategory": "ipo-tutoring",
+    "excerpt": "注册地：广东｜保荐：广发证券股份有限公司｜更新：2026-08-27",
+    "publishedAt": "2026-08-27T00:00:00.000Z",
+    "firstSeenAt": "2026-08-31T23:08:19.420Z",
+    "lastSeenAt": "2026-08-31T23:08:19.420Z"
+  },
+  "https://finance.sina.com.cn/roll/2026-09-01/doc-iniqfzhi8584392.shtml": {
+    "title": "鹰派“冷箭”击穿4400美元关口 黄金涨势或短暂承压",
+    "url": "https://finance.sina.com.cn/roll/2026-09-01/doc-iniqfzhi8584392.shtml",
+    "sourceId": "sina-money",
+    "source": "新浪财经·理财保险",
+    "category": "gz",
+    "subcategory": "cn-finance",
+    "excerpt": "【财富管理】鹰派“冷箭”击穿4400美元关口 黄金涨势或短暂承压",
+    "publishedAt": "2026-09-01T00:00:00.000Z",
+    "firstSeenAt": "2026-08-31T23:08:19.420Z",
+    "lastSeenAt": "2026-08-31T23:08:19.420Z"
+  },
+  "https://www.cnfin.com/hg-lb/detail/20260901/4463109_1.html": {
+    "title": "云南发文部署进一步发挥期货市场功能",
+    "url": "https://www.cnfin.com/hg-lb/detail/20260901/4463109_1.html",
+    "sourceId": "cnfin",
+    "source": "新华财经",
+    "category": "finance",
+    "subcategory": "cn-finance",
+    "excerpt": "云南发文部署进一步发挥期货市场功能",
+    "publishedAt": "2026-09-01T00:00:00.000Z",
+    "firstSeenAt": "2026-08-31T23:08:19.420Z",
+    "lastSeenAt": "2026-08-31T23:08:19.420Z"
+  },
+  "https://www.cnfin.com/yw-lb/detail/20260901/4463104_1.html": {
+    "title": "锂电材料业绩全面爆发 涨价有支撑 景气可持续",
+    "url": "https://www.cnfin.com/yw-lb/detail/20260901/4463104_1.html",
+    "sourceId": "cnfin",
+    "source": "新华财经",
+    "category": "finance",
+    "subcategory": "cn-finance",
+    "excerpt": "锂电材料业绩全面爆发 涨价有支撑 景气可持续",
+    "publishedAt": "2026-09-01T00:00:00.000Z",
+    "firstSeenAt": "2026-08-31T23:08:19.420Z",
+    "lastSeenAt": "2026-08-31T23:08:19.420Z"
+  },
+  "https://www.cnfin.com/hg-lb/detail/20260901/4463108_1.html": {
+    "title": "8月制造业PMI升至49.8% 新动能保持稳定扩张",
+    "url": "https://www.cnfin.com/hg-lb/detail/20260901/4463108_1.html",
+    "sourceId": "cnfin",
+    "source": "新华财经",
+    "category": "finance",
+    "subcategory": "cn-finance",
+    "excerpt": "8月制造业PMI升至49.8% 新动能保持稳定扩张",
+    "publishedAt": "2026-09-01T00:00:00.000Z",
+    "firstSeenAt": "2026-08-31T23:08:19.420Z",
+    "lastSeenAt": "2026-08-31T23:08:19.420Z"
+  },
+  "https://finance.sina.com.cn/roll/2026-09-01/doc-iniqhmwh1496988.shtml": {
+    "title": "半年报观察：价值创造引领，建设银行高质量发",
+    "url": "https://finance.sina.com.cn/roll/2026-09-01/doc-iniqhmwh1496988.shtml",
+    "sourceId": "sina-a-stock",
+    "source": "新浪财经·A股",
+    "category": "stocks",
+    "subcategory": "a-share",
+    "excerpt": "半年报观察：价值创造引领，建设银行高质量发",
+    "publishedAt": "2026-09-01T00:00:00.000Z",
+    "firstSeenAt": "2026-08-31T23:08:19.420Z",
+    "lastSeenAt": "2026-08-31T23:08:19.420Z"
+  },
+  "https://finance.sina.com.cn/roll/2026-09-01/doc-iniqhmwh1496884.shtml": {
+    "title": "21专访丨摩根大通中国股票策略师张晓宁：沪深",
+    "url": "https://finance.sina.com.cn/roll/2026-09-01/doc-iniqhmwh1496884.shtml",
+    "sourceId": "sina-a-stock",
+    "source": "新浪财经·A股",
+    "category": "stocks",
+    "subcategory": "a-share",
+    "excerpt": "21专访丨摩根大通中国股票策略师张晓宁：沪深",
+    "publishedAt": "2026-09-01T00:00:00.000Z",
+    "firstSeenAt": "2026-08-31T23:08:19.420Z",
+    "lastSeenAt": "2026-08-31T23:08:19.420Z"
+  },
+  "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0901/2026090100071.pdf": {
+    "title": "Announcements and Notices - [Change in Directors or of Important Executive Functions or Responsibilities / Change of Audit Committee Member / Change of Nomination Committee Member / Change of Remuneration Committee Member]",
+    "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0901/2026090100071.pdf",
+    "sourceId": "hkex-stock",
+    "source": "港交所披露易",
+    "category": "stocks",
+    "subcategory": "hk",
+    "excerpt": "Announcements and Notices - [Change in Directors or of Important Executive Functions or Responsibilities / Change of Audit...More]",
+    "publishedAt": "2026-09-01T00:00:00.000Z",
+    "firstSeenAt": "2026-08-31T23:08:19.420Z",
+    "lastSeenAt": "2026-08-31T23:08:19.420Z"
   }
 }
