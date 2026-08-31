@@ -20,6 +20,7 @@ import type { DailyContext } from "../context";
 import { buildExecutiveSummary } from "./executive-summary";
 import { buildStockRecap } from "./stock-recap";
 import { buildStockNews } from "./stock-news";
+import { buildGdIpo } from "./gd-ipo";
 
 /**
  * 执行三个旁路，返回最终 report。
@@ -41,5 +42,7 @@ export async function buildSideOutputs(
   report = await buildStockRecap(report, rawArticles, crawled, ctx);
   // 3. 股市消息清单
   report = await buildStockNews(report, rawArticles, crawled, ctx);
+  // 4. 广东地区IPO（绕过相关性 LLM，直接从 filteredArticles 构建，2026-08-30 实跑修复）
+  report = buildGdIpo(report, filteredArticles, ctx);
   return report;
 }

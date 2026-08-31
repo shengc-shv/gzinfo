@@ -1546,8 +1546,9 @@ export function renderHtml(
     { id: "p-biz", label: "业务启示", section: "biz_insight", cls: "var(--c-biz)", count: bizInsight.length, items: bizInsight, alwaysShow: false, emptyHint: "今日暂无业务启示" },
     { id: "p-pol", label: "政策与市场", section: "policy_market", cls: "var(--c-pol)", count: policyMarket.length, items: policyMarket, alwaysShow: false, emptyHint: "今日暂无政策与市场动态" },
     { id: "p-tech", label: "科技前沿", section: "tech", cls: "var(--c-tech)", count: techAll.length, items: techAll, alwaysShow: false, emptyHint: "今日暂无科技前沿" },
-    // 2026-08-25 用户决定：IPO 功能全部废弃（明天重新设计方案），tab 隐藏（代码保留）
-    // { id: "p-ipo", label: "IPO动态", section: "ipo", cls: "var(--c-ipo)", count: ipoAll.length, items: ipoAll },
+    // 2026-08-30 重启（D-009）：广东 IPO 板块由 buildGdIpo side-output 直接构建（绕过 LLM），
+    // sections['ipo'] 非空即展示；空则不显示（与其它板块同取舍）。
+    { id: "p-ipo", label: "IPO动态", section: "ipo", cls: "var(--c-ipo)", count: ipoAll.length, items: ipoAll, alwaysShow: false, emptyHint: "今日暂无广东IPO动态" },
   ].filter((t) => t.count > 0 || t.alwaysShow);
 
   const totalItems = gzLocal.length + bizInsight.length + policyMarket.length + techAll.length;

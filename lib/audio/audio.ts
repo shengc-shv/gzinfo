@@ -21,6 +21,10 @@ import type { ReportItem, StockRecap } from "../types";
 import { isGdIpoCandidate } from "../output/render/cards";
 // 2026-08-30：股市口播按市场注入时区+日期（美股=美东 / A股港股=北京），复用统一日期格式避免漂移。
 import { formatCnDate } from "../pipeline/side-outputs/stock-recap";
+// 2026-08-30：广东IPO 口播改为确定性拼装（免 LLM）。原因：相关性 LLM 会把 gd-ipo 条目
+// 整体丢弃（CI run 33315502473 line 828-829 实证），exec.guangdong_ipo.spoken 恒为空；
+// 板块改为 side-output 直接构建后，口播必须能脱离 LLM 独立产出，否则「广东IPO=无」。
+import { buildGdIpoSpoken } from "../pipeline/side-outputs/gd-ipo";
 
 /** 播放器元数据：renderHtml 注入 sticky 播放器时使用。 */
 export interface AudioMeta {
@@ -135,7 +139,11 @@ export function detectGdIpo(ipoItems: ReportItem[]): string[] {
   for (const it of ipoItems) {
     const title = it.title_cn || "";
     const summary = it.summary || "";
-    if (isGdIpoCandidate(title, summary)) {
+    // 「粤」标 = side-output buildGdIpo 给结构化 gd-ipo 条目打的标记（东财在审表）；
+    // 该类条目标题形如「尚睿科技：IPO已受理（拟A股）」，不含 IPO_PROGRESS_RE 强词
+    // （"已受理" 不在强词表内），只靠正则会整批漏掉 → 标签优先，正则兜底。
+    const isGd = it.tags?.includes("粤") || isGdIpoCandidate(title, summary);
+    if (isGd) {
       out.push(`${title} ${summary}`.trim().slice(0, 200));
       if (out.length >= 5) break;
     }
@@ -291,13 +299,22 @@ export async function assembleAudioScript(
   if (ipo) {
     console.log("✅ 广东IPO条目：取上游产出");
   } else {
-    const clues = detectGdIpo(ipoItems);
-    if (clues.length) {
-      console.warn("::warning:: 上游未产出广东IPO口播稿，但检测到相关线索，触发兜底生成");
-      const fb = await fallbackGdIpo(clues);
-      if (fb) {
-        ipo = sanitize(fb);
-        console.log("✅ 广东IPO条目：兜底生成成功");
+    // ① 确定性拼装（免 LLM，AI / SKIP_AI 双模式可用）：IPO 板块由 side-output 直接构建，
+    //    结构化 gd-ipo 条目带「粤」标，直接取前 2 条企业名拼口播，一句不依赖 LLM。
+    const spoken = buildGdIpoSpoken(ipoItems);
+    if (spoken) {
+      ipo = sanitize(spoken);
+      console.log("✅ 广东IPO条目：确定性拼装（side-output 板块，免 LLM）");
+    } else {
+      // ② 媒体源线索 → LLM 兜底（仅在确实有线索且非 SKIP_AI 时）
+      const clues = detectGdIpo(ipoItems);
+      if (clues.length) {
+        console.warn("::warning:: 上游未产出广东IPO口播稿，但检测到相关线索，触发兜底生成");
+        const fb = await fallbackGdIpo(clues);
+        if (fb) {
+          ipo = sanitize(fb);
+          console.log("✅ 广东IPO条目：兜底生成成功");
+        }
       }
     }
   }

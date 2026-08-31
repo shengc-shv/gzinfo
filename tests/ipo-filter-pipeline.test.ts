@@ -17,6 +17,25 @@ import { EastMoneyDeclareCrawler } from "../lib/sources/crawlers/sources/eastmon
 import type { ArticleInput } from "../lib/types";
 import type { DailyContext } from "../lib/pipeline/context";
 
+/**
+ * ⚠️ mock 日期一律相对今天动态生成，绝不写死（2026-08-31 踩坑记录）：
+ * 初版把 publishedAt 写死成 2026-08-27 / 2026-08-24，随真实日期推移
+ * （08-30 → 08-31）条目滑出爬虫 7 天窗口与过滤 2 天窗口，测试结果当天通过、
+ * 次日随机失败（且同一天不同时刻因「窗口按时刻算」也会翻）。这里统一用
+ * daysAgo()/endDateAgo() 生成，保证任何一天跑都是同一语义。
+ */
+const DAY = 86_400_000;
+/** n 天前的同一时刻（Date） */
+const daysAgo = (n: number): Date => new Date(Date.now() - n * DAY);
+/** n 天前的 YYYY-MM-DD（东财 END_DATE 格式） */
+const endDateAgo = (n: number): string => {
+  const d = daysAgo(n);
+  const p = (x: number) => String(x).padStart(2, "0");
+  return `${d.getFullYear()}-${p(d.getMonth() + 1)}-${p(d.getDate())}`;
+};
+/** 今日 YYYY-MM-DD（ctx.date） */
+const todayKey = endDateAgo(0);
+
 // 模拟东财在审表真实产出（含保荐券商、几天前更新日）
 const makeIpo = (over: Partial<ArticleInput>): ArticleInput =>
   ({
@@ -32,7 +51,7 @@ const makeIpo = (over: Partial<ArticleInput>): ArticleInput =>
 
 // 基准 ctx：空历史，避免跨天去重误杀；allSourceIds 用 Set（与 buildFilterContext 一致）
 const ctx: DailyContext = {
-  date: "2026-08-30",
+  date: todayKey,
   sources: [{ id: "em-declare" }],
   history: {},
   tierBySource: new Map(),
@@ -40,18 +59,23 @@ const ctx: DailyContext = {
   log: { info: () => {}, warn: () => {}, error: () => {} },
 } as unknown as DailyContext;
 
+// 在审企业更新稀疏（几天一更），取 3/4 天前：既越过 2 天抓取窗口（验证豁免生效），
+// 又稳稳落在爬虫 7 天窗口与 7 天展示窗口内（不会因真实日期推移被别的闸误杀）。
+const AGO_A = 3;
+const AGO_B = 4;
+
 test("gd-ipo 条目穿过完整过滤管线不被误杀", () => {
   const articles: ArticleInput[] = [
     makeIpo({
       title: "尚睿科技：IPO问询中（拟北交所）",
-      excerpt: "注册地：广东｜保荐：广发证券股份有限公司｜更新：2026-08-27",
-      // 用真实「几天前」日期，故意触发 2 天窗口边界
-      publishedAt: new Date("2026-08-27T08:00:00+08:00"),
+      excerpt: `注册地：广东｜保荐：广发证券股份有限公司｜更新：${endDateAgo(AGO_A)}`,
+      // 故意越过 2 天抓取窗口（验证 gd-ipo 豁免生效）
+      publishedAt: daysAgo(AGO_A),
     }),
     makeIpo({
       title: "东莞市腾信精密制造：IPO注册生效（拟北交所）",
-      excerpt: "注册地：广东｜保荐：国泰海通证券股份有限公司｜更新：2026-08-24",
-      publishedAt: new Date("2026-08-24T08:00:00+08:00"),
+      excerpt: `注册地：广东｜保荐：国泰海通证券股份有限公司｜更新：${endDateAgo(AGO_B)}`,
+      publishedAt: daysAgo(AGO_B),
     }),
   ];
 
@@ -70,7 +94,7 @@ test("gd-ipo 豁免不波及其它类的正常过滤（对照）", () => {
     title: "某银行发布中报",
     url: "https://example.com/n",
     category: "finance",
-    publishedAt: new Date("2026-08-24T08:00:00+08:00"), // 距 08-30 已 6 天
+    publishedAt: daysAgo(6), // 越过 2 天窗口，且 gd-ipo 豁免不适用于 finance
   } as ArticleInput;
   const { articles: out } = runFilterPipeline([oldNews], ctx);
   assert.equal(out.length, 0, "非 IPO 的旧文（6 天前）仍应被 2 天窗口过滤");
@@ -91,7 +115,7 @@ test("东财在审爬虫同批多家企业产出唯一 URL（BUG A 回归）", a
           DECLARE_ORG: "尚睿科技股份有限公司",
           STATE: "已问询",
           REG_ADDRESS: "广东",
-          END_DATE: "2026-08-27 00:00:00",
+          END_DATE: `${endDateAgo(3)} 00:00:00`,
           SECURITY_CODE: "A25256",
           PREDICT_LISTING_MARKET: "北交所",
           RECOMMEND_ORG: "广发证券股份有限公司",
@@ -100,7 +124,7 @@ test("东财在审爬虫同批多家企业产出唯一 URL（BUG A 回归）", a
           DECLARE_ORG: "东莞市腾信精密制造股份有限公司",
           STATE: "注册",
           REG_ADDRESS: "广东",
-          END_DATE: "2026-08-24 00:00:00",
+          END_DATE: `${endDateAgo(4)} 00:00:00`,
           SECURITY_CODE: "A25121",
           PREDICT_LISTING_MARKET: "北交所",
           RECOMMEND_ORG: "国泰海通证券股份有限公司",
@@ -113,7 +137,10 @@ test("东财在审爬虫同批多家企业产出唯一 URL（BUG A 回归）", a
   const urls = parsed.map((p) => p.url);
   assert.equal(new Set(urls).size, urls.length, "每家应产出唯一 URL，避免 dedupeByUrl 合并");
   for (const u of urls) {
-    assert.ok(u.startsWith("https://data.eastmoney.com/xg/xg/#"), "URL 应为列表页 + 企业锚点");
+    assert.ok(
+      (u ?? "").startsWith("https://data.eastmoney.com/xg/xg/#"),
+      "URL 应为列表页 + 企业锚点",
+    );
   }
 });
 
@@ -126,15 +153,15 @@ test("gd-ipo 跨天判重豁免（BUG B 回归）", () => {
   const articles: ArticleInput[] = [
     makeIpo({
       title: "尚睿科技：IPO问询中（拟北交所）",
-      excerpt: "注册地：广东｜保荐：广发证券股份有限公司｜更新：2026-08-27",
+      excerpt: `注册地：广东｜保荐：广发证券股份有限公司｜更新：${endDateAgo(AGO_A)}`,
       url: "https://data.eastmoney.com/xg/xg/#A25256",
-      publishedAt: new Date("2026-08-27T08:00:00+08:00"),
+      publishedAt: daysAgo(AGO_A),
     }),
     makeIpo({
       title: "东莞市腾信精密制造：IPO注册生效（拟北交所）",
-      excerpt: "注册地：广东｜保荐：国泰海通证券股份有限公司｜更新：2026-08-24",
+      excerpt: `注册地：广东｜保荐：国泰海通证券股份有限公司｜更新：${endDateAgo(AGO_B)}`,
       url: "https://data.eastmoney.com/xg/xg/#A25121",
-      publishedAt: new Date("2026-08-24T08:00:00+08:00"),
+      publishedAt: daysAgo(AGO_B),
     }),
   ];
   // 历史库已覆盖（上一轮同批企业已归档）→ 旧实现会在此被跨天判重剔除
