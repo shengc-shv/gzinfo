@@ -1,0 +1,709 @@
+{
+  "date": "2026-09-01",
+  "updatedAt": "2026-08-31T22:46:05.965Z",
+  "executive": {
+    "hero_line": "七部门商品消费扩容组合拳落地，叠加广州APEC中小企业融资破局，零售消费场景与跨境普惠两条主线同步打开。",
+    "spoken_hero": "七部门商品消费扩容升级落地，叠加广州APEC中小企业融资破局，零售消费场景和跨境普惠两条主线同步打开，分行可统一口径抢抓窗口。",
+    "must_read": [
+      {
+        "title": "美联储9月加息预期升温",
+        "why": "联储内部分歧加大、海外利率与油价异动，私行与财富端全球资产再平衡压力上升，9月议息前提示客户保持组合弹性。",
+        "url": "https://www.stcn.com/article/detail/4166410.html"
+      },
+      {
+        "title": "广州2026年经济增速预期5%—6.2%",
+        "why": "本地经济韧性确认，分行年度零售信贷、财富与代发目标可据此校准节奏，把广州本土作为扩客主战场。",
+        "url": "https://news.southcn.com/node_812903b83a/6b3a62c843.shtml"
+      },
+      {
+        "title": "七部门发文商品消费扩容升级",
+        "why": "2030年社零锚定60万亿元，三大十万亿级消费赛道定型，分行消费分期、信用卡场景与零售信贷应据此做中长期场景布局。",
+        "url": "https://www.stcn.com/article/detail/4166193.html"
+      },
+      {
+        "title": "私募信披新规9月1日落地",
+        "why": "私行代销与第三方合作机构准入门槛抬升，分行私行部应同步对齐尽调清单与披露模板，防范代销合规风险。",
+        "url": "https://www.stcn.com/article/detail/4166306.html"
+      },
+      {
+        "title": "深圳楼市热度走高信号",
+        "why": "大湾区核心城市楼市回暖先于全国，分行住房金融可联动广州南沙，重点备好改善型按揭受理与开发商按揭储备。",
+        "url": "https://www.stcn.com/article/detail/4165804.html"
+      }
+    ],
+    "spoken_must_read": "七部门发文锚定2030年社零60万亿，消费分期与卡场景可做中长期布局。美联储九月加息预期升温，私行与财富端提示客户保持组合弹性。私募信披新规今日落地，私行部同步对齐尽调与披露模板。深圳楼市热度走高，分行住房金融可联动南沙储备改善型按揭。广州全年增速预期5到6.2%，本土作为扩客主战场，目标可据此校准。",
+    "insights": [
+      {
+        "topic": "APEC中小企业融资破局对接",
+        "impact": "广州专题研讨聚集一批中小外贸与会企业，分行普惠与跨境团队可直接转化为贸易融资、跨境结算客户储备。",
+        "action": "本周内由普惠部牵头梳理参会中小外贸名单，两周内上门走访，首推跨境结算+出口贸易融资组合方案。",
+        "tag": [
+          "信贷",
+          "客群"
+        ],
+        "sources": [
+          {
+            "title": "多思路破局\"融资难\"！金融赋能APEC中小企业发展专题研讨在穗举行",
+            "url": "https://m.21jingji.com/article/20260831/herald/1044fd3e7b67230a2ccf6bcaa84df535.html"
+          }
+        ]
+      },
+      {
+        "topic": "番禺东环冠军企业集群拓客",
+        "impact": "番禺东环专精特新企业集群能级抬升，对公与零售两端均有授信、代发、财富业务交叉机会。",
+        "action": "本周内由公司部联合支行梳理集群清单，定制专精特新授信+代发工资+高管私行一揽子方案。",
+        "tag": [
+          "代发",
+          "客群"
+        ],
+        "sources": [
+          {
+            "title": "番禺东环，有片冠军企业\"群落\"！｜观察",
+            "url": "https://news.dayoo.com/guangzhou/202608/31/139995_54998223.htm"
+          }
+        ]
+      },
+      {
+        "topic": "南沙房地产新生态项目储备",
+        "impact": "南沙构建房地产生态释放开发贷与按揭储备机会，叠加深圳热度外溢，分行住房金融条线可前置介入。",
+        "action": "本周内由住房金融部联合南沙支行梳理重点楼盘清单，备好开发贷储备与改善型按揭预审通道。",
+        "tag": [
+          "住房金融",
+          "政银合作"
+        ],
+        "sources": [
+          {
+            "title": "智库报告：广州南沙构建房地产业良性发展新生态",
+            "url": "https://www.cnfin.com/cy-lb/detail/20260831/4462752_1.html"
+          }
+        ]
+      },
+      {
+        "topic": "钛动科技跨境电商客群突破",
+        "impact": "广州本地AI出海企业打开跨境结算与贸易融资切口，可作为科技金融跨境样本客户深耕。",
+        "action": "本周由科技金融团队上门对接，定制跨境收款+美元授信+员工股权激励一揽子服务。",
+        "tag": [
+          "科技金融",
+          "客群"
+        ],
+        "sources": [
+          {
+            "title": "2026APEC中小企业部长会之广州企业观察⑦｜钛动科技",
+            "url": "https://news.dayoo.com/guangzhou/202608/31/139995_54998086.htm"
+          }
+        ]
+      },
+      {
+        "topic": "消费扩容场景分期落地",
+        "impact": "绿色家电、智能家居、健康养老三大场景定型，分行消费信贷与信用卡可借势做产品包装与场景分期渗透。",
+        "action": "本周由卡中心与消费金融部联合，重点在苏宁、京东等家电与健康平台嵌入分期与立减活动。",
+        "tag": [
+          "信贷",
+          "客群"
+        ],
+        "sources": [
+          {
+            "title": "商务部等七部门：培育形成绿色消费、智能消费、健康消费等十万亿级市场",
+            "url": "https://finance.eastmoney.com/a/202609013860534885.html"
+          }
+        ]
+      }
+    ],
+    "spoken_insights": "APEC中小企业融资破局落地广州，本周普惠部牵头走访参会中小外贸。番禺东环冠军企业集群崛起，公司部联合支行定制专精特新一揽子方案。南沙房地产新生态释放机会，住房金融部本周梳理重点楼盘。钛动科技AI出海客群，科技金融团队本周上门定制跨境服务。消费扩容三大场景定型，卡中心与消费金融部联合嵌入分期活动。",
+    "spoken_risk": "今天有一个需要警惕：私募信披新规今日施行。代销私募产品披露与尽调要求抬升，未对齐可能触发处罚。提示私行部本周完成模板升级，风控部同步重检合作机构准入。",
+    "guangdong_ipo": {
+      "spoken": "尚睿科技拟北交所上市，目前IPO问询中阶段，由广发证券保荐，注册地与主营围绕电子信息方向，分行投行/对公团队可在问询节奏明朗后评估承揽联动切入点。"
+    }
+  },
+  "stock_news": [
+    {
+      "url": "https://finance.eastmoney.com/a/202608313860128886.html",
+      "title_cn": "商务部等7部门：到2030年社会消费品零售总额达60万亿元左右",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "08/31",
+      "summary": "商务部等7部门发布文件，提出到2030年社会消费品零售总额达到约60万亿元的目标。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "政策",
+        "消费"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202608313859917290.html",
+      "title_cn": "两笔大单直线封板！央视重磅利好引爆液冷千亿产业全面提速",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "08/31",
+      "summary": "央视发布液冷产业利好消息，A股液冷概念板块出现大单封板，相关千亿级产业提速。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "AI",
+        "数据中心",
+        "液冷"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202608313860052072.html",
+      "title_cn": "A股三大指数集体收涨影视概念股掀起涨停潮",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "08/31",
+      "summary": "8月31日A股三大指数集体收涨，影视概念股掀起涨停潮。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "A股",
+        "影视",
+        "市场行情"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202608313859596338.html",
+      "title_cn": "年内第七涨！覆铜板龙头再发涨价函融资客紧盯多只高增长潜力股(名单)",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "08/31",
+      "summary": "覆铜板龙头年内第七次发布涨价函，融资客关注多只高增长潜力股。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "涨价",
+        "PCB",
+        "电子"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202608313859570027.html",
+      "title_cn": "需求暴涨260%！AI服务器上游这种材料供应持续紧张（附股）",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "08/31",
+      "summary": "AI服务器上游某类材料需求同比上涨260%，供应持续紧张。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "AI",
+        "服务器",
+        "供应链"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202608313859907671.html",
+      "title_cn": "掀涨停潮！《后西游记》开播引爆短剧概念多股获融资客追捧(名单)",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "08/31",
+      "summary": "短剧《后西游记》开播引爆短剧概念股，多只相关个股涨停并获融资客追捧。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "影视",
+        "短剧",
+        "A股"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202608313860249076.html",
+      "title_cn": "8月31日晚间沪深上市公司重大事项公告最新快递",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "08/31",
+      "summary": "8月31日晚间沪深上市公司发布重大事项公告，涵盖并购重组、增减持、业绩等多项内容。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "公告",
+        "A股"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202608313860053225.html",
+      "title_cn": "工信部：开展人工智能应用服务商培育专项行动",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "08/31",
+      "summary": "工信部宣布开展人工智能应用服务商培育专项行动，推动AI应用落地。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "AI",
+        "政策"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202608313859936126.html",
+      "title_cn": "半导体涨价潮“烧”至上游！硅片迎来普涨国内厂商何时享红利？",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "08/31",
+      "summary": "半导体涨价潮向上游硅片环节蔓延，国内硅片厂商迎来普遍涨价。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "半导体",
+        "涨价",
+        "硅片"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202608313859567918.html",
+      "title_cn": "国产AI芯片龙头来了！本周3只新股申购",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "08/31",
+      "summary": "本周A股将有3只新股申购，其中包括一家国产AI芯片龙头。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "IPO",
+        "AI芯片",
+        "新股"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202608303859515344.html",
+      "title_cn": "十大券商策略：行情快速轮动！低估值策略明显占优",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "08/30",
+      "summary": "十大券商策略观点认为，A股行情快速轮动，低估值策略明显占优。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "券商策略",
+        "A股",
+        "市场观点"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202608313859573398.html",
+      "title_cn": "东吴证券：看好未来两年铜价表现资源标的优先享受利润",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "08/31",
+      "summary": "东吴证券发布研报，看好未来两年铜价表现，认为资源类标的将优先享受利润。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "铜",
+        "资源",
+        "券商策略"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0901/2026090100061.pdf",
+      "title_cn": "Monthly Returns",
+      "source": "港交所披露易",
+      "source_type": "media",
+      "date": "09/01",
+      "summary": "港交所披露易发布月度回报相关公告。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "港股",
+        "公告"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0901/2026090100059.pdf",
+      "title_cn": "Proxy Forms",
+      "source": "港交所披露易",
+      "source_type": "media",
+      "date": "09/01",
+      "summary": "港交所披露易发布代表委任表格相关公告。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "港股",
+        "公告"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0901/2026090100054.pdf",
+      "title_cn": "Circulars - [Continuing Connected Transaction]",
+      "source": "港交所披露易",
+      "source_type": "media",
+      "date": "09/01",
+      "summary": "港交所披露易发布关于持续关联交易的通函。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "港股",
+        "关联交易"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0901/2026090100042.htm",
+      "title_cn": "Documents on Display",
+      "source": "港交所披露易",
+      "source_type": "media",
+      "date": "09/01",
+      "summary": "港交所披露易发布展示文件相关公告。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "港股",
+        "公告"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0901/2026090100037.pdf",
+      "title_cn": "Proxy Forms",
+      "source": "港交所披露易",
+      "source_type": "media",
+      "date": "09/01",
+      "summary": "港交所披露易发布代表委任表格相关公告。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "港股",
+        "公告"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0901/2026090100033.pdf",
+      "title_cn": "Announcements and Notices - [Notice of EGM/SGM / Closure of Books or Change of Book Closure Period]",
+      "source": "港交所披露易",
+      "source_type": "media",
+      "date": "09/01",
+      "summary": "港交所披露易发布关于股东特别大会/暂停办理股份过户登记的公告。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "港股",
+        "公告"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0901/2026090100027.pdf",
+      "title_cn": "Circulars - [Major Transaction]",
+      "source": "港交所披露易",
+      "source_type": "media",
+      "date": "09/01",
+      "summary": "港交所披露易发布关于主要交易的通函。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "港股",
+        "主要交易"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0901/2026090100025.pdf",
+      "title_cn": "Next Day Disclosure Returns - [Share Buyback]",
+      "source": "港交所披露易",
+      "source_type": "media",
+      "date": "09/01",
+      "summary": "港交所披露易发布关于股份回购的翌日披露回报。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "港股",
+        "回购"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0901/2026090100019.pdf",
+      "title_cn": "Circulars - [Other]",
+      "source": "港交所披露易",
+      "source_type": "media",
+      "date": "09/01",
+      "summary": "港交所披露易发布其他类型通函。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "港股",
+        "公告"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0901/2026090100017.pdf",
+      "title_cn": "Next Day Disclosure Returns - [Share Buyback / Others]",
+      "source": "港交所披露易",
+      "source_type": "media",
+      "date": "09/01",
+      "summary": "港交所披露易发布关于股份回购及其他事项的翌日披露回报。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "港股",
+        "回购"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0901/2026090100013.pdf",
+      "title_cn": "Announcements and Notices - [Change in Company Secretary / Change in Directors or of Important Executive Functions or Responsibilities]",
+      "source": "港交所披露易",
+      "source_type": "media",
+      "date": "09/01",
+      "summary": "港交所披露易发布关于公司秘书变更或董事/重要行政职能变更的公告。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "港股",
+        "人事变动"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0901/2026090100011.pdf",
+      "title_cn": "Circulars - [Other]",
+      "source": "港交所披露易",
+      "source_type": "media",
+      "date": "09/01",
+      "summary": "港交所披露易发布其他类型通函。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "港股",
+        "公告"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/08/31/trump-venezuela-oil-gas-price.html",
+      "title_cn": "Trump announced a massive oil deal with Venezuela. Why it won't lower gas prices anytime soon",
+      "source": "CNBC Top Stories",
+      "source_type": "media",
+      "date": "08/31",
+      "summary": "特朗普宣布与委内瑞拉达成重大石油协议，但分析认为短期内难以压低美国汽油价格。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "原油",
+        "能源",
+        "地缘政治"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/08/31/supreme-court-white-house-ballroom.html",
+      "title_cn": "Supreme Court lets Trump build White House ballroom as lawsuit continues",
+      "source": "CNBC Top Stories",
+      "source_type": "media",
+      "date": "08/31",
+      "summary": "美国最高法院允许特朗普在白宫修建宴会厅，相关诉讼程序仍在继续。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "美国政治",
+        "地产"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/08/31/ai-warning-house-intelligence-committee.html",
+      "title_cn": "House Intelligence Committee warns of 'Black Swan' AI risks",
+      "source": "CNBC Top Stories",
+      "source_type": "media",
+      "date": "08/31",
+      "summary": "美国众议院情报委员会发布警告，称人工智能存在'黑天鹅'级别风险。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "AI",
+        "政策"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/08/31/trump-us-gdp-growth-20-percent-economy.html",
+      "title_cn": "Trump says U.S. growth could hit 20%. It’s happened only once since WWII",
+      "source": "CNBC Top Stories",
+      "source_type": "media",
+      "date": "08/31",
+      "summary": "特朗普表示美国经济增速有望达到20%，但该水平自二战以来仅出现过一次。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "美国经济",
+        "宏观"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/08/31/trump-account-holders-to-start-receiving-250-dell-grant-spokesperson.html",
+      "title_cn": "Trump Account holders may receive $250 Dell grant starting Monday, Dell Foundation says",
+      "source": "CNBC Top Stories",
+      "source_type": "media",
+      "date": "08/31",
+      "summary": "根据Dell基金会消息，特朗普账户持有人自周一起可获得250美元的Dell资助。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "美股",
+        "消费"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/08/31/markets-see-warsh-endorsing-a-rate-hike-in-september-not-everyone-is-convinced.html",
+      "title_cn": "Markets see Warsh endorsing a rate hike in September. Not everyone is convinced",
+      "source": "CNBC Top Stories",
+      "source_type": "media",
+      "date": "08/31",
+      "summary": "市场认为美联储候选人Warsh倾向支持9月加息，但并非所有人认同此判断。",
+      "importance": 3,
+      "rank": 0,
+      "tags": [
+        "美联储",
+        "利率",
+        "美股"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/08/31/what-homebuyers-can-expect-in-2027.html",
+      "title_cn": "Waiting for homebuying to get more affordable? Here's what to expect in 2027",
+      "source": "CNBC Top Stories",
+      "source_type": "media",
+      "date": "08/31",
+      "summary": "报道分析美国购房成本可负担性改善需等到2027年。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "地产",
+        "美国经济"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/08/31/manhattan-luxury-rentals-100000-month.html",
+      "title_cn": "Manhattan's luxury rental market is booming, with units reaching $100,000 a month",
+      "source": "CNBC Top Stories",
+      "source_type": "media",
+      "date": "08/31",
+      "summary": "曼哈顿豪宅租赁市场火热，部分单元月租金达到10万美元。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "地产",
+        "美国经济"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/08/31/bessent-druckenmiller-bond-treasury-g20.html",
+      "title_cn": "Bessent pushes back on Druckenmiller critique of bond intervention",
+      "source": "CNBC Top Stories",
+      "source_type": "media",
+      "date": "08/31",
+      "summary": "美国财政部长Bessent回应Druckenmiller对债券干预的批评。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "美债",
+        "政策"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/08/30/us-iran-strikes-strait-hormuz.html",
+      "title_cn": "Trump warns 'we're going to hit them hard' after Iran targets U.S. forces in Jordan: Report",
+      "source": "CNBC Top Stories",
+      "source_type": "media",
+      "date": "08/31",
+      "summary": "在伊朗针对驻约旦美军发动袭击后，特朗普警告将对伊朗'予以重击'。",
+      "importance": 3,
+      "rank": 0,
+      "tags": [
+        "地缘政治",
+        "原油",
+        "中东"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.investing.com/news/company-news/bird-construction-expands-indigenous-partnership-scope-93CH-4883349",
+      "title_cn": "Bird Construction expands indigenous partnership scope",
+      "source": "Investing.com News",
+      "source_type": "media",
+      "date": "08/31",
+      "summary": "加拿大建筑公司Bird Construction扩大与原住民的合作范围。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "建筑",
+        "公司公告"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.investing.com/news/economy-news/us-stock-index-futures-dip-as-middle-east-strikes-worsen-inflation-fears-4882344",
+      "title_cn": "Wall Street closes lower as oil prices jump, indexes notch monthly gains",
+      "source": "Investing.com News",
+      "source_type": "media",
+      "date": "08/31",
+      "summary": "美股三大指数8月收盘下跌，受油价跳升拖累，但全月仍录得涨幅。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "美股",
+        "原油",
+        "市场行情"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    }
+  ]
+}
