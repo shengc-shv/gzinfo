@@ -451,7 +451,7 @@ jobs:
           WX_APP_ID: ${{ secrets.WX_APP_ID }}
           WX_APP_SECRET: ${{ secrets.WX_APP_SECRET }}
           WX_USER_ID: ${{ secrets.WX_USER_ID }}
-          WX_TEMPLATE_ID: 'rZj78a4gXIblJQjWvZv0WCPkW0i10d5kZ8-fhHZRaQM'
+          WX_TEMPLATE_ID: 'QTCQrpJe_udqVgJCyWjbkYTbixoU6N392Geo6yC5Y6E'
           REPORT_BASE_URL: ${{ vars.REPORT_BASE_URL }}
           REPORT_TZ: ${{ vars.REPORT_TZ }}
         run: npm run notify
