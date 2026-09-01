@@ -11,12 +11,14 @@ name: Daily Brief
 #   - 窗口内每次命中都跑 build（全 AI 标新数据）；「一天最多发布一次」由 publish 步骤把控
 #   - 并发检查：同 workflow 前一 run 仍在 in_progress 则本次直接跳过
 #     （用 Actions API 而非 concurrency —— concurrency 是 QUEUE 延迟，不是 SKIP）
-# workflow_dispatch 手动触发有三个开关：
+# workflow_dispatch 手动触发有四个开关：
 #   - skip_ai: 跳过全部 LLM 调用（复用 data/article-history.json 里的 AI 摘要，
 #     等价原 test2 失败恢复 / 无 AI 验证，零 LLM 成本）
 #   - publish: 是否发布 gh-pages（false = 仅验证 + 上传 artifact，等价原 test1）
 #   - notify_wechat: 是否发送微信模板消息推送（默认勾选；仅当 publish=true 时才可能推，
 #     因为推送内容含 gh-pages 报告链接；取消勾选 = 发布但静默不骚扰）
+#   - notify_serverchan: 是否发送 Server酱推送（默认不勾；2026-09-01 用户手动验证期间
+#     独立控制，需同时勾选 notify_wechat 才可能发；schedule 定时任务不受此开关影响，照旧双渠道）
 # cron（schedule）触发固定为全 AI + 发布 + 推送（发布那次才推）。
 
 on:
@@ -47,6 +49,10 @@ on:
         description: '发送微信模板消息推送（默认勾选；仅当 publish=true 时才推，取消勾选=发布但不推送）'
         type: boolean
         default: true
+      notify_serverchan:
+        description: '发送 Server酱推送（默认不勾；手动触发时独立控制，需同时勾选 notify_wechat；schedule 定时不受此开关影响）'
+        type: boolean
+        default: false
 
 permissions:
   contents: write  # needed to push to gh-pages branch
@@ -436,9 +442,10 @@ jobs:
           echo "等待结束（5 分钟），报告 URL 最终探测: HTTP ${CODE}（仅日志信息，不影响推送）"
 
       # ---------- 外发渠道：微信测试号模板消息 + Server酱（B1，微信 2026-09-01 / Server酱 09-01 新增）----------
-      # 触发条件（2026-09-01 加 notify_wechat 独立开关；同时控制两个渠道）：
+      # 触发条件（2026-09-01 加 notify_wechat 独立开关；09-01 晚再加 notify_serverchan 独立开关）：
       #   - schedule：与 Publish 同条件（当天首发发布那次才推，一天最多一条；窗口内多次 build 不重复骚扰）
-      #   - workflow_dispatch：publish=true 且 notify_wechat=true 才推（取消勾选 = 发布但静默不骚扰）
+      #   - workflow_dispatch：微信 = publish && notify_wechat；Server酱 = publish && notify_wechat
+      #     && notify_serverchan（Server酱默认不勾，取消勾选 = 只发微信不发 Server酱）
       # 顺序（用户 2026-09-01 指定）：Wait 5 min（发布后固定等满 5 分钟）→ 微信先发 → 随后发 Server酱。
       # 两渠道各自独立：先后顺序仅靠步骤排列保证，互不依赖成败——微信失败/跳过，Server酱照发
       # （反之亦然）。两渠道均不阻断主流程（continue-on-error + 脚本内部 exit 0 双保险）。
@@ -463,12 +470,15 @@ jobs:
           REPORT_TZ: ${{ vars.REPORT_TZ }}
         run: npm run notify
 
-      # Server酱渠道：与微信同开关（notify_wechat），仅靠步骤排列保证"微信后发"——
-      # 不依赖微信 outcome，两渠道各自独立成败。
+      # Server酱渠道（2026-09-01 独立开关）：与微信解耦——
+      #   schedule：与微信同条件（当天首发发布那次才推，双渠道照旧）
+      #   workflow_dispatch：publish && notify_wechat && notify_serverchan 三条件齐备才发
+      #     （notify_serverchan 默认 false，用户手动验证期间默认不发 Server酱，勾选才发）
+      # 仅靠步骤排列保证"微信后发"，不依赖微信 outcome，两渠道各自独立成败。
       - name: Push ServerChan notification
         if: >-
           (github.event_name == 'schedule' && steps.published-check.outputs.should-publish == 'true')
-          || (github.event_name == 'workflow_dispatch' && inputs.publish == true && inputs.notify_wechat == true)
+          || (github.event_name == 'workflow_dispatch' && inputs.publish == true && inputs.notify_wechat == true && inputs.notify_serverchan == true)
         continue-on-error: true
         env:
           SCT_SENDKEY: ${{ secrets.SCT_SENDKEY }}
