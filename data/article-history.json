@@ -5858,16 +5858,16 @@
     "lastSeenAt": "2026-09-01T06:04:46.961Z"
   },
   "https://www.cnbc.com/2026/09/01/us-iran-war-trump-hormuz-tanker-attack-shipping-sanctions-.html": {
-    "title": "Tanker struck in Hormuz, raising worries over escalation, as Trump vows to hit Iran 'hard'",
+    "title": "Tehran urges return to June deal, oil prices rise as Trump vows to hit Iran 'hard'",
     "url": "https://www.cnbc.com/2026/09/01/us-iran-war-trump-hormuz-tanker-attack-shipping-sanctions-.html",
     "sourceId": "cnbc-top",
     "source": "CNBC Top Stories",
     "category": "stocks",
     "subcategory": "us",
     "excerpt": "Iran launched an attack on two American bases in Jordan on Monday in retaliation for the U.S. attack on its Larak Island.",
-    "publishedAt": "2026-09-01T02:05:20.000Z",
+    "publishedAt": "2026-09-01T06:50:49.000Z",
     "firstSeenAt": "2026-09-01T06:04:46.961Z",
-    "lastSeenAt": "2026-09-01T06:04:46.961Z"
+    "lastSeenAt": "2026-09-01T07:06:07.847Z"
   },
   "https://www.cnbc.com/2026/08/31/venezuela-grants-north-american-blue-energy-partners-100-year-concessions-for-17-oil-fields-white-house-says.html": {
     "title": "Venezuela grants U.S.-backed oil firm NABEP 100-year concessions for 17 oil fields, White House says",
@@ -6879,18 +6879,6 @@
     "firstSeenAt": "2026-09-01T06:04:46.961Z",
     "lastSeenAt": "2026-09-01T06:04:46.961Z"
   },
-  "https://data.eastmoney.com/xg/xg/#A25256": {
-    "title": "尚睿科技：IPO问询中（拟北交所）",
-    "url": "https://data.eastmoney.com/xg/xg/#A25256",
-    "sourceId": "em-declare",
-    "source": "东财IPO在审(广东)",
-    "category": "gd-ipo",
-    "subcategory": "ipo-tutoring",
-    "excerpt": "注册地：广东｜保荐：广发证券股份有限公司｜更新：2026-08-27",
-    "publishedAt": "2026-08-27T00:00:00.000Z",
-    "firstSeenAt": "2026-09-01T06:47:47.126Z",
-    "lastSeenAt": "2026-09-01T06:47:47.126Z"
-  },
   "https://www.investing.com/news/insider-trading-news/camp4-therapeutics-director-andrew-schwab-sells-16m-in-stock-93CH-4883527": {
     "title": "Camp4 Therapeutics director Andrew Schwab sells $1.6m in stock",
     "url": "https://www.investing.com/news/insider-trading-news/camp4-therapeutics-director-andrew-schwab-sells-16m-in-stock-93CH-4883527",
@@ -7396,5 +7384,125 @@
     "publishedAt": "2026-09-01T00:00:00.000Z",
     "firstSeenAt": "2026-09-01T06:47:47.126Z",
     "lastSeenAt": "2026-09-01T06:47:47.126Z"
+  },
+  "https://data.eastmoney.com/xg/xg/#A25256": {
+    "title": "尚睿科技：IPO问询中（拟北交所）",
+    "url": "https://data.eastmoney.com/xg/xg/#A25256",
+    "sourceId": "em-declare",
+    "source": "东财IPO在审(广东)",
+    "category": "gd-ipo",
+    "subcategory": "ipo-tutoring",
+    "excerpt": "注册地：广东｜保荐：广发证券股份有限公司｜更新：2026-08-27",
+    "publishedAt": "2026-08-27T00:00:00.000Z",
+    "firstSeenAt": "2026-09-01T07:06:07.847Z",
+    "lastSeenAt": "2026-09-01T07:06:07.847Z"
+  },
+  "https://www.investing.com/news/forex-news/iran-says-it-has-enough-foreign-currency-despite-us-sanctions-4883541": {
+    "title": "Iran says it has enough foreign currency despite US sanctions",
+    "url": "https://www.investing.com/news/forex-news/iran-says-it-has-enough-foreign-currency-despite-us-sanctions-4883541",
+    "sourceId": "investing-news",
+    "source": "Investing.com News",
+    "category": "stocks",
+    "subcategory": "us",
+    "excerpt": "Iran says it has enough foreign currency despite US sanctions",
+    "publishedAt": "2026-09-01T06:54:27.000Z",
+    "firstSeenAt": "2026-09-01T07:06:07.847Z",
+    "lastSeenAt": "2026-09-01T07:06:07.847Z"
+  },
+  "https://www.investing.com/news/company-news/hafnia-appoints-new-ceo-schedules-shareholder-meeting-93CH-4883540": {
+    "title": "Hafnia appoints new CEO, schedules shareholder meeting",
+    "url": "https://www.investing.com/news/company-news/hafnia-appoints-new-ceo-schedules-shareholder-meeting-93CH-4883540",
+    "sourceId": "investing-news",
+    "source": "Investing.com News",
+    "category": "stocks",
+    "subcategory": "us",
+    "excerpt": "Hafnia appoints new CEO, schedules shareholder meeting",
+    "publishedAt": "2026-09-01T06:52:30.000Z",
+    "firstSeenAt": "2026-09-01T07:06:07.847Z",
+    "lastSeenAt": "2026-09-01T07:06:07.847Z"
+  },
+  "https://www.investing.com/news/economy-news/south-koreas-president-lee-says-interest-rate-rise-is-unavoidable-4883431": {
+    "title": "South Korea proposes record $597 billion 2027 budget to supercharge AI investment",
+    "url": "https://www.investing.com/news/economy-news/south-koreas-president-lee-says-interest-rate-rise-is-unavoidable-4883431",
+    "sourceId": "investing-news",
+    "source": "Investing.com News",
+    "category": "stocks",
+    "subcategory": "us",
+    "excerpt": "South Korea proposes record $597 billion 2027 budget to supercharge AI investment",
+    "publishedAt": "2026-09-01T06:48:49.000Z",
+    "firstSeenAt": "2026-09-01T07:06:07.847Z",
+    "lastSeenAt": "2026-09-01T07:06:07.847Z"
+  },
+  "https://www.cnfin.com/hg-lb/detail/20260901/4463375_1.html": {
+    "title": "【环球财经】2026年8月澳大利亚房价继续走低 市场转向买方市场",
+    "url": "https://www.cnfin.com/hg-lb/detail/20260901/4463375_1.html",
+    "sourceId": "cnfin",
+    "source": "新华财经",
+    "category": "finance",
+    "subcategory": "cn-finance",
+    "excerpt": "【环球财经】2026年8月澳大利亚房价继续走低 市场转向买方市场",
+    "publishedAt": "2026-09-01T00:00:00.000Z",
+    "firstSeenAt": "2026-09-01T07:06:07.847Z",
+    "lastSeenAt": "2026-09-01T07:06:07.847Z"
+  },
+  "https://www.cnfin.com/cy-lb/detail/20260901/4463200_1.html": {
+    "title": "广西电网多维发力绘就绿色交通新图景",
+    "url": "https://www.cnfin.com/cy-lb/detail/20260901/4463200_1.html",
+    "sourceId": "cnfin",
+    "source": "新华财经",
+    "category": "finance",
+    "subcategory": "cn-finance",
+    "excerpt": "广西电网多维发力绘就绿色交通新图景",
+    "publishedAt": "2026-09-01T00:00:00.000Z",
+    "firstSeenAt": "2026-09-01T07:06:07.847Z",
+    "lastSeenAt": "2026-09-01T07:06:07.847Z"
+  },
+  "https://www.cnfin.com/hg-lb/detail/20260901/4463348_1.html": {
+    "title": "【环球财经】农业发展推动巴西生产率增长重心向内陆转移",
+    "url": "https://www.cnfin.com/hg-lb/detail/20260901/4463348_1.html",
+    "sourceId": "cnfin",
+    "source": "新华财经",
+    "category": "finance",
+    "subcategory": "cn-finance",
+    "excerpt": "【环球财经】农业发展推动巴西生产率增长重心向内陆转移",
+    "publishedAt": "2026-09-01T00:00:00.000Z",
+    "firstSeenAt": "2026-09-01T07:06:07.847Z",
+    "lastSeenAt": "2026-09-01T07:06:07.847Z"
+  },
+  "https://www.stcn.com/article/detail/4167239.html": {
+    "title": "吉视传媒：基地驱动内容量产 AIGC布局打通创作到出海全链路",
+    "url": "https://www.stcn.com/article/detail/4167239.html",
+    "sourceId": "stcn",
+    "source": "证券时报",
+    "category": "finance",
+    "subcategory": "cn-finance",
+    "excerpt": "吉视传媒：基地驱动内容量产 AIGC布局打通创作到出海全链路",
+    "publishedAt": "2026-09-01T06:54:00.000Z",
+    "firstSeenAt": "2026-09-01T07:06:07.847Z",
+    "lastSeenAt": "2026-09-01T07:06:07.847Z"
+  },
+  "https://finance.eastmoney.com/a/202609013861408894.html": {
+    "title": "普京称俄愿意将中俄间的免签制度转为永久性安排外交部回应",
+    "url": "https://finance.eastmoney.com/a/202609013861408894.html",
+    "sourceId": "eastmoney-stock",
+    "source": "东方财富",
+    "category": "stocks",
+    "subcategory": "a-share",
+    "excerpt": "普京称俄愿意将中俄间的免签制度转为永久性安排外交部回应",
+    "publishedAt": "2026-09-01T00:00:00.000Z",
+    "firstSeenAt": "2026-09-01T07:06:07.847Z",
+    "lastSeenAt": "2026-09-01T07:06:07.847Z"
+  },
+  "https://finance.sina.com.cn/roll/2026-09-01/doc-iniqiaua3712725.shtml": {
+    "title": "A股公司半年报：创业板公司业绩增长势头向好，",
+    "url": "https://finance.sina.com.cn/roll/2026-09-01/doc-iniqiaua3712725.shtml",
+    "sourceId": "sina-a-stock",
+    "source": "新浪财经·A股",
+    "category": "stocks",
+    "subcategory": "a-share",
+    "excerpt": "A股公司半年报：创业板公司业绩增长势头向好，",
+    "publishedAt": "2026-09-01T00:00:00.000Z",
+    "firstSeenAt": "2026-09-01T07:06:07.847Z",
+    "lastSeenAt": "2026-09-01T07:06:07.847Z"
   }
 }
