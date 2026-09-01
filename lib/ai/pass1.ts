@@ -108,17 +108,26 @@ function hitsBanned(s: string): boolean {
 }
 
 /**
- * 对单批输入调用 LLM，返回 URL → AI 判断 的字典；解析失败重试后再放弃（记 warn）。
+ * 对单批输入调用 LLM，返回 URL → AI 判断 的字典；解析失败重试后再拆半递归。
  *
  * 2026-08-31 加重试：BATCH_SIZE=30 而实际每日进管线的常只有 20 条左右 →
  * **一批就是全部**。一次坏 JSON（实测 `Colon expected at position 2457`）就会把
  * 当日正文整批丢弃，报告静默退化成「只有历史滚动条目」（实测 policy_market 9 → 3）。
  * LLM 输出有随机性，重试一次通常就能拿到合法 JSON；与 PASS2 的
  * MAX_PASS2_RETRY 回炉机制同一思路。成功路径零额外成本（只在失败时才多调一次）。
+ *
+ * 2026-09-01 拆半重试：实测重试后**两次 position 只差 21 字符**（1486/1465）——
+ * LLM 对同批输入两次输出几乎一致，坏点在**同一逻辑位置**，说明是某条特定
+ * 输入内容（标题/正文特殊字符被 LLM 复述时漏转义）导致该条及之后格式链断裂。
+ * 重试同批次必然再坏。改为失败后**拆半递归**：毒丸被隔离到最小单元丢弃，
+ * 其余条目有机会单独成功，救回率远高于整体重试。
  */
 const PASS1_BATCH_RETRY = 1;
+/** 拆半递归最大深度：30→15→7→3→1，约 5 层封顶，防极端全毒场景烧穿成本 */
+const PASS1_MAX_SPLIT_DEPTH = 5;
 
-async function runPass1Batch(
+/** 单次调用：构造 payload → LLM → extractJson → JSON.parse(+jsonrepair) → Map。失败抛错。 */
+async function callPass1Once(
   batch: Pass1Input[],
   runner: LlmRunner,
 ): Promise<Map<string, any>> {
@@ -132,25 +141,44 @@ async function runPass1Batch(
     ...(a.gz_hint ? { gz_hint: true } : {}),
   }));
   const userPrompt = buildPass1User(JSON.stringify(payload));
+  const raw = await runner(PASS1_SYSTEM, userPrompt);
+  const cleaned = extractJson(raw);
+  let parsed: { items?: any[] };
+  try {
+    parsed = JSON.parse(cleaned);
+  } catch {
+    const { jsonrepair } = await import("jsonrepair");
+    parsed = JSON.parse(jsonrepair(cleaned));
+  }
+  const map = new Map<string, any>();
+  for (const it of parsed.items ?? []) {
+    if (it && typeof it.url === "string") map.set(it.url, it);
+  }
+  if (map.size === 0 && batch.length > 0) {
+    // 解析成功但一条都没回 → 多半是 LLM 吐了空壳，同样按失败处理触发重试
+    throw new Error("解析成功但 items 为空（LLM 返回空壳）");
+  }
+  return map;
+}
+
+/** 失败诊断：打印批次首条 URL（毒丸线索）+ 解析错误。 */
+function logBatchFail(batch: Pass1Input[], msg: string): void {
+  const hint = batch
+    .slice(0, 3)
+    .map((a) => a.url.slice(0, 60))
+    .join(" | ");
+  console.warn(`[pass1] 批次调用失败（${batch.length} 条按丢弃）: ${msg}`);
+  if (hint) console.warn(`[pass1]   批次线索（前3条）: ${hint}`);
+}
+
+async function runPass1Batch(
+  batch: Pass1Input[],
+  runner: LlmRunner,
+  depth = 0,
+): Promise<Map<string, any>> {
   for (let attempt = 1; attempt <= PASS1_BATCH_RETRY + 1; attempt++) {
     try {
-      const raw = await runner(PASS1_SYSTEM, userPrompt);
-      const cleaned = extractJson(raw);
-      let parsed: { items?: any[] };
-      try {
-        parsed = JSON.parse(cleaned);
-      } catch {
-        const { jsonrepair } = await import("jsonrepair");
-        parsed = JSON.parse(jsonrepair(cleaned));
-      }
-      const map = new Map<string, any>();
-      for (const it of parsed.items ?? []) {
-        if (it && typeof it.url === "string") map.set(it.url, it);
-      }
-      if (map.size === 0 && batch.length > 0) {
-        // 解析成功但一条都没回 → 多半是 LLM 吐了空壳，同样按失败处理触发重试
-        throw new Error("解析成功但 items 为空（LLM 返回空壳）");
-      }
+      const map = await callPass1Once(batch, runner);
       if (attempt > 1) {
         console.log(`[pass1] 第 ${attempt} 次尝试成功，挽回 ${map.size} 条`);
       }
@@ -161,9 +189,29 @@ async function runPass1Batch(
         console.warn(`[pass1] 批次解析失败（第 ${attempt} 次，重试中）: ${msg}`);
         continue;
       }
-      console.warn(`[pass1] 批次调用失败（${batch.length} 条按丢弃）: ${msg}`);
-      return new Map();
+      logBatchFail(batch, msg);
     }
+  }
+  // 重试仍失败 → 拆半递归隔离毒丸（2026-09-01）
+  if (batch.length > 1 && depth < PASS1_MAX_SPLIT_DEPTH) {
+    const mid = Math.ceil(batch.length / 2);
+    const left = batch.slice(0, mid);
+    const right = batch.slice(mid);
+    console.warn(
+      `[pass1] 拆半重试隔离毒丸: ${batch.length} → ${left.length}+${right.length}（深度 ${depth + 1}）`,
+    );
+    const [lm, rm] = await Promise.all([
+      runPass1Batch(left, runner, depth + 1),
+      runPass1Batch(right, runner, depth + 1),
+    ]);
+    const merged = new Map<string, any>();
+    for (const m of [lm, rm]) {
+      for (const [k, v] of m) merged.set(k, v);
+    }
+    return merged;
+  }
+  if (batch.length === 1) {
+    console.warn(`[pass1] 单条毒丸丢弃: ${batch[0].url.slice(0, 80)}`);
   }
   return new Map();
 }
