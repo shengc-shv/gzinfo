@@ -1,112 +1,104 @@
 {
   "date": "2026-09-01",
-  "updatedAt": "2026-09-01T07:07:21.253Z",
+  "updatedAt": "2026-09-01T07:27:44.184Z",
   "executive": {
-    "hero_line": "七部门发文推动商品消费扩容升级，十万亿级场景为广州分行消费信贷、信用卡分期打开窗口。",
-    "spoken_hero": "今天最值得关注的是，七部门联合发文推动商品消费扩容升级，明确社零2030年锚定60万亿元。家电、数码、汽车等大额场景迎来政策窗口，建议分行统一口径抢抓分期与消费贷的获客先机。",
+    "hero_line": "七部门发文锚定60万亿社零目标、消费扩容升级迎政策窗口，分行零售条线应提前抢场景、抢客户、抢份额。",
+    "spoken_hero": "七部门联合发文力推商品消费扩容升级，2030年社零总额锚定60万亿。这是十万亿级赛道政策信号，分行零售应提前对接汽车家电家居大额场景，把消费贷分期与客户经营同步抢起来。",
     "must_read": [
       {
-        "title": "七部门发文推动商品消费扩容升级",
-        "why": "明确2030年社零锚定60万亿元，消费场景扩容为零售信贷与信用卡分期奠定中长期增长基础，分行应提早布局家电、数码、汽车分期场景。",
-        "url": "https://www.stcn.com/article/detail/4166193.html"
+        "title": "七部门力推商品消费扩容升级",
+        "why": "锚定2030年60万亿社零目标，指明汽车、家电、家居等大额消费政策窗口，为分行消费贷场景分期提供顶层指引。",
+        "url": "https://www.cnfin.com/yw-lb/detail/20260901/4463114_1.html"
       },
       {
-        "title": "理财大规模换锚进入相对收益时代",
-        "why": "百万亿理财市场业绩比较基准重构，代销筛选逻辑与客户沟通话术需同步更新，分行财富端应尽快完成产品池与话术调整。",
-        "url": "https://finance.sina.com.cn/money/bank/bank_hydt/2026-09-01/doc-iniqhmwe4801914.shtml"
-      },
-      {
-        "title": "资管信披大一统进入倒计时",
-        "why": "资管信披新规覆盖百万亿市场，代销与产品引入端需提前对照新规排查披露材料，避免合规与客户投诉风险。",
+        "title": "资管信披大一统倒计时",
+        "why": "覆盖百万亿资管市场，分行代销端须提前排查披露材料合规风险，避免新规落地被动整改。",
         "url": "https://finance.sina.com.cn/money/bank/bank_hydt/2026-09-01/doc-iniqhscx6709728.shtml"
       },
       {
-        "title": "六大行个人房贷余额半年减5086亿",
-        "why": "按揭存量持续流失，叠加房贷期限可延至40年，分行需联动财富业务承接还款资金，并重构按揭客户经营逻辑。",
+        "title": "六大行房贷余额半年减5086亿",
+        "why": "提前还贷潮未止，按揭存量持续承压，分行须联动财富业务承接还款资金，防止客户与AUM双流失。",
         "url": "https://m.21jingji.com/article/20260901/herald/cfd8fa05b7c912e12d27edb24ab0f06d.html"
+      },
+      {
+        "title": "理财业绩基准大规模换锚",
+        "why": "理财进入相对收益时代，财富端代销筛选逻辑与客户沟通话术需同步迭代，基准认知要重塑。",
+        "url": "https://finance.sina.com.cn/money/bank/bank_hydt/2026-09-01/doc-iniqhmwe4801914.shtml"
+      },
+      {
+        "title": "北向资金年内净流入超3000亿",
+        "why": "外资加仓节奏积极，高净值客户权益配置意愿或在回暖，私行代销与基金保有值得提前布局。",
+        "url": "https://finance.sina.com.cn/wm/2026-09-01/doc-iniqiaua3674925.shtml"
       }
     ],
-    "spoken_must_read": "七部门发文推动商品消费扩容升级，2030年锚定60万亿元，建议分行提前布局家电、数码、汽车分期场景。\n六大行个人房贷余额半年减少5086亿，按揭流失压力持续，财富端应主动承接还款资金与高净值客户。\n理财大规模换锚进入相对收益时代，代销筛选逻辑要同步更新，本周内完成产品池与话术调整。\n资管信披大一统进入倒计时，代销端需提前对照新规排查披露材料，避免合规风险。\n工中建三大行股同日创新高，高股息属性受追捧，可联动代销端与高净值客户沟通配置机会。",
+    "spoken_must_read": "七部门发文推商品消费扩容升级，对接汽车家电家居场景的窗口打开了。六大行房贷半年减五千多亿，按揭承接要联动财富稳住客户。理财业绩基准大规模换锚，代销逻辑与话术要同步更新。外资年内净流入超三千亿，私行权益配置可观察回暖节奏。资管信披大一统进入倒计时，代销端要提前对照新规排查。",
     "insights": [
       {
-        "topic": "对接番禺东环冠军企业群",
-        "impact": "番禺东环形成冠军企业集群，专精特新客群密度提升，为分行普惠授信与代发业务打开批量获客入口。",
-        "action": "本周内梳理该片区专精特新名单，安排团队上门对接，配套代发与普惠授信组合方案。",
+        "topic": "南沙房地产新生态对接",
+        "impact": "智库聚焦南沙房地产业新生态，分行可借此梳理区域内优质项目与按揭、开发贷投放机会，激活区域零售与对公联动。",
+        "action": "本周内由信贷与个贷团队联合走访南沙重点在售项目，建立按揭预审与开发贷储备清单，并联动财富端做高净值社区触达。",
         "tag": [
-          "客群",
+          "住房金融",
           "信贷"
         ],
         "sources": [
           {
-            "title": "番禺东环，有片冠军企业“群落”！｜观察",
-            "url": "https://news.dayoo.com/guangzhou/202608/31/139995_54998223.htm"
+            "title": "智库报告：广州南沙构建房地产业良性发展新生态",
+            "url": "https://www.cnfin.com/cy-lb/detail/20260831/4462752_1.html"
           }
         ]
       },
       {
-        "topic": "消费分期场景抢抓政策窗口",
-        "impact": "商品消费扩容升级政策落地，汽车、家电、家居大额分期场景需求释放，信用卡分期业务有望率先放量。",
-        "action": "本周内联动合作渠道上线家电与汽车分期活动，针对存量信用卡客户推送分期权益。",
+        "topic": "APEC中小外贸客群拓展",
+        "impact": "广州举办金融赋能APEC中小企业研讨，跨境结算、贸易融资与普惠授信需求集中，分行可借此批量获取优质中小外贸白名单。",
+        "action": "本周由公司部牵头梳理参会中小外贸企业清单，联合普惠与跨境条线上门对接，重点推跨境结算与关税贷产品组合。",
         "tag": [
           "信贷",
           "客群"
         ],
         "sources": [
           {
-            "title": "七部门发文推动商品消费扩容升级！2030年锚定60万亿元社零总额",
-            "url": "https://www.stcn.com/article/detail/4166193.html"
-          },
-          {
-            "title": "七部门联合发文：20项具体措施推动商品消费扩容升级",
-            "url": "https://news.southcn.com/node_812903b83a/e5d7c1c573.shtml"
-          }
-        ]
-      },
-      {
-        "topic": "钛动科技跨境电商金融需求",
-        "impact": "广州本地跨境电商企业以超级智能体模式助力广货出海，跨境结算与贸易融资需求明确。",
-        "action": "客户经理主动对接钛动科技及周边跨境电商客群，推介跨境结算与贸易融资组合方案。",
-        "tag": [
-          "客群",
-          "信贷"
-        ],
-        "sources": [
-          {
-            "title": "2026APEC中小企业部长会之广州企业观察⑦｜钛动科技：广州造超级智能体",
-            "url": "https://news.dayoo.com/guangzhou/202608/31/139995_54998086.htm"
-          },
-          {
-            "title": "多思路破局融资难！金融赋能APEC中小企业发展专题研讨在穗举行",
+            "title": "多思路破局\"融资难\"！金融赋能APEC中小企业发展专题研讨在穗举行",
             "url": "https://m.21jingji.com/article/20260831/herald/1044fd3e7b67230a2ccf6bcaa84df535.html"
           }
         ]
       },
       {
-        "topic": "还款资金承接高净值配置",
-        "impact": "六大行按揭余额半年缩水5086亿，提前还贷资金流向理财与高股息资产，财富业务迎来承接机会。",
-        "action": "本周内梳理大额还款客户清单，由财富顾问主动对接，推介高股息资产与稳健理财组合。",
+        "topic": "番禺东环专精特新客群",
+        "impact": "番禺东环冠军企业集群成型，本地先进制造业能级提升，分行可批量获取专精特新与制造业升级客群，沉淀代发与私行潜力。",
+        "action": "本周内由客群与公司条线联合上门走访番禺东环片区冠军企业，推代发+私行+普惠组合方案，先建卡后做深。",
         "tag": [
-          "财富",
-          "私行"
+          "客群",
+          "代发"
         ],
         "sources": [
           {
-            "title": "提前还贷仍未扭转？六大行上半年个人房贷余额减少5086亿元",
-            "url": "https://m.21jingji.com/article/20260901/herald/cfd8fa05b7c912e12d27edb24ab0f06d.html"
-          },
-          {
-            "title": "工商银行、中国银行、建设银行三大国有银行股齐创历史新高",
-            "url": "https://finance.eastmoney.com/a/202609013861405126.html"
+            "title": "番禺东环，有片冠军企业\"群落\"！｜观察",
+            "url": "https://news.dayoo.com/guangzhou/202608/31/139995_54998223.htm"
           }
         ]
       },
       {
-        "topic": "贵金属客户预期管理",
-        "impact": "黄金价格剧烈波动叠加多空分歧放大，贵金属客群对持仓盈亏敏感度上升，易触发投诉。",
-        "action": "本周内向贵金属存量客户推送市场波动解读与资产配置建议，做好预期管理与合规话术统一。",
+        "topic": "白云机场跨境客群触达",
+        "impact": "白云机场年内外籍客流最快破500万，跨境消费、外卡受理、结售汇与贵宾服务需求同步放量，是获客与活客的高潜场景。",
+        "action": "本周由财富与信用卡条线联合在白云机场贵宾厅布点，叠加外卡优惠与结售汇提醒，批量获取跨境商旅与高净值客户。",
         "tag": [
-          "财富",
-          "客群"
+          "客群",
+          "财富"
+        ],
+        "sources": [
+          {
+            "title": "广州白云机场今年入出境外国人超500万人次 创年度最快纪录",
+            "url": "https://www.stcn.com/article/detail/4167312.html"
+          }
+        ]
+      },
+      {
+        "topic": "黄金波动下的贵金属经营",
+        "impact": "黄金多空分歧加大，分行贵金属客群对波动敏感，需做好预期管理与产品分层配置，避免集中推荐导致客户体验下滑。",
+        "action": "本周由财富部梳理贵金属持仓客户清单，按风险偏好分级沟通，提示波动特征并提供积存金与结构性产品替代方案。",
+        "tag": [
+          "财富"
         ],
         "sources": [
           {
@@ -116,22 +108,35 @@
         ]
       }
     ],
-    "spoken_insights": "番禺东环冠军企业群涌现，本周内上门对接，配套代发与普惠授信组合方案。\n商品消费扩容升级政策落地，家电、数码分期活动尽快上线抢占先机。\n钛动科技等跨境电商客群主动对接，推介跨境结算与贸易融资组合。\n大额还款客户清单本周梳理完毕，财富顾问主动推介高股息与稳健理财。\n贵金属客户预期管理本周统一话术，推送市场波动解读与配置建议。",
-    "spoken_risk": "今天有一个需要警惕：资管信披大一统新规倒计时。财富与私行端若整改不到位易触发监管处罚与投诉。财富部本周内完成代销产品披露排查，法务合规同步出具审查意见。",
+    "spoken_insights": "南沙房地产新生态释放信号，信贷与个贷本周联合走访重点项目。APEC中小外贸客群在穗集结，公司部牵头批量对接普惠与跨境结算。番禺东环冠军企业落地，客群与代发组合方案本周上门。跨境客流突破五百万，机场贵宾厅布点叠加外卡优惠批量获客。黄金波动加大，财富部按风险偏好分级沟通，提示波动并提供替代配置。",
+    "risk": {
+      "topic": "资管信披新规合规整改",
+      "evidence": "资管信披大一统规则进入倒计时，覆盖百万亿元资管市场，代销端披露材料须按新规整改。",
+      "impact": "对财富与私行条线，代销产品引入与销售环节若未及时对照新规排查，易触发监管处罚与客户投诉；对风控部，新规过渡期材料合规复核工作量集中。",
+      "action": "财富部与风控部联合启动代销产品披露材料对照排查，本周内完成在售产品清单梳理与高风险项标记；法务同步跟进监管细则口径。",
+      "source": "T2",
+      "sources": [
+        {
+          "title": "资管产品信披\"大一统\"进入倒计时：百万亿元规模市场如何真正实现\"三清\"",
+          "url": "https://finance.sina.com.cn/money/bank/bank_hydt/2026-09-01/doc-iniqhscx6709728.shtml"
+        }
+      ]
+    },
+    "spoken_risk": "今天有1个需要警惕：资管信披大一统进入倒计时。财富与风控条线须提前对照新规排查代销披露材料，本周内完成在售产品清单梳理，避免新规落地被动。",
     "guangdong_ipo": {
-      "spoken": "广东企业尚睿科技目前处于IPO问询阶段，拟登陆北交所，由广发证券保荐，最新审核动态更新于8月27日，分行可持续关注其上市进度与潜在股东客群机会。"
+      "spoken": "广东尚睿科技由广发证券保荐，目前在北交所IPO问询阶段，属广东在审项目，可纳入科创客群储备库持续跟踪进展。"
     }
   },
   "stock_recap": {
     "us": {
-      "overview": "美股三大指数集体收跌，道指跌0.7%纳指跌0.12%，科技股走弱、能源股受地缘溢价支撑。",
+      "overview": "三大指数集体收跌，地缘紧张与债市抛售施压。",
       "sectors": [
-        "科技：纳指领跌，英伟达海外巨额投资消息落地后板块分化",
-        "能源：受伊朗局势紧张及委内瑞拉油田百亿级授权提振，国际油价走高",
-        "消费零售：Shein港股上市首日破发跌9%，快时尚赛道承压",
-        "金融：摩根士丹利上调Robinhood评级，金融科技个股有亮点"
+        "能源：美对委内瑞拉石油让步及对伊强硬表态推高油价",
+        "科技：财报与新品催化分化，Shein港股破发拖累情绪",
+        "金融：债市抛售持续，美债多头清仓引发避险情绪",
+        "欧洲股市：地缘与债市双重压力下走平"
       ],
-      "spoken": "美股三大指数集体收跌，道指跌0.7%，纳指跌0.12%，标普500跌0.33%。科技股整体走弱，能源板块受伊朗局势升温提振逆势走强，快时尚新股Shein港股上市首日下挫约9%。",
+      "spoken": "美股三大指数集体收跌，道指跌0.7%、纳指跌0.12%、标普跌0.33%。地缘紧张与债市抛售压制盘面，能源板块受美对委内瑞拉石油让步及对伊强硬表态走强，Shein港股上市首日破发拖累科技情绪，债市抛售持续令金融板块承压。",
       "meta": {
         "source": "CNBC Top Stories",
         "crossCheck": "新浪行情",
@@ -156,14 +161,15 @@
       ]
     },
     "aShare": {
-      "overview": "A股三大指数全线收涨，上证涨0.86%收报3986点，AI应用与物流基建政策催化板块走强。",
+      "overview": "A股三大指数集体收涨，沪指涨0.86%收报3986点。",
       "sectors": [
-        "AI应用：工信部落地应用服务商培育专项行动，AI商业化提速",
-        "物流基建：中信证券预计十五五累计投资3.6至4.3万亿元，板块受关注",
-        "消费：商务部等7部门定调2030年社零总额目标约60万亿元",
-        "科技股：社保基金新进多只科技股，资金面有支撑"
+        "消费：商务部等7部门发文，目标2030年社零达60万亿元",
+        "AI应用：行业培育专项行动落地，加速商业化兑现",
+        "液冷：算力升级带动液冷板块受追捧",
+        "半导体：英伟达巨额投资联发科，国产芯片链获催化",
+        "社保重仓：社保新进多只科技股，绩优标的受关注"
       ],
-      "spoken": "A股三大指数全线收涨，上证指数涨0.86%收报3986点，深成指涨0.44%，创业板涨0.42%。AI应用板块受工信部专项行动催化走强，物流基建迎3.6万亿投资预期提振，消费板块获政策目标加持。",
+      "spoken": "A股三大指数集体收涨，沪指收报3986点涨0.86%，深成指涨0.44%，创业板涨0.42%。消费板块受商务部发文力挺社零目标提振，AI应用与液冷板块双双走强，国产芯片链因英伟达重金注资联发科获催化，社保新进多只科技股亦受资金关注。",
       "meta": {
         "source": "东方财富",
         "crossCheck": "新浪行情",
@@ -188,14 +194,15 @@
       ]
     },
     "hk": {
-      "overview": "港股恒指收跌0.81%报25359点，恒科跌0.99%，科网股低迷，Shein首日破发拖累情绪。",
+      "overview": "恒指收跌0.91%报25334点，恒科跌1.29%，Shein破发拖累科网。",
       "sectors": [
-        "科网股：恒科跌近1%，板块整体低迷拖累大盘",
-        "消费零售：Shein港股首日下挫近10%，市值单日蒸发逾200亿港元",
-        "内房物业：花旗上调华润万象生活目标价至53.3港元，板块有结构性买盘",
-        "新能源：美银下调龙源电力目标价至5港元，风电运营商承压"
+        "科网股：整体低迷，Shein首日跌近10%拖累板块情绪",
+        "新经济个股：名创优品季绩逊预期遭中银下调目标价40%",
+        "保险：富瑞上调友邦目标价至114港元，维持买入评级",
+        "通信服务：中银国际指中国通信服务AI+收入增长强劲",
+        "券商评级：招银国际上调中国人寿目标价至39港元"
       ],
-      "spoken": "港股恒指收跌0.81%报25359点，恒生科技跌0.99%。科网股整体低迷，快时尚新股Shein首日破发跌近10%，市值蒸发逾200亿港元，拖累市场情绪；内房物业获大行上调目标价，新能源板块个股承压。",
+      "spoken": "港股恒指收报25334点跌0.91%，恒生科技跌1.29%。科网股整体低迷，Shein首日破发跌近10%成主要拖累，名创优品季绩逊预期遭下调目标价；保险板块个股获券商上调评级，AI概念下的通信服务股获机构看好。",
       "meta": {
         "source": "新浪财经·港股",
         "crossCheck": "新浪行情",
@@ -204,13 +211,13 @@
       "indices": [
         {
           "name": "恒生指数",
-          "value": "25359.17",
-          "changePct": "-0.81%"
+          "value": "25334.90",
+          "changePct": "-0.91%"
         },
         {
           "name": "恒生科技",
-          "value": "4573.98",
-          "changePct": "-0.99%"
+          "value": "4560.32",
+          "changePct": "-1.29%"
         }
       ]
     },
@@ -224,10 +231,14 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "09/01",
-      "summary": "重大反转！“40年多头总司令”几乎全面清仓美债！意味着什么？",
+      "summary": "报道援引海外投资界观点，称有\"40年多头总司令\"之称的知名投资人几乎全面清仓美债持仓，市场关注此举对资产配置的信号意义。",
       "importance": 2,
       "rank": 0,
-      "tags": [],
+      "tags": [
+        "美债",
+        "宏观",
+        "资产配置"
+      ],
       "locale": "national",
       "market": "a-share"
     },
@@ -237,10 +248,13 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/31",
-      "summary": "商务部等7部门：到2030年社会消费品零售总额达60万亿元左右",
-      "importance": 2,
+      "summary": "商务部等7部门发布关于消费领域的政策文件，提出到2030年社会消费品零售总额达到60万亿元左右的目标。",
+      "importance": 3,
       "rank": 0,
-      "tags": [],
+      "tags": [
+        "政策",
+        "消费"
+      ],
       "locale": "national",
       "market": "a-share"
     },
@@ -250,10 +264,13 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "09/01",
-      "summary": "AI应用服务商培育专项行动落地！行业加速迈向商业化兑现拐点(附股)",
+      "summary": "AI应用服务商培育专项行动落地，业内观点认为行业正加速迈向商业化兑现拐点，报道列出了相关概念个股。",
       "importance": 2,
       "rank": 0,
-      "tags": [],
+      "tags": [
+        "AI",
+        "政策"
+      ],
       "locale": "national",
       "market": "a-share"
     },
@@ -263,10 +280,13 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/31",
-      "summary": "8月31日晚间沪深上市公司重大事项公告最新快递",
-      "importance": 2,
+      "summary": "8月31日晚间沪深上市公司发布一批重大事项公告，覆盖经营、资本运作等多类事项的更新快讯。",
+      "importance": 1,
       "rank": 0,
-      "tags": [],
+      "tags": [
+        "公告",
+        "A股"
+      ],
       "locale": "national",
       "market": "a-share"
     },
@@ -276,10 +296,13 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "09/01",
-      "summary": "市场惊现“0盈利比”基金让所有基民都亏钱这一次拷问了谁？",
-      "importance": 2,
+      "summary": "市场关注一只\"0盈利比\"基金的出现，即基金将管理费、申赎费等全部让利给渠道后导致所有持有基民实际亏损的现象，引发对基金费率结构的讨论。",
+      "importance": 1,
       "rank": 0,
-      "tags": [],
+      "tags": [
+        "公募基金",
+        "费率"
+      ],
       "locale": "national",
       "market": "a-share"
     },
@@ -289,10 +312,14 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "08/31",
-      "summary": "社保基金持仓曝光！新进多只科技股",
+      "summary": "社保基金最新持仓数据曝光，新进增持多只科技股，显示长期资金对科技板块的配置动作。",
       "importance": 2,
       "rank": 0,
-      "tags": [],
+      "tags": [
+        "社保基金",
+        "科技",
+        "机构持仓"
+      ],
       "locale": "national",
       "market": "a-share"
     },
@@ -302,36 +329,14 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "09/01",
-      "summary": "英伟达宣布史上最大海外直接投资巩固XPU新星联发科生态站队",
-      "importance": 2,
+      "summary": "英伟达宣布史上规模最大的海外直接投资，用于与XPU新星联发科构建生态合作，进一步巩固其全球AI芯片生态布局。",
+      "importance": 3,
       "rank": 0,
-      "tags": [],
-      "locale": "national",
-      "market": "a-share"
-    },
-    {
-      "url": "https://finance.eastmoney.com/a/202608313860053225.html",
-      "title_cn": "工信部：开展人工智能应用服务商培育专项行动",
-      "source": "东方财富",
-      "source_type": "media",
-      "date": "08/31",
-      "summary": "工信部：开展人工智能应用服务商培育专项行动",
-      "importance": 2,
-      "rank": 0,
-      "tags": [],
-      "locale": "national",
-      "market": "a-share"
-    },
-    {
-      "url": "https://finance.eastmoney.com/a/202608313860221271.html",
-      "title_cn": "燧原科技：科创板IPO发行价格定为142.18元/股",
-      "source": "东方财富",
-      "source_type": "media",
-      "date": "08/31",
-      "summary": "燧原科技：科创板IPO发行价格定为142.18元/股",
-      "importance": 2,
-      "rank": 0,
-      "tags": [],
+      "tags": [
+        "半导体",
+        "AI",
+        "英伟达"
+      ],
       "locale": "national",
       "market": "a-share"
     },
@@ -341,10 +346,47 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "09/01",
-      "summary": "公募基金2026年中报数据榜单出炉！",
+      "summary": "公募基金2026年中报数据榜单出炉，公募行业披露最新规模、业绩及排名等关键数据。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "公募基金",
+        "财报"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202608313860221271.html",
+      "title_cn": "燧原科技：科创板IPO发行价格定为142.18元/股",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "08/31",
+      "summary": "AI芯片公司燧原科技科创板IPO发行价格确定为142.18元/股。",
       "importance": 2,
       "rank": 0,
-      "tags": [],
+      "tags": [
+        "IPO",
+        "半导体",
+        "科创板"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202608313860193210.html",
+      "title_cn": "重磅利好引爆！液冷市场“热”起来了",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "08/31",
+      "summary": "液冷散热市场近期受AI算力扩张带动，相关利好政策与需求催化下板块关注度升温。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "液冷",
+        "AI",
+        "算力"
+      ],
       "locale": "national",
       "market": "a-share"
     },
@@ -354,10 +396,13 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "09/01",
-      "summary": "皮海洲：从1100元到571元宇树科技股价五连跌说明了什么？",
-      "importance": 2,
+      "summary": "评论文章指出宇树科技股价在五个交易日内由约1100元跌至571元，跌幅显著，引发对热门概念股估值与炒作风险的讨论。",
+      "importance": 1,
       "rank": 0,
-      "tags": [],
+      "tags": [
+        "机器人",
+        "市场评论"
+      ],
       "locale": "national",
       "market": "a-share"
     },
@@ -367,166 +412,206 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "09/01",
-      "summary": "中信证券：“十五五”时期物流网累计基建投资达3.6-4.3万亿元",
+      "summary": "中信证券研究观点预计\"十五五\"时期物流网络累计基建投资规模将达3.6至4.3万亿元。",
       "importance": 2,
       "rank": 0,
-      "tags": [],
+      "tags": [
+        "基建",
+        "物流",
+        "券商研究"
+      ],
       "locale": "national",
       "market": "a-share"
     },
     {
-      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0901/2026090100967.pdf",
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0901/2026090101005.pdf",
       "title_cn": "Monthly Returns",
       "source": "港交所披露易",
       "source_type": "media",
       "date": "09/01",
-      "summary": "Monthly Returns",
-      "importance": 2,
+      "summary": "港交所披露易上的\"Monthly Returns\"（月度回报）常规公告。",
+      "importance": 1,
       "rank": 0,
-      "tags": [],
+      "tags": [
+        "港股",
+        "公告"
+      ],
       "locale": "national",
       "market": "hk"
     },
     {
-      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0901/2026090100965.pdf",
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0901/2026090100999.pdf",
       "title_cn": "Monthly Returns",
       "source": "港交所披露易",
       "source_type": "media",
       "date": "09/01",
-      "summary": "Monthly Returns",
-      "importance": 2,
+      "summary": "港交所披露易上的\"Monthly Returns\"（月度回报）常规公告。",
+      "importance": 1,
       "rank": 0,
-      "tags": [],
+      "tags": [
+        "港股",
+        "公告"
+      ],
       "locale": "national",
       "market": "hk"
     },
     {
-      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0901/2026090100963.pdf",
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0901/2026090100997.pdf",
       "title_cn": "Monthly Returns",
       "source": "港交所披露易",
       "source_type": "media",
       "date": "09/01",
-      "summary": "Monthly Returns",
-      "importance": 2,
+      "summary": "港交所披露易上的\"Monthly Returns\"（月度回报）常规公告。",
+      "importance": 1,
       "rank": 0,
-      "tags": [],
+      "tags": [
+        "港股",
+        "公告"
+      ],
       "locale": "national",
       "market": "hk"
     },
     {
-      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0901/2026090100961.pdf",
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0901/2026090100995.pdf",
       "title_cn": "Monthly Returns",
       "source": "港交所披露易",
       "source_type": "media",
       "date": "09/01",
-      "summary": "Monthly Returns",
-      "importance": 2,
+      "summary": "港交所披露易上的\"Monthly Returns\"（月度回报）常规公告。",
+      "importance": 1,
       "rank": 0,
-      "tags": [],
+      "tags": [
+        "港股",
+        "公告"
+      ],
       "locale": "national",
       "market": "hk"
     },
     {
-      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0901/2026090100959.pdf",
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0901/2026090100993.pdf",
       "title_cn": "Monthly Returns",
       "source": "港交所披露易",
       "source_type": "media",
       "date": "09/01",
-      "summary": "Monthly Returns",
-      "importance": 2,
+      "summary": "港交所披露易上的\"Monthly Returns\"（月度回报）常规公告。",
+      "importance": 1,
       "rank": 0,
-      "tags": [],
+      "tags": [
+        "港股",
+        "公告"
+      ],
       "locale": "national",
       "market": "hk"
     },
     {
-      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0901/2026090100957.pdf",
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0901/2026090100989.pdf",
       "title_cn": "Monthly Returns",
       "source": "港交所披露易",
       "source_type": "media",
       "date": "09/01",
-      "summary": "Monthly Returns",
-      "importance": 2,
+      "summary": "港交所披露易上的\"Monthly Returns\"（月度回报）常规公告。",
+      "importance": 1,
       "rank": 0,
-      "tags": [],
+      "tags": [
+        "港股",
+        "公告"
+      ],
       "locale": "national",
       "market": "hk"
     },
     {
-      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0901/2026090100955.pdf",
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0901/2026090100985.pdf",
       "title_cn": "Monthly Returns",
       "source": "港交所披露易",
       "source_type": "media",
       "date": "09/01",
-      "summary": "Monthly Returns",
-      "importance": 2,
+      "summary": "港交所披露易上的\"Monthly Returns\"（月度回报）常规公告。",
+      "importance": 1,
       "rank": 0,
-      "tags": [],
+      "tags": [
+        "港股",
+        "公告"
+      ],
       "locale": "national",
       "market": "hk"
     },
     {
-      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0901/2026090100953.pdf",
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0901/2026090100981.pdf",
       "title_cn": "Monthly Returns",
       "source": "港交所披露易",
       "source_type": "media",
       "date": "09/01",
-      "summary": "Monthly Returns",
-      "importance": 2,
+      "summary": "港交所披露易上的\"Monthly Returns\"（月度回报）常规公告。",
+      "importance": 1,
       "rank": 0,
-      "tags": [],
+      "tags": [
+        "港股",
+        "公告"
+      ],
       "locale": "national",
       "market": "hk"
     },
     {
-      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0901/2026090100951.pdf",
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0901/2026090100979.pdf",
       "title_cn": "Monthly Returns",
       "source": "港交所披露易",
       "source_type": "media",
       "date": "09/01",
-      "summary": "Monthly Returns",
-      "importance": 2,
+      "summary": "港交所披露易上的\"Monthly Returns\"（月度回报）常规公告。",
+      "importance": 1,
       "rank": 0,
-      "tags": [],
+      "tags": [
+        "港股",
+        "公告"
+      ],
       "locale": "national",
       "market": "hk"
     },
     {
-      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0901/2026090100949.pdf",
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0901/2026090100977.pdf",
       "title_cn": "Monthly Returns",
       "source": "港交所披露易",
       "source_type": "media",
       "date": "09/01",
-      "summary": "Monthly Returns",
-      "importance": 2,
+      "summary": "港交所披露易上的\"Monthly Returns\"（月度回报）常规公告。",
+      "importance": 1,
       "rank": 0,
-      "tags": [],
+      "tags": [
+        "港股",
+        "公告"
+      ],
       "locale": "national",
       "market": "hk"
     },
     {
-      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0901/2026090100947.pdf",
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0901/2026090100975.pdf",
       "title_cn": "Monthly Returns",
       "source": "港交所披露易",
       "source_type": "media",
       "date": "09/01",
-      "summary": "Monthly Returns",
-      "importance": 2,
+      "summary": "港交所披露易上的\"Monthly Returns\"（月度回报）常规公告。",
+      "importance": 1,
       "rank": 0,
-      "tags": [],
+      "tags": [
+        "港股",
+        "公告"
+      ],
       "locale": "national",
       "market": "hk"
     },
     {
-      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0901/2026090100945.pdf",
-      "title_cn": "Monthly Returns",
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0901/2026090100973.pdf",
+      "title_cn": "Announcements and Notices - [Overseas Regulatory Announcement - Other]",
       "source": "港交所披露易",
       "source_type": "media",
       "date": "09/01",
-      "summary": "Monthly Returns",
-      "importance": 2,
+      "summary": "港交所披露易上某发行人提交\"海外监管公告 - 其他\"类别公告。",
+      "importance": 1,
       "rank": 0,
-      "tags": [],
+      "tags": [
+        "港股",
+        "公告"
+      ],
       "locale": "national",
       "market": "hk"
     },
@@ -536,10 +621,14 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "09/01",
-      "summary": "Tehran urges return to June deal, oil prices rise as Trump vows to hit Iran 'hard'",
-      "importance": 2,
+      "summary": "德黑兰呼吁恢复6月达成的核协议，同时特朗普誓言将对伊朗\"强力打击\"，国际油价受此推动上涨。",
+      "importance": 3,
       "rank": 0,
-      "tags": [],
+      "tags": [
+        "原油",
+        "中东",
+        "地缘政治"
+      ],
       "locale": "overseas",
       "market": "us"
     },
@@ -549,10 +638,13 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "09/01",
-      "summary": "Venezuela grants U.S.-backed oil firm NABEP 100-year concessions for 17 oil fields, White",
+      "summary": "委内瑞拉授予美国支持的石油公司NABEP对17个油田的100年开采特许权，白宫确认相关安排。",
       "importance": 2,
       "rank": 0,
-      "tags": [],
+      "tags": [
+        "原油",
+        "地缘政治"
+      ],
       "locale": "overseas",
       "market": "us"
     },
@@ -562,10 +654,14 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "09/01",
-      "summary": "These emerging markets are favored to get 'a wall of money' from carry trades",
+      "summary": "CNBC文章观点认为部分新兴市场有望获得套利交易资金的持续流入。",
       "importance": 2,
       "rank": 0,
-      "tags": [],
+      "tags": [
+        "新兴市场",
+        "外汇",
+        "资金流向"
+      ],
       "locale": "overseas",
       "market": "us"
     },
@@ -575,10 +671,14 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "09/01",
-      "summary": "Bessent reportedly tells Russia no economic relief until Ukraine war ends as Europe snubs",
+      "summary": "美国财长Bessent据报道已告诉俄罗斯：在乌克兰战争结束前不会给予经济援助；G20会议上欧洲亦冷落莫斯科。",
       "importance": 2,
       "rank": 0,
-      "tags": [],
+      "tags": [
+        "俄乌",
+        "地缘政治",
+        "G20"
+      ],
       "locale": "overseas",
       "market": "us"
     },
@@ -588,10 +688,14 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "09/01",
-      "summary": "Indian Prime Minister Modi asks Putin to end Ukraine war amid U.S. tariff threat on Russia",
+      "summary": "印度总理莫迪在美方对俄油加征关税威胁背景下，当面要求普京结束乌克兰战争。",
       "importance": 2,
       "rank": 0,
-      "tags": [],
+      "tags": [
+        "俄乌",
+        "印度",
+        "地缘政治"
+      ],
       "locale": "overseas",
       "market": "us"
     },
@@ -601,10 +705,12 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "09/01",
-      "summary": "Supreme Court lets Trump build White House ballroom as lawsuit continues",
-      "importance": 2,
+      "summary": "美国最高法院允许特朗普政府继续推进白宫宴会厅建设，相关诉讼继续进行。",
+      "importance": 1,
       "rank": 0,
-      "tags": [],
+      "tags": [
+        "美国政治"
+      ],
       "locale": "overseas",
       "market": "us"
     },
@@ -614,10 +720,13 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "09/01",
-      "summary": "The $3 trillion oil market has just gotten more accessible than ever: No longer a 'rich ma",
+      "summary": "报道指出规模约3万亿美元的原油市场投资门槛进一步降低，已不再是\"富人的专属游戏\"。",
       "importance": 2,
       "rank": 0,
-      "tags": [],
+      "tags": [
+        "原油",
+        "大宗商品"
+      ],
       "locale": "overseas",
       "market": "us"
     },
@@ -627,10 +736,14 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "09/01",
-      "summary": "Fast-fashion giant Shein's shares drop 9% in Hong Kong market debut",
-      "importance": 2,
+      "summary": "快时尚电商Shein于香港市场挂牌首日股价下跌约9%。",
+      "importance": 3,
       "rank": 0,
-      "tags": [],
+      "tags": [
+        "Shein",
+        "中概股",
+        "港股IPO"
+      ],
       "locale": "overseas",
       "market": "us"
     },
@@ -640,10 +753,13 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/31",
-      "summary": "Trump says U.S. growth could hit 20%. It’s happened only once since WWII",
+      "summary": "特朗普称美国经济增长率可能达到20%，报道指出二战后美国仅出现过一次类似水平。",
       "importance": 2,
       "rank": 0,
-      "tags": [],
+      "tags": [
+        "美国宏观",
+        "GDP"
+      ],
       "locale": "overseas",
       "market": "us"
     },
@@ -653,36 +769,45 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "08/31",
-      "summary": "Waiting for homebuying to get more affordable? Here's what to expect in 2027",
-      "importance": 2,
+      "summary": "CNBC文章展望2027年美国购房市场，分析购房者关心的可负担性改善路径。",
+      "importance": 1,
       "rank": 0,
-      "tags": [],
+      "tags": [
+        "美国房地产"
+      ],
       "locale": "overseas",
       "market": "us"
     },
     {
-      "url": "https://www.investing.com/news/analyst-ratings/morgan-stanley-upgrades-robinhood-stock-rating-on-product-expansion-93CH-4883544",
-      "title_cn": "Morgan Stanley upgrades Robinhood stock rating on product expansion",
+      "url": "https://www.investing.com/news/stock-market-news/european-stocks-flat-as-bond-selloff-and-fresh-middle-east-strikes-rattles-market-4883554",
+      "title_cn": "European stocks flat as bond sell-off and fresh Middle East strikes rattles market",
       "source": "Investing.com News",
       "source_type": "media",
       "date": "09/01",
-      "summary": "Morgan Stanley upgrades Robinhood stock rating on product expansion",
+      "summary": "欧洲股市表现平淡，债市抛售叠加新一轮中东军事打击打击市场风险偏好。",
       "importance": 2,
       "rank": 0,
-      "tags": [],
+      "tags": [
+        "欧洲股市",
+        "债市",
+        "中东"
+      ],
       "locale": "overseas",
       "market": "us"
     },
     {
-      "url": "https://www.investing.com/news/analyst-ratings/rbc-capital-initiates-mettlertoledo-stock-coverage-with-sector-perform-rating-93CH-4883543",
-      "title_cn": "RBC Capital initiates Mettler-Toledo stock coverage with Sector Perform rating",
+      "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-leap-india-posts-strong-q1-2027-growth-as-shares-fall-93CH-4883556",
+      "title_cn": "Earnings call transcript: LEAP India posts strong Q1 2027 growth as shares fall",
       "source": "Investing.com News",
       "source_type": "media",
       "date": "09/01",
-      "summary": "RBC Capital initiates Mettler-Toledo stock coverage with Sector Perform rating",
-      "importance": 2,
+      "summary": "印度公司LEAP India发布2027财年第一季度业绩电话会纪要：业绩增长强劲，但当日股价下跌。",
+      "importance": 1,
       "rank": 0,
-      "tags": [],
+      "tags": [
+        "财报",
+        "印度"
+      ],
       "locale": "overseas",
       "market": "us"
     }
