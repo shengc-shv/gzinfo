@@ -1,0 +1,656 @@
+{
+  "date": "2026-09-02",
+  "hero_line": "资产端定价分化叠加消费扩容与房贷延期共振，分行零售须在按揭留存、消费场景与财富结构上同步调表。",
+  "must_read": [
+    {
+      "title": "七部门力推商品消费扩容升级",
+      "why": "十万亿级消费政策窗口开启，汽车家电家居成为大额场景主战场，分行消费贷与分期业务有望迎来阶段性放量。",
+      "url": "https://www.cnfin.com/yw-lb/detail/20260901/4463114_1.html"
+    },
+    {
+      "title": "房贷期限最长延至40年",
+      "why": "按揭月供时间轴拉长，存量客户分流提前还款与新增客户准入逻辑同步重塑，分行按揭业务需重新评估客户画像与久期风险。",
+      "url": "https://finance.sina.com.cn/roll/2026-09-01/doc-iniqfzhi8561159.shtml"
+    },
+    {
+      "title": "六大行房贷余额半年减5086亿",
+      "why": "按揭基本盘继续承压，提前还贷潮未止，存量资金分流压力持续，分行须联动财富承接并盯紧大额还款客户动向。",
+      "url": "https://m.21jingji.com/article/20260901/herald/cfd8fa05b7c912e12d27edb24ab0f06d.html"
+    },
+    {
+      "title": "中长期定存利率首现完全倒挂",
+      "why": "2、3、5年期收益均不及1年期，存款期限结构信号反转，分行财富端需引导客户把握短久期窗口并重构产品货架。",
+      "url": "https://finance.sina.com.cn/roll/2026-09-01/doc-iniqhsee1557605.shtml"
+    },
+    {
+      "title": "外资年内加仓A股超3000亿",
+      "why": "北向资金加速回流，高净值客户权益配置意愿回暖，分行私行代销与基金销售节奏可同步观察并提前备货。",
+      "url": "https://finance.sina.com.cn/wm/2026-09-01/doc-iniqiaua3674925.shtml"
+    }
+  ],
+  "insights": [
+    {
+      "topic": "国庆自驾分期权益打包",
+      "tags": [
+        "客群",
+        "信贷"
+      ],
+      "impact": "国庆拼假最长13天，自驾预订热度提前走高，信用卡与汽车分期场景直接受益，车主客群活跃度提升带动分期与商户收单联动机会。",
+      "action": "本周内由信用卡与汽车分期团队对接头部租车与加油站商户，组合自驾权益礼包与免息分期，重点触达存量车主与高价值新客。",
+      "sources": [
+        {
+          "title": "13天超长拼假撬动出行需求 国庆假期自驾预订热度提前走高",
+          "url": "https://www.stcn.com/article/detail/4168118.html"
+        }
+      ]
+    },
+    {
+      "topic": "财富端基准切换与短久期重配",
+      "tags": [
+        "财富"
+      ],
+      "impact": "理财行业业绩比较基准集中换锚进入相对收益时代，叠加中长期定存利率倒挂，财富客户对绝对收益预期需被重新校准。",
+      "action": "财富部本周更新代销产品筛选逻辑，重点引入短久期定存与新基准理财产品，柜面与APP同步上线基准说明与配置指引。",
+      "sources": [
+        {
+          "title": "数千产品集中“换锚” 理财行业迈入相对收益时代",
+          "url": "https://finance.sina.com.cn/money/bank/bank_hydt/2026-09-01/doc-iniqhmwe4801914.shtml"
+        },
+        {
+          "title": "存两年、三年、五年都不如存一年！银行业首现中长期定存利率完全倒挂案例",
+          "url": "https://finance.sina.com.cn/roll/2026-09-01/doc-iniqhsee1557605.shtml"
+        }
+      ]
+    },
+    {
+      "topic": "白云机场跨境客群触达",
+      "tags": [
+        "私行",
+        "客群"
+      ],
+      "impact": "白云机场年内外籍客流最快突破500万人次，跨境消费、结售汇与外卡受理场景同步放量，可直接拉动贵宾服务与外汇业务。",
+      "action": "本周由私行与跨境业务团队联动贵宾服务、外卡受理与结售汇提示，针对出入境客群推送机场贵宾厅与外汇优惠活动。",
+      "sources": [
+        {
+          "title": "广州白云机场今年入出境外国人超500万人次 创年度最快纪录",
+          "url": "https://www.stcn.com/article/detail/4167312.html"
+        }
+      ]
+    },
+    {
+      "topic": "黄金波动期客户预期管理",
+      "tags": [
+        "财富",
+        "客群"
+      ],
+      "impact": "黄金市场多空分歧加大，波动加剧放大贵金属客群交易频次与投诉风险，财富端需配套预期管理与适当性沟通。",
+      "action": "财富部本周更新贵金属客户风险提示话术，结合客户风险偏好分层推送波段策略与回撤预警，降低集中投诉压力。",
+      "sources": [
+        {
+          "title": "黄金从5600跌到4400 有人却喊2万 凭什么？",
+          "url": "https://finance.sina.com.cn/money/nmetal/hjzx/2026-09-01/doc-iniqiatw4756993.shtml"
+        }
+      ]
+    },
+    {
+      "topic": "广东金融教育宣传周进高校",
+      "tags": [
+        "客群",
+        "代发"
+      ],
+      "impact": "中山大学站宣传周启动，为分行进高校做消保宣教与品牌曝光提供低成本入口，可同时铺垫年轻客群获客与代发引流。",
+      "action": "本周内由零售与消保条线联合中山大学站活动落地消保讲座与开卡权益，针对在校师生做精准获客与早期绑卡。",
+      "sources": [
+        {
+          "title": "2026年广东金融教育宣传周活动中山大学站启动",
+          "url": "https://www.cnr.cn/gd/fxgz/20260901/t20260901_527801558.shtml"
+        }
+      ]
+    }
+  ],
+  "sections": {
+    "gz_local": [],
+    "biz_insight": [
+      {
+        "url": "https://www.stcn.com/article/detail/4168118.html",
+        "title_cn": "13天超长拼假撬动出行需求 国庆假期自驾预订热度提前走高",
+        "source": "证券时报",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "09/01",
+        "summary": "国庆拼假最长13天，自驾预订热度提前升温。所以呢：信用卡/汽车分期团队可结合车主客群推自驾权益与分期活动。",
+        "importance": 2,
+        "rank": 1,
+        "tags": [],
+        "locale": "national"
+      },
+      {
+        "url": "https://www.cnbc.com/2026/09/01/fed-governor-barr-says-hell-support-rate-hike-if-inflation-doesnt-ease.html",
+        "title_cn": "Fed Governor Barr says he'll support rate hike if inflation doesn't ease",
+        "source": "CNBC Top Stories",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "09/01",
+        "summary": "美联储理事Barr表态若通胀不回落将支持加息，偏鹰信号明确。所以呢：提示客户美元定存/外币理财的阶段性配置窗口，结售汇客户可结合汇率波动择机操作。",
+        "importance": 2,
+        "rank": 2,
+        "tags": [],
+        "locale": "national"
+      },
+      {
+        "url": "https://www.stcn.com/article/detail/4168021.html",
+        "title_cn": "德生科技精准契合国家AI应用服务商培育专项行动导向",
+        "source": "证券时报",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "09/01",
+        "summary": "德生科技业务贴合国家AI应用服务商培育方向。所以呢：科创客群经营可参考AI应用服务商培育名单逻辑，对接相关企业综合服务需求。",
+        "importance": 2,
+        "rank": 3,
+        "tags": [],
+        "locale": "national"
+      },
+      {
+        "url": "https://www.stcn.com/article/detail/4167665.html",
+        "title_cn": "违规搭建通道向自然人销售“雪球”产品，亏损谁来赔？",
+        "source": "证券时报",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "09/01",
+        "summary": "雪球结构违规向自然人销售案件曝光，分行代销与私行产品需全面排查结构化产品适当性与销售留痕。",
+        "importance": 2,
+        "rank": 4,
+        "tags": [],
+        "locale": "national"
+      },
+      {
+        "url": "https://www.stcn.com/article/detail/4167312.html",
+        "title_cn": "广州白云机场今年入出境外国人超500万人次 创年度最快纪录",
+        "source": "证券时报",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "09/01",
+        "summary": "白云机场年内外籍客流最快破500万，跨境消费与支付场景同步放量，可联动贵宾服务、外卡受理与结售汇提示做客户触达。",
+        "importance": 2,
+        "rank": 5,
+        "tags": [],
+        "locale": "national"
+      },
+      {
+        "url": "https://finance.sina.com.cn/money/nmetal/hjzx/2026-09-01/doc-iniqiatw4756993.shtml",
+        "title_cn": "黄金从5600跌到4400 有人却喊2万 凭什么？",
+        "source": "新浪财经·理财保险",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "09/01",
+        "summary": "黄金市场波动加大，多空分歧明显；分行贵金属客群经营可结合客户风险偏好提示波动特征，做好预期管理。",
+        "importance": 2,
+        "rank": 7,
+        "tags": [
+          "财富"
+        ],
+        "locale": "national"
+      },
+      {
+        "url": "https://finance.sina.com.cn/money/bank/bank_hydt/2026-09-01/doc-iniqhmwe4801914.shtml",
+        "title_cn": "数千产品集中“换锚” 理财行业迈入相对收益时代",
+        "source": "新浪财经·银行频道",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "09/01",
+        "summary": "理财行业大规模业绩比较基准调整，产品进入相对收益时代；分行财富端需更新代销筛选逻辑，向客户传递基准新认知。",
+        "importance": 2,
+        "rank": 8,
+        "tags": [
+          "财富"
+        ],
+        "locale": "national"
+      },
+      {
+        "url": "https://finance.sina.com.cn/money/bank/bank_hydt/2026-09-01/doc-iniqfuyq1722814.shtml",
+        "title_cn": "净息差分化",
+        "source": "新浪财经·银行频道",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "09/01",
+        "summary": "股份行净息差走势明显分化，资产端定价能力成关键变量；提示分行关注自身存贷利差变化，适时调整零售信贷投放结构。",
+        "importance": 2,
+        "rank": 9,
+        "tags": [],
+        "locale": "national"
+      }
+    ],
+    "policy_market": [
+      {
+        "url": "https://finance.sina.com.cn/money/bank/bank_hydt/2026-09-01/doc-iniqhscx6709728.shtml",
+        "title_cn": "资管产品信披“大一统”进入倒计时：百万亿元规模市场如何真正实现“三清”",
+        "source": "新浪财经·理财保险",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "09/01",
+        "summary": "资管信披大一统规则进入倒计时，覆盖百万亿市场；分行代销与产品引入端需提前对照新规排查披露材料。",
+        "importance": 2,
+        "rank": 1,
+        "tags": [
+          "财富"
+        ],
+        "locale": "national"
+      },
+      {
+        "url": "https://m.21jingji.com/article/20260901/herald/cfd8fa05b7c912e12d27edb24ab0f06d.html",
+        "title_cn": "提前还贷仍未扭转？六大行上半年个人房贷余额减少5086亿元，接近去年全年降幅",
+        "source": "21世纪经济报道·金融",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "09/01",
+        "summary": "六大行上半年个人房贷余额减少5086亿元，提前还贷潮尚未止步；存量按揭流失压力持续，提示分行关注大额还款客户并联动财富业务承接资金。",
+        "importance": 2,
+        "rank": 3,
+        "tags": [
+          "信贷"
+        ],
+        "locale": "national"
+      },
+      {
+        "url": "https://www.cnfin.com/yw-lb/detail/20260901/4463114_1.html",
+        "title_cn": "布局十万亿级赛道 七部门力推商品消费扩容升级",
+        "source": "新华财经",
+        "source_type": "official",
+        "tier": "T1.5",
+        "date": "09/01",
+        "summary": "七部门联合发文力推商品消费扩容升级，指向十万亿级赛道；分行消费贷业务可关注汽车、家电、家居等大额场景的政策窗口。",
+        "importance": 2,
+        "rank": 4,
+        "tags": [],
+        "locale": "national"
+      },
+      {
+        "url": "https://finance.sina.com.cn/roll/2026-09-01/doc-iniqhsee1557605.shtml",
+        "title_cn": "存两年、三年、五年都不如存一年！银行业首现中长期定存利率完全倒挂案例",
+        "source": "新浪财经·理财保险",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "09/01",
+        "summary": "银行业首现中长期定存利率完全倒挂现象，2/3/5年期收益均不及1年期。所以呢：财富端可提示客户关注短久期定存窗口，适时调整存款期限结构。",
+        "importance": 2,
+        "rank": 5,
+        "tags": [
+          "信贷"
+        ],
+        "locale": "national"
+      },
+      {
+        "url": "https://finance.cctv.com/2026/09/01/ARTIAzo5MfMajFFxtcmZyHyR260901.shtml",
+        "title_cn": "提前还贷冲击仍在，六大行上半年房贷余额减少超5000亿",
+        "source": "央视财经",
+        "source_type": "official",
+        "tier": "T1.5",
+        "date": "09/01",
+        "summary": "六大行上半年房贷余额合计减少超5000亿，提前还贷仍在冲击个贷基本盘，提示分行盯按揭客户资金流向与留存产品。",
+        "importance": 2,
+        "rank": 6,
+        "tags": [
+          "信贷"
+        ],
+        "locale": "national"
+      },
+      {
+        "url": "https://finance.sina.com.cn/money/bank/bank_hydt/2026-09-01/doc-iniqitrs1500166.shtml",
+        "title_cn": "规模与盈利双轮洗牌！银行理财子两万亿阵营扩至4家、11家缩水，23家上半年净赚160亿",
+        "source": "新浪财经·理财保险",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "09/01",
+        "summary": "理财子行业头部扩至4家、11家缩水，23家合计净赚160亿，提示我行理财代销选品需盯头部集中度。",
+        "importance": 2,
+        "rank": 7,
+        "tags": [
+          "财富"
+        ],
+        "locale": "national"
+      },
+      {
+        "url": "https://www.cnr.cn/gd/fxgz/20260901/t20260901_527801558.shtml",
+        "title_cn": "2026年广东金融教育宣传周活动中山大学站启动",
+        "source": "央广网·广东",
+        "source_type": "official",
+        "tier": "T1.5",
+        "date": "09/01",
+        "summary": "广东金融教育宣传周中山大学站启动，可作为分行进高校做消保与品牌曝光的联动契机，降低单点活动成本。",
+        "importance": 2,
+        "rank": 8,
+        "tags": [],
+        "locale": "national"
+      },
+      {
+        "url": "https://www.cnfin.com/yw-lb/detail/20260901/4463650_1.html",
+        "title_cn": "【财经分析】近7.79万亿地方债图谱：新增专项债加速追赶 再融资债占比过半",
+        "source": "新华财经",
+        "source_type": "official",
+        "tier": "T1.5",
+        "date": "09/01",
+        "summary": "前8月地方债发行近7.79万亿元，再融资债占比过半，新增专项债节奏追赶。所以呢：关注广州专项债项目配套融资需求，机构业务条线可同步跟进。",
+        "importance": 2,
+        "rank": 9,
+        "tags": [],
+        "locale": "national"
+      }
+    ],
+    "tech": [],
+    "ipo": [
+      {
+        "url": "https://data.eastmoney.com/xg/xg/#A24052",
+        "title_cn": "广东邦泽创科电器：IPO提交注册（拟北交所）",
+        "source": "东财IPO在审(广东)",
+        "source_type": "official",
+        "tier": "T1.5",
+        "date": "09/01",
+        "summary": "邦泽创科电器（注册地广东，东莞证券保荐）提交北交所IPO注册。所以呢：分行可摸排企业及股东、高管在穗资产配置与配套融资需求。",
+        "importance": 2,
+        "rank": 1,
+        "tags": [],
+        "locale": "national"
+      },
+      {
+        "url": "https://data.eastmoney.com/xg/xg/#A25256",
+        "title_cn": "尚睿科技：IPO问询中（拟北交所）",
+        "source": "东财IPO在审(广东)",
+        "source_type": "official",
+        "tier": "T1.5",
+        "date": "08/27",
+        "summary": "注册地：广东｜保荐：广发证券股份有限公司｜更新：2026-08-27",
+        "importance": 2,
+        "rank": 2,
+        "tags": [
+          "粤"
+        ],
+        "locale": "national"
+      }
+    ]
+  },
+  "risk": {
+    "topic": "雪球结构违规向自然人销售",
+    "evidence": "雪球结构违规向自然人销售案件曝光，相关机构被认定违规搭建销售通道并引发亏损追偿。",
+    "impact": "对私行与财富条线而言，结构化产品适当性与销售留痕的合规风险显著上升，个贷与代销端若涉及高风险衍生品类需同步排查，风控部须对历史销售档案做回溯。",
+    "action": "私行部本周内完成结构化产品销售留痕与适当性全量排查，风控部配合做合规回溯，代销端暂停新增雪球类结构化产品进店。",
+    "source": "T2",
+    "sources": [
+      {
+        "title": "违规搭建通道向自然人销售“雪球”产品，亏损谁来赔？",
+        "url": "https://www.stcn.com/article/detail/4167665.html"
+      }
+    ]
+  },
+  "stock_recap": {
+    "us": {
+      "overview": "三大指数集体收跌，道指跌0.79%、纳指跌1.03%，地缘风险与债市抛售压制市场。",
+      "sectors": [
+        "科技：戴尔因AI服务器上调财年指引大涨9%，Palo Alto网络安全业绩超预期走强",
+        "地缘风险：美伊冲突升温引发避险情绪，压制风险资产整体走弱",
+        "消费：Dropbox股价承压下跌，存储与软件类个股表现疲软"
+      ],
+      "spoken": "美股三大指数集体收跌，道指跌0.79%，纳指跌1.03%，标普500跌0.71%。美伊冲突升温与全球债市抛售压制市场情绪。科技板块分化，戴尔上调AI服务器财年指引大涨9%，网络安全股Palo Alto业绩超预期走强，Dropbox则承压下跌。",
+      "meta": {
+        "source": "CNBC Top Stories",
+        "crossCheck": "新浪行情",
+        "date": "2026-09-01"
+      },
+      "indices": [
+        {
+          "name": "道琼斯",
+          "value": "52766.88",
+          "changePct": "-0.79%"
+        },
+        {
+          "name": "纳斯达克",
+          "value": "26099.77",
+          "changePct": "-1.03%"
+        },
+        {
+          "name": "标普500",
+          "value": "7631.47",
+          "changePct": "-0.71%"
+        }
+      ]
+    },
+    "aShare": {
+      "overview": "三大指数集体收跌，沪指微跌0.16%，深成指、创业板跌逾1%，粮食概念逆市掀涨停潮。",
+      "sectors": [
+        "粮食种植：超强厄尔尼诺催化，粮食概念股逆市掀涨停潮",
+        "AI应用：行业培育专项行动落地，商业化兑现预期升温",
+        "液冷：融资资金大幅加仓，板块加速升温",
+        "黄金/债市：全球债市抛售冲击，黄金跟随美股集体跳水",
+        "物流基建：中信证券测算十五五累计投资3.6至4.3万亿元"
+      ],
+      "spoken": "A股三大指数集体收跌，上证微跌0.16%，深成指跌1.02%，创业板跌1.32%。受全球债市抛售冲击，黄金等避险资产同步走弱。盘面上粮食概念逆市掀涨停潮，厄尔尼诺催化种植链景气重估，AI应用商业化与液冷板块也获资金加仓。",
+      "meta": {
+        "source": "东方财富",
+        "crossCheck": "新浪行情",
+        "date": "2026-09-02"
+      },
+      "indices": [
+        {
+          "name": "上证指数",
+          "value": "3979.89",
+          "changePct": "-0.16%"
+        },
+        {
+          "name": "深证成指",
+          "value": "13872.38",
+          "changePct": "-1.02%"
+        },
+        {
+          "name": "创业板指",
+          "value": "3393.43",
+          "changePct": "-1.32%"
+        }
+      ]
+    },
+    "hk": {
+      "overview": "恒指收报25329点跌0.93%，科指跌1.49%，科网股走弱，希音首秀破发拖累市场情绪。",
+      "sectors": [
+        "科网股：恒科跌1.49%拖累大盘，科技板块整体走弱",
+        "内银股：逆势活跃，防御属性凸显",
+        "新消费：希音港股首日跌近10%，市值蒸发逾200亿港元",
+        "券商股：高盛上调中金目标价至38.2港元，板块获评级支撑",
+        "保险：中国太保目标价上调至44港元，业绩预期向好"
+      ],
+      "spoken": "港股恒指收报25329点跌0.93%，恒生科技跌1.49%，科网股整体走弱。科指受科技股拖累领跌，内银股逆势活跃。希音港股首日破发跌近10%，市值蒸发逾200亿港元，新消费情绪受挫；券商与保险板块则获大行上调目标价支撑。",
+      "meta": {
+        "source": "新浪财经·港股",
+        "crossCheck": "新浪行情",
+        "date": "2026-09-02"
+      },
+      "sourceReport": {
+        "title": "港股收评：恒指跌0.93% 科指跌1.49% 科网股走弱 内银股逆势活跃",
+        "url": "https://finance.sina.com.cn/stock/hkstock/marketalerts/2026-09-01/doc-iniqihzy3613517.shtml"
+      },
+      "indices": [
+        {
+          "name": "恒生指数",
+          "value": "25329.73",
+          "changePct": "-0.93%"
+        },
+        {
+          "name": "恒生科技",
+          "value": "4550.88",
+          "changePct": "-1.49%"
+        }
+      ]
+    },
+    "quoteChannel": "新浪行情",
+    "quoteDate": "2026-09-01",
+    "marketStatus": {
+      "isMarketClosed": false,
+      "reportDate": "2026-09-02",
+      "dataDate": "2026-09-01",
+      "note": "",
+      "spokenNote": "以下行情为上一交易日，9月1日 周二的收盘情况"
+    }
+  },
+  "stock_news": [
+    {
+      "url": "https://finance.eastmoney.com/a/202609013861597759.html",
+      "title_cn": "“黑天鹅”突袭！全球债市猛烈抛售！美股、黄金集体跳水",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "09/01",
+      "summary": "全球债市遭遇猛烈抛售，美股与黄金价格同步下跌。",
+      "importance": 3,
+      "rank": 0,
+      "tags": [
+        "全球市场",
+        "债市",
+        "避险资产"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202609013860647661.html",
+      "title_cn": "重大反转！“40年多头总司令”几乎全面清仓美债！意味着什么？",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "09/01",
+      "summary": "被称为\"40年多头总司令\"的投资者据报道几乎全面清仓美债持仓。",
+      "importance": 3,
+      "rank": 0,
+      "tags": [
+        "美债",
+        "全球市场"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202609013860731632.html",
+      "title_cn": "AI应用服务商培育专项行动落地！行业加速迈向商业化兑现拐点(附股)",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "09/01",
+      "summary": "国内\"AI应用服务商培育专项行动\"落地，相关行业被指加速迈向商业化兑现拐点。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "AI",
+        "政策"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202609013861432555.html",
+      "title_cn": "交易所制定L2行情使用规范严禁“绕道抢跑”",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "09/01",
+      "summary": "交易所制定Level-2行情使用规范，明确严禁\"绕道抢跑\"行为。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "政策",
+        "监管"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202609013861643112.html",
+      "title_cn": "9月1日晚间沪深上市公司重大事项公告最新快递",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "09/01",
+      "summary": "9月1日晚间沪深上市公司发布一批重大事项公告，涵盖并购重组、增减持、业绩等常规披露。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "公告",
+        "A股"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0902/2026090200011.pdf",
+      "title_cn": "Next Day Disclosure Returns - [Share Buyback]",
+      "source": "港交所披露易",
+      "source_type": "media",
+      "date": "09/02",
+      "summary": "港交所披露易发布某公司\"次日披露回购\"报告，公司进行股票回购。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "港股",
+        "回购"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0902/2026090200003.pdf",
+      "title_cn": "Next Day Disclosure Returns - [Share Buyback]",
+      "source": "港交所披露易",
+      "source_type": "media",
+      "date": "09/02",
+      "summary": "港交所披露易发布另一公司\"次日披露回购\"报告，公司进行股票回购。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "港股",
+        "回购"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/09/01/palo-alto-networks-panw-q4-2026-earnings.html",
+      "title_cn": "Palo Alto Networks beats quarterly estimates on AI demand, continues acquisition spree",
+      "source": "CNBC Top Stories",
+      "source_type": "media",
+      "date": "09/01",
+      "summary": "Palo Alto Networks季度财报超预期，受AI需求驱动，并继续推进收购。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "财报",
+        "网络安全",
+        "AI"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/09/01/dell-q2-earnings-report-2027.html",
+      "title_cn": "Dell surges 9% after lifting fiscal 2027 forecast on AI server strength",
+      "source": "CNBC Top Stories",
+      "source_type": "media",
+      "date": "09/01",
+      "summary": "戴尔上调2027财年指引，受AI服务器业务强劲推动，股价盘后上涨9%。",
+      "importance": 3,
+      "rank": 0,
+      "tags": [
+        "财报",
+        "AI",
+        "服务器"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.investing.com/news/stock-market-news/why-is-dropbox-stock-sliding-today-93CH-4884690",
+      "title_cn": "Why is Dropbox stock sliding today?",
+      "source": "Investing.com News",
+      "source_type": "media",
+      "date": "09/01",
+      "summary": "Dropbox股价当日出现下跌，具体原因在标题中未进一步说明。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "美股",
+        "个股"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    }
+  ]
+}
