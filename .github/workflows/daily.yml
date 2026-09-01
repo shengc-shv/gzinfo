@@ -11,11 +11,13 @@ name: Daily Brief
 #   - 窗口内每次命中都跑 build（全 AI 标新数据）；「一天最多发布一次」由 publish 步骤把控
 #   - 并发检查：同 workflow 前一 run 仍在 in_progress 则本次直接跳过
 #     （用 Actions API 而非 concurrency —— concurrency 是 QUEUE 延迟，不是 SKIP）
-# workflow_dispatch 手动触发有两个开关：
+# workflow_dispatch 手动触发有三个开关：
 #   - skip_ai: 跳过全部 LLM 调用（复用 data/article-history.json 里的 AI 摘要，
 #     等价原 test2 失败恢复 / 无 AI 验证，零 LLM 成本）
 #   - publish: 是否发布 gh-pages（false = 仅验证 + 上传 artifact，等价原 test1）
-# cron（schedule）触发固定为全 AI + 发布。
+#   - notify_wechat: 是否发送微信模板消息推送（默认勾选；仅当 publish=true 时才可能推，
+#     因为推送内容含 gh-pages 报告链接；取消勾选 = 发布但静默不骚扰）
+# cron（schedule）触发固定为全 AI + 发布 + 推送（发布那次才推）。
 
 on:
   schedule:
@@ -39,6 +41,10 @@ on:
         default: true
       publish:
         description: '发布到 gh-pages（false = 仅验证 + 上传 artifact，不发布；等价原 test1）'
+        type: boolean
+        default: true
+      notify_wechat:
+        description: '发送微信模板消息推送（默认勾选；仅当 publish=true 时才推，取消勾选=发布但不推送）'
         type: boolean
         default: true
 
@@ -407,15 +413,16 @@ jobs:
           commit_message: 'daily: report for ${{ github.run_id }}'
 
       # ---------- 外发渠道：微信测试号模板消息推送（B1，2026-09-01）----------
-      # 与 Publish 同条件触发 → 「报告真正发布的那次」才推，一天最多一条；
-      # schedule 窗口内多次 build 不会重复骚扰（当天已发布 → publish 跳过 → 本步骤也跳过）。
+      # 触发条件（2026-09-01 加 notify_wechat 独立开关）：
+      #   - schedule：与 Publish 同条件（当天首发发布那次才推，一天最多一条；窗口内多次 build 不重复骚扰）
+      #   - workflow_dispatch：publish=true 且 notify_wechat=true 才推（取消勾选 = 发布但静默不骚扰）
       # 推送失败绝不阻断主流程（continue-on-error + 脚本内部 exit 0 双保险）。
       # secrets：WX_APP_ID / WX_APP_SECRET / WX_USER_ID（显式 openid，可选）；
       # WX_TEMPLATE_ID 非敏感（测试号模板 ID），直接写死在此，如需收敛可移到 secrets。
       - name: Push WeChat notification
         if: >-
           (github.event_name == 'schedule' && steps.published-check.outputs.should-publish == 'true')
-          || inputs.publish == true
+          || (github.event_name == 'workflow_dispatch' && inputs.publish == true && inputs.notify_wechat == true)
         continue-on-error: true
         env:
           WX_APP_ID: ${{ secrets.WX_APP_ID }}
