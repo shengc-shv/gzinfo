@@ -1562,8 +1562,11 @@ export function renderHtml(
     hour12: false,
   }).format(new Date());
   const hero = report.hero_line?.trim();
-  // 微信/QQ/推特 等转发卡片元信息：默认 gh-pages 根，可用 REPORT_BASE_URL 覆盖
-  const shareBase = process.env.REPORT_BASE_URL || "https://shengc-shv.github.io/gzcmbdf3";
+  // 微信/QQ/推特 等转发卡片元信息：默认 gh-pages 根，可用 REPORT_BASE_URL 覆盖。
+  // 2026-09-01 修复：fallback 曾为旧仓库名 gzcmbdf3（该 repo 已不存在）→ og-image.png
+  // 404 → 转发卡片缩略图不显示（只剩标题/描述文字）。改为 gzinfo，与 notify-daily.ts、
+  // daily.yml 健康检查的 fallback 保持一致。
+  const shareBase = process.env.REPORT_BASE_URL || "https://shengc-shv.github.io/gzinfo";
   const shareTitle = `${STR.siteTitle} · ${date}`;
   const shareDesc = hero
     ? `今日定调：${hero}`
