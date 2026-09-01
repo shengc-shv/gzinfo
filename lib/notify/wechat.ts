@@ -107,12 +107,20 @@ export async function sendTemplateMessage(
 /**
  * 组装模板 data（与用户建的测试模板对应：{{title.DATA}} / {{date.DATA}} / {{words.DATA}}）。
  * 微信 keyword 类字段对长度敏感，words 截断到 40 字兜底（完整定调看日报正文，消息仅作提醒）。
+ * 2026-09-01 用户反馈"收到的信息很不起眼" → 文案强化：
+ *   title 加 📢（会话列表摘要醒目）；date 加星期；words 定调前置【今日定调】标签。
  */
+const WEEKDAY_CN = ["周日", "周一", "周二", "周三", "周四", "周五", "周六"];
+
 export function buildTemplatePayload(heroLine: string, dateStr: string): TemplatePayload {
+  const weekday = WEEKDAY_CN[new Date(`${dateStr}T12:00:00+08:00`).getDay()] ?? "";
+  const words = heroLine
+    ? `【今日定调】${heroLine}`.slice(0, 40)
+    : "⚠️ 今日暂无定调，点击查看完整日报";
   return {
-    title: "广州分行今日日报已生成",
-    date: dateStr,
-    words: (heroLine || "今日暂无定调，点击查看完整日报").slice(0, 40),
+    title: "📢 广州分行今日日报已生成",
+    date: `📅 ${dateStr}（${weekday}）`,
+    words,
   };
 }
 
