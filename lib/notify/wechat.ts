@@ -31,6 +31,8 @@ export interface TemplatePayload {
   title: string;
   date: string;
   words: string;
+  /** 底部引导行（新模板第 4 字段）：「点击查看完整日报 →」 */
+  tip: string;
 }
 
 export interface NotifyResult {
@@ -105,10 +107,12 @@ export async function sendTemplateMessage(
 }
 
 /**
- * 组装模板 data（与用户建的测试模板对应：{{title.DATA}} / {{date.DATA}} / {{words.DATA}}）。
+ * 组装模板 data（与用户新建的显眼模板对应：{{title.DATA}} / {{date.DATA}} / {{words.DATA}} / {{tip.DATA}}）。
  * 微信 keyword 类字段对长度敏感，words 截断到 40 字兜底（完整定调看日报正文，消息仅作提醒）。
  * 2026-09-01 用户反馈"收到的信息很不起眼" → 文案强化：
- *   title 加 📢（会话列表摘要醒目）；date 加星期；words 定调前置【今日定调】标签。
+ *   title 加 📢（会话列表摘要醒目）；date 加星期；words 定调前置【今日定调】标签；
+ *   tip 底部引导行「点击查看完整日报 →」配合卡片整体跳转。
+ * 2026-09-01 模板升级：新模板 ID（rZj78a4g...）为 4 字段，新增 tip。
  */
 const WEEKDAY_CN = ["周日", "周一", "周二", "周三", "周四", "周五", "周六"];
 
@@ -121,6 +125,7 @@ export function buildTemplatePayload(heroLine: string, dateStr: string): Templat
     title: "📢 广州分行今日日报已生成",
     date: `📅 ${dateStr}（${weekday}）`,
     words,
+    tip: "点击查看完整日报 →",
   };
 }
 

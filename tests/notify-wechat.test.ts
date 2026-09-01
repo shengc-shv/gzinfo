@@ -110,13 +110,14 @@ test("sendTemplateMessage: 非零 errcode 抛错", async () => {
   );
 });
 
-test("buildTemplatePayload: 定调截断 40 字 + 空值兜底 + 醒目文案", () => {
+test("buildTemplatePayload: 定调截断 40 字 + 空值兜底 + 醒目文案 + tip 引导行", () => {
   const long = "今".repeat(60);
   const p = buildTemplatePayload(long, "2026-09-01");
   assert.equal(p.title, "📢 广州分行今日日报已生成");
   assert.equal(p.date, "📅 2026-09-01（周二）");
   assert.equal(p.words.length, 40);
   assert.ok(p.words.startsWith("【今日定调】"));
+  assert.equal(p.tip, "点击查看完整日报 →");
   const empty = buildTemplatePayload("", "2026-09-01");
   assert.equal(empty.words, "⚠️ 今日暂无定调，点击查看完整日报");
 });
