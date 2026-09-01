@@ -30,7 +30,7 @@
  *   4. keyword-funnel       —— 银行零售关键词漏斗（v4，五维命中 + 五商机追踪器）
  *   5. title-similarity     —— 标题相似度判重（同主题/同 tier）
  *   6. cross-day-dedup      —— 跨天标题判重（与历史库先来者合并）
- *   7. per-source-cap-10   —— 收尾：每源 ≤ LIGHT_AI_MAX_PER_SOURCE=10 多样性封顶 + 源内按分行相关性降序（属漏斗一二产出今日候选的收尾，非漏斗三）
+ *   7. per-source-cap-20   —— 收尾：每源 ≤ LIGHT_AI_MAX_PER_SOURCE=20 多样性封顶 + 源内按分行相关性降序（属漏斗一二产出今日候选的收尾，非漏斗三）
  *
  * 行为差异：keyword-funnel stage 移除了原 main 中给 article 写 filterBucket/filterDimensions/
  * filterOpportunities 的"幽灵字段"——grep 验证全仓无读，**这是死代码**（与 PR1 死代码清理同性质）。
@@ -236,8 +236,8 @@ const crossDayDedupStage: FilterStage = {
 
 /**
  * 收尾：每源多样性封顶（2026-08-31 3漏斗整改 commit③→回退）：
- * 所有媒体源每源 ≤ LIGHT_AI_MAX_PER_SOURCE（10）条进 LLM 分析/展示，源内按分行相关性评分降序
- * （高价值优先、低价值让位，命中「价值优先」+「节约AI」）。
+ * 所有媒体源每源 ≤ LIGHT_AI_MAX_PER_SOURCE（20）条进 LLM 分析/展示，源内按分行相关性评分降序
+ * （高价值优先、低价值让位，命中「价值优先」+「节约AI」）。2026-09-01 用户指令：PASS1 过滤精准，限额 10 → 20。
  *
  * ⚠️ 这是「漏斗一+二产出今日候选」的收尾（保来源多样性），**不是漏斗三**。
  * 漏斗三（全窗口价值取前）必须对「今日新增 + 昨日有效」整合后做，见文件头红线说明，
@@ -249,7 +249,7 @@ const crossDayDedupStage: FilterStage = {
  * takeTopByValue 仍保留于 light-ai.ts 作为可单测工具（value-top.test.ts），但不再接入管线。
  */
 const perSourceCapStage: FilterStage = {
-  name: "per-source-cap-10",
+  name: "per-source-cap-20",
   apply: (articles, ctx) => {
     const before = articles.length;
     // 2026-08-29 价值预筛：每源限额源内按分行相关性评分降序——
