@@ -405,3 +405,23 @@ jobs:
           publish_branch: gh-pages
           keep_files: false  # we restored everything above, so a clean publish is fine
           commit_message: 'daily: report for ${{ github.run_id }}'
+
+      # ---------- 外发渠道：微信测试号模板消息推送（B1，2026-09-01）----------
+      # 与 Publish 同条件触发 → 「报告真正发布的那次」才推，一天最多一条；
+      # schedule 窗口内多次 build 不会重复骚扰（当天已发布 → publish 跳过 → 本步骤也跳过）。
+      # 推送失败绝不阻断主流程（continue-on-error + 脚本内部 exit 0 双保险）。
+      # secrets：WX_APP_ID / WX_APP_SECRET / WX_USER_ID（显式 openid，可选）；
+      # WX_TEMPLATE_ID 非敏感（测试号模板 ID），直接写死在此，如需收敛可移到 secrets。
+      - name: Push WeChat notification
+        if: >-
+          (github.event_name == 'schedule' && steps.published-check.outputs.should-publish == 'true')
+          || inputs.publish == true
+        continue-on-error: true
+        env:
+          WX_APP_ID: ${{ secrets.WX_APP_ID }}
+          WX_APP_SECRET: ${{ secrets.WX_APP_SECRET }}
+          WX_USER_ID: ${{ secrets.WX_USER_ID }}
+          WX_TEMPLATE_ID: 'UFefWdUDJ0yxA-rcH5SSHGoaE3PZ50fgYsPEXpphpRw'
+          REPORT_BASE_URL: ${{ vars.REPORT_BASE_URL }}
+          REPORT_TZ: ${{ vars.REPORT_TZ }}
+        run: npm run notify
