@@ -17,7 +17,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const OUT = path.resolve(__dirname, "../lib/sources/guangdong-registry.json");
+const OUT = path.resolve(__dirname, "../../lib/sources/guangdong-registry.json");
 
 const UA =
   "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36";
@@ -87,6 +87,8 @@ const CANDIDATES = [
   { name: "欢聚", codes: ["YY"], type: "us", city: "广州市", aliases: ["JOYY", "YY Inc"] },
   { name: "富途", codes: ["FUTU"], type: "us", city: "深圳市", aliases: ["Futu"] },
   { name: "腾讯音乐", codes: ["TME"], type: "us", city: "深圳市", aliases: ["Tencent Music"] },
+  // ---------- 拟上市 / 在审（无代码，人工标注城市，靠名称/别名命中） ----------
+  { name: "粤芯半导体", codes: [], type: "manual", city: "广州市", aliases: ["粤芯"], note: "2026-08-30 新增：在审/拟上市企业登记示范——codes 留空（未上市无代码），靠企业名/别名命中（如媒体源报道「证监会同意粤芯半导体首次公开发行股票注册」）；city 供广州企业强调。" },
 ];
 
 function toEastMoneyCode(c) {
@@ -120,10 +122,12 @@ const dropped = [];
 
 // 载入既有注册表：A股在 emweb 偶发瞬断时，沿用旧的城市值，避免周更误删企业
 let oldMap = new Map();
+let prevCompanies = [];
 if (fs.existsSync(OUT)) {
   try {
     const prev = JSON.parse(fs.readFileSync(OUT, "utf8"));
-    for (const c of prev.companies || []) {
+    prevCompanies = prev.companies || [];
+    for (const c of prevCompanies) {
       for (const code of c.codes || []) oldMap.set(String(code).toUpperCase(), c);
       oldMap.set(c.name, c);
     }
@@ -158,8 +162,23 @@ for (const c of CANDIDATES) {
       }
     }
   } else {
-    companies.push({ name: c.name, aliases: c.aliases || [], codes: c.codes, city: c.city || "" });
-    kept.push(`${c.name}(${c.codes[0]}) -> ${c.city} [${c.type}]`);
+    companies.push({
+      name: c.name,
+      aliases: c.aliases || [],
+      codes: c.codes || [],
+      city: c.city || "",
+      ...(c.note ? { note: c.note } : {}),
+    });
+    kept.push(`${c.name}(${(c.codes && c.codes[0]) || "-"}) -> ${c.city} [${c.type}]`);
+  }
+}
+
+// 保留旧表中不在候选清单里的手工条目（如粤芯半导体），防止重建误删
+const candNames = new Set(CANDIDATES.map((c) => c.name));
+for (const c of prevCompanies) {
+  if (!candNames.has(c.name) && !companies.some((n) => n.name === c.name)) {
+    companies.push(c);
+    kept.push(`${c.name} -> ${c.city || "?"} [旧表手工条目,保留]`);
   }
 }
 
