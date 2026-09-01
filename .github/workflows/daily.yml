@@ -435,14 +435,21 @@ jobs:
           CODE=$(curl -s -o /dev/null -w "%{http_code}" --max-time 20 -L "$URL" || echo "000")
           echo "等待结束（5 分钟），报告 URL 最终探测: HTTP ${CODE}（仅日志信息，不影响推送）"
 
-      # ---------- 外发渠道：微信测试号模板消息推送（B1，2026-09-01）----------
-      # 触发条件（2026-09-01 加 notify_wechat 独立开关）：
+      # ---------- 外发渠道：微信测试号模板消息 + Server酱（B1，微信 2026-09-01 / Server酱 09-01 新增）----------
+      # 触发条件（2026-09-01 加 notify_wechat 独立开关；同时控制两个渠道）：
       #   - schedule：与 Publish 同条件（当天首发发布那次才推，一天最多一条；窗口内多次 build 不重复骚扰）
       #   - workflow_dispatch：publish=true 且 notify_wechat=true 才推（取消勾选 = 发布但静默不骚扰）
-      # 推送失败绝不阻断主流程（continue-on-error + 脚本内部 exit 0 双保险）。
-      # secrets：WX_APP_ID / WX_APP_SECRET / WX_USER_ID（显式 openid，可选）；
+      # 顺序（用户 2026-09-01 指定）：Wait 5 min（发布后固定等满 5 分钟）→ 微信先发 → 随后发 Server酱。
+      # 两渠道各自独立：先后顺序仅靠步骤排列保证，互不依赖成败——微信失败/跳过，Server酱照发
+      # （反之亦然）。两渠道均不阻断主流程（continue-on-error + 脚本内部 exit 0 双保险）。
+      # secrets：
+      #   WX_APP_ID / WX_APP_SECRET / WX_USER_ID（显式 openid，可选）— 微信测试号
+      #   SCT_SENDKEY — Server酱 SendKey（敏感凭据，sct.ftqq.com 登录后 SendKey 页复制，必须走 secrets）
       # WX_TEMPLATE_ID 非敏感（测试号模板 ID），直接写死在此，如需收敛可移到 secrets。
+      # 注意：两个步骤共用 npm run notify 脚本，靠 env 区分渠道——
+      #   微信步骤不传 SCT_SENDKEY → 脚本只发微信；Server酱步骤不传 WX_* → 只发 Server酱。
       - name: Push WeChat notification
+        id: push-wechat
         if: >-
           (github.event_name == 'schedule' && steps.published-check.outputs.should-publish == 'true')
           || (github.event_name == 'workflow_dispatch' && inputs.publish == true && inputs.notify_wechat == true)
@@ -452,6 +459,19 @@ jobs:
           WX_APP_SECRET: ${{ secrets.WX_APP_SECRET }}
           WX_USER_ID: ${{ secrets.WX_USER_ID }}
           WX_TEMPLATE_ID: 'QTCQrpJe_udqVgJCyWjbkYTbixoU6N392Geo6yC5Y6E'
+          REPORT_BASE_URL: ${{ vars.REPORT_BASE_URL }}
+          REPORT_TZ: ${{ vars.REPORT_TZ }}
+        run: npm run notify
+
+      # Server酱渠道：与微信同开关（notify_wechat），仅靠步骤排列保证"微信后发"——
+      # 不依赖微信 outcome，两渠道各自独立成败。
+      - name: Push ServerChan notification
+        if: >-
+          (github.event_name == 'schedule' && steps.published-check.outputs.should-publish == 'true')
+          || (github.event_name == 'workflow_dispatch' && inputs.publish == true && inputs.notify_wechat == true)
+        continue-on-error: true
+        env:
+          SCT_SENDKEY: ${{ secrets.SCT_SENDKEY }}
           REPORT_BASE_URL: ${{ vars.REPORT_BASE_URL }}
           REPORT_TZ: ${{ vars.REPORT_TZ }}
         run: npm run notify
