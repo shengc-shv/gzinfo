@@ -17,6 +17,37 @@ import type { DailyContext } from "./context";
 /** 业务线挂钩 tags（命中加 3 分） */
 const BIZ_TAGS = new Set(["财富", "信贷", "私行", "客群", "贵金属", "保险", "对公", "财富管理"]);
 
+/**
+ * gz 展示保底（2026-09-01 用户指令 #2）：
+ * 广州本地板块不足 GZ_FLOOR 条时，从其他板块（biz_insight/policy_market）的
+ * locale==="gz" 条目（PASS1/merge 已按内容判定的广州锚）按价值分移入补足。
+ * 宁缺毋滥：找不到相关候选就不补，绝不引入 locale!==gz 的「不相关」条目。
+ */
+const GZ_FLOOR = 3;
+
+function ensureGzFloor(
+  gz: ReportItem[],
+  ...others: ReportItem[][]
+): { gz: ReportItem[]; others: ReportItem[][] } {
+  if (gz.length >= GZ_FLOOR) return { gz, others };
+  // 收集候选并记录其来源板块索引，未选中的需放回原板块（不得丢失）
+  const candidates: Array<{ it: ReportItem; listIdx: number }> = [];
+  const kept = others.map((list, listIdx) => {
+    const k: ReportItem[] = [];
+    for (const it of list) {
+      if (it.locale === "gz") candidates.push({ it, listIdx });
+      else k.push(it);
+    }
+    return k;
+  });
+  // 价值分优先（importance + gz +5 + 业务线挂钩 +3），取最高的补足
+  candidates.sort((a, b) => valueScore(b.it) - valueScore(a.it));
+  const need = GZ_FLOOR - gz.length;
+  const moved = candidates.slice(0, need);
+  for (const c of candidates.slice(need)) kept[c.listIdx].push(c.it); // 未选中的放回原板块
+  return { gz: [...gz, ...moved.map((c) => c.it)], others: kept };
+}
+
 /** 价值评分（以客户为中心）：importance 权重最高，其次广州本地、业务线挂钩 */
 function valueScore(it: ReportItem): number {
   let s = 0;
@@ -50,12 +81,31 @@ function capSrc(items: ReportItem[], perSrc: number, maxTotal: number): ReportIt
  */
 export function applyDisplayCaps(report: DailyReport, ctx: DailyContext): DailyReport {
   const sec = report.sections as unknown as Record<string, ReportItem[]>;
+  const cappedGz = capSrc(sec.gz_local ?? [], 4, 10);
+  const cappedBiz = capSrc(sec.biz_insight ?? [], 4, 8);
+  const cappedPolicy = capSrc(sec.policy_market ?? [], 4, 12);
+  // gz 保底：不足 3 条时从 biz/policy 移入 locale=gz 条目（宁缺毋滥）
+  const { gz, others } = ensureGzFloor(cappedGz, cappedBiz, cappedPolicy);
+  const [biz, policy] = others;
   const newSections = {
     ...report.sections,
-    gz_local: capSrc(sec.gz_local ?? [], 4, 10),
-    biz_insight: capSrc(sec.biz_insight ?? [], 4, 8),
-    policy_market: capSrc(sec.policy_market ?? [], 4, 12),
+    gz_local: gz,
+    biz_insight: biz,
+    policy_market: policy,
   };
+
+  const moved = gz.length - cappedGz.length;
+  if (moved > 0) {
+    ctx.log.info(
+      "cap",
+      `♻️ gz 展示保底：从 biz/policy 移入 ${moved} 条 locale=gz 条目（共 ${gz.length} 条，目标 ${GZ_FLOOR}）`,
+    );
+  } else if (gz.length < GZ_FLOOR) {
+    ctx.log.info(
+      "cap",
+      `⚠️ gz 展示保底：池内 ${gz.length} 条且其他板块无 locale=gz 候选，宁缺毋滥（不引入不相关条目）`,
+    );
+  }
 
   // 股市新闻面板：每市场 ≤5
   let newStockNews = report.stock_news;
