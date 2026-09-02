@@ -388,8 +388,14 @@ jobs:
         id: published-check
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPORT_TZ: ${{ vars.REPORT_TZ }}
         run: |
-          TODAY=$(TZ='${TZ:-Asia/Shanghai}' date +%Y-%m-%d)
+          # 2026-09-02 修复：原 `TZ='${TZ:-Asia/Shanghai}'` 用了单引号 → shell 不展开
+          # → TZ 是无效字面量 → date 退回 UTC → 取到「前一天」日期（cron 在 UTC 22:00-23:45
+          # 触发，UTC 日期 = 北京日期的前一天）→ 定时任务永远判定"今天已发布"而跳过发布
+          # （gh-pages 上的报告几乎都是手动 dispatch 发的）。改双引号 + 显式传 REPORT_TZ。
+          TODAY=$(TZ="${REPORT_TZ:-Asia/Shanghai}" date +%Y-%m-%d)
+          echo "Checking publish state for date=${TODAY} (tz=${REPORT_TZ:-Asia/Shanghai})"
           CHECK_URL="https://api.github.com/repos/${GITHUB_REPOSITORY}/contents/${TODAY}/${TODAY}.html?ref=gh-pages"
           HTTP_CODE=$(curl -s -o /dev/null -w "%{http_code}" \
             -H "Authorization: Bearer ${GH_TOKEN}" \
@@ -434,7 +440,8 @@ jobs:
         run: |
           echo "固定等待 5 分钟（300s），让 gh-pages 部署与 CDN 传播完成…"
           sleep 300
-          TODAY=$(TZ='${REPORT_TZ:-Asia/Shanghai}' date +%Y-%m-%d)
+          # 2026-09-02 修复：同 published-check —— 单引号导致 TZ 不生效、日期取成前一天
+          TODAY=$(TZ="${REPORT_TZ:-Asia/Shanghai}" date +%Y-%m-%d)
           BASE="${REPORT_BASE_URL:-https://shengc-shv.github.io/gzinfo}"
           BASE="${BASE%/}"
           URL="${BASE}/${TODAY}/${TODAY}.html"
