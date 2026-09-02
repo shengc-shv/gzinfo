@@ -20,6 +20,8 @@
  */
 
 import { eventFingerprint, dice, titleBigrams } from "../ingest/dedup-similar";
+// 仅引入运行时函数；broadcast-time 对本文件只做 `import type`，无循环依赖
+import { formatBroadcastAt } from "./broadcast-time";
 
 // ---------------------------------------------------------------------------
 // 1) 类型定义
@@ -121,6 +123,17 @@ export interface BroadcastSample {
   facts?: string[];
   /** 分行相关性分（0-100），透传给长期记忆以计算峰值分 peakScore（重大事件长期保留）。 */
   score?: number;
+  /**
+   * 播报时刻（ISO 8601 完整时间戳，带时区偏移，默认北京时间 +08:00）。
+   *
+   * 形如 `2026-09-02T23:39:47+08:00`。与 `date`（仅 YYYY-MM-DD）互补：
+   * date 用于「哪天播的」的冷却计算，broadcastAt 用于「当天几点播的」的溯源，
+   * 使以 9:00 为界区分**客户演示数据**与**测试/验证数据**成为可能，
+   * 并支持按时间段查看、导出与清理（2026-09-02 需求）。
+   *
+   * 设为可选：历史记录无此字段时不影响任何既有读取逻辑（向后兼容）。
+   */
+  broadcastAt?: string;
 }
 
 /** 事件记忆条目。 */
@@ -430,11 +443,74 @@ function sharedTags(a: string[], b: string[]): number {
   return n;
 }
 
+/**
+ * 记录结构完整性校验（2026-09-02 复审修复·高优先级）。
+ *
+ * 背景：单条记录损坏（samples/anchors/topicTags 缺失或类型错误）会触发
+ * `record.samples is not iterable`，异常冒泡到集成点 try/catch 后被
+ * 「放行原产出」吞掉 → **整个记忆去重静默失效**，且因损坏记录被持续写回
+ * 而**永不自愈**。用户只会感觉「又开始重复播报了」，日志仅一行 warn。
+ *
+ * 策略：损坏记录**逐条跳过**（不参与匹配），其余记录照常工作；
+ * 配合 store.ts 落盘前清理，损坏记录不再写回 → 具备自愈能力。
+ */
+export function isUsableRecord(rec: unknown): rec is EventRecord {
+  if (!rec || typeof rec !== "object") return false;
+  const r = rec as Partial<EventRecord>;
+  // 仅校验「会引发崩溃」的必填结构；数值/日期字段另行归一化，不因类型瑕疵丢弃整个事件
+  return (
+    typeof r.id === "string" &&
+    r.id.length > 0 &&
+    Array.isArray(r.samples) &&
+    Array.isArray(r.anchors) &&
+    Array.isArray(r.topicTags)
+  );
+}
+
+/**
+ * 矫正记录中的数值/日期字段类型，避免脏值污染计算。
+ *
+ * 为什么是「归一化」而非「丢弃」：peakScore 为字符串这类瑕疵只是局部脏值，
+ * 整条事件丢弃会让它被遗忘（重复播报），代价大于收益；但若放任不管，
+ * `Math.max("high", 0)` 会产出 NaN，进而让「重大事件双倍保留」判定恒假。
+ */
+export function normalizeRecord(rec: EventRecord): EventRecord {
+  const out: EventRecord = { ...rec };
+  if (!Number.isFinite(out.peakScore)) out.peakScore = 0;
+  if (!Number.isFinite(out.broadcastCount) || (out.broadcastCount ?? 0) < 1) {
+    out.broadcastCount = 1;
+  }
+  if (!Array.isArray(out.broadcastedTexts)) out.broadcastedTexts = [];
+  if (!Array.isArray(out.broadcastedFacts)) out.broadcastedFacts = [];
+  if (!Array.isArray(out.sections)) out.sections = [];
+  if (!Array.isArray(out.anglesUsed)) out.anglesUsed = [];
+  if (typeof out.lastBroadcastAt !== "string") {
+    out.lastBroadcastAt = typeof out.firstBroadcastAt === "string" ? out.firstBroadcastAt : "";
+  }
+  if (typeof out.firstBroadcastAt !== "string") out.firstBroadcastAt = out.lastBroadcastAt;
+  return out;
+}
+
+/** 剔除结构损坏的事件记录，并对保留记录做数值归一化（损坏者自愈式丢弃）。 */
+export function sanitizeEvents(
+  events: Record<string, EventRecord> | undefined | null,
+): Record<string, EventRecord> {
+  if (!events || typeof events !== "object" || Array.isArray(events)) return {};
+  const out: Record<string, EventRecord> = {};
+  for (const [id, rec] of Object.entries(events)) {
+    if (isUsableRecord(rec)) out[id] = normalizeRecord(rec);
+  }
+  return out;
+}
+
 /** 与某条历史记录的最高标题 Dice（与最近若干条样本比）。 */
 function bestTitleDice(title: string, record: EventRecord): number {
   const g = titleBigrams(title);
   let best = 0;
-  for (const s of record.samples) {
+  // 防御：samples 非数组或元素异常时退化为 0，不抛错
+  const samples = Array.isArray(record.samples) ? record.samples : [];
+  for (const s of samples) {
+    if (!s || typeof s.title !== "string") continue;
     const d = dice(g, titleBigrams(s.title));
     if (d > best) best = d;
   }
@@ -532,8 +608,9 @@ export function findMatchingEvent(
   const score = (
     rec: EventRecord,
   ): number => {
-    if (url && rec.samples.some((s) => s.url && s.url === url)) return 1;
-    const aj = anchorJaccard(anchors, rec.anchors);
+    const samples = Array.isArray(rec.samples) ? rec.samples : [];
+    if (url && samples.some((s) => s && s.url && s.url === url)) return 1;
+    const aj = anchorJaccard(anchors, Array.isArray(rec.anchors) ? rec.anchors : []);
     const td = bestTitleDice(cand.title, rec);
     const st = sharedTags(tags, rec.topicTags);
     const hard = Math.max(aj, td);
@@ -559,6 +636,8 @@ export function findMatchingEvent(
   // 2) 长期记忆（昨天及更早）
   let best: { id: string; record: EventRecord; similarity: number } | null = null;
   for (const [id, rec] of Object.entries(store.events ?? {})) {
+    // 损坏记录跳过（不使整体匹配失效）；落盘时会被 sanitizeEvents 清除 → 自愈
+    if (!isUsableRecord(rec)) continue;
     const sim = score(rec);
     if (sim >= MATCH_THRESHOLD && (!best || sim > best.similarity)) {
       best = { id, record: rec, similarity: sim };
@@ -1159,6 +1238,9 @@ export function rememberBroadcast(
     title: cand.title,
     text,
     facts: extractFacts(text),
+    // 播报时刻：播报与展示绑定、几乎同时产生，故以当前时刻（≈ 报告页面生成时刻）为准。
+    // 用于以 9:00 为界区分客户演示数据与测试重跑数据，并支持按时间段筛选/清理。
+    broadcastAt: formatBroadcastAt(),
   };
   if (cand.url) sample.url = cand.url;
   if (cand.score !== undefined) sample.score = cand.score;
@@ -1201,9 +1283,15 @@ export function pruneMemory(
 ): EventMemoryStore {
   const retainDays = opts.retainDays ?? 45;
   const maxEvents = opts.maxEvents ?? 400;
+  // 落盘前统一清洗：损坏记录在此丢弃、数值/日期类型在此归一化。
+  // pruneMemory 是写入前必经路径（store.ts:saveEventMemory），在此兜底可确保
+  // 即使调用方传入被污染的 store，落盘内容也是干净的 → 自愈。
+  const src = sanitizeEvents(store.events ?? {});
   const events: Record<string, EventRecord> = {};
-  for (const [id, rec] of Object.entries(store.events ?? {})) {
-    const age = diffDays(rec.lastBroadcastAt, today);
+  for (const [id, rec] of Object.entries(src)) {
+    // 日期缺失/非法时按「今天」处理（宁可保留，不误删记忆）
+    const lastAt = rec.lastBroadcastAt ? rec.lastBroadcastAt : today;
+    const age = Number.isFinite(diffDays(lastAt, today)) ? diffDays(lastAt, today) : 0;
     const keepFor = (rec.peakScore ?? 0) >= 60 ? retainDays * 2 : retainDays;
     if (age <= keepFor) events[id] = rec;
   }
@@ -1250,10 +1338,12 @@ export function buildMemoryBrief(
     angleGuide: string;
   }> = [];
   for (const rec of Object.values(store.events ?? {})) {
-    const days = diffDays(rec.lastBroadcastAt, today);
+    if (!isUsableRecord(rec)) continue;
+    const lastAt = typeof rec.lastBroadcastAt === "string" ? rec.lastBroadcastAt : today;
+    const days = diffDays(lastAt, today);
     if (days < 0 || days > lookback) continue;
-    const last = (rec.samples ?? []).filter((s) => s.date === rec.lastBroadcastAt)[0]
-      ?? (rec.samples ?? [])[(rec.samples ?? []).length - 1];
+    const last = rec.samples.filter((s) => s && s.date === lastAt)[0]
+      ?? rec.samples[rec.samples.length - 1];
     if (!last) continue;
     const angle = nextAngle(rec);
     out.push({

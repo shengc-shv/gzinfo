@@ -17,7 +17,8 @@
     "notify": "tsx scripts/notify-daily.ts",
     "test": "node --experimental-test-module-mocks --import tsx --test \"tests/**/*.test.ts\"",
     "open": "node scripts/open-report.mjs",
-    "tts-fallback": "tsx scripts/tts-fallback.ts"
+    "tts-fallback": "tsx scripts/tts-fallback.ts",
+    "memory:backfill": "tsx scripts/backfill-broadcast-at.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.96.0",

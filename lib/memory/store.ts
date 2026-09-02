@@ -16,7 +16,14 @@
 
 import fs from "node:fs";
 import path from "node:path";
-import { emptyMemory, pruneMemory, type BroadcastSample, type EventMemoryStore } from "./event-memory";
+import type { EventRecord } from "./event-memory";
+import {
+  emptyMemory,
+  pruneMemory,
+  sanitizeEvents,
+  type BroadcastSample,
+  type EventMemoryStore,
+} from "./event-memory";
 
 export const EVENT_MEMORY_PATH = path.resolve(process.cwd(), "data/event-memory.json");
 
@@ -59,7 +66,10 @@ export function loadEventMemory(opts: EventMemoryStoreOpts = {}): EventMemorySto
     return {
       version: 1,
       updatedAt: (raw as EventMemoryStore).updatedAt,
-      events,
+      // 结构损坏的记录在此丢弃（而非让后续匹配抛错）→ 下次 saveEventMemory
+      // 落盘的是清洗后的库 → 损坏不再写回，实现**自愈**。
+      // 2026-09-02 复审修复：此前单条记录损坏会让整个记忆去重静默失效且永不恢复。
+      events: sanitizeEvents(events as Record<string, EventRecord>),
       ...(today ? { today } : {}),
     };
   } catch {
