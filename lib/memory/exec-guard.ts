@@ -214,7 +214,14 @@ export function applyMemoryGuard(input: GuardInput): GuardOutput {
 
   // ---- 1) hero（今日定调）----
   if (exec.hero_line && exec.hero_line.trim()) {
-    const cand: MemoryCandidate = { title: exec.hero_line };
+    // 透传分行相关性分，使「定调」这类重大事件能在跨天结算时拿到真实 peakScore
+    // （否则 peakScore 恒为 0，无法享受「重大事件 ≥60 双倍保留」）。
+    const heroRel = scoreBranchRelevance({ title: exec.hero_line });
+    const cand: MemoryCandidate = {
+      title: exec.hero_line,
+      score: heroRel.score,
+      ...(heroRel.override ? { override: true } : {}),
+    };
     const d = evaluateCandidate({ cand, section: "hero", today, store });
     decisions.push(d);
     if (d.allow) {
@@ -389,10 +396,18 @@ export function applyMemoryGuard(input: GuardInput): GuardOutput {
   // 不做 L2 补位——编造风险比没有风险更糟。
   if (exec.risk) {
     const r: ExecRisk = exec.risk;
+    // 透传分行相关性分，使 risk 板块事件跨天结算时也能拿到真实 peakScore。
+    const riskSummary = `${r.evidence ?? ""} ${r.impact ?? ""}`.trim();
+    const riskRel = scoreBranchRelevance({
+      title: r.topic,
+      ...(riskSummary ? { summary: riskSummary } : {}),
+    });
     const cand: MemoryCandidate = {
       title: r.topic,
-      text: `${r.evidence ?? ""} ${r.impact ?? ""} ${r.action ?? ""}`.trim(),
+      text: `${riskSummary} ${r.action ?? ""}`.trim(),
       ...(r.url ? { url: r.url } : {}),
+      score: riskRel.score,
+      ...(riskRel.override ? { override: true } : {}),
     };
     const d = evaluateCandidate({ cand, section: "risk", today, store });
     decisions.push(d);

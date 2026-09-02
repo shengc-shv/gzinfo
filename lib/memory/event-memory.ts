@@ -119,6 +119,8 @@ export interface BroadcastSample {
   text?: string;
   /** 播报内容的事实锚点，用于**同日内**的信息增量计算。 */
   facts?: string[];
+  /** 分行相关性分（0-100），透传给长期记忆以计算峰值分 peakScore（重大事件长期保留）。 */
+  score?: number;
 }
 
 /** 事件记忆条目。 */
@@ -439,8 +441,21 @@ function bestTitleDice(title: string, record: EventRecord): number {
   return best;
 }
 
-/** 匹配阈值：锚点 Jaccard / 标题 Dice 任一达阈，或共享 ≥2 个主题标签即视为同一事件。 */
+/** 合并阈值：硬信号（锚点 Jaccard / 标题 Dice）达此值即视为同一事件。 */
 const MATCH_THRESHOLD = 0.5;
+/**
+ * 硬信号软命中置信线：锚点/标题相似度落在区间 [HARD_CORROB, MATCH_THRESHOLD)
+ * 且共享 ≥2 个主题标签时，才升格为合并（兜底「同一主题不同切入」的软重复）。
+ */
+const HARD_CORROB = 0.3;
+/**
+ * 标签软命中辅助值：仅共享 ≥2 个主题标签、无硬信号支撑时给出的相似度，
+ * 低于合并阈 → 不单独触发合并，避免把不同事件（如「存量房贷利率下调」vs
+ * 「公积金贷款额度上调」）按宽泛标签串味误并。
+ */
+const TAG_SOFT_BOOST = 0.35;
+/** 历史无事实锚点时，newFactRatio 封顶值（防 novelty 虚高误判 progress）。 */
+const NO_FACT_BASELINE_CAP = 0.5;
 
 /**
  * 把「当天暂存区」的播报聚类成伪事件记录，供判定期统一匹配。
@@ -501,10 +516,11 @@ function todayPseudoRecords(store: EventMemoryStore): Array<{ id: string; record
  * 查找顺序：**当天暂存区优先 → 长期记忆**。
  * 当天优先是为了让「同一次运行内已播过」成为最强信号（板块内去重）。
  *
- * 三路信号取最大（任一命中即合并）：
+ * 匹配规则（硬信号优先，标签仅作辅助）：
  *  1. 锚点 Jaccard —— 抓「同事件不同措辞」（如「住房贷款…40年」vs「房贷…40年」）
  *  2. 标题 Dice    —— 抓「媒体改写通稿」这类措辞近似的重复
- *  3. 主题标签共享 ≥2 —— 抓「同一主题不同切入」的软重复（弱信号，兜底用）
+ *  3. 主题标签共享 ≥2 —— 弱辅助信号：仅当硬信号已具一定置信（≥ HARD_CORROB）时
+ *     才抬到合并阈（兜底「同一主题不同切入」）；单独出现不触发合并，防误并。
  */
 export function findMatchingEvent(
   cand: MemoryCandidate,
@@ -520,7 +536,14 @@ export function findMatchingEvent(
     const aj = anchorJaccard(anchors, rec.anchors);
     const td = bestTitleDice(cand.title, rec);
     const st = sharedTags(tags, rec.topicTags);
-    return Math.max(aj, td, st >= 2 ? MATCH_THRESHOLD : 0);
+    const hard = Math.max(aj, td);
+    // 合并判定：
+    //  - 硬信号达合并阈 → 直接合并；
+    //  - 硬信号达 HARD_CORROB 且共享 ≥2 主题标签 → 软命中合并（同一主题不同切入兜底）；
+    //  - 否则标签共享只给弱辅助值（TAG_SOFT_BOOST），不触发合并，防不同事件误并。
+    if (hard >= MATCH_THRESHOLD) return hard;
+    if (hard >= HARD_CORROB && st >= 2) return MATCH_THRESHOLD;
+    return Math.max(hard, st >= 2 ? TAG_SOFT_BOOST : 0);
   };
 
   // 1) 当天暂存区（同一次运行内已播报）
@@ -580,9 +603,16 @@ export function computeNovelty(cand: MemoryCandidate, record: EventRecord): Nove
   const facts = extractFacts(text);
   const histFacts = new Set(record.broadcastedFacts ?? []);
   const newFacts = facts.filter((f) => !histFacts.has(f));
-  // 历史无事实时：新事实占比按「有事实即算新增」处理，避免首次播报后
-  // 所有后续报道都因 0/0 得到满分（除零保护：分母至少为 1）。
-  const newFactRatio = facts.length === 0 ? 0 : newFacts.length / Math.max(facts.length, histFacts.size, 1);
+  // 历史无事实锚点时：无基线可比对，「全部为新」不可置信——封顶到 NO_FACT_BASELINE_CAP
+  // （默认 0.5），避免首播纯政策表述（抽不出事实）后，后续带事实报道的 novelty 被事实项拉满、
+  // 误判 progress 放行。有基线时按真实新增占比计算（分母取 max(候选事实数, 历史事实数)）。
+  const newFactRatio =
+    facts.length === 0
+      ? 0
+      : Math.min(
+          newFacts.length / Math.max(facts.length, histFacts.size, 1),
+          histFacts.size === 0 ? NO_FACT_BASELINE_CAP : 1,
+        );
 
   // bigram 增量
   const g = titleBigrams(normText(text));
@@ -1038,6 +1068,7 @@ function settleIntoEvents(
       title: s.title,
       text: s.text ?? "",
       ...(s.url ? { url: s.url } : {}),
+      ...(s.score !== undefined ? { score: s.score } : {}),
     };
     out = upsertEvent(out, cand, s);
   }
@@ -1130,6 +1161,7 @@ export function rememberBroadcast(
     facts: extractFacts(text),
   };
   if (cand.url) sample.url = cand.url;
+  if (cand.score !== undefined) sample.score = cand.score;
   if (novelty !== undefined) sample.novelty = novelty;
   if (angle) sample.angle = angle;
 

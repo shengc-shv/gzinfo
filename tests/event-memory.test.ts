@@ -120,20 +120,56 @@ test("URL 精确命中 = 最强信号（同一篇文章再次被选中）", () =
   assert.equal(m!.similarity, 1);
 });
 
-test("主题标签共享 ≥2 命中软重复（同一主题不同切入）", () => {
-  // 历史事件：住房金融 + 利率流动性两个主题
+test("主题标签共享 ≥2 但硬信号缺失不误并（不同事件判 new）", () => {
+  // 历史事件：住房金融 + 利率流动性两个宽泛主题
   const store = storeWith([
     mkRecord({ id: "e1", topicTags: ["住房金融", "利率流动性"] }),
   ]);
-  // 候选标题/锚点都与历史不同（公积金、LPR、存款），但主题标签与历史共享 2 个：
-  // 「公积金…120万」→ 住房金融（公积金/购房）；「LPR…存款」→ 利率流动性（LPR/存款）
+  // 候选标题/锚点都与历史完全不同（公积金、LPR、存款），仅共享 2 个宽泛主题标签：
+  // 修复前会误判为同一事件（串味合并，把「公积金额度上调」并入「房贷40年」）；
+  // 修复后必须判 new，避免不同事件被误并。
   const cand: MemoryCandidate = {
     title: "公积金贷款额度上调 LPR下调 存款利率下行",
     text: "公积金 存款 LPR",
   };
   const m = findMatchingEvent(cand, store);
-  assert.ok(m, "共享 ≥2 主题标签应软命中同一主题");
+  assert.equal(m, null, "仅共享宽泛标签、无硬信号支撑应判为新事件");
+});
+
+test("主题标签共享 ≥2 且硬信号达置信 → 软命中合并（同一主题不同切入）", () => {
+  // 历史事件锚点含「房贷」「#40年」；候选与历史共享「房贷」锚点（hard 落入软命中区间），
+  // 且共享 ≥2 主题标签 → 仍应合并（保留「同一主题不同切入」的软重复兜底）。
+  // 对照：同一候选若历史只共享 1 个标签则不合并（见「主题标签共享 1 个不误报」），
+  // 证明是「硬信号 + 标签」共同把相似度抬到合并阈，而非标签单独生效。
+  const store = storeWith([mkRecord({ id: "e1", topicTags: ["住房金融", "利率流动性"] })]);
+  const cand: MemoryCandidate = {
+    title: "房贷期限调整 利率下行",
+    text: "房贷期限调整 利率下行",
+  };
+  const m = findMatchingEvent(cand, store);
+  assert.ok(m, "硬信号达置信 + 共享≥2标签应软命中同一主题");
   assert.equal(m!.id, "e1");
+});
+
+test("computeNovelty：历史无事实锚点时不给满分（封顶 0.5 防虚高）", () => {
+  // 首播为纯政策表述（抽不出数字/机构/进展动词），broadcastedFacts 为空。
+  const rec = mkRecord({
+    id: "e1",
+    broadcastedFacts: [],
+    broadcastedTexts: ["住房金融政策备受关注"],
+    samples: [{ date: "2026-08-25", section: "must_read", title: "住房金融政策备受关注", text: "住房金融政策备受关注", facts: [] }],
+  });
+  // 后续带事实报道：新增 1000万户 / 500亿元 等事实
+  const cand: MemoryCandidate = {
+    title: "住房金融政策备受关注 惠及1000万户 投入500亿元",
+    text: "住房金融政策备受关注 惠及1000万户 投入500亿元",
+  };
+  const n = computeNovelty(cand, rec);
+  assert.ok(n.newFacts.length > 0, "候选应抽到新事实");
+  // 历史无事实基线 → 即便候选全为新事实，novelty 也不应被事实项拉满：
+  // 修复后新事实占比封顶 0.5（事实项贡献 ≤0.225），novelty 应 < 0.5；
+  // 若封顶失效（newFactRatio=1）则 fact 贡献 0.45、novelty 将 > 0.5。
+  assert.ok(n.novelty < 0.5, `历史无基线时 novelty 应被封顶（<0.5），实际 ${n.novelty}`);
 });
 
 test("主题标签共享 1 个不误报（仅强信号不够时）", () => {
@@ -145,6 +181,23 @@ test("主题标签共享 1 个不误报（仅强信号不够时）", () => {
   };
   const m = findMatchingEvent(cand, store);
   assert.equal(m, null);
+});
+
+test("peakScore：hero 播报跨天结算保留真实分行相关性分（非恒为 0）", () => {
+  // 修复前：exec-guard 的 hero/risk 候选不带 score，rememberBroadcast 也不透传，
+  // 跨天结算时 cand.score=undefined → peakScore 恒为 0，重大事件无法享受「≥60 双倍保留」。
+  // 修复后：score 经 BroadcastSample 透传到 upsertEvent。
+  const hero: MemoryCandidate = {
+    title: "房贷期限最长延至40年",
+    score: 95,
+    override: true,
+  };
+  let s: EventMemoryStore = { version: 1, events: {}, today: { date: "2026-08-25", entries: [] } };
+  s = rememberBroadcast(s, { cand: hero, section: "hero", date: "2026-08-25", novelty: 1 });
+  const settled = beginDay(s, "2026-08-26");
+  const rec = Object.values(settled.events)[0];
+  assert.ok(rec, "应结算出一条长期记忆");
+  assert.equal(rec.peakScore, 95, "hero 播报的 peakScore 应透传为真实分行分（非恒为 0）");
 });
 
 test("无关事件不误匹配（新事件 verdict=new）", () => {
