@@ -1,68 +1,113 @@
 {
   "date": "2026-09-03",
-  "hero_line": "六大行息差企稳、分红升级与科技金融突围共振，叠加适度宽松货币政策延续，零售端定价与财富配置迎来新窗口。",
+  "hero_line": "六大行中报集体放暖，息差企稳与分红升级双信号叠加，财富端配置话术与零售信贷定价都该跟着换口径。",
   "must_read": [
     {
-      "title": "信用卡发卡量四年减1.3亿张",
-      "why": "行业进入存量经营时代，信用卡业务逻辑从拉新转向分层经营与场景激活，影响分行卡中心经营策略。",
-      "url": "https://m.21jingji.com/article/20260902/herald/775d4ceb42e42bb32aad42e2b2640290.html"
+      "title": "央行重申适度宽松货币政策",
+      "why": "潘功胜明确继续实施适度宽松，市场流动性充裕预期升温，零售信贷与财富产品定价均需保持弹性应对。",
+      "url": "https://m.21jingji.com/article/20260902/herald/e49e55b8ea8471e9b649cdd8305267a6.html"
     },
     {
-      "title": "二手房网签同比增10.6%",
-      "why": "1—8月全国二手房成交活跃度回升，叠加金九银十窗口，按揭与赎楼业务需求回暖信号明确。",
-      "url": "https://www.cnfin.com/hg-lb/detail/20260902/4464126_1.html"
+      "title": "北上深楼市现积极信号",
+      "why": "一线城市一二手房成交回暖，新政效应显现，广州作为同梯队城市可参考其定价与额度策略调整按揭打法。",
+      "url": "https://www.cnfin.com/yw-lb/detail/20260903/4464322_1.html"
+    },
+    {
+      "title": "稳慎推进商业不动产REITs",
+      "why": "监管定调稳慎推进商业REITs，分行可提前梳理辖内优质商业物业客群，储备Pre-REITs撮合业务线索。",
+      "url": "https://www.stcn.com/article/detail/4169916.html"
+    },
+    {
+      "title": "六大行息差企稳分红升级",
+      "why": "息差拐点信号叠加分红升至31%，银行板块股息吸引力增强，私行客户资产配置与代销话术需即时更新。",
+      "url": "https://finance.sina.com.cn/money/bank/bank_hydt/2026-09-02/doc-iniqkqvh1344751.shtml"
     }
   ],
   "insights": [
     {
-      "topic": "黄金波动提示与资产再平衡",
+      "topic": "高股息银行股配置机会",
       "tags": [
-        "财富",
-        "私行"
+        "私行",
+        "财富"
       ],
-      "impact": "金价跌破4300美元关口，持有黄金的客户面临短期波动压力，需主动沟通避免赎回焦虑。",
-      "action": "财富部本周内梳理黄金配置型客户清单，私行经理一对一沟通再平衡方案，提示分散配置。",
+      "impact": "六大行分红比例升至31%，银行板块股息吸引力显著增强，对私行与财富客户资产再平衡形成直接利好。",
+      "action": "私行与财富条线本周内更新代销话术，将银行板块纳入稳健型组合推荐池，重点触达高净值存量客户。",
       "sources": [
         {
-          "title": "黄金变天，跌破4300美元关口",
-          "url": "https://www.stcn.com/detail/4169772.html"
+          "title": "六大行中期业绩发布会释放暖意：息差企稳 分红升级 科技金融突围",
+          "url": "https://finance.sina.com.cn/money/bank/bank_hydt/2026-09-02/doc-iniqkqvh1344751.shtml"
+        },
+        {
+          "title": "中期分红阵营扩大",
+          "url": "https://finance.sina.com.cn/money/bank/bank_hydt/2026-09-02/doc-iniqkvch7899305.shtml"
         }
       ]
     },
     {
-      "topic": "二手房按揭回暖提前备客",
+      "topic": "双节文旅客群信用卡激活",
+      "tags": [
+        "客群",
+        "信用卡"
+      ],
+      "impact": "中秋国庆双节文旅预订走强，出行场景客群活跃度提升，信用卡分期与权益消费存在结构性增量。",
+      "action": "信用卡部可针对在穗出行客群推出双节专享分期与权益包，零售客户经理同步对接文旅场景商户做联合营销。",
+      "sources": [
+        {
+          "title": "暑期消费交出成绩单 中秋国庆双节文旅预订升温",
+          "url": "https://www.cnfin.com/hg-lb/detail/20260902/4463720_1.html"
+        }
+      ]
+    },
+    {
+      "topic": "二手房按揭与赎楼回暖备货",
       "tags": [
         "住房金融"
       ],
-      "impact": "全国二手房网签同比增10.6%，广州区域中介渠道与赎楼业务需求预期升温，需提前布局渠道。",
-      "action": "住房金融部本周走访广州头部中介门店，个贷经理提前储备赎楼与按揭转单客户名单。",
+      "impact": "1—8月全国二手房网签同比增长10.6%，叠加一线城市成交回暖信号，广州二手房按揭与赎楼需求有望同步升温。",
+      "action": "个贷条线可提前对接辖内头部中介渠道锁定优质房源与客户，住房金融部做好额度与流程准备抢抓金九银十窗口。",
       "sources": [
         {
-          "title": "1—8月份全国二手房交易网签面积同比增长10.6%",
-          "url": "https://www.cnfin.com/hg-lb/detail/20260902/4464126_1.html"
+          "title": "新华财经晚报：1—8月份全国二手房交易网签面积同比增长10.6%",
+          "url": "https://www.cnfin.com/yw-lb/detail/20260902/4464126_1.html"
+        },
+        {
+          "title": "新政渐次落地 北上深楼市现积极信号",
+          "url": "https://www.cnfin.com/yw-lb/detail/20260903/4464322_1.html"
+        }
+      ]
+    },
+    {
+      "topic": "分红险替代存款主打代发",
+      "tags": [
+        "代发",
+        "财富"
+      ],
+      "impact": "定存息差套利空间持续压缩，分红险成银行代销新宠，代发客群对稳健收益产品的需求转向分红险。",
+      "action": "代发与财富条线可将分红险纳入代发客户资产配置主推清单，结合行内存量代发客群做一对一触达。",
+      "sources": [
+        {
+          "title": "长短期定存息差压缩 银行代销热衷于分红险",
+          "url": "https://m.21jingji.com/article/20260902/herald/9e178d786edda3ab55809a108b26b1f4.html"
+        }
+      ]
+    },
+    {
+      "topic": "存量信用卡客户分层激活",
+      "tags": [
+        "信用卡"
+      ],
+      "impact": "行业信用卡发卡量四年净减1.3亿张，拉新红利消退，存量客户的单卡贡献挖掘成为核心战场。",
+      "action": "信用卡部可启动存量客户分层分群运营计划，针对高频与沉默客户设计差异化激活权益，提升单卡活跃度。",
+      "sources": [
+        {
+          "title": "银行信用卡，四年少了1.3亿张",
+          "url": "https://m.21jingji.com/article/20260902/herald/775d4ceb42e42bb32aad42e2b2640290.html"
         }
       ]
     }
   ],
   "sections": {
-    "gz_local": [
-      {
-        "url": "https://news.dayoo.com/guangzhou/202609/02/139995_54998911.htm",
-        "title_cn": "2026年广马今日开始报名",
-        "title_orig": "2026年广马今日开始报名",
-        "source": "广州日报·大洋网",
-        "source_type": "media",
-        "date": "09/02",
-        "summary": "广马报名启动，可联动跑步爱好者与高净值客户做信用卡/私行场景营销。",
-        "importance": 2,
-        "rank": 1,
-        "tags": [
-          "客群"
-        ],
-        "locale": "gz",
-        "locale_evidence": "2026年广马今日开始报名"
-      }
-    ],
+    "gz_local": [],
     "biz_insight": [
       {
         "url": "https://www.stcn.com/article/detail/4169772.html",
@@ -93,6 +138,19 @@
         "locale": "national"
       },
       {
+        "url": "https://www.stcn.com/article/detail/4168950.html",
+        "title_cn": "金域医学成立新公司 含医疗服务业务",
+        "source": "证券时报",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "09/02",
+        "summary": "金域医学新设医疗服务子公司，业务边界向服务端延伸，可探索机构客户深度联动机会。",
+        "importance": 2,
+        "rank": 3,
+        "tags": [],
+        "locale": "national"
+      },
+      {
         "url": "https://www.cnfin.com/hg-lb/detail/20260902/4463720_1.html",
         "title_cn": "暑期消费交出“成绩单” 中秋国庆双节文旅预订升温",
         "source": "新华财经",
@@ -101,7 +159,7 @@
         "date": "09/02",
         "summary": "所以呢：双节文旅预订走强为信用卡分期与出行客群带来增量场景，零售客户经理可结合在穗出行服务做针对性权益触达。",
         "importance": 2,
-        "rank": 3,
+        "rank": 4,
         "tags": [],
         "locale": "national"
       },
@@ -114,7 +172,7 @@
         "date": "09/02",
         "summary": "建行信用卡中心副总经理唐华任职资格获监管批准。所以呢：属大行信用卡条线人事调整，对分行信用卡业务无直接影响，仅作行业信息跟踪。",
         "importance": 2,
-        "rank": 4,
+        "rank": 5,
         "tags": [
           "客群"
         ],
@@ -129,7 +187,7 @@
         "date": "09/02",
         "summary": "行业信用卡发卡量四年净减少1.3亿张，存量经营时代全面到来。所以呢：分行信用卡业务可从拉新转向存量客户分层经营与场景化激活，提升单卡贡献。",
         "importance": 2,
-        "rank": 5,
+        "rank": 6,
         "tags": [
           "客群"
         ],
@@ -144,7 +202,7 @@
         "date": "09/02",
         "summary": "42家上市银行投资收益成为中报亮点，部分行投资收益对营收贡献显著提升。所以呢：分行可关注债券与基金配置能力建设，提升财富管理专业度。",
         "importance": 2,
-        "rank": 6,
+        "rank": 7,
         "tags": [],
         "locale": "national"
       },
@@ -157,43 +215,105 @@
         "date": "09/02",
         "summary": "定存套利空间收窄，分红险成银行代销新宠。所以呢：分行代发与财富条线可将分红险作为存款替代产品重点推介，丰富客户资产配置工具。",
         "importance": 2,
-        "rank": 8,
-        "tags": [
-          "财富"
-        ],
-        "locale": "national"
-      },
-      {
-        "url": "https://www.cnfin.com/yw-lb/detail/20260902/4464287_1.html",
-        "title_cn": "支付机构半年报业绩分化 AI及跨境业务备受关注",
-        "source": "新华财经",
-        "source_type": "official",
-        "tier": "T1.5",
-        "date": "09/02",
-        "summary": "支付机构半年报业绩分化，AI赋能与跨境支付成行业新增长点。所以呢：分行可联动支付机构拓展跨境电商客群，丰富收单与结算服务场景。",
-        "importance": 2,
         "rank": 9,
         "tags": [
-          "客群"
+          "财富"
         ],
         "locale": "national"
       }
     ],
     "policy_market": [
       {
-        "url": "https://www.stcn.com/article/detail/4168950.html",
-        "title_cn": "金域医学成立新公司 含医疗服务业务",
-        "title_orig": "金域医学成立新公司 含医疗服务业务",
+        "url": "https://www.stcn.com/article/detail/4169917.html",
+        "title_cn": "货币财政协同发力 放大政策激励效能",
+        "title_orig": "货币财政协同发力 放大政策激励效能",
         "source": "证券时报",
         "source_type": "media",
-        "date": "09/02",
-        "summary": "金域医学新设医疗服务子公司，业务边界向服务端延伸，可探索机构客户深度联动机会。",
+        "date": "09/03",
+        "summary": "货币与财政协同是当前宏观主线，流动性环境宽松预期升温。所以呢：分行可关注同业存单与理财收益率随之下移的趋势，做好负债端成本管理与零售代销产品的收益预期沟通。",
         "importance": 3,
         "rank": 1,
         "tags": [
-          "粤"
+          "市场",
+          "客群"
         ],
-        "locale": "national"
+        "locale": "national",
+        "locale_evidence": "货币财政协同发力 放大政策激励效能（全国宏观政策论述）"
+      },
+      {
+        "url": "https://www.cnfin.com/yw-lb/detail/20260903/4464322_1.html",
+        "title_cn": "新政渐次落地 北上深楼市现积极信号",
+        "title_orig": "新政渐次落地 北上深楼市现积极信号",
+        "source": "新华财经",
+        "source_type": "media",
+        "date": "09/03",
+        "summary": "北、上、深一二手房成交出现回暖迹象，新政效应初步显现。所以呢：一线城市需求侧政策窗口已打开，可作为广州本地改善型按揭与二手房按揭产品的定价与额度参考。",
+        "importance": 2,
+        "rank": 2,
+        "tags": [
+          "住房金融",
+          "市场",
+          "信贷",
+          "客群"
+        ],
+        "locale": "national",
+        "locale_evidence": "新政渐次落地 北上深楼市现积极信号（涉及北、上、深，未涉及广州）"
+      },
+      {
+        "url": "https://www.stcn.com/article/detail/4169916.html",
+        "title_cn": "稳慎推进商业不动产REITs 构建房地产发展新模式",
+        "title_orig": "稳慎推进商业不动产REITs 构建房地产发展新模式",
+        "source": "证券时报",
+        "source_type": "media",
+        "date": "09/03",
+        "summary": "监管定调稳慎推进商业不动产REITs，盘活存量与新模式构建并行。所以呢：分行可梳理辖内优质商业物业持有客群，为后续Pre-REITs融资与撮合业务储备项目线索。",
+        "importance": 2,
+        "rank": 3,
+        "tags": [
+          "住房金融",
+          "市场",
+          "信贷",
+          "客群"
+        ],
+        "locale": "national",
+        "locale_evidence": "稳慎推进商业不动产REITs 构建房地产发展新模式（全国性政策表述）"
+      },
+      {
+        "url": "https://www.stcn.com/article/detail/4169918.html",
+        "title_cn": "现房销售推高成本、中小房企将出局、房价要大涨？专家：成本归位政策托底 房价缺乏大涨基础",
+        "title_orig": "\"现房销售推高成本、中小房企将出局、房价要大涨\"？ 专家：成本归位政策托底 房价缺乏大涨基础",
+        "source": "证券时报",
+        "source_type": "media",
+        "date": "09/03",
+        "summary": "专家判断现房销售推升成本、中小房企加速出清，全国房价缺乏普涨基础。所以呢：分行对公条线需关注开发商客户白名单收紧，开发贷投向优中选优。",
+        "importance": 2,
+        "rank": 4,
+        "tags": [
+          "住房金融",
+          "市场",
+          "信贷",
+          "客群"
+        ],
+        "locale": "national",
+        "locale_evidence": "现房销售、房价相关全国性市场分析"
+      },
+      {
+        "url": "https://finance.sina.com.cn/money/bank/bank_hydt/2026-09-02/doc-iniqkvch7899305.shtml",
+        "title_cn": "中期分红阵营扩大",
+        "title_orig": "中期分红阵营扩大",
+        "source": "新浪财经·银行频道",
+        "source_type": "media",
+        "date": "09/02",
+        "summary": "上市银行中期分红队伍扩容，板块股息吸引力进一步增强。所以呢：高股息银行标的再获资金关注，分行私行客户在资产配置中可适当提示银行板块的配置机会。",
+        "importance": 2,
+        "rank": 5,
+        "tags": [
+          "市场",
+          "财富",
+          "客群"
+        ],
+        "locale": "national",
+        "locale_evidence": "新浪财经·银行频道，中期分红阵营扩大（全国银行业动态）"
       },
       {
         "url": "https://www.stcn.com/article/detail/4169886.html",
@@ -204,20 +324,7 @@
         "date": "09/02",
         "summary": "深圳启动私募合规自查，违规行为将影响新产品备案。所以呢：分行代销私募产品需提前核查合作机构合规状态，避免代销风险传导。",
         "importance": 2,
-        "rank": 2,
-        "tags": [],
-        "locale": "national"
-      },
-      {
-        "url": "https://www.stcn.com/article/detail/4168241.html",
-        "title_cn": "楼市新政吹暖风 “金九银十”现苗头",
-        "source": "证券时报",
-        "source_type": "media",
-        "tier": "T2",
-        "date": "09/02",
-        "summary": "所以呢：全国楼市迎金九银十窗口期，对按揭与个人经营贷客户群体形成回暖信号，分行一线团队可重点关注新房按揭进件节奏与开发商合作动态。",
-        "importance": 2,
-        "rank": 3,
+        "rank": 6,
         "tags": [],
         "locale": "national"
       },
@@ -230,7 +337,7 @@
         "date": "09/02",
         "summary": "五大上市险企同日发布重要公告，具体内容待披露。所以呢：分行需及时跟进公告内容，评估对代销保险产品与合作渠道的潜在影响。",
         "importance": 2,
-        "rank": 4,
+        "rank": 8,
         "tags": [
           "财富"
         ],
@@ -245,7 +352,7 @@
         "date": "09/02",
         "summary": "六大行绿色贷款余额突破27万亿元，绿色金融成大行重点赛道。所以呢：分行可在广州地区绿色产业客群中挖掘对公与个人绿色信贷联动机会。",
         "importance": 2,
-        "rank": 5,
+        "rank": 9,
         "tags": [
           "信贷"
         ],
@@ -260,7 +367,7 @@
         "date": "09/02",
         "summary": "央行行长明确继续实施适度宽松货币政策，释放稳增长信号。所以呢：分行可预期市场流动性维持充裕，零售信贷与财富产品端定价策略保持灵活。",
         "importance": 2,
-        "rank": 6,
+        "rank": 10,
         "tags": [],
         "locale": "national"
       },
@@ -273,7 +380,7 @@
         "date": "09/02",
         "summary": "六大行息差拐点信号增强、分红比例升至31%，科技金融成新增量。所以呢：高股息银行股对零售财富客户吸引力上升，代销与私行配置话术可同步更新。",
         "importance": 2,
-        "rank": 7,
+        "rank": 11,
         "tags": [],
         "locale": "national"
       },
@@ -286,7 +393,7 @@
         "date": "09/02",
         "summary": "交行将境内优先股票面股息率调整为2.77%。所以呢：分行持有或代销交行优先股的客户收益将相应调整，需做好客户沟通。",
         "importance": 2,
-        "rank": 8,
+        "rank": 12,
         "tags": [],
         "locale": "national"
       },
@@ -299,7 +406,7 @@
         "date": "09/02",
         "summary": "美联储威廉姆斯表态通胀缓慢下行、利率水平合理。所以呢：分行外汇与财富条线可关注美联储政策节奏对结售汇及跨境理财客户的影响。",
         "importance": 2,
-        "rank": 9,
+        "rank": 13,
         "tags": [
           "信贷"
         ],
@@ -311,33 +418,43 @@
       {
         "url": "https://data.eastmoney.com/xg/xg/#A24052",
         "title_cn": "广东邦泽创科电器：IPO提交注册（拟北交所）",
-        "title_orig": "广东邦泽创科电器：IPO提交注册（拟北交所）",
         "source": "东财IPO在审(广东)",
         "source_type": "official",
+        "tier": "T1.5",
         "date": "09/01",
-        "summary": "广东邦泽创科电器已提交北交所注册，可提前对接承销与对公授信机会。",
+        "summary": "注册地：广东｜保荐：东莞证券股份有限公司｜更新：2026-09-01",
         "importance": 2,
         "rank": 1,
         "tags": [
-          "粤",
-          "市场",
-          "客群"
+          "粤"
         ],
-        "locale": "gz",
-        "locale_evidence": "注册地：广东"
+        "locale": "national"
+      }
+    ]
+  },
+  "risk": {
+    "topic": "深圳私募合规自查启动",
+    "evidence": "深圳监管启动私募合规自查，明确违规行为将暂停新产品备案，直接波及在穗代销合作机构。",
+    "impact": "财富管理端：代销私募产品若合作机构未通过自查，将面临下架风险；私行端：高净值客户持有私募产品需重新评估合规状态；风控端：合作机构白名单需即时更新。",
+    "action": "财富部本周内梳理代销私募合作机构清单并核查合规状态，风控部同步更新合作机构白名单与风险提示。",
+    "source": "T1.5",
+    "sources": [
+      {
+        "title": "监管新动向！深圳启动私募合规自查，这些行为将暂停新产品备案",
+        "url": "https://www.stcn.com/article/detail/4169886.html"
       }
     ]
   },
   "stock_recap": {
     "us": {
-      "overview": "三大指数集体收涨，道指涨0.56%、纳指涨0.45%，AI算力链受博通财报提振领涨。",
+      "overview": "三大指数集体收涨，纳指涨0.45%，博通财报AI展望乐观提振科技股。",
       "sectors": [
-        "半导体：博通Q3业绩超预期，AI销售大增，盘后大涨",
-        "云计算：微软将首次单独披露Azure季度收入，云业务整合提速",
-        "科技龙头：苹果股价创二十年罕见异动，受市场高度关注",
-        "中概/外贸：特朗普与习近平华盛顿会晤在即，贸易议题受关注"
+        "半导体：博通财报强劲、收入指引达640亿美元，AI算力需求驱动板块走强",
+        "软件与云：微软将首次单独披露Azure季度收入，云业务整合提振市场预期",
+        "新能源与基建：Nscale签约1030亿美元合同后推进IPO，算力基建热度升温",
+        "苹果：股价创二十年新高，估值与回购预期共振"
       ],
-      "spoken": "美股三大指数集体收涨，道指升零点五六个百分点，纳指、标普均涨约零点四六个百分点。博通财报AI销售大增，半导体板块领涨；微软将首次单独披露Azure收入，云计算获关注。苹果股价创二十年罕见异动，中美首脑会晤在即，贸易议题受关注。",
+      "spoken": "美股三大指数集体收涨，道指涨0.56%，纳指涨0.45%，标普涨0.46%。博通财报AI展望乐观、微软披露Azure收入提振科技板块，苹果股价创二十年新高，算力基建概念Nscale推进IPO。",
       "meta": {
         "source": "CNBC Top Stories",
         "crossCheck": "新浪行情",
@@ -362,14 +479,14 @@
       ]
     },
     "aShare": {
-      "overview": "三大指数缩量收跌，沪指跌0.97%、深成指跌1.88%、创业板跌2.39%，地面兵装逆市大涨。",
+      "overview": "三大指数缩量收跌，沪指跌0.97%、创业板跌2.39%，地面兵装板块逆市爆发。",
       "sectors": [
-        "地面兵装：主力1.81亿大单封板，板块逆市爆发，成盘面最强主线",
-        "债市关联：全球长债抛售加剧、美股股债双杀，扰动A股风险偏好",
-        "AI算力：中金称开源模型带动云厂商与FDE需求，算力链获关注",
-        "超跌配置：中信建议关注资金面波动下的稳健运营资产超跌机会"
+        "地面兵装：受地缘事件催化大单封板，全天逆市大涨成盘面亮点",
+        "贵金属与长债：全球长债收益率刷新极值，金价承压拖累资源股",
+        "成长股：创业板跌幅居前，燧原科技142元发行价高估值新股申购引关注",
+        "机构观点：中信建议关注资金面与情绪面波动带来的稳健资产超跌机会"
       ],
-      "spoken": "A股三大指数缩量收跌，上证跌零点九七个百分点，深成指跌一点八八，创业板跌二点三九。地面兵装板块逆市爆发，主力大单封板成最强主线。全球长债抛售加剧、美股股债双杀，扰动市场风险偏好；机构建议关注稳健运营资产的超跌机会。",
+      "spoken": "A股三大指数缩量收跌，上证跌0.97%，深成指跌1.88%，创业板跌2.39%。盘面上地面兵装板块受事件催化逆市爆发，全球长债抛售压制资源股，创业板跌幅居前。",
       "meta": {
         "source": "东方财富",
         "crossCheck": "新浪行情",
@@ -394,14 +511,15 @@
       ]
     },
     "hk": {
-      "overview": "恒指收报25275点跌0.22%，科指跌0.83%，科网股走弱、中资券商普跌拖累盘面。",
+      "overview": "恒指跌0.07%收报25275点，恒科跌0.83%，科网与中资券商走弱拖累盘面。",
       "sectors": [
-        "科网股：恒科跌0.74%，板块整体走弱拖累大市",
-        "中资券商：板块普遍下跌，成为盘面主要拖累",
-        "黄金股：连跌三日，金价走弱持续施压",
-        "南向资金：北水净买入近41亿港元，加仓友邦超9亿、扫货腾讯与中际旭创"
+        "科网股：恒科跌0.83%，腾讯等权重走弱成主要拖累",
+        "中资券商：板块普跌，压制大市情绪",
+        "黄金股：金价走弱连跌三日，相关标的持续承压",
+        "南向资金：北水净买入近41亿港元，加仓友邦超9亿",
+        "创新药：交银国际上调信达生物目标价至129港元，维持买入"
       ],
-      "spoken": "港股恒指收报二万五千二百七十五点，跌零点二二个百分点；恒科跌零点八三个百分点。科网股走弱、中资券商普跌拖累盘面；黄金股连跌三日承压。北水净买入近四十一亿港元，加仓友邦超九亿港元，并扫货腾讯与中际旭创。",
+      "spoken": "港股恒指微跌0.07%收报25275点，恒生科技跌0.83%。科网股与中资券商普跌拖累盘面，黄金股随金价连跌三日，北水逆势净买入近41亿港元，加仓友邦与腾讯。交银上调信达生物目标价至129港元。",
       "meta": {
         "source": "新浪财经·港股",
         "crossCheck": "新浪行情",
@@ -441,7 +559,7 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "09/02",
-      "summary": "9月2日A股三大指数缩量收跌，唯地面兵装板块逆市大涨。",
+      "summary": "9月2日A股三大指数缩量收跌，地面兵装板块逆市大涨。",
       "importance": 2,
       "rank": 0,
       "tags": [
@@ -458,29 +576,13 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "09/02",
-      "summary": "9月2日地面兵装板块盘中获1.81亿元大单直线封板，板块整体爆发。",
+      "summary": "地面兵装板块盘中现1.81亿元大单封板，板块个股集体爆发。",
       "importance": 2,
       "rank": 0,
       "tags": [
         "A股",
         "军工",
-        "资金流向"
-      ],
-      "locale": "national",
-      "market": "a-share"
-    },
-    {
-      "url": "https://finance.eastmoney.com/a/202609023862216032.html",
-      "title_cn": "全维度剖析债市危机：缘何全球国债抛售根本停不下来？",
-      "source": "东方财富",
-      "source_type": "media",
-      "date": "09/02",
-      "summary": "全球多国长债遭遇抛售，收益率持续上行，债市危机未见缓解迹象。",
-      "importance": 2,
-      "rank": 0,
-      "tags": [
-        "债市",
-        "全球宏观"
+        "板块行情"
       ],
       "locale": "national",
       "market": "a-share"
@@ -491,7 +593,7 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "09/02",
-      "summary": "9月2日晚间沪深上市公司密集披露重大事项公告，包括停牌、重组、业绩等。",
+      "summary": "9月2日晚间沪深上市公司发布一批重大事项公告。",
       "importance": 1,
       "rank": 0,
       "tags": [
@@ -502,12 +604,28 @@
       "market": "a-share"
     },
     {
+      "url": "https://finance.eastmoney.com/a/202609023862216032.html",
+      "title_cn": "全维度剖析债市危机：缘何全球国债抛售根本停不下来？",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "09/02",
+      "summary": "全球多国国债遭遇持续抛售，长债收益率攀升引发市场关注。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "债市",
+        "全球宏观"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
       "url": "https://finance.eastmoney.com/a/202609023862621811.html",
       "title_cn": "全球股民的终极命题：长债危机的火会“烧向”股市吗？",
       "source": "东方财富",
       "source_type": "media",
       "date": "09/02",
-      "summary": "市场讨论长债收益率飙升是否会进一步传导至全球股市，引发风险资产重定价担忧。",
+      "summary": "市场讨论长债收益率走高是否会向股市蔓延传导。",
       "importance": 2,
       "rank": 0,
       "tags": [
@@ -519,17 +637,17 @@
       "market": "a-share"
     },
     {
-      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0902/2026090202562.pdf",
-      "title_cn": "Next Day Disclosure Returns - [Share Buyback / Others]",
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0903/2026090300007.pdf",
+      "title_cn": "Financial Statements/ESG Information - [Interim/Half-Year Report]",
       "source": "港交所披露易",
       "source_type": "media",
-      "date": "09/02",
-      "summary": "港交所披露易刊发上市公司次日披露申报，涉及股份回购或其他事项。",
+      "date": "09/03",
+      "summary": "港交所披露易发布某上市公司中期/半年度财报。",
       "importance": 1,
       "rank": 0,
       "tags": [
         "港股",
-        "股份回购"
+        "财报"
       ],
       "locale": "national",
       "market": "hk"
@@ -540,7 +658,7 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "09/02",
-      "summary": "Broadcom公布强劲业绩展望，CEO强调AI实验室业务驱动增长。",
+      "summary": "Broadcom给出强劲业绩展望，CEO强调与AI实验室合作将驱动增长。",
       "importance": 3,
       "rank": 0,
       "tags": [
@@ -558,47 +676,12 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "09/02",
-      "summary": "美国司法部表示各州必须向国土安全部报告无证移民，否则将面临联邦资金削减风险。",
+      "summary": "美国司法部表示各州须向国土安全部上报无证移民信息，否则将面临联邦资金风险。",
       "importance": 1,
       "rank": 0,
       "tags": [
-        "美国政治",
-        "移民政策"
-      ],
-      "locale": "overseas",
-      "market": "us"
-    },
-    {
-      "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-broadcom-tops-q3-2026-estimates-as-ai-sales-surge-93CH-4886849",
-      "title_cn": "Earnings call transcript: Broadcom tops Q3 2026 estimates as AI sales surge",
-      "source": "Investing.com News",
-      "source_type": "media",
-      "date": "09/02",
-      "summary": "Broadcom 2026财年Q3业绩超预期，AI相关销售大幅增长。",
-      "importance": 3,
-      "rank": 0,
-      "tags": [
-        "美股",
-        "财报",
-        "AI",
-        "半导体"
-      ],
-      "locale": "overseas",
-      "market": "us"
-    },
-    {
-      "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-netskope-beats-q2-2026-estimates-shares-jump-13-93CH-4886848",
-      "title_cn": "Earnings call transcript: Netskope beats Q2 2026 estimates, shares jump 13%",
-      "source": "Investing.com News",
-      "source_type": "media",
-      "date": "09/02",
-      "summary": "Netskope 2026财年Q2业绩超预期，财报发布后股价上涨13%。",
-      "importance": 2,
-      "rank": 0,
-      "tags": [
-        "美股",
-        "财报",
-        "网络安全"
+        "美国政策",
+        "移民"
       ],
       "locale": "overseas",
       "market": "us"
