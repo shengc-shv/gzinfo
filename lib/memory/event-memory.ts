@@ -21,7 +21,7 @@
 
 import { eventFingerprint, dice, titleBigrams } from "../ingest/dedup-similar";
 // 仅引入运行时函数；broadcast-time 对本文件只做 `import type`，无循环依赖
-import { formatBroadcastAt } from "./broadcast-time";
+import { formatBroadcastAt, isTestBroadcastAt } from "./broadcast-time";
 
 // ---------------------------------------------------------------------------
 // 1) 类型定义
@@ -1126,7 +1126,13 @@ export function beginDay(store: EventMemoryStore, today: string): EventMemorySto
   let events = { ...(store.events ?? {}) };
   const prev = store.today;
   if (prev && prev.date && prev.date !== today && prev.entries.length > 0) {
-    events = settleIntoEvents(events, prev.entries);
+    // 只结算「正式/演示时段」播报（当天 9:00 前，见 isTestBroadcastAt）：
+    // 9:00 之后产生的播报是测试/验证重跑的产物，若一并结算成长期事件，
+    // 会冷却/阻断后续真实发布（实锤：昨晚 23:39 测试播报结算后，今早
+    // 同源新闻被批量 duplicate/cooldown，必读/商机被压到各 2 条）。
+    // 测试留痕仅存活于当天暂存区（可查看/清理），跨天即失效，不进记忆。
+    const formal = prev.entries.filter((s) => !isTestBroadcastAt(s.broadcastAt));
+    if (formal.length > 0) events = settleIntoEvents(events, formal);
   }
   return {
     version: 1,

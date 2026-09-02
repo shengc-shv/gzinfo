@@ -22,12 +22,14 @@ import {
   filterByTimeRange,
   formatBroadcastAt,
   inTimeRange,
+  isTestBroadcastAt,
   parseBroadcastAt,
   partitionByHour,
   pruneByTimeRange,
   summarizeByHour,
 } from "../lib/memory/broadcast-time";
 import {
+  beginDay,
   emptyMemory,
   rememberBroadcast,
   type BroadcastSample,
@@ -200,6 +202,43 @@ test("inTimeRange / broadcastHour：非法或缺失时刻不参与判定", () =>
   assert.equal(inTimeRange(undefined, { from: "2026-09-02T09:00:00+08:00" }), false);
   assert.equal(broadcastHour("2026-09-02T23:39:47+08:00", TZ), 23);
   assert.equal(broadcastHour(undefined, TZ), null);
+});
+
+test("isTestBroadcastAt：9:00 为界（>=9 测试）；无时间戳保守按正式（false）", () => {
+  assert.equal(isTestBroadcastAt("2026-09-02T08:59:59+08:00", 9, TZ), false);
+  assert.equal(isTestBroadcastAt("2026-09-02T09:00:00+08:00", 9, TZ), true);
+  assert.equal(isTestBroadcastAt("2026-09-02T23:39:47+08:00", 9, TZ), true);
+  assert.equal(isTestBroadcastAt("2026-09-02T06:41:21+08:00", 9, TZ), false);
+  // 未知 / 非法 → 正式（保守参与去重，防重复播报）
+  assert.equal(isTestBroadcastAt(undefined, 9, TZ), false);
+  assert.equal(isTestBroadcastAt("not-a-date", 9, TZ), false);
+});
+
+test("beginDay 结算：9:00 后测试播报不进入长期记忆（不阻断后续真实发布）", () => {
+  // 复刻 2026-09-03 实锤：昨夜 23:39 测试重跑播报若被结算成事件，
+  // 今早同源新闻会被批量 duplicate/cooldown 压减（必读/商机各剩 2 条）。
+  const store: EventMemoryStore = {
+    version: 1,
+    updatedAt: "2026-09-02",
+    events: {},
+    today: {
+      date: "2026-09-02",
+      entries: [
+        sample("2026-09-02T23:39:47+08:00", "测试播报A"), // 测试时段（>=9:00）
+        sample("2026-09-02T08:00:00+08:00", "正式播报B"), // 演示时段
+        sample(undefined, "未知时刻C"), // 时刻未知 → 保守按正式
+      ],
+    },
+  };
+  const out = beginDay(store, "2026-09-03");
+  const titles = Object.values(out.events ?? {}).flatMap((r) => r.samples.map((s) => s.title));
+  assert.ok(titles.includes("正式播报B"), "正式/演示时段样本应结算进长期记忆");
+  assert.ok(titles.includes("未知时刻C"), "未知时刻样本保守结算（正式对待）");
+  assert.ok(!titles.includes("测试播报A"), "测试时段样本不应结算（不进事件、不参与冷却）");
+  // 新一天暂存区已清空待写入
+  assert.ok(out.today, "today 应存在");
+  assert.equal(out.today!.date, "2026-09-03");
+  assert.equal(out.today!.entries.length, 0);
 });
 
 test("rememberBroadcast 集成：新播报自动记录 broadcastAt（≈当前时刻）", () => {
