@@ -1,183 +1,180 @@
 {
   "date": "2026-09-02",
-  "updatedAt": "2026-09-01T23:11:58.679Z",
+  "updatedAt": "2026-09-02T15:40:19.599Z",
   "executive": {
-    "hero_line": "楼市金九银十叠加房贷40年新规，提前还贷潮未止，分行须在按揭留客与财富承接两端同步发力。",
-    "spoken_hero": "今天是9月2号，市场最热的信号是楼市迎来金九银十窗口，部分贷款把还款年限放到了40年，但六大行上半年按揭余额还在大幅缩水。分行在按揭一线要抓紧抢客，存量端联动财富承接大额还款资金。",
+    "hero_line": "六大行中报集体释放暖意，息差拐点叠加分红升级，零售财富端迎来配置窗口。",
+    "spoken_hero": "六大行中报集体释放暖意，息差拐点叠加分红升级，零售财富端迎来配置窗口。财富与私行团队可考虑借高股息行情重做资产配置话术。",
     "must_read": [
       {
-        "title": "七部门力推商品消费扩容升级",
-        "why": "十万亿级商品消费赛道获政策加持，汽车家电家居分期场景迎来政策窗口，分行消费贷与信用卡分期可借势做大额场景渗透。",
-        "url": "https://www.cnfin.com/yw-lb/detail/20260901/4463114_1.html"
+        "title": "央行重申适度宽松货币政策",
+        "why": "央行明确继续实施适度宽松货币政策，市场流动性维持充裕，零售信贷与财富产品定价策略可保持灵活。",
+        "url": "https://m.21jingji.com/article/20260902/herald/e49e55b8ea8471e9b649cdd8305267a6.html"
       },
       {
-        "title": "理财业绩比较基准大规模换锚",
-        "why": "理财进入相对收益时代，代销端筛选逻辑与客户沟通话术都要同步迭代，分行财富条线需提前做好内部培训与产品池调整。",
-        "url": "https://finance.sina.com.cn/money/bank/bank_hydt/2026-09-01/doc-iniqhmwe4801914.shtml"
+        "title": "信贷资产流转新规生效",
+        "why": "新规下不良处置与信贷资产盘活渠道拓宽，分行可借此优化表内结构、释放资本投向零售中收业务。",
+        "url": "https://finance.sina.com.cn/roll/2026-09-01/doc-iniqixxs8223669.shtml"
       },
       {
-        "title": "楼市新政吹暖风 金九银十现苗头",
-        "why": "全国楼市政策窗口与购房需求回暖同步显现，分行按揭一线需提前布局新房按揭进件与开发商合作谈判，争取季度规模冲量。",
-        "url": "https://www.stcn.com/article/detail/4168241.html"
+        "title": "六大行按揭余额集体减少",
+        "why": "提前还贷持续叠加按揭余额下降，个贷端需优化产品体验对冲流失，并挖掘存量客户再融资与综合服务机会。",
+        "url": "https://finance.sina.com.cn/money/bank/bank_hydt/2026-09-01/doc-iniqitru3504208.shtml"
       },
       {
-        "title": "房贷期限最长延至40年 提前还贷潮未止",
-        "why": "六大行上半年按揭余额减少逾5000亿元，存量流失与延期分流并存，分行须双线作战，延期应对+大额还款客户资金承接。",
-        "url": "https://finance.sina.com.cn/roll/2026-09-01/doc-iniqfzhi8561159.shtml"
-      },
-      {
-        "title": "外资年内净流入A股超3000亿",
-        "why": "外资加仓节奏积极，高净值客户权益配置意愿或在回暖，分行私行与基金代销可观察申购回暖信号，择机推动权益产品配置。",
-        "url": "https://finance.sina.com.cn/wm/2026-09-01/doc-iniqiaua3674925.shtml"
+        "title": "六大行息差企稳分红升级",
+        "why": "国有大行分红比例升至31%、息差拐点信号增强，对零售财富客户的高股息配置吸引力上行，代销与私行话术应同步更新。",
+        "url": "https://finance.sina.com.cn/money/bank/bank_hydt/2026-09-02/doc-iniqkqvh1344751.shtml"
       }
     ],
-    "spoken_must_read": "楼市迎来金九银十窗口，分行按揭团队要提前对接开发商，争夺季度规模。\n房贷期限放至40年，六大行上半年按揭余额还在大幅缩水，存量客户要抓紧承接。\n七部门发文力推商品消费扩容，汽车家电家居分期迎来政策窗口，可借势做大额场景。\n理财业绩基准大规模换锚进入相对收益时代，财富端筛选逻辑与客户沟通要同步迭代。\n外资年内加仓A股超3000亿，私行权益配置意愿或在回暖，可观察申购节奏择机推动。",
+    "spoken_must_read": "六大行息差企稳、分红比例升至31%，零售财富端可借高股息行情重做配置话术。央行重申适度宽松货币政策，流动性维持充裕，零售信贷与产品定价保持灵活。六大行按揭余额集体下降，提前还贷持续，个贷端需优化体验对冲流失、挖掘存量再融资。信贷资产流转新规今日生效，分行可借此盘活资产、释放资本投向中收。美联储三把手表态通胀缓慢下行，外汇与跨境理财客群需关注节奏变化。",
     "insights": [
       {
-        "topic": "国庆自驾拼假催热出行分期",
-        "impact": "国庆最长13天拼假叠加自驾预订提前走高，信用卡与汽车分期场景迎来集中放量窗口，车主客群出行消费弹性显著。",
-        "action": "信用卡与汽车分期团队本周内上线车主客群自驾权益包，结合在穗加油站与高速通行场景做分期活动推送，触达高频出行客户。",
+        "topic": "高股息银行股代销机会",
+        "impact": "国有大行市值逼近3万亿、三成银行股创年内新高，稳健收益资产对零售客户吸引力显著提升，可拉动代销中收。",
+        "action": "财富与私行团队本周可整理高股息银行股及分红险组合话术，向中老年稳健型客户做定向触达，抢抓配置窗口。",
         "tag": [
-          "信贷",
+          "财富",
+          "私行"
+        ],
+        "sources": [
+          {
+            "title": "三成银行股创年内新高！\"宇宙工\"市值直逼3万亿",
+            "url": "https://finance.sina.com.cn/roll/2026-09-01/doc-iniqihzt8157846.shtml"
+          },
+          {
+            "title": "六大行中期业绩发布会释放暖意：息差企稳 分红升级 科技金融突围",
+            "url": "https://finance.sina.com.cn/money/bank/bank_hydt/2026-09-02/doc-iniqkqvh1344751.shtml"
+          }
+        ]
+      },
+      {
+        "topic": "分红险替代定存营销",
+        "impact": "长短期定存息差压缩，分红险成代销新宠，代发与财富条线可借此丰富存款替代工具、提升中收。",
+        "action": "代发与财富团队本周内完成分红险产品培训与话术统一，重点面向代发企业员工与稳健偏好客户推介。",
+        "tag": [
+          "财富",
+          "代发"
+        ],
+        "sources": [
+          {
+            "title": "长短期定存息差压缩，银行代销热衷于分红险",
+            "url": "https://m.21jingji.com/article/20260902/herald/9e178d786edda3ab55809a108b26b1f4.html"
+          },
+          {
+            "title": "中信建投：保险板块估值仍有较高安全边际 长期配置价值显著",
+            "url": "https://finance.eastmoney.com/a/202609023862147227.html"
+          }
+        ]
+      },
+      {
+        "topic": "存量信用卡分层经营",
+        "impact": "行业发卡量四年净减1.3亿张，存量经营时代到来，单卡价值挖掘与场景化激活成为信用卡业务的关键。",
+        "action": "信用卡团队本周可启动存量客户分层标签体系搭建，针对高频与沉睡客群分别匹配权益与唤醒活动。",
+        "tag": [
+          "客群"
+        ],
+        "sources": [
+          {
+            "title": "银行信用卡四年少了1.3亿张",
+            "url": "https://m.21jingji.com/article/20260902/herald/775d4ceb42e42bb32aad42e2b2640290.html"
+          }
+        ]
+      },
+      {
+        "topic": "中秋国庆出行客群激活",
+        "impact": "国庆拼假最长13天、自驾与文旅预订提前升温，信用卡分期与车主客群迎来阶段性增量场景。",
+        "action": "信用卡与汽车分期团队本周可上线自驾权益包与出行分期活动，定向触达车主与高频出行客群。",
+        "tag": [
           "客群"
         ],
         "sources": [
           {
             "title": "13天超长拼假撬动出行需求 国庆假期自驾预订热度提前走高",
             "url": "https://www.stcn.com/article/detail/4168118.html"
+          },
+          {
+            "title": "暑期消费交出\"成绩单\" 中秋国庆双节文旅预订升温",
+            "url": "https://www.cnfin.com/hg-lb/detail/20260902/4463720_1.html"
           }
         ]
       },
       {
-        "topic": "大额还款客户资金承接",
-        "impact": "六大行上半年按揭余额减少逾5000亿元，存量大额还款客户资金流向成为财富业务最大增量池，承接效率决定留存质量。",
-        "action": "分行可建立大额还款客户前置识别清单，触发即联动推送短久期定存与稳健理财，提示存款期限结构与收益倒挂特征。",
+        "topic": "二手房按揭与赎楼储备",
+        "impact": "1—8月全国二手房网签同比增长10.6%，成交活跃度回升，按揭与赎楼业务需求边际回暖。",
+        "action": "住房金融团队本周可梳理本地头部中介合作清单，提前对接赎楼与按揭客户储备，抢抓成交回暖窗口。",
         "tag": [
-          "财富",
           "住房金融"
         ],
         "sources": [
           {
-            "title": "提前还贷冲击仍在，六大行上半年房贷余额减少超5000亿",
-            "url": "https://finance.cctv.com/2026/09/01/ARTIAzo5MfMajFFxtcmZyHyR260901.shtml"
-          },
-          {
-            "title": "存两年、三年、五年都不如存一年！银行业首现中长期定存利率完全倒挂案例",
-            "url": "https://finance.sina.com.cn/roll/2026-09-01/doc-iniqhsee1557605.shtml"
-          }
-        ]
-      },
-      {
-        "topic": "白云机场外籍客流破500万",
-        "impact": "白云机场年内最快突破500万外籍客流，跨境消费与外卡受理场景同步放量，贵宾服务与结售汇业务迎来新增量。",
-        "action": "本周内联动机场贵宾厅与外卡受理商户做精准触达，面向出入境客群推外币理财与结售汇优享服务，捕捉跨境资金沉淀。",
-        "tag": [
-          "私行",
-          "客群"
-        ],
-        "sources": [
-          {
-            "title": "广州白云机场今年入出境外国人超500万人次 创年度最快纪录",
-            "url": "https://www.stcn.com/article/detail/4167312.html"
-          },
-          {
-            "title": "Fed Governor Barr says he'll support rate hike if inflation doesn't ease",
-            "url": "https://www.cnbc.com/2026/09/01/fed-governor-barr-says-hell-support-rate-hike-if-inflation-doesnt-ease.html"
-          }
-        ]
-      },
-      {
-        "topic": "广东邦泽IPO提交注册",
-        "impact": "广东邦泽创科电器进入提交注册阶段，募集资金账户与高管个人金融服务存在前置对接窗口，公司与零售联动空间打开。",
-        "action": "本周内公司部牵头对接企业募集资金账户与高管个人金融服务需求，零售端联动推私行与财富产品，捕捉高管客群。",
-        "tag": [
-          "私行",
-          "客群"
-        ],
-        "sources": [
-          {
-            "title": "广东邦泽创科电器：IPO提交注册（拟北交所）",
-            "url": "https://data.eastmoney.com/xg/xg/#A24052"
-          }
-        ]
-      },
-      {
-        "topic": "理财代销选品向头部集中",
-        "impact": "理财子行业两万亿阵营扩至4家、11家出现缩水，头部集中度上升，分行代销选品策略需相应调整，避免业绩波动传导客户。",
-        "action": "财富部本周内复盘代销产品池，对照头部理财子公司业绩与规模做优胜劣汰，淘汰尾部产品并向客户主动沟通基准换锚逻辑。",
-        "tag": [
-          "财富",
-          "竞对动态"
-        ],
-        "sources": [
-          {
-            "title": "规模与盈利双轮洗牌！银行理财子两万亿阵营扩至4家、11家缩水",
-            "url": "https://finance.sina.com.cn/money/bank/bank_hydt/2026-09-01/doc-iniqitrs1500166.shtml"
+            "title": "新华财经晚报：1—8月份全国二手房交易网签面积同比增长10.6%",
+            "url": "https://www.cnfin.com/yw-lb/detail/20260902/4464126_1.html"
           }
         ]
       }
     ],
-    "spoken_insights": "国庆13天拼假催热自驾，信用卡与汽车分期可本周内推车主权益包。\n大额还款客户资金要前置承接，短久期定存与稳健理财同步挂出。\n白云机场外籍客流破500万，贵宾服务与结售汇可联动触达跨境客群。\n广东邦泽IPO提交注册，公司与零售联动对接募集资金与高管服务。\n理财代销向头部集中，本周复盘产品池，淘汰尾部同步沟通基准换锚。",
+    "spoken_insights": "三成银行股创年内新高，财富与私行团队本周可借高股息行情重做配置话术。定存息差压缩、分红险走俏，代发与财富条线本周完成产品培训、面向稳健客户重点推介。信用卡发卡量四年净减1.3亿张，存量分层经营与场景激活成为下一阶段重点。中秋国庆双节出行预订升温，信用卡与汽车分期团队本周上线自驾权益包与分期活动。1—8月二手房网签同比增长10.6%，住房金融团队可提前对接中介渠道储备按揭与赎楼客户。",
     "risk": {
-      "topic": "雪球结构违规向自然人销售案件曝光",
-      "evidence": "违规搭建通道向自然人销售雪球产品案件被监管点名，分行代销与私行产品端历史销售留痕与适当性管理面临合规审视。",
-      "impact": "私行与财富条线过往销售的结构化产品面临适当性与销售留痕双重排查压力，轻则整改重则处罚；合规与法务条线须联动回溯历史销售档案。",
-      "action": "合规部本周内牵头对私行与财富条线代销结构化产品做全面排查，重点回溯近三年雪球类销售档案；零售部同步暂停新增雪球类产品推荐至排查结束。",
-      "source": "T2",
+      "topic": "深圳私募合规自查启动",
+      "evidence": "深圳监管启动私募合规自查，违规行为将暂停新产品备案，影响分行代销私募产品准入审核。",
+      "impact": "财富部代销端需暂停与疑似违规私募的新合作；私行部高净值客户配置私募产品时合规审查趋严；风控部需提前排查合作机构白名单。",
+      "action": "财富部本周内完成在售私募产品合作机构合规复核；风控部同步更新代销私募准入清单；私行部对存量高净值客户做合规披露与产品置换沟通。",
+      "source": "T1.5",
       "sources": [
         {
-          "title": "违规搭建通道向自然人销售“雪球”产品，亏损谁来赔？",
-          "url": "https://www.stcn.com/article/detail/4167665.html"
+          "title": "监管新动向！深圳启动私募合规自查，这些行为将暂停新产品备案",
+          "url": "https://www.stcn.com/article/detail/4169886.html"
         }
       ]
     },
-    "spoken_risk": "今天有1个需要警惕：雪球结构违规向自然人销售案件曝光。私行与财富条线历史销售留痕面临合规排查压力。合规部本周内牵头全面排查，零售端同步暂停新增推荐。",
+    "spoken_risk": "今天有1个需要警惕。深圳启动私募合规自查，违规机构新产品备案将被暂停。分行财富与风控团队本周内须完成在售私募合作机构合规复核，私行部同步做好存量客户的产品置换与披露沟通。",
     "guangdong_ipo": {
-      "spoken": "广东邦泽创科电器，注册地广东，拟在北交所上市，目前进入提交注册阶段，分行可提前对接募集资金账户与高管个人金融服务需求。"
+      "spoken": "广东邦泽创科电器IPO已提交注册，拟在北交所上市，分行可提前对接企业募集资金账户及高管个人金融服务需求。另有广东尚睿科技处于IPO问询阶段、拟北交所上市，由广发证券保荐，建议保持跟进。"
     }
   },
   "stock_recap": {
     "us": {
-      "overview": "三大指数集体收跌，纳指跌1.03%，AI概念股分化加剧。",
+      "overview": "三大指数集体收涨，道指涨0.54%纳指标普齐升约0.5%。",
       "sectors": [
-        "网络安全：Palo Alto Networks财报超预期领涨AI需求",
-        "硬件服务器：Dell上调全年指引，盘后涨9%",
-        "地缘风险：美国打击伊朗引发避险情绪升温压制大盘"
+        "就业数据：8月ADP私营就业仅增3.8万低于预期，加息预期降温利好股市",
+        "科技股：苹果股价创20年未见技术形态获资金关注",
+        "消费出行：美航升级客舱布局高端线，西南航首推机场休息室",
+        "能源：能源部长称霍尔木兹海峡单日通行原油超1700万桶，地缘扰动油价"
       ],
-      "spoken": "美股三大指数集体收跌，纳指跌1.03%，标普跌0.71%，道指跌0.79%。网络安全股Palo Alto Networks财报超预期，AI需求支撑股价走强；Dell上调全年指引，盘后大涨9%。地缘风险升温压制市场情绪，三大指数承压收低。",
+      "spoken": "美股三大指数集体收涨，道指涨0.54%，纳指和标普500均升约0.5%。8月ADP私营就业仅增3.8万不及预期，加息预期降温提振市场。苹果股价出现20年未见技术形态吸引关注，美航、西南航加码高端出行布局。隔夜美股整体走高。",
       "meta": {
         "source": "CNBC Top Stories",
         "crossCheck": "新浪行情",
-        "date": "2026-09-01"
+        "date": "2026-09-02"
       },
       "indices": [
         {
           "name": "道琼斯",
-          "value": "52766.88",
-          "changePct": "-0.79%"
+          "value": "53050.77",
+          "changePct": "+0.54%"
         },
         {
           "name": "纳斯达克",
-          "value": "26099.77",
-          "changePct": "-1.03%"
+          "value": "26221.57",
+          "changePct": "+0.47%"
         },
         {
           "name": "标普500",
-          "value": "7631.47",
-          "changePct": "-0.71%"
+          "value": "7675.64",
+          "changePct": "+0.58%"
         }
       ]
     },
     "aShare": {
-      "overview": "A股三大指数集体收跌，沪指微跌0.16%，粮食概念逆市掀涨停潮。",
+      "overview": "A股三大指数缩量收跌，沪指微跌0.16%创业板跌1.32%。",
       "sectors": [
-        "粮食种植：超强厄尔尼诺催化，种植链掀涨停潮",
-        "液冷服务器：市场加速升温，融资资金大幅加仓",
-        "AI应用：培育专项行动落地，商业化兑现提速",
-        "黄金及债市：全球债市遭猛烈抛售，黄金集体跳水",
-        "物流基建：十五五累计投资规模有望达3.6至4.3万亿"
+        "地面兵装：1.81亿大单封板板块大爆发，受地缘紧张刺激逆市走强",
+        "贵金属：全球长债抛售金价承压，黄金板块受拖累",
+        "券商：中金研报关注云厂商与AI应用需求带动产业链景气",
+        "债市：美日德英澳多国长债收益率飙升，全球长债抛售持续",
+        "新股：燧原科技发行价142.18元今日申购"
       ],
-      "spoken": "A股三大指数集体收跌，上证微跌0.16%，深成指跌1.02%，创业板跌1.32%。粮食种植链受厄尔尼诺催化逆市掀涨停潮，液冷服务器获融资资金大幅加仓；全球债市抛售压制黄金及风险偏好，AI应用商业化政策落地提速。",
+      "spoken": "A股三大指数缩量收跌，上证微跌0.16%，深成指跌1.02%，创业板跌1.32%。受地缘紧张刺激，地面兵装板块大爆发，1.81亿大单封板领涨全场。全球长债抛售持续，金价走弱压制贵金属板块。中金研报关注AI带动云厂商及应用需求。三大指数集体收绿，结构性机会集中在地缘受益方向。",
       "meta": {
         "source": "东方财富",
         "crossCheck": "新浪行情",
@@ -202,34 +199,34 @@
       ]
     },
     "hk": {
-      "overview": "恒指收报25329点跌0.93%，科指跌1.49%，希音破发拖累科网股。",
+      "overview": "恒指收报25275点跌0.22%恒科跌0.83%，科网与中资券商走弱。",
       "sectors": [
-        "科网股：希音首日破发跌近10%，市值蒸发逾200亿港元",
-        "内银股：逆势活跃成为盘面主要支撑",
-        "券商：中金公司获高盛上调目标价至38.2港元",
-        "航运：中远海控获星展上调目标价至18.4港元",
-        "保险：中国太保获招银国际上调目标价至44港元"
+        "科网股：恒科跌0.83%拖累科网板块集体走弱",
+        "中资券商：板块普跌，外部扰动压制反弹节奏",
+        "南向资金：北水净买入港股近41亿港元，加仓友邦超9亿",
+        "黄金股：连跌三日，金价走弱持续承压",
+        "外资配置：瑞银表态对港股较为乐观，外资多路径增配中国资产"
       ],
-      "spoken": "港股恒指收报25329点跌0.93%，恒生科技跌1.49%。希音首日登陆港交所破发，跌近10%，科网股整体走弱；内银股逆势活跃支撑大市。中金、中远海控、中国太保分别获券商上调目标价，板块表现分化明显。",
+      "spoken": "港股恒指收报25275点跌0.22%，恒生科技跌0.83%。科网股和中资券商板块普跌拖累大市。北向资金净买入港股近41亿，加仓友邦超9亿。黄金股连跌三日受金价走弱压制。瑞银表态对港股较乐观，外资多路径增配中国资产。恒指缩量收跌，结构性分化延续。",
       "meta": {
         "source": "新浪财经·港股",
         "crossCheck": "新浪行情",
         "date": "2026-09-02"
       },
       "sourceReport": {
-        "title": "港股收评：恒指跌0.93% 科指跌1.49% 科网股走弱 内银股逆势活跃",
-        "url": "https://finance.sina.com.cn/stock/hkstock/marketalerts/2026-09-01/doc-iniqihzy3613517.shtml"
+        "title": "港股收评：恒指跌0.07% 科指跌0.74% 科网股走弱 中资券商股普跌",
+        "url": "https://finance.sina.com.cn/stock/hkstock/marketalerts/2026-09-02/doc-iniqmmyu4626119.shtml"
       },
       "indices": [
         {
           "name": "恒生指数",
-          "value": "25329.73",
-          "changePct": "-0.93%"
+          "value": "25275.27",
+          "changePct": "-0.22%"
         },
         {
           "name": "恒生科技",
-          "value": "4550.88",
-          "changePct": "-1.49%"
+          "value": "4513.26",
+          "changePct": "-0.83%"
         }
       ]
     },
@@ -238,470 +235,596 @@
   },
   "stock_news": [
     {
-      "url": "https://finance.eastmoney.com/a/202609013861597759.html",
-      "title_cn": "“黑天鹅”突袭！全球债市猛烈抛售！美股、黄金集体跳水",
+      "url": "https://finance.eastmoney.com/a/202609023861896968.html",
+      "title_cn": "美军称对伊朗目标发动新一轮打击",
       "source": "东方财富",
       "source_type": "media",
-      "date": "09/01",
-      "summary": "“黑天鹅”突袭！全球债市猛烈抛售！美股、黄金集体跳水",
-      "importance": 2,
+      "date": "09/02",
+      "summary": "9月2日美军宣布对伊朗目标发动新一轮打击，引发地缘局势紧张。",
+      "importance": 3,
       "rank": 0,
-      "tags": [],
+      "tags": [
+        "地缘政治",
+        "中东局势",
+        "军工"
+      ],
       "locale": "national",
       "market": "a-share"
     },
     {
-      "url": "https://finance.eastmoney.com/a/202609013860647661.html",
-      "title_cn": "重大反转！“40年多头总司令”几乎全面清仓美债！意味着什么？",
+      "url": "https://finance.eastmoney.com/a/202609013861744660.html",
+      "title_cn": "美、日、德、英、澳…全球债市为什么崩了",
       "source": "东方财富",
       "source_type": "media",
       "date": "09/01",
-      "summary": "重大反转！“40年多头总司令”几乎全面清仓美债！意味着什么？",
-      "importance": 2,
+      "summary": "美、日、德、英、澳等多国国债市场遭遇抛售，全球长债收益率同步上行。",
+      "importance": 3,
       "rank": 0,
-      "tags": [],
+      "tags": [
+        "债市",
+        "全球宏观",
+        "国债"
+      ],
       "locale": "national",
       "market": "a-share"
     },
     {
-      "url": "https://finance.eastmoney.com/a/202609013860731632.html",
-      "title_cn": "AI应用服务商培育专项行动落地！行业加速迈向商业化兑现拐点(附股)",
+      "url": "https://finance.eastmoney.com/a/202609023862615665.html",
+      "title_cn": "1.81亿大单直线封板！地面兵装板块大爆发！发生了什么？",
       "source": "东方财富",
       "source_type": "media",
-      "date": "09/01",
-      "summary": "AI应用服务商培育专项行动落地！行业加速迈向商业化兑现拐点(附股)",
+      "date": "09/02",
+      "summary": "9月2日地面兵装板块盘中爆发，一笔1.81亿元大单直线封板，多只个股涨停。",
       "importance": 2,
       "rank": 0,
-      "tags": [],
+      "tags": [
+        "军工",
+        "A股",
+        "地面兵装"
+      ],
       "locale": "national",
       "market": "a-share"
     },
     {
-      "url": "https://finance.eastmoney.com/a/202609013861432555.html",
-      "title_cn": "交易所制定L2行情使用规范严禁“绕道抢跑”",
+      "url": "https://finance.eastmoney.com/a/202609023861955559.html",
+      "title_cn": "发行价142.18元！燧原科技今日申购中一签能赚多少？",
       "source": "东方财富",
       "source_type": "media",
-      "date": "09/01",
-      "summary": "交易所制定L2行情使用规范严禁“绕道抢跑”",
-      "importance": 2,
+      "date": "09/02",
+      "summary": "AI芯片公司燧原科技9月2日开启申购，发行价142.18元。",
+      "importance": 1,
       "rank": 0,
-      "tags": [],
+      "tags": [
+        "新股",
+        "半导体",
+        "AI"
+      ],
       "locale": "national",
       "market": "a-share"
     },
     {
-      "url": "https://finance.eastmoney.com/a/202609013861643112.html",
-      "title_cn": "9月1日晚间沪深上市公司重大事项公告最新快递",
+      "url": "https://finance.eastmoney.com/a/202609023862719456.html",
+      "title_cn": "A股三大指数缩量收跌地面兵装板块逆市大涨",
       "source": "东方财富",
       "source_type": "media",
-      "date": "09/01",
-      "summary": "9月1日晚间沪深上市公司重大事项公告最新快递",
+      "date": "09/02",
+      "summary": "9月2日A股三大指数缩量收跌，地面兵装板块逆市大涨。",
       "importance": 2,
       "rank": 0,
-      "tags": [],
+      "tags": [
+        "A股",
+        "军工",
+        "盘面"
+      ],
       "locale": "national",
       "market": "a-share"
     },
     {
-      "url": "https://finance.eastmoney.com/a/202609013861308614.html",
-      "title_cn": "超强厄尔尼诺催化！粮食概念再掀涨停潮种植链景气或迎重估窗口(附股)",
+      "url": "https://finance.eastmoney.com/a/202609023862216032.html",
+      "title_cn": "全维度剖析债市危机：缘何全球国债抛售根本停不下来？",
       "source": "东方财富",
       "source_type": "media",
-      "date": "09/01",
-      "summary": "超强厄尔尼诺催化！粮食概念再掀涨停潮种植链景气或迎重估窗口(附股)",
+      "date": "09/02",
+      "summary": "全球主要国家国债抛售持续，文章从多维度分析债市抛售原因。",
       "importance": 2,
       "rank": 0,
-      "tags": [],
+      "tags": [
+        "债市",
+        "全球宏观",
+        "国债"
+      ],
       "locale": "national",
       "market": "a-share"
     },
     {
-      "url": "https://finance.eastmoney.com/a/202609013861425126.html",
-      "title_cn": "A股三大指数集体收跌粮食概念股逆市掀涨停潮",
+      "url": "https://finance.eastmoney.com/a/202609023861930980.html",
+      "title_cn": "凌晨全线跳水！美军发动空袭！美国股债双杀",
       "source": "东方财富",
       "source_type": "media",
-      "date": "09/01",
-      "summary": "A股三大指数集体收跌粮食概念股逆市掀涨停潮",
-      "importance": 2,
+      "date": "09/02",
+      "summary": "9月2日凌晨美军对伊朗发动空袭，美股、美债同步下跌，出现股债双杀。",
+      "importance": 3,
       "rank": 0,
-      "tags": [],
+      "tags": [
+        "地缘政治",
+        "美股",
+        "债市"
+      ],
       "locale": "national",
       "market": "a-share"
     },
     {
-      "url": "https://finance.eastmoney.com/a/202609013861231546.html",
-      "title_cn": "市场惊现“0盈利比”基金让所有基民都亏钱这一次拷问了谁？",
+      "url": "https://finance.eastmoney.com/a/202609023862621811.html",
+      "title_cn": "全球股民的终极命题：长债危机的火会“烧向”股市吗？",
       "source": "东方财富",
       "source_type": "media",
-      "date": "09/01",
-      "summary": "市场惊现“0盈利比”基金让所有基民都亏钱这一次拷问了谁？",
+      "date": "09/02",
+      "summary": "市场讨论全球长债抛售危机是否会蔓延至股市，股债联动风险受关注。",
       "importance": 2,
       "rank": 0,
-      "tags": [],
+      "tags": [
+        "债市",
+        "全球宏观",
+        "股债联动"
+      ],
       "locale": "national",
       "market": "a-share"
     },
     {
-      "url": "https://finance.eastmoney.com/a/202609013860570428.html",
-      "title_cn": "公募基金2026年中报数据榜单出炉！",
+      "url": "https://finance.eastmoney.com/a/202609023862936214.html",
+      "title_cn": "9月2日晚间沪深上市公司重大事项公告最新快递",
       "source": "东方财富",
       "source_type": "media",
-      "date": "09/01",
-      "summary": "公募基金2026年中报数据榜单出炉！",
-      "importance": 2,
+      "date": "09/02",
+      "summary": "9月2日晚间沪深多家上市公司发布重大事项公告。",
+      "importance": 1,
       "rank": 0,
-      "tags": [],
+      "tags": [
+        "A股",
+        "公司公告"
+      ],
       "locale": "national",
       "market": "a-share"
     },
     {
-      "url": "https://finance.eastmoney.com/a/202609013860528337.html",
-      "title_cn": "液冷市场加速升温融资资金大幅加仓9股",
+      "url": "https://finance.eastmoney.com/a/202609023862770930.html",
+      "title_cn": "突然直线跳水！加息25个基点这国央行宣布！全球加息潮来了",
       "source": "东方财富",
       "source_type": "media",
-      "date": "09/01",
-      "summary": "液冷市场加速升温融资资金大幅加仓9股",
-      "importance": 2,
+      "date": "09/02",
+      "summary": "9月2日某国央行加息25个基点，市场关注全球加息潮重启。",
+      "importance": 3,
       "rank": 0,
-      "tags": [],
+      "tags": [
+        "货币政策",
+        "加息",
+        "全球宏观"
+      ],
       "locale": "national",
       "market": "a-share"
     },
     {
-      "url": "https://finance.eastmoney.com/a/202609013861400976.html",
-      "title_cn": "皮海洲：从1100元到571元宇树科技股价五连跌说明了什么？",
+      "url": "https://finance.eastmoney.com/a/202609023862152216.html",
+      "title_cn": "中金：开源模型促进生态繁荣带动云厂商、FDE、应用厂商需求提升",
       "source": "东方财富",
       "source_type": "media",
-      "date": "09/01",
-      "summary": "皮海洲：从1100元到571元宇树科技股价五连跌说明了什么？",
+      "date": "09/02",
+      "summary": "中金研报指出，开源模型生态繁荣有望带动云厂商、FDE及应用厂商需求提升。",
       "importance": 2,
       "rank": 0,
-      "tags": [],
+      "tags": [
+        "AI",
+        "云服务",
+        "研报"
+      ],
       "locale": "national",
       "market": "a-share"
     },
     {
-      "url": "https://finance.eastmoney.com/a/202609013860787990.html",
-      "title_cn": "中信证券：“十五五”时期物流网累计基建投资达3.6-4.3万亿元",
+      "url": "https://finance.eastmoney.com/a/202609023862150095.html",
+      "title_cn": "中信证券：9月重点关注资金面和情绪面波动导致的部分稳健运营资产超跌机会",
       "source": "东方财富",
       "source_type": "media",
-      "date": "09/01",
-      "summary": "中信证券：“十五五”时期物流网累计基建投资达3.6-4.3万亿元",
-      "importance": 2,
+      "date": "09/02",
+      "summary": "中信证券建议9月关注资金面与情绪面波动带来的部分稳健运营资产超跌机会。",
+      "importance": 1,
       "rank": 0,
-      "tags": [],
+      "tags": [
+        "A股策略",
+        "研报",
+        "资金面"
+      ],
       "locale": "national",
       "market": "a-share"
     },
     {
-      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0902/2026090200017.pdf",
-      "title_cn": "Announcements and Notices - [Concentration of Shareholdings]",
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0902/2026090202562.pdf",
+      "title_cn": "Next Day Disclosure Returns - [Share Buyback / Others]",
       "source": "港交所披露易",
       "source_type": "media",
       "date": "09/02",
-      "summary": "Announcements and Notices - [Concentration of Shareholdings]",
-      "importance": 2,
+      "summary": "港交所披露易发布次日披露报表，涉及股份回购及其他事项。",
+      "importance": 1,
       "rank": 0,
-      "tags": [],
+      "tags": [
+        "港股",
+        "回购"
+      ],
       "locale": "national",
       "market": "hk"
     },
     {
-      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0902/2026090200015.pdf",
-      "title_cn": "Announcements and Notices - [Overseas Regulatory Announcement - Other]",
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0902/2026090202560.pdf",
+      "title_cn": "Financial Statements/ESG Information - [Interim/Half-Year Report]",
       "source": "港交所披露易",
       "source_type": "media",
       "date": "09/02",
-      "summary": "Announcements and Notices - [Overseas Regulatory Announcement - Other]",
-      "importance": 2,
+      "summary": "港交所披露易发布中期/半年度报告及ESG信息。",
+      "importance": 1,
       "rank": 0,
-      "tags": [],
+      "tags": [
+        "港股",
+        "财报",
+        "ESG"
+      ],
       "locale": "national",
       "market": "hk"
     },
     {
-      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0902/2026090200013.pdf",
-      "title_cn": "Announcements and Notices - [Overseas Regulatory Announcement - Other]",
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0902/2026090202558.pdf",
+      "title_cn": "Announcements and Notices - [Share Scheme]",
       "source": "港交所披露易",
       "source_type": "media",
       "date": "09/02",
-      "summary": "Announcements and Notices - [Overseas Regulatory Announcement - Other]",
-      "importance": 2,
+      "summary": "港交所披露易发布股份计划相关公告。",
+      "importance": 1,
       "rank": 0,
-      "tags": [],
+      "tags": [
+        "港股",
+        "股权激励"
+      ],
       "locale": "national",
       "market": "hk"
     },
     {
-      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0902/2026090200011.pdf",
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0902/2026090202556.pdf",
       "title_cn": "Next Day Disclosure Returns - [Share Buyback]",
       "source": "港交所披露易",
       "source_type": "media",
       "date": "09/02",
-      "summary": "Next Day Disclosure Returns - [Share Buyback]",
-      "importance": 2,
+      "summary": "港交所披露易发布股份回购次日披露报表。",
+      "importance": 1,
       "rank": 0,
-      "tags": [],
+      "tags": [
+        "港股",
+        "回购"
+      ],
       "locale": "national",
       "market": "hk"
     },
     {
-      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0902/2026090200009.pdf",
-      "title_cn": "Announcements and Notices - [Inside Information]",
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0902/2026090202540.pdf",
+      "title_cn": "Announcements and Notices - [Issue of Shares under a General Mandate]",
       "source": "港交所披露易",
       "source_type": "media",
       "date": "09/02",
-      "summary": "Announcements and Notices - [Inside Information]",
-      "importance": 2,
+      "summary": "港交所披露易发布根据一般授权发行股份的公告。",
+      "importance": 1,
       "rank": 0,
-      "tags": [],
+      "tags": [
+        "港股",
+        "股本变动"
+      ],
       "locale": "national",
       "market": "hk"
     },
     {
-      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0902/2026090200007.pdf",
-      "title_cn": "Announcements and Notices - [Other - Business Update]",
-      "source": "港交所披露易",
-      "source_type": "media",
-      "date": "09/02",
-      "summary": "Announcements and Notices - [Other - Business Update]",
-      "importance": 2,
-      "rank": 0,
-      "tags": [],
-      "locale": "national",
-      "market": "hk"
-    },
-    {
-      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0902/2026090200005.pdf",
-      "title_cn": "Announcements and Notices - [Inside Information / Overseas Regulatory Announcement - Issue of Securities and Related Matters]",
-      "source": "港交所披露易",
-      "source_type": "media",
-      "date": "09/02",
-      "summary": "Announcements and Notices - [Inside Information / Overseas Regulatory Announcement - Issue",
-      "importance": 2,
-      "rank": 0,
-      "tags": [],
-      "locale": "national",
-      "market": "hk"
-    },
-    {
-      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0902/2026090200003.pdf",
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0902/2026090202524.pdf",
       "title_cn": "Next Day Disclosure Returns - [Share Buyback]",
       "source": "港交所披露易",
       "source_type": "media",
       "date": "09/02",
-      "summary": "Next Day Disclosure Returns - [Share Buyback]",
-      "importance": 2,
+      "summary": "港交所披露易发布股份回购次日披露报表。",
+      "importance": 1,
       "rank": 0,
-      "tags": [],
+      "tags": [
+        "港股",
+        "回购"
+      ],
       "locale": "national",
       "market": "hk"
     },
     {
-      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0902/2026090200001.pdf",
-      "title_cn": "Announcements and Notices - [Change in Company Secretary]",
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0902/2026090202518.pdf",
+      "title_cn": "Announcements and Notices - [Interim Results]",
       "source": "港交所披露易",
       "source_type": "media",
       "date": "09/02",
-      "summary": "Announcements and Notices - [Change in Company Secretary]",
-      "importance": 2,
+      "summary": "港交所披露易发布中期业绩公告。",
+      "importance": 1,
       "rank": 0,
-      "tags": [],
+      "tags": [
+        "港股",
+        "财报"
+      ],
       "locale": "national",
       "market": "hk"
     },
     {
-      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0901/2026090103791.pdf",
-      "title_cn": "Proxy Forms",
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0902/2026090202506.pdf",
+      "title_cn": "Announcements and Notices - [Results of EGM/SGM / Nomination of Director by Shareholder / Re-election or Appointment of Director subject to Shareholders' Approval / Change in Directors or of Important Executive Functions or Responsibilities]",
       "source": "港交所披露易",
       "source_type": "media",
-      "date": "09/01",
-      "summary": "Proxy Forms",
-      "importance": 2,
+      "date": "09/02",
+      "summary": "港交所披露易发布股东大会决议、董事提名/委任及高管职能变更等公告。",
+      "importance": 1,
       "rank": 0,
-      "tags": [],
+      "tags": [
+        "港股",
+        "公司治理"
+      ],
       "locale": "national",
       "market": "hk"
     },
     {
-      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0901/2026090103787.pdf",
-      "title_cn": "Announcements and Notices - [Notice of AGM]",
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0902/2026090202504.pdf",
+      "title_cn": "Next Day Disclosure Returns - [Share Buyback]",
       "source": "港交所披露易",
       "source_type": "media",
-      "date": "09/01",
-      "summary": "Announcements and Notices - [Notice of AGM]",
-      "importance": 2,
+      "date": "09/02",
+      "summary": "港交所披露易发布股份回购次日披露报表。",
+      "importance": 1,
       "rank": 0,
-      "tags": [],
+      "tags": [
+        "港股",
+        "回购"
+      ],
       "locale": "national",
       "market": "hk"
     },
     {
-      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0901/2026090103781.pdf",
-      "title_cn": "Circulars - [Re-election or Appointment of Director subject to Shareholders' Approval / Other]",
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0902/2026090202500.pdf",
+      "title_cn": "Announcements and Notices - [Delay in Dispatch of Circular or other Document / Rights Issue / Trading Arrangements (other than Change in Board Lot Size)]",
       "source": "港交所披露易",
       "source_type": "media",
-      "date": "09/01",
-      "summary": "Circulars - [Re-election or Appointment of Director subject to Shareholders' Approval / Ot",
-      "importance": 2,
+      "date": "09/02",
+      "summary": "港交所披露易发布通函延迟派发、供股及交易安排相关公告。",
+      "importance": 1,
       "rank": 0,
-      "tags": [],
+      "tags": [
+        "港股",
+        "供股"
+      ],
       "locale": "national",
       "market": "hk"
     },
     {
-      "url": "https://www.cnbc.com/2026/09/01/us-strikes-iran-after-new-hormuz-strait-shipping-attacks-centcom.html",
-      "title_cn": "U.S. strikes Iran as Tehran retaliates, raising risk of wider war",
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0902/2026090202496.pdf",
+      "title_cn": "Monthly Returns",
+      "source": "港交所披露易",
+      "source_type": "media",
+      "date": "09/02",
+      "summary": "港交所披露易发布月度股份变动报表。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "港股",
+        "股本变动"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0902/2026090202484.pdf",
+      "title_cn": "Monthly Returns",
+      "source": "港交所披露易",
+      "source_type": "media",
+      "date": "09/02",
+      "summary": "港交所披露易发布月度股份变动报表。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "港股",
+        "股本变动"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/09/02/new-york-feds-williams-says-yield-surge-due-to-strong-economic-prospects.html",
+      "title_cn": "New York Fed's Williams says yield surge due to strong economic prospects",
       "source": "CNBC Top Stories",
       "source_type": "media",
-      "date": "09/01",
-      "summary": "U.S. strikes Iran as Tehran retaliates, raising risk of wider war",
+      "date": "09/02",
+      "summary": "纽约联储威廉姆斯表示，近期美债收益率上行源于美国经济前景强劲。",
       "importance": 2,
       "rank": 0,
-      "tags": [],
+      "tags": [
+        "美债",
+        "美联储",
+        "宏观"
+      ],
       "locale": "overseas",
       "market": "us"
     },
     {
-      "url": "https://www.cnbc.com/2026/09/01/congress-government-shutdown-vote.html",
-      "title_cn": "U.S. House votes to avoid government shutdown amid GOP hard-liner resistance",
+      "url": "https://www.cnbc.com/2026/09/02/uber-to-cut-10percent-of-workforce-in-bid-to-move-simpler-and-faster.html",
+      "title_cn": "Uber to cut 10% of workforce in bid to move 'simpler and faster'",
       "source": "CNBC Top Stories",
       "source_type": "media",
-      "date": "09/01",
-      "summary": "U.S. House votes to avoid government shutdown amid GOP hard-liner resistance",
+      "date": "09/02",
+      "summary": "Uber宣布裁员约10%，以推动公司运营更精简高效。",
       "importance": 2,
       "rank": 0,
-      "tags": [],
+      "tags": [
+        "美股",
+        "裁员",
+        "出行"
+      ],
       "locale": "overseas",
       "market": "us"
     },
     {
-      "url": "https://www.cnbc.com/2026/09/01/palo-alto-networks-panw-q4-2026-earnings.html",
-      "title_cn": "Palo Alto Networks beats quarterly estimates on AI demand, continues acquisition spree",
+      "url": "https://www.cnbc.com/2026/09/02/energy-secretary-chris-wright-tells-cnbc-that-more-than-17-million-barrels-of-oil-transited-hormuz-on-monday.html",
+      "title_cn": "Energy Secretary Chris Wright tells CNBC more than 17 million barrels of oil transited Hormuz on Monday",
       "source": "CNBC Top Stories",
       "source_type": "media",
-      "date": "09/01",
-      "summary": "Palo Alto Networks beats quarterly estimates on AI demand, continues acquisition spree",
+      "date": "09/02",
+      "summary": "美国能源部长Chris Wright透露，9月1日逾1700万桶原油经霍尔木兹海峡运输。",
       "importance": 2,
       "rank": 0,
-      "tags": [],
+      "tags": [
+        "能源",
+        "原油",
+        "地缘政治"
+      ],
       "locale": "overseas",
       "market": "us"
     },
     {
-      "url": "https://www.cnbc.com/2026/09/01/congress-vote-condemning-socialism-election.html",
-      "title_cn": "House adopts measure condemning socialism ahead of November election",
+      "url": "https://www.cnbc.com/2026/09/02/trump-travel-industry-world-cup-tourism-airlines-hotels.html",
+      "title_cn": "Trump to meet with travel industry CEOs as White House touts World Cup tourism boost",
       "source": "CNBC Top Stories",
       "source_type": "media",
-      "date": "09/01",
-      "summary": "House adopts measure condemning socialism ahead of November election",
-      "importance": 2,
+      "date": "09/02",
+      "summary": "特朗普将与美国旅游业CEO会面，白宫强调世界杯有望拉动旅游消费。",
+      "importance": 1,
       "rank": 0,
-      "tags": [],
+      "tags": [
+        "旅游",
+        "政策",
+        "美股"
+      ],
       "locale": "overseas",
       "market": "us"
     },
     {
-      "url": "https://www.cnbc.com/2026/09/01/canada-carney-trump-trade-ontario.html",
-      "title_cn": "Canada's Carney slaps Trump admin for 'doing memes ... throwing shade'",
+      "url": "https://www.cnbc.com/2026/09/02/southwest-airport-lounges.html",
+      "title_cn": "Southwest to debut airport lounges in four cities, with more to come",
       "source": "CNBC Top Stories",
       "source_type": "media",
-      "date": "09/01",
-      "summary": "Canada's Carney slaps Trump admin for 'doing memes ... throwing shade'",
-      "importance": 2,
+      "date": "09/02",
+      "summary": "西南航空将在四个城市首批推出机场休息室，后续将扩展更多城市。",
+      "importance": 1,
       "rank": 0,
-      "tags": [],
+      "tags": [
+        "航空",
+        "美股"
+      ],
       "locale": "overseas",
       "market": "us"
     },
     {
-      "url": "https://www.cnbc.com/2026/09/01/stan-kroenke-controlling-stake-los-angeles-angels.html",
-      "title_cn": "Stan Kroenke agrees to buy MLB's Angels, valuing team and regional network at $4 billion",
+      "url": "https://www.cnbc.com/2026/09/02/private-payrolls-rose-by-38000-in-august-fewer-than-expected-adp-reports.html",
+      "title_cn": "Private payrolls rose by 38,000 in August, less than expected, ADP reports",
       "source": "CNBC Top Stories",
       "source_type": "media",
-      "date": "09/01",
-      "summary": "Stan Kroenke agrees to buy MLB's Angels, valuing team and regional network at $4 billion",
+      "date": "09/02",
+      "summary": "美国8月ADP私人部门新增就业3.8万人，低于市场预期。",
       "importance": 2,
       "rank": 0,
-      "tags": [],
+      "tags": [
+        "就业",
+        "美国宏观"
+      ],
       "locale": "overseas",
       "market": "us"
     },
     {
-      "url": "https://www.cnbc.com/2026/09/01/dell-q2-earnings-report-2027.html",
-      "title_cn": "Dell surges 9% after lifting fiscal 2027 forecast on AI server strength",
+      "url": "https://www.cnbc.com/2026/09/02/ford-sales-f-150-production.html",
+      "title_cn": "Ford continues ramping up pickup truck production as sales fall 10.3% in August",
       "source": "CNBC Top Stories",
       "source_type": "media",
-      "date": "09/01",
-      "summary": "Dell surges 9% after lifting fiscal 2027 forecast on AI server strength",
-      "importance": 2,
+      "date": "09/02",
+      "summary": "福特汽车8月在美销量同比下滑10.3%，但继续提升皮卡产能。",
+      "importance": 1,
       "rank": 0,
-      "tags": [],
+      "tags": [
+        "汽车",
+        "美股"
+      ],
       "locale": "overseas",
       "market": "us"
     },
     {
-      "url": "https://www.cnbc.com/2026/09/01/open-ai-astra-cyber-model.html",
-      "title_cn": "OpenAI says Astra AI model is its first that crosses 'Critical' cybersecurity capability",
+      "url": "https://www.cnbc.com/2026/09/02/apple-shares-are-doing-something-they-havent-done-in-20-years-heres-whats-happening.html",
+      "title_cn": "Apple shares are doing something they haven't done in 20 years. Here’s what’s happening",
       "source": "CNBC Top Stories",
       "source_type": "media",
-      "date": "09/01",
-      "summary": "OpenAI says Astra AI model is its first that crosses 'Critical' cybersecurity capability",
+      "date": "09/02",
+      "summary": "苹果股价出现近20年来罕见走势，市场关注其背后驱动因素。",
       "importance": 2,
       "rank": 0,
-      "tags": [],
+      "tags": [
+        "科技",
+        "美股",
+        "苹果"
+      ],
       "locale": "overseas",
       "market": "us"
     },
     {
-      "url": "https://www.cnbc.com/2026/09/01/used-cars-under-20000-sell-quickly-tradeoffs.html",
-      "title_cn": "Used cars under $20,000 tend to sell quickly — but there are trade-offs for buyers",
+      "url": "https://www.cnbc.com/2026/09/02/anthony-scaramucci-potomac-fever-bessent-lutnick.html",
+      "title_cn": "Scaramucci says he had 'Potomac fever' in the White House — and Bessent and Lutnick have it too",
       "source": "CNBC Top Stories",
       "source_type": "media",
-      "date": "09/01",
-      "summary": "Used cars under $20,000 tend to sell quickly — but there are trade-offs for buyers",
-      "importance": 2,
+      "date": "09/02",
+      "summary": "Scaramucci称自己曾在白宫患\" Potomac fever\"，并指财长Bessent与商务部长Lutnick也有同样症状。",
+      "importance": 1,
       "rank": 0,
-      "tags": [],
+      "tags": [
+        "政治",
+        "美国政府"
+      ],
       "locale": "overseas",
       "market": "us"
     },
     {
-      "url": "https://www.cnbc.com/2026/09/01/hugging-faces-new-duck-robot-is-selling-fast-a-chinese-chip-powers-it.html",
-      "title_cn": "Hugging Face's new duck robot is selling fast. A Chinese chip powers it",
+      "url": "https://www.cnbc.com/2026/09/02/american-airlines-flagship-suite.html",
+      "title_cn": "American Airlines continues premium push with redesigned Boeing planes",
       "source": "CNBC Top Stories",
       "source_type": "media",
-      "date": "09/01",
-      "summary": "Hugging Face's new duck robot is selling fast. A Chinese chip powers it",
-      "importance": 2,
+      "date": "09/02",
+      "summary": "美国航空继续推进高端化战略，启用重新装潢的波音客机。",
+      "importance": 1,
       "rank": 0,
-      "tags": [],
+      "tags": [
+        "航空",
+        "美股"
+      ],
       "locale": "overseas",
       "market": "us"
     },
     {
-      "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-dell-beats-q2-2027-estimates-shares-rebound-after-hours-93CH-4884715",
-      "title_cn": "Earnings call transcript: Dell beats Q2 2027 estimates, shares rebound after hours",
+      "url": "https://www.investing.com/news/economy-news/exclusivebanks-rush-to-swap-higherrisk-credit-assets-for-boe-cash-4885305",
+      "title_cn": "Exclusive-Banks rush to swap higher-risk credit assets for Bank of England cash",
       "source": "Investing.com News",
       "source_type": "media",
-      "date": "09/01",
-      "summary": "Earnings call transcript: Dell beats Q2 2027 estimates, shares rebound after hours",
+      "date": "09/02",
+      "summary": "据报道，多家银行加速将高风险信贷资产置换为英国央行现金，以降低风险敞口。",
       "importance": 2,
       "rank": 0,
-      "tags": [],
+      "tags": [
+        "银行",
+        "英国宏观",
+        "信贷"
+      ],
       "locale": "overseas",
       "market": "us"
     },
     {
-      "url": "https://www.investing.com/news/stock-market-news/89-46-these-stocks-are-out-of-our-aipicks-for-september--see-whats-in-4884714",
-      "title_cn": "+89%, +46%, these stocks are out of our AI-picks for September - See what’s in",
+      "url": "https://www.investing.com/news/stock-market-news/southwest-to-launch-firstever-airport-lounges-to-broaden-premium-appeal-4886491",
+      "title_cn": "Southwest to launch first-ever airport lounges to broaden premium appeal",
       "source": "Investing.com News",
       "source_type": "media",
-      "date": "09/01",
-      "summary": "+89%, +46%, these stocks are out of our AI-picks for September - See what’s in",
-      "importance": 2,
+      "date": "09/02",
+      "summary": "西南航空将首次推出机场休息室，以拓展高端客户吸引力。",
+      "importance": 1,
       "rank": 0,
-      "tags": [],
+      "tags": [
+        "航空",
+        "美股"
+      ],
       "locale": "overseas",
       "market": "us"
     }
