@@ -12,6 +12,11 @@ import assert from "node:assert/strict";
 import fs from "node:fs";
 import path from "node:path";
 
+// 本测试通过 mock LLM 驱动整条 exec 管线（buildExecutiveSummary）。
+// 关闭内容记忆层：防止测试运行把「模拟播报」写入生产 data/event-memory.json
+// （记忆是跨运行持久化资产，测试触发写入会污染记忆库）。
+process.env.EVENT_MEMORY = "0";
+
 const DATE = "2026-08-31";
 const STORE = path.resolve(process.cwd(), "history", DATE, "store.json");
 const report = JSON.parse(fs.readFileSync(`history/${DATE}/${DATE}.json`, "utf8")) as any;

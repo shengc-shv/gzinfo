@@ -17,6 +17,7 @@ import {
   buildExecutiveFromScores,
   applyRelevanceGuardrail,
   dedupeExecutiveCrossSection,
+  type ExecutiveSummary,
 } from "../../ai/executive-summary";
 import { mergeStoredExecutive } from "../../output/render";
 import { dedupeExecAgainstSections } from "../../output/dedupe-sections";
@@ -24,6 +25,10 @@ import { buildTwoDayExecPool, collectTwoDayArticles } from "../../ai/exec-pool";
 import type { HistoryStore } from "../../output/history";
 import type { FilterResult } from "../../filters/types";
 import type { DailyContext } from "../context";
+// 内容记忆与去重（2026-09-02）：生成前注入提示、生成后确定性过滤
+import { buildMemoryBrief, formatMemoryBrief } from "../../memory/event-memory";
+import { applyMemoryGuard } from "../../memory/exec-guard";
+import { loadEventMemory, saveEventMemory, isEventMemoryEnabled } from "../../memory/store";
 
 /**
  * B-1：从 keyword-funnel 的 filterResults 提取 risk_tracker 命中的条目，
@@ -74,15 +79,46 @@ export async function buildExecutiveSummary(
   // 只看今天会让兜底产出空必读；昨日白天的重要条目须从历史库捞回（2026-08-29）。
   const twoDayPool = collectTwoDayArticles({ history, articles, today: date });
 
+  // —— 内容记忆与去重（2026-09-02）——
+  // 解决「同一事件连续多天重复口播」：生成前把近期已播报事件告诉 LLM（含建议
+  // 切入角度），生成后再用确定性闸门过滤掉无增量的重复表述。
+  // 总开关 EVENT_MEMORY=0 可整体关闭（回滚用）。
+  const memoryOn = isEventMemoryEnabled();
+  let memStore = memoryOn ? loadEventMemory() : null;
+  /** 把本次播报写回记忆库（幂等：同一天重跑结果一致，见 beginDay）。 */
+  const persistMemory = (): void => {
+    if (memoryOn && memStore) saveEventMemory(memStore, { today: date });
+  };
+  /** 对一份 ExecutiveSummary 跑记忆去重 + 兜底；失败一律放行原产出。 */
+  const guard = (ex: ExecutiveSummary): ExecutiveSummary => {
+    if (!memoryOn || !memStore) return ex;
+    try {
+      const g = applyMemoryGuard({
+        exec: ex,
+        store: memStore,
+        today: date,
+        pool: twoDayPool,
+      });
+      memStore = g.store;
+      for (const line of g.log) ctx.log.info("exec", line);
+      return g.exec;
+    } catch (e) {
+      const msg = e instanceof Error ? e.message : String(e);
+      ctx.log.warn("exec", `⚠️ 内容记忆去重异常（放行原产出）: ${msg}`);
+      return ex;
+    }
+  };
+
   // SKIP_AI 分支：仅复用 store，不调 LLM
   if (ctx.mode.kind === "skip-ai") {
     if (stored && (stored.must_read?.length || stored.insights?.length)) {
       const before = { must: report.must_read.length, ins: report.insights.length };
-      const next = mergeStoredExecutive(report, stored);
+      const next = mergeStoredExecutive(report, guard(stored));
       ctx.log.info(
         "exec",
         `🧠 SKIP_AI 复用 store.json 执行摘要：必读 ${before.must}→${next.must_read.length} / 商机 ${before.ins}→${next.insights.length}`,
       );
+      persistMemory();
       return finalize(next);
     }
     ctx.log.info(
@@ -94,13 +130,15 @@ export async function buildExecutiveSummary(
     // 输入用「今天+昨天」两天池（twoDayPool），覆盖凌晨突发与昨日白天重要条目。
     const fallback = buildExecutiveFromScores(twoDayPool, date);
     if (fallback.must_read.length || fallback.insights.length) {
-      const next = mergeStoredExecutive(report, fallback);
+      const next = mergeStoredExecutive(report, guard(fallback));
       ctx.log.info(
         "exec",
         `🧠 SKIP_AI 评分层兜底生成：必读 ${next.must_read.length} / 商机 ${next.insights.length}`,
       );
+      persistMemory();
       return finalize(next);
     }
+    persistMemory();
     return finalize(report);
   }
 
@@ -109,12 +147,13 @@ export async function buildExecutiveSummary(
   // REGEN_EXEC=1 显式声明"重生成"，与默认行为等价（用于脚本可读性）
   const regenMode = process.env.REGEN_EXEC ?? "1";  // 默认 "1"（重新生成）
   if (regenMode === "0" && stored && (stored.hero_line || stored.must_read?.length || stored.insights?.length)) {
-    const next = mergeStoredExecutive(report, stored);
+    const next = mergeStoredExecutive(report, guard(stored));
     if (stored.hero_line) next.hero_line = stored.hero_line;
     ctx.log.info(
       "exec",
       `🧠 AI 模式 + REGEN_EXEC=0 复用 store.json 执行摘要：${stored.must_read?.length ?? 0} 必读 / ${stored.insights?.length ?? 0} 商机`,
     );
+    persistMemory();
     return finalize(next);
   }
 
@@ -133,12 +172,27 @@ export async function buildExecutiveSummary(
     if (pool.ipo.length > 0) {
       ctx.log.info("exec", `🏦 广东IPO 候选 ${pool.ipo.length} 条（喂给 LLM 的 guangdong_ipo 槽位）`);
     }
+    // 内容记忆提示（去重第一道闸）：把近期已播报事件 + 建议切入角度写给 LLM，
+    // 让它在生成阶段就避开重复表述；生成后还有一道确定性闸门（guard）。
+    let memoryBrief: string | undefined;
+    if (memoryOn && memStore) {
+      try {
+        const brief = buildMemoryBrief(memStore, date, { lookbackDays: 10, limit: 8 });
+        memoryBrief = formatMemoryBrief(brief);
+        if (brief.length > 0) {
+          ctx.log.info("exec", `🧠 记忆提示：${brief.length} 个近期已播报事件已告知 LLM`);
+        }
+      } catch {
+        memoryBrief = undefined;
+      }
+    }
     let exec = await generateExecutiveSummary({
       date,
       finance: pool.finance,
       gz: pool.gz,
       ...(pool.ipo.length > 0 ? { ipo: pool.ipo } : {}),
       ...(riskCandidates.length > 0 ? { riskCandidates } : {}),
+      ...(memoryBrief ? { memoryBrief } : {}),
     });
 
     // 兜底（2026-08-31 修复）：LLM 静默返回空（空池 / 网络异常被吞 / 只回 1 条 IPO 类弱信号）
@@ -171,6 +225,9 @@ export async function buildExecutiveSummary(
       exec = applyRelevanceGuardrail(exec, twoDayPool);
       // B7 边界互斥守卫：同一事件不得既必读/商机又风险（确定性去重，不靠 LLM 自觉）。
       exec = dedupeExecutiveCrossSection(exec);
+      // 内容记忆闸门：过滤「昨天刚说过、今天无增量」的重复表述，
+      // 必须重播的强制换角度，板块被去重掏空时分三级兜底补齐。
+      exec = guard(exec);
       const next: DailyReport = { ...report };
       if (exec.hero_line) next.hero_line = exec.hero_line;
       const mustRead = exec.must_read
@@ -207,9 +264,11 @@ export async function buildExecutiveSummary(
         "exec",
         `🧠 必读/商机/风险(今昨2天窗口)生成：${exec.must_read.length} 必读 / ${exec.insights.length} 商机 / ${exec.risk ? 1 : 0} 风险（输入 finance ${pool.finance.length} + gz ${pool.gz.length}）`,
       );
+      persistMemory();
       return finalize(next);
     }
     ctx.log.info("exec", `ℹ️ 2天窗口执行摘要为空（沿用 PASS2 产出）`);
+    persistMemory();
     return finalize(report);
   } catch (e) {
     const msg = e instanceof Error ? e.message : String(e);
@@ -219,11 +278,12 @@ export async function buildExecutiveSummary(
     try {
       const fb = buildExecutiveFromScores(twoDayPool, date);
       if (fb.must_read.length || fb.insights.length) {
-        const next = mergeStoredExecutive(report, fb);
+        const next = mergeStoredExecutive(report, guard(fb));
         ctx.log.info(
           "exec",
           `🔁 LLM 异常回退 2 天评分兜底：必读 ${next.must_read.length} / 商机 ${next.insights.length}`,
         );
+        persistMemory();
         return finalize(next);
       }
     } catch (e2) {
@@ -232,6 +292,7 @@ export async function buildExecutiveSummary(
         `⚠️ 评分兜底也失败（沿用 PASS2）: ${e2 instanceof Error ? e2.message : String(e2)}`,
       );
     }
+    persistMemory();
     return finalize(report);
   }
 }

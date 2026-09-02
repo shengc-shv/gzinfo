@@ -76,6 +76,12 @@ export interface ExecSummaryInput {
   ipo?: Array<{ title?: string; summary?: string; url?: string }>;
   /** B-1：关键词层已识别的风险候选（来自 risk_tracker），喂给 LLM 的 risk 段 */
   riskCandidates?: Array<{ title: string; url?: string; trackers: string[]; priority: string }>;
+  /**
+   * 内容记忆提示（2026-09-02 去重机制）：近期已播报事件清单 + 若需重播的
+   * 建议切入角度。由 lib/memory/event-memory.ts 的 formatMemoryBrief 生成，
+   * 原样追加到提示词中，让 LLM 在**生成阶段**就避开重复表述。
+   */
+  memoryBrief?: string;
   /** 报告日期 YYYY-MM-DD */
   date: string;
 }
@@ -240,6 +246,8 @@ export async function generateExecutiveSummary(
   };
   const userPrompt = [
     RULES,
+    // 内容记忆约束：近期播过什么、若必须再讲应换什么角度（去重机制的第一道闸）
+    ...(input.memoryBrief ? [input.memoryBrief] : []),
     "",
     `当日信息（JSON）：`,
     JSON.stringify(payload),
@@ -405,8 +413,9 @@ export function loadStore(
  */
 /**
  * 把一条分行相关性评分「翻译」成必读卡可展示的 why（客户中心视角）。
+ * 导出供内容记忆层的兜底补位复用（lib/memory/exec-guard.ts），保持文案口径一致。
  */
-function synthMustReadWhy(rel: BranchRelevance): string {
+export function synthMustReadWhy(rel: BranchRelevance): string {
   const lines = rel.businessLines.join("/");
   const head =
     rel.authority >= 0.95 ? "国家核心监管新政" : rel.authority >= 0.8 ? "监管/地方级信号" : "市场信号";

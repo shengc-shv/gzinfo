@@ -366,7 +366,7 @@ jobs:
           # 2) 提交历史库 + 报告归档
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add history/ data/article-history.json data/article-history-backup.json
+          git add history/ data/article-history.json data/article-history-backup.json data/event-memory.json
           if git diff --cached --quiet; then
             echo "历史文件与报告归档无变化，跳过提交"
           else
