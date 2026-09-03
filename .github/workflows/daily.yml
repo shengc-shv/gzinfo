@@ -257,38 +257,42 @@ jobs:
       # M3-A：不再 shell 出去跑 scripts/crawlers/*.mjs，也不再产出 crawled-*.json；
       # 由 daily.ts 进程内调用 lib/sources/crawlers 的 fetchCrawledArticles() 直接抓取并归一化。
 
-      # ---------- 当日已发布检查（2026-09-03 前移）----------
-      # 原在 build-site 之后执行；现提前到 daily 之前 —— 本步纯查 gh-pages（无 build 依赖），
-      # 提前后可产出 PUBLISH_RUN env：schedule 首发 publish（当天还没发过）或 dispatch
-      # publish=true → true。daily.ts 据此只在「上线 run」落盘内容记忆（today 恒 = gh-pages
-      # 实际内容；本地/验证/同日后续 build 只读不写，见 executive-summary.ts persistMemory）。
+      # ---------- 当日已发布检查（2026-09-03 前移 + 判据改为发布来源）----------
+      # 原在 build-site 之后执行；现提前到 daily 之前 —— 本步纯读 main 的
+      # data/publish-state.json（无 build 依赖），提前后可产出 PUBLISH_RUN env：
+      # schedule 首发 publish（当天还没有 schedule 正式首发）或 dispatch publish=true
+      # → true。daily.ts 据此只在「上线 run」落盘内容记忆（today 恒 = gh-pages 实际
+      # 内容；本地/验证/同日后续 build 只读不写，见 executive-summary.ts persistMemory）。
+      # 2026-09-03 判据严谨化：原先查 gh-pages 当天目录是否存在（HTTP 404→未发布），
+      # 是弱信号 —— dispatch publish=true 的测试/覆盖与 schedule 正式首发在 gh-pages
+      # 上长得一样，凌晨测试抢占当天目录会让 schedule 误判「今天已发布」而跳过正式首发。
+      # 现改为读发布来源记录（lib/publish-state.ts，publish 成功后写入 main）：只认
+      # 「当天存在 source=schedule 的正式首发」才跳过；source=manual（dispatch 覆盖）
+      # 不阻断同日 schedule 首发 —— 首次 schedule 命中会再发正式版覆盖测试版。
       # 2026-08-28 用户反馈：'我手动选的，是全局最高变量' —— manual 触发 inputs.publish=true
       # 必须强制发布（覆盖已发布），不再 silent skip。'已发布跳过' 只对 schedule 触发生效。
+      # 2026-09-02 修复史：原 `TZ='${TZ:-Asia/Shanghai}'` 单引号不展开 → date 退回 UTC
+      # → 取到前一天 → 定时任务永远跳过发布。TZ 必须双引号展开。
       - name: Check if today's report already published
         if: github.event_name == 'schedule'
         id: published-check
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           REPORT_TZ: ${{ vars.REPORT_TZ }}
         run: |
-          # 2026-09-02 修复：原 `TZ='${TZ:-Asia/Shanghai}'` 用了单引号 → shell 不展开
-          # → TZ 是无效字面量 → date 退回 UTC → 取到「前一天」日期（cron 在 UTC 22:00-23:45
-          # 触发，UTC 日期 = 北京日期的前一天）→ 定时任务永远判定"今天已发布"而跳过发布
-          # （gh-pages 上的报告几乎都是手动 dispatch 发的）。改双引号 + 显式传 REPORT_TZ。
           TODAY=$(TZ="${REPORT_TZ:-Asia/Shanghai}" date +%Y-%m-%d)
           echo "Checking publish state for date=${TODAY} (tz=${REPORT_TZ:-Asia/Shanghai})"
-          CHECK_URL="https://api.github.com/repos/${GITHUB_REPOSITORY}/contents/${TODAY}/${TODAY}.html?ref=gh-pages"
-          HTTP_CODE=$(curl -s -o /dev/null -w "%{http_code}" \
-            -H "Authorization: Bearer ${GH_TOKEN}" \
-            -H "Accept: application/vnd.github+json" \
-            -H "X-GitHub-Api-Version: 2022-11-28" \
-            "$CHECK_URL" || echo "000")
-          if [ "$HTTP_CODE" = "404" ]; then
-            echo "✓ Today's report not yet published — will publish"
-            echo "should-publish=true" >> "$GITHUB_OUTPUT"
+          if [ -f data/publish-state.json ]; then
+            SCHEDULED=$(node -e "const s=JSON.parse(require('fs').readFileSync('data/publish-state.json','utf8'));const e=(s.reports||{})[process.argv[1]];process.stdout.write(e&&e.source==='schedule'?'yes':'no')" "$TODAY")
           else
-            echo "Today's report already published (HTTP $HTTP_CODE) — skipping publish, build still produced full AI artifacts"
+            SCHEDULED=no
+          fi
+          echo "schedule-published=${SCHEDULED}"
+          if [ "$SCHEDULED" = "yes" ]; then
+            echo "Today already has a schedule release (source=schedule) — skipping publish, build still produces full AI artifacts"
             echo "should-publish=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "✓ No schedule release yet today — will publish (manual overrides don't block the first schedule run)"
+            echo "should-publish=true" >> "$GITHUB_OUTPUT"
           fi
 
       # 生成当日报告（全 AI 流程）。skip_ai=true（手动触发时勾选）→ 复用历史缓存摘要，
@@ -411,10 +415,11 @@ jobs:
 
       - name: Publish to gh-pages
         # manual 触发 inputs.publish=true → 强制发布（用户选择 = 全局最高变量，覆盖已发布）
-        # schedule 触发 → 必须先过 published-check（已发布则跳过）
+        # schedule 触发 → 必须先过 published-check（已有 schedule 正式首发则跳过）
         if: >-
           (github.event_name == 'schedule' && steps.published-check.outputs.should-publish == 'true')
           || inputs.publish == true
+        id: publish-gh-pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
@@ -422,6 +427,29 @@ jobs:
           publish_branch: gh-pages
           keep_files: false  # we restored everything above, so a clean publish is fine
           commit_message: 'daily: report for ${{ github.run_id }}'
+
+      # ---------- 发布来源记账（2026-09-03，published-check 严谨化）----------
+      # gh-pages push **成功后才**写 data/publish-state.json 并提交 main（先发后记，
+      # 避免「记了没发」导致次日误判已发布）。published-check 据此判定：
+      #   - source=schedule → 当天正式首发已存在 → 后续 schedule 跳过 publish
+      #   - source=manual  → dispatch publish=true 人工覆盖 → 不阻断同日 schedule 首发
+      #     （凌晨 dispatch 测试不再吞掉当天正式首发 —— 首次 schedule 命中会再发正式版）
+      - name: Record publish source (publish-state.json)
+        if: steps.publish-gh-pages.outcome == 'success'
+        env:
+          REPORT_TZ: ${{ vars.REPORT_TZ }}
+          SOURCE: ${{ github.event_name == 'schedule' && 'schedule' || 'manual' }}
+        run: |
+          npm run record-publish --silent
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/publish-state.json
+          if git diff --cached --quiet; then
+            echo "publish-state 无变化，跳过提交"
+          else
+            git commit -m "chore: 记录发布来源 (publish-state.json)"
+            git push
+          fi
 
       # ---------- 外发渠道已移除（2026-09-03，微信推送改为手动触发）----------
       # 原 Wait 5 min / Push WeChat / Push ServerChan 步骤已删除：
