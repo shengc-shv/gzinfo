@@ -1,141 +1,143 @@
 {
   "date": "2026-09-03",
-  "updatedAt": "2026-09-03T00:46:57.945Z",
+  "updatedAt": "2026-09-03T01:11:04.814Z",
   "executive": {
-    "hero_line": "理财子获QDII额度叠加二手房回暖，分行宜同步布局财富出海与按揭窗口。",
-    "spoken_hero": "理财子QDII额度获批，财富端多了一条跨境配置通道，金九银十二手房成交抬头，按揭和赎楼也有戏。今天建议分行财富和个贷两条线联动起来，把产品和场景都准备好。",
+    "hero_line": "住房金融总量缩水叠加理财信披统一，分行零售结构面临'量价齐变'的再校准。",
+    "spoken_hero": "今天两条主线交汇，房贷半年缩水超六千亿，理财信披新规同步落地，广州分行零售结构需要尽快再校准，量与价的节奏都要重新对齐。",
     "must_read": [
       {
-        "title": "北上深楼市现积极信号",
-        "why": "一线城市政策效应初步显现，可作为广州本地改善型按揭定价与额度配置的参考基准。",
+        "title": "资管信披大一统覆盖百万亿规模",
+        "why": "理财销售端整改披露口径直接影响代销合规与客户体验，分行财富与私行需对照新规改造双录话术和产品说明。",
+        "url": "https://www.stcn.com/article/detail/4170037.html"
+      },
+      {
+        "title": "按揭存量半年缩水超六千亿",
+        "why": "按揭增量见顶信号明确，分行需把零售信贷重心向消费贷、经营贷、信用卡分期倾斜，并联动财富条线做大客单。",
+        "url": "https://finance.sina.com.cn/wm/2026-09-02/doc-iniqnaws7536971.shtml"
+      },
+      {
+        "title": "一线城市楼市出现积极信号",
+        "why": "北、上、深成交回暖叠加金九银十窗口，广州作为同梯队城市可参考改善型与二手房按揭的额度与定价策略。",
         "url": "https://www.cnfin.com/yw-lb/detail/20260903/4464322_1.html"
       },
       {
-        "title": "定存息差压缩分红险成代销新宠",
-        "why": "存款利率持续下行，分红险成为银行代销重点，分行代发与财富条线需丰富产品货架。",
-        "url": "https://m.21jingji.com/article/20260902/herald/9e178d786edda3ab55809a108b26b1f4.html"
+        "title": "股份行整体增速放缓",
+        "why": "同业内卷压力加大，分行需在客群分层、财富产能与综合服务上做精做细，守住中收与核心客群份额。",
+        "url": "https://finance.sina.com.cn/money/bank/bank_hydt/2026-09-03/doc-iniqnyaa4360105.shtml"
       },
       {
-        "title": "理财子获QDII额度出海添弹药",
-        "why": "百万亿理财市场新增跨境配置通道，分行财富端需提前梳理出海产品池，对接高净值客户全球配置需求。",
-        "url": "https://finance.sina.com.cn/money/bank/bank_hydt/2026-09-03/doc-iniqnyaa4349706.shtml"
-      },
-      {
-        "title": "信用卡发卡四年净减1.3亿张",
-        "why": "存量经营时代全面到来，分行信用卡须从拉新转向分层经营和场景激活，提升单卡贡献度。",
-        "url": "https://m.21jingji.com/article/20260902/herald/775d4ceb42e42bb32aad42e2b2640290.html"
+        "title": "六大行私行数据集体隐身",
+        "why": "外部对标基准收缩，分行私行需自建内部监测与服务定价体系，强化高端客群差异化运营。",
+        "url": "https://finance.sina.com.cn/jjxw/2026-09-02/doc-iniqkzma1308188.shtml"
       }
     ],
-    "spoken_must_read": "理财子获QDII额度，财富端多了一条跨境配置通道，建议分行提前梳理出海产品池。重点城市二手房成交回暖，金九银十窗口打开，按揭和赎楼业务有戏。信用卡四年少发1.3亿张，存量经营时代到来，可转向分层经营和场景激活。北上深楼市现积极信号，可作为广州改善型按揭定价的参考。定存息差收窄分红险成新宠，代发和财富条线可丰富产品货架。",
+    "spoken_must_read": "按揭存量半年缩水超六千亿，增量见顶，零售信贷请尽快向消费贷分期、经营贷与信用卡倾斜。资管信披大一统覆盖百万亿，财富与私行要对照新规改造双录与产品说明。一线城市楼市出现积极信号，金九银十窗口打开，改善型与二手房按揭额度与定价可参考调整。股份行整体增速放缓，请客群分层与综合服务做精做细，守住中收。六大行私行数据集体隐身，对标基准缺失，分行自建监测体系、强化高端客群差异化运营。",
     "insights": [
       {
-        "topic": "理财子QDII出海产品提前布局",
-        "impact": "跨境配置通道打开，分行财富与私行可对接高净值客户全球资产配置诉求，丰富产品货架。",
-        "action": "本周启动辖内私行客户出海需求摸底，对接理财子QDII额度落地节奏，提前锁定意向客户。",
+        "topic": "二手房按揭与赎楼业务抢抓金九银十",
+        "impact": "重点城市二手房回暖有望传导至广州，改善型与按揭需求边际改善，赎楼与按揭链条业务量回升预期增强。",
+        "action": "本周起在番禺、天河、海珠等改善型片区布点二手房按揭与赎楼联动营销，对接头部中介门店梳理在途单。",
+        "tag": [
+          "住房金融",
+          "客群"
+        ],
+        "sources": [
+          {
+            "title": "重点城市二手房成交活跃 \"金九银十\"成色可期",
+            "url": "https://www.cnfin.com/hg-lb/detail/20260903/4464370_1.html"
+          }
+        ]
+      },
+      {
+        "topic": "理财代销新规落地整改",
+        "impact": "资管信披统一规则覆盖百万亿市场，代销端披露与销售话术需对应调整，否则合规与中收双重承压。",
+        "action": "本周财富与私行部组织代销产品双录话术与说明书对照整改，重点排查 R3 及以上产品与老年客户场景。",
         "tag": [
           "财富",
           "私行"
         ],
         "sources": [
           {
-            "title": "银行理财公司获批QDII额度 出海投资再添'弹药'",
+            "title": "资管产品信披\"大一统\"落地 超百万亿元规模市场如何真正实现\"三清\"",
+            "url": "https://www.stcn.com/article/detail/4170037.html"
+          }
+        ]
+      },
+      {
+        "topic": "理财子出海额度扩围对接私行配置",
+        "impact": "理财子获批 QDII 新额度为私行客户新增跨境配置通道，是高净值客户留资与升级服务的关键抓手。",
+        "action": "财富部本周筛选 QDII 额度受益理财子产品，组织私行客户跨境配置路演并列入季度资产检视模板。",
+        "tag": [
+          "财富",
+          "私行"
+        ],
+        "sources": [
+          {
+            "title": "银行理财公司获批QDII额度 出海投资再添\"弹药\"",
             "url": "https://finance.sina.com.cn/money/bank/bank_hydt/2026-09-03/doc-iniqnyaa4349706.shtml"
           }
         ]
       },
       {
-        "topic": "金九银十按揭与赎楼抢窗口",
-        "impact": "二手房成交回暖带动按揭与赎楼需求上行，分行个贷与对公房地产条线均有机会。",
-        "action": "本周起重点跟进在穗二手房中介合作渠道，备足按揭额度与赎楼过桥资金池。",
+        "topic": "助贷渠道再评估",
+        "impact": "助贷平台风控收紧与更多机构进场，消费贷合作格局生变，存量合作方获客质量与定价空间需要重估。",
+        "action": "本周个贷部牵头对头部助贷合作方进行复盘，重新谈判定价与准入门槛，优先留存数据可穿透的合作渠道。",
         "tag": [
-          "住房金融",
-          "信贷"
-        ],
-        "sources": [
-          {
-            "title": "重点城市二手房成交活跃 '金九银十'成色可期",
-            "url": "https://www.cnfin.com/hg-lb/detail/20260903/4464370_1.html"
-          }
-        ]
-      },
-      {
-        "topic": "信用卡存量经营转向场景激活",
-        "impact": "行业发卡收缩倒逼分行信用卡业务转型，需从拉新转向存量客户分层经营与权益触达。",
-        "action": "本周内梳理辖内高活跃客户分层标签，针对双节文旅场景推出分期与积分加码活动。",
-        "tag": [
-          "客群",
-          "信贷"
-        ],
-        "sources": [
-          {
-            "title": "银行信用卡，四年少了1.3亿张",
-            "url": "https://m.21jingji.com/article/20260902/herald/775d4ceb42e42bb32aad42e2b2640290.html"
-          },
-          {
-            "title": "暑期消费交出'成绩单' 中秋国庆双节文旅预订升温",
-            "url": "https://www.cnfin.com/hg-lb/detail/20260902/4463720_1.html"
-          }
-        ]
-      },
-      {
-        "topic": "分红险替代定存拓代发客群",
-        "impact": "定存息差压缩推动分红险成为代销新宠，代发与财富条线可借机丰富客户资产配置工具。",
-        "action": "本周对代发重点企业开展分红险专项宣导，针对节前闲置资金推出存款替代方案。",
-        "tag": [
-          "代发",
-          "财富"
-        ],
-        "sources": [
-          {
-            "title": "长短期定存息差压缩 银行代销热衷于分红险",
-            "url": "https://m.21jingji.com/article/20260902/herald/9e178d786edda3ab55809a108b26b1f4.html"
-          }
-        ]
-      },
-      {
-        "topic": "金价波动提示黄金客户再平衡",
-        "impact": "国际金价剧烈波动，黄金配置型客户存在短期账面浮亏风险，需提前做好沟通。",
-        "action": "本周财富经理对持仓黄金超10%客户逐一沟通再平衡，提示分批止盈或置换避险资产。",
-        "tag": [
-          "财富",
+          "信贷",
           "客群"
         ],
         "sources": [
           {
-            "title": "黄金'变天'，跌破4300美元关口",
-            "url": "https://www.stcn.com/article/detail/4169772.html"
+            "title": "助贷机构半年报背后：主动收紧风控，更多平台进军",
+            "url": "https://finance.sina.com.cn/roll/2026-09-02/doc-iniqmwqu7609419.shtml"
+          }
+        ]
+      },
+      {
+        "topic": "广东邦泽 IPO 提交注册对接上下游",
+        "impact": "广东本土电器企业 IPO 提交注册有望带动产业链融资需求，分行可提前锁定授信与代发合作机会。",
+        "action": "本周公司部牵头梳理其上下游供应商与代工链客群清单，匹配授信方案与代发套餐，做好上市后服务承接。",
+        "tag": [
+          "信贷",
+          "客群"
+        ],
+        "sources": [
+          {
+            "title": "广东邦泽创科电器：IPO提交注册（拟北交所）",
+            "url": "https://data.eastmoney.com/xg/xg/#A24052"
           }
         ]
       }
     ],
-    "spoken_insights": "理财子QDII额度获批，建议分行本周摸底私行客户出海需求，提前对接产品落地。金九银十二手房回暖，个贷条线可备足按揭与赎楼额度抢窗口。信用卡进入存量时代，可借双节文旅场景做分期与积分加码激活。定存息差压缩，分红险成为代发客群的存款替代工具。金价跌破4300美元，财富经理可提示持仓客户做好再平衡沟通。",
+    "spoken_insights": "二手房成交回暖，番禺天河海珠改善片区本周可联动中介抢抓赎楼与按揭。理财信披统一落地，财富与私行本周对照新规整改双录话术。理财子出海额度扩围，私行跨境配置路演可本周安排。助贷风控收紧，个贷部本周复盘头部合作方重新谈判定价。广东邦泽提交注册，公司部可梳理上下游链客群提前承接授信与代发。",
     "risk": {
-      "topic": "监管限速提示需关注",
-      "evidence": "证券时报报道限速相关窗口指导，关键词层风险候选已识别优先级B。",
-      "impact": "个贷条线新增授信节奏或受影响；财富与私行条线代销产品上架节奏或放缓；风控部需对新规细则保持跟踪。",
-      "action": "个贷部应暂缓新增大额授信上报，财富部应暂缓激进型产品上架；风控部应每日跟踪限速细则落地口径。",
-      "source": "T1.5",
+      "topic": "代销保险误导舆情升温",
+      "evidence": "平安银行就老年客户被误导购买 75 万保险传闻公开回应，事件仍在发酵。",
+      "impact": "对私行与财富：老年客户代销场景合规压力陡增，双录与适当性管理接受度高敏感审视；对风控：需排查代销话术与销售流程的合规风险点。",
+      "action": "财富部本周开展老年客户代销保险专项排查与回访，风控部对超龄高额保单逐笔溯源双录，避免同类舆情在辖内网点重演。",
+      "source": "T2",
       "sources": [
         {
-          "title": "限速",
-          "url": "https://www.stcn.com/article/detail/4170042.html"
+          "title": "平安银行回应老人被误导买75万保险：报道有多处不实",
+          "url": "https://finance.sina.com.cn/money/bank/gsdt/2026-09-02/doc-iniqmshu1339451.shtml"
         }
       ]
     },
-    "spoken_risk": "今天有1个需要警惕：监管限速提示，个贷新增授信节奏可能放缓，财富代销上架也可能受限。个贷和财富条线可暂缓激进动作，风控条线每日跟踪细则落地。",
+    "spoken_risk": "今天有 1 个需要警惕：代销保险误导舆情发酵，老年客户双录与适当性管理接受审视。财富部本周排查老年客户保单，风控部逐笔回溯双录流程。",
     "guangdong_ipo": {
-      "spoken": "广东邦泽创科电器已提交注册，拟在北交所上市，保荐机构为东莞证券，属家电制造行业，注册地位于广东。最新进展距敲钟仅一步之遥，建议分行关注其后续承销与代发机会。"
+      "spoken": "广东邦泽创科电器，注册地广东，拟在北交所上市，已提交注册，建议分行对接其上下游供应商与代工链客群，提前承接授信与代发。"
     }
   },
   "stock_recap": {
     "us": {
-      "overview": "美股三大指数集体收涨约0.5%，10年期美债收益率创2023年11月以来新高。",
+      "overview": "三大指数集体收涨超0.4%，纳指标普再创收盘新高。",
       "sectors": [
-        "科技：博通财报看好AI业务，微软将披露Azure季度营收",
-        "金融/利率敏感板块：10年期美债收益率破高，市场聚焦美联储路径",
-        "AI算力链：Equinix切入AI数据中心多万亿赛道"
+        "AI算力：博通CEO力挺AI增长，盘后业绩展望强劲",
+        "软件云：微软将按季披露Azure营收，业务整合提速",
+        "国债：10年期美债收益率创2023年11月以来新高",
+        "能源：原油三日连涨后回落，特朗普暗示对伊行动短暂"
       ],
-      "spoken": "美股三大指数集体收涨，道指涨0.56%，纳指涨0.45%，标普涨0.46%。10年期美债收益率创2023年11月以来新高，压制风险偏好。科技板块博通财报看好AI收入增长，微软宣布将披露Azure季度营收，AI算力链整体走强。",
+      "spoken": "美股三大指数集体收涨超0.4%，纳指标普再创收盘新高。博通CEO力挺AI前景，盘后展望强劲；微软将按季披露Azure营收，AI算力链全线活跃。10年期美债收益率创2023年11月以来新高，原油三日连涨后小幅回落。",
       "meta": {
         "source": "CNBC Top Stories",
         "crossCheck": "新浪行情",
@@ -160,13 +162,15 @@
       ]
     },
     "aShare": {
-      "overview": "A股三大指数缩量收跌，沪指跌0.97%、深成指跌1.88%、创业板跌2.39%。",
+      "overview": "三大指数缩量收跌，创业板跌2.39%，地面兵装逆市大涨。",
       "sectors": [
-        "地面兵装：1.81亿大单封板，板块逆市爆发",
-        "债市/全球长债：多国收益率刷新数十年极值，全球资产定价逻辑生变",
-        "AI散热/培育钻石：词元支出指数腰斩，AI散热催生新蓝海"
+        "地面兵装：1.81亿大单封板爆发，国防订单催化走强",
+        "AI散热：培育钻石逆势活跃，融资客加码9只概念股",
+        "MLCC：三星电机斩获史上最大长约，AI算力拉动需求",
+        "债市风暴：多国长债收益率刷新数十年极值",
+        "全球流动性：多国央行加息，全球加息潮升温"
       ],
-      "spoken": "A股三大指数缩量收跌，上证指数跌0.97%报3941点，深成指跌1.88%，创业板跌2.39%。地面兵装板块逆市爆发，1.81亿大单直线封板。全球长债抛售持续，多国收益率刷新数十年极值，AI散热和培育钻石概念活跃。",
+      "spoken": "A股三大指数缩量收跌，上证跌0.97%，创业板跌2.39%。地面兵装板块逆市爆发，1.81亿大单封板；AI散热与MLCC概念活跃，三星电机斩获史上最大长约。同时多国长债收益率刷新数十年极值，全球加息潮升温。",
       "meta": {
         "source": "东方财富",
         "crossCheck": "新浪行情",
@@ -191,14 +195,15 @@
       ]
     },
     "hk": {
-      "overview": "恒指收跌0.22%报25275点，恒科跌0.83%，百度双重主要上市生效引关注。",
+      "overview": "恒指收报25275点跌0.22%，恒科跌0.83%，AI独角兽扎堆赴港IPO。",
       "sectors": [
-        "科技/AI：月之暗面秘密交表港交所启动IPO，投前估值500亿美元",
-        "互联网龙头：百度双重主要上市生效，港股通纳入预期升温",
-        "消费/医疗：李宁获股东增持778万股，康龙化成获摩根士丹利增持",
-        "能源服务：安东油田服务获股东增持389.6万股"
+        "AI独角兽：月之暗面秘密交表港交所，估值达500亿美元",
+        "IPO与回港：百度双重主要上市生效，纳入港股通预期升温",
+        "券商评级：小摩上调智谱目标价至2000港元",
+        "回购：晶泰、曹操出行等多家公司持续回购",
+        "股权转仓：纳泉能源、浦江中国转仓规模较大"
       ],
-      "spoken": "港股恒指收跌0.22%报25275点，恒生科技跌0.83%。科技板块月之暗面秘密交表港交所启动IPO，估值500亿美元，百度双重主要上市生效港股通纳入预期升温。李宁、康龙化成获大股东增持，嘀嗒出行获eLong增持超2亿股。",
+      "spoken": "港股恒指收报25275点跌0.22%，恒生科技跌0.83%。月之暗面秘密交表港交所启动IPO，投前估值500亿美元；百度双重主要上市生效，纳入港股通预期升温。小摩上调智谱目标价至2000港元，晶泰、曹操出行持续回购。",
       "meta": {
         "source": "新浪财经·港股",
         "crossCheck": "新浪行情",
@@ -227,13 +232,13 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "09/02",
-      "summary": "9月2日A股三大指数缩量收跌，地面兵装板块逆市大涨。",
+      "summary": "9月2日A股三大指数缩量收跌，但地面兵装板块逆市大涨。",
       "importance": 2,
       "rank": 0,
       "tags": [
         "A股",
         "军工",
-        "盘面"
+        "板块行情"
       ],
       "locale": "national",
       "market": "a-share"
@@ -244,13 +249,13 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "09/02",
-      "summary": "A股地面兵装板块大爆发，某股1.81亿元大单直线封板。",
+      "summary": "9月2日地面兵装板块出现1.81亿元大单直线封板，板块整体大爆发。",
       "importance": 2,
       "rank": 0,
       "tags": [
         "A股",
         "军工",
-        "资金流向"
+        "板块行情"
       ],
       "locale": "national",
       "market": "a-share"
@@ -261,7 +266,7 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "09/02",
-      "summary": "9月2日晚间沪深上市公司发布一批重大事项公告。",
+      "summary": "9月2日晚间沪深上市公司发布重大事项公告，内容涵盖重大事件最新进展。",
       "importance": 1,
       "rank": 0,
       "tags": [
@@ -272,34 +277,18 @@
       "market": "a-share"
     },
     {
-      "url": "https://finance.eastmoney.com/a/202609023862216032.html",
-      "title_cn": "全维度剖析债市危机：缘何全球国债抛售根本停不下来？",
-      "source": "东方财富",
-      "source_type": "media",
-      "date": "09/02",
-      "summary": "东方财富文章剖析全球长债抛售潮持续的原因。",
-      "importance": 2,
-      "rank": 0,
-      "tags": [
-        "债市",
-        "全球宏观"
-      ],
-      "locale": "national",
-      "market": "a-share"
-    },
-    {
       "url": "https://finance.eastmoney.com/a/202609023862621811.html",
       "title_cn": "全球股民的终极命题：长债危机的火会“烧向”股市吗？",
       "source": "东方财富",
       "source_type": "media",
       "date": "09/02",
-      "summary": "东方财富文章讨论长债收益率上行是否会传导至股市。",
+      "summary": "市场关注全球长债收益率持续攀升是否会传导至股市，引发对长债危机影响的讨论。",
       "importance": 2,
       "rank": 0,
       "tags": [
-        "债市",
-        "股市",
-        "全球宏观"
+        "宏观",
+        "债券",
+        "全球市场"
       ],
       "locale": "national",
       "market": "a-share"
@@ -310,13 +299,13 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "09/02",
-      "summary": "某国央行宣布加息25个基点，全球加息潮延续，相关资产盘中跳水。",
+      "summary": "某国央行宣布加息25个基点，市场关注全球加息潮重启对资产价格的冲击。",
       "importance": 2,
       "rank": 0,
       "tags": [
-        "央行",
+        "宏观",
         "加息",
-        "全球宏观"
+        "全球市场"
       ],
       "locale": "national",
       "market": "a-share"
@@ -327,12 +316,30 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "09/02",
-      "summary": "多国长债收益率刷新数十年高位，全球资产定价逻辑面临重塑。",
+      "summary": "多国长债收益率刷新数十年极值，全球资产定价逻辑面临重塑。",
       "importance": 2,
       "rank": 0,
       "tags": [
-        "债市",
-        "全球宏观"
+        "宏观",
+        "债券",
+        "全球市场"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202609033863294424.html",
+      "title_cn": "AI算力引爆MLCC需求三星电机斩获史上最大长约产业链景气或持续上行(附股)",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "09/03",
+      "summary": "AI算力需求拉动MLCC（多层陶瓷电容）景气度，三星电机斩获史上最大长约，产业链相关公司有望受益。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "AI",
+        "半导体",
+        "电子元件"
       ],
       "locale": "national",
       "market": "a-share"
@@ -343,12 +350,12 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "09/02",
-      "summary": "AI散热概念催生新需求方向，培育钻石板块逆势活跃，融资客提前布局9只个股。",
-      "importance": 2,
+      "summary": "AI散热需求催生新应用方向，培育钻石板块逆势活跃，融资资金已提前布局9只个股。",
+      "importance": 1,
       "rank": 0,
       "tags": [
         "AI",
-        "培育钻石",
+        "新材料",
         "融资"
       ],
       "locale": "national",
@@ -360,12 +367,12 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "09/02",
-      "summary": "AI领域\"词元通缩\"持续发酵，相关Token支出指数自峰值腰斩并创历史新低。",
+      "summary": "AI领域\"词元通缩\"现象持续，Token支出指数较峰值腰斩并创历史新低，反映模型调用成本下降。",
       "importance": 2,
       "rank": 0,
       "tags": [
         "AI",
-        "Token"
+        "行业趋势"
       ],
       "locale": "national",
       "market": "a-share"
@@ -393,12 +400,13 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "09/03",
-      "summary": "《经济日报》刊文称国际粮市波动难以冲击中国粮食供应。",
+      "summary": "《经济日报》评论文章指出，国际粮食市场波动难以冲击国内粮食安全。",
       "importance": 1,
       "rank": 0,
       "tags": [
-        "粮食安全",
-        "政策"
+        "农业",
+        "宏观",
+        "政策评论"
       ],
       "locale": "national",
       "market": "a-share"
@@ -409,7 +417,7 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "09/03",
-      "summary": "中金研报建议9月行业配置围绕景气线索把握结构性机会。",
+      "summary": "中金公司发布9月行业配置观点，建议把握景气线索下的结构性机会。",
       "importance": 1,
       "rank": 0,
       "tags": [
@@ -421,12 +429,60 @@
       "market": "a-share"
     },
     {
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0903/2026090300133.pdf",
+      "title_cn": "Monthly Returns",
+      "source": "港交所披露易",
+      "source_type": "media",
+      "date": "09/03",
+      "summary": "港交所披露易发布相关公司月度回报数据。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "港股",
+        "公司公告"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0903/2026090300125.pdf",
+      "title_cn": "Monthly Returns",
+      "source": "港交所披露易",
+      "source_type": "media",
+      "date": "09/03",
+      "summary": "港交所披露易发布相关公司月度回报数据。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "港股",
+        "公司公告"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0903/2026090300123.pdf",
+      "title_cn": "Monthly Returns",
+      "source": "港交所披露易",
+      "source_type": "media",
+      "date": "09/03",
+      "summary": "港交所披露易发布相关公司月度回报数据。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "港股",
+        "公司公告"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
       "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0903/2026090300013.pdf",
       "title_cn": "Announcements and Notices - [Trading Halt]",
       "source": "港交所披露易",
       "source_type": "media",
       "date": "09/03",
-      "summary": "港交所披露易发布一则上市公司停牌公告（Trading Halt）。",
+      "summary": "港交所披露易发布相关上市公司停牌公告。",
       "importance": 1,
       "rank": 0,
       "tags": [
@@ -442,7 +498,7 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "09/03",
-      "summary": "港交所披露易发布又一则上市公司停牌公告（Trading Halt）。",
+      "summary": "港交所披露易发布相关上市公司停牌公告。",
       "importance": 1,
       "rank": 0,
       "tags": [
@@ -458,7 +514,7 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "09/03",
-      "summary": "港交所披露易发布一则上市公司复牌公告（Resumption）。",
+      "summary": "港交所披露易发布相关上市公司复牌公告。",
       "importance": 1,
       "rank": 0,
       "tags": [
@@ -474,7 +530,7 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "09/03",
-      "summary": "港交所披露易收录一则海外监管公告（Other）。",
+      "summary": "港交所披露易发布相关上市公司海外监管公告（其他类别）。",
       "importance": 1,
       "rank": 0,
       "tags": [
@@ -490,7 +546,7 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "09/03",
-      "summary": "港交所披露易收录一则海外监管公告（Other）。",
+      "summary": "港交所披露易发布相关上市公司海外监管公告（其他类别）。",
       "importance": 1,
       "rank": 0,
       "tags": [
@@ -506,7 +562,7 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "09/03",
-      "summary": "港交所披露易收录一则其他杂项公告（Miscellaneous）。",
+      "summary": "港交所披露易发布相关上市公司其他杂项公告。",
       "importance": 1,
       "rank": 0,
       "tags": [
@@ -522,12 +578,12 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "09/03",
-      "summary": "港交所披露易收录一则代表委任表格（Proxy Forms）。",
+      "summary": "港交所披露易发布相关上市公司代表委任表格。",
       "importance": 1,
       "rank": 0,
       "tags": [
         "港股",
-        "股东大会"
+        "公司公告"
       ],
       "locale": "national",
       "market": "hk"
@@ -538,7 +594,7 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "09/03",
-      "summary": "港交所披露易收录一则股东特别大会通告或暂停办理股份过户通知。",
+      "summary": "港交所披露易发布相关上市公司股东大会或账册关闭期变更通知。",
       "importance": 1,
       "rank": 0,
       "tags": [
@@ -554,7 +610,7 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "09/03",
-      "summary": "港交所披露易收录一则有关股份计划的通函（Share Scheme）。",
+      "summary": "港交所披露易发布相关上市公司股份计划相关通函。",
       "importance": 1,
       "rank": 0,
       "tags": [
@@ -565,67 +621,19 @@
       "market": "hk"
     },
     {
-      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0903/2026090300041.pdf",
-      "title_cn": "Announcements and Notices - [Overseas Regulatory Announcement - Other]",
-      "source": "港交所披露易",
-      "source_type": "media",
-      "date": "09/03",
-      "summary": "港交所披露易收录一则海外监管公告（Other）。",
-      "importance": 1,
-      "rank": 0,
-      "tags": [
-        "港股",
-        "海外监管公告"
-      ],
-      "locale": "national",
-      "market": "hk"
-    },
-    {
-      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0903/2026090300039.pdf",
-      "title_cn": "Announcements and Notices - [Other - Business Update]",
-      "source": "港交所披露易",
-      "source_type": "media",
-      "date": "09/03",
-      "summary": "港交所披露易收录一则业务更新公告（Business Update）。",
-      "importance": 1,
-      "rank": 0,
-      "tags": [
-        "港股",
-        "公司公告"
-      ],
-      "locale": "national",
-      "market": "hk"
-    },
-    {
-      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0903/2026090300037.pdf",
-      "title_cn": "Announcements and Notices - [Overseas Regulatory Announcement - Other]",
-      "source": "港交所披露易",
-      "source_type": "media",
-      "date": "09/03",
-      "summary": "港交所披露易收录一则海外监管公告（Other）。",
-      "importance": 1,
-      "rank": 0,
-      "tags": [
-        "港股",
-        "海外监管公告"
-      ],
-      "locale": "national",
-      "market": "hk"
-    },
-    {
       "url": "https://www.cnbc.com/2026/09/02/broadcom-avgo-q3-earnings-report-2026.html",
       "title_cn": "Broadcom delivers strong earnings view as CEO touts growth with AI labs",
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "09/02",
-      "summary": "Broadcom给出强劲业绩指引，CEO称与AI实验室合作将推动增长。",
+      "summary": "Broadcom发布强劲业绩展望，CEO强调与AI实验室合作将驱动增长。",
       "importance": 3,
       "rank": 0,
       "tags": [
         "美股",
-        "半导体",
+        "财报",
         "AI",
-        "财报"
+        "半导体"
       ],
       "locale": "overseas",
       "market": "us"
@@ -636,14 +644,14 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "09/02",
-      "summary": "Microsoft将开始按季度披露Azure收入，并整合多个业务部门。",
+      "summary": "微软宣布将开始按季度披露Azure业务收入，作为公司业务整合的一部分。",
       "importance": 3,
       "rank": 0,
       "tags": [
         "美股",
+        "财报",
         "云计算",
-        "AI",
-        "财报"
+        "AI"
       ],
       "locale": "overseas",
       "market": "us"
@@ -654,12 +662,12 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "09/02",
-      "summary": "NBA就Kawhi Leonard工资帽调查事件，将快船老板Ballmer停职一年。",
+      "summary": "NBA在卡哇伊·莱昂纳德薪资帽调查中暂停快船队老板鲍尔默职务一年。",
       "importance": 1,
       "rank": 0,
       "tags": [
-        "体育",
-        "NBA"
+        "美股",
+        "体育商业"
       ],
       "locale": "overseas",
       "market": "us"
@@ -670,12 +678,13 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "09/02",
-      "summary": "美国贸易代表Greer就Trump政府贸易争端与众议院共和党人磋商。",
+      "summary": "美国贸易代表Greer与共和党众议员会面，背景是特朗普政府贸易争端持续。",
       "importance": 2,
       "rank": 0,
       "tags": [
         "美股",
-        "贸易政策"
+        "贸易政策",
+        "政治"
       ],
       "locale": "overseas",
       "market": "us"
@@ -686,12 +695,13 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "09/02",
-      "summary": "美国司法部表示各州必须向国土安全部报告无证移民，否则将面临联邦资金风险。",
+      "summary": "美国司法部表示，各州现在必须向国土安全部报告无证移民，否则将面临联邦资金风险。",
       "importance": 1,
       "rank": 0,
       "tags": [
-        "美国",
-        "移民政策"
+        "美股",
+        "移民政策",
+        "政治"
       ],
       "locale": "overseas",
       "market": "us"
@@ -707,8 +717,8 @@
       "rank": 0,
       "tags": [
         "美股",
-        "债市",
-        "美债收益率"
+        "债券",
+        "宏观"
       ],
       "locale": "overseas",
       "market": "us"
@@ -719,12 +729,13 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "09/02",
-      "summary": "洛杉矶天使队以创纪录的40亿美元价格出售，MLB各队估值曝光。",
+      "summary": "洛杉矶天使队以创纪录的40亿美元价格出售，刷新MLB球队估值。",
       "importance": 1,
       "rank": 0,
       "tags": [
-        "体育",
-        "MLB"
+        "美股",
+        "体育商业",
+        "并购"
       ],
       "locale": "overseas",
       "market": "us"
@@ -735,13 +746,13 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "09/02",
-      "summary": "新泽西州请求美国最高法院受理预测市场相关案件。",
+      "summary": "新泽西州请求美国最高法院受理预测市场监管相关案件。",
       "importance": 1,
       "rank": 0,
       "tags": [
-        "美国",
-        "预测市场",
-        "司法"
+        "美股",
+        "监管",
+        "博彩"
       ],
       "locale": "overseas",
       "market": "us"
@@ -752,12 +763,12 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "09/02",
-      "summary": "Apple股价出现20年来罕见走势，引发市场关注。",
+      "summary": "苹果股票出现20年来罕见的市场表现，引发投资者讨论。",
       "importance": 2,
       "rank": 0,
       "tags": [
         "美股",
-        "苹果"
+        "科技股"
       ],
       "locale": "overseas",
       "market": "us"
@@ -768,46 +779,48 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "09/02",
-      "summary": "Equinix在数万亿美元AI数据中心热潮中找到细分市场定位。",
+      "summary": "Equinix在数万亿美元规模的AI数据中心热潮中找到细分市场定位，业务持续受益。",
       "importance": 2,
       "rank": 0,
       "tags": [
         "美股",
         "AI",
-        "数据中心"
+        "数据中心",
+        "云计算"
       ],
       "locale": "overseas",
       "market": "us"
     },
     {
-      "url": "https://www.investing.com/news/stock-market-news/from-hunger-to-obesity-developing-world-faces-growing-threat-to-child-health-4886871",
-      "title_cn": "From hunger to obesity: Developing world faces growing threat to child health",
+      "url": "https://www.investing.com/news/insider-trading-news/camp4-cfo-kelly-gold-buys-39600-in-company-stock-93CH-4886910",
+      "title_cn": "Camp4 CFO Kelly Gold buys $39,600 in company stock",
       "source": "Investing.com News",
       "source_type": "media",
       "date": "09/03",
-      "summary": "Investing.com报道发展中国家儿童健康正面临从饥饿到肥胖的双重威胁。",
+      "summary": "Camp4首席财务官Kelly Gold买入公司股票3.96万美元。",
       "importance": 1,
       "rank": 0,
       "tags": [
-        "全球宏观",
-        "公共健康"
+        "美股",
+        "公司高管",
+        "股票交易"
       ],
       "locale": "overseas",
       "market": "us"
     },
     {
-      "url": "https://www.investing.com/news/economy-news/imfs-georgieva-says-rising-bond-yields-threaten-progress-on-developing-country-debt-4886901",
-      "title_cn": "IMF’s Georgieva says rising bond yields threaten progress on developing country debt",
+      "url": "https://www.investing.com/news/commodities-news/oil-dips-after-3day-rally-as-trump-signals-iran-campaign-may-be-brief-4886909",
+      "title_cn": "Oil dips after 3-day rally as Trump signals Iran campaign may be brief",
       "source": "Investing.com News",
       "source_type": "media",
       "date": "09/03",
-      "summary": "IMF总裁Georgieva警告债券收益率上升将威胁发展中国家债务问题的解决进展。",
+      "summary": "原油价格在连续三日上涨后回落，特朗普暗示对伊朗军事行动可能短暂。",
       "importance": 2,
       "rank": 0,
       "tags": [
-        "债市",
-        "IMF",
-        "新兴市场"
+        "美股",
+        "原油",
+        "地缘政治"
       ],
       "locale": "overseas",
       "market": "us"
