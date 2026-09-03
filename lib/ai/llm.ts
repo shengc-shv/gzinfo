@@ -139,6 +139,13 @@ export async function runLlm(
     } catch (e) {
       lastErr = e;
       if (!isTransientLlmError(e) || attempt === MAX_RETRIES - 1) {
+        // 2026-09-03 修复（#133 实锤）：最后一搏失败 / 非 transient 4xx 此前直接 throw 不留
+        // 日志——若调用方静默 catch（stock-recap 曾如此），CI 日志完全看不到 AI 失败原因。
+        // 抛前补一条 [llm] 失败行，使 AI 调用失败始终可观测。
+        const fatalMsg = (e as Error)?.message ?? String(e);
+        console.warn(
+          `[llm] ${stage} ${attempt === MAX_RETRIES - 1 ? "重试 3 次仍失败" : "非临时性错误"}，放弃: ${fatalMsg.slice(0, 200)}`,
+        );
         recordAiCall({ ...stamp(), ok: false, ms: Date.now() - t0 });
         throw e;
       }

@@ -7,6 +7,7 @@
  *   3. 口语化、只留关键指标（去重「板块」、截断长句）
  *   4. 预算自适应（总时长 3:00~3:30 由 audio.ts 分配，本模块只负责不超预算）
  *   5. 无效板块跳过（空描述 / 空洞套话 / 与大盘重复）
+ *   6. maxSectors 上限（2026-09-03 晚间：生产传 2，每市场只详述打分最高 2 板块）
  */
 
 import { test } from "node:test";
@@ -283,6 +284,27 @@ test("buildStockSpoken：预算充足时尽可能纳入板块要点", () => {
   );
   const sum = r.sectorCounts.aShare + r.sectorCounts.hk + r.sectorCounts.us;
   assert.equal(sum, 12, `预算充足时应纳入全部 12 条，实际 ${sum}`);
+});
+
+test("buildStockSpoken：maxSectors=2 → 每市场只详述打分最高 2 板块（2026-09-03 晚间压缩）", () => {
+  // 对应 audio.ts 生产调用 maxSectors: 2。FOUR 打分：甲(资金流+大涨)与丁(资金流+加仓)同为最高，
+  // 丙(领跌 8 分)排最末 → 截断后丙不得进入口播正文；卡面 sectors 3-5 条展示不受此函数影响。
+  const r = buildStockSpoken(
+    mkRecap(mkCard(A_OVERVIEW, FOUR), mkCard(HK_OVERVIEW, FOUR), mkCard(US_OVERVIEW, FOUR)),
+    { budget: 900, maxSectors: 2 },
+  );
+  assert.deepEqual(
+    { a: r.sectorCounts.aShare, h: r.sectorCounts.hk, u: r.sectorCounts.us },
+    { a: 2, h: 2, u: 2 },
+    `maxSectors=2 时每市场应恰纳入 2 条：A${r.sectorCounts.aShare}/H${r.sectorCounts.hk}/U${r.sectorCounts.us}`,
+  );
+  for (const k of ["aShare", "hk", "us"] as MarketKey[]) {
+    assert.ok(r.texts[k].includes("甲板块"), `${k} 应保留打分最高的板块（甲板块），实际：${r.texts[k]}`);
+    assert.ok(
+      !r.texts[k].includes("丙板块"),
+      `${k} 不应出现打分最低的第三条板块「丙板块」`,
+    );
+  }
 });
 
 test("buildStockSpoken：无有效板块的市场只念大盘，不影响其他市场", () => {

@@ -296,7 +296,14 @@ export async function generateStockRecap(
       !recap.hk.overview && !recap.hk.spoken && recap.hk.sectors.length === 0;
     if (empty) return null;
     return recap;
-  } catch {
+  } catch (e) {
+    // 2026-09-03 修复（#133 实锤）：原来 catch{} 静默吞错——LLM 失败后股市区退化为纯指数
+    // 合成口播（0 板块/时长不合格），CI 日志却无任何 [llm]/[recap] 失败行，无法定位根因。
+    // 此处补一条带 stage + 错误摘要的 warn（runLlm 内部已有 3 次指数退避重试，不在此叠加）。
+    const msg = (e as Error)?.message ?? String(e);
+    console.warn(
+      `[recap] stock-recap 生成失败，回退行情指数合成最小复盘三卡: ${msg.slice(0, 200)}`,
+    );
     return null;
   }
 }

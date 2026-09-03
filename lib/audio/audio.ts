@@ -367,6 +367,11 @@ export async function assembleAudioScript(
   //   （板块涨跌表现、领涨领跌方向、资金流向、异动原因、结构性信息），并形成
   //   「整体行情—结构分化—重点板块」的叙述层次。实现见 lib/audio/stock-spoken.ts：
   //   确定性拼装（板块过滤/按重要性排序/跨市场预算轮转），LLM 的 spoken 降级为兜底。
+  //
+  // 2026-09-03 晚间用户要求：股市段口播在当天基础上再压缩约 30%——每市场只详述打分最高
+  //   （信息量最大）的 2 个板块，其余次要板块简化或略过；卡面 sectors 3-5 条展示不变
+  //   （「卡面全、口播精」分离）。实现：此处显式传 maxSectors: 2 覆盖 stock-spoken.ts
+  //   独立默认值 4（audio.ts 是唯一生产调用方，模块默认 4 仅供单测/独立使用）。
   if (stockRecap) {
     const ms = stockRecap.marketStatus;
     // 2026-09-03 修：旧 store.json 里没有 marketStatus（该字段原先在写盘之后才赋值，
@@ -399,7 +404,8 @@ export async function assembleAudioScript(
     const labelChars: Partial<Record<MarketKey, number>> = {};
     for (const m of markets) labelChars[m.key] = prefixOf(m).length;
 
-    const built = buildStockSpoken(stockRecap, { budget: stockBudget, labelChars });
+    // maxSectors: 2 = 2026-09-03 晚间拍板：股市口播压缩 ~30%，每市场只详述打分最高 2 板块
+    const built = buildStockSpoken(stockRecap, { budget: stockBudget, labelChars, maxSectors: 2 });
 
     const segs: string[] = [];
     for (const m of markets) {
