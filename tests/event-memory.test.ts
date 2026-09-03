@@ -46,7 +46,17 @@ import {
 } from "../lib/memory/event-memory";
 import { loadEventMemory, saveEventMemory, isEventMemoryEnabled } from "../lib/memory/store";
 import { applyMemoryGuard, type GuardPoolItem } from "../lib/memory/exec-guard";
+import { broadcastAtFromDateAndSeconds, memoryTimeZone } from "../lib/memory/broadcast-time";
 import type { ExecutiveSummary, ExecInsight } from "../lib/ai/executive-summary";
+
+/**
+ * 正式时段播报时刻（当天 9:00 前）。
+ * 背景：rememberBroadcast 缺省盖「当前真实时刻」戳，9:00 后跑测试会被判为
+ * 「测试时段」→ beginDay 不结算 → 跨天结算类用例随真实时钟漂移（下午跑必挂）。
+ * 结算类用例一律注入 9 点前时刻，让结果与运行时刻无关。
+ */
+const formalAt = (date: string, h = 7, mi = 30) =>
+  broadcastAtFromDateAndSeconds(date, h * 3600 + mi * 60, memoryTimeZone());
 
 /** 手搓一条已入长期记忆的事件记录（跨天结算后形态）。 */
 function mkRecord(partial: Partial<EventRecord> & { id: string }): EventRecord {
@@ -193,7 +203,13 @@ test("peakScore：hero 播报跨天结算保留真实分行相关性分（非恒
     override: true,
   };
   let s: EventMemoryStore = { version: 1, events: {}, today: { date: "2026-08-25", entries: [] } };
-  s = rememberBroadcast(s, { cand: hero, section: "hero", date: "2026-08-25", novelty: 1 });
+  s = rememberBroadcast(s, {
+    cand: hero,
+    section: "hero",
+    date: "2026-08-25",
+    novelty: 1,
+    broadcastAt: formalAt("2026-08-25"),
+  });
   const settled = beginDay(s, "2026-08-26");
   const rec = Object.values(settled.events)[0];
   assert.ok(rec, "应结算出一条长期记忆");
@@ -409,18 +425,21 @@ test("同一天内跨板块共享同一事件不算重复计数（broadcastCount
     section: "hero",
     date: day,
     novelty: 0.9,
+    broadcastAt: formalAt(day),
   });
   st = rememberBroadcast(st, {
     cand: { title: "住房贷款最长可贷40年" },
     section: "must_read",
     date: day,
     novelty: 0.5,
+    broadcastAt: formalAt(day),
   });
   st = rememberBroadcast(st, {
     cand: { title: "40年房贷新政解读" },
     section: "insights",
     date: day,
     novelty: 0.3,
+    broadcastAt: formalAt(day),
   });
   // 跨天结算
   st = beginDay(st, "2026-08-30");
@@ -561,6 +580,7 @@ test("跨天结算：昨天的播报进入长期记忆并开始生效冷却", ()
     section: "hero",
     date: "2026-08-29",
     novelty: 0.9,
+    broadcastAt: formalAt("2026-08-29"),
   });
   st = beginDay(st, "2026-08-30"); // 跨天 → 结算
   const events = Object.values(st.events ?? {});

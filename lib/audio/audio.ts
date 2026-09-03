@@ -25,6 +25,9 @@ import { formatCnDate, formatCnDateShort } from "../pipeline/side-outputs/stock-
 // 整体丢弃（CI run 33315502473 line 828-829 实证），exec.guangdong_ipo.spoken 恒为空；
 // 板块改为 side-output 直接构建后，口播必须能脱离 LLM 独立产出，否则「广东IPO=无」。
 import { buildGdIpoSpoken } from "../pipeline/side-outputs/gd-ipo";
+// 2026-09-03：股市口播改为「整体行情—结构分化—重点板块」确定性拼装，
+// 把卡片里已提炼的细分板块要点纳入口播（详见 lib/audio/stock-spoken.ts 头部注释）。
+import { buildStockSpoken, type MarketKey } from "./stock-spoken";
 
 /** 播放器元数据：renderHtml 注入 sticky 播放器时使用。 */
 export interface AudioMeta {
@@ -57,16 +60,28 @@ export interface AudioSegment {
   text: string;
 }
 
-/** 各章节口播字数上限（2026-08-25 用户拍板：股市解读入口播 + 总时长 ≤3 分钟 → 全稿 ≤~900 字）。
- *  重平衡：必读/洞察适度压缩腾出股市解读段（正文上限合计 830 + 过场语 ~65 ≈ 895 字 ≈ 2.9 分钟）。
- *  v2（I-A）：hero 上调以容纳"早上好" + 整段定调；insights 略减让位给可能的 ipo 段。 */
+/**
+ * 各章节口播字数上限（2026-09-03 用户拍板：总时长 3 分 00 秒 ~ 3 分 30 秒）。
+ *
+ * 口径变化：
+ *  - 原「全稿 ≤900 字 ≈ 3 分钟」→ 现「≤1092 字 ≈ 3 分 30 秒」（SCRIPT_MAX_CHARS）。
+ *  - stock 从 200 提到 520：原预算下三市场每家只摊到 66 字，卡片已提炼好的细分板块
+ *    要点（涨跌表现/资金流向/异动原因）几乎全被截断，只剩一句大盘。
+ *  - stock 520 是**硬上限**，实际额度由 assembleAudioScript 按「总目标 - 已用 - 收尾」
+ *    自适应分配（非股市内容饱满时股市自动让位，保证整体不超 3 分 30 秒）。
+ */
 export const AUDIO_SPEAK_LIMITS = {
   hero: 90,
   must_read: 250,
   insights: 190,
   ipo: 100,
-  stock: 200,
+  risk: 90,
+  stock: 520,
 } as const;
+
+/** 总时长目标窗口（秒）：3 分 00 秒 ~ 3 分 30 秒（2026-09-03 用户拍板）。 */
+export const AUDIO_DURATION_MIN_SEC = 180;
+export const AUDIO_DURATION_MAX_SEC = 210;
 
 // v2（I-A 用户要求）：去掉"行长"等称呼；最后用"今天播报结束"作为收尾，不下命令。
 const OPENER = "早上好。";
@@ -76,6 +91,14 @@ const IPO_TRANSITION = "最近一周有IPO动态的广东企业。";
  *  「下面是8月28日股市收盘信息」），与下方每市场时区标注并存。具体文案在拼装时按 dataDate 动态生成。 */
 /** 中文 TTS 语速估算（字/秒）：腾讯 Speed=1（1.2 倍）实测约 5.3 字/秒，取 5.2 便于徽标时长贴近实际（2026-08-24 校准）。 */
 const CHARS_PER_SEC = 5.2;
+/**
+ * 全稿字数硬上限 = 时长上限 × 语速（210s × 5.2 ≈ 1092 字）。
+ * 股市段按「本上限 − 已拼内容 − 收尾语」的剩余额度自适应，故整稿不会超 3 分 30 秒。
+ */
+export const SCRIPT_MAX_CHARS = Math.round(AUDIO_DURATION_MAX_SEC * CHARS_PER_SEC);
+/** 提示窗口：低于 2 分 50 秒或高于 3 分 35 秒才告警（给目标窗口留 10s 容差）。 */
+const DURATION_WARN_MIN_SEC = AUDIO_DURATION_MIN_SEC - 10;
+const DURATION_WARN_MAX_SEC = AUDIO_DURATION_MAX_SEC + 5;
 
 export interface AudioBuildResult {
   /** 拼装后的完整口播稿（纯文本，≤~900 字 ≈ 3 分钟） */
@@ -334,44 +357,64 @@ export async function assembleAudioScript(
     cursor += dur;
   }
 
-  // —— 昨日股市解读：三市场 spoken 拼接（若有）——
+  // —— 昨日股市解读：整体行情 → 结构分化 → 重点板块（2026-09-03 改）——
   // 排在广东IPO之后（2026-08-30 用户：IPO 播报放在股市情况之前）。
   // 2026-08-30 用户（tz）：美股标「美东时间」、A股/港股标「北京时间」；
   //   同时说清是「上个交易日 X月X日」收盘（听众所处时间不确定，只说"昨日"无法定位）。
   //   时区+日期按市场分别注入，避免一套笼统前缀（原 spokenNote）丢失时区差异。
+  //
+  // 2026-09-03 用户要求：除大盘指数点位/涨跌幅外，还要把卡片里提炼的细分板块要点纳入
+  //   （板块涨跌表现、领涨领跌方向、资金流向、异动原因、结构性信息），并形成
+  //   「整体行情—结构分化—重点板块」的叙述层次。实现见 lib/audio/stock-spoken.ts：
+  //   确定性拼装（板块过滤/按重要性排序/跨市场预算轮转），LLM 的 spoken 降级为兜底。
   if (stockRecap) {
     const ms = stockRecap.marketStatus;
-    const cnDate = ms?.dataDate ? formatCnDate(ms.dataDate) : "";
+    // 2026-09-03 修：旧 store.json 里没有 marketStatus（该字段原先在写盘之后才赋值，
+    // 从未落盘），此时退回 quoteDate（行情取值日），保证口播仍说得出交易日。
+    const dataDate = ms?.dataDate || stockRecap.quoteDate || "";
+    const cnDate = dataDate ? formatCnDate(dataDate) : "";
     // 2026-08-31 用户：口播须点明具体交易日，且作为 IPO→股市 的链接词。
     // 例：「下面是8月28日股市收盘信息。」
-    const stockIntro = ms?.dataDate
-      ? `下面是${formatCnDateShort(ms.dataDate)}股市收盘信息。`
+    const stockIntro = dataDate
+      ? `下面是${formatCnDateShort(dataDate)}股市收盘信息。`
       : "下面是股市收盘信息。";
+
+    // 预算：股市段是最后一个内容段，吃到「总时长上限 − 已拼内容 − 收尾语」的剩余额度，
+    // 但不超过 AUDIO_SPEAK_LIMITS.stock。这样非股市内容饱满时股市自动让位，
+    // 整稿始终 ≤3 分 30 秒（2026-09-03 用户拍板）。
+    const usedChars = parts.join("").length + stockIntro.length;
+    const stockBudget = Math.max(
+      0,
+      Math.min(AUDIO_SPEAK_LIMITS.stock, SCRIPT_MAX_CHARS - usedChars - CLOSER.length),
+    );
+
+    const markets: Array<{ key: MarketKey; label: string; tz: string }> = [
+      { key: "aShare", label: "A股", tz: "北京" },
+      { key: "hk", label: "港股", tz: "北京" },
+      { key: "us", label: "美股", tz: "美东" },
+    ];
+    // 市场前缀（"A股（北京时间9月2日 周三收盘）："）字数计入预算，避免标签挤占板块正文
+    const prefixOf = (m: { label: string; tz: string }) =>
+      `${m.label}${cnDate ? `（${m.tz}时间${cnDate}收盘）` : ""}：`;
+    const labelChars: Partial<Record<MarketKey, number>> = {};
+    for (const m of markets) labelChars[m.key] = prefixOf(m).length;
+
+    const built = buildStockSpoken(stockRecap, { budget: stockBudget, labelChars });
+
     const segs: string[] = [];
-    const pushSeg = (label: string, tz: string, card: { spoken?: string }) => {
-      const s = sanitize(card.spoken ?? "");
-      if (!s) return;
-      // 时区+上个交易日日期标注（缺 dataDate 时降级为无日期，旧 store.json 兼容）
-      const tzLabel = cnDate ? `（${tz}时间${cnDate}收盘）` : "";
-      let prefixed: string;
-      if (s.startsWith(label)) {
-        // spoken 已含市场名（如"美股三大指数…"），避免"美股（…）：美股"；
-        // 把时区标注插在市场名后，并剥掉紧随的标点防双冒号。
-        const rest = s.slice(label.length).replace(/^[\s：:，,、]+/, "");
-        prefixed = `${label}${tzLabel}：${rest}`;
-      } else {
-        prefixed = `${label}${tzLabel}：${s}`;
+    for (const m of markets) {
+      let body = built.texts[m.key];
+      if (!body) {
+        // 兜底：overview/sectors 都缺（如纯指数合成的卡）时退回 LLM 的 spoken
+        const sp = sanitize(stockRecap[m.key]?.spoken ?? "");
+        if (sp) body = truncateAtSentence(sp.replace(/[。.]+$/, ""), 140);
       }
-      // 去尾部句号：三市场以"。"join 拼接，避免段间双句号
-      segs.push(truncateAtSentence(prefixed.replace(/[。.]+$/, ""), Math.floor(AUDIO_SPEAK_LIMITS.stock / 3)));
-    };
-    // 口播次序：A股 → 港股 → 美股（2026-08-31 用户：统一从A股到港股再到美股，
-    // 按听众熟悉度与国内优先排序，与报告页 tab 展示顺序一致）
-    pushSeg("A股", "北京", stockRecap.aShare);
-    pushSeg("港股", "北京", stockRecap.hk);
-    pushSeg("美股", "美东", stockRecap.us);
+      if (!body) continue;
+      segs.push(`${prefixOf(m)}${body.replace(/[。.]+$/, "")}`);
+    }
     if (segs.length) {
-      const combined = truncateAtSentence(segs.join("。"), AUDIO_SPEAK_LIMITS.stock);
+      // 三市场以「。」连接，末尾补「。」收句（buildStockSpoken 已按预算控制总量）
+      const combined = truncateAtSentence(segs.join("。"), AUDIO_SPEAK_LIMITS.stock + 40) + "。";
       const segText = `${stockIntro}${combined}`;
       parts.push(segText);
       partMap.stock_recap = combined;
@@ -385,6 +428,9 @@ export async function assembleAudioScript(
       });
       cursor += dur;
       found++;
+      console.log(
+        `📊 股市口播：A股 ${built.sectorCounts.aShare} / 港股 ${built.sectorCounts.hk} / 美股 ${built.sectorCounts.us} 个板块要点，合计 ${combined.length} 字（预算 ${stockBudget}）`,
+      );
     } else {
       console.warn("⚠️ 章节「昨日股市解读」三市场口播稿均缺失，跳过");
     }
@@ -405,11 +451,15 @@ export async function assembleAudioScript(
   const script = parts.join("\n");
   const durationSec = estimateDurationSec(script.length);
 
-  if (script.length > 900) {
-    console.warn(`::warning:: 口播稿 ${script.length} 字，超出 900 字目标（约 3 分钟上限）`);
+  if (script.length > SCRIPT_MAX_CHARS) {
+    console.warn(
+      `::warning:: 口播稿 ${script.length} 字，超出 ${SCRIPT_MAX_CHARS} 字上限（对应 3 分 30 秒）`,
+    );
   }
-  if (durationSec < 60 || durationSec > 180) {
-    console.warn(`::warning:: 估算音频时长 ${durationSec}s 超出 60~180s 目标窗口（3 分钟上限），请检查口播稿字数`);
+  if (durationSec < DURATION_WARN_MIN_SEC || durationSec > DURATION_WARN_MAX_SEC) {
+    console.warn(
+      `::warning:: 估算音频时长 ${durationSec}s 落在 ${AUDIO_DURATION_MIN_SEC}~${AUDIO_DURATION_MAX_SEC}s 目标窗口（3:00~3:30）之外，请检查口播稿字数`,
+    );
   }
 
   // 落盘：与报告同目录（build-site 会整体拷贝到发布目录）

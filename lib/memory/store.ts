@@ -4,9 +4,9 @@
  * 落盘位置：`data/event-memory.json`。
  *
  * 为什么是这个位置：CI 的每次运行都是全新 runner，只有被 git 提交的文件
- * 才能跨运行存活。daily.yml / daily-cron-fixed.yml 的归档步骤会
- * `git add history/ data/article-history.json ...`，本文件需一并加入
- * （已同步修改两个工作流），否则「上周播过什么」第二天就忘了。
+ * 才能跨运行存活。daily.yml 的归档步骤会
+ * `git add history/ data/article-history.json ...`，本文件需一并加入，
+ * 否则「上周播过什么」第二天就忘了。
  *
  * 与 data/article-history.json 的区别：
  *  - article-history 存「抓过哪些条目」，按 publishedAt 保留 2 天（展示窗口）；

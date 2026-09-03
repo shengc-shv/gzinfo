@@ -166,6 +166,11 @@ export async function buildStockRecap(
       recap.quoteChannel = recap.quoteChannel ?? quotes.channel;
       recap.quoteDate = recap.quoteDate ?? quotes.date;
     }
+    // 2026-08-30 用户：周末/周一报告标注股市数据为上一交易日收盘。
+    // 2026-09-03 修：必须在 writeStockRecap **之前**算好 —— 原实现写在写盘之后，
+    // 导致 marketStatus 永远进不了 store.json，SKIP_AI 复用与口播侧拿到的都是 undefined，
+    // 口播只剩「A股：」而丢掉「（北京时间9月2日 周三收盘）」标注。
+    recap.marketStatus = computeMarketStatus(date, quotes?.date);
     if (!skipAi) {
       writeStockRecap(date, recap);
       ctx.log.info(
@@ -175,8 +180,6 @@ export async function buildStockRecap(
     } else if (persistedRecap) {
       ctx.log.info("recap", "📈 SKIP_AI 复用 store.json 股市复盘三卡");
     }
-    // 2026-08-30 用户：周末/周一报告标注股市数据为上一交易日收盘
-    recap.marketStatus = computeMarketStatus(date, quotes?.date);
     return { ...report, stock_recap: recap };
   } catch (e) {
     const msg = e instanceof Error ? e.message : String(e);
