@@ -1,0 +1,728 @@
+{
+  "date": "2026-09-04",
+  "hero_line": "理财信披全国统一平台落地叠加楼市政策工具箱发力，分行零售端代销合规与按揭定价需同步校准。",
+  "must_read": [
+    {
+      "title": "央行推进利率体系完善",
+      "why": "定价基准与传导机制调整或加快，分行存款与贷款利率报价策略需适时更新，影响零售负债与财富产品定价。",
+      "url": "https://finance.sina.com.cn/money/bank/bank_yhfg/2026-09-03/doc-iniqnyah2358298.shtml"
+    },
+    {
+      "title": "楼市政策工具箱持续发力",
+      "why": "北上一二手房成交现回暖信号，叠加交房再还贷新规落地，分行按揭定价、抵押贷额度与改善型客群经营需动态调整。",
+      "url": "https://finance.cctv.com/2026/09/03/ARTI5CB28zXHSpuYcVNh9ruw260903.shtml"
+    },
+    {
+      "title": "美联储褐皮书释放复杂信号",
+      "why": "9月议息会议表态存分歧，外币与全球资产配置面临扰动，分行私行与财富端跨境产品沟通话术需提前统一。",
+      "url": "https://www.stcn.com/article/detail/4171545.html"
+    },
+    {
+      "title": "货币财政协同放大政策效能",
+      "why": "流动性宽松预期升温，同业存单与理财收益率将随之走低，分行负债成本管理与零售代销收益预期沟通需前置。",
+      "url": "https://www.stcn.com/article/detail/4169917.html"
+    },
+    {
+      "title": "理财信披统一平台全面上线",
+      "why": "百万亿理财市场披露规则统一，代销机构合规边界明确，分行代销准入与双录需对照平台字段逐一复核。",
+      "url": "https://finance.sina.com.cn/jryx/bank/2026-09-03/doc-iniqqfvs6787095.shtml"
+    }
+  ],
+  "insights": [
+    {
+      "topic": "理财代销合规整改",
+      "tags": [
+        "财富",
+        "监管"
+      ],
+      "impact": "统一信披平台上线后代销产品字段须逐项校验，代销准入与双录合规复核提上日程，影响财富条线产品上架节奏。",
+      "action": "本周内组织财富部对代销产品做平台字段对照复核，重点整改双录话术，未通过校验的产品先下架再补录。",
+      "sources": [
+        {
+          "title": "理财行业统一信息披露平台9月1日全面上线运行",
+          "url": "https://finance.sina.com.cn/jryx/bank/2026-09-03/doc-iniqqfvs6787095.shtml"
+        }
+      ]
+    },
+    {
+      "topic": "改善型按揭抢占金九窗口",
+      "tags": [
+        "住房金融",
+        "客群"
+      ],
+      "impact": "北上一二手房成交回暖、一线租金连涨6个月，广州作为一线城市改善型按揭与赎楼业务需求有望同步激活。",
+      "action": "住房金融部可联动二手房中介渠道，针对改善型客群推送额度与利率组合方案，三季度内锁定优质按揭线索。",
+      "sources": [
+        {
+          "title": "新政渐次落地 北上深楼市现积极信号",
+          "url": "https://www.cnfin.com/yw-lb/detail/20260903/4464322_1.html"
+        },
+        {
+          "title": "重点城市二手房成交活跃 \"金九银十\"成色可期",
+          "url": "https://www.cnfin.com/hg-lb/detail/20260903/4464370_1.html"
+        }
+      ]
+    },
+    {
+      "topic": "定存倒挂引导短债理财",
+      "tags": [
+        "财富",
+        "客群"
+      ],
+      "impact": "部分银行长期定存利率低于中短期，客户锁定长期收益反受损失，财富端需调整定期与理财的产品结构沟通。",
+      "action": "财富部本周可梳理客户持有长期定单情况，针对临近到期客户优先推荐短债理财与现金管理类产品。",
+      "sources": [
+        {
+          "title": "有银行定存利率全面倒挂",
+          "url": "https://m.21jingji.com/article/20260903/herald/3071e433dfe96f31c4514a01751feafa.html"
+        }
+      ]
+    },
+    {
+      "topic": "理财子QDII额度出海配置",
+      "tags": [
+        "私行",
+        "财富"
+      ],
+      "impact": "12家银行理财子新增QDII额度9.4亿美元，跨境理财通与全球资产配置迎来产品弹药，私行客户外币配置需求可借势激活。",
+      "action": "私行部关注本行QDII额度获批窗口，提前对接代销全球资产配置产品，9月内完成高净值客户外币资产检视。",
+      "sources": [
+        {
+          "title": "QDII额度扩容！12家银行理财机构获批增加9.4亿美元",
+          "url": "https://finance.sina.com.cn/roll/2026-09-03/doc-iniqpvfw6897830.shtml"
+        }
+      ]
+    },
+    {
+      "topic": "商业不动产REITs项目储备",
+      "tags": [
+        "政银合作",
+        "私行"
+      ],
+      "impact": "监管定调稳慎推进商业不动产REITs，对公条线可联动零售梳理辖内优质商业物业持有客群，撮合Pre-REITs融资机会。",
+      "action": "公司部与零售私行联动摸排辖内优质商业物业持有客户清单，本周内建档储备Pre-REITs撮合项目线索。",
+      "sources": [
+        {
+          "title": "稳慎推进商业不动产REITs 构建房地产发展新模式",
+          "url": "https://www.stcn.com/article/detail/4169916.html"
+        }
+      ]
+    }
+  ],
+  "sections": {
+    "gz_local": [],
+    "biz_insight": [
+      {
+        "url": "https://m.21jingji.com/article/20260903/herald/46e1a58a0861ade72d3056287718f143.html",
+        "title_cn": "银行集中\"清淤\"：多家银行清理百亿不良，工行核销超800亿元",
+        "title_orig": "银行集中\"清淤\"：多家银行清理百亿不良，工行核销超800亿元",
+        "source": "21世纪经济报道·金融",
+        "source_type": "media",
+        "date": "09/03",
+        "summary": "工行单家核销超800亿元，全行业不良处置节奏加快。所以呢：对公存量客户的风险画像与重组谈判窗口正在收窄，可关注分行大额敞口客户的最新处置进展。",
+        "importance": 3,
+        "rank": 1,
+        "tags": [
+          "信贷",
+          "市场",
+          "客群"
+        ],
+        "locale": "national"
+      },
+      {
+        "url": "https://www.cnbc.com/2026/09/03/fed-governor-waller-indicates-he-will-support-holding-rates-steady-at-september-meeting.html",
+        "title_cn": "Fed Governor Waller indicates he will support holding rates steady at September meeting",
+        "source": "CNBC Top Stories",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "09/03",
+        "summary": "所以呢：美联储内部就9月是否按兵不动出现分歧，沃勒倾向观望，提示客户关注9月议息会议窗口对外汇/黄金配置的扰动。",
+        "importance": 2,
+        "rank": 2,
+        "tags": [],
+        "locale": "national"
+      },
+      {
+        "url": "https://www.stcn.com/article/detail/4171348.html",
+        "title_cn": "半年报透视｜43家券商半年考：业绩普增，梯队差距却在拉大",
+        "source": "证券时报",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "09/03",
+        "summary": "所以呢：43家券商业绩普增但梯队差距拉大，分行投行/资管联动可关注头部券商代销/托管资源倾斜方向。",
+        "importance": 2,
+        "rank": 3,
+        "tags": [],
+        "locale": "national"
+      },
+      {
+        "url": "https://www.stcn.com/article/detail/4170047.html",
+        "title_cn": "Token消耗量激增 智能体批量上线 上市银行半年报里的“AI竞赛”",
+        "source": "证券时报",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "09/03",
+        "summary": "上市银行半年报普遍披露Token消耗与智能体部署进度，AI赋能零售进入实战阶段。",
+        "importance": 2,
+        "rank": 4,
+        "tags": [],
+        "locale": "national"
+      },
+      {
+        "url": "https://www.stcn.com/article/detail/4170098.html",
+        "title_cn": "共识与分歧并存 长线资金二季度布局揭晓",
+        "source": "证券时报",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "09/03",
+        "summary": "长线资金二季报披露持仓变化，反映机构共识与分歧方向。",
+        "importance": 2,
+        "rank": 5,
+        "tags": [],
+        "locale": "national"
+      },
+      {
+        "url": "https://finance.sina.com.cn/money/bank/bank_hydt/2026-09-03/doc-iniqnyaa4349706.shtml",
+        "title_cn": "银行理财公司获批QDII额度 出海投资再添“弹药”",
+        "source": "新浪财经·理财保险",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "09/03",
+        "summary": "理财子获QDII额度新增跨境配置通道，财富端可提前梳理出海产品线。",
+        "importance": 2,
+        "rank": 6,
+        "tags": [
+          "财富"
+        ],
+        "locale": "national"
+      },
+      {
+        "url": "https://www.cnfin.com/hg-lb/detail/20260903/4464370_1.html",
+        "title_cn": "重点城市二手房成交活跃 “金九银十”成色可期",
+        "source": "新华财经",
+        "source_type": "official",
+        "tier": "T1.5",
+        "date": "09/03",
+        "summary": "重点城市二手房成交回暖，金九银十窗口或带动按揭与赎楼业务需求。",
+        "importance": 2,
+        "rank": 7,
+        "tags": [],
+        "locale": "national"
+      },
+      {
+        "url": "https://www.cnfin.com/hg-lb/detail/20260903/4464365_1.html",
+        "title_cn": "一线城市住宅租金连续6个月上涨",
+        "source": "新华财经",
+        "source_type": "official",
+        "tier": "T1.5",
+        "date": "09/03",
+        "summary": "一线城市租金连涨6个月，对持有型业主客户现金流与按揭承受能力有正向意义。",
+        "importance": 2,
+        "rank": 8,
+        "tags": [],
+        "locale": "national"
+      }
+    ],
+    "policy_market": [
+      {
+        "url": "https://finance.sina.com.cn/jryx/bank/2026-09-03/doc-iniqqfvs6787095.shtml",
+        "title_cn": "理财行业统一信息披露平台9月1日全面上线运行",
+        "title_orig": "理财行业统一信息披露平台9月1日全面上线运行",
+        "source": "新浪财经·理财保险",
+        "source_type": "media",
+        "date": "09/03",
+        "summary": "全国统一理财信息披露平台已全量运行，代销机构合规边界明确化。所以呢：理财代销流程需对照平台字段逐一校验，代销准入与双录规范的复核可提上日程。",
+        "importance": 2,
+        "rank": 1,
+        "tags": [
+          "财富",
+          "监管合规"
+        ],
+        "locale": "national"
+      },
+      {
+        "url": "https://www.stcn.com/article/detail/4171545.html",
+        "title_cn": "美联储最新《褐皮书》出炉！政策路径不确定性上升",
+        "source": "证券时报",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "09/03",
+        "summary": "美联储褐皮书显示政策路径不确定性上升。所以呢，下一步观察点为9月议息会议表态，客户关于外币资产配置的疑问可提前梳理。",
+        "importance": 2,
+        "rank": 2,
+        "tags": [],
+        "locale": "national"
+      },
+      {
+        "url": "https://www.stcn.com/article/detail/4170037.html",
+        "title_cn": "资管产品信披“大一统”落地 超百万亿元规模市场如何真正实现“三清”",
+        "source": "证券时报",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "09/03",
+        "summary": "资管信披统一规则覆盖百万亿市场，理财销售端需对照整改披露口径。",
+        "importance": 2,
+        "rank": 3,
+        "tags": [
+          "财富"
+        ],
+        "locale": "national"
+      },
+      {
+        "url": "https://www.cnfin.com/yw-lb/detail/20260903/4464322_1.html",
+        "title_cn": "新政渐次落地 北上深楼市现积极信号",
+        "source": "新华财经",
+        "source_type": "official",
+        "tier": "T1.5",
+        "date": "09/03",
+        "summary": "北、上、深一二手房成交出现回暖迹象，新政效应初步显现。所以呢：一线城市需求侧政策窗口已打开，可作为广州本地改善型按揭与二手房按揭产品的定价与额度参考。",
+        "importance": 2,
+        "rank": 4,
+        "tags": [],
+        "locale": "national"
+      },
+      {
+        "url": "https://www.stcn.com/article/detail/4169916.html",
+        "title_cn": "稳慎推进商业不动产REITs 构建房地产发展新模式",
+        "source": "证券时报",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "09/03",
+        "summary": "监管定调稳慎推进商业不动产REITs，盘活存量与新模式构建并行。所以呢：分行可梳理辖内优质商业物业持有客群，为后续Pre-REITs融资与撮合业务储备项目线索。",
+        "importance": 2,
+        "rank": 5,
+        "tags": [],
+        "locale": "national"
+      },
+      {
+        "url": "https://www.stcn.com/article/detail/4169917.html",
+        "title_cn": "货币财政协同发力 放大政策激励效能",
+        "source": "证券时报",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "09/03",
+        "summary": "货币与财政协同是当前宏观主线，流动性环境宽松预期升温。所以呢：分行可关注同业存单与理财收益率随之下移的趋势，做好负债端成本管理与零售代销产品的收益预期沟通。",
+        "importance": 2,
+        "rank": 6,
+        "tags": [],
+        "locale": "national"
+      },
+      {
+        "url": "https://www.cnfin.com/hg-lb/detail/20260903/4464386_1.html",
+        "title_cn": "“能拿房 再还贷”改写旧规则 购房者权益从“纸上”落到实处",
+        "source": "新华财经",
+        "source_type": "official",
+        "tier": "T1.5",
+        "date": "09/03",
+        "summary": "交房再还贷规则落地后房贷节奏重塑，可参考排查存量客户合同条款诉求。",
+        "importance": 2,
+        "rank": 8,
+        "tags": [],
+        "locale": "national"
+      },
+      {
+        "url": "https://finance.cctv.com/2026/09/03/ARTI5CB28zXHSpuYcVNh9ruw260903.shtml",
+        "title_cn": "楼市政策“工具箱”发力稳市场",
+        "source": "央视财经",
+        "source_type": "official",
+        "tier": "T1.5",
+        "date": "09/03",
+        "summary": "所以呢：楼市政策工具箱持续发力，分行按揭/抵押贷营销节奏可结合各地落地政策动态调整，重点关注改善型客群。",
+        "importance": 2,
+        "rank": 10,
+        "tags": [],
+        "locale": "national"
+      },
+      {
+        "url": "https://finance.sina.com.cn/roll/2026-09-03/doc-iniqpvfw6897830.shtml",
+        "title_cn": "QDII额度扩容！12家银行理财机构获批增加9.4亿美元",
+        "source": "新浪财经·理财保险",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "09/03",
+        "summary": "所以呢：12家银行理财子公司新增QDII额度9.4亿美元，跨境理财通及代销全球资产配置迎来产品弹药补给，可关注本行额度获批窗口。",
+        "importance": 2,
+        "rank": 11,
+        "tags": [
+          "财富"
+        ],
+        "locale": "national"
+      },
+      {
+        "url": "https://m.21jingji.com/article/20260903/herald/3071e433dfe96f31c4514a01751feafa.html",
+        "title_cn": "有银行定存利率全面倒挂",
+        "source": "21世纪经济报道·金融",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "09/03",
+        "summary": "所以呢：部分银行长期限定存利率低于中短期，出现倒挂，提示客户定期存款避免过度锁定长期，可引导向短债理财过渡。",
+        "importance": 2,
+        "rank": 12,
+        "tags": [
+          "信贷"
+        ],
+        "locale": "national"
+      },
+      {
+        "url": "https://m.21jingji.com/article/20260903/herald/b3d636d6eddab38e01cf642afe658397.html",
+        "title_cn": "【环球财经】美债收益率持续上行 全球股市迎来“高利率考验”",
+        "source": "21世纪经济报道·金融",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "09/03",
+        "summary": "所以呢：美债收益率上行叠加高利率环境，全球权益资产波动放大，私行客户需提示海外配置再平衡机会。",
+        "importance": 2,
+        "rank": 13,
+        "tags": [
+          "信贷"
+        ],
+        "locale": "national"
+      },
+      {
+        "url": "https://m.21jingji.com/article/20260903/herald/401d9929d2c02170e983d1e9f8d38c65.html",
+        "title_cn": "88万亿新高背后：五大亮点解码债券市场趋势",
+        "source": "21世纪经济报道·金融",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "09/03",
+        "summary": "所以呢：债市存量88万亿创新高，五大趋势对理财/代销产品结构选品有参考，可结合久期/信用策略做客户资产再配置。",
+        "importance": 2,
+        "rank": 14,
+        "tags": [],
+        "locale": "national"
+      }
+    ],
+    "tech": [],
+    "ipo": [
+      {
+        "url": "https://data.eastmoney.com/xg/xg/#A25250",
+        "title_cn": "东莞四维材料科技：IPO问询中（拟北交所）",
+        "source": "东财IPO在审(广东)",
+        "source_type": "official",
+        "tier": "T1.5",
+        "date": "09/03",
+        "summary": "所以呢：东莞本地拟北交所标的问询推进中，可作为分行投行/商行联动储备项目持续跟进。",
+        "importance": 2,
+        "rank": 1,
+        "tags": [],
+        "locale": "national"
+      },
+      {
+        "url": "https://data.eastmoney.com/xg/xg/#A24052",
+        "title_cn": "广东邦泽创科电器：IPO提交注册（拟北交所）",
+        "source": "东财IPO在审(广东)",
+        "source_type": "official",
+        "tier": "T1.5",
+        "date": "09/01",
+        "summary": "注册地：广东｜保荐：东莞证券股份有限公司｜更新：2026-09-01",
+        "importance": 2,
+        "rank": 2,
+        "tags": [
+          "粤"
+        ],
+        "locale": "national"
+      }
+    ]
+  },
+  "risk": {
+    "topic": "银行集中清淤不良资产",
+    "evidence": "工行单家核销超800亿元，全行业不良处置节奏加快，分行大额敞口客户重组谈判窗口正在收窄。",
+    "impact": "对公端：大额授信客户的重组与盘活窗口收窄，风险分类与拨备压力上升；风控端：存量客户风险画像需重新校验；个贷端：与对公联动的按揭与抵押贷客户需排查连带风险。",
+    "action": "风控部牵头本周内完成分行大额敞口客户的风险画像重检，对公部对已进入重组流程的客户加快谈判节奏，必要时引入 AMC 处置通道。",
+    "source": "T2",
+    "sources": [
+      {
+        "title": "银行集中\"清淤\"：多家银行清理百亿不良，工行核销超800亿元",
+        "url": "https://m.21jingji.com/article/20260903/herald/46e1a58a0861ade72d3056287718f143.html"
+      }
+    ]
+  },
+  "stock_recap": {
+    "us": {
+      "overview": "美股三大指数集体收涨，纳指涨1.4%领跑，科技与软件股走强。",
+      "sectors": [
+        "软件：Zscaler财报超预期并上调指引，股价大涨",
+        "消费：Lululemon盈利及指引不及预期，股价重挫15%",
+        "半导体/AI：OpenAI推出Astra模型，AI算力链受关注",
+        "就业：8月非农报告周五公布，市场预期偏谨慎",
+        "政策：万斯公开喊话美联储应降息以提振经济"
+      ],
+      "spoken": "美股三大指数集体收涨，纳指涨百分之一点四领跑，道指涨百分之一点二、标普涨百分之一点一。软件股Zscaler财报超预期股价大涨，AI算力链受OpenAI新模型提振；消费板块Lululemon盈利不及预期重挫百分之十五。周五8月非农报告将出炉，万斯公开喊话美联储应降息，市场情绪偏乐观。",
+      "meta": {
+        "source": "CNBC Top Stories",
+        "crossCheck": "新浪行情",
+        "date": "2026-09-03"
+      },
+      "indices": [
+        {
+          "name": "道琼斯",
+          "value": "53686.11",
+          "changePct": "+1.18%"
+        },
+        {
+          "name": "纳斯达克",
+          "value": "26584.06",
+          "changePct": "+1.40%"
+        },
+        {
+          "name": "标普500",
+          "value": "7747.71",
+          "changePct": "+1.06%"
+        }
+      ]
+    },
+    "aShare": {
+      "overview": "A股三大指数震荡收红，成交不足1.8万亿，培育钻石概念股大涨。",
+      "sectors": [
+        "培育钻石：金刚石散热技术突破催化，板块集体爆发",
+        "高位股：多只牛股集中发布风险提示，一字跌停",
+        "MLCC：AI算力需求拉动三星电机斩获史上最大长约",
+        "六氟化钨：工业气体价格年内暴涨超240%",
+        "AI短视频：题材股9天暴涨超336%，游资炒作升温"
+      ],
+      "spoken": "A股三大指数震荡收红，沪指微涨百分之零点零二，深成指涨百分之零点一，创业板指涨百分之零点零一，成交不足一点八万亿。培育钻石概念股因金刚石散热技术突破集体爆发；多只高位牛股集中发布风险提示后一字跌停。AI算力引爆MLCC需求，工业气体六氟化钨价格年内暴涨超两倍四，AI短视频题材九天暴涨超百分之三百三。",
+      "meta": {
+        "source": "东方财富",
+        "crossCheck": "新浪行情",
+        "date": "2026-09-04"
+      },
+      "indices": [
+        {
+          "name": "上证指数",
+          "value": "3942.09",
+          "changePct": "+0.02%"
+        },
+        {
+          "name": "深证成指",
+          "value": "13625.12",
+          "changePct": "+0.10%"
+        },
+        {
+          "name": "创业板指",
+          "value": "3312.54",
+          "changePct": "+0.01%"
+        }
+      ]
+    },
+    "hk": {
+      "overview": "恒指收报25213点跌0.39%，恒科跌1.08%，科网股普跌、内房股逆势活跃。",
+      "sectors": [
+        "科网股：恒科跌逾1%，权重科技股集体走弱拖累大盘",
+        "内房股：逆势活跃，希音将快速纳入恒生综合指数",
+        "券商评级：智谱目标价被上调至1985港元，维持买入",
+        "AI制药：花旗指AI药物发现为下一趋势，首选英矽智能",
+        "工程机械：大摩维持中国重汽、潍柴动力增持或同步评级"
+      ],
+      "spoken": "港股恒指收报两万五千两百一十三点，跌百分之零点三九，恒生科技跌百分之一零八，科网股普跌拖累大盘，内房股逆势活跃。希音将快速纳入恒生综合指数，百度双重主要上市生效引港股通纳入预期。花旗看好AI制药首选英矽智能，招银国际上调智谱目标价至一千九百八十五港元。整体盘面结构性分化，权重科技走弱与题材活跃并存。",
+      "meta": {
+        "source": "新浪财经·港股",
+        "crossCheck": "新浪行情",
+        "date": "2026-09-04"
+      },
+      "sourceReport": {
+        "title": "港股收评：恒指跌0.39% 科指跌1.08% 科网股普跌 内房股逆势活跃",
+        "url": "https://finance.sina.com.cn/stock/hkstock/marketalerts/2026-09-03/doc-iniqpvfu1068493.shtml"
+      },
+      "indices": [
+        {
+          "name": "恒生指数",
+          "value": "25213.31",
+          "changePct": "-0.39%"
+        },
+        {
+          "name": "恒生科技",
+          "value": "4468.48",
+          "changePct": "-1.08%"
+        }
+      ]
+    },
+    "quoteChannel": "新浪行情",
+    "quoteDate": "2026-09-03",
+    "marketStatus": {
+      "isMarketClosed": false,
+      "reportDate": "2026-09-04",
+      "dataDate": "2026-09-03",
+      "note": "",
+      "spokenNote": "以下行情为上一交易日，9月3日 周四的收盘情况"
+    }
+  },
+  "stock_news": [
+    {
+      "url": "https://finance.eastmoney.com/a/202609033863294424.html",
+      "title_cn": "AI算力引爆MLCC需求三星电机斩获史上最大长约产业链景气或持续上行(附股)",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "09/03",
+      "summary": "AI算力需求推动MLCC（多层陶瓷电容）景气上行，三星电机斩获史上最大长约，A股相关产业链公司受到关注。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "半导体",
+        "AI",
+        "电子元件"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202609033863821548.html",
+      "title_cn": "集中发布风险提示、异常波动公告多只高位牛股一字跌停",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "09/03",
+      "summary": "多家高位牛股集中发布风险提示及异常波动公告，多只个股以跌停报收。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "市场情绪",
+        "监管"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202609033864001670.html",
+      "title_cn": "A股三大指数震荡整理成交额不足1.8万亿培育钻石概念股大涨",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "09/03",
+      "summary": "9月3日A股三大指数震荡整理，全市场成交额不足1.8万亿元，培育钻石概念股大涨。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "A股大盘",
+        "培育钻石"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202609033863285821.html",
+      "title_cn": "下一个六氟化钨？猛涨超240%这种工业气体价格“暴走”（附股）",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "09/03",
+      "summary": "一种工业气体价格短期内累计涨幅超过240%，引发市场对相关产业链的高度关注。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "化工",
+        "涨价"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202609033864220879.html",
+      "title_cn": "9月3日晚间沪深上市公司重大事项公告最新快递",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "09/03",
+      "summary": "9月3日晚间沪深上市公司集中披露重大事项公告，涉及并购重组、增减持、业绩预告等多类事项。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "公司公告",
+        "A股"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0904/2026090400017.pdf",
+      "title_cn": "Next Day Disclosure Returns - [Share Buyback]",
+      "source": "港交所披露易",
+      "source_type": "media",
+      "date": "09/04",
+      "summary": "港交所披露易刊发股份回购翌日披露报表。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "股票回购",
+        "港股"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/09/03/vance-fed-interest-rates-trump-bond-yields.html",
+      "title_cn": "Vance says Fed should lower interest rates: 'Would be nice to have some help'",
+      "source": "CNBC Top Stories",
+      "source_type": "media",
+      "date": "09/03",
+      "summary": "美国副总统万斯表示，美联储应当降息，呼吁货币政策提供支持。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "美联储",
+        "货币政策"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/09/03/lululemon-lulu-q2-2026-earnings.html",
+      "title_cn": "Lululemon stock plunges 15% on disappointing earnings and outlook",
+      "source": "CNBC Top Stories",
+      "source_type": "media",
+      "date": "09/03",
+      "summary": "Lululemon公布财报及指引不及预期，股价单日下跌约15%。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "财报",
+        "消费"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/09/03/zscaler-zs-q4-earnings-2026.html",
+      "title_cn": "Zscaler stock rises on earnings beat, upbeat guidance",
+      "source": "CNBC Top Stories",
+      "source_type": "media",
+      "date": "09/03",
+      "summary": "Zscaler财报超预期且指引乐观，股价盘后/当日走高。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "财报",
+        "网络安全"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.investing.com/news/company-news/american-outdoor-brands-q1-fy27-slides-innovation-drives-turnaround-93CH-4888671",
+      "title_cn": "American Outdoor Brands Q1 FY27 slides: innovation drives turnaround",
+      "source": "Investing.com News",
+      "source_type": "media",
+      "date": "09/03",
+      "summary": "American Outdoor Brands发布2027财年Q1业绩幻灯片，称创新驱动业务回暖。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "财报",
+        "消费"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.investing.com/news/company-news/planet-labs-q2-fy27-slides-58-revenue-growth-profitability-milestone-93CH-4888670",
+      "title_cn": "Planet Labs Q2 FY’27 slides: 58% revenue growth, profitability milestone",
+      "source": "Investing.com News",
+      "source_type": "media",
+      "date": "09/03",
+      "summary": "Planet Labs公布2027财年Q2业绩，营收同比增长58%，并实现盈利里程碑。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "财报",
+        "卫星"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    }
+  ]
+}

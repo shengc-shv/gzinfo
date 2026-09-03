@@ -1,0 +1,823 @@
+{
+  "date": "2026-09-04",
+  "updatedAt": "2026-09-03T22:58:06.847Z",
+  "executive": {
+    "hero_line": "理财信披全国统一平台落地叠加楼市政策工具箱发力，分行零售端代销合规与按揭定价需同步校准。",
+    "spoken_hero": "理财信披全国统一平台今天正式全量上线，代销合规边界收得比以往更紧。叠加楼市政策工具箱持续发力，按揭定价窗口也在打开，分行零售端要同步把代销流程和按揭策略都校准一遍。",
+    "must_read": [
+      {
+        "title": "央行推进利率体系完善",
+        "why": "定价基准与传导机制调整或加快，分行存款与贷款利率报价策略需适时更新，影响零售负债与财富产品定价。",
+        "url": "https://finance.sina.com.cn/money/bank/bank_yhfg/2026-09-03/doc-iniqnyah2358298.shtml"
+      },
+      {
+        "title": "楼市政策工具箱持续发力",
+        "why": "北上一二手房成交现回暖信号，叠加交房再还贷新规落地，分行按揭定价、抵押贷额度与改善型客群经营需动态调整。",
+        "url": "https://finance.cctv.com/2026/09/03/ARTI5CB28zXHSpuYcVNh9ruw260903.shtml"
+      },
+      {
+        "title": "美联储褐皮书释放复杂信号",
+        "why": "9月议息会议表态存分歧，外币与全球资产配置面临扰动，分行私行与财富端跨境产品沟通话术需提前统一。",
+        "url": "https://www.stcn.com/article/detail/4171545.html"
+      },
+      {
+        "title": "货币财政协同放大政策效能",
+        "why": "流动性宽松预期升温，同业存单与理财收益率将随之走低，分行负债成本管理与零售代销收益预期沟通需前置。",
+        "url": "https://www.stcn.com/article/detail/4169917.html"
+      },
+      {
+        "title": "理财信披统一平台全面上线",
+        "why": "百万亿理财市场披露规则统一，代销机构合规边界明确，分行代销准入与双录需对照平台字段逐一复核。",
+        "url": "https://finance.sina.com.cn/jryx/bank/2026-09-03/doc-iniqqfvs6787095.shtml"
+      }
+    ],
+    "spoken_must_read": "理财信披全国统一平台全量上线，代销合规边界清晰化，分行代销准入与双录要逐项对照复核。\n央行持续推进利率体系完善，存款与贷款定价基准调整可能加快，分行产品报价策略需要动态跟踪。\n货币财政协同放大政策效能，同业存单和理财收益率随之下行，负债成本与零售代销收益预期沟通要前置。\n楼市政策工具箱持续发力，北上一二手房交易现回暖信号，叠加交房再还贷新规，按揭定价与改善型客群经营策略可以同步优化。\n美联储褐皮书释放复杂信号，9月议息会议表态存分歧，私行与财富端跨境产品沟通话术提前备好。",
+    "insights": [
+      {
+        "topic": "理财代销合规整改",
+        "impact": "统一信披平台上线后代销产品字段须逐项校验，代销准入与双录合规复核提上日程，影响财富条线产品上架节奏。",
+        "action": "本周内组织财富部对代销产品做平台字段对照复核，重点整改双录话术，未通过校验的产品先下架再补录。",
+        "tag": [
+          "财富",
+          "监管"
+        ],
+        "sources": [
+          {
+            "title": "理财行业统一信息披露平台9月1日全面上线运行",
+            "url": "https://finance.sina.com.cn/jryx/bank/2026-09-03/doc-iniqqfvs6787095.shtml"
+          }
+        ]
+      },
+      {
+        "topic": "改善型按揭抢占金九窗口",
+        "impact": "北上一二手房成交回暖、一线租金连涨6个月，广州作为一线城市改善型按揭与赎楼业务需求有望同步激活。",
+        "action": "住房金融部可联动二手房中介渠道，针对改善型客群推送额度与利率组合方案，三季度内锁定优质按揭线索。",
+        "tag": [
+          "住房金融",
+          "客群"
+        ],
+        "sources": [
+          {
+            "title": "新政渐次落地 北上深楼市现积极信号",
+            "url": "https://www.cnfin.com/yw-lb/detail/20260903/4464322_1.html"
+          },
+          {
+            "title": "重点城市二手房成交活跃 \"金九银十\"成色可期",
+            "url": "https://www.cnfin.com/hg-lb/detail/20260903/4464370_1.html"
+          }
+        ]
+      },
+      {
+        "topic": "定存倒挂引导短债理财",
+        "impact": "部分银行长期定存利率低于中短期，客户锁定长期收益反受损失，财富端需调整定期与理财的产品结构沟通。",
+        "action": "财富部本周可梳理客户持有长期定单情况，针对临近到期客户优先推荐短债理财与现金管理类产品。",
+        "tag": [
+          "财富",
+          "客群"
+        ],
+        "sources": [
+          {
+            "title": "有银行定存利率全面倒挂",
+            "url": "https://m.21jingji.com/article/20260903/herald/3071e433dfe96f31c4514a01751feafa.html"
+          }
+        ]
+      },
+      {
+        "topic": "理财子QDII额度出海配置",
+        "impact": "12家银行理财子新增QDII额度9.4亿美元，跨境理财通与全球资产配置迎来产品弹药，私行客户外币配置需求可借势激活。",
+        "action": "私行部关注本行QDII额度获批窗口，提前对接代销全球资产配置产品，9月内完成高净值客户外币资产检视。",
+        "tag": [
+          "私行",
+          "财富"
+        ],
+        "sources": [
+          {
+            "title": "QDII额度扩容！12家银行理财机构获批增加9.4亿美元",
+            "url": "https://finance.sina.com.cn/roll/2026-09-03/doc-iniqpvfw6897830.shtml"
+          }
+        ]
+      },
+      {
+        "topic": "商业不动产REITs项目储备",
+        "impact": "监管定调稳慎推进商业不动产REITs，对公条线可联动零售梳理辖内优质商业物业持有客群，撮合Pre-REITs融资机会。",
+        "action": "公司部与零售私行联动摸排辖内优质商业物业持有客户清单，本周内建档储备Pre-REITs撮合项目线索。",
+        "tag": [
+          "政银合作",
+          "私行"
+        ],
+        "sources": [
+          {
+            "title": "稳慎推进商业不动产REITs 构建房地产发展新模式",
+            "url": "https://www.stcn.com/article/detail/4169916.html"
+          }
+        ]
+      }
+    ],
+    "spoken_insights": "理财代销合规整改，财富部本周对照平台字段复核双录话术，未过校验产品先下架。\n改善型按揭抢金九窗口，住房金融部联动中介渠道推组合方案，三季度锁定优质线索。\n定存利率出现倒挂，财富部梳理长期定单客户，临近到期优先推荐短债理财。\n理财子QDII额度扩容，私行部跟进本行额度获批，9月内完成高净值外币资产检视。\n商业不动产REITs稳步推进，公司部联动私行摸排优质物业客户，本周建档储备项目。",
+    "risk": {
+      "topic": "银行集中清淤不良资产",
+      "evidence": "工行单家核销超800亿元，全行业不良处置节奏加快，分行大额敞口客户重组谈判窗口正在收窄。",
+      "impact": "对公端：大额授信客户的重组与盘活窗口收窄，风险分类与拨备压力上升；风控端：存量客户风险画像需重新校验；个贷端：与对公联动的按揭与抵押贷客户需排查连带风险。",
+      "action": "风控部牵头本周内完成分行大额敞口客户的风险画像重检，对公部对已进入重组流程的客户加快谈判节奏，必要时引入 AMC 处置通道。",
+      "source": "T2",
+      "sources": [
+        {
+          "title": "银行集中\"清淤\"：多家银行清理百亿不良，工行核销超800亿元",
+          "url": "https://m.21jingji.com/article/20260903/herald/46e1a58a0861ade72d3056287718f143.html"
+        }
+      ]
+    },
+    "spoken_risk": "今天有1个需要警惕：银行集中清淤不良资产，工行单家核销超800亿，分行对公大额敞口客户重组窗口收窄。风控部本周牵头重检大额客户风险画像，对公部加快已进入重组流程客户的谈判节奏。",
+    "guangdong_ipo": {
+      "spoken": "广东邦泽创科电器已提交注册，拟在北交所上市，注册地广东，由东莞证券保荐，最新进展于9月1日更新，分行投行商行联动可重点跟进。"
+    }
+  },
+  "stock_recap": {
+    "us": {
+      "overview": "美股三大指数集体收涨，纳指涨1.4%领跑，科技与软件股走强。",
+      "sectors": [
+        "软件：Zscaler财报超预期并上调指引，股价大涨",
+        "消费：Lululemon盈利及指引不及预期，股价重挫15%",
+        "半导体/AI：OpenAI推出Astra模型，AI算力链受关注",
+        "就业：8月非农报告周五公布，市场预期偏谨慎",
+        "政策：万斯公开喊话美联储应降息以提振经济"
+      ],
+      "spoken": "美股三大指数集体收涨，纳指涨百分之一点四领跑，道指涨百分之一点二、标普涨百分之一点一。软件股Zscaler财报超预期股价大涨，AI算力链受OpenAI新模型提振；消费板块Lululemon盈利不及预期重挫百分之十五。周五8月非农报告将出炉，万斯公开喊话美联储应降息，市场情绪偏乐观。",
+      "meta": {
+        "source": "CNBC Top Stories",
+        "crossCheck": "新浪行情",
+        "date": "2026-09-03"
+      },
+      "indices": [
+        {
+          "name": "道琼斯",
+          "value": "53686.11",
+          "changePct": "+1.18%"
+        },
+        {
+          "name": "纳斯达克",
+          "value": "26584.06",
+          "changePct": "+1.40%"
+        },
+        {
+          "name": "标普500",
+          "value": "7747.71",
+          "changePct": "+1.06%"
+        }
+      ]
+    },
+    "aShare": {
+      "overview": "A股三大指数震荡收红，成交不足1.8万亿，培育钻石概念股大涨。",
+      "sectors": [
+        "培育钻石：金刚石散热技术突破催化，板块集体爆发",
+        "高位股：多只牛股集中发布风险提示，一字跌停",
+        "MLCC：AI算力需求拉动三星电机斩获史上最大长约",
+        "六氟化钨：工业气体价格年内暴涨超240%",
+        "AI短视频：题材股9天暴涨超336%，游资炒作升温"
+      ],
+      "spoken": "A股三大指数震荡收红，沪指微涨百分之零点零二，深成指涨百分之零点一，创业板指涨百分之零点零一，成交不足一点八万亿。培育钻石概念股因金刚石散热技术突破集体爆发；多只高位牛股集中发布风险提示后一字跌停。AI算力引爆MLCC需求，工业气体六氟化钨价格年内暴涨超两倍四，AI短视频题材九天暴涨超百分之三百三。",
+      "meta": {
+        "source": "东方财富",
+        "crossCheck": "新浪行情",
+        "date": "2026-09-04"
+      },
+      "indices": [
+        {
+          "name": "上证指数",
+          "value": "3942.09",
+          "changePct": "+0.02%"
+        },
+        {
+          "name": "深证成指",
+          "value": "13625.12",
+          "changePct": "+0.10%"
+        },
+        {
+          "name": "创业板指",
+          "value": "3312.54",
+          "changePct": "+0.01%"
+        }
+      ]
+    },
+    "hk": {
+      "overview": "恒指收报25213点跌0.39%，恒科跌1.08%，科网股普跌、内房股逆势活跃。",
+      "sectors": [
+        "科网股：恒科跌逾1%，权重科技股集体走弱拖累大盘",
+        "内房股：逆势活跃，希音将快速纳入恒生综合指数",
+        "券商评级：智谱目标价被上调至1985港元，维持买入",
+        "AI制药：花旗指AI药物发现为下一趋势，首选英矽智能",
+        "工程机械：大摩维持中国重汽、潍柴动力增持或同步评级"
+      ],
+      "spoken": "港股恒指收报两万五千两百一十三点，跌百分之零点三九，恒生科技跌百分之一零八，科网股普跌拖累大盘，内房股逆势活跃。希音将快速纳入恒生综合指数，百度双重主要上市生效引港股通纳入预期。花旗看好AI制药首选英矽智能，招银国际上调智谱目标价至一千九百八十五港元。整体盘面结构性分化，权重科技走弱与题材活跃并存。",
+      "meta": {
+        "source": "新浪财经·港股",
+        "crossCheck": "新浪行情",
+        "date": "2026-09-04"
+      },
+      "sourceReport": {
+        "title": "港股收评：恒指跌0.39% 科指跌1.08% 科网股普跌 内房股逆势活跃",
+        "url": "https://finance.sina.com.cn/stock/hkstock/marketalerts/2026-09-03/doc-iniqpvfu1068493.shtml"
+      },
+      "indices": [
+        {
+          "name": "恒生指数",
+          "value": "25213.31",
+          "changePct": "-0.39%"
+        },
+        {
+          "name": "恒生科技",
+          "value": "4468.48",
+          "changePct": "-1.08%"
+        }
+      ]
+    },
+    "quoteChannel": "新浪行情",
+    "quoteDate": "2026-09-03",
+    "marketStatus": {
+      "isMarketClosed": false,
+      "reportDate": "2026-09-04",
+      "dataDate": "2026-09-03",
+      "note": "",
+      "spokenNote": "以下行情为上一交易日，9月3日 周四的收盘情况"
+    }
+  },
+  "stock_news": [
+    {
+      "url": "https://finance.eastmoney.com/a/202609033863294424.html",
+      "title_cn": "AI算力引爆MLCC需求三星电机斩获史上最大长约产业链景气或持续上行(附股)",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "09/03",
+      "summary": "AI算力需求推动MLCC（多层陶瓷电容）景气上行，三星电机斩获史上最大长约，A股相关产业链公司受到关注。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "半导体",
+        "AI",
+        "电子元件"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202609033863821548.html",
+      "title_cn": "集中发布风险提示、异常波动公告多只高位牛股一字跌停",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "09/03",
+      "summary": "多家高位牛股集中发布风险提示及异常波动公告，多只个股以跌停报收。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "市场情绪",
+        "监管"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202609033864001670.html",
+      "title_cn": "A股三大指数震荡整理成交额不足1.8万亿培育钻石概念股大涨",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "09/03",
+      "summary": "9月3日A股三大指数震荡整理，全市场成交额不足1.8万亿元，培育钻石概念股大涨。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "A股大盘",
+        "培育钻石"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202609033863285821.html",
+      "title_cn": "下一个六氟化钨？猛涨超240%这种工业气体价格“暴走”（附股）",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "09/03",
+      "summary": "一种工业气体价格短期内累计涨幅超过240%，引发市场对相关产业链的高度关注。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "化工",
+        "涨价"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202609033864220879.html",
+      "title_cn": "9月3日晚间沪深上市公司重大事项公告最新快递",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "09/03",
+      "summary": "9月3日晚间沪深上市公司集中披露重大事项公告，涉及并购重组、增减持、业绩预告等多类事项。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "公司公告",
+        "A股"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202609033863888783.html",
+      "title_cn": "金刚石散热“从0到1”！培育钻石大爆发(附股)",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "09/03",
+      "summary": "金刚石散热材料技术实现从0到1突破，培育钻石板块受到资金追捧，相关概念股表现活跃。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "培育钻石",
+        "新材料"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202609033863948371.html",
+      "title_cn": "韩国总统府：政府将争取防止美半导体关税相关举措给韩企带来不利影响",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "09/03",
+      "summary": "韩国总统府表态，将争取防止美国针对半导体的关税举措给韩国企业带来不利影响。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "半导体",
+        "关税",
+        "中韩贸易"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202609033863968162.html",
+      "title_cn": "午后惊吓！全球一度直线跳水发生了什么？",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "09/03",
+      "summary": "9月3日午后全球主要资产一度出现直线跳水行情，市场避险情绪短暂升温。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "全球市场",
+        "市场情绪"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202609033864199480.html",
+      "title_cn": "燧原科技中签号出炉共20657个",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "09/03",
+      "summary": "燧原科技新股中签号出炉，共计20657个中签号。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "IPO",
+        "半导体"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202609033863865784.html",
+      "title_cn": "AI短视频风口突至！9天暴涨超336%！“那只猴子”彻底引燃赛道",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "09/03",
+      "summary": "AI短视频赛道受事件催化，相关概念股9个交易日累计涨幅超过336%。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "AI",
+        "短视频"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202609033863886911.html",
+      "title_cn": "从贵州茅台到泡泡玛特：“老登股”退回原点新消费走到台前",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "09/03",
+      "summary": "市场风格出现切换，贵州茅台等传统消费蓝筹回调，泡泡玛特等新消费个股走上前台。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "消费",
+        "新消费"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202609033863182364.html",
+      "title_cn": "经济日报：国际粮市风浪难撼中国饭碗",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "09/03",
+      "summary": "《经济日报》刊文称，国际粮价波动难以冲击中国粮食供应，饭碗端得稳。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "农业",
+        "政策"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0904/2026090400043.pdf",
+      "title_cn": "Announcements and Notices - [List of Directors and their Role and Function]",
+      "source": "港交所披露易",
+      "source_type": "media",
+      "date": "09/04",
+      "summary": "港交所披露易刊发董事名单及其角色与职能公告，属常规公司治理披露。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "公司治理",
+        "港股"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0904/2026090400041.pdf",
+      "title_cn": "Announcements and Notices - [Other - Corporate Governance Related Matters]",
+      "source": "港交所披露易",
+      "source_type": "media",
+      "date": "09/04",
+      "summary": "港交所披露易刊发与公司治理相关事项的公告，属常规信披。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "公司治理",
+        "港股"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0904/2026090400039.pdf",
+      "title_cn": "Announcements and Notices - [Discloseable Transaction / Major Transaction]",
+      "source": "港交所披露易",
+      "source_type": "media",
+      "date": "09/04",
+      "summary": "港交所披露易刊发涉及须予披露交易/主要交易的公告。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "公司公告",
+        "港股"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0904/2026090400037.pdf",
+      "title_cn": "Announcements and Notices - [Terms of Reference of Other Board Committees]",
+      "source": "港交所披露易",
+      "source_type": "media",
+      "date": "09/04",
+      "summary": "港交所披露易刊发其他董事会委员会的职权范围文件。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "公司治理",
+        "港股"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0904/2026090400035.pdf",
+      "title_cn": "Announcements and Notices - [Terms of Reference of the Nomination Committee]",
+      "source": "港交所披露易",
+      "source_type": "media",
+      "date": "09/04",
+      "summary": "港交所披露易刊发提名委员会职权范围文件。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "公司治理",
+        "港股"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0904/2026090400033.pdf",
+      "title_cn": "Announcements and Notices - [Terms of Reference of the Remuneration Committee]",
+      "source": "港交所披露易",
+      "source_type": "media",
+      "date": "09/04",
+      "summary": "港交所披露易刊发薪酬委员会职权范围文件。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "公司治理",
+        "港股"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0904/2026090400027.pdf",
+      "title_cn": "Announcements and Notices - [Terms of Reference of the Audit Committee]",
+      "source": "港交所披露易",
+      "source_type": "media",
+      "date": "09/04",
+      "summary": "港交所披露易刊发审核委员会职权范围文件。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "公司治理",
+        "港股"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0904/2026090400025.pdf",
+      "title_cn": "Announcements and Notices - [Notice of AGM]",
+      "source": "港交所披露易",
+      "source_type": "media",
+      "date": "09/04",
+      "summary": "港交所披露易刊发股东周年大会通知公告。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "公司公告",
+        "港股"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0904/2026090400021.pdf",
+      "title_cn": "Announcements and Notices - [Overseas Regulatory Announcement - Other]",
+      "source": "港交所披露易",
+      "source_type": "media",
+      "date": "09/04",
+      "summary": "港交所披露易刊发海外监管公告（其他类）。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "公司公告",
+        "港股"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0904/2026090400019.pdf",
+      "title_cn": "Constitutional Documents",
+      "source": "港交所披露易",
+      "source_type": "media",
+      "date": "09/04",
+      "summary": "港交所披露易刊发公司组织章程文件。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "公司治理",
+        "港股"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0904/2026090400017.pdf",
+      "title_cn": "Next Day Disclosure Returns - [Share Buyback]",
+      "source": "港交所披露易",
+      "source_type": "media",
+      "date": "09/04",
+      "summary": "港交所披露易刊发股份回购翌日披露报表。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "股票回购",
+        "港股"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0904/2026090400015.pdf",
+      "title_cn": "Proxy Forms",
+      "source": "港交所披露易",
+      "source_type": "media",
+      "date": "09/04",
+      "summary": "港交所披露易刊发代表委任表格。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "公司治理",
+        "港股"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/09/03/vance-fed-interest-rates-trump-bond-yields.html",
+      "title_cn": "Vance says Fed should lower interest rates: 'Would be nice to have some help'",
+      "source": "CNBC Top Stories",
+      "source_type": "media",
+      "date": "09/03",
+      "summary": "美国副总统万斯表示，美联储应当降息，呼吁货币政策提供支持。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "美联储",
+        "货币政策"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/09/03/lululemon-lulu-q2-2026-earnings.html",
+      "title_cn": "Lululemon stock plunges 15% on disappointing earnings and outlook",
+      "source": "CNBC Top Stories",
+      "source_type": "media",
+      "date": "09/03",
+      "summary": "Lululemon公布财报及指引不及预期，股价单日下跌约15%。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "财报",
+        "消费"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/09/03/august-2026-jobs-report-payrolls.html",
+      "title_cn": "The big August jobs report is due out Friday. Here's what to expect for what has been a jobless summer",
+      "source": "CNBC Top Stories",
+      "source_type": "media",
+      "date": "09/03",
+      "summary": "美国8月非农就业报告将于周五公布，市场关注就业市场放缓信号。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "就业数据",
+        "美联储"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/09/03/adobe-anil-chakravarthy-ceo.html",
+      "title_cn": "Adobe names Anil Chakravarthy as CEO, replacing Shantanu Narayen",
+      "source": "CNBC Top Stories",
+      "source_type": "media",
+      "date": "09/03",
+      "summary": "Adobe宣布任命Anil Chakravarthy为新任CEO，接替现任CEO Shantanu Narayen。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "人事变动",
+        "软件"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/09/03/treasury-irs-proposal-tax-exempt-schools-charitable-donations.html",
+      "title_cn": "Trump admin targets tax-exempt status at private colleges — threatening a key tax break for donations",
+      "source": "CNBC Top Stories",
+      "source_type": "media",
+      "date": "09/03",
+      "summary": "特朗普政府瞄准私立大学免税资格，可能威胁捐赠者的关键税收优惠。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "教育",
+        "税收政策"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/09/03/carney-lutnick-trump-trade-canada.html",
+      "title_cn": "Carney claps back at Lutnick, says Canada will resume trade talks 'when the Americans are ready'",
+      "source": "CNBC Top Stories",
+      "source_type": "media",
+      "date": "09/03",
+      "summary": "加拿大总理卡尼回应美国财长卢特尼克，称将在美方准备好时恢复贸易谈判。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "贸易争端",
+        "美加关系"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/09/03/zscaler-zs-q4-earnings-2026.html",
+      "title_cn": "Zscaler stock rises on earnings beat, upbeat guidance",
+      "source": "CNBC Top Stories",
+      "source_type": "media",
+      "date": "09/03",
+      "summary": "Zscaler财报超预期且指引乐观，股价盘后/当日走高。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "财报",
+        "网络安全"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/09/03/open-ai-astra-gpt-6-cyber.html",
+      "title_cn": "OpenAI begins rolling out Astra model after warning of its advanced cyber capabilities",
+      "source": "CNBC Top Stories",
+      "source_type": "media",
+      "date": "09/03",
+      "summary": "OpenAI开始推送Astra模型，并提示该模型具备高级网络攻击能力，需警惕滥用风险。",
+      "importance": 3,
+      "rank": 0,
+      "tags": [
+        "AI",
+        "网络安全"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/09/02/nba-suspends-clippers-ballmer-kawhi-leonard-salary-cap.html",
+      "title_cn": "NBA suspends Clippers owner Ballmer for one year in Kawhi Leonard salary cap probe",
+      "source": "CNBC Top Stories",
+      "source_type": "media",
+      "date": "09/03",
+      "summary": "NBA以规避工资帽为由，对快船队老板鲍尔默处以一年的禁赛处罚。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "体育",
+        "监管"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/09/03/nfl-rams-49ers-australia-international-expansion.html",
+      "title_cn": "NFL set for first-ever game in Melbourne, Australia, in international expansion",
+      "source": "CNBC Top Stories",
+      "source_type": "media",
+      "date": "09/03",
+      "summary": "NFL宣布将在澳大利亚墨尔本举办首场海外常规赛，推进国际化布局。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "体育"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.investing.com/news/company-news/american-outdoor-brands-q1-fy27-slides-innovation-drives-turnaround-93CH-4888671",
+      "title_cn": "American Outdoor Brands Q1 FY27 slides: innovation drives turnaround",
+      "source": "Investing.com News",
+      "source_type": "media",
+      "date": "09/03",
+      "summary": "American Outdoor Brands发布2027财年Q1业绩幻灯片，称创新驱动业务回暖。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "财报",
+        "消费"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.investing.com/news/company-news/planet-labs-q2-fy27-slides-58-revenue-growth-profitability-milestone-93CH-4888670",
+      "title_cn": "Planet Labs Q2 FY’27 slides: 58% revenue growth, profitability milestone",
+      "source": "Investing.com News",
+      "source_type": "media",
+      "date": "09/03",
+      "summary": "Planet Labs公布2027财年Q2业绩，营收同比增长58%，并实现盈利里程碑。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "财报",
+        "卫星"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    }
+  ]
+}
