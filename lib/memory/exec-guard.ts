@@ -21,6 +21,7 @@ import { synthMustReadWhy } from "../ai/executive-summary";
 import { scoreBranchRelevance, type BranchRelevance } from "../ai/relevance-score";
 import {
   beginDay,
+  deliverySettlementGate,
   evaluateCandidate,
   rememberBroadcast,
   nextAngle,
@@ -206,10 +207,25 @@ function toInsight(cand: MemoryCandidate): ExecInsight {
  */
 export function applyMemoryGuard(input: GuardInput): GuardOutput {
   const { exec, today, pool = [] } = input;
+  const log: string[] = [];
+  // 结算指纹预检（2026-09-03）：昨天有暂存播报但「人工推送的版本 ≠ 落盘版本」
+  // （deliveries.reportRunId ≠ today.runId）时，beginDay 将按 deliverySettlementGate
+  // 不结算（宁漏勿误）——此处把拦截原因留痕进日志，供人工核查。
+  {
+    const p = input.store.today;
+    if (p && p.date !== today && p.entries.length > 0) {
+      const g = deliverySettlementGate(input.store, p.date);
+      if (g.reason === "fingerprint-mismatch") {
+        const rec = (input.store.deliveries ?? []).find((d) => d && d.date === p.date);
+        log.push(
+          `🧠 结算拦截：昨日交付版本（gh-pages run ${rec?.reportRunId ?? "?"}）≠ 昨日落盘版本（run ${p.runId ?? "?"}）→ 昨天播报不结算（推送内容与 gh-pages 落盘内容不一致，请人工核查后重推或清理 deliveries）`,
+        );
+      }
+    }
+  }
   // 开启新的一天：结算昨天的播报进长期记忆 + 清空当天暂存区（保证同日重跑幂等）
   let store: EventMemoryStore = beginDay(input.store, today);
   const decisions: MemoryDecision[] = [];
-  const log: string[] = [];
   const next: ExecutiveSummary = { ...exec };
 
   // ---- 1) hero（今日定调）----

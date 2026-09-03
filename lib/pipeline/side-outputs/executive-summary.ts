@@ -85,9 +85,33 @@ export async function buildExecutiveSummary(
   // 总开关 EVENT_MEMORY=0 可整体关闭（回滚用）。
   const memoryOn = isEventMemoryEnabled();
   let memStore = memoryOn ? loadEventMemory() : null;
+  /**
+   * 记忆写入绑定「上线 run」（2026-09-03）：只有会被 publish 到 gh-pages 的 run
+   * （schedule 首发 / dispatch publish=true）才把播报落盘 ——
+   *   - today 暂存区恒等于 gh-pages 实际内容（此前 = 当天最后一次 build run，
+   *     可能与用户真正收到的版本不一致，结算口径失真）；
+   *   - 本地 / 验证 / schedule 同日后续 build（PUBLISH_RUN 非 true）只读不写：
+   *     预分析本地 SKIP_AI daily 不再污染 data/event-memory.json；
+   *     测试重试不覆盖正式版 today。
+   * 结算（beginDay）不受影响：它发生在 guard 内，结算结果随上线 run 的
+   * saveEventMemory 一起落盘（每天首个上线 run 结算昨天 → 当天必然发生）。
+   */
+  const publishRun = process.env.PUBLISH_RUN === "true";
   /** 把本次播报写回记忆库（幂等：同一天重跑结果一致，见 beginDay）。 */
   const persistMemory = (): void => {
-    if (memoryOn && memStore) saveEventMemory(memStore, { today: date });
+    if (publishRun && memoryOn && memStore) {
+      // 给暂存区盖上「本 run」指纹（2026-09-03）：today.runId 与 mark-delivered
+      // 记录的 deliveries.reportRunId 对账，次日结算前可证明「将结算的内容 =
+      // 人工推送时 gh-pages 上的版本」（见 deliverySettlementGate）。
+      const runId = process.env.GITHUB_RUN_ID ?? "";
+      if (runId) {
+        memStore = {
+          ...memStore,
+          today: { ...(memStore.today ?? { date, entries: [] }), runId },
+        };
+      }
+      saveEventMemory(memStore, { today: date });
+    }
   };
   /** 对一份 ExecutiveSummary 跑记忆去重 + 兜底；失败一律放行原产出。 */
   const guard = (ex: ExecutiveSummary): ExecutiveSummary => {

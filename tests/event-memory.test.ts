@@ -12,6 +12,10 @@
  * 另覆盖工程关键性质：同日多跑幂等（today 暂存区 + 跨天结算 beginDay）、
  * 持久化层 load/save/prune、LLM 记忆提示格式化。
  *
+ * 2026-09-03 语义更新：跨天结算闸门从「9:00 启发式」改为「交付信号」——
+ * beginDay 只在「昨天存在人工确认推送（deliveries）」时才结算昨天播报。
+ * 结算类用例通过 appendDelivery 显式标记交付，不再依赖注入时刻。
+ *
  * 纯函数测试：全部用构造数据，不依赖 data/ 真实历史库。
  */
 import { test } from "node:test";
@@ -24,6 +28,8 @@ import {
   emptyMemory,
   rememberBroadcast,
   beginDay,
+  appendDelivery,
+  deliverySettlementGate,
   evaluateCandidate,
   computeNovelty,
   effectiveCooldownDays,
@@ -50,13 +56,18 @@ import { broadcastAtFromDateAndSeconds, memoryTimeZone } from "../lib/memory/bro
 import type { ExecutiveSummary, ExecInsight } from "../lib/ai/executive-summary";
 
 /**
- * 正式时段播报时刻（当天 9:00 前）。
- * 背景：rememberBroadcast 缺省盖「当前真实时刻」戳，9:00 后跑测试会被判为
- * 「测试时段」→ beginDay 不结算 → 跨天结算类用例随真实时钟漂移（下午跑必挂）。
- * 结算类用例一律注入 9 点前时刻，让结果与运行时刻无关。
+ * 固定时刻工具：构造「某天某时刻」的 ISO 时间戳。
+ * 2026-09-03 起结算不再看时刻（交付信号驱动），这里仅用于给 broadcastAt
+ * 填一个可读的确定性时间（溯源字段），并显式验证「9 点后的播报在已交付
+ * 的前提下同样会被结算」。
  */
-const formalAt = (date: string, h = 7, mi = 30) =>
+const atTime = (date: string, h = 7, mi = 30) =>
   broadcastAtFromDateAndSeconds(date, h * 3600 + mi * 60, memoryTimeZone());
+
+/** 快捷：给 store 标记「date 当天已人工确认推送」（结算闸门所需交付信号）。 */
+function markDelivered(store: EventMemoryStore, date: string, pushedHour = 8): EventMemoryStore {
+  return appendDelivery(store, { date, pushedAt: atTime(date, pushedHour, 15) });
+}
 
 /** 手搓一条已入长期记忆的事件记录（跨天结算后形态）。 */
 function mkRecord(partial: Partial<EventRecord> & { id: string }): EventRecord {
@@ -208,12 +219,123 @@ test("peakScore：hero 播报跨天结算保留真实分行相关性分（非恒
     section: "hero",
     date: "2026-08-25",
     novelty: 1,
-    broadcastAt: formalAt("2026-08-25"),
+    broadcastAt: atTime("2026-08-25"),
   });
+  s = markDelivered(s, "2026-08-25"); // 昨天已人工推送 → 交付信号允许结算
   const settled = beginDay(s, "2026-08-26");
   const rec = Object.values(settled.events)[0];
   assert.ok(rec, "应结算出一条长期记忆");
   assert.equal(rec.peakScore, 95, "hero 播报的 peakScore 应透传为真实分行分（非恒为 0）");
+});
+
+test("无交付记录 → 昨天的播报不结算（宁漏勿误，次日允许重播）", () => {
+  // 微信推送改手动后：当天从未被人工推送（或全是测试/验证 run）→ 无交付信号，
+  // 即使播报发生在 9:00 前也不结算 —— 9 点启发式退役，时刻不再决定是否正式。
+  const hero: MemoryCandidate = { title: "房贷期限最长延至40年", score: 95, override: true };
+  let s: EventMemoryStore = { version: 1, events: {}, today: { date: "2026-08-25", entries: [] } };
+  s = rememberBroadcast(s, {
+    cand: hero,
+    section: "hero",
+    date: "2026-08-25",
+    novelty: 1,
+    broadcastAt: atTime("2026-08-25", 7, 0), // 9 点前播的，但没有交付 → 仍不结算
+  });
+  const settled = beginDay(s, "2026-08-26");
+  assert.equal(Object.keys(settled.events ?? {}).length, 0, "无交付信号 → 不结算");
+});
+
+test("9 点后的人工补发：有交付信号同样结算（时刻不再判定正式性）", () => {
+  // 用户 9:30 手动强制重发（dispatch publish=true）并核对后手动推微信 → 真交付。
+  const cand: MemoryCandidate = { title: "40年房贷新政重发版", text: "落地 实施" };
+  let s: EventMemoryStore = { version: 1, events: {}, today: { date: "2026-09-02", entries: [] } };
+  s = rememberBroadcast(s, {
+    cand,
+    section: "must_read",
+    date: "2026-09-02",
+    novelty: 0.9,
+    broadcastAt: atTime("2026-09-02", 9, 45), // 9 点后播报
+  });
+  s = markDelivered(s, "2026-09-02", 10); // 10:15 人工推送成功
+  const settled = beginDay(s, "2026-09-03");
+  assert.equal(Object.keys(settled.events ?? {}).length, 1, "9 点后播报 + 已交付 → 应结算");
+});
+
+test("appendDelivery：同日重复推送覆盖 pushedAt，跨日追加新记录", () => {
+  let s = emptyMemory();
+  s = appendDelivery(s, { date: "2026-09-02", pushedAt: "2026-09-02T08:15:00+08:00" });
+  s = appendDelivery(s, { date: "2026-09-02", pushedAt: "2026-09-02T10:20:00+08:00" }); // 同日覆盖
+  s = appendDelivery(s, { date: "2026-09-03", pushedAt: "2026-09-03T08:02:00+08:00", runId: "r1" });
+  assert.equal(s.deliveries?.length, 2, "同日前覆盖不新增，跨日才新增");
+  const d02 = s.deliveries?.find((d) => d.date === "2026-09-02");
+  assert.equal(d02?.pushedAt, "2026-09-02T10:20:00+08:00", "同日重复推送以最后一次为准");
+  assert.equal(s.deliveries?.find((d) => d.date === "2026-09-03")?.runId, "r1");
+});
+
+test("结算指纹校验：交付版本 run == 落盘版本 run → 正常结算", () => {
+  // 正常流程：schedule run 123 发布 + 落盘 today（runId=123）→ 人工推送时 gh-pages
+  // 就是 run 123 的产物 → mark-delivered 反查到 reportRunId=123 → 次日结算无阻。
+  let s: EventMemoryStore = {
+    version: 1,
+    events: {},
+    today: { date: "2026-09-02", entries: [], runId: "123" },
+    deliveries: [{ date: "2026-09-02", pushedAt: "2026-09-02T08:15:00+08:00", reportRunId: "123", reportSha: "abc123" }],
+  };
+  s = rememberBroadcast(s, {
+    cand: { title: "房贷期限最长延至40年" },
+    section: "hero",
+    date: "2026-09-02",
+    novelty: 0.9,
+    broadcastAt: atTime("2026-09-02"),
+  });
+  const gate = deliverySettlementGate(s, "2026-09-02");
+  assert.deepEqual(gate, { settle: true, reason: "delivered" });
+  const settled = beginDay(s, "2026-09-03");
+  assert.equal(Object.keys(settled.events ?? {}).length, 1, "指纹一致 → 应结算");
+});
+
+test("结算指纹校验：交付版本 run ≠ 落盘版本 run → 不结算（宁漏勿误）", () => {
+  // 漏洞 D 场景：schedule run 123 发布落盘后，dispatch publish=true run 456 覆盖了
+  // gh-pages 但落盘未跟随（或反之）→ 人工推送的是 run 456 产物，today 暂存却是
+  // run 123 → 结算会把「没推送的版本」当已播 → 必须拦截。
+  let s: EventMemoryStore = {
+    version: 1,
+    events: {},
+    today: { date: "2026-09-02", entries: [], runId: "123" },
+    deliveries: [{ date: "2026-09-02", pushedAt: "2026-09-02T10:20:00+08:00", reportRunId: "456", reportSha: "def456" }],
+  };
+  s = rememberBroadcast(s, {
+    cand: { title: "房贷期限最长延至40年" },
+    section: "hero",
+    date: "2026-09-02",
+    novelty: 0.9,
+    broadcastAt: atTime("2026-09-02"),
+  });
+  const gate = deliverySettlementGate(s, "2026-09-02");
+  assert.equal(gate.settle, false);
+  assert.equal(gate.reason, "fingerprint-mismatch");
+  const settled = beginDay(s, "2026-09-03");
+  assert.equal(Object.keys(settled.events ?? {}).length, 0, "指纹不一致 → 不结算（次日允许重播）");
+});
+
+test("结算指纹校验：任一侧缺指纹（旧记录/反查失败）→ 按信任交付结算", () => {
+  // deliveries 无 reportRunId（mark-delivered 反查失败 / 升级前记录）或 today 无 runId
+  // （旧文件）→ 无法证伪不一致，与既有「有交付即结算」行为保持一致。
+  let s: EventMemoryStore = {
+    version: 1,
+    events: {},
+    today: { date: "2026-09-02", entries: [], runId: "123" },
+    deliveries: [{ date: "2026-09-02", pushedAt: "2026-09-02T08:15:00+08:00" }], // 无指纹
+  };
+  s = rememberBroadcast(s, {
+    cand: { title: "房贷期限最长延至40年" },
+    section: "hero",
+    date: "2026-09-02",
+    novelty: 0.9,
+    broadcastAt: atTime("2026-09-02"),
+  });
+  assert.equal(deliverySettlementGate(s, "2026-09-02").reason, "delivered");
+  const settled = beginDay(s, "2026-09-03");
+  assert.equal(Object.keys(settled.events ?? {}).length, 1, "无指纹 → 信任交付结算");
 });
 
 test("无关事件不误匹配（新事件 verdict=new）", () => {
@@ -425,23 +547,24 @@ test("同一天内跨板块共享同一事件不算重复计数（broadcastCount
     section: "hero",
     date: day,
     novelty: 0.9,
-    broadcastAt: formalAt(day),
+    broadcastAt: atTime(day),
   });
   st = rememberBroadcast(st, {
     cand: { title: "住房贷款最长可贷40年" },
     section: "must_read",
     date: day,
     novelty: 0.5,
-    broadcastAt: formalAt(day),
+    broadcastAt: atTime(day),
   });
   st = rememberBroadcast(st, {
     cand: { title: "40年房贷新政解读" },
     section: "insights",
     date: day,
     novelty: 0.3,
-    broadcastAt: formalAt(day),
+    broadcastAt: atTime(day),
   });
-  // 跨天结算
+  // 跨天结算（先标记 2026-08-29 已人工推送 → 交付信号放行结算）
+  st = markDelivered(st, day);
   st = beginDay(st, "2026-08-30");
   const events = Object.values(st.events ?? {});
   assert.equal(events.length, 1, "同日三条应并入同一事件");
@@ -580,8 +703,9 @@ test("跨天结算：昨天的播报进入长期记忆并开始生效冷却", ()
     section: "hero",
     date: "2026-08-29",
     novelty: 0.9,
-    broadcastAt: formalAt("2026-08-29"),
+    broadcastAt: atTime("2026-08-29"),
   });
+  st = markDelivered(st, "2026-08-29"); // 昨天已人工推送 → 允许结算
   st = beginDay(st, "2026-08-30"); // 跨天 → 结算
   const events = Object.values(st.events ?? {});
   assert.equal(events.length, 1);

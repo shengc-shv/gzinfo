@@ -15,6 +15,7 @@
     "deploy": "node scripts/deploy.mjs",
     "build-site": "node scripts/build-site.mjs",
     "notify": "tsx scripts/notify-daily.ts",
+    "mark-delivered": "tsx scripts/mark-delivered.ts",
     "test": "node --experimental-test-module-mocks --import tsx --test \"tests/**/*.test.ts\"",
     "open": "node scripts/open-report.mjs",
     "tts-fallback": "tsx scripts/tts-fallback.ts",

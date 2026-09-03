@@ -21,7 +21,9 @@
 
 import { eventFingerprint, dice, titleBigrams } from "../ingest/dedup-similar";
 // 仅引入运行时函数；broadcast-time 对本文件只做 `import type`，无循环依赖
-import { formatBroadcastAt, isTestBroadcastAt } from "./broadcast-time";
+// 2026-09-03：isTestBroadcastAt（9:00 启发式）已从结算路径退役 —— 结算闸门改为
+// 「交付信号」（deliveries：人工确认推送过才算正式交付），broadcastAt 仅用于溯源/人工分区。
+import { formatBroadcastAt } from "./broadcast-time";
 
 // ---------------------------------------------------------------------------
 // 1) 类型定义
@@ -127,9 +129,12 @@ export interface BroadcastSample {
    * 播报时刻（ISO 8601 完整时间戳，带时区偏移，默认北京时间 +08:00）。
    *
    * 形如 `2026-09-02T23:39:47+08:00`。与 `date`（仅 YYYY-MM-DD）互补：
-   * date 用于「哪天播的」的冷却计算，broadcastAt 用于「当天几点播的」的溯源，
-   * 使以 9:00 为界区分**客户演示数据**与**测试/验证数据**成为可能，
-   * 并支持按时间段查看、导出与清理（2026-09-02 需求）。
+   * date 用于「哪天播的」的冷却计算，broadcastAt 记录「当天几点播的」。
+   *
+   * 2026-09-03 起仅作**溯源与人工分区**用途（partitionByHour / filterByTimeRange /
+   * listBroadcasts 等工具仍可用 9:00 为界人工区分演示与测试数据）；
+   * 「是否正式」的判定已交给 deliveries 交付信号（beginDay 结算闸门），
+   * 不再用时刻启发式 —— 9 点前可能是测试重试、9 点后可能是人工补发，时刻无法证伪。
    *
    * 设为可选：历史记录无此字段时不影响任何既有读取逻辑（向后兼容）。
    */
@@ -189,7 +194,51 @@ export interface EventMemoryStore {
   today?: {
     date: string;
     entries: BroadcastSample[];
+    /**
+     * 该暂存区由哪个「上线 run」落盘（GITHUB_RUN_ID，persistMemory 注入）。
+     * 用于结算指纹校验：与 deliveries.reportRunId 对账，证明「将结算的内容
+     * 就是人工推送时 gh-pages 上的那个版本」（2026-09-03 补严，见
+     * deliverySettlementGate）。可选：历史文件无此字段 → 无指纹、按信任交付结算。
+     */
+    runId?: string;
   };
+  /**
+   * 人工确认交付记录（2026-09-03 新增）：微信推送改为手动触发后，
+   * 一次「人工触发推送且微信全量送达（API 全 target errcode=0）」= 当天报告
+   * 正式生效。⚠️ 生效判据 = **触达**（微信侧受理并投递）——模板消息渠道无
+   * 「客户已读」回执（仅企业微信应用消息有），已读不可观测，经用户 2026-09-03
+   * 拍板以「触达即生效」为判据（宁严勿松：无目标 / 部分失败 → 不算交付）。
+   *
+   * beginDay 的结算闸门（取代 9:00 启发式）：昨天**有交付记录**才把
+   * 昨天的播报结算进长期记忆（进入后续去重范围）；无交付记录（当天从未被
+   * 人工推送，或全部是测试/验证运行）→ 不结算（宁漏勿误，次日同源新闻
+   * 允许重播，测试内容绝不污染去重）。测试集触发与正式推送的判定边界 =
+   * 是否真正 Run notify.yml 且推送全成功 —— 时刻 / run 次数 / 是否 publish
+   * 到 gh-pages 均不作数。
+   *
+   * 写入方：notify.yml 推送成功后的 mark-delivered 步骤（appendDelivery）。
+   * 可选字段：旧版本文件无此字段 → 按「无任何交付」处理（向下兼容）。
+   */
+  deliveries?: DeliveryRecord[];
+}
+
+/**
+ * 一次人工确认交付的留痕（date + 推送成功时刻 + 被推送版本指纹）。
+ * 除 notify run 自身（runId）外，还记录**被推送版本**的 gh-pages 发布 run 与
+ * commit（reportRunId / reportSha，mark-delivered 从 gh-pages commit message 反查），
+ * 供次日结算前与 today.runId 对账 —— 防止「推的是 A 版本、结算的是 B 版本」。
+ */
+export interface DeliveryRecord {
+  /** 被交付的报告日期 YYYY-MM-DD。 */
+  date: string;
+  /** 推送成功时刻（ISO 8601 带时区，与 broadcastAt 同格式）。 */
+  pushedAt: string;
+  /** 触发推送的 notify run id（溯源用，可选）。 */
+  runId?: string;
+  /** 被推送版本对应的 gh-pages 发布 run id（daily publish 步骤的 commit message 反查，可选）。 */
+  reportRunId?: string;
+  /** 被推送版本对应的 gh-pages commit sha（审计用，可选）。 */
+  reportSha?: string;
 }
 
 /** 候选条目（由调用方从 exec 产出或两天池构造）。 */
@@ -1122,23 +1171,47 @@ function fmt(n: number): string {
  *  - 同一天重复运行 → 暂存区被清空重写，长期记忆不变 → 判定结果完全一致；
  *  - 跨天 → 昨天的播报结算进长期记忆 → 冷却期开始生效。
  */
+/**
+ * 结算闸门判定（2026-09-03，取代 9:00 启发式）：
+ *  - 昨天**有人工确认推送**（deliveries 含昨天）→ 昨天的播报是客户真正收到的
+ *    版本 → 全量结算进长期记忆（broadcastAt 仅溯源，不再按 9 点过滤——9 点前
+ *    的测试重试与 9 点后的人工补发都可能是正式，时刻无法证伪）。
+ *  - 昨天无交付记录 → 昨天从未正式交付（纯 build/测试/忘了推）→ 不结算，
+ *    宁漏勿误：次日同源新闻允许重播，也不让没发出去的内容冷却掉真实发布。
+ *  - 版本指纹校验（2026-09-03 补严）：deliveries.reportRunId（被推送版本的
+ *    gh-pages 发布 run）与 today.runId（暂存区落盘 run）双侧都有且不一致 →
+ *    推送的版本 ≠ 将结算的暂存内容 → 不结算（宁漏勿误）。任一侧缺指纹
+ *    （旧记录 / mark-delivered 反查失败）→ 无法证伪，按信任交付结算。
+ *
+ * 必须在 beginDay 重置 today **之前**调用（依赖 store.today 仍是「昨天」）。
+ */
+export function deliverySettlementGate(
+  store: EventMemoryStore,
+  prevDate: string,
+): { settle: boolean; reason: "delivered" | "no-delivery" | "fingerprint-mismatch" } {
+  const rec = (store.deliveries ?? []).find((d) => d && d.date === prevDate);
+  if (!rec) return { settle: false, reason: "no-delivery" };
+  const pushedRun = rec.reportRunId;
+  const stagedRun = store.today && store.today.date === prevDate ? store.today.runId : undefined;
+  if (pushedRun && stagedRun && pushedRun !== stagedRun) {
+    return { settle: false, reason: "fingerprint-mismatch" };
+  }
+  return { settle: true, reason: "delivered" };
+}
+
 export function beginDay(store: EventMemoryStore, today: string): EventMemoryStore {
   let events = { ...(store.events ?? {}) };
   const prev = store.today;
   if (prev && prev.date && prev.date !== today && prev.entries.length > 0) {
-    // 只结算「正式/演示时段」播报（当天 9:00 前，见 isTestBroadcastAt）：
-    // 9:00 之后产生的播报是测试/验证重跑的产物，若一并结算成长期事件，
-    // 会冷却/阻断后续真实发布（实锤：昨晚 23:39 测试播报结算后，今早
-    // 同源新闻被批量 duplicate/cooldown，必读/商机被压到各 2 条）。
-    // 测试留痕仅存活于当天暂存区（可查看/清理），跨天即失效，不进记忆。
-    const formal = prev.entries.filter((s) => !isTestBroadcastAt(s.broadcastAt));
-    if (formal.length > 0) events = settleIntoEvents(events, formal);
+    const gate = deliverySettlementGate(store, prev.date);
+    if (gate.settle) events = settleIntoEvents(events, prev.entries);
   }
   return {
     version: 1,
     updatedAt: today,
     events,
     today: { date: today, entries: [] },
+    ...(store.deliveries ? { deliveries: store.deliveries } : {}),
   };
 }
 
@@ -1260,12 +1333,41 @@ export function rememberBroadcast(
   if (angle) sample.angle = angle;
 
   const prev = store.today && store.today.date === date ? store.today.entries : [];
+  // runId 透传（2026-09-03）：runId 由 persistMemory 注入后，同日内的多次
+  // rememberBroadcast 不得把它丢掉——否则 beginDay 结算指纹校验
+  // （deliverySettlementGate）会因暂存侧缺指纹而退化为「无指纹信任结算」，
+  // 拦不住「推送版本 ≠ 落盘版本」的场景。beginDay 推进到新一天时才显式清空。
+  const today: { date: string; entries: BroadcastSample[]; runId?: string } = {
+    date,
+    entries: [...prev, sample],
+    ...(store.today?.date === date && store.today.runId ? { runId: store.today.runId } : {}),
+  };
   return {
     version: 1,
     updatedAt: date,
     events: store.events ?? {},
-    today: { date, entries: [...prev, sample] },
+    today,
+    // 交付记录随库透传：不得在写入链路上丢失（否则 mark-delivered 的记录会被覆盖）
+    ...(store.deliveries ? { deliveries: store.deliveries } : {}),
   };
+}
+
+/**
+ * 记录一次「人工确认交付」——notify workflow 微信推送成功后调用（mark-delivered）。
+ *
+ * 同日重复推送 → 覆盖 pushedAt（以最后一次成功推送为准）；跨日 → 追加。
+ * 返回新 store，不改入参。deliveries 是 beginDay 的结算闸门，见 EventMemoryStore.deliveries。
+ */
+export function appendDelivery(
+  store: EventMemoryStore,
+  rec: DeliveryRecord,
+): EventMemoryStore {
+  const list = store.deliveries ?? [];
+  const exists = list.some((d) => d && d.date === rec.date);
+  const deliveries = exists
+    ? list.map((d) => (d && d.date === rec.date ? rec : d))
+    : [...list, rec];
+  return { ...store, deliveries };
 }
 
 /** 简易字符串 hash（事件 id 兜底，无锚点时使用）。 */
@@ -1313,9 +1415,9 @@ export function pruneMemory(
   if (list.length > maxEvents) {
     const trimmed: Record<string, EventRecord> = {};
     for (const [id, rec] of list.slice(list.length - maxEvents)) trimmed[id] = rec;
-    return { version: 1, updatedAt: today, events: trimmed, ...(store.today ? { today: store.today } : {}) };
+    return { version: 1, updatedAt: today, events: trimmed, ...(store.today ? { today: store.today } : {}), ...(store.deliveries ? { deliveries: store.deliveries } : {}) };
   }
-  return { version: 1, updatedAt: today, events, ...(store.today ? { today: store.today } : {}) };
+  return { version: 1, updatedAt: today, events, ...(store.today ? { today: store.today } : {}), ...(store.deliveries ? { deliveries: store.deliveries } : {}) };
 }
 
 /** 空记忆库。 */

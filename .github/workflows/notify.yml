@@ -1,0 +1,91 @@
+name: WeChat Notify (Manual)
+
+# 2026-09-03：微信推送从 daily.yml 拆出，改为**人工触发**。
+#
+# 流程：
+#   1. daily.yml 每早（schedule 6:00-8:00 窗口）自动 build + 发布 gh-pages；
+#   2. 用户打开报告 URL 人工核对内容无误；
+#   3. 手动 Run this workflow → 推送微信模板消息；
+#   4. 推送真正送达 → 写当日「交付信号」（event-memory.json deliveries 并提交 main），
+#      次日内容记忆 beginDay 据此把今天播报结算进长期记忆（9:00 启发式已退役）。
+#      ⚠️ 生效判据 = 触达即生效：微信模板消息渠道无「客户已读」回执，已读不可观测，
+#      经用户 2026-09-03 拍板以「推送全量送达」为正式生效判据（未送达/无目标不算交付）。
+#      mark-delivered 还会反查 gh-pages 当天 commit 记录被推送版本（reportRunId/reportSha），
+#      次日结算前指纹对账：推送版本 ≠ 落盘版本 → 不结算（宁漏勿误）。
+#
+# 不再有任何 schedule 自动推送。Server酱渠道已于同日整体废弃删除。
+# 失败语义：微信未送达（失败/无目标）→ 步骤红 → 不写交付信号（不算交付），
+# 用户处理后重试即可；重复触发会重复推送（微信侧无去重），请确认后再点。
+
+on:
+  # 无输入参数：推送目标 = REPORT_TZ 时区的「今天」报告
+  workflow_dispatch: {}
+
+permissions:
+  contents: write # mark-delivered 需把 event-memory.json 提交回 main
+
+jobs:
+  notify:
+    name: Push WeChat & mark delivered
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      # 保险确认：当天 store.json 已被 build run 归档到 main（用户核对 gh-pages 时
+      # 必然已归档，此处仅防「当天 build 失败就手动推」的误操作）。
+      # 注意：TZ 必须双引号展开（单引号 bug 教训见 daily.yml published-check）。
+      - name: Verify today's store.json archived
+        env:
+          REPORT_TZ: ${{ vars.REPORT_TZ }}
+        run: |
+          TODAY=$(TZ="${REPORT_TZ:-Asia/Shanghai}" date +%Y-%m-%d)
+          if [ ! -f "history/${TODAY}/store.json" ]; then
+            echo "::error::history/${TODAY}/store.json 不存在 —— 当天 build 尚未归档；如确需推送请先跑 daily.yml（publish=true）"
+            exit 1
+          fi
+          echo "store.json 已就绪: history/${TODAY}/store.json"
+
+      # 微信推送：真正送达（目标 ≥1 且全成功）→ 脚本 exit 0；失败/无目标 → exit 1
+      - name: Push WeChat notification
+        id: push-wechat
+        env:
+          WX_APP_ID: ${{ secrets.WX_APP_ID }}
+          WX_APP_SECRET: ${{ secrets.WX_APP_SECRET }}
+          WX_USER_ID: ${{ secrets.WX_USER_ID }}
+          WX_TEMPLATE_ID: 'QTCQrpJe_udqVgJCyWjbkYTbixoU6N392Geo6yC5Y6E'
+          REPORT_BASE_URL: ${{ vars.REPORT_BASE_URL }}
+          REPORT_TZ: ${{ vars.REPORT_TZ }}
+        run: npm run notify
+
+      # 推送成功 → 记录当日交付信号并提交 main（内容记忆结算闸门）
+      # mark-delivered 会用 GH_TOKEN 反查 gh-pages 当天 commit，把被推送版本
+      # 的发布 run/commit（reportRunId/reportSha）一并写入 deliveries，供次日
+      # 结算前指纹对账（推送版本 ≠ 落盘版本 → 不结算）。
+      - name: Mark today as delivered (memory settlement gate)
+        if: steps.push-wechat.outcome == 'success'
+        env:
+          REPORT_TZ: ${{ vars.REPORT_TZ }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          npm run mark-delivered
+          TODAY=$(TZ="${REPORT_TZ:-Asia/Shanghai}" date +%Y-%m-%d)
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/event-memory.json
+          if git diff --cached --quiet; then
+            echo "event-memory.json 无变化（同日已记录过交付），跳过提交"
+          else
+            git commit -m "chore: mark delivered ${TODAY}"
+            git push
+          fi

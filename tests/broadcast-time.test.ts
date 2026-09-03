@@ -214,9 +214,12 @@ test("isTestBroadcastAt：9:00 为界（>=9 测试）；无时间戳保守按正
   assert.equal(isTestBroadcastAt("not-a-date", 9, TZ), false);
 });
 
-test("beginDay 结算：9:00 后测试播报不进入长期记忆（不阻断后续真实发布）", () => {
-  // 复刻 2026-09-03 实锤：昨夜 23:39 测试重跑播报若被结算成事件，
-  // 今早同源新闻会被批量 duplicate/cooldown 压减（必读/商机各剩 2 条）。
+test("beginDay 结算：无交付信号 → 昨天播报一律不结算（9:00 启发式已退役）", () => {
+  // 2026-09-03 语义更新：微信推送改手动后，「是否真交付」以 deliveries 为准，
+  // 时刻（9 点前后）不再判定正式性 —— 9 点前的 build 重试与 9 点后的人工补发
+  // 都可能是正式版本。无交付记录 = 昨天从未被人工确认推送 → 一律不结算
+  // （宁漏勿误：次日同源新闻允许重播，也不让没发出去的内容冷却掉真实发布）。
+  // 本用例反向覆盖旧启发式的典型误判：9:00 前播报（旧逻辑必结算）若无交付仍不结算。
   const store: EventMemoryStore = {
     version: 1,
     updatedAt: "2026-09-02",
@@ -224,17 +227,18 @@ test("beginDay 结算：9:00 后测试播报不进入长期记忆（不阻断后
     today: {
       date: "2026-09-02",
       entries: [
-        sample("2026-09-02T23:39:47+08:00", "测试播报A"), // 测试时段（>=9:00）
-        sample("2026-09-02T08:00:00+08:00", "正式播报B"), // 演示时段
-        sample(undefined, "未知时刻C"), // 时刻未知 → 保守按正式
+        sample("2026-09-02T23:39:47+08:00", "测试播报A"), // 9 点后（旧：测试）
+        sample("2026-09-02T08:00:00+08:00", "正式播报B"), // 9 点前（旧：正式）
+        sample(undefined, "未知时刻C"), // 时刻未知（旧：保守按正式）
       ],
     },
   };
   const out = beginDay(store, "2026-09-03");
-  const titles = Object.values(out.events ?? {}).flatMap((r) => r.samples.map((s) => s.title));
-  assert.ok(titles.includes("正式播报B"), "正式/演示时段样本应结算进长期记忆");
-  assert.ok(titles.includes("未知时刻C"), "未知时刻样本保守结算（正式对待）");
-  assert.ok(!titles.includes("测试播报A"), "测试时段样本不应结算（不进事件、不参与冷却）");
+  assert.equal(
+    Object.keys(out.events ?? {}).length,
+    0,
+    "无交付信号：A/B/C 一律不结算进长期记忆（不参与冷却）",
+  );
   // 新一天暂存区已清空待写入
   assert.ok(out.today, "today 应存在");
   assert.equal(out.today!.date, "2026-09-03");

@@ -22,6 +22,7 @@ import {
   pruneMemory,
   sanitizeEvents,
   type BroadcastSample,
+  type DeliveryRecord,
   type EventMemoryStore,
 } from "./event-memory";
 
@@ -61,8 +62,21 @@ export function loadEventMemory(opts: EventMemoryStoreOpts = {}): EventMemorySto
     const today =
       t && typeof t === "object" && typeof (t as any).date === "string" &&
       Array.isArray((t as any).entries)
-        ? { date: (t as any).date, entries: (t as any).entries as BroadcastSample[] }
+        ? {
+            date: (t as any).date,
+            entries: (t as any).entries as BroadcastSample[],
+            // runId（暂存区落盘 run，结算指纹校验用）：非 string（损坏/脏值）则丢弃
+            ...(typeof (t as any).runId === "string" ? { runId: (t as any).runId as string } : {}),
+          }
         : undefined;
+    // 交付记录随库读回（beginDay 结算闸门依赖它）：损坏（非数组 / 条目缺 date）逐条丢弃，
+    // 至少保留结构完整者；缺失 → undefined 按「无交付」处理（与旧文件兼容）。
+    const dl = (raw as EventMemoryStore).deliveries;
+    const deliveries = Array.isArray(dl)
+      ? (dl.filter(
+          (d: unknown) => !!d && typeof d === "object" && typeof (d as any).date === "string",
+        ) as DeliveryRecord[])
+      : undefined;
     return {
       version: 1,
       updatedAt: (raw as EventMemoryStore).updatedAt,
@@ -71,6 +85,7 @@ export function loadEventMemory(opts: EventMemoryStoreOpts = {}): EventMemorySto
       // 2026-09-02 复审修复：此前单条记录损坏会让整个记忆去重静默失效且永不恢复。
       events: sanitizeEvents(events as Record<string, EventRecord>),
       ...(today ? { today } : {}),
+      ...(deliveries ? { deliveries } : {}),
     };
   } catch {
     return emptyMemory();
