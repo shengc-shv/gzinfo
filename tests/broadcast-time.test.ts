@@ -22,7 +22,6 @@ import {
   filterByTimeRange,
   formatBroadcastAt,
   inTimeRange,
-  isTestBroadcastAt,
   parseBroadcastAt,
   partitionByHour,
   pruneByTimeRange,
@@ -202,16 +201,6 @@ test("inTimeRange / broadcastHour：非法或缺失时刻不参与判定", () =>
   assert.equal(inTimeRange(undefined, { from: "2026-09-02T09:00:00+08:00" }), false);
   assert.equal(broadcastHour("2026-09-02T23:39:47+08:00", TZ), 23);
   assert.equal(broadcastHour(undefined, TZ), null);
-});
-
-test("isTestBroadcastAt：9:00 为界（>=9 测试）；无时间戳保守按正式（false）", () => {
-  assert.equal(isTestBroadcastAt("2026-09-02T08:59:59+08:00", 9, TZ), false);
-  assert.equal(isTestBroadcastAt("2026-09-02T09:00:00+08:00", 9, TZ), true);
-  assert.equal(isTestBroadcastAt("2026-09-02T23:39:47+08:00", 9, TZ), true);
-  assert.equal(isTestBroadcastAt("2026-09-02T06:41:21+08:00", 9, TZ), false);
-  // 未知 / 非法 → 正式（保守参与去重，防重复播报）
-  assert.equal(isTestBroadcastAt(undefined, 9, TZ), false);
-  assert.equal(isTestBroadcastAt("not-a-date", 9, TZ), false);
 });
 
 test("beginDay 结算：无交付信号 → 昨天播报一律不结算（9:00 启发式已退役）", () => {

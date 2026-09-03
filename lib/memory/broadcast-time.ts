@@ -112,26 +112,6 @@ export function broadcastHour(
   return tzParts(new Date(t), tz).h;
 }
 
-/**
- * 是否为「测试/验证时段」播报（当天本地时刻 ≥ cutoffHour，默认 9:00）。
- *
- * 9:00 是客户演示与测试验证的分界（用户规则）：9 点前 = 面向客户的正式/
- * 演示播报；9 点后 = 测试/验证重跑产物。测试时段播报**不参与事件冷却与
- * 去重阻断**——否则昨晚的测试重跑会误伤今早的真实发布（曾实锤：测试播报
- * 结算成事件后，次日同源新闻被批量 cooldown/duplicate）。
- *
- * 时刻未知（无 broadcastAt / 解析失败）返回 false → 按正式记录保守对待，
- * 与 partitionByHour 中 unknown「保守保留」的清理语义一致（旧数据无法证伪）。
- */
-export function isTestBroadcastAt(
-  iso: string | undefined,
-  cutoffHour: number = 9,
-  tz: string = memoryTimeZone(),
-): boolean {
-  const h = broadcastHour(iso, tz);
-  return h !== null && h >= cutoffHour;
-}
-
 /** 时间区间（闭区间，ISO 8601 字符串；缺省端表示不限）。 */
 export interface TimeRange {
   from?: string;
