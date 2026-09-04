@@ -122,3 +122,50 @@ export async function pushWecomDaily(
     return { ok: false, targets: 0, sent: 0, failed: [], error: e instanceof Error ? e.message : String(e) };
   }
 }
+
+/**
+ * ── 群机器人 Webhook 通道（2026-09-04 新增，推荐）──
+ *
+ * 自建应用 message/send 受「企业可信 IP」白名单约束（errcode 60020），而 GitHub
+ * Actions runner 出口 IP 动态变化无法稳定加白名单。群机器人 Webhook 走独立鉴权
+ * key，完全不受企业可信 IP 限制，从 CI 直接 POST 即可。
+ *
+ * 代价：消息送达「群聊」而非 1:1 私聊（可建一个只有自己的群，近似私聊体验）。
+ * 获取方式：企业微信任意群 → 群设置 → 群机器人 → 添加 → 复制
+ *   https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=xxxxx
+ * 把整串 URL 填进 WECOM_WEBHOOK 即可，无需 corpId/agentId/secret/userIds。
+ */
+
+/** 向群机器人 webhook 发送一条 markdown（失败抛错）。 */
+export async function sendWecomWebhook(
+  webhookUrl: string,
+  content: string,
+  fetchImpl: typeof fetch = fetch,
+): Promise<void> {
+  const payload = { msgtype: "markdown", markdown: { content } };
+  const res = await fetchImpl(webhookUrl, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(payload),
+  });
+  const body = (await res.json()) as { errcode?: number; errmsg?: string };
+  if (body.errcode && body.errcode !== 0) {
+    throw new Error(`企业微信群机器人发送失败(errcode=${body.errcode}): ${body.errmsg ?? JSON.stringify(body)}`);
+  }
+}
+
+/** 群机器人主编排：组装 markdown → 发送。返回结构与 pushWecomDaily 同形。 */
+export async function pushWecomWebhook(
+  webhookUrl: string,
+  markdown: string,
+  url: string,
+  fetchImpl?: typeof fetch,
+): Promise<WecomNotifyResult> {
+  try {
+    await sendWecomWebhook(webhookUrl, markdown, fetchImpl);
+    return { ok: true, targets: 1, sent: 1, failed: [] };
+  } catch (e) {
+    const reason = e instanceof Error ? e.message : String(e);
+    return { ok: false, targets: 1, sent: 0, failed: [{ userid: "(webhook)", reason }] };
+  }
+}

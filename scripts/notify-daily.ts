@@ -23,7 +23,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { pushDailyReport, buildTemplatePayload } from "../lib/notify/wechat.js";
-import { pushWecomDaily, buildWecomMarkdown } from "../lib/notify/wecom.js";
+import { pushWecomDaily, buildWecomMarkdown, pushWecomWebhook } from "../lib/notify/wecom.js";
 
 function log(msg: string) {
   console.log(`[notify] ${msg}`);
@@ -109,6 +109,27 @@ async function pushWecom(cfg: {
   return false;
 }
 
+async function pushWecomViaWebhook(cfg: {
+  webhookUrl: string;
+  heroLine: string;
+  dateStr: string;
+  reportUrl: string;
+}): Promise<boolean> {
+  const markdown = buildWecomMarkdown(cfg.heroLine, cfg.dateStr, cfg.reportUrl);
+  const result = await pushWecomWebhook(cfg.webhookUrl, markdown, cfg.reportUrl);
+  if (result.error) {
+    log(`❌ 企业微信(群机器人)推送失败: ${result.error}`);
+    return false;
+  }
+  if (result.ok) {
+    log(`✅ 企业微信(群机器人)推送完成：成功 ${result.sent}`);
+    return true;
+  }
+  log(`❌ 企业微信(群机器人)部分失败：成功 ${result.sent}/${result.targets}`);
+  for (const f of result.failed) log(`   失败 ${f.userid}: ${f.reason}`);
+  return false;
+}
+
 async function main(): Promise<void> {
   const tz = process.env.REPORT_TZ || "Asia/Shanghai";
   const dateStr = new Intl.DateTimeFormat("en-CA", {
@@ -126,15 +147,24 @@ async function main(): Promise<void> {
   const base = (process.env.REPORT_BASE_URL || "https://shengc-shv.github.io/gzinfo").replace(/\/+$/, "");
   const reportUrl = `${base}/${dateStr}/${dateStr}.html`;
 
-  // 企业微信自建应用 → 个人微信（新增渠道，NOTIFY_CHANNEL=wecom）
+  // 企业微信（群机器人 Webhook 优先；否则自建应用 message/send）
   const channel = (process.env.NOTIFY_CHANNEL || "wechat").toLowerCase();
   if (channel === "wecom") {
+    // 群机器人 Webhook：自带 key 鉴权，不受企业可信 IP 限制，从 CI 直发（推荐，绕过 errcode 60020）
+    const webhookUrl = process.env.WECOM_WEBHOOK ?? "";
+    if (webhookUrl) {
+      const ok = await pushWecomViaWebhook({ webhookUrl, heroLine, dateStr, reportUrl });
+      if (!ok) process.exitCode = 1;
+      log(`报告链接: ${reportUrl}`);
+      return;
+    }
+    // 自建应用 message/send：需在后台把调用方公网 IP 加进「企业可信 IP」
     const corpId = process.env.WECOM_CORP_ID ?? "";
     const agentId = process.env.WECOM_AGENT_ID ?? "";
     const corpSecret = process.env.WECOM_CORP_SECRET ?? "";
     const userIds = (process.env.WECOM_USER_IDS ?? "").split(",").map((s) => s.trim()).filter(Boolean);
     if (!corpId || !agentId || !corpSecret || userIds.length === 0) {
-      log("缺少 WECOM_CORP_ID / WECOM_AGENT_ID / WECOM_CORP_SECRET / WECOM_USER_IDS，跳过企业微信推送 → 未交付");
+      log("缺少 WECOM_WEBHOOK 或 WECOM_CORP_ID / WECOM_AGENT_ID / WECOM_CORP_SECRET / WECOM_USER_IDS，跳过企业微信推送 → 未交付");
       process.exitCode = 1;
       return;
     }

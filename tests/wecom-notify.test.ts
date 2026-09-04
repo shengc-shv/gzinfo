@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { buildWecomMarkdown, pushWecomDaily } from "../lib/notify/wecom";
+import { buildWecomMarkdown, pushWecomDaily, pushWecomWebhook, sendWecomWebhook } from "../lib/notify/wecom";
 
 /** 简易 fetch mock：handler 返回 JSON 对象，模拟企业微信 API 响应。 */
 function mockFetch(handler: (url: string, init?: unknown) => Record<string, unknown>) {
@@ -71,4 +71,38 @@ test("pushWecomDaily：发送失败 → ok=false 且 failed 记录原因", async
   assert.equal(r.sent, 0);
   assert.equal(r.failed.length, 1);
   assert.match(r.failed[0].reason, /81013/);
+});
+
+test("pushWecomWebhook：成功路径（POST webhook，errcode=0）", async () => {
+  const calls: string[] = [];
+  const fetchImpl = mockFetch((url) => {
+    calls.push(url);
+    if (url.includes("/webhook/send")) return { errcode: 0, errmsg: "ok" };
+    return {};
+  });
+  const r = await pushWecomWebhook("https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=K", "md", "https://x", fetchImpl);
+  assert.equal(r.ok, true);
+  assert.equal(r.sent, 1);
+  assert.equal(r.failed.length, 0);
+  assert.equal(calls.length, 1, "webhook 只发一次 POST");
+});
+
+test("pushWecomWebhook：发送失败（errcode≠0）→ ok=false 且 failed 记录原因", async () => {
+  const fetchImpl = mockFetch((url) => {
+    if (url.includes("/webhook/send")) return { errcode: 93000, errmsg: "invalid webhook url" };
+    return {};
+  });
+  const r = await pushWecomWebhook("https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=BAD", "md", "https://x", fetchImpl);
+  assert.equal(r.ok, false);
+  assert.equal(r.sent, 0);
+  assert.equal(r.failed.length, 1);
+  assert.match(r.failed[0].reason, /93000/);
+});
+
+test("sendWecomWebhook：errcode≠0 直接抛错（供上层 try/catch 收集）", async () => {
+  const fetchImpl = mockFetch((url) => {
+    if (url.includes("/webhook/send")) return { errcode: 93000, errmsg: "invalid webhook url" };
+    return {};
+  });
+  await assert.rejects(() => sendWecomWebhook("https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=K", "md", fetchImpl), /93000/);
 });

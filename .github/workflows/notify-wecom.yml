@@ -4,8 +4,9 @@ name: WeCom Notify (Manual)
 #
 # 流程与 notify.yml 完全一致（发布后人工核对 → 手动 Run → 推送 → 写交付信号），
 # 区别仅在渠道与 secrets：
-#   - 渠道：企业微信自建应用 message/send（markdown），开启「微信插件」后直达个人微信聊天列表
-#   - secrets：WECOM_CORP_ID / WECOM_AGENT_ID / WECOM_CORP_SECRET / WECOM_USER_IDS
+#   - 渠道：企业微信（lib/notify/wecom.ts）
+#       * 优先用群机器人 Webhook（WECOM_WEBHOOK）：无需企业可信 IP，从 CI 直发，推荐
+#       * 否则用自建应用 message/send（需 WECOM_CORP_ID/AGENT/SECRET/USER_IDS + 企业可信 IP 白名单）
 #   - 通过 NOTIFY_CHANNEL=wecom 选择 lib/notify/wecom.ts 发送器
 #
 # 仍为纯手动触发，无 schedule 自动推送（与现有交付核验闸门一致）。
