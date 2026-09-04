@@ -98,6 +98,28 @@ export function buildWecomMarkdown(heroLine: string, dateStr: string, url: strin
 }
 
 /**
+ * 组装**纯文本**正文（2026-09-04 中午新增，群机器人默认格式）。
+ *
+ * 为什么需要纯文本版：微信侧不支持渲染 markdown 消息——企业微信开发者中心官方答复
+ * 「微信侧不支持展示 markdown 消息」，个人微信收到时会显示「暂不支持此消息类型，
+ * 请在企业微信中查看」。而 text 消息在个人微信可正常阅读（同一场景的 zabbix 告警实践
+ * 已证实：markdown 改成 text 后无需打开企业微信即可阅读）。
+ *
+ * 因此面向「个人微信可见」的群机器人通道默认用 text：
+ *   - 不用 # / ** / []() 等 markdown 语法（微信端会原样显示成噪音字符）
+ *   - 不用 <font color> 等企业微信专属 inline html（微信端会显示成字面标签）
+ *   - URL 单独一行**明文**给出 → 微信/企业微信都会自动识别为可点链接
+ *   - emoji 与全角标点在两端都能正常渲染，用于保留可读性
+ */
+export function buildWecomText(heroLine: string, dateStr: string, url: string): string {
+  const weekday = WEEKDAY_CN[new Date(`${dateStr}T12:00:00+08:00`).getDay()] ?? "";
+  const title = "📢 广州分行今日日报已生成";
+  const dateLine = `📅 ${dateStr}（${weekday}）`;
+  const hero = heroLine ? `【今日定调】${heroLine}` : "【今日定调】今日暂无定调，请点击下方链接查看完整日报";
+  return [title, dateLine, "", hero, "", "👉 点击查看完整日报：", url].join("\n");
+}
+
+/**
  * 主编排：token → 组装 markdown → 发送（单条失败收集进 failed）。
  * 任何整体阶段失败返回 ok=false + error；逐条失败进 failed。
  */
@@ -136,13 +158,24 @@ export async function pushWecomDaily(
  * 把整串 URL 填进 WECOM_WEBHOOK 即可，无需 corpId/agentId/secret/userIds。
  */
 
-/** 向群机器人 webhook 发送一条 markdown（失败抛错）。 */
+/**
+ * 群机器人支持的消息类型。
+ * - text（默认）：**个人微信可直接阅读**。markdown 消息在微信端显示「暂不支持此消息
+ *   类型，请在企业微信中查看」（官方答复：微信侧不支持展示 markdown 消息）。
+ * - markdown：排版更好（标题/加粗/引用/字体色），但**只能在企业微信 App 内查看**。
+ */
+export type WecomWebhookMsgType = "text" | "markdown";
+
+/** 向群机器人 webhook 发送一条消息（失败抛错）。默认 text，保证个人微信可直接阅读。 */
 export async function sendWecomWebhook(
   webhookUrl: string,
   content: string,
   fetchImpl: typeof fetch = fetch,
+  msgtype: WecomWebhookMsgType = "text",
 ): Promise<void> {
-  const payload = { msgtype: "markdown", markdown: { content } };
+  // 群机器人两种格式的字段层级不同：text → { text: { content } }；markdown → { markdown: { content } }
+  const contentBody = msgtype === "markdown" ? { markdown: { content } } : { text: { content } };
+  const payload = { msgtype, ...contentBody };
   const res = await fetchImpl(webhookUrl, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
@@ -154,15 +187,16 @@ export async function sendWecomWebhook(
   }
 }
 
-/** 群机器人主编排：组装 markdown → 发送。返回结构与 pushWecomDaily 同形。 */
+/** 群机器人主编排：组装正文 → 发送。返回结构与 pushWecomDaily 同形。 */
 export async function pushWecomWebhook(
   webhookUrl: string,
-  markdown: string,
+  content: string,
   url: string,
   fetchImpl?: typeof fetch,
+  msgtype: WecomWebhookMsgType = "text",
 ): Promise<WecomNotifyResult> {
   try {
-    await sendWecomWebhook(webhookUrl, markdown, fetchImpl);
+    await sendWecomWebhook(webhookUrl, content, fetchImpl, msgtype);
     return { ok: true, targets: 1, sent: 1, failed: [] };
   } catch (e) {
     const reason = e instanceof Error ? e.message : String(e);

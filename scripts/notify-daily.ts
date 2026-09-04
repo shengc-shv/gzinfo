@@ -23,7 +23,12 @@
 import fs from "node:fs";
 import path from "node:path";
 import { pushDailyReport, buildTemplatePayload } from "../lib/notify/wechat.js";
-import { pushWecomDaily, buildWecomMarkdown, pushWecomWebhook } from "../lib/notify/wecom.js";
+import {
+  pushWecomDaily,
+  buildWecomMarkdown,
+  buildWecomText,
+  pushWecomWebhook,
+} from "../lib/notify/wecom.js";
 
 function log(msg: string) {
   console.log(`[notify] ${msg}`);
@@ -115,8 +120,16 @@ async function pushWecomViaWebhook(cfg: {
   dateStr: string;
   reportUrl: string;
 }): Promise<boolean> {
-  const markdown = buildWecomMarkdown(cfg.heroLine, cfg.dateStr, cfg.reportUrl);
-  const result = await pushWecomWebhook(cfg.webhookUrl, markdown, cfg.reportUrl);
+  // 默认 text：markdown 在个人微信显示「暂不支持此消息类型，请在企业微信中查看」
+  // （官方答复微信侧不支持渲染 markdown），text 才能在个人微信直接阅读。
+  // 想要企业微信内的富文本排版时，设 WECOM_WEBHOOK_MSGTYPE=markdown。
+  const msgtype = (process.env.WECOM_WEBHOOK_MSGTYPE || "text").toLowerCase() === "markdown" ? "markdown" : "text";
+  const content =
+    msgtype === "markdown"
+      ? buildWecomMarkdown(cfg.heroLine, cfg.dateStr, cfg.reportUrl)
+      : buildWecomText(cfg.heroLine, cfg.dateStr, cfg.reportUrl);
+  const result = await pushWecomWebhook(cfg.webhookUrl, content, cfg.reportUrl, undefined, msgtype);
+  log(`消息格式: ${msgtype}`);
   if (result.error) {
     log(`❌ 企业微信(群机器人)推送失败: ${result.error}`);
     return false;
