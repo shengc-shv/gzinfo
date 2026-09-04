@@ -66,22 +66,22 @@ test("dedupeExecAgainstSections: 必读头条命中的事件，资讯板块不�
 });
 
 test("computeMarketStatus: 周日报告标注上一交易日休市", () => {
-  const r = computeMarketStatus("2026-08-30", "2026-08-28"); // 周日
+  const r = computeMarketStatus("2026-08-30", "2026-08-28")!; // 周日
   assert.equal(r.isMarketClosed, true);
   assert.equal(r.dataDate, "2026-08-28");
-  assert.match(r.note, /上一交易日/);
-  assert.match(r.note, /8月28日 周五/);
+  assert.match(r.note!, /上一交易日/);
+  assert.match(r.note!, /8月28日 周五/);
 });
 
 test("computeMarketStatus: 周一报告同样标注休市（早间市场未开）", () => {
   // 2026-08-31 是周一
-  const r = computeMarketStatus("2026-08-31", "2026-08-28");
+  const r = computeMarketStatus("2026-08-31", "2026-08-28")!;
   assert.equal(r.isMarketClosed, true);
-  assert.match(r.note, /上一交易日/);
+  assert.match(r.note!, /上一交易日/);
 });
 
 test("computeMarketStatus: 交易日(周三)无休市提示", () => {
-  const r = computeMarketStatus("2026-08-26", "2026-08-25"); // 周三
+  const r = computeMarketStatus("2026-08-26", "2026-08-25")!; // 周三
   assert.equal(r.isMarketClosed, false);
   assert.equal(r.note, "");
 });

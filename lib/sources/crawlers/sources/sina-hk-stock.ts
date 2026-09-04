@@ -146,8 +146,8 @@ export class SinaHkStockCrawler extends BaseCrawler {
     // 排序：大盘收评/总结类优先（最贴合「大盘解读」主源），其次按日期倒序；限 maxItems
     const prio = (t: string): number => (RECAP_PRIORITY_RE.test(t) ? 1 : 0);
     this.results.sort((a, b) => {
-      const pa = prio(a.title);
-      const pb = prio(b.title);
+      const pa = prio(a.title ?? "");
+      const pb = prio(b.title ?? "");
       if (pa !== pb) return pb - pa;
       return (b.publishedAt ?? "").localeCompare(a.publishedAt ?? "");
     });

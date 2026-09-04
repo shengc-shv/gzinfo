@@ -4,7 +4,7 @@ import {
   buildExecutiveFromScores,
   applyRelevanceGuardrail,
   type ExecutiveSummary,
-} from "../lib/ai/executive-summary.ts";
+} from "../lib/ai/executive-summary";
 
 // 真实形态文章（字段对齐 ArticleInput：source 而非 sourceId）
 const A_40Y = {

@@ -156,7 +156,7 @@ export function findHkRecapReport(items: StockItem[]): { title: string; url: str
     .filter((it) => it.url && HK_RECAP_RE.test(it.title))
     .sort((a, b) => (b.publishedAt ?? "").localeCompare(a.publishedAt ?? ""));
   const best = cands[0];
-  return best ? { title: best.title, url: best.url } : undefined;
+  return best ? { title: best.title, url: best.url! } : undefined;
 }
 
 /**

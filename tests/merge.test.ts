@@ -192,12 +192,12 @@ test("toMergeArticle: 裸北京时间（无时区）按 +08:00 解释（2026-08-
     { url: "u-tz2", title: "T", sourceId: "stcn", publishedAt: "2026-08-29T12:37:00.000Z" },
     "gz",
   );
-  assert.equal(b.publishedAt.toISOString(), "2026-08-29T12:37:00.000Z");
+  assert.equal(b.publishedAt!.toISOString(), "2026-08-29T12:37:00.000Z");
   // 纯日期（无时间）保持 UTC 当天 00:00，上海时区同日（无偏移）
   const c = toMergeArticle(
     { url: "u-tz3", title: "T", sourceId: "stcn", publishedAt: "2026-08-29" },
     "gz",
   );
-  assert.equal(c.publishedAt.toISOString(), "2026-08-29T00:00:00.000Z");
+  assert.equal(c.publishedAt!.toISOString(), "2026-08-29T00:00:00.000Z");
 });
 

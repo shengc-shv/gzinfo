@@ -91,7 +91,6 @@ test("反例(用户红线)：机器人出口动态 → 不进必读/商机", () 
     sourceId: "sina-finance",
   });
   assert.ok(r.tier === "drop" || r.tier === "context");
-  assert.ok(r.tier !== "must_read" && r.tier !== "insight");
 });
 
 test("交行广东分行罚单：广州本地监管事件 → 风险必读（硬规则B）", () => {
