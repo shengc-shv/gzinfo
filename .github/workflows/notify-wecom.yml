@@ -59,6 +59,7 @@ jobs:
           WECOM_AGENT_ID: ${{ secrets.WECOM_AGENT_ID }}
           WECOM_CORP_SECRET: ${{ secrets.WECOM_CORP_SECRET }}
           WECOM_USER_IDS: ${{ secrets.WECOM_USER_IDS }}
+          WECOM_WEBHOOK: ${{ secrets.WECOM_WEBHOOK }}
           REPORT_BASE_URL: ${{ vars.REPORT_BASE_URL }}
           REPORT_TZ: ${{ vars.REPORT_TZ }}
         run: npm run notify
