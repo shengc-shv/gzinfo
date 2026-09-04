@@ -1,0 +1,754 @@
+{
+  "date": "2026-09-05",
+  "hero_line": "APEC中小企业部长会议在穗召开，跨境政商资源汇聚，分行可借势抢抓中小外贸客群。",
+  "must_read": [
+    {
+      "title": "央行5000亿买断式逆回购操作",
+      "why": "月末流动性维持充裕，利率信号宽松。分行财富端需关注短端产品定价与存款营销节奏，应对资金面边际变化。",
+      "url": "https://www.stcn.com/article/detail/4173275.html"
+    },
+    {
+      "title": "美联储9月议息分歧加大降息预期升温",
+      "why": "美元利率走向影响跨境配置与结售汇。分行外汇与财富条线需提前对高净值客户做美元资产与汇率走势沟通。",
+      "url": "https://finance.eastmoney.com/a/202609043864710182.html"
+    },
+    {
+      "title": "私募募集新规出台违规成本大幅提升",
+      "why": "代销端合规要求全面收紧。分行私行与财富条线应排查合作私募底稿与适当性管理，避免代销通道踩雷。",
+      "url": "https://finance.eastmoney.com/a/202609043865492096.html"
+    },
+    {
+      "title": "国有大行集中清淤不良核销规模创新高",
+      "why": "大行核销提速反映资产质量压力。分行风险条线需对照本行不良结构，提前评估处置节奏与拨备覆盖。",
+      "url": "https://finance.sina.com.cn/jinrong/yh/2026-09-04/doc-iniqsens0903536.shtml"
+    },
+    {
+      "title": "七部门联合部署绿色算力",
+      "why": "绿色算力获国家层面政策定调，数据中心产业链迎来贴标与项目储备窗口。分行科创金融团队可跟踪本地算力客群评级与授信机会。",
+      "url": "https://www.stcn.com/stcn.com/article/detail/4173364.html"
+    }
+  ],
+  "insights": [
+    {
+      "topic": "APEC中小企业部长会在穗召开",
+      "tags": [
+        "客群",
+        "代发"
+      ],
+      "impact": "跨境政商资源集中汇聚广州，为分行批量获取中小外贸客户提供窗口。零售可联动代发工资与财富产品，对公可落地跨境结算与融资方案。",
+      "action": "本周内由公司部牵头梳理与会企业名单，零售部配合设计代发与财富套餐，跨境部对接结算与融资方案，会后一周内完成首轮走访。",
+      "sources": [
+        {
+          "title": "第32次亚太经合组织中小企业部长会议在广州举行",
+          "url": "https://www.stcn.com/article/detail/4172850.html"
+        },
+        {
+          "title": "广州海关保障中国国际中小企业博览会开展",
+          "url": "https://news.dayoo.com/guangzhou/202609/04/139995_54999938.htm"
+        }
+      ]
+    },
+    {
+      "topic": "康方生物亮相APEC广州原研药崛起",
+      "tags": [
+        "信贷",
+        "客群"
+      ],
+      "impact": "广州生物医药产业能见度提升，分行可借此切入研发型轻资产客群，配套研发贷与股权融资撮合。",
+      "action": "科创金融团队本周联动投行部对接康方及产业链上下游，梳理本地生物医药白名单客群，设计科创贷与撮合服务方案。",
+      "sources": [
+        {
+          "title": "2026APEC中小企业部长会之广州企业观察⑪｜康方生物：广州原研药硬核崛起",
+          "url": "https://news.dayoo.com/guangzhou/202609/04/139995_54999745.htm"
+        }
+      ]
+    },
+    {
+      "topic": "广州828新政后首宗宅地溢价成交",
+      "tags": [
+        "住房金融",
+        "客群"
+      ],
+      "impact": "拿地房企融资需求节点临近，分行可配套开发贷与按揭资源，同时关注后续地块出让节奏带来的按揭储备。",
+      "action": "住房金融部本周对接拿地房企融资需求，零售端联动按揭预审与客户储备，财富部关注开发商高净值客户代发机会。",
+      "sources": [
+        {
+          "title": "\"828\"新政后广州首宗竞拍成交地块 溢价率15.88%",
+          "url": "https://news.dayoo.com/guangzhou/202609/04/139995_54999810.htm"
+        },
+        {
+          "title": "一线城市优质宅地接连出让 房企竞拍趋于理性",
+          "url": "https://www.stcn.com/article/detail/4173232.html"
+        }
+      ]
+    },
+    {
+      "topic": "私行下沉与升维两端发力",
+      "tags": [
+        "私行",
+        "财富"
+      ],
+      "impact": "私行客层打法分化，本行需重新审视存量客户分层运营与高端产品矩阵补位，避免高端客户被同业截流。",
+      "action": "私行中心本周内完成存量客户分层诊断，针对高端升维客群补充家族信托与跨境配置产品，落地针对性维护动作。",
+      "sources": [
+        {
+          "title": "私行\"下沉\"与\"升维\"",
+          "url": "https://finance.sina.com.cn/money/bank/bank_hydt/2026-09-04/doc-iniqriia0805847.shtml"
+        }
+      ]
+    },
+    {
+      "topic": "广汽自主品牌出口同比增136%",
+      "tags": [
+        "代发",
+        "信贷"
+      ],
+      "impact": "汽车产业链上下游需求旺盛，跨境结算、供应链金融与员工代发均有批量机会。",
+      "action": "对公部联动零售代发团队本周对接广汽供应链上下游企业，配套跨境结算与员工代发方案。",
+      "sources": [
+        {
+          "title": "广汽集团1—8月自主品牌汽车出口量增长136%",
+          "url": "https://www.stcn.com/article/detail/4173211.html"
+        }
+      ]
+    }
+  ],
+  "sections": {
+    "gz_local": [
+      {
+        "url": "https://www.stcn.com/article/detail/4172850.html",
+        "title_cn": "第32次亚太经合组织中小企业部长会议在广州举行",
+        "title_orig": "第32次亚太经合组织中小企业部长会议在广州举行",
+        "source": "证券时报",
+        "source_type": "media",
+        "date": "09/04",
+        "summary": "APEC中小企业部长会议在穗举行，跨境政商资源汇聚。所以呢：分行可借此窗口对接与会中小外贸客群，推动跨境结算与融资方案落地。",
+        "importance": 2,
+        "rank": 1,
+        "tags": [
+          "市场",
+          "客群"
+        ],
+        "locale": "gz",
+        "locale_evidence": "第32次亚太经合组织中小企业部长会议在广州举行"
+      },
+      {
+        "url": "https://news.dayoo.com/guangzhou/202609/04/139995_54999938.htm",
+        "title_cn": "广州海关保障中国国际中小企业博览会开展",
+        "title_orig": "广州海关保障中国国际中小企业博览会开展",
+        "source": "广州日报·大洋网",
+        "source_type": "media",
+        "date": "09/04",
+        "summary": "广州海关保障中博会顺利开展，进出口通关效率有保障。所以呢：贸易客群经理可结合通关便利做关税保函、进出口融资配套营销。",
+        "importance": 2,
+        "rank": 2,
+        "tags": [
+          "政银合作",
+          "粤",
+          "客群"
+        ],
+        "locale": "gz",
+        "locale_evidence": "广州海关保障中国国际中小企业博览会开展"
+      },
+      {
+        "url": "https://news.dayoo.com/guangzhou/202609/04/139995_54999745.htm",
+        "title_cn": "2026APEC中小企业部长会之广州企业观察⑪｜康方生物：广州原研药硬核崛起",
+        "title_orig": "2026APEC中小企业部长会之广州企业观察⑪｜康方生物：广州原研药硬核崛起",
+        "source": "广州日报·大洋网",
+        "source_type": "media",
+        "date": "09/04",
+        "summary": "康方生物作为广州原研药代表亮相APEC观察。所以呢：分行可梳理生物医药客群白名单，对接研发贷与股权融资撮合机会。",
+        "importance": 2,
+        "rank": 3,
+        "tags": [
+          "客群",
+          "粤"
+        ],
+        "locale": "gz",
+        "locale_evidence": "广州原研药硬核崛起"
+      }
+    ],
+    "biz_insight": [
+      {
+        "url": "https://finance.sina.com.cn/jinrong/yh/2026-09-04/doc-iniqsens0903536.shtml",
+        "title_cn": "银行集中\"清淤\"：工行核销超800亿元，建行上半年不良核销逼近去年全年",
+        "title_orig": "银行集中\"清淤\"：工行核销超800亿元，建行上半年不良核销逼近去年全年",
+        "source": "新浪财经·银行频道",
+        "source_type": "media",
+        "date": "09/04",
+        "summary": "国有大行核销规模显著扩大，工行超800亿、建行上半年逼近去年全年。所以呢：分行风险条线可对照本行不良结构，评估潜在核销压力与处置节奏。",
+        "importance": 3,
+        "rank": 1,
+        "tags": [
+          "信贷",
+          "竞对动态"
+        ],
+        "locale": "national"
+      },
+      {
+        "url": "https://finance.sina.com.cn/money/bank/bank_hydt/2026-09-04/doc-iniqriia0805847.shtml",
+        "title_cn": "私行\"下沉\"与\"升维\"",
+        "title_orig": "私行\"下沉\"与\"升维\"",
+        "source": "新浪财经·银行频道",
+        "source_type": "media",
+        "date": "09/04",
+        "summary": "私行同时向下沉与高端升维两端发力，客层打法分化。所以呢：分行私行中心可思考存量客户分层运营与高端升维的产品矩阵补位。",
+        "importance": 2,
+        "rank": 2,
+        "tags": [
+          "私行",
+          "竞对动态"
+        ],
+        "locale": "national"
+      },
+      {
+        "url": "https://m.21jingji.com/article/20260904/herald/94dcf42c311c8a3e7d36cefef76423a7.html",
+        "title_cn": "新旧动能转换时：一家股份行的\"科技—产业—金融\"新三角实践",
+        "title_orig": "新旧动能转换时：一家股份行的\"科技—产业—金融\"新三角实践",
+        "source": "21世纪经济报道·金融",
+        "source_type": "media",
+        "date": "09/04",
+        "summary": "股份行探索科技-产业-金融闭环新三角打法。所以呢：分行科创金融团队可借鉴其场景串联逻辑，落地本地产业链客群。",
+        "importance": 2,
+        "rank": 3,
+        "tags": [
+          "竞对动态",
+          "科技金融"
+        ],
+        "locale": "national"
+      },
+      {
+        "url": "https://www.guancha.cn/GuanJinRong/2026_09_04_829957.shtml",
+        "title_cn": "银行竞推，\"Token贷\"的三重风险",
+        "title_orig": "银行竞推，\"Token贷\"的三重风险",
+        "source": "观察者网·金融",
+        "source_type": "media",
+        "date": "09/04",
+        "summary": "Token贷存在估值、合规与数据三重风险。所以呢：分行若考虑布局相关产品，须提前明确合规边界与押品估值机制。",
+        "importance": 2,
+        "rank": 4,
+        "tags": [
+          "信贷",
+          "监管合规",
+          "科技金融"
+        ],
+        "locale": "national"
+      },
+      {
+        "url": "https://news.dayoo.com/guangzhou/202609/04/139995_54999810.htm",
+        "title_cn": "\"828\"新政后广州首宗竞拍成交地块 溢价率15.88%",
+        "title_orig": "\"828\"新政后广州首宗竞拍成交地块 溢价率15.88%",
+        "source": "广州日报·大洋网",
+        "source_type": "media",
+        "date": "09/04",
+        "summary": "广州828新政后首宗宅地以15.88%溢价成交。所以呢：分行可关注拿地房企融资需求节点，配套开发贷与按揭资源。",
+        "importance": 2,
+        "rank": 5,
+        "tags": [
+          "住房金融",
+          "信贷"
+        ],
+        "locale": "national"
+      },
+      {
+        "url": "https://www.stcn.com/article/detail/4173370.html",
+        "title_cn": "守正笃行，养老为民——以正确政绩观做好养老金融大文章",
+        "title_orig": "守正笃行，养老为民——以正确政绩观做好养老金融大文章",
+        "source": "证券时报",
+        "source_type": "media",
+        "date": "09/04",
+        "summary": "媒体解读养老金融大文章的政策导向。所以呢：分行零售端可借势推动个人养老账户与适老财富产品组合营销。",
+        "importance": 1,
+        "rank": 6,
+        "tags": [
+          "养老",
+          "客群"
+        ],
+        "locale": "national"
+      },
+      {
+        "url": "https://www.stcn.com/article/detail/4171709.html",
+        "title_cn": "投融资两端同向发力 资本市场改革纵深推进",
+        "source": "证券时报",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "09/04",
+        "summary": "投融资改革持续推进，财富条线可关注公募基金费率与ETF生态变化对客户资产配置的影响。",
+        "importance": 2,
+        "rank": 7,
+        "tags": [],
+        "locale": "national"
+      }
+    ],
+    "policy_market": [
+      {
+        "url": "https://www.cnfin.com/hg-lb/detail/20260904/4465543_1.html",
+        "title_cn": "历时五年修订，金融监管总局公开征求意见",
+        "title_orig": "历时五年修订，金融监管总局公开征求意见",
+        "source": "新华财经",
+        "source_type": "official",
+        "date": "09/04",
+        "summary": "信息披露管理办法修订征求意见，五年一大改。所以呢：分行合规与对公条线应尽快对照新口径梳理披露模板，捕捉反馈窗口。",
+        "importance": 3,
+        "rank": 1,
+        "tags": [
+          "监管合规"
+        ],
+        "locale": "national"
+      },
+      {
+        "url": "https://www.stcn.com/article/detail/4173275.html",
+        "title_cn": "下周一，央行将开展5000亿元买断式逆回购操作",
+        "title_orig": "下周一，央行将开展5000亿元买断式逆回购操作",
+        "source": "证券时报",
+        "source_type": "official",
+        "date": "09/04",
+        "summary": "央行下周一开展5000亿元买断式逆回购。所以呢：月末流动性维持充裕，分行可提示同业资金面变化对客户理财与存款策略的影响。",
+        "importance": 2,
+        "rank": 2,
+        "tags": [
+          "市场",
+          "客群"
+        ],
+        "locale": "national"
+      },
+      {
+        "url": "https://www.cnfin.com/hg-lb/detail/20260904/4465549_1.html",
+        "title_cn": "央行公开市场操作节奏微调 3个月买断式逆回购转为等量续作",
+        "title_orig": "央行公开市场操作节奏微调 3个月买断式逆回购转为等量续作",
+        "source": "新华财经",
+        "source_type": "official",
+        "date": "09/04",
+        "summary": "3个月买断式逆回购转为等量续作，投放节奏微调。所以呢：分行可观察资金面边际变化，对客户短端负债与产品定价做相应沟通。",
+        "importance": 2,
+        "rank": 3,
+        "tags": [
+          "市场",
+          "客群"
+        ],
+        "locale": "national"
+      },
+      {
+        "url": "https://m.21jingji.com/article/20260904/herald/61f5c807f0b2fc74ed447e855769ec6e.html",
+        "title_cn": "银行股爆发！中行建行港股创新高",
+        "title_orig": "银行股爆发！中行建行港股创新高",
+        "source": "21世纪经济报道·金融",
+        "source_type": "media",
+        "date": "09/04",
+        "summary": "中行、建行H股创阶段新高，银行板块情绪走强。所以呢：分行高净值客户经理可结合板块行情，提示港股配置窗口与配置思路。",
+        "importance": 2,
+        "rank": 4,
+        "tags": [
+          "市场",
+          "竞对动态",
+          "客群"
+        ],
+        "locale": "national"
+      },
+      {
+        "url": "https://finance.eastmoney.com/a/202609043865492096.html",
+        "title_cn": "首个针对私募募集的行业规范出台让违规成本大幅提升",
+        "title_orig": "首个针对私募募集的行业规范出台让违规成本大幅提升",
+        "source": "东方财富",
+        "source_type": "media",
+        "date": "09/04",
+        "summary": "私募募集新规出台，违规成本显著提升。所以呢：分行私行代销端应排查合作私募合规底稿，强化客户适当性管理。",
+        "importance": 2,
+        "rank": 5,
+        "tags": [
+          "监管合规",
+          "财富"
+        ],
+        "locale": "national",
+        "locale_evidence": "首个针对私募募集的行业规范出台让违规成本大幅提升——全国性监管政策"
+      },
+      {
+        "url": "https://www.stcn.com/article/detail/4173364.html",
+        "title_cn": "绿色算力，再迎利好！七部门，最新部署",
+        "title_orig": "绿色算力，再迎利好！七部门，最新部署",
+        "source": "证券时报",
+        "source_type": "official",
+        "date": "09/04",
+        "summary": "七部门联合部署绿色算力发展方向。所以呢：分行可结合数据中心客群评级，跟踪绿色信贷贴标与项目储备机会。",
+        "importance": 2,
+        "rank": 7,
+        "tags": [
+          "科技金融"
+        ],
+        "locale": "national"
+      },
+      {
+        "url": "https://finance.cctv.com/2026/09/04/ARTIXloWBP22n8ocIwuPMNAA260904.shtml",
+        "title_cn": "楼市预售制30年之后",
+        "title_orig": "楼市预售制30年之后",
+        "source": "央视财经",
+        "source_type": "media",
+        "date": "09/04",
+        "summary": "媒体回顾楼市预售制运行30年历程。所以呢：分行可关注预售制改革讨论对按揭准入与开发商授信政策的潜在影响。",
+        "importance": 1,
+        "rank": 9,
+        "tags": [
+          "住房金融",
+          "市场",
+          "信贷",
+          "客群"
+        ],
+        "locale": "national"
+      },
+      {
+        "url": "https://news.southcn.com/node_812903b83a/f5ce420c3d.shtml",
+        "title_cn": "中国银行协助在港发行75亿元广东省政府债券 畅通湾区金融市场互联互通",
+        "title_orig": "中国银行协助在港发行75亿元广东省政府债券 畅通湾区金融市场互联互通",
+        "source": "南方网·经济",
+        "source_type": "media",
+        "date": "09/04",
+        "summary": "中行协助在港发行75亿元广东省政府债。所以呢：分行可借此观察湾区跨境债融通道，为企业境外债承销撮合积累客户。",
+        "importance": 1,
+        "rank": 11,
+        "tags": [
+          "市场",
+          "客群"
+        ],
+        "locale": "national",
+        "locale_evidence": "标题提及\"广东省政府债券\"，但发行地在香港，主办行为中国银行（总行层面），非广州分行直接相关事件"
+      },
+      {
+        "url": "https://www.cnr.cn/gd/guangdongyaowen/20260904/t20260904_527804117.shtml",
+        "title_cn": "明年起广东车船税优惠政策将调整",
+        "title_orig": "明年起广东车船税优惠政策将调整",
+        "source": "央广网·广东",
+        "source_type": "media",
+        "date": "09/04",
+        "summary": "明年起广东车船税优惠政策将调整。所以呢：分行零售客群经理可提前梳理私车客户清单，做车险分期与税务联动沟通。",
+        "importance": 1,
+        "rank": 12,
+        "tags": [
+          "市场",
+          "客群"
+        ],
+        "locale": "national",
+        "locale_evidence": "标题\"明年起广东车船税优惠政策将调整\"，广东全省政策非广州专属"
+      },
+      {
+        "url": "https://www.stcn.com/article/detail/4171713.html",
+        "title_cn": "时报数说 第二批32个全国零售业创新提升试点城市名单公布",
+        "source": "证券时报",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "09/04",
+        "summary": "第二批32个零售创新试点城市落地，零售银行部可排查名单内城市支行，围绕商圈改造和消费场景做商户收单与联名卡方案。",
+        "importance": 2,
+        "rank": 13,
+        "tags": [
+          "客群"
+        ],
+        "locale": "national"
+      },
+      {
+        "url": "https://www.stcn.com/article/detail/4171707.html",
+        "title_cn": "十部门联合印发《促进中小企业发展“十五五”规划》 2030年专精特新“小巨人”企业达到2.2万家",
+        "source": "证券时报",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "09/04",
+        "summary": "2030年专精特新小巨人目标2.2万家，零售对公可提前对接辖内培育库企业，布局科技e贷等专属产品。",
+        "importance": 2,
+        "rank": 14,
+        "tags": [],
+        "locale": "national"
+      }
+    ],
+    "tech": [
+      {
+        "url": "https://www.cnfin.com/cy-lb/detail/20260904/4465462_1.html",
+        "title_cn": "总投资40亿元的大湾区绿色智算中心项目启用",
+        "title_orig": "总投资40亿元的大湾区绿色智算中心项目启用",
+        "source": "新华财经",
+        "source_type": "media",
+        "date": "09/04",
+        "summary": "总投资40亿元的大湾区绿色智算中心启用。所以呢：分行可对接项目运营方融资需求，配套绿色信贷与算力租赁金融方案。",
+        "importance": 2,
+        "rank": 1,
+        "tags": [
+          "科技金融"
+        ],
+        "locale": "national"
+      }
+    ],
+    "ipo": [
+      {
+        "url": "https://data.eastmoney.com/xg/xg/#A25250",
+        "title_cn": "东莞四维材料科技：IPO问询中（拟北交所）",
+        "source": "东财IPO在审(广东)",
+        "source_type": "official",
+        "tier": "T1.5",
+        "date": "09/03",
+        "summary": "注册地：广东｜保荐：东莞证券股份有限公司｜更新：2026-09-03",
+        "importance": 2,
+        "rank": 1,
+        "tags": [
+          "粤"
+        ],
+        "locale": "national"
+      },
+      {
+        "url": "https://data.eastmoney.com/xg/xg/#A24052",
+        "title_cn": "广东邦泽创科电器：IPO提交注册（拟北交所）",
+        "source": "东财IPO在审(广东)",
+        "source_type": "official",
+        "tier": "T1.5",
+        "date": "09/01",
+        "summary": "注册地：广东｜保荐：东莞证券股份有限公司｜更新：2026-09-01",
+        "importance": 2,
+        "rank": 2,
+        "tags": [
+          "粤"
+        ],
+        "locale": "national"
+      }
+    ]
+  },
+  "risk": {
+    "topic": "美联储降息预期升温叠加窗口指导",
+    "evidence": "美联储9月议息沃勒强力放鸽、白宫加码施压降息，叠加关键词层风险候选提示窗口指导压力。",
+    "impact": "对私行与财富条线：跨境配置与美元资产定价波动加大；对风控条线：需关注窗口指导对创新业务节奏的影响；对公司条线：跨境企业客户套保需求上升。",
+    "action": "风控部与合规部本周梳理跨境业务合规边界，财富部对高净值客户做汇率与利率走势沟通，公司部提前对接结售汇与套保需求。",
+    "source": "T1",
+    "sources": [
+      {
+        "title": "美联储9月会议悬念丛生！沃勒强力\"放鸽\"白宫加码施压降息",
+        "url": "https://finance.eastmoney.com/a/202609043864710182.html"
+      }
+    ]
+  },
+  "stock_recap": {
+    "us": {
+      "overview": "道琼斯收报53414.25点（-0.51%）；纳斯达克收报26506.99点（-0.29%）；标普500收报7718.60点（-0.38%）。",
+      "sectors": [],
+      "spoken": "道琼斯收报53414.25点（-0.51%）；纳斯达克收报26506.99点（-0.29%）；标普500收报7718.60点（-0.38%）。",
+      "indices": [
+        {
+          "name": "道琼斯",
+          "value": "53414.25",
+          "changePct": "-0.51%"
+        },
+        {
+          "name": "纳斯达克",
+          "value": "26506.99",
+          "changePct": "-0.29%"
+        },
+        {
+          "name": "标普500",
+          "value": "7718.60",
+          "changePct": "-0.38%"
+        }
+      ]
+    },
+    "aShare": {
+      "overview": "上证指数收报3930.12点（-0.30%）；深证成指收报13516.97点（-0.79%）；创业板指收报3286.55点（-0.78%）。",
+      "sectors": [],
+      "spoken": "上证指数收报3930.12点（-0.30%）；深证成指收报13516.97点（-0.79%）；创业板指收报3286.55点（-0.78%）。",
+      "indices": [
+        {
+          "name": "上证指数",
+          "value": "3930.12",
+          "changePct": "-0.30%"
+        },
+        {
+          "name": "深证成指",
+          "value": "13516.97",
+          "changePct": "-0.79%"
+        },
+        {
+          "name": "创业板指",
+          "value": "3286.55",
+          "changePct": "-0.78%"
+        }
+      ]
+    },
+    "hk": {
+      "overview": "恒生指数收报25650.87点（+1.74%）；恒生科技收报4569.80点（+2.27%）。",
+      "sectors": [],
+      "spoken": "恒生指数收报25650.87点（+1.74%）；恒生科技收报4569.80点（+2.27%）。",
+      "sourceReport": {
+        "title": "港股收评：恒指涨1.74% 科指涨2.27% 科网股普涨 AI应用股走强 联想涨超6%",
+        "url": "https://finance.sina.com.cn/stock/hkstock/marketalerts/2026-09-04/doc-iniqryes4153297.shtml"
+      },
+      "indices": [
+        {
+          "name": "恒生指数",
+          "value": "25650.87",
+          "changePct": "+1.74%"
+        },
+        {
+          "name": "恒生科技",
+          "value": "4569.80",
+          "changePct": "+2.27%"
+        }
+      ]
+    },
+    "quoteChannel": "新浪行情",
+    "quoteDate": "2026-09-04",
+    "marketStatus": {
+      "isMarketClosed": true,
+      "reportDate": "2026-09-05",
+      "dataDate": "2026-09-04",
+      "note": "周末及周一休市时段，以下行情为上一交易日（9月4日 周五）收盘数据",
+      "spokenNote": "当前为休市时段，以下行情为上一交易日，9月4日 周五的收盘情况"
+    }
+  },
+  "stock_news": [
+    {
+      "url": "https://finance.eastmoney.com/a/202609043865219747.html",
+      "title_cn": "新“易中天”集体飙涨！GPT-6引爆AI应用AGI时代正式开启？(附股)",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "09/04",
+      "summary": "A股AI概念股集体飙涨,市场热议所谓“新易中天”组合,被报道与所谓“GPT-6”及AGI概念发酵相关。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "AI",
+        "A股",
+        "科技"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202609043865601026.html",
+      "title_cn": "美国8月非农数据大超预期！美联储加息预期升温",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "09/04",
+      "summary": "美国8月非农就业数据大超预期,引发市场对美联储加息预期升温的担忧。",
+      "importance": 3,
+      "rank": 0,
+      "tags": [
+        "宏观",
+        "美联储",
+        "就业"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202609043865379465.html",
+      "title_cn": "A股三大指数冲高回落猪肉概念股逆市大涨",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "09/04",
+      "summary": "9月4日A股三大指数冲高回落,猪肉概念股逆市大涨。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "A股",
+        "猪肉",
+        "农林牧渔"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202609043864666988.html",
+      "title_cn": "特斯拉宣布：Cybercab投入运营",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "09/04",
+      "summary": "特斯拉宣布Cybercab投入运营。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "新能源车",
+        "特斯拉",
+        "出行"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202609043865221943.html",
+      "title_cn": "1秒钟直线涨停！数字货币概念股暴力拉升！发生了什么？",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "09/04",
+      "summary": "数字货币概念股盘中1秒钟直线涨停,相关板块暴力拉升。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "数字货币",
+        "A股",
+        "区块链"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0904/2026090402519.pdf",
+      "title_cn": "Next Day Disclosure Returns - [Share Buyback]",
+      "source": "港交所披露易",
+      "source_type": "media",
+      "date": "09/04",
+      "summary": "港交所披露易出现股份回购翌日披露报表。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "港股",
+        "股票回购"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/09/04/trump-fed-rates-jobs-trade.html",
+      "title_cn": "Trump doubles down on threat to halt trade with top partners unless Fed cuts rates",
+      "source": "CNBC Top Stories",
+      "source_type": "media",
+      "date": "09/04",
+      "summary": "美国总统特朗普加倍威胁称,若美联储不降息,将暂停与主要贸易伙伴的贸易往来。",
+      "importance": 3,
+      "rank": 0,
+      "tags": [
+        "宏观",
+        "美联储",
+        "贸易政策"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/09/04/teslas-stock-drops-as-cybercab-update-underwhelms-nhtsa-probe.html",
+      "title_cn": "Tesla's stock drops 6% as Cybercab update 'underwhelms' Wall Street",
+      "source": "CNBC Top Stories",
+      "source_type": "media",
+      "date": "09/04",
+      "summary": "特斯拉Cybercab业务更新令华尔街失望,股价当日下跌约6%。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "特斯拉",
+        "新能源车",
+        "美股"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/09/04/worlds-biggest-sovereign-wealth-fund-plans-to-cut-treasury-holdings.html",
+      "title_cn": "World's biggest sovereign wealth fund plans to cut U.S. Treasury holdings",
+      "source": "CNBC Top Stories",
+      "source_type": "media",
+      "date": "09/04",
+      "summary": "全球最大主权财富基金计划削减美国国债持仓。",
+      "importance": 3,
+      "rank": 0,
+      "tags": [
+        "美债",
+        "主权基金",
+        "宏观"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    }
+  ]
+}
