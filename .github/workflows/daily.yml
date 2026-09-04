@@ -303,7 +303,10 @@ jobs:
       - name: Generate today's report
         env:
           SKIP_AI: ${{ inputs.skip_ai && 'true' || '' }}
-          AUDIO_ENABLED: ${{ inputs.audio && 'true' || 'false' }}
+          # 2026-09-04 修复：cron(schedule) 触发时 inputs 为空，原 `inputs.audio && 'true' || 'false'`
+          # 会落到 'false' → 定时报告永远不生成音频（#139 实锤）。音频成本低，每次都应生成，
+          # 故改为：schedule 一律开；dispatch 仍尊重显式取消（audio=false → 跳过）。
+          AUDIO_ENABLED: ${{ (github.event_name == 'schedule' || inputs.audio) && 'true' || 'false' }}
           # 本 run 是否上线（2026-09-03）：schedule 首发（published-check=true）或
           # dispatch publish=true → true；内容记忆（event-memory）只在上线 run 落盘。
           PUBLISH_RUN: ${{ (github.event_name == 'schedule' && steps.published-check.outputs.should-publish == 'true') || (github.event_name == 'workflow_dispatch' && inputs.publish == true) }}
