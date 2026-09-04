@@ -1,0 +1,83 @@
+name: WeCom Notify (Manual)
+
+# 2026-09-04：新增企业微信自建应用推送渠道，与 notify.yml（公众号模板消息）并行。
+#
+# 流程与 notify.yml 完全一致（发布后人工核对 → 手动 Run → 推送 → 写交付信号），
+# 区别仅在渠道与 secrets：
+#   - 渠道：企业微信自建应用 message/send（markdown），开启「微信插件」后直达个人微信聊天列表
+#   - secrets：WECOM_CORP_ID / WECOM_AGENT_ID / WECOM_CORP_SECRET / WECOM_USER_IDS
+#   - 通过 NOTIFY_CHANNEL=wecom 选择 lib/notify/wecom.ts 发送器
+#
+# 仍为纯手动触发，无 schedule 自动推送（与现有交付核验闸门一致）。
+# 失败语义：企业微信未送达 → 步骤红 → 不写交付信号（不算交付）。
+# 重复触发会重复推送（企业微信侧有 1800s 去重检查，同内容 30 分钟内不重复），请确认后再点。
+
+on:
+  workflow_dispatch: {}
+
+permissions:
+  contents: write # mark-delivered 需把 event-memory.json 提交回 main
+
+jobs:
+  notify:
+    name: Push WeCom & mark delivered
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      # 保险确认：当天 store.json 已被 build run 归档到 main（用户核对 gh-pages 时
+      # 必然已归档，此处仅防「当天 build 失败就手动推」的误操作）。
+      - name: Verify today's store.json archived
+        env:
+          REPORT_TZ: ${{ vars.REPORT_TZ }}
+        run: |
+          TODAY=$(TZ="${REPORT_TZ:-Asia/Shanghai}" date +%Y-%m-%d)
+          if [ ! -f "history/${TODAY}/store.json" ]; then
+            echo "::error::history/${TODAY}/store.json 不存在 —— 当天 build 尚未归档；如确需推送请先跑 daily.yml（publish=true）"
+            exit 1
+          fi
+          echo "store.json 已就绪: history/${TODAY}/store.json"
+
+      # 企业微信推送：真正送达（目标 ≥1 且成功）→ 脚本 exit 0；失败/无目标 → exit 1
+      - name: Push WeCom notification
+        id: push-wecom
+        env:
+          NOTIFY_CHANNEL: wecom
+          WECOM_CORP_ID: ${{ secrets.WECOM_CORP_ID }}
+          WECOM_AGENT_ID: ${{ secrets.WECOM_AGENT_ID }}
+          WECOM_CORP_SECRET: ${{ secrets.WECOM_CORP_SECRET }}
+          WECOM_USER_IDS: ${{ secrets.WECOM_USER_IDS }}
+          REPORT_BASE_URL: ${{ vars.REPORT_BASE_URL }}
+          REPORT_TZ: ${{ vars.REPORT_TZ }}
+        run: npm run notify
+
+      # 推送成功 → 记录当日交付信号并提交 main（内容记忆结算闸门）。
+      # 与 notify.yml 共用 mark-delivered；若同日两渠道都推，第二次为幂等空提交。
+      - name: Mark today as delivered (memory settlement gate)
+        if: steps.push-wecom.outcome == 'success'
+        env:
+          REPORT_TZ: ${{ vars.REPORT_TZ }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          npm run mark-delivered
+          TODAY=$(TZ="${REPORT_TZ:-Asia/Shanghai}" date +%Y-%m-%d)
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/event-memory.json
+          if git diff --cached --quiet; then
+            echo "event-memory.json 无变化（同日已记录过交付），跳过提交"
+          else
+            git commit -m "chore: mark delivered ${TODAY}"
+            git push
+          fi

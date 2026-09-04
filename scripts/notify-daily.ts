@@ -23,6 +23,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { pushDailyReport, buildTemplatePayload } from "../lib/notify/wechat.js";
+import { pushWecomDaily, buildWecomMarkdown } from "../lib/notify/wecom.js";
 
 function log(msg: string) {
   console.log(`[notify] ${msg}`);
@@ -76,6 +77,38 @@ async function pushWechat(cfg: {
   return false;
 }
 
+async function pushWecom(cfg: {
+  corpId: string;
+  agentId: string;
+  corpSecret: string;
+  userIds: string[];
+  heroLine: string;
+  dateStr: string;
+  reportUrl: string;
+}): Promise<boolean> {
+  const markdown = buildWecomMarkdown(cfg.heroLine, cfg.dateStr, cfg.reportUrl);
+  const result = await pushWecomDaily(
+    { corpId: cfg.corpId, agentId: cfg.agentId, corpSecret: cfg.corpSecret, userIds: cfg.userIds },
+    markdown,
+    cfg.reportUrl,
+  );
+  if (result.error) {
+    log(`❌ 企业微信推送失败: ${result.error}`);
+    return false;
+  }
+  if (result.targets === 0) {
+    log(`⚠️ 企业微信无发送目标（未配置 WECOM_USER_IDS），未送达任何客户 → 不算交付`);
+    return false;
+  }
+  if (result.ok) {
+    log(`✅ 企业微信推送完成：目标 ${result.targets} 人，成功 ${result.sent}，失败 ${result.failed.length}`);
+    return true;
+  }
+  log(`❌ 企业微信部分失败：成功 ${result.sent}/${result.targets} → 不算完全交付`);
+  for (const f of result.failed) log(`   失败 ${f.userid}: ${f.reason}`);
+  return false;
+}
+
 async function main(): Promise<void> {
   const tz = process.env.REPORT_TZ || "Asia/Shanghai";
   const dateStr = new Intl.DateTimeFormat("en-CA", {
@@ -93,7 +126,25 @@ async function main(): Promise<void> {
   const base = (process.env.REPORT_BASE_URL || "https://shengc-shv.github.io/gzinfo").replace(/\/+$/, "");
   const reportUrl = `${base}/${dateStr}/${dateStr}.html`;
 
-  // 微信测试号模板消息（唯一外发渠道，2026-09-03）
+  // 企业微信自建应用 → 个人微信（新增渠道，NOTIFY_CHANNEL=wecom）
+  const channel = (process.env.NOTIFY_CHANNEL || "wechat").toLowerCase();
+  if (channel === "wecom") {
+    const corpId = process.env.WECOM_CORP_ID ?? "";
+    const agentId = process.env.WECOM_AGENT_ID ?? "";
+    const corpSecret = process.env.WECOM_CORP_SECRET ?? "";
+    const userIds = (process.env.WECOM_USER_IDS ?? "").split(",").map((s) => s.trim()).filter(Boolean);
+    if (!corpId || !agentId || !corpSecret || userIds.length === 0) {
+      log("缺少 WECOM_CORP_ID / WECOM_AGENT_ID / WECOM_CORP_SECRET / WECOM_USER_IDS，跳过企业微信推送 → 未交付");
+      process.exitCode = 1;
+      return;
+    }
+    const ok = await pushWecom({ corpId, agentId, corpSecret, userIds, heroLine, dateStr, reportUrl });
+    if (!ok) process.exitCode = 1;
+    log(`报告链接: ${reportUrl}`);
+    return;
+  }
+
+  // 微信测试号模板消息（公众号渠道，2026-09-03 起保留，默认 NOTIFY_CHANNEL=wechat）
   const appId = process.env.WX_APP_ID ?? "";
   const appSecret = process.env.WX_APP_SECRET ?? "";
   const templateId = process.env.WX_TEMPLATE_ID ?? "";
