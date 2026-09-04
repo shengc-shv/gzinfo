@@ -1,168 +1,137 @@
 {
   "date": "2026-09-05",
-  "updatedAt": "2026-09-04T22:15:30.307Z",
+  "updatedAt": "2026-09-04T23:55:26.037Z",
   "executive": {
-    "hero_line": "APEC中小企业部长会议在穗召开，跨境政商资源汇聚，分行可借势抢抓中小外贸客群。",
-    "spoken_hero": "APEC中小企业部长会议今天在广州开幕，跨境政商资源齐聚羊城。建议分行零售与对公联动，立即梳理与会中小外贸企业清单，配套跨境结算与融资方案。",
+    "hero_line": "APEC中小企业部长会议在穗召开，跨境政商窗口叠加消费贷贴息窗口，分行零售多条线可同步抢客。",
+    "spoken_hero": "APEC中小企业部长会议今天在广州开幕，跨境政商资源汇聚分行门口。同时消费贷贴息集体扩围，价格战窗口打开。零售多条线建议本周联动，对接与会中小外贸客群的同时抢抓贴息红利的个贷与财富客户。",
     "must_read": [
       {
-        "title": "央行5000亿买断式逆回购操作",
-        "why": "月末流动性维持充裕，利率信号宽松。分行财富端需关注短端产品定价与存款营销节奏，应对资金面边际变化。",
-        "url": "https://www.stcn.com/article/detail/4173275.html"
+        "title": "证监会强调打造监管铁军 个贷合规检查趋严",
+        "why": "监管对一线营销话术与档案管理要求升级，分行零售条线须提前对照新口径自查，防范代销与个贷合规风险外溢。",
+        "url": "https://www.stcn.com/article/detail/4173461.html"
       },
       {
-        "title": "美联储9月议息分歧加大降息预期升温",
-        "why": "美元利率走向影响跨境配置与结售汇。分行外汇与财富条线需提前对高净值客户做美元资产与汇率走势沟通。",
-        "url": "https://finance.eastmoney.com/a/202609043864710182.html"
+        "title": "央行等量续作逆回购 月中观察MLF与LPR",
+        "why": "跨季流动性态度中性，但下周一即开展5000亿买断式逆回购，9月MLF与LPR报价是关注焦点，直接传导分行负债成本与按揭定价节奏。",
+        "url": "https://www.stcn.com/article/detail/4173448.html"
       },
       {
-        "title": "私募募集新规出台违规成本大幅提升",
-        "why": "代销端合规要求全面收紧。分行私行与财富条线应排查合作私募底稿与适当性管理，避免代销通道踩雷。",
-        "url": "https://finance.eastmoney.com/a/202609043865492096.html"
+        "title": "信息披露办法五年大修征求意见",
+        "why": "百万亿资管市场信披大一统进入落地前最后一公里，分行财富条线须尽快对照新模板梳理产品披露与客户沟通话术。",
+        "url": "https://www.cnfin.com/hg-lb/detail/20260904/4465543_1.html"
       },
       {
-        "title": "国有大行集中清淤不良核销规模创新高",
-        "why": "大行核销提速反映资产质量压力。分行风险条线需对照本行不良结构，提前评估处置节奏与拨备覆盖。",
+        "title": "国有大行集中清淤 不良核销规模显著扩大",
+        "why": "工行建行核销规模上行，反映资产质量压力仍在释放，分行需对照本行不良结构评估潜在处置节奏与拨备覆盖。",
         "url": "https://finance.sina.com.cn/jinrong/yh/2026-09-04/doc-iniqsens0903536.shtml"
-      },
-      {
-        "title": "七部门联合部署绿色算力",
-        "why": "绿色算力获国家层面政策定调，数据中心产业链迎来贴标与项目储备窗口。分行科创金融团队可跟踪本地算力客群评级与授信机会。",
-        "url": "https://www.stcn.com/stcn.com/article/detail/4173364.html"
       }
     ],
-    "spoken_must_read": "央行下周一开展5000亿买断式逆回购，月末流动性维持充裕，财富端需关注短端产品定价节奏。七部门联合部署绿色算力发展方向，科创金融团队可跟踪本地数据中心客群授信机会。美联储9月议息分歧加大、降息预期升温，外汇与财富条线宜提前对高净值客户做美元资产沟通。私募募集新规落地，违规成本大幅提升，私行与财富条线宜排查合作私募合规底稿。国有大行不良核销规模创新高，风险条线宜对照本行不良结构评估处置节奏。",
+    "spoken_must_read": "央行等量续作三个月期逆回购，跨季流动性中性，下周一再加五千亿，九月MLF和LPR是观察窗口。证监会强调打造监管铁军，个贷合规检查趋严，一线营销话术与档案管理要提前自查。信息披露办法五年大修征求意见，财富条线尽快对照新模板梳理产品披露。投融资改革持续纵深推进，公募费率与ETF生态变化正在重塑高净值客户配置逻辑。私行下沉与高端升维同步发力，客层打法分化，分行可补位分层运营与高端产品矩阵。",
     "insights": [
       {
         "topic": "APEC中小企业部长会在穗召开",
-        "impact": "跨境政商资源集中汇聚广州，为分行批量获取中小外贸客户提供窗口。零售可联动代发工资与财富产品，对公可落地跨境结算与融资方案。",
-        "action": "本周内由公司部牵头梳理与会企业名单，零售部配合设计代发与财富套餐，跨境部对接结算与融资方案，会后一周内完成首轮走访。",
+        "impact": "跨境政商资源在分行门口汇聚，市工信局、外资园区与会中小外贸客群集中曝光，是批量获客的天然窗口期。",
+        "action": "本周由公司部牵头，对接市工信局与南沙外资园区，针对与会中小外贸客群推跨境结算与融资方案，零售端同步捕捉高管个人金融需求。",
         "tag": [
           "客群",
           "代发"
         ],
         "sources": [
           {
+            "title": "第32次APEC中小企业部长会议在广州举行",
+            "url": "https://www.stcn.com/article/detail/4173447.html"
+          },
+          {
             "title": "第32次亚太经合组织中小企业部长会议在广州举行",
             "url": "https://www.stcn.com/article/detail/4172850.html"
-          },
-          {
-            "title": "广州海关保障中国国际中小企业博览会开展",
-            "url": "https://news.dayoo.com/guangzhou/202609/04/139995_54999938.htm"
           }
         ]
       },
       {
-        "topic": "康方生物亮相APEC广州原研药崛起",
-        "impact": "广州生物医药产业能见度提升，分行可借此切入研发型轻资产客群，配套研发贷与股权融资撮合。",
-        "action": "科创金融团队本周联动投行部对接康方及产业链上下游，梳理本地生物医药白名单客群，设计科创贷与撮合服务方案。",
+        "topic": "广汽新能源车销量高增带动产业链金融",
+        "impact": "广汽8月新能源车销量同比增近五成，1至8月自主品牌出口翻番，主机厂上下游供应链与员工消费金融需求明显扩张。",
+        "action": "本周走访广汽主机厂及核心经销商，针对供应链推分期与贴息方案，零售端联动车企员工做代发与信用卡批量获客。",
         "tag": [
           "信贷",
-          "客群"
+          "代发"
         ],
         "sources": [
           {
-            "title": "2026APEC中小企业部长会之广州企业观察⑪｜康方生物：广州原研药硬核崛起",
-            "url": "https://news.dayoo.com/guangzhou/202609/04/139995_54999745.htm"
-          }
-        ]
-      },
-      {
-        "topic": "广州828新政后首宗宅地溢价成交",
-        "impact": "拿地房企融资需求节点临近，分行可配套开发贷与按揭资源，同时关注后续地块出让节奏带来的按揭储备。",
-        "action": "住房金融部本周对接拿地房企融资需求，零售端联动按揭预审与客户储备，财富部关注开发商高净值客户代发机会。",
-        "tag": [
-          "住房金融",
-          "客群"
-        ],
-        "sources": [
-          {
-            "title": "\"828\"新政后广州首宗竞拍成交地块 溢价率15.88%",
-            "url": "https://news.dayoo.com/guangzhou/202609/04/139995_54999810.htm"
+            "title": "广汽集团：8月新能源汽车销量5.65万辆，同比增长47.69%",
+            "url": "https://www.stcn.com/article/detail/4172982.html"
           },
-          {
-            "title": "一线城市优质宅地接连出让 房企竞拍趋于理性",
-            "url": "https://www.stcn.com/article/detail/4173232.html"
-          }
-        ]
-      },
-      {
-        "topic": "私行下沉与升维两端发力",
-        "impact": "私行客层打法分化，本行需重新审视存量客户分层运营与高端产品矩阵补位，避免高端客户被同业截流。",
-        "action": "私行中心本周内完成存量客户分层诊断，针对高端升维客群补充家族信托与跨境配置产品，落地针对性维护动作。",
-        "tag": [
-          "私行",
-          "财富"
-        ],
-        "sources": [
-          {
-            "title": "私行\"下沉\"与\"升维\"",
-            "url": "https://finance.sina.com.cn/money/bank/bank_hydt/2026-09-04/doc-iniqriia0805847.shtml"
-          }
-        ]
-      },
-      {
-        "topic": "广汽自主品牌出口同比增136%",
-        "impact": "汽车产业链上下游需求旺盛，跨境结算、供应链金融与员工代发均有批量机会。",
-        "action": "对公部联动零售代发团队本周对接广汽供应链上下游企业，配套跨境结算与员工代发方案。",
-        "tag": [
-          "代发",
-          "信贷"
-        ],
-        "sources": [
           {
             "title": "广汽集团1—8月自主品牌汽车出口量增长136%",
             "url": "https://www.stcn.com/article/detail/4173211.html"
           }
         ]
+      },
+      {
+        "topic": "广东车船税优惠明年调整 私车客群提前摸排",
+        "impact": "广东车船税优惠政策明年起调整，私车客户对税务联动与车险分期诉求上升，是零售客群经理做增值服务的切入点。",
+        "action": "本周由零售客群经理梳理辖内私车客户清单，提前沟通车险分期与税务联动方案，配套信用卡与代发捆绑。",
+        "tag": [
+          "客群",
+          "财富"
+        ],
+        "sources": [
+          {
+            "title": "明年起广东车船税优惠政策将调整",
+            "url": "https://www.cnr.cn/gd/guangdongyaowen/20260904/t20260904_527804117.shtml"
+          }
+        ]
+      },
+      {
+        "topic": "广电运通挂牌转让股权 对公关系需提前跟进",
+        "impact": "广电运通挂牌转让数据交易公司及榆林神鹰股权，可能引发对公账户变动与资金归集路径调整，存量客户关系维护需提前布局。",
+        "action": "本周由公司部牵头走访广电运通，跟进股权转让进展，提前对接资金归集与高管个人金融服务，防止客户流失。",
+        "tag": [
+          "客群",
+          "信贷"
+        ],
+        "sources": [
+          {
+            "title": "广电运通：拟公开挂牌转让数据交易公司30%股权及榆林神鹰55%股权",
+            "url": "https://www.stcn.com/article/detail/4172866.html"
+          }
+        ]
       }
     ],
-    "spoken_insights": "APEC中小企业部长会在穗召开，本周内走访与会企业，配套跨境结算与代发方案。康方生物领衔广州原研药崛起，科创金融团队可对接研发贷与撮合服务。广州828新政后首宗宅地溢价成交，住房金融部宜联动按揭预审与开发商融资。私行下沉与升维两端发力，本周完成客户分层诊断，补位高端产品矩阵。广汽出口同比增136%，对公与代发联动对接产业链上下游。",
-    "risk": {
-      "topic": "美联储降息预期升温叠加窗口指导",
-      "evidence": "美联储9月议息沃勒强力放鸽、白宫加码施压降息，叠加关键词层风险候选提示窗口指导压力。",
-      "impact": "对私行与财富条线：跨境配置与美元资产定价波动加大；对风控条线：需关注窗口指导对创新业务节奏的影响；对公司条线：跨境企业客户套保需求上升。",
-      "action": "风控部与合规部本周梳理跨境业务合规边界，财富部对高净值客户做汇率与利率走势沟通，公司部提前对接结售汇与套保需求。",
-      "source": "T1",
-      "sources": [
-        {
-          "title": "美联储9月会议悬念丛生！沃勒强力\"放鸽\"白宫加码施压降息",
-          "url": "https://finance.eastmoney.com/a/202609043864710182.html"
-        }
-      ]
-    },
-    "spoken_risk": "今天有1个需要警惕：美联储降息预期升温叠加窗口指导，跨境配置与美元资产定价波动加大。风控与合规部宜梳理跨境业务边界，财富部对高净值客户做汇率沟通。",
+    "spoken_insights": "APEC中小企业部长会今天在广州开幕，跨境政商窗口打开，公司部可对接与会中小外贸客群推跨境结算融资。广汽新能源车销量同比增近五成，主机厂上下游供应链与员工消费金融需求扩张，走访经销商推分期与代发。广东车船税优惠明年调整，零售客群经理本周摸排私车客户清单，提前做车险分期与税务联动沟通。两创板打新中签率走低，私行中心本周推打新策略与公募产品组合方案，提示客户转向基金组合打新。广电运通挂牌转让两家子公司股权，公司部本周走访跟进股权转让与资金归集，防止对公客户流失。",
     "guangdong_ipo": {
-      "spoken": "广东邦泽创科电器IPO已提交注册，拟登陆北交所，注册地广东，东莞证券保荐。东莞四维材料科技IPO问询中，拟北交所，注册地同样在广东。分行可关注两家企业后续进展，对接募资账户与员工代发机会。"
+      "spoken": "广东邦泽创科电器北交所IPO已提交注册，由东莞证券保荐，注册地广东，可提前对接发行募资账户与高管个人金融需求。东莞四维材料科技北交所IPO处于问询中，注册地同样在广东，建议持续跟进问询反馈进展。"
     }
   },
   "stock_recap": {
     "us": {
-      "overview": "道琼斯收报53414.25点（-0.51%）；纳斯达克收报26506.99点（-0.29%）；标普500收报7718.60点（-0.38%）。",
-      "sectors": [],
-      "spoken": "道琼斯收报53414.25点（-0.51%）；纳斯达克收报26506.99点（-0.29%）；标普500收报7718.60点（-0.38%）。",
-      "indices": [
-        {
-          "name": "道琼斯",
-          "value": "53414.25",
-          "changePct": "-0.51%"
-        },
-        {
-          "name": "纳斯达克",
-          "value": "26506.99",
-          "changePct": "-0.29%"
-        },
-        {
-          "name": "标普500",
-          "value": "7718.60",
-          "changePct": "-0.38%"
-        }
-      ]
+      "overview": "美股科技股承压，特斯拉Cybercab不及预期重挫6%。",
+      "sectors": [
+        "科技：特斯拉Cybercab更新令华尔街失望，股价大跌6%，板块整体走弱。",
+        "主权基金：挪威主权基金拟减持美债逾5300亿元，避险情绪升温。",
+        "宏观：特朗普威胁若美联储不降息将停止与主要伙伴贸易，政策不确定性加大。"
+      ],
+      "spoken": "美股科技股承压，特斯拉Cybercab不及预期重挫6%，挪威主权基金计划减持超5300亿元美债，特朗普再度施压美联储降息，市场不确定性加大。",
+      "meta": {
+        "source": "CNBC Top Stories",
+        "crossCheck": "新浪K线",
+        "date": "2026-09-04"
+      },
+      "indices": []
     },
     "aShare": {
-      "overview": "上证指数收报3930.12点（-0.30%）；深证成指收报13516.97点（-0.79%）；创业板指收报3286.55点（-0.78%）。",
-      "sectors": [],
-      "spoken": "上证指数收报3930.12点（-0.30%）；深证成指收报13516.97点（-0.79%）；创业板指收报3286.55点（-0.78%）。",
+      "overview": "A股三大指数冲高回落，上证收跌0.30%，猪肉股逆市大涨。",
+      "sectors": [
+        "猪肉：猪价走出周期低谷，猪肉概念股掀涨停潮领涨两市。",
+        "AI应用：新'易中天'集体飙涨，GPT-6催化AGI主题发酵。",
+        "数字货币：盘中直线拉升封板，政策预期再度升温。",
+        "贵金属：全球最大主权基金拟减持美债，黄金避险需求受关注。"
+      ],
+      "spoken": "A股三大指数冲高回落，上证收跌0.30%、深成指跌0.79%。猪肉概念股逆市掀涨停潮，新易中天集体飙涨，数字货币盘中直线封板，全球最大主权基金拟减持美债5300亿元。",
+      "meta": {
+        "source": "东方财富",
+        "crossCheck": "新浪K线",
+        "date": "2026-09-05"
+      },
       "indices": [
         {
           "name": "上证指数",
@@ -182,27 +151,25 @@
       ]
     },
     "hk": {
-      "overview": "恒生指数收报25650.87点（+1.74%）；恒生科技收报4569.80点（+2.27%）。",
-      "sectors": [],
-      "spoken": "恒生指数收报25650.87点（+1.74%）；恒生科技收报4569.80点（+2.27%）。",
+      "overview": "恒指收涨1.74%报22912点，恒科涨2.27%，科网股普涨AI应用走强。",
+      "sectors": [
+        "科网：联想涨超6%、百度午后涨超4%，AI应用股集体走强。",
+        "金融：国有六大行周内齐创历史新高，大金融股持续活跃。",
+        "回购增持：港股年内回购逾千亿元，三板块获重要股东增持。"
+      ],
+      "spoken": "港股恒指收涨1.74%报22912点，恒科涨2.27%。科网股普涨，联想涨超6%、百度涨超4%，AI应用股走强；国有六大行周内齐创历史新高，年内回购逾千亿元。",
+      "meta": {
+        "source": "新浪财经·港股",
+        "crossCheck": "新浪K线",
+        "date": "2026-09-04"
+      },
       "sourceReport": {
         "title": "港股收评：恒指涨1.74% 科指涨2.27% 科网股普涨 AI应用股走强 联想涨超6%",
         "url": "https://finance.sina.com.cn/stock/hkstock/marketalerts/2026-09-04/doc-iniqryes4153297.shtml"
       },
-      "indices": [
-        {
-          "name": "恒生指数",
-          "value": "25650.87",
-          "changePct": "+1.74%"
-        },
-        {
-          "name": "恒生科技",
-          "value": "4569.80",
-          "changePct": "+2.27%"
-        }
-      ]
+      "indices": []
     },
-    "quoteChannel": "新浪行情",
+    "quoteChannel": "新浪K线",
     "quoteDate": "2026-09-04",
     "marketStatus": {
       "isMarketClosed": true,
@@ -219,13 +186,12 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "09/04",
-      "summary": "A股AI概念股集体飙涨,市场热议所谓“新易中天”组合,被报道与所谓“GPT-6”及AGI概念发酵相关。",
+      "summary": "AI概念股集体大涨，市场传闻GPT-6相关进展，被媒体冠以\"新易中天\"称号，市场讨论AGI时代开启预期。",
       "importance": 2,
       "rank": 0,
       "tags": [
         "AI",
-        "A股",
-        "科技"
+        "A股"
       ],
       "locale": "national",
       "market": "a-share"
@@ -236,13 +202,12 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "09/04",
-      "summary": "美国8月非农就业数据大超预期,引发市场对美联储加息预期升温的担忧。",
+      "summary": "美国8月非农就业数据大超预期，市场对美联储加息的预期升温。",
       "importance": 3,
       "rank": 0,
       "tags": [
         "宏观",
-        "美联储",
-        "就业"
+        "美联储"
       ],
       "locale": "national",
       "market": "a-share"
@@ -253,13 +218,28 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "09/04",
-      "summary": "9月4日A股三大指数冲高回落,猪肉概念股逆市大涨。",
+      "summary": "A股三大指数冲高回落，猪肉概念股逆市大涨。",
       "importance": 2,
       "rank": 0,
       "tags": [
         "A股",
-        "猪肉",
-        "农林牧渔"
+        "猪肉"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202609043865221943.html",
+      "title_cn": "1秒钟直线涨停！数字货币概念股暴力拉升！发生了什么？",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "09/04",
+      "summary": "数字货币概念股盘中暴力拉升，相关个股出现1秒钟直线涨停。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "A股",
+        "数字货币"
       ],
       "locale": "national",
       "market": "a-share"
@@ -275,42 +255,7 @@
       "rank": 0,
       "tags": [
         "新能源车",
-        "特斯拉",
-        "出行"
-      ],
-      "locale": "national",
-      "market": "a-share"
-    },
-    {
-      "url": "https://finance.eastmoney.com/a/202609043865221943.html",
-      "title_cn": "1秒钟直线涨停！数字货币概念股暴力拉升！发生了什么？",
-      "source": "东方财富",
-      "source_type": "media",
-      "date": "09/04",
-      "summary": "数字货币概念股盘中1秒钟直线涨停,相关板块暴力拉升。",
-      "importance": 1,
-      "rank": 0,
-      "tags": [
-        "数字货币",
-        "A股",
-        "区块链"
-      ],
-      "locale": "national",
-      "market": "a-share"
-    },
-    {
-      "url": "https://finance.eastmoney.com/a/202609043864525192.html",
-      "title_cn": "深夜突发！美国AI大宕机！",
-      "source": "东方财富",
-      "source_type": "media",
-      "date": "09/04",
-      "summary": "美国AI服务出现大宕机事件,具体影响范围与厂商未在标题中披露。",
-      "importance": 2,
-      "rank": 0,
-      "tags": [
-        "AI",
-        "美股",
-        "科技"
+        "特斯拉"
       ],
       "locale": "national",
       "market": "a-share"
@@ -321,13 +266,12 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "09/04",
-      "summary": "美联储9月会议前,理事沃勒释放鸽派信号,白宫加码施压要求降息,政策悬念增加。",
+      "summary": "美联储9月会议前官员表态分化，沃勒释放鸽派信号，白宫继续施压降息。",
       "importance": 3,
       "rank": 0,
       "tags": [
         "美联储",
-        "宏观",
-        "政策"
+        "宏观"
       ],
       "locale": "national",
       "market": "a-share"
@@ -338,29 +282,12 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "09/04",
-      "summary": "9月4日晚间沪深上市公司陆续发布重大事项公告,涵盖业绩、重组、增减持等动态。",
+      "summary": "9月4日晚间沪深上市公司发布重大事项公告，涉及多家公司最新动态。",
       "importance": 1,
       "rank": 0,
       "tags": [
         "A股",
-        "公司公告"
-      ],
-      "locale": "national",
-      "market": "a-share"
-    },
-    {
-      "url": "https://finance.eastmoney.com/a/202609043864460473.html",
-      "title_cn": "全球市场：美股三大指数均涨超1%加密货币概念股走强国际金银价格上扬",
-      "source": "东方财富",
-      "source_type": "media",
-      "date": "09/04",
-      "summary": "隔夜美股三大指数均涨超1%,加密货币概念股走强,国际金银价格上扬。",
-      "importance": 2,
-      "rank": 0,
-      "tags": [
-        "美股",
-        "加密货币",
-        "黄金"
+        "公告"
       ],
       "locale": "national",
       "market": "a-share"
@@ -371,47 +298,76 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "09/04",
-      "summary": "华尔街聚焦美国8月非农就业数据,市场关注“坏数据即好消息”逻辑对降息预期的影响。",
+      "summary": "华尔街等待美国8月非农就业数据，市场讨论\"坏数据即好消息\"逻辑。",
       "importance": 2,
       "rank": 0,
       "tags": [
         "宏观",
-        "就业",
-        "美联储"
+        "美股"
       ],
       "locale": "national",
       "market": "a-share"
     },
     {
-      "url": "https://finance.eastmoney.com/a/202609043865256432.html",
-      "title_cn": "空头踩踏一触即发？摩根大通警示：日元若升破155关口或引爆大幅反弹",
+      "url": "https://finance.eastmoney.com/a/202609043865431961.html",
+      "title_cn": "全球最大“金主”拟减持超5300亿元！",
       "source": "东方财富",
       "source_type": "media",
       "date": "09/04",
-      "summary": "摩根大通警示,若日元升破155关口,可能触发空头踩踏式大幅反弹。",
-      "importance": 2,
+      "summary": "全球最大主权财富基金拟减持美国国债，金额超5300亿元人民币。",
+      "importance": 3,
       "rank": 0,
       "tags": [
-        "外汇",
-        "日元",
+        "美债",
         "宏观"
       ],
       "locale": "national",
       "market": "a-share"
     },
     {
-      "url": "https://finance.eastmoney.com/a/202609043864711254.html",
-      "title_cn": "中信证券：预计银行板块全年绝对收益仍将延续",
+      "url": "https://finance.eastmoney.com/a/202609043865219551.html",
+      "title_cn": "掀涨停潮！猪肉概念股领涨猪价走出周期低谷",
       "source": "东方财富",
       "source_type": "media",
       "date": "09/04",
-      "summary": "中信证券发布观点,预计银行板块全年绝对收益仍将延续。",
+      "summary": "猪肉概念股掀起涨停潮，市场认为猪价走出周期低谷。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "A股",
+        "猪肉"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202609053865794589.html",
+      "title_cn": "经济日报金观平：企业创新账本不能玩数字游戏",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "09/05",
+      "summary": "经济日报发表评论文章《企业创新账本不能玩数字游戏》，批评企业创新数据失真现象。",
       "importance": 1,
       "rank": 0,
       "tags": [
-        "银行",
-        "A股",
-        "券商研报"
+        "政策",
+        "评论"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202609053865795353.html",
+      "title_cn": "规范汽车出海竞争行为正当时",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "09/05",
+      "summary": "经济日报发表评论文章《规范汽车出海竞争行为正当时》，呼吁规范中国汽车出海竞争秩序。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "汽车",
+        "政策"
       ],
       "locale": "national",
       "market": "a-share"
@@ -422,12 +378,12 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "09/04",
-      "summary": "港交所披露易出现股份计划/其他类公告,具体公司未在标题披露。",
+      "summary": "港股上市公司发布股权激励或其他相关计划公告。",
       "importance": 1,
       "rank": 0,
       "tags": [
         "港股",
-        "公司公告"
+        "公告"
       ],
       "locale": "national",
       "market": "hk"
@@ -438,7 +394,7 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "09/04",
-      "summary": "港交所披露易出现关联交易类公告,具体公司未在标题披露。",
+      "summary": "港股上市公司发布关联交易公告。",
       "importance": 1,
       "rank": 0,
       "tags": [
@@ -454,7 +410,7 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "09/04",
-      "summary": "港交所披露易刊发董事名单及其角色与职能公告。",
+      "summary": "港股上市公司发布董事名单及其角色与职能公告。",
       "importance": 1,
       "rank": 0,
       "tags": [
@@ -470,13 +426,12 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "09/04",
-      "summary": "港交所披露易出现中期/半年度报告及ESG信息披露文件。",
+      "summary": "港股上市公司发布中期/半年度财务报告或ESG信息。",
       "importance": 1,
       "rank": 0,
       "tags": [
         "港股",
-        "财报",
-        "ESG"
+        "财报"
       ],
       "locale": "national",
       "market": "hk"
@@ -487,7 +442,7 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "09/04",
-      "summary": "港交所披露易出现董事变更及审核、提名、薪酬委员会成员变更公告。",
+      "summary": "港股上市公司发布董事变动及审核、提名、薪酬委员会成员变更公告。",
       "importance": 1,
       "rank": 0,
       "tags": [
@@ -503,12 +458,12 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "09/04",
-      "summary": "港交所披露易出现股份计划类公告。",
+      "summary": "港股上市公司发布股权激励计划相关公告。",
       "importance": 1,
       "rank": 0,
       "tags": [
         "港股",
-        "股权激励"
+        "公告"
       ],
       "locale": "national",
       "market": "hk"
@@ -519,12 +474,12 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "09/04",
-      "summary": "港交所披露易刊发股东特别大会/特别股东大会结果公告。",
+      "summary": "港股上市公司发布股东大会或特别大会表决结果公告。",
       "importance": 1,
       "rank": 0,
       "tags": [
         "港股",
-        "股东大会"
+        "公告"
       ],
       "locale": "national",
       "market": "hk"
@@ -535,12 +490,12 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "09/04",
-      "summary": "港交所披露易出现代表委任表格(Proxy Form)披露文件。",
+      "summary": "港股上市公司发布代表委任表格。",
       "importance": 1,
       "rank": 0,
       "tags": [
         "港股",
-        "公司治理"
+        "公告"
       ],
       "locale": "national",
       "market": "hk"
@@ -551,12 +506,12 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "09/04",
-      "summary": "港交所披露易出现又一份代表委任表格披露文件。",
+      "summary": "港股上市公司发布代表委任表格。",
       "importance": 1,
       "rank": 0,
       "tags": [
         "港股",
-        "公司治理"
+        "公告"
       ],
       "locale": "national",
       "market": "hk"
@@ -567,12 +522,12 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "09/04",
-      "summary": "港交所披露易出现股份回购翌日披露报表。",
+      "summary": "港股上市公司发布次日股份回购披露报表。",
       "importance": 1,
       "rank": 0,
       "tags": [
         "港股",
-        "股票回购"
+        "回购"
       ],
       "locale": "national",
       "market": "hk"
@@ -583,12 +538,12 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "09/04",
-      "summary": "港交所披露易出现代表委任表格披露文件。",
+      "summary": "港股上市公司发布代表委任表格。",
       "importance": 1,
       "rank": 0,
       "tags": [
         "港股",
-        "公司治理"
+        "公告"
       ],
       "locale": "national",
       "market": "hk"
@@ -599,12 +554,12 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "09/04",
-      "summary": "港交所披露易出现业务更新类公告(Other - Business Update)。",
+      "summary": "港股上市公司发布业务更新公告。",
       "importance": 1,
       "rank": 0,
       "tags": [
         "港股",
-        "公司公告"
+        "公告"
       ],
       "locale": "national",
       "market": "hk"
@@ -615,13 +570,13 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "09/04",
-      "summary": "美国总统特朗普加倍威胁称,若美联储不降息,将暂停与主要贸易伙伴的贸易往来。",
+      "summary": "美国总统特朗普威胁称，除非美联储降息，否则将停止与主要贸易伙伴的贸易往来。",
       "importance": 3,
       "rank": 0,
       "tags": [
-        "宏观",
+        "美股",
         "美联储",
-        "贸易政策"
+        "贸易"
       ],
       "locale": "overseas",
       "market": "us"
@@ -632,13 +587,12 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "09/04",
-      "summary": "特斯拉Cybercab业务更新令华尔街失望,股价当日下跌约6%。",
+      "summary": "特斯拉Cybercab业务更新未达华尔街预期，公司股价下跌6%。",
       "importance": 2,
       "rank": 0,
       "tags": [
         "特斯拉",
-        "新能源车",
-        "美股"
+        "新能源车"
       ],
       "locale": "overseas",
       "market": "us"
@@ -649,12 +603,12 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "09/04",
-      "summary": "福克斯新闻资深主持人Maria Bartiromo否认遭到解职的相关报道。",
+      "summary": "福克斯新闻资深主持人Maria Bartiromo对被解雇的相关报道提出异议。",
       "importance": 1,
       "rank": 0,
       "tags": [
-        "媒体",
-        "美股"
+        "美股",
+        "媒体"
       ],
       "locale": "overseas",
       "market": "us"
@@ -670,7 +624,6 @@
       "rank": 0,
       "tags": [
         "美债",
-        "主权基金",
         "宏观"
       ],
       "locale": "overseas",
@@ -682,12 +635,12 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "09/04",
-      "summary": "特朗普表示将自掏最多5亿美元用于帮助共和党中期选举。",
+      "summary": "美国总统特朗普表示将自掏腰包最多5亿美元用于协助共和党中期选举。",
       "importance": 2,
       "rank": 0,
       "tags": [
-        "政治",
-        "美国大选"
+        "美股",
+        "政治"
       ],
       "locale": "overseas",
       "market": "us"
@@ -698,12 +651,12 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "09/04",
-      "summary": "法官就如何撤销对一名奥运选手“倒影池”涂鸦案的指控进行权衡。",
+      "summary": "美国法官审议如何撤销对一名奥运选手在反射池破坏文物行为的指控。",
       "importance": 1,
       "rank": 0,
       "tags": [
-        "司法",
-        "美国"
+        "美股",
+        "社会"
       ],
       "locale": "overseas",
       "market": "us"
@@ -714,13 +667,12 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "09/04",
-      "summary": "美国8月就业增长几乎全部由女性贡献,文章分析其中原因。",
+      "summary": "美国8月就业增长几乎全部来自女性，分析讨论原因。",
       "importance": 2,
       "rank": 0,
       "tags": [
-        "就业",
         "宏观",
-        "美国"
+        "就业"
       ],
       "locale": "overseas",
       "market": "us"
@@ -731,13 +683,12 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "09/04",
-      "summary": "美国制裁一家被指控帮助伊朗的土耳其银行,财政部长Bessent表示“希望”不再有更多银行受到处罚。",
+      "summary": "美国制裁一家被指控帮助伊朗的土耳其银行，财政部长贝森特表示\"希望\"不再有银行受到处罚。",
       "importance": 2,
       "rank": 0,
       "tags": [
-        "制裁",
-        "银行",
-        "地缘政治"
+        "美股",
+        "制裁"
       ],
       "locale": "overseas",
       "market": "us"
@@ -748,13 +699,12 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "09/04",
-      "summary": "美国国会再度推迟大麻禁令,含THC饮料可能更加难买。",
+      "summary": "美国国会再次推迟大麻禁令，含THC饮料可能更难买到。",
       "importance": 1,
       "rank": 0,
       "tags": [
-        "消费品",
-        "监管",
-        "美国"
+        "美股",
+        "消费"
       ],
       "locale": "overseas",
       "market": "us"
@@ -765,44 +715,44 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "09/04",
-      "summary": "报道聚焦私人安保行业,称其已成长为年规模约500亿美元的产业。",
+      "summary": "私人安保行业市场规模达500亿美元，探讨其成为大生意的过程。",
       "importance": 1,
       "rank": 0,
       "tags": [
-        "安保",
+        "美股",
         "消费"
       ],
       "locale": "overseas",
       "market": "us"
     },
     {
-      "url": "https://www.investing.com/news/insider-trading-news/remitly-director-nigel-morris-sells-170289-in-stock-93CH-4890046",
-      "title_cn": "Remitly director Nigel Morris sells $170,289 in stock",
+      "url": "https://www.investing.com/news/insider-trading-news/okta-cfo-brett-tighe-sells-128-million-in-company-shares-93CH-4890111",
+      "title_cn": "Okta CFO Brett Tighe sells $12.8 million in company shares",
       "source": "Investing.com News",
       "source_type": "media",
       "date": "09/04",
-      "summary": "Remitly董事Nigel Morris减持公司股票,套现170,289美元。",
+      "summary": "Okta首席财务官Brett Tighe减持公司股份，金额达1280万美元。",
       "importance": 1,
       "rank": 0,
       "tags": [
         "美股",
-        "高管减持"
+        "减持"
       ],
       "locale": "overseas",
       "market": "us"
     },
     {
-      "url": "https://www.investing.com/news/insider-trading-news/squadron-capital-llc-sells-525k-orthopediatrics-kids-shares-93CH-4890045",
-      "title_cn": "Squadron Capital LLC sells $525k Orthopediatrics (kids) shares",
+      "url": "https://www.investing.com/news/insider-trading-news/first-commonwealth-financial-cfo-sells-44030-in-stock-93CH-4890110",
+      "title_cn": "First Commonwealth Financial CFO sells $44,030 in stock",
       "source": "Investing.com News",
       "source_type": "media",
       "date": "09/04",
-      "summary": "Squadron Capital LLC出售Orthopediatrics(儿童骨科)股票,套现约52.5万美元。",
+      "summary": "First Commonwealth Financial首席财务官减持公司股份，金额44030美元。",
       "importance": 1,
       "rank": 0,
       "tags": [
         "美股",
-        "机构减持"
+        "减持"
       ],
       "locale": "overseas",
       "market": "us"
