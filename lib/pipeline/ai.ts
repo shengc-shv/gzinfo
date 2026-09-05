@@ -18,6 +18,10 @@ import { LIGHT_AI_SOURCES, LIGHT_AI_RAW_CAP } from "../ai/light-ai";
 import { generateDaily, makeSkipAiRunner } from "../ai/pipeline";
 import type { DailyContext } from "./context";
 
+/** Pass1 输入 raw_text 截断上限（2026-09-05 优化：原 1200 字远超分类判断所需，
+ *  且下游 Pass2 还会二次截断到 600 字，多出部分纯浪费 token 且增大 JSON 断裂概率）。 */
+const PASS1_RAW_CAP = 450;
+
 /** 归一化 ArticleInput → Pass1Input：raw_text 截断 + date MM/DD + gz_hint 提权。 */
 function toPass1Input(a: ArticleInput): Pass1Input {
   const d = a.publishedAt ?? a.fetchedAt;
@@ -25,7 +29,7 @@ function toPass1Input(a: ArticleInput): Pass1Input {
     ? `${String(d.getMonth() + 1).padStart(2, "0")}/${String(d.getDate()).padStart(2, "0")}`
     : "";
   const isLight = LIGHT_AI_SOURCES.has(a.sourceId ?? "");
-  const raw = (a.excerpt || a.summary || "").slice(0, isLight ? LIGHT_AI_RAW_CAP : 1200);
+  const raw = (a.excerpt || a.summary || "").slice(0, isLight ? LIGHT_AI_RAW_CAP : PASS1_RAW_CAP);
   return {
     url: a.url,
     title: a.title,
