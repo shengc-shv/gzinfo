@@ -3432,11 +3432,9 @@
       "excerpt": "The Venezuelan billionaire the US investigated for money laundering now has a Pentagon oil",
       "publishedAt": "2026-09-05T10:06:38.000Z",
       "category": "stocks",
-      "subcategory": "us",
       "source": "Investing.com News",
-      "tier": "T2",
-      "isIpo": false,
-      "fetchedToday": true
+      "fetchedToday": true,
+      "subcategory": "us"
     },
     {
       "sourceId": "investing-news",
@@ -3445,6 +3443,52 @@
       "excerpt": "Nvidia partner Hon Hai’s August sales jump 52% on AI server demand - Bloomberg",
       "publishedAt": "2026-09-05T09:56:31.000Z",
       "category": "stocks",
+      "source": "Investing.com News",
+      "fetchedToday": true,
+      "subcategory": "us"
+    },
+    {
+      "sourceId": "stcn",
+      "title": "致尚科技公告，终止发行股份及现金购买",
+      "url": "https://www.stcn.com/article/detail/4173654.html",
+      "excerpt": "致尚科技公告，终止发行股份及现金购买",
+      "publishedAt": "2026-09-05T05:34:00.000Z",
+      "category": "finance",
+      "source": "证券时报",
+      "fetchedToday": true,
+      "subcategory": "cn-finance"
+    },
+    {
+      "sourceId": "dayoo-gz",
+      "title": "中小企业数智转型，亚太如何“抱团”？广州这场对接会探路",
+      "url": "https://news.dayoo.com/guangzhou/202609/05/139995_55000243.htm",
+      "excerpt": "中小企业数智转型，亚太如何“抱团”？广州这场对接会探路",
+      "publishedAt": "2026-09-05T00:00:00.000Z",
+      "category": "gz",
+      "summary": "亚太中小企业在穗对接数智转型合作机会，提示分行可借势对接会梳理本地中小科创客群的合作入口。",
+      "source": "广州日报·大洋网",
+      "fetchedToday": true,
+      "subcategory": "gz-media",
+      "relevant": true
+    },
+    {
+      "sourceId": "sina-a-stock",
+      "title": "就业与猎聘 | 顺为、力合科创、京东等机构热招",
+      "url": "https://finance.sina.com.cn/roll/2026-09-05/doc-iniquptq0316305.shtml",
+      "excerpt": "就业与猎聘 | 顺为、力合科创、京东等机构热招",
+      "publishedAt": "2026-09-05T00:00:00.000Z",
+      "category": "stocks",
+      "source": "新浪财经·A股",
+      "fetchedToday": true,
+      "subcategory": "a-share"
+    },
+    {
+      "sourceId": "investing-news",
+      "title": "Goldman raises Asia-Pacific equity target on tech earnings outlook",
+      "url": "https://www.investing.com/news/stock-market-news/goldman-raises-asiapacific-equity-target-on-tech-earnings-outlook-93CH-4890190",
+      "excerpt": "Goldman raises Asia-Pacific equity target on tech earnings outlook",
+      "publishedAt": "2026-09-05T10:33:09.000Z",
+      "category": "stocks",
       "subcategory": "us",
       "source": "Investing.com News",
       "tier": "T2",
@@ -3452,44 +3496,30 @@
       "fetchedToday": true
     },
     {
-      "sourceId": "stcn",
-      "source": "证券时报",
-      "title": "致尚科技公告，终止发行股份及现金购买",
-      "url": "https://www.stcn.com/article/detail/4173654.html",
-      "excerpt": "致尚科技公告，终止发行股份及现金购买",
-      "publishedAt": "2026-09-05T05:34:00.000Z",
-      "category": "finance",
-      "summary": "",
-      "tier": "T2",
-      "fetchedToday": true,
-      "subcategory": "cn-finance"
-    },
-    {
-      "sourceId": "dayoo-gz",
-      "source": "广州日报·大洋网",
-      "title": "中小企业数智转型，亚太如何“抱团”？广州这场对接会探路",
-      "url": "https://news.dayoo.com/guangzhou/202609/05/139995_55000243.htm",
-      "excerpt": "中小企业数智转型，亚太如何“抱团”？广州这场对接会探路",
-      "publishedAt": "2026-09-05T00:00:00.000Z",
-      "category": "gz",
-      "summary": "亚太中小企业在穗对接数智转型合作机会，提示分行可借势对接会梳理本地中小科创客群的合作入口。",
-      "tier": "T2",
-      "relevant": true,
-      "fetchedToday": true,
-      "subcategory": "gz-media"
-    },
-    {
-      "sourceId": "sina-a-stock",
-      "source": "新浪财经·A股",
-      "title": "就业与猎聘 | 顺为、力合科创、京东等机构热招",
-      "url": "https://finance.sina.com.cn/roll/2026-09-05/doc-iniquptq0316305.shtml",
-      "excerpt": "就业与猎聘 | 顺为、力合科创、京东等机构热招",
-      "publishedAt": "2026-09-05T00:00:00.000Z",
+      "sourceId": "investing-news",
+      "title": "Here are three scenarios that could drive gold above $5,000",
+      "url": "https://www.investing.com/news/commodities-news/jefferies-identifies-three-scenarios-that-could-drive-gold-above-5000-4890189",
+      "excerpt": "Here are three scenarios that could drive gold above $5,000",
+      "publishedAt": "2026-09-05T10:20:28.000Z",
       "category": "stocks",
-      "summary": "",
+      "subcategory": "us",
+      "source": "Investing.com News",
       "tier": "T2",
-      "fetchedToday": true,
-      "subcategory": "a-share"
+      "isIpo": false,
+      "fetchedToday": true
+    },
+    {
+      "sourceId": "investing-news",
+      "title": "Horse smuggling exposes cracks in US defenses against screwworm",
+      "url": "https://www.investing.com/news/commodities-news/horse-smuggling-exposes-cracks-in-us-defenses-against-screwworm-4890188",
+      "excerpt": "Horse smuggling exposes cracks in US defenses against screwworm",
+      "publishedAt": "2026-09-05T10:12:27.000Z",
+      "category": "stocks",
+      "subcategory": "us",
+      "source": "Investing.com News",
+      "tier": "T2",
+      "isIpo": false,
+      "fetchedToday": true
     }
   ]
 }

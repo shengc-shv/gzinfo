@@ -3727,30 +3727,6 @@
     "firstSeenAt": "2026-09-05T10:13:22.954Z",
     "lastSeenAt": "2026-09-05T10:13:22.954Z"
   },
-  "https://data.eastmoney.com/xg/xg/#A24052": {
-    "title": "广东邦泽创科电器：IPO提交注册（拟北交所）",
-    "url": "https://data.eastmoney.com/xg/xg/#A24052",
-    "sourceId": "em-declare",
-    "source": "东财IPO在审(广东)",
-    "category": "gd-ipo",
-    "subcategory": "ipo-tutoring",
-    "excerpt": "注册地：广东｜保荐：东莞证券股份有限公司｜更新：2026-09-01",
-    "publishedAt": "2026-09-01T00:00:00.000Z",
-    "firstSeenAt": "2026-09-05T10:35:45.919Z",
-    "lastSeenAt": "2026-09-05T10:35:45.919Z"
-  },
-  "https://data.eastmoney.com/xg/xg/#A25250": {
-    "title": "东莞四维材料科技：IPO问询中（拟北交所）",
-    "url": "https://data.eastmoney.com/xg/xg/#A25250",
-    "sourceId": "em-declare",
-    "source": "东财IPO在审(广东)",
-    "category": "gd-ipo",
-    "subcategory": "ipo-tutoring",
-    "excerpt": "注册地：广东｜保荐：东莞证券股份有限公司｜更新：2026-09-03",
-    "publishedAt": "2026-09-03T00:00:00.000Z",
-    "firstSeenAt": "2026-09-05T10:35:45.919Z",
-    "lastSeenAt": "2026-09-05T10:35:45.919Z"
-  },
   "https://www.investing.com/news/commodities-news/the-venezuelan-billionaire-the-us-investigated-for-money-laundering-now-has-a-pentagon-oil-deal-4890186": {
     "title": "The Venezuelan billionaire the US investigated for money laundering now has a Pentagon oil deal",
     "url": "https://www.investing.com/news/commodities-news/the-venezuelan-billionaire-the-us-investigated-for-money-laundering-now-has-a-pentagon-oil-deal-4890186",
@@ -3812,5 +3788,67 @@
     "publishedAt": "2026-09-05T00:00:00.000Z",
     "firstSeenAt": "2026-09-05T10:35:45.919Z",
     "lastSeenAt": "2026-09-05T10:35:45.919Z"
+  },
+  "https://data.eastmoney.com/xg/xg/#A24052": {
+    "title": "广东邦泽创科电器：IPO提交注册（拟北交所）",
+    "url": "https://data.eastmoney.com/xg/xg/#A24052",
+    "sourceId": "em-declare",
+    "source": "东财IPO在审(广东)",
+    "category": "gd-ipo",
+    "subcategory": "ipo-tutoring",
+    "ai_relevant": true,
+    "excerpt": "注册地：广东｜保荐：东莞证券股份有限公司｜更新：2026-09-01",
+    "publishedAt": "2026-09-01T00:00:00.000Z",
+    "summary": "广东本地拟北交所企业推进至提交注册阶段，下一步可关注其网下询价配售窗口，提示客户参与新股及后续资金归集机会。",
+    "firstSeenAt": "2026-09-05T10:46:41.922Z",
+    "lastSeenAt": "2026-09-05T10:46:41.922Z"
+  },
+  "https://data.eastmoney.com/xg/xg/#A25250": {
+    "title": "东莞四维材料科技：IPO问询中（拟北交所）",
+    "url": "https://data.eastmoney.com/xg/xg/#A25250",
+    "sourceId": "em-declare",
+    "source": "东财IPO在审(广东)",
+    "category": "gd-ipo",
+    "subcategory": "ipo-tutoring",
+    "excerpt": "注册地：广东｜保荐：东莞证券股份有限公司｜更新：2026-09-03",
+    "publishedAt": "2026-09-03T00:00:00.000Z",
+    "firstSeenAt": "2026-09-05T10:46:41.922Z",
+    "lastSeenAt": "2026-09-05T10:46:41.922Z"
+  },
+  "https://www.investing.com/news/stock-market-news/goldman-raises-asiapacific-equity-target-on-tech-earnings-outlook-93CH-4890190": {
+    "title": "Goldman raises Asia-Pacific equity target on tech earnings outlook",
+    "url": "https://www.investing.com/news/stock-market-news/goldman-raises-asiapacific-equity-target-on-tech-earnings-outlook-93CH-4890190",
+    "sourceId": "investing-news",
+    "source": "Investing.com News",
+    "category": "stocks",
+    "subcategory": "us",
+    "excerpt": "Goldman raises Asia-Pacific equity target on tech earnings outlook",
+    "publishedAt": "2026-09-05T10:33:09.000Z",
+    "firstSeenAt": "2026-09-05T10:46:41.922Z",
+    "lastSeenAt": "2026-09-05T10:46:41.922Z"
+  },
+  "https://www.investing.com/news/commodities-news/jefferies-identifies-three-scenarios-that-could-drive-gold-above-5000-4890189": {
+    "title": "Here are three scenarios that could drive gold above $5,000",
+    "url": "https://www.investing.com/news/commodities-news/jefferies-identifies-three-scenarios-that-could-drive-gold-above-5000-4890189",
+    "sourceId": "investing-news",
+    "source": "Investing.com News",
+    "category": "stocks",
+    "subcategory": "us",
+    "excerpt": "Here are three scenarios that could drive gold above $5,000",
+    "publishedAt": "2026-09-05T10:20:28.000Z",
+    "firstSeenAt": "2026-09-05T10:46:41.922Z",
+    "lastSeenAt": "2026-09-05T10:46:41.922Z"
+  },
+  "https://www.investing.com/news/commodities-news/horse-smuggling-exposes-cracks-in-us-defenses-against-screwworm-4890188": {
+    "title": "Horse smuggling exposes cracks in US defenses against screwworm",
+    "url": "https://www.investing.com/news/commodities-news/horse-smuggling-exposes-cracks-in-us-defenses-against-screwworm-4890188",
+    "sourceId": "investing-news",
+    "source": "Investing.com News",
+    "category": "stocks",
+    "subcategory": "us",
+    "excerpt": "Horse smuggling exposes cracks in US defenses against screwworm",
+    "publishedAt": "2026-09-05T10:12:27.000Z",
+    "firstSeenAt": "2026-09-05T10:46:41.922Z",
+    "lastSeenAt": "2026-09-05T10:46:41.922Z"
   }
 }
