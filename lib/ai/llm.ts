@@ -134,6 +134,11 @@ export async function runLlm(
       if (attempt > 0) {
         console.warn(`[llm] ${stage} 成功（重试 ${attempt} 次后）`);
       }
+      // 2026-09-05：HTTP 200 但 content 为空的响应不抛错，会被 runLlm 当成功返回；
+      // 补一行让所有 stage 的「空文本」可观测（此前 exec 空壳无任何痕迹）。
+      if (!result.text.trim()) {
+        console.warn(`[llm] ${stage} ⚠️ 返回空文本（HTTP 成功但 content 为空，下游解析将失败）`);
+      }
       recordAiCall({ ...stamp(), ok: true, ms: result.durationMs || Date.now() - t0 });
       return result;
     } catch (e) {

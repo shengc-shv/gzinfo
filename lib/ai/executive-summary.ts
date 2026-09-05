@@ -256,15 +256,25 @@ export async function generateExecutiveSummary(
   ].join("\n");
   try {
     const { text } = await runLlm({ systemPrompt: SYSTEM_PROMPT, userPrompt, timeoutMs: 240_000 }, { stage: "executive" });
+    // 2026-09-05 可观测性：exec 曾「成功但空壳」（must_read/insights 全空）且无任何日志。
+    // 打原始响应长度+头部片段，区分「200 空响应」「残缺 JSON」「内容空壳」三类失败。
+    console.log(`[exec-llm] 原始响应 ${text.length} 字符 | 头部: ${text.slice(0, 260).replace(/\s+/g, " ")}`);
     const cleaned = extractJson(text);
     let parsed: ExecutiveSummary;
     try {
       parsed = JSON.parse(cleaned);
     } catch {
+      // jsonrepair 仍失败会抛给外层 catch（统一打日志），不再静默 return null
       const jsonrepair = (await import("jsonrepair")).jsonrepair;
       parsed = JSON.parse(jsonrepair(cleaned));
+      console.log(`[exec-llm] jsonrepair 修复后解析成功（cleaned ${cleaned.length} 字符）`);
     }
-    if (!Array.isArray(parsed.must_read) || !Array.isArray(parsed.insights)) return null;
+    if (!Array.isArray(parsed.must_read) || !Array.isArray(parsed.insights)) {
+      console.warn(
+        `[exec-llm] 结构校验失败: must_read=${Array.isArray(parsed.must_read)} insights=${Array.isArray(parsed.insights)} | parsed keys=${Object.keys(parsed as object).join(",")}`,
+      );
+      return null;
+    }
     // 源链接回链：AI 可能漏回 url，用输入 finance/gz 的 url 按标题回匹配注入（更稳，不依赖 LLM 吐 url）
     const normTitle = (t: string) =>
       t.replace(/\s+/g, "").replace(/[，。、：:；;！!？?""'']/g, "").toLowerCase();
@@ -311,6 +321,9 @@ export async function generateExecutiveSummary(
             };
           })()
         : undefined;
+    console.log(
+      `[exec-llm] parsed 盘点: must_read=${parsed.must_read.length} insights=${parsed.insights.length} hero=${typeof parsed.hero_line === "string" && parsed.hero_line ? 1 : 0} spoken_hero=${typeof parsed.spoken_hero === "string" && parsed.spoken_hero.trim() ? 1 : 0} spoken_must=${typeof parsed.spoken_must_read === "string" && parsed.spoken_must_read.trim() ? 1 : 0} spoken_ins=${typeof parsed.spoken_insights === "string" && parsed.spoken_insights.trim() ? 1 : 0} risk=${parsed.risk && typeof parsed.risk === "object" && typeof (parsed.risk as { topic?: unknown }).topic === "string" ? 1 : 0} spoken_risk=${typeof parsed.spoken_risk === "string" && parsed.spoken_risk.trim() ? 1 : 0} gd_ipo=${parsed.guangdong_ipo && typeof parsed.guangdong_ipo === "object" ? 1 : 0}`,
+    );
     return {
       hero_line: typeof parsed.hero_line === "string" ? parsed.hero_line : "",
       spoken_hero: typeof parsed.spoken_hero === "string" && parsed.spoken_hero.trim() ? parsed.spoken_hero.trim() : undefined,
@@ -346,7 +359,10 @@ export async function generateExecutiveSummary(
           ? { spoken: parsed.guangdong_ipo.spoken.trim() }
           : null,
     };
-  } catch {
+  } catch (e) {
+    // 2026-09-05：此前静默 return null，CI 无法区分失败原因。打日志后行为不变（仍返回 null）。
+    const msg = e instanceof Error ? e.message : String(e);
+    console.warn(`[exec-llm] 生成失败（返回 null，将触发评分兜底）: ${msg.slice(0, 200)}`);
     return null;
   }
 }

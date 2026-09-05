@@ -224,6 +224,16 @@ export async function buildExecutiveSummary(
     // 且与下方展示条目一致。与 SKIP_AI 分支共用同一 scorer，两条路径口径统一。
     const llHasContent = !!exec && ((exec.must_read?.length ?? 0) > 0 || (exec.insights?.length ?? 0) > 0);
     if (!llHasContent) {
+      // 2026-09-05 诊断：区分「LLM 返回 null（异常/解析失败）」与「返回内容空壳」两类失败，
+      // 具体原因看上面的 [exec-llm] 原始响应/盘点日志。
+      if (!exec) {
+        ctx.log.warn("exec", "🩺 LLM 返回 null（runLlm 异常或 JSON 解析失败，见 [exec-llm] 日志），回退 2 天评分兜底");
+      } else {
+        ctx.log.warn(
+          "exec",
+          `🩺 LLM 返回内容空壳（must_read ${exec.must_read?.length ?? 0} / insights ${exec.insights?.length ?? 0}），回退 2 天评分兜底`,
+        );
+      }
       const fb = buildExecutiveFromScores(twoDayPool, date);
       ctx.log.info(
         "exec",
