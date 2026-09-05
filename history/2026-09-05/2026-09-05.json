@@ -1,116 +1,88 @@
 {
   "date": "2026-09-05",
-  "hero_line": "APEC中小企业部长会议在穗召开，跨境政商窗口叠加消费贷贴息窗口，分行零售多条线可同步抢客。",
+  "hero_line": "今日分行焦点：非农爆了！9月加息预期升温特朗普喊话：降息！降息！美",
   "must_read": [
     {
-      "title": "证监会强调打造监管铁军 个贷合规检查趋严",
-      "why": "监管对一线营销话术与档案管理要求升级，分行零售条线须提前对照新口径自查，防范代销与个贷合规风险外溢。",
+      "title": "美联储9月会议悬念丛生！沃勒强力“放鸽”白宫加码施压降息",
+      "why": "国家核心监管新政（信贷/财富/监管合规）：建议分行评估对客与产品影响",
+      "url": "https://finance.eastmoney.com/a/202609043864710182.html"
+    },
+    {
+      "title": "非农爆了！9月加息预期升温特朗普喊话：降息！降息！美联储必须“聪明”起来",
+      "why": "国家核心监管新政（信贷）：建议分行评估对客与产品影响",
+      "url": "https://finance.eastmoney.com/a/202609053865951116.html"
+    },
+    {
+      "title": "证监会：着力打造“三个过硬”监管铁军",
+      "why": "国家核心监管新政（信贷）：建议分行评估对客与产品影响",
       "url": "https://www.stcn.com/article/detail/4173461.html"
     },
     {
-      "title": "央行等量续作逆回购 月中观察MLF与LPR",
-      "why": "跨季流动性态度中性，但下周一即开展5000亿买断式逆回购，9月MLF与LPR报价是关注焦点，直接传导分行负债成本与按揭定价节奏。",
-      "url": "https://www.stcn.com/article/detail/4173448.html"
-    },
-    {
-      "title": "信息披露办法五年大修征求意见",
-      "why": "百万亿资管市场信披大一统进入落地前最后一公里，分行财富条线须尽快对照新模板梳理产品披露与客户沟通话术。",
-      "url": "https://www.cnfin.com/hg-lb/detail/20260904/4465543_1.html"
-    },
-    {
-      "title": "国有大行集中清淤 不良核销规模显著扩大",
-      "why": "工行建行核销规模上行，反映资产质量压力仍在释放，分行需对照本行不良结构评估潜在处置节奏与拨备覆盖。",
-      "url": "https://finance.sina.com.cn/jinrong/yh/2026-09-04/doc-iniqsens0903536.shtml"
+      "title": "打新阵营扩容 “两创板”新股中签率持续走低",
+      "why": "市场信号（财富/私行）：直击财富/私行业务",
+      "url": "https://www.stcn.com/article/detail/4173452.html"
     }
   ],
   "insights": [
     {
-      "topic": "APEC中小企业部长会在穗召开",
-      "tags": [
-        "客群",
-        "代发"
-      ],
-      "impact": "跨境政商资源在分行门口汇聚，市工信局、外资园区与会中小外贸客群集中曝光，是批量获客的天然窗口期。",
-      "action": "本周由公司部牵头，对接市工信局与南沙外资园区，针对与会中小外贸客群推跨境结算与融资方案，零售端同步捕捉高管个人金融需求。",
-      "sources": [
-        {
-          "title": "第32次APEC中小企业部长会议在广州举行",
-          "url": "https://www.stcn.com/article/detail/4173447.html"
-        },
-        {
-          "title": "第32次亚太经合组织中小企业部长会议在广州举行",
-          "url": "https://www.stcn.com/article/detail/4172850.html"
-        }
-      ]
+      "topic": "【金融街发布】国家金融监督管理",
+      "tags": [],
+      "impact": "对广州分行财富业务有潜在影响",
+      "action": "建议分行关注财富动向并评估动作"
     },
     {
-      "topic": "广汽新能源车销量高增带动产业链金融",
-      "tags": [
-        "信贷",
-        "代发"
-      ],
-      "impact": "广汽8月新能源车销量同比增近五成，1至8月自主品牌出口翻番，主机厂上下游供应链与员工消费金融需求明显扩张。",
-      "action": "本周走访广汽主机厂及核心经销商，针对供应链推分期与贴息方案，零售端联动车企员工做代发与信用卡批量获客。",
-      "sources": [
-        {
-          "title": "广汽集团：8月新能源汽车销量5.65万辆，同比增长47.69%",
-          "url": "https://www.stcn.com/article/detail/4172982.html"
-        },
-        {
-          "title": "广汽集团1—8月自主品牌汽车出口量增长136%",
-          "url": "https://www.stcn.com/article/detail/4173211.html"
-        }
-      ]
+      "topic": "首个针对私募募集的行业规范出台",
+      "tags": [],
+      "impact": "对广州分行私行/监管合规业务有潜在影响",
+      "action": "建议分行关注私行动向并评估动作"
     },
     {
-      "topic": "广东车船税优惠明年调整 私车客群提前摸排",
-      "tags": [
-        "客群",
-        "财富"
-      ],
-      "impact": "广东车船税优惠政策明年起调整，私车客户对税务联动与车险分期诉求上升，是零售客群经理做增值服务的切入点。",
-      "action": "本周由零售客群经理梳理辖内私车客户清单，提前沟通车险分期与税务联动方案，配套信用卡与代发捆绑。",
-      "sources": [
-        {
-          "title": "明年起广东车船税优惠政策将调整",
-          "url": "https://www.cnr.cn/gd/guangdongyaowen/20260904/t20260904_527804117.shtml"
-        }
-      ]
+      "topic": "新旧动能转换时：一家股份行的“",
+      "tags": [],
+      "impact": "对广州分行信贷/客群/竞对动态业务有潜在影响",
+      "action": "建议分行关注信贷动向并评估动作"
     },
     {
-      "topic": "广电运通挂牌转让股权 对公关系需提前跟进",
-      "tags": [
-        "客群",
-        "信贷"
-      ],
-      "impact": "广电运通挂牌转让数据交易公司及榆林神鹰股权，可能引发对公账户变动与资金归集路径调整，存量客户关系维护需提前布局。",
-      "action": "本周由公司部牵头走访广电运通，跟进股权转让进展，提前对接资金归集与高管个人金融服务，防止客户流失。",
-      "sources": [
-        {
-          "title": "广电运通：拟公开挂牌转让数据交易公司30%股权及榆林神鹰55%股权",
-          "url": "https://www.stcn.com/article/detail/4172866.html"
-        }
-      ]
+      "topic": "特朗普再度施压美联储：如果不降",
+      "tags": [],
+      "impact": "对广州分行信贷业务有潜在影响",
+      "action": "建议分行关注信贷动向并评估动作"
+    },
+    {
+      "topic": "新华财经晚报：证监会就私募基金",
+      "tags": [],
+      "impact": "对广州分行财富业务有潜在影响",
+      "action": "建议分行关注财富动向并评估动作"
     }
   ],
   "sections": {
     "gz_local": [
       {
-        "url": "https://www.stcn.com/article/detail/4173447.html",
-        "title_cn": "第32次APEC中小企业部长会议在广州举行 贡献\"中国方案\" 为中小企业发展注入新动能",
-        "title_orig": "第32次APEC中小企业部长会议在广州举行 贡献\"中国方案\" 为中小企业发展注入新动能",
-        "source": "证券时报",
-        "source_type": "media",
+        "url": "https://news.dayoo.com/guangzhou/202609/05/139995_55000050.htm",
+        "title_cn": "广州市政府召开常务会议",
+        "title_orig": "广州市政府召开常务会议",
+        "source": "广州日报·大洋网",
+        "source_type": "official",
         "date": "09/05",
-        "summary": "第32次APEC中小企业部长会议在广州召开，国际政银合作窗口期叠加\"中国方案\"输出。可考虑对接市工信局、外资园区的中小企业融资与跨境结算需求，把握跨境金融业务落单机会。",
+        "summary": "广州市政府9/5召开常务会议，具体议题待公布；提示相关部门跟踪议题方向，捕捉与零售业务的关联点。",
         "importance": 3,
         "rank": 1,
-        "tags": [
-          "政银合作",
-          "客群"
-        ],
+        "tags": [],
         "locale": "gz",
-        "locale_evidence": "第32次APEC中小企业部长会议在广州举行"
+        "locale_evidence": "广州市政府召开常务会议"
+      },
+      {
+        "url": "https://www.stcn.com/article/detail/4173447.html",
+        "title_cn": "第32次APEC中小企业部长会议在广州举行 贡献“中国方案” 为中小企业发展注入新动能",
+        "source": "证券时报",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "09/05",
+        "summary": "第32次APEC中小企业部长会议在广州召开，国际政银合作窗口期叠加\"中国方案\"输出。可考虑对接市工信局、外资园区的中小企业融资与跨境结算需求，把握跨境金融业务落单机会。",
+        "importance": 2,
+        "rank": 2,
+        "tags": [],
+        "locale": "gz"
       },
       {
         "url": "https://www.stcn.com/article/detail/4172850.html",
@@ -121,7 +93,7 @@
         "date": "09/04",
         "summary": "APEC中小企业部长会议在穗举行，跨境政商资源汇聚。所以呢：分行可借此窗口对接与会中小外贸客群，推动跨境结算与融资方案落地。",
         "importance": 2,
-        "rank": 2,
+        "rank": 3,
         "tags": [],
         "locale": "gz"
       },
@@ -134,7 +106,7 @@
         "date": "09/04",
         "summary": "广州海关保障中博会顺利开展，进出口通关效率有保障。所以呢：贸易客群经理可结合通关便利做关税保函、进出口融资配套营销。",
         "importance": 2,
-        "rank": 3,
+        "rank": 4,
         "tags": [],
         "locale": "gz"
       },
@@ -147,12 +119,86 @@
         "date": "09/04",
         "summary": "康方生物作为广州原研药代表亮相APEC观察。所以呢：分行可梳理生物医药客群白名单，对接研发贷与股权融资撮合机会。",
         "importance": 2,
-        "rank": 4,
+        "rank": 5,
         "tags": [],
         "locale": "gz"
       }
     ],
     "biz_insight": [
+      {
+        "url": "https://m.21jingji.com/article/20260905/herald/56e12caff5389c7f1ab48bfd920c73bf.html",
+        "title_cn": "银行网点\"变形记\"——从规模增减到价值重估",
+        "title_orig": "银行网点\"变形记\"——从规模增减到价值重估",
+        "source": "21世纪经济报道·金融",
+        "source_type": "media",
+        "date": "09/05",
+        "summary": "网点从扩规模转向价值重估，社区/财富型定位分化；可作为本行广州网点功能优化的同业参考。",
+        "importance": 3,
+        "rank": 1,
+        "tags": [
+          "客群",
+          "竞对动态"
+        ],
+        "locale": "national"
+      },
+      {
+        "url": "https://m.21jingji.com/article/20260905/herald/e8e248e93a298e057ecdd93461ca8cbb.html",
+        "title_cn": "中信金控详解综合金融协同价值，上半年净利增22%至656亿元",
+        "title_orig": "中信金控详解综合金融协同价值，上半年净利增22%至656亿元",
+        "source": "21世纪经济报道·金融",
+        "source_type": "media",
+        "date": "09/05",
+        "summary": "中信金控上半年净利656亿元、同比+22%，综合金融协同提速；私行及高净值客群竞争加码，可关注其产品组合打法。",
+        "importance": 2,
+        "rank": 2,
+        "tags": [
+          "财富",
+          "竞对动态"
+        ],
+        "locale": "national"
+      },
+      {
+        "url": "https://www.investing.com/news/economy-news/another-false-dawn-chinas-luxury-spending-revival-seems-to-be-fading-bernstein-4890177",
+        "title_cn": "Bernstein：中国奢侈品消费复苏或再度落空",
+        "title_orig": "Another false dawn? China's luxury spending revival seems to be fading: Bernstein",
+        "source": "Investing.com News",
+        "source_type": "media",
+        "date": "09/05",
+        "summary": "Bernstein警示中国奢侈品消费复苏或再度落空，高净值客群可选消费疲软；私行端可关注客户资产配置再平衡需求。",
+        "importance": 2,
+        "rank": 3,
+        "tags": [
+          "财富",
+          "客群"
+        ],
+        "locale": "national"
+      },
+      {
+        "url": "https://www.stcn.com/article/detail/4173453.html",
+        "title_cn": "北交所新股量质齐升 新质生产力赛道企业集中登场",
+        "source": "证券时报",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "09/05",
+        "summary": "北交所新股\"量质齐升\"，新质生产力赛道企业集中申报。提示科创客群拓展团队盯紧受理-问询节奏，提前介入辅导期企业做股权激励贷与并购撮合。",
+        "importance": 2,
+        "rank": 4,
+        "tags": [],
+        "locale": "national"
+      },
+      {
+        "url": "https://www.stcn.com/article/detail/4173448.html",
+        "title_cn": "央行等量续作3个月期买断式逆回购",
+        "source": "证券时报",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "09/05",
+        "summary": "央行等量续作3个月期买断式逆回购，跨季流动性态度中性。下一步观察9月中MLF与LPR报价，对分行负债成本与按揭定价节奏有直接传导。",
+        "importance": 2,
+        "rank": 5,
+        "tags": [],
+        "locale": "national"
+      },
       {
         "url": "https://www.stcn.com/article/detail/4173370.html",
         "title_cn": "守正笃行，养老为民——以正确政绩观做好养老金融大文章",
@@ -162,49 +208,25 @@
         "date": "09/04",
         "summary": "媒体解读养老金融大文章的政策导向。所以呢：分行零售端可借势推动个人养老账户与适老财富产品组合营销。",
         "importance": 2,
-        "rank": 1,
+        "rank": 6,
         "tags": [
           "客群"
         ],
         "locale": "national"
       },
       {
-        "url": "https://www.stcn.com/article/detail/4173364.html",
-        "title_cn": "绿色算力，再迎利好！七部门，最新部署",
+        "url": "https://www.stcn.com/article/detail/4172866.html",
+        "title_cn": "广电运通：拟公开挂牌转让数据交易公司30%股权及榆林神鹰55%股权",
         "source": "证券时报",
         "source_type": "media",
         "tier": "T2",
         "date": "09/04",
-        "summary": "七部门联合部署绿色算力发展方向。所以呢：分行可结合数据中心客群评级，跟踪绿色信贷贴标与项目储备机会。",
+        "summary": "广电运通挂牌转让数据交易公司30%股权及榆林神鹰55%股权，可能涉及对公账户变动与资金归集路径调整，对分行存量对公关系维护需提前跟进。",
         "importance": 2,
-        "rank": 2,
-        "tags": [],
-        "locale": "national"
-      },
-      {
-        "url": "https://www.stcn.com/article/detail/4173232.html",
-        "title_cn": "一线城市优质宅地接连出让 房企竞拍趋于理性",
-        "source": "证券时报",
-        "source_type": "media",
-        "tier": "T2",
-        "date": "09/04",
-        "summary": "一线城市优质宅地密集出让，房企竞拍趋于理性。所以呢：分行可跟踪头部房企拿地节奏，对接开发贷与城市更新融资需求。",
-        "importance": 2,
-        "rank": 3,
-        "tags": [],
-        "locale": "national"
-      },
-      {
-        "url": "https://www.stcn.com/article/detail/4173275.html",
-        "title_cn": "下周一，央行将开展5000亿元买断式逆回购操作",
-        "source": "证券时报",
-        "source_type": "media",
-        "tier": "T2",
-        "date": "09/04",
-        "summary": "央行下周一开展5000亿元买断式逆回购。所以呢：月末流动性维持充裕，分行可提示同业资金面变化对客户理财与存款策略的影响。",
-        "importance": 2,
-        "rank": 4,
-        "tags": [],
+        "rank": 12,
+        "tags": [
+          "私行"
+        ],
         "locale": "national"
       },
       {
@@ -216,61 +238,20 @@
         "date": "09/04",
         "summary": "国有大行核销规模显著扩大，工行超800亿、建行上半年逼近去年全年。所以呢：分行风险条线可对照本行不良结构，评估潜在核销压力与处置节奏。",
         "importance": 2,
-        "rank": 7,
-        "tags": [],
-        "locale": "national"
-      },
-      {
-        "url": "https://finance.sina.com.cn/money/bank/bank_hydt/2026-09-04/doc-iniqriia0805847.shtml",
-        "title_cn": "私行“下沉”与“升维”",
-        "source": "新浪财经·银行频道",
-        "source_type": "media",
-        "tier": "T2",
-        "date": "09/04",
-        "summary": "私行同时向下沉与高端升维两端发力，客层打法分化。所以呢：分行私行中心可思考存量客户分层运营与高端升维的产品矩阵补位。",
-        "importance": 2,
-        "rank": 8,
-        "tags": [
-          "私行"
-        ],
-        "locale": "national"
-      },
-      {
-        "url": "https://m.21jingji.com/article/20260904/herald/61f5c807f0b2fc74ed447e855769ec6e.html",
-        "title_cn": "银行股爆发！中行建行港股创新高",
-        "source": "21世纪经济报道·金融",
-        "source_type": "media",
-        "tier": "T2",
-        "date": "09/04",
-        "summary": "中行、建行H股创阶段新高，银行板块情绪走强。所以呢：分行高净值客户经理可结合板块行情，提示港股配置窗口与配置思路。",
-        "importance": 2,
-        "rank": 9,
-        "tags": [],
-        "locale": "national"
-      },
-      {
-        "url": "https://m.21jingji.com/article/20260904/herald/94dcf42c311c8a3e7d36cefef76423a7.html",
-        "title_cn": "新旧动能转换时：一家股份行的“科技—产业—金融”新三角实践",
-        "source": "21世纪经济报道·金融",
-        "source_type": "media",
-        "tier": "T2",
-        "date": "09/04",
-        "summary": "股份行探索科技-产业-金融闭环新三角打法。所以呢：分行科创金融团队可借鉴其场景串联逻辑，落地本地产业链客群。",
-        "importance": 2,
-        "rank": 10,
+        "rank": 14,
         "tags": [],
         "locale": "national"
       }
     ],
     "policy_market": [
       {
-        "url": "https://www.stcn.com/article/detail/4173448.html",
-        "title_cn": "央行等量续作3个月期买断式逆回购",
-        "title_orig": "央行等量续作3个月期买断式逆回购",
-        "source": "证券时报",
-        "source_type": "official",
+        "url": "https://finance.eastmoney.com/a/202609053865951116.html",
+        "title_cn": "非农爆了！9月加息预期升温 特朗普喊话：降息！降息！",
+        "title_orig": "非农爆了！9月加息预期升温特朗普喊话：降息！降息！美联储必须\"聪明\"起来",
+        "source": "东方财富",
+        "source_type": "media",
         "date": "09/05",
-        "summary": "央行等量续作3个月期买断式逆回购，跨季流动性态度中性。下一步观察9月中MLF与LPR报价，对分行负债成本与按揭定价节奏有直接传导。",
+        "summary": "美国非农超预期推升9月加息预期；外汇与黄金客户面临预期重定价，结售汇窗口可主动提示。",
         "importance": 2,
         "rank": 1,
         "tags": [
@@ -280,18 +261,46 @@
         "locale": "national"
       },
       {
-        "url": "https://www.stcn.com/article/detail/4172982.html",
-        "title_cn": "广汽集团：8月新能源汽车销量5.65万辆，同比增长47.69%",
-        "title_orig": "广汽集团：8月新能源汽车销量5.65万辆，同比增长47.69%",
-        "source": "证券时报",
+        "url": "https://news.southcn.com/node_812903b83a/0d54a36e0a.shtml",
+        "title_cn": "多重因素困扰 国际金价陷入震荡拉锯",
+        "title_orig": "多重因素困扰 国际金价陷入震荡拉锯",
+        "source": "南方网·经济",
         "source_type": "media",
-        "date": "09/04",
-        "summary": "广汽集团8月新能源车销量5.65万辆、同比+47.69%。车企上下游供应链与员工消费金融需求扩张，可关注主机厂经销商贴息、供应链分期等场景落地。",
+        "date": "09/05",
+        "summary": "国际金价陷入震荡拉锯，多空因素交织；黄金客群短期观望情绪上升，配置类客户可节奏放缓。",
         "importance": 2,
         "rank": 2,
         "tags": [
-          "粤"
+          "市场",
+          "财富",
+          "客群"
         ],
+        "locale": "national"
+      },
+      {
+        "url": "https://www.stcn.com/article/detail/4173452.html",
+        "title_cn": "打新阵营扩容 “两创板”新股中签率持续走低",
+        "source": "证券时报",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "09/05",
+        "summary": "\"两创板\"打新中签率走低，公募基金等机构参与度提升。提示高净值客户打新策略需与公募产品组合搭配，单账户打新收益边际下降。",
+        "importance": 2,
+        "rank": 3,
+        "tags": [],
+        "locale": "national"
+      },
+      {
+        "url": "https://www.stcn.com/article/detail/4173461.html",
+        "title_cn": "证监会：着力打造“三个过硬”监管铁军",
+        "source": "证券时报",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "09/05",
+        "summary": "证监会强调\"三个过硬\"监管铁军建设，关注后续代销、个贷合规检查力度变化，对分行一线营销话术与档案管理提出更严要求。",
+        "importance": 2,
+        "rank": 4,
+        "tags": [],
         "locale": "national"
       },
       {
@@ -303,7 +312,7 @@
         "date": "09/04",
         "summary": "中行协助在港发行75亿元广东省政府债。所以呢：分行可借此观察湾区跨境债融通道，为企业境外债承销撮合积累客户。",
         "importance": 2,
-        "rank": 6,
+        "rank": 5,
         "tags": [],
         "locale": "national"
       },
@@ -316,7 +325,7 @@
         "date": "09/04",
         "summary": "第二批32个零售创新试点城市落地，零售银行部可排查名单内城市支行，围绕商圈改造和消费场景做商户收单与联名卡方案。",
         "importance": 2,
-        "rank": 7,
+        "rank": 6,
         "tags": [
           "客群"
         ],
@@ -331,7 +340,7 @@
         "date": "09/04",
         "summary": "2030年专精特新小巨人目标2.2万家，零售对公可提前对接辖内培育库企业，布局科技e贷等专属产品。",
         "importance": 2,
-        "rank": 8,
+        "rank": 7,
         "tags": [],
         "locale": "national"
       },
@@ -344,7 +353,7 @@
         "date": "09/04",
         "summary": "媒体回顾楼市预售制运行30年历程。所以呢：分行可关注预售制改革讨论对按揭准入与开发商授信政策的潜在影响。",
         "importance": 2,
-        "rank": 10,
+        "rank": 9,
         "tags": [],
         "locale": "national"
       },
@@ -357,7 +366,7 @@
         "date": "09/04",
         "summary": "信息披露管理办法修订征求意见，五年一大改。所以呢：分行合规与对公条线应尽快对照新口径梳理披露模板，捕捉反馈窗口。",
         "importance": 2,
-        "rank": 11,
+        "rank": 10,
         "tags": [],
         "locale": "national"
       },
@@ -370,20 +379,7 @@
         "date": "09/04",
         "summary": "明年起广东车船税优惠政策将调整。所以呢：分行零售客群经理可提前梳理私车客户清单，做车险分期与税务联动沟通。",
         "importance": 2,
-        "rank": 12,
-        "tags": [],
-        "locale": "national"
-      },
-      {
-        "url": "https://finance.eastmoney.com/a/202609043864710182.html",
-        "title_cn": "美联储9月会议悬念丛生！沃勒强力“放鸽”白宫加码施压降息",
-        "source": "东方财富",
-        "source_type": "media",
-        "tier": "T2",
-        "date": "09/04",
-        "summary": "美联储9月议息分歧加大，降息预期升温。所以呢：分行外汇与财富条线可关注美元利率走向，对结售汇与跨境配置客户做提示。",
-        "importance": 2,
-        "rank": 13,
+        "rank": 11,
         "tags": [],
         "locale": "national"
       },
@@ -396,45 +392,13 @@
         "date": "09/04",
         "summary": "私募募集新规出台，违规成本显著提升。所以呢：分行私行代销端应排查合作私募合规底稿，强化客户适当性管理。",
         "importance": 2,
-        "rank": 14,
+        "rank": 13,
         "tags": [],
         "locale": "national"
       }
     ],
-    "tech": [
-      {
-        "url": "https://www.cnfin.com/qy-lb/detail/20260904/4465108_1.html",
-        "title_cn": "外滩大会开幕在即，五大亮点提前披露",
-        "title_orig": "外滩大会开幕在即，五大亮点提前披露",
-        "source": "新华财经",
-        "source_type": "media",
-        "date": "09/04",
-        "summary": "外滩大会开幕在即，AI agent、安全、多端体验等议题集中亮相。提示零售条线可关注AI智能体在智能投顾、客服场景的落地节奏，为后续产品迭代储备认知。",
-        "importance": 2,
-        "rank": 1,
-        "tags": [
-          "科技金融"
-        ],
-        "locale": "national"
-      }
-    ],
+    "tech": [],
     "ipo": [
-      {
-        "url": "https://www.stcn.com/article/detail/4173453.html",
-        "title_cn": "北交所新股量质齐升 新质生产力赛道企业集中登场",
-        "title_orig": "北交所新股量质齐升 新质生产力赛道企业集中登场",
-        "source": "证券时报",
-        "source_type": "media",
-        "date": "09/05",
-        "summary": "北交所新股\"量质齐升\"，新质生产力赛道企业集中申报。提示科创客群拓展团队盯紧受理-问询节奏，提前介入辅导期企业做股权激励贷与并购撮合。",
-        "importance": 3,
-        "rank": 1,
-        "tags": [
-          "市场",
-          "客群"
-        ],
-        "locale": "national"
-      },
       {
         "url": "https://data.eastmoney.com/xg/xg/#A25250",
         "title_cn": "东莞四维材料科技：IPO问询中（拟北交所）",
@@ -444,7 +408,7 @@
         "date": "09/03",
         "summary": "注册地：广东｜保荐：东莞证券股份有限公司｜更新：2026-09-03",
         "importance": 2,
-        "rank": 2,
+        "rank": 1,
         "tags": [
           "粤"
         ],
@@ -457,9 +421,9 @@
         "source": "东财IPO在审(广东)",
         "source_type": "media",
         "date": "09/01",
-        "summary": "广东邦泽创科电器北交所IPO提交注册，由东莞证券保荐。可提前对接发行募资账户与高管个人金融需求，跟进打新客户配售机会。",
-        "importance": 1,
-        "rank": 3,
+        "summary": "广东邦泽创科电器已提交北交所注册，保荐东莞证券；机构业务可对接上市后募资/并购需求。",
+        "importance": 2,
+        "rank": 2,
         "tags": [
           "粤"
         ],
@@ -468,34 +432,58 @@
       }
     ]
   },
+  "risk": {
+    "topic": "银行集中“清淤”：多家银行清理",
+    "evidence": "银行集中“清淤”：多家银行清理百亿不良，工行核销超800亿元",
+    "impact": "对分行相关条线需关注合规与风险敞口",
+    "action": "建议对应条线评估并制定应对",
+    "url": "https://finance.cctv.com/2026/09/04/ARTIuz2PcpgZOtcBlvLXzKHC260904.shtml"
+  },
   "stock_recap": {
     "us": {
-      "overview": "美股科技股承压，特斯拉Cybercab不及预期重挫6%。",
+      "overview": "标普500跌0.38%，美8月非农超预期重燃加息担忧，纳指跌0.29%、特斯拉跌近6%。",
       "sectors": [
-        "科技：特斯拉Cybercab更新令华尔街失望，股价大跌6%，板块整体走弱。",
-        "主权基金：挪威主权基金拟减持美债逾5300亿元，避险情绪升温。",
-        "宏观：特朗普威胁若美联储不降息将停止与主要伙伴贸易，政策不确定性加大。"
+        "特斯拉Cybercab更新令华尔街失望，股价跌6%，拖累新能源车板块。",
+        "比特币跌破8万美元，因强劲非农引发美联储加息预期升温，科技股承压。",
+        "存储与光通信板块走强，成少数亮点，对冲科技股跌势。",
+        "特朗普威胁以切断贸易施压美联储降息，政策博弈升温加剧市场波动。"
       ],
-      "spoken": "美股科技股承压，特斯拉Cybercab不及预期重挫6%，挪威主权基金计划减持超5300亿元美债，特朗普再度施压美联储降息，市场不确定性加大。",
+      "spoken": "美股周五集体收跌。标普500跌0.38%，纳指跌0.29%，道指跌0.51%。8月非农大超预期，市场加息担忧再起，特斯拉因Cybercab更新不及预期大跌6%拖累科技股。比特币跌破8万美元。存储和光通信板块逆势走强，特朗普继续施压美联储降息，市场波动加大。",
       "meta": {
         "source": "CNBC Top Stories",
-        "crossCheck": "新浪K线",
-        "date": "2026-09-04"
+        "crossCheck": "新浪行情",
+        "date": "2026-09-05"
       },
-      "indices": []
+      "indices": [
+        {
+          "name": "道琼斯",
+          "value": "53414.25",
+          "changePct": "-0.51%"
+        },
+        {
+          "name": "纳斯达克",
+          "value": "26506.99",
+          "changePct": "-0.29%"
+        },
+        {
+          "name": "标普500",
+          "value": "7718.60",
+          "changePct": "-0.38%"
+        }
+      ]
     },
     "aShare": {
-      "overview": "A股三大指数冲高回落，上证收跌0.30%，猪肉股逆市大涨。",
+      "overview": "上证跌0.30%收3930点，深成指跌0.79%，创业板跌0.78%，美非农超预期强化加息预期，A股科技股承压。",
       "sectors": [
-        "猪肉：猪价走出周期低谷，猪肉概念股掀涨停潮领涨两市。",
-        "AI应用：新'易中天'集体飙涨，GPT-6催化AGI主题发酵。",
-        "数字货币：盘中直线拉升封板，政策预期再度升温。",
-        "贵金属：全球最大主权基金拟减持美债，黄金避险需求受关注。"
+        "GPT-6引爆AI应用概念，新易中天组合领涨，AI主线获得资金关注。",
+        "美8月非农大超预期，美联储加息预期升温，北向资金风险偏好受抑。",
+        "机构调研超6000次聚焦财报季，科创板中报超预期品种获私募掘金。",
+        "家电板块弱势，中信证券提示二季度需求偏弱，关注内需企稳品种。"
       ],
-      "spoken": "A股三大指数冲高回落，上证收跌0.30%、深成指跌0.79%。猪肉概念股逆市掀涨停潮，新易中天集体飙涨，数字货币盘中直线封板，全球最大主权基金拟减持美债5300亿元。",
+      "spoken": "A股三大指数全线收跌。上证收3930点跌0.30%，深成指跌0.79%，创业板跌0.78%。美国8月非农大超预期，美联储加息预期升温压制科技股。GPT-6发布引爆AI应用概念，新易中天组合领涨成盘面亮点。机构调研超6000次掘金财报季，家电板块受二季度需求偏弱拖累走弱。",
       "meta": {
         "source": "东方财富",
-        "crossCheck": "新浪K线",
+        "crossCheck": "新浪行情",
         "date": "2026-09-05"
       },
       "indices": [
@@ -517,25 +505,37 @@
       ]
     },
     "hk": {
-      "overview": "恒指收涨1.74%报22912点，恒科涨2.27%，科网股普涨AI应用走强。",
+      "overview": "恒指收涨1.74%报25650点，科指涨2.27%，科网股与AI应用股普涨，联想涨超6%。",
       "sectors": [
-        "科网：联想涨超6%、百度午后涨超4%，AI应用股集体走强。",
-        "金融：国有六大行周内齐创历史新高，大金融股持续活跃。",
-        "回购增持：港股年内回购逾千亿元，三板块获重要股东增持。"
+        "联想涨超6%领涨科网股，AI应用股集体走强，资金回流港股科技龙头。",
+        "国有六大行本周均创历史新高，大金融股持续活跃，南向资金加仓。",
+        "年内回购逾千亿元叠加三板块获重要股东增持，蓝筹股获支撑。",
+        "券商密集上调华润置地目标价至38.8港元、富卫至41.9港元，内房与保险获机构看好。"
       ],
-      "spoken": "港股恒指收涨1.74%报22912点，恒科涨2.27%。科网股普涨，联想涨超6%、百度涨超4%，AI应用股走强；国有六大行周内齐创历史新高，年内回购逾千亿元。",
+      "spoken": "港股强势收涨。恒指收报25650点涨1.74%，恒生科技涨2.27%。科网股普涨，联想涨超6%领涨，AI应用股集体走强。大金融股持续活跃，国有六大行本周均创历史新高。年内回购逾千亿元，蓝筹股获重要股东增持。高盛上调华润置地目标价至38.8港元，内房与保险板块获机构看好。整体市场情绪明显回暖。",
       "meta": {
         "source": "新浪财经·港股",
-        "crossCheck": "新浪K线",
+        "crossCheck": "新浪行情",
         "date": "2026-09-04"
       },
       "sourceReport": {
         "title": "港股收评：恒指涨1.74% 科指涨2.27% 科网股普涨 AI应用股走强 联想涨超6%",
         "url": "https://finance.sina.com.cn/stock/hkstock/marketalerts/2026-09-04/doc-iniqryes4153297.shtml"
       },
-      "indices": []
+      "indices": [
+        {
+          "name": "恒生指数",
+          "value": "25650.87",
+          "changePct": "+1.74%"
+        },
+        {
+          "name": "恒生科技",
+          "value": "4569.80",
+          "changePct": "+2.27%"
+        }
+      ]
     },
-    "quoteChannel": "新浪K线",
+    "quoteChannel": "新浪行情",
     "quoteDate": "2026-09-04",
     "marketStatus": {
       "isMarketClosed": true,
@@ -547,22 +547,6 @@
   },
   "stock_news": [
     {
-      "url": "https://finance.eastmoney.com/a/202609043865219747.html",
-      "title_cn": "新“易中天”集体飙涨！GPT-6引爆AI应用AGI时代正式开启？(附股)",
-      "source": "东方财富",
-      "source_type": "media",
-      "date": "09/04",
-      "summary": "AI概念股集体大涨，市场传闻GPT-6相关进展，被媒体冠以\"新易中天\"称号，市场讨论AGI时代开启预期。",
-      "importance": 2,
-      "rank": 0,
-      "tags": [
-        "AI",
-        "A股"
-      ],
-      "locale": "national",
-      "market": "a-share"
-    },
-    {
       "url": "https://finance.eastmoney.com/a/202609043865601026.html",
       "title_cn": "美国8月非农数据大超预期！美联储加息预期升温",
       "source": "东方财富",
@@ -573,54 +557,74 @@
       "rank": 0,
       "tags": [
         "宏观",
-        "美联储"
+        "美联储",
+        "非农"
       ],
       "locale": "national",
       "market": "a-share"
     },
     {
-      "url": "https://finance.eastmoney.com/a/202609043865379465.html",
-      "title_cn": "A股三大指数冲高回落猪肉概念股逆市大涨",
+      "url": "https://finance.eastmoney.com/a/202609053865951116.html",
+      "title_cn": "非农爆了！9月加息预期升温特朗普喊话：降息！降息！美联储必须“聪明”起来",
       "source": "东方财富",
       "source_type": "media",
-      "date": "09/04",
-      "summary": "A股三大指数冲高回落，猪肉概念股逆市大涨。",
-      "importance": 2,
+      "date": "09/05",
+      "summary": "非农数据公布后9月加息预期升温，特朗普喊话要求美联储降息，称美联储必须\"聪明\"起来。",
+      "importance": 3,
       "rank": 0,
       "tags": [
-        "A股",
-        "猪肉"
+        "宏观",
+        "美联储",
+        "特朗普"
       ],
       "locale": "national",
       "market": "a-share"
     },
     {
-      "url": "https://finance.eastmoney.com/a/202609043865221943.html",
-      "title_cn": "1秒钟直线涨停！数字货币概念股暴力拉升！发生了什么？",
+      "url": "https://finance.eastmoney.com/a/202609053865803661.html",
+      "title_cn": "超6000次密集调研！财报季私募全力掘金百亿机构调研方向曝光",
       "source": "东方财富",
       "source_type": "media",
-      "date": "09/04",
-      "summary": "数字货币概念股盘中暴力拉升，相关个股出现1秒钟直线涨停。",
+      "date": "09/05",
+      "summary": "财报季期间私募机构调研超过6000次，百亿级机构的调研方向曝光，集中掘金相关标的。",
       "importance": 2,
       "rank": 0,
       "tags": [
-        "A股",
-        "数字货币"
+        "财报",
+        "私募",
+        "机构调研"
       ],
       "locale": "national",
       "market": "a-share"
     },
     {
-      "url": "https://finance.eastmoney.com/a/202609043864666988.html",
-      "title_cn": "特斯拉宣布：Cybercab投入运营",
+      "url": "https://finance.eastmoney.com/a/202609043865574665.html",
+      "title_cn": "9月4日晚间沪深上市公司重大事项公告最新快递",
       "source": "东方财富",
       "source_type": "media",
       "date": "09/04",
-      "summary": "特斯拉宣布Cybercab投入运营。",
+      "summary": "9月4日晚间沪深上市公司发布一批重大事项公告，涵盖并购重组、增减持、业绩等动态。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "公告",
+        "A股"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202609053865790228.html",
+      "title_cn": "全球市场：美股三大指数收跌存储、光通信板块走强特斯拉跌近6%",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "09/05",
+      "summary": "美股三大指数收跌，存储与光通信板块逆势走强，特斯拉跌近6%。",
       "importance": 2,
       "rank": 0,
       "tags": [
-        "新能源车",
+        "美股",
+        "半导体",
         "特斯拉"
       ],
       "locale": "national",
@@ -632,7 +636,7 @@
       "source": "港交所披露易",
       "source_type": "media",
       "date": "09/04",
-      "summary": "港股上市公司发布次日股份回购披露报表。",
+      "summary": "港交所披露易发布上市公司关于股份回购的次日披露回报。",
       "importance": 1,
       "rank": 0,
       "tags": [
@@ -648,12 +652,13 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "09/04",
-      "summary": "美国总统特朗普威胁称，除非美联储降息，否则将停止与主要贸易伙伴的贸易往来。",
+      "summary": "特朗普加倍施压，威胁若美联储不降息将停止与主要贸易伙伴的贸易往来。",
       "importance": 3,
       "rank": 0,
       "tags": [
-        "美股",
+        "宏观",
         "美联储",
+        "特朗普",
         "贸易"
       ],
       "locale": "overseas",
@@ -665,12 +670,13 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "09/04",
-      "summary": "特斯拉Cybercab业务更新未达华尔街预期，公司股价下跌6%。",
+      "summary": "特斯拉股价下跌约6%，因Cybercab进展更新未能令华尔街满意。",
       "importance": 2,
       "rank": 0,
       "tags": [
+        "美股",
         "特斯拉",
-        "新能源车"
+        "自动驾驶"
       ],
       "locale": "overseas",
       "market": "us"
@@ -681,12 +687,46 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "09/04",
-      "summary": "全球最大主权财富基金计划削减美国国债持仓。",
+      "summary": "全球最大主权财富基金（挪威主权财富基金）计划削减美国国债持仓。",
       "importance": 3,
       "rank": 0,
       "tags": [
+        "宏观",
         "美债",
-        "宏观"
+        "主权基金"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/09/04/private-security-spending-crime-allied-universal.html",
+      "title_cn": "The big business of personal protection: How private security became a $50 billion industry",
+      "source": "CNBC Top Stories",
+      "source_type": "media",
+      "date": "09/04",
+      "summary": "报道指出私人安保行业规模已达约500亿美元，分析其崛起原因。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "消费",
+        "安保"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.investing.com/news/cryptocurrency-news/bitcoin-falls-below-80000-as-strong-us-jobs-data-revives-fed-rate-hike-fears-4890184",
+      "title_cn": "Bitcoin falls below $80,000 as strong U.S. jobs data revives Fed rate hike fears",
+      "source": "Investing.com News",
+      "source_type": "media",
+      "date": "09/05",
+      "summary": "比特币跌破8万美元，原因是强劲的美国就业数据重燃美联储加息担忧。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "加密货币",
+        "比特币",
+        "美联储"
       ],
       "locale": "overseas",
       "market": "us"
