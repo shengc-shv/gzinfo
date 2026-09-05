@@ -117,7 +117,10 @@ export async function fetchCrawledArticles(): Promise<CrawledBundle> {
   const stocksCrawlers: BaseCrawler[] = [
     new EastMoneyStockCrawler(),
     new SinaAStockCrawler(),
-    new HKEXStockCrawler(),
+    // ⏸ HKEXStockCrawler（港交所披露易）：2026-09-05 用户拍板关闭。
+    //   理由：40 条全英文公司级公告，rankHkStockItems 永远把它排在最后（进不了 LLM 的 top12），
+    //   纯抓不用；港股解读主源已是 SinaHkStockCrawler，IPO 另有东财专源。文件保留便于恢复。
+    // new HKEXStockCrawler(),
     new SinaHkStockCrawler(),
   ];
 
