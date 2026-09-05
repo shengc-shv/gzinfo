@@ -2947,32 +2947,6 @@
     "firstSeenAt": "2026-09-04T23:54:55.269Z",
     "lastSeenAt": "2026-09-04T23:54:55.269Z"
   },
-  "https://data.eastmoney.com/xg/xg/#A24052": {
-    "title": "广东邦泽创科电器：IPO提交注册（拟北交所）",
-    "url": "https://data.eastmoney.com/xg/xg/#A24052",
-    "sourceId": "em-declare",
-    "source": "东财IPO在审(广东)",
-    "category": "gd-ipo",
-    "subcategory": "ipo-tutoring",
-    "ai_relevant": true,
-    "excerpt": "注册地：广东｜保荐：东莞证券股份有限公司｜更新：2026-09-01",
-    "publishedAt": "2026-09-01T00:00:00.000Z",
-    "summary": "广东邦泽创科电器已提交北交所注册，保荐东莞证券；机构业务可对接上市后募资/并购需求。",
-    "firstSeenAt": "2026-09-05T10:13:22.954Z",
-    "lastSeenAt": "2026-09-05T10:13:22.954Z"
-  },
-  "https://data.eastmoney.com/xg/xg/#A25250": {
-    "title": "东莞四维材料科技：IPO问询中（拟北交所）",
-    "url": "https://data.eastmoney.com/xg/xg/#A25250",
-    "sourceId": "em-declare",
-    "source": "东财IPO在审(广东)",
-    "category": "gd-ipo",
-    "subcategory": "ipo-tutoring",
-    "excerpt": "注册地：广东｜保荐：东莞证券股份有限公司｜更新：2026-09-03",
-    "publishedAt": "2026-09-03T00:00:00.000Z",
-    "firstSeenAt": "2026-09-05T10:13:22.954Z",
-    "lastSeenAt": "2026-09-05T10:13:22.954Z"
-  },
   "https://www.cnbc.com/2026/09/05/eu-greenland-von-der-leyen-trump-arctic.html": {
     "title": "From Trump’s takeover threats to a ‘northern neighborhood,’ why the EU chief is going to Greenland",
     "url": "https://www.cnbc.com/2026/09/05/eu-greenland-von-der-leyen-trump-arctic.html",
@@ -3752,5 +3726,91 @@
     "publishedAt": "2026-09-05T00:00:00.000Z",
     "firstSeenAt": "2026-09-05T10:13:22.954Z",
     "lastSeenAt": "2026-09-05T10:13:22.954Z"
+  },
+  "https://data.eastmoney.com/xg/xg/#A24052": {
+    "title": "广东邦泽创科电器：IPO提交注册（拟北交所）",
+    "url": "https://data.eastmoney.com/xg/xg/#A24052",
+    "sourceId": "em-declare",
+    "source": "东财IPO在审(广东)",
+    "category": "gd-ipo",
+    "subcategory": "ipo-tutoring",
+    "excerpt": "注册地：广东｜保荐：东莞证券股份有限公司｜更新：2026-09-01",
+    "publishedAt": "2026-09-01T00:00:00.000Z",
+    "firstSeenAt": "2026-09-05T10:35:45.919Z",
+    "lastSeenAt": "2026-09-05T10:35:45.919Z"
+  },
+  "https://data.eastmoney.com/xg/xg/#A25250": {
+    "title": "东莞四维材料科技：IPO问询中（拟北交所）",
+    "url": "https://data.eastmoney.com/xg/xg/#A25250",
+    "sourceId": "em-declare",
+    "source": "东财IPO在审(广东)",
+    "category": "gd-ipo",
+    "subcategory": "ipo-tutoring",
+    "excerpt": "注册地：广东｜保荐：东莞证券股份有限公司｜更新：2026-09-03",
+    "publishedAt": "2026-09-03T00:00:00.000Z",
+    "firstSeenAt": "2026-09-05T10:35:45.919Z",
+    "lastSeenAt": "2026-09-05T10:35:45.919Z"
+  },
+  "https://www.investing.com/news/commodities-news/the-venezuelan-billionaire-the-us-investigated-for-money-laundering-now-has-a-pentagon-oil-deal-4890186": {
+    "title": "The Venezuelan billionaire the US investigated for money laundering now has a Pentagon oil deal",
+    "url": "https://www.investing.com/news/commodities-news/the-venezuelan-billionaire-the-us-investigated-for-money-laundering-now-has-a-pentagon-oil-deal-4890186",
+    "sourceId": "investing-news",
+    "source": "Investing.com News",
+    "category": "stocks",
+    "subcategory": "us",
+    "excerpt": "The Venezuelan billionaire the US investigated for money laundering now has a Pentagon oil",
+    "publishedAt": "2026-09-05T10:06:38.000Z",
+    "firstSeenAt": "2026-09-05T10:35:45.919Z",
+    "lastSeenAt": "2026-09-05T10:35:45.919Z"
+  },
+  "https://www.investing.com/news/company-news/nvidia-partner-hon-hais-august-sales-jump-52-on-ai-server-demand--bloomberg-4890185": {
+    "title": "Nvidia partner Hon Hai’s August sales jump 52% on AI server demand - Bloomberg",
+    "url": "https://www.investing.com/news/company-news/nvidia-partner-hon-hais-august-sales-jump-52-on-ai-server-demand--bloomberg-4890185",
+    "sourceId": "investing-news",
+    "source": "Investing.com News",
+    "category": "stocks",
+    "subcategory": "us",
+    "excerpt": "Nvidia partner Hon Hai’s August sales jump 52% on AI server demand - Bloomberg",
+    "publishedAt": "2026-09-05T09:56:31.000Z",
+    "firstSeenAt": "2026-09-05T10:35:45.919Z",
+    "lastSeenAt": "2026-09-05T10:35:45.919Z"
+  },
+  "https://www.stcn.com/article/detail/4173654.html": {
+    "title": "致尚科技公告，终止发行股份及现金购买",
+    "url": "https://www.stcn.com/article/detail/4173654.html",
+    "sourceId": "stcn",
+    "source": "证券时报",
+    "category": "finance",
+    "subcategory": "cn-finance",
+    "excerpt": "致尚科技公告，终止发行股份及现金购买",
+    "publishedAt": "2026-09-05T05:34:00.000Z",
+    "firstSeenAt": "2026-09-05T10:35:45.919Z",
+    "lastSeenAt": "2026-09-05T10:35:45.919Z"
+  },
+  "https://news.dayoo.com/guangzhou/202609/05/139995_55000243.htm": {
+    "title": "中小企业数智转型，亚太如何“抱团”？广州这场对接会探路",
+    "url": "https://news.dayoo.com/guangzhou/202609/05/139995_55000243.htm",
+    "sourceId": "dayoo-gz",
+    "source": "广州日报·大洋网",
+    "category": "gz",
+    "subcategory": "gz-media",
+    "ai_relevant": true,
+    "excerpt": "中小企业数智转型，亚太如何“抱团”？广州这场对接会探路",
+    "publishedAt": "2026-09-05T00:00:00.000Z",
+    "summary": "亚太中小企业在穗对接数智转型合作机会，提示分行可借势对接会梳理本地中小科创客群的合作入口。",
+    "firstSeenAt": "2026-09-05T10:35:45.919Z",
+    "lastSeenAt": "2026-09-05T10:35:45.919Z"
+  },
+  "https://finance.sina.com.cn/roll/2026-09-05/doc-iniquptq0316305.shtml": {
+    "title": "就业与猎聘 | 顺为、力合科创、京东等机构热招",
+    "url": "https://finance.sina.com.cn/roll/2026-09-05/doc-iniquptq0316305.shtml",
+    "sourceId": "sina-a-stock",
+    "source": "新浪财经·A股",
+    "category": "stocks",
+    "subcategory": "a-share",
+    "excerpt": "就业与猎聘 | 顺为、力合科创、京东等机构热招",
+    "publishedAt": "2026-09-05T00:00:00.000Z",
+    "firstSeenAt": "2026-09-05T10:35:45.919Z",
+    "lastSeenAt": "2026-09-05T10:35:45.919Z"
   }
 }
