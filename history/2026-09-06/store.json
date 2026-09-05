@@ -1,0 +1,726 @@
+{
+  "date": "2026-09-06",
+  "updatedAt": "2026-09-05T23:23:45.553Z",
+  "executive": {
+    "hero_line": "今日分行焦点：证监会：着力打造“三个过硬”监管铁军",
+    "must_read": [
+      {
+        "title": "非农爆了！9月加息预期升温特朗普喊话：降息！降息！美联储必须“聪明”起来",
+        "why": "国家核心监管新政（信贷/财富/跨境）：建议分行评估对客与产品影响",
+        "url": "https://finance.eastmoney.com/a/202609053865951116.html"
+      },
+      {
+        "title": "打新阵营扩容 “两创板”新股中签率持续走低",
+        "why": "市场信号（财富/私行）：直击财富/私行业务",
+        "url": "https://www.stcn.com/article/detail/4173452.html"
+      },
+      {
+        "title": "监管出手！事关券商开户、基金销售“跳转”合作",
+        "why": "市场信号（客群/财富）：直击客群/财富业务",
+        "url": "https://www.stcn.com/article/detail/4173643.html"
+      }
+    ],
+    "insights": [
+      {
+        "topic": "北交所新股量质齐升 新质生产力",
+        "impact": "对广州分行客群/财富业务有潜在影响",
+        "action": "建议分行关注客群动向并评估动作"
+      },
+      {
+        "topic": "央行等量续作3个月期买断式逆回",
+        "impact": "对广州分行信贷业务有潜在影响",
+        "action": "建议分行关注信贷动向并评估动作"
+      },
+      {
+        "topic": "康欣新材：因定期报告涉嫌信披违",
+        "impact": "对广州分行监管合规业务有潜在影响",
+        "action": "建议分行关注监管合规动向并评估动作"
+      }
+    ],
+    "risk": {
+      "topic": "2.3884亿元！中国证监会对",
+      "evidence": "2.3884亿元！中国证监会对元道通信开出巨额罚单",
+      "impact": "对分行相关条线需关注合规与风险敞口",
+      "action": "建议对应条线评估并制定应对",
+      "url": "https://finance.eastmoney.com/a/202609053865869121.html"
+    }
+  },
+  "stock_recap": {
+    "us": {
+      "overview": "三大指数集体收跌，道指跌0.51%、纳指跌0.29%、标普500跌0.38%，美伊海上交火与Fed加息预期主导情绪。",
+      "sectors": [
+        "能源：美方袭击三艘伊朗油轮，海军舰艇遭导弹威胁，原油供应担忧推升板块关注度。",
+        "国防/汽车：GM与Ford竞标国防能源订单，传统车企百年竞争延伸至军工新赛道。",
+        "零售配送：沃尔玛跨界外卖，对标DoorDash与Uber Eats，挤压平台型配送公司估值。",
+        "AI数据中心：货运业抱怨AI基建未带来实惠，相关卡车运输股情绪受抑。",
+        "高等教育：Trump政府瞄准私立大学免税地位，捐赠税务优惠面临取消风险。"
+      ],
+      "spoken": "美股三大指数集体收跌，道指跌0.51%，纳指跌0.29%，标普500跌0.38%。美伊在伊朗海域互射，袭击三艘油轮，地缘紧张推升能源与国防板块关注度，GM与Ford争夺军工订单。零售端沃尔玛跨界外卖，挤压DoorDash与Uber Eats。AI数据中心方面，货运业坦言未享红利，相关股票承压。私立大学免税地位遭政府瞄准，捐赠税务优惠面临调整。",
+      "meta": {
+        "source": "CNBC Top Stories",
+        "crossCheck": "新浪行情",
+        "date": "2026-09-05"
+      },
+      "indices": [
+        {
+          "name": "道琼斯",
+          "value": "53414.25",
+          "changePct": "-0.51%"
+        },
+        {
+          "name": "纳斯达克",
+          "value": "26506.99",
+          "changePct": "-0.29%"
+        },
+        {
+          "name": "标普500",
+          "value": "7718.60",
+          "changePct": "-0.38%"
+        }
+      ]
+    },
+    "aShare": {
+      "overview": "上证指数收报3930.12点（-0.30%）；深证成指收报13516.97点（-0.79%）；创业板指收报3286.55点（-0.78%）。",
+      "sectors": [
+        "科创50指数高开低走跌2.10%",
+        "算力产业链持续下挫",
+        "猪肉板块逆势走强"
+      ],
+      "meta": {
+        "source": "东方财富",
+        "crossCheck": "新浪行情",
+        "date": "2026-09-06"
+      },
+      "indices": [
+        {
+          "name": "上证指数",
+          "value": "3930.12",
+          "changePct": "-0.30%"
+        },
+        {
+          "name": "深证成指",
+          "value": "13516.97",
+          "changePct": "-0.79%"
+        },
+        {
+          "name": "创业板指",
+          "value": "3286.55",
+          "changePct": "-0.78%"
+        }
+      ]
+    },
+    "hk": {
+      "overview": "恒生指数收报25650.87点（+1.74%）；恒生科技收报4569.80点（+2.27%）。",
+      "sectors": [
+        "恒生指数涨1.74%",
+        "恒生科技指数涨2.27%",
+        "科网股普涨",
+        "AI应用股走强",
+        "联想涨超6%"
+      ],
+      "meta": {
+        "source": "新浪财经·港股",
+        "crossCheck": "新浪行情",
+        "date": "2026-09-04"
+      },
+      "sourceReport": {
+        "title": "港股收评：恒指涨1.74% 科指涨2.27% 科网股普涨 AI应用股走强 联想涨超6%",
+        "url": "https://finance.sina.com.cn/stock/hkstock/marketalerts/2026-09-04/doc-iniqryes4153297.shtml"
+      },
+      "indices": [
+        {
+          "name": "恒生指数",
+          "value": "25650.87",
+          "changePct": "+1.74%"
+        },
+        {
+          "name": "恒生科技",
+          "value": "4569.80",
+          "changePct": "+2.27%"
+        }
+      ]
+    },
+    "quoteChannel": "新浪行情",
+    "quoteDate": "2026-09-04",
+    "marketStatus": {
+      "isMarketClosed": true,
+      "reportDate": "2026-09-06",
+      "dataDate": "2026-09-04",
+      "note": "周末及周一休市时段，以下行情为上一交易日（9月4日 周五）收盘数据",
+      "spokenNote": "当前为休市时段，以下行情为上一交易日，9月4日 周五的收盘情况"
+    }
+  },
+  "stock_news": [
+    {
+      "url": "https://finance.eastmoney.com/a/202609053865951116.html",
+      "title_cn": "非农爆了！9月加息预期升温特朗普喊话：降息！降息！美联储必须“聪明”起来",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "09/05",
+      "summary": "美国非农就业数据超预期，市场对美联储9月加息的预期升温；特朗普公开喊话要求美联储降息，敦促其\"必须聪明起来\"。",
+      "importance": 3,
+      "rank": 0,
+      "tags": [
+        "宏观",
+        "美联储",
+        "非农"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202609053865803661.html",
+      "title_cn": "超6000次密集调研！财报季私募全力掘金百亿机构调研方向曝光",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "09/05",
+      "summary": "财报季期间私募机构调研次数超过6000次，百亿级私募重点调研方向曝光。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "私募",
+        "财报"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202609053865803463.html",
+      "title_cn": "17万亿空单恐引爆踩踏！摩根大通火线预警日元逼近“红线”",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "09/05",
+      "summary": "摩根大通发出预警，日元空头头寸达17万亿日元规模，逼近关键\"红线\"，引发踩踏担忧。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "外汇",
+        "日元"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202609053865943351.html",
+      "title_cn": "牛股兴业科技因信披问题遭证监会立案此前宣布跨界“追光”",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "09/05",
+      "summary": "A股牛股兴业科技因信息披露问题被中国证监会立案调查，此前公司宣布跨界进入光伏领域\"追光\"。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "监管",
+        "光伏"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202609053865869121.html",
+      "title_cn": "2.3884亿元！中国证监会对元道通信开出巨额罚单",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "09/05",
+      "summary": "中国证监会向元道通信开出2.3884亿元巨额罚单。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "监管"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202609053865976833.html",
+      "title_cn": "中盐化工、中海达、凡拓数创、合力科技四家公司被采取监管措施！",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "09/05",
+      "summary": "中盐化工、中海达、凡拓数创、合力科技四家公司被中国证监会采取监管措施。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "监管"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202609053865974233.html",
+      "title_cn": "“经济血液”高烧！美国柴油价格创历史新高会吓坏美联储吗？",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "09/05",
+      "summary": "美国柴油价格创历史新高，市场关注通胀压力是否会影响美联储政策路径。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "能源",
+        "美联储"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202609053865974196.html",
+      "title_cn": "康欣新材：因定期报告涉嫌信披违法违规被证监会立案",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "09/05",
+      "summary": "康欣新材因定期报告涉嫌信息披露违法违规被中国证监会立案调查。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "监管"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202609053865974749.html",
+      "title_cn": "280个银行账户被冻结富煌钢构9月8日起“戴帽”",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "09/05",
+      "summary": "富煌钢构因280个银行账户被冻结，自9月8日起股票将被实施风险警示（戴帽）。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "监管"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202609053865980466.html",
+      "title_cn": "“史上最大IPO”时间表有变Anthropic据悉最早10月中旬启动路演",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "09/05",
+      "summary": "据报道，人工智能公司Anthropic\"史上最大IPO\"路演时间表有变，最早将于10月中旬启动。",
+      "importance": 3,
+      "rank": 0,
+      "tags": [
+        "AI",
+        "IPO"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202609063866047327.html",
+      "title_cn": "经济日报：为什么说存储周期不会消失",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "09/06",
+      "summary": "《经济日报》发表评论文章指出，存储行业周期不会消失，分析存储周期规律。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "半导体",
+        "存储"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202609053865982482.html",
+      "title_cn": "中信证券：二季度家电行业需求偏弱重点关注内需企稳、海外业务改善企业",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "09/05",
+      "summary": "中信证券研报指出二季度家电行业需求偏弱，建议重点关注内需企稳、海外业务改善的家电企业。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "家电",
+        "券商研报"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.sina.com.cn/stock/hkstock/marketalerts/2026-09-04/doc-iniqryes4153297.shtml",
+      "title_cn": "港股收评：恒指涨1.74% 科指涨2.27% 科网股普涨 AI应用股走强 联想涨超6%",
+      "source": "新浪财经·港股",
+      "source_type": "media",
+      "date": "09/04",
+      "summary": "9月4日港股收市，恒生指数上涨1.74%，恒生科技指数上涨2.27%；科网股普涨，AI应用股走强，联想涨超6%。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "港股",
+        "AI"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://finance.sina.com.cn/roll/2026-09-04/doc-iniqqsmk1005837.shtml",
+      "title_cn": "港股年内回购逾千亿元 三板块获重要股东增持",
+      "source": "新浪财经·港股",
+      "source_type": "media",
+      "date": "09/04",
+      "summary": "年内港股回购金额已逾千亿元，板块层面涉及科技、医药及金融三大板块获重要股东增持。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "港股",
+        "回购"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://finance.sina.com.cn/stock/hkstock/2026-09-04/doc-iniqrpra6286912.shtml",
+      "title_cn": "港股大金融股持续活跃，国有六大行周内均创历史新高",
+      "source": "新浪财经·港股",
+      "source_type": "media",
+      "date": "09/04",
+      "summary": "港股大金融股持续活跃，国有六大行本周内股价均创历史新高。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "港股",
+        "银行"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://finance.sina.com.cn/stock/relnews/cn/2026-09-04/doc-iniqqsmk1005875.shtml",
+      "title_cn": "生物医药公司扎堆“赶考”港交所 “A+H”上市模式受青睐",
+      "source": "新浪财经·港股",
+      "source_type": "media",
+      "date": "09/04",
+      "summary": "生物医药公司扎堆赴港交所上市，\"A+H\"双重上市模式受到青睐。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "港股",
+        "医药"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://finance.sina.com.cn/stock/s/2026-09-04/doc-iniqsenu1236236.shtml",
+      "title_cn": "账上躺着36亿二闯港股，陷解约风波的星宇股份在急什么？",
+      "source": "新浪财经·港股",
+      "source_type": "media",
+      "date": "09/04",
+      "summary": "陷解约风波的星宇股份手持约36亿元资金再度冲刺港股IPO上市。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "港股",
+        "IPO"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://finance.sina.com.cn/wm/2026-09-04/doc-iniqriie6339091.shtml",
+      "title_cn": "香港证监：零售基金投资私募资产需做明确披露",
+      "source": "新浪财经·港股",
+      "source_type": "media",
+      "date": "09/04",
+      "summary": "香港证监会表示，零售基金投资私募资产时需做明确披露要求。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "监管",
+        "港股"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://finance.sina.com.cn/stock/hkstock/hkgg/2026-09-04/doc-iniqsens0879632.shtml",
+      "title_cn": "高盛：升华润置地(01109)目标价至38.8港元 维持“买入”评级",
+      "source": "新浪财经·港股",
+      "source_type": "media",
+      "date": "09/04",
+      "summary": "高盛将华润置地（01109.HK）目标价上调至38.8港元，维持\"买入\"评级。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "地产",
+        "券商研报"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://finance.sina.com.cn/stock/hkstock/hkgg/2026-09-04/doc-iniqsenu1271255.shtml",
+      "title_cn": "大摩：升富卫集团(01828)目标价至41.9港元 上调2026至2028财年新业务价值预测",
+      "source": "新浪财经·港股",
+      "source_type": "media",
+      "date": "09/04",
+      "summary": "摩根士丹利将富卫集团（01828.HK）目标价上调至41.9港元，上调2026至2028财年新业务价值预测。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "保险",
+        "券商研报"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://finance.sina.com.cn/stock/hkstock/hkgg/2026-09-04/doc-iniqsenu1237436.shtml",
+      "title_cn": "星展：上调比亚迪电子(00285)目标价至40港元 重申“买入”评级",
+      "source": "新浪财经·港股",
+      "source_type": "media",
+      "date": "09/04",
+      "summary": "星展将比亚迪电子（00285.HK）目标价上调至40港元，重申\"买入\"评级。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "新能源车",
+        "券商研报"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://finance.sina.com.cn/stock/hkstock/hkgg/2026-09-04/doc-iniqryeu0911284.shtml",
+      "title_cn": "高盛：中国银行(03988)具差异化优势 维持“买入”评级",
+      "source": "新浪财经·港股",
+      "source_type": "media",
+      "date": "09/04",
+      "summary": "高盛认为中国银行（03988.HK）具备差异化优势，维持\"买入\"评级。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "银行",
+        "券商研报"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://finance.sina.com.cn/stock/hkstock/hkgg/2026-09-04/doc-iniqryes4138730.shtml",
+      "title_cn": "里昂：维持和黄医药(00013)“跑赢大市”评级 ATTC平台获跨国药企认可",
+      "source": "新浪财经·港股",
+      "source_type": "media",
+      "date": "09/04",
+      "summary": "里昂维持和黄医药（00013.HK）\"跑赢大市\"评级，认为其ATTC平台获得跨国药企认可。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "医药",
+        "券商研报"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://finance.sina.com.cn/stock/hkstock/hkgg/2026-09-04/doc-iniqryes4105131.shtml",
+      "title_cn": "大和：康方生物(09926)HARMONi-2中期OS分析达标 略增全球一线NSCLC III期试验OS成功信心",
+      "source": "新浪财经·港股",
+      "source_type": "media",
+      "date": "09/04",
+      "summary": "大和指出康方生物（09926.HK）HARMONi-2中期OS分析达标，略增全球一线NSCLC III期试验OS成功信心。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "医药",
+        "券商研报"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/09/05/trump-warsh-fed-september-rate-hike.html",
+      "title_cn": "Trump turns up the heat on Warsh as Fed rate hike looms",
+      "source": "CNBC Top Stories",
+      "source_type": "media",
+      "date": "09/05",
+      "summary": "美联储加息预期升温之际，特朗普向美联储候选人Warsh施压，公开敦促降息。",
+      "importance": 3,
+      "rank": 0,
+      "tags": [
+        "美联储",
+        "宏观"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/09/05/trump-venezuela-oil-north-america-blue-energy-partners-nabep.html",
+      "title_cn": "Trump’s state capitalism comes to the oil industry with his unprecedented Venezuela deal",
+      "source": "CNBC Top Stories",
+      "source_type": "media",
+      "date": "09/05",
+      "summary": "特朗普通过与委内瑞拉的一项史无前例的协议，将\"国家资本主义\"模式引入美国石油行业。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "能源",
+        "政策"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/09/05/lebron-james-polymarket-partnership.html",
+      "title_cn": "LeBron James teases partnership with Polymarket",
+      "source": "CNBC Top Stories",
+      "source_type": "media",
+      "date": "09/05",
+      "summary": "NBA球星勒布朗·詹姆斯暗示与预测市场平台Polymarket建立合作关系。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "加密货币"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/09/05/us-iran-oil-tankers-navy-missile-attack.html",
+      "title_cn": "U.S. attacks 3 Iranian oil tankers after missiles target Navy warships",
+      "source": "CNBC Top Stories",
+      "source_type": "media",
+      "date": "09/05",
+      "summary": "美军在伊朗导弹袭击其海军舰船后，对3艘伊朗油轮实施打击。",
+      "importance": 3,
+      "rank": 0,
+      "tags": [
+        "地缘政治",
+        "能源"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/09/05/ai-cybersecurity-ciso-executive.html",
+      "title_cn": "Meet the CISO: A new front line star in the AI cybersecurity war",
+      "source": "CNBC Top Stories",
+      "source_type": "media",
+      "date": "09/05",
+      "summary": "报道聚焦首席信息安全官（CISO）在AI网络安全对抗中作为新前线角色的崛起。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "AI",
+        "网络安全"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/09/05/gm-ford-defense-energy.html",
+      "title_cn": "GM vs. Ford: U.S. defense, energy sectors add to automakers' century-old rivalry",
+      "source": "CNBC Top Stories",
+      "source_type": "media",
+      "date": "09/05",
+      "summary": "美国国防与能源领域进一步加深通用汽车与福特汽车之间长达百年的竞争格局。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "汽车",
+        "国防"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/09/05/walmart-dunkin-subway-delivery-uber-eats-doordash.html",
+      "title_cn": "Why Walmart is moving in on DoorDash, Uber Eats delivery action, starting with donuts, coffee and sandwiches",
+      "source": "CNBC Top Stories",
+      "source_type": "media",
+      "date": "09/05",
+      "summary": "沃尔玛开始切入DoorDash、Uber Eats主导的外送市场，初期以甜甜圈、咖啡和三明治为切入点。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "零售",
+        "外卖"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/09/05/ai-data-centers-cost-economy.html",
+      "title_cn": "Many truckers don't feel like the rest of America about AI data centers as business booms",
+      "source": "CNBC Top Stories",
+      "source_type": "media",
+      "date": "09/05",
+      "summary": "AI数据中心业务蓬勃发展，但许多卡车司机对AI数据中心的看法与美国整体舆论并不一致。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "AI",
+        "物流"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/09/05/hsa-401k-plan-retirement-automatic-enrollment.html",
+      "title_cn": "With HSAs, employers are turning to the 401(k) playbook",
+      "source": "CNBC Top Stories",
+      "source_type": "media",
+      "date": "09/05",
+      "summary": "美国雇主越来越多地将HSA（健康储蓄账户）类比401(k)退休金模式来设计福利。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "政策"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/09/03/treasury-irs-proposal-tax-exempt-schools-charitable-donations.html",
+      "title_cn": "Trump admin targets tax-exempt status at private colleges — threatening a key tax break for donations",
+      "source": "CNBC Top Stories",
+      "source_type": "media",
+      "date": "09/04",
+      "summary": "特朗普政府瞄准私立大学的免税地位，威胁取消针对捐赠的关键税收优惠。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "教育",
+        "政策"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.investing.com/news/forex-news/is-the-latest-rebound-in-the-japanese-yen-real-4890244",
+      "title_cn": "Is the latest rebound in the Japanese yen real?",
+      "source": "Investing.com News",
+      "source_type": "media",
+      "date": "09/05",
+      "summary": "分析文章讨论日元近期的反弹是否真实可持续。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "外汇",
+        "日元"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.investing.com/news/commodities-news/us-strikes-three-iranian-oil-tankers-after-irgc-attack-on-american-naval-ships-central-command-says-4890210",
+      "title_cn": "US, Iranian forces fire at vessels in waters near Iran",
+      "source": "Investing.com News",
+      "source_type": "media",
+      "date": "09/05",
+      "summary": "美国与伊朗军事力量在伊朗附近水域相互对船只开火。",
+      "importance": 3,
+      "rank": 0,
+      "tags": [
+        "地缘政治",
+        "能源"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    }
+  ]
+}
