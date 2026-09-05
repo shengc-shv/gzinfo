@@ -25,6 +25,7 @@
  */
 import { loadEventMemory, saveEventMemory } from "../lib/memory/store";
 import { appendDelivery } from "../lib/memory/event-memory";
+import { extractReportRunId } from "../lib/memory/publish-run-id";
 import { formatBroadcastAt, memoryTimeZone } from "../lib/memory/broadcast-time";
 
 function log(msg: string) {
@@ -60,9 +61,12 @@ async function resolvePushedVersion(
       log("⚠️ gh-pages 当天无 commit，不带版本指纹");
       return {};
     }
-    // daily.yml publish 步骤 commit message 形如 'daily: report for <run_id>'
-    const m = /run (\d+)/.exec(top.commit?.message ?? "");
-    const reportRunId = m ? m[1] : undefined;
+    // daily.yml publish 步骤 commit message 形如 'daily: report for <run_id> <sha>'
+    // （peaceiris/actions-gh-pages 自动在 commit_message 后追加源 commit sha）。
+    // 2026-09-05 修复：原 /run (\d+)/ 匹配不到 "report for" 格式 → reportRunId 恒缺失
+    // → 次日结算指纹对账（deliverySettlementGate）从未生效，一直静默走「信任交付」。
+    // 提取逻辑独立在 lib/memory/publish-run-id.ts（配单测防回归）。
+    const reportRunId = extractReportRunId(top.commit?.message);
     log(
       reportRunId
         ? `🔎 反查成功：当天 gh-pages 由 run ${reportRunId} 发布（commit ${top.sha.slice(0, 7)}）`
