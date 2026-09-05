@@ -87,18 +87,39 @@ function fmtPct(v: string): string {
   return (n >= 0 ? "+" : "") + n.toFixed(2) + "%";
 }
 
+/** 网络瞬时抖动重试（2026-09-05 #148 实锤：hq.sinajs.cn 单次 fetch 报 `fetch failed`
+ *  → 港股/美股指数整组丢失，页面只能退化成「新浪K线」且无港股美股）。
+ *  仅对网络错误 / 5xx / 429 重试，4xx（除 429）立即放弃（配置类错误重试无意义）。 */
+const FETCH_RETRIES = 3; // 总尝试次数（首次 + 2 次重试）
+const FETCH_BASE_DELAY_MS = 600; // 600ms → 1.2s 指数退避
+
+function sleep(ms: number): Promise<void> {
+  return new Promise((r) => setTimeout(r, ms));
+}
+
 async function fetchText(url: string, referer = "https://finance.sina.com.cn/"): Promise<string | null> {
-  try {
-    const res = await fetch(url, { headers: { Referer: referer } });
-    if (!res.ok) {
-      console.warn(`[quote] HTTP ${res.status} ${url}`);
-      return null;
+  let lastMsg = "";
+  for (let attempt = 0; attempt < FETCH_RETRIES; attempt++) {
+    try {
+      const res = await fetch(url, { headers: { Referer: referer } });
+      if (res.ok) {
+        const body = await res.text();
+        if (body && body.trim()) return body;
+        lastMsg = "empty body";
+      } else {
+        lastMsg = `HTTP ${res.status}`;
+      }
+    } catch (e) {
+      lastMsg = (e as Error).message;
     }
-    return await res.text();
-  } catch (e) {
-    console.warn(`[quote] 抓取失败 ${url}: ${(e as Error).message}`);
-    return null;
+    // 4xx（429 除外）不重试：URL/权限问题重试也必然失败
+    if (/^HTTP 4\d\d$/.test(lastMsg) && !lastMsg.includes("429")) break;
+    if (attempt < FETCH_RETRIES - 1) {
+      await sleep(FETCH_BASE_DELAY_MS * 2 ** attempt);
+    }
   }
+  console.warn(`[quote] 抓取失败（已重试 ${FETCH_RETRIES} 次）${url}: ${lastMsg}`);
+  return null;
 }
 
 /**
