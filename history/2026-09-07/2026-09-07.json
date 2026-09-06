@@ -1,0 +1,508 @@
+{
+  "date": "2026-09-07",
+  "hero_line": "中央财政3000亿注资8家金融央企落地，国有大行资本与信贷能力再加固，同业对公与零售两端竞争将同步升级。",
+  "must_read": [
+    {
+      "title": "大行集中核销百亿级不良贷款",
+      "why": "同业资产质量压力释放信号明确，分行应对照排查零售信贷结构与催收策略，避免风险敞口被动暴露。",
+      "url": "https://m.21jingji.com/article/20260906/herald/2910383829e38445714ec2a97cafef46.html"
+    },
+    {
+      "title": "扩消费政策持续加力优质供给",
+      "why": "消费贷与信用卡条线场景化营销窗口打开，对接品质消费与新业态商户是分行扩量获客的近期抓手。",
+      "url": "https://www.cnfin.com/yw-lb/detail/20260906/4465773_1.html"
+    }
+  ],
+  "insights": [
+    {
+      "topic": "借势央企注资做大行稳健叙事",
+      "tags": [
+        "私行",
+        "财富"
+      ],
+      "impact": "国有大行资本加固后高净值客户对大行配置的安全边际预期上升，分行高净值客户留存与转介绍面临同业拉力考验。",
+      "action": "本周起私行中心可结合客户持仓推出大行稳健配置对比话术，分管行长牵头组织一次私行客户经理口径统一沟通。",
+      "sources": [
+        {
+          "title": "未雨绸缪：中央财政3000亿注资8家金融央企",
+          "url": "https://finance.eastmoney.com/a/202609063866129584.html"
+        }
+      ]
+    },
+    {
+      "topic": "扩消费政策落地场景化营销",
+      "tags": [
+        "信贷",
+        "客群"
+      ],
+      "impact": "扩消费政策催化品质消费与新业态需求，消费贷分期与信用卡场景获客转化率有望提升，零售多业务线联动空间打开。",
+      "action": "本周由信用卡与消费贷团队联合制定三季度场景化营销清单，重点对接新业态商户与品质消费节点。",
+      "sources": [
+        {
+          "title": "活力中国调研行｜增加优质供给 挖掘消费潜力",
+          "url": "https://www.cnfin.com/yw-lb/detail/20260906/4465773_1.html"
+        }
+      ]
+    },
+    {
+      "topic": "公募科技基金扩容增配权益",
+      "tags": [
+        "财富"
+      ],
+      "impact": "科技主题基金矩阵扩容为客户权益资产配置提供新工具，财富与私行客户的中长期收益结构有望优化。",
+      "action": "本周内组织财富顾问团队筛选科技赛道绩优基金，面向风险匹配的中高净值客户作为权益补充进行配置推荐。",
+      "sources": [
+        {
+          "title": "公募科技类产品矩阵持续完善",
+          "url": "https://www.cnfin.com/yw-lb/detail/20260906/4465751_1.html"
+        }
+      ]
+    },
+    {
+      "topic": "黄金二手交易冻结风险前置",
+      "tags": [
+        "客群"
+      ],
+      "impact": "黄金二手线下交易触发异地公安冻结银行卡事件频发，一线若处置不当易引发客户投诉与品牌信任损耗。",
+      "action": "本周由运营与客服条线更新黄金二手交易异常冻结话术与凭证留存指引，分发至全部网点柜面与理财经理。",
+      "sources": [
+        {
+          "title": "研究生在咸鱼卖黄金线下交易被冻结",
+          "url": "https://m.21jingji.com/article/20260906/herald/ebbfac9aebbc4b02905edbd26642bbb7.html"
+        }
+      ]
+    }
+  ],
+  "sections": {
+    "gz_local": [],
+    "biz_insight": [
+      {
+        "url": "https://www.stcn.com/article/detail/4173862.html",
+        "title_cn": "加息突变！美联储，重磅来袭！华尔街巨头重大分歧",
+        "source": "证券时报",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "09/06",
+        "summary": "美联储政策路径生变，华尔街分歧加大。所以呢：外币理财与结售汇客户受波动影响加大，理财经理可结合客户持仓提示汇率与利率双重波动风险。",
+        "importance": 2,
+        "rank": 1,
+        "tags": [],
+        "locale": "national"
+      },
+      {
+        "url": "https://www.cnfin.com/yw-lb/detail/20260906/4465813_1.html",
+        "title_cn": "财政部统筹推进国有金融机构资本补充 八家机构合计获各类注资3600亿元",
+        "source": "新华财经",
+        "source_type": "official",
+        "tier": "T1.5",
+        "date": "09/06",
+        "summary": "财政部统筹8家中央金融机构合计获注资3600亿元。所以呢：工行、农行等国有大行资本补充落地后信贷投放能力提升，分行需关注对公大项目同业竞争加码。",
+        "importance": 2,
+        "rank": 2,
+        "tags": [],
+        "locale": "national"
+      },
+      {
+        "url": "https://www.cnfin.com/yw-lb/detail/20260906/4465773_1.html",
+        "title_cn": "活力中国调研行｜增加优质供给 挖掘消费潜力——中国推动扩大消费一线新观察",
+        "source": "新华财经",
+        "source_type": "official",
+        "tier": "T1.5",
+        "date": "09/06",
+        "summary": "政策端持续推动扩大消费、增加优质供给。所以呢：消费贷与信用卡条线可提前布局场景化营销，对接品质消费与新业态商户。",
+        "importance": 2,
+        "rank": 3,
+        "tags": [],
+        "locale": "national"
+      },
+      {
+        "url": "https://www.cnfin.com/yw-lb/detail/20260906/4465751_1.html",
+        "title_cn": "公募科技类产品矩阵持续完善",
+        "source": "新华财经",
+        "source_type": "official",
+        "tier": "T1.5",
+        "date": "09/06",
+        "summary": "公募端持续扩容科技主题基金。所以呢：理财经理可结合客户风险偏好，在资产配置中增配科技赛道产品作为权益补充。",
+        "importance": 2,
+        "rank": 4,
+        "tags": [],
+        "locale": "national"
+      },
+      {
+        "url": "https://www.cnr.cn/gd/guangdongyaowen/20260906/t20260906_527805731.shtml",
+        "title_cn": "广州白云机器人全产业链加速成型",
+        "source": "央广网·广东",
+        "source_type": "official",
+        "tier": "T1.5",
+        "date": "09/06",
+        "summary": "白云区机器人产业链集聚效应显现。所以呢：科创客群营销窗口打开，支行可联动对公梳理白云园区小微名单，提前对接开户与配套融资需求。",
+        "importance": 2,
+        "rank": 5,
+        "tags": [],
+        "locale": "national"
+      },
+      {
+        "url": "https://www.cnr.cn/gd/xgyxgd/20260906/t20260906_527806018.shtml",
+        "title_cn": "尚品宅配与上纬新材启元机器人成立合资公司",
+        "source": "央广网·广东",
+        "source_type": "official",
+        "tier": "T1.5",
+        "date": "09/06",
+        "summary": "尚品宅配跨界联手启元机器人切入具身智能。所以呢：合作背后是C端家居场景与机器人融合，关注高管及核心团队零售私行联动机会。",
+        "importance": 2,
+        "rank": 6,
+        "tags": [],
+        "locale": "national"
+      },
+      {
+        "url": "https://www.cnbc.com/2026/09/05/trump-warsh-fed-september-rate-hike.html",
+        "title_cn": "Trump turns up the heat on Warsh as Fed rate hike looms",
+        "source": "CNBC Top Stories",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "09/06",
+        "summary": "美9月加息预期升温叠加政治施压，美元资产与外币理财收益波动加大，结售汇窗口值得向客户提示。",
+        "importance": 2,
+        "rank": 7,
+        "tags": [],
+        "locale": "national"
+      }
+    ],
+    "policy_market": [
+      {
+        "url": "https://finance.eastmoney.com/a/202609063866129584.html",
+        "title_cn": "未雨绸缪：中央财政3000亿注资8家金融央企",
+        "title_orig": "未雨绸缪：中央财政3000亿注资8家金融央企",
+        "source": "东方财富",
+        "source_type": "media",
+        "date": "09/06",
+        "summary": "中央财政注资3000亿强化8家金融央企资本实力，国有大行稳健属性进一步加固。客群端可借势提示高净值客户关注大行配置的安全边际与中长期分红能力。",
+        "importance": 3,
+        "rank": 1,
+        "tags": [
+          "市场",
+          "客群"
+        ],
+        "locale": "national"
+      },
+      {
+        "url": "https://finance.eastmoney.com/a/202609063866060557.html",
+        "title_cn": "社保基金去年赚了3906亿：81.1%散户亏损社保基金怎么赚钱",
+        "title_orig": "社保基金去年赚了3906亿：81.1%散户亏损社保基金怎么赚钱",
+        "source": "东方财富",
+        "source_type": "media",
+        "date": "09/06",
+        "summary": "社保基金去年录得收益3906亿，与81.1%散户亏损形成对照。可作为私行客户资产配置对话素材，强化长期投资与机构化选股理念的沟通。",
+        "importance": 2,
+        "rank": 2,
+        "tags": [
+          "市场",
+          "财富",
+          "客群"
+        ],
+        "locale": "national"
+      },
+      {
+        "url": "https://m.21jingji.com/article/20260906/herald/2910383829e38445714ec2a97cafef46.html",
+        "title_cn": "多家银行清理百亿不良贷款",
+        "source": "21世纪经济报道·金融",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "09/06",
+        "summary": "工行核销800亿+多家大行集中处置百亿级不良。所以呢：同业暴露信号明确，对照排查分行零售信贷资产质量与催收策略。",
+        "importance": 2,
+        "rank": 3,
+        "tags": [
+          "信贷"
+        ],
+        "locale": "national"
+      },
+      {
+        "url": "https://m.21jingji.com/article/20260906/herald/ebbfac9aebbc4b02905edbd26642bbb7.html",
+        "title_cn": "研究生在咸鱼卖黄金，线下交易所得12.4万刚到账，银行账户被湖南警方以涉诈骗案为由冻结，北京警方：交易不涉嫌犯罪",
+        "source": "21世纪经济报道·金融",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "09/06",
+        "summary": "黄金二手交易触发账户冻结，地警方认定不涉罪。所以呢：提示一线警惕黄金二手交易异常冻结风险，必要时协助客户保留交易凭证。",
+        "importance": 2,
+        "rank": 4,
+        "tags": [
+          "财富"
+        ],
+        "locale": "national"
+      }
+    ],
+    "tech": [],
+    "ipo": [
+      {
+        "url": "https://data.eastmoney.com/xg/xg/#A25250",
+        "title_cn": "东莞四维材料科技：IPO问询中（拟北交所）",
+        "source": "东财IPO在审(广东)",
+        "source_type": "official",
+        "tier": "T1.5",
+        "date": "09/03",
+        "summary": "注册地：广东｜保荐：东莞证券股份有限公司｜更新：2026-09-03",
+        "importance": 2,
+        "rank": 1,
+        "tags": [
+          "粤"
+        ],
+        "locale": "national"
+      },
+      {
+        "url": "https://data.eastmoney.com/xg/xg/#A24052",
+        "title_cn": "广东邦泽创科电器：IPO提交注册（拟北交所）",
+        "source": "东财IPO在审(广东)",
+        "source_type": "official",
+        "tier": "T1.5",
+        "date": "09/01",
+        "summary": "注册地：广东｜保荐：东莞证券股份有限公司｜更新：2026-09-01",
+        "importance": 2,
+        "rank": 2,
+        "tags": [
+          "粤"
+        ],
+        "locale": "national"
+      }
+    ]
+  },
+  "risk": {
+    "topic": "黄金二手线下交易触发账户冻结",
+    "evidence": "研究生在闲鱼卖黄金线下交易12.4万到账后，湖南警方以涉诈骗冻结账户，北京警方认定交易不涉嫌犯罪。",
+    "impact": "个贷与财富条线若涉及客户黄金变现资金流向，易因异地冻结引发投诉；风控条线需关注异常冻结引发的舆情与品牌信任损耗；公司条线暂不直接涉及。",
+    "action": "风控部本周牵头建立黄金二手交易异常冻结快速响应机制；财富部与个贷部在客户咨询时主动提示保留交易凭证并协助申诉。",
+    "source": "T2",
+    "sources": [
+      {
+        "title": "研究生在咸鱼卖黄金线下交易所得12.4万刚到账，银行账户被湖南警方以涉诈骗案为由冻结",
+        "url": "https://m.21jingji.com/article/20260906/herald/ebbfac9aebbc4b02905edbd26642bbb7.html"
+      }
+    ]
+  },
+  "stock_recap": {
+    "us": {
+      "overview": "三大指数集体收跌，道指跌0.51%纳指跌0.29%，特朗普施压美联储加息预期升温压制市场。",
+      "sectors": [
+        "能源板块受关注，糖价年内跑赢股市，国际糖价走强带动相关标的",
+        "AI模型迭代疲劳隐现，AI网络安全成新焦点，CISO角色受捧",
+        "AI数据中心扩张推高地热项目，地热概念获市场关注",
+        "特朗普政府起诉ISS，代理顾问行业监管收紧",
+        "特朗普威胁取消私立大学免税地位，教育板块承压"
+      ],
+      "spoken": "美股三大指数集体收跌，道指跌0.51%，纳指跌0.29%，标普五百跌0.38%，特朗普施压美联储加息预期是主要压制因素。板块方面，国际糖价走强带动能源相关标的表现活跃，成为年内跑赢股市的亮点。AI领域出现模型迭代疲劳，但网络安全方向持续受捧，数据中心扩张推动地热概念升温。监管端，特朗普政府起诉代理顾问机构ISS，同时威胁取消私立大学免税地位，相关板块承压。整体市场情绪偏谨慎。",
+      "meta": {
+        "source": "CNBC Top Stories",
+        "crossCheck": "新浪行情",
+        "date": "2026-09-06"
+      },
+      "indices": [
+        {
+          "name": "道琼斯",
+          "value": "53414.25",
+          "changePct": "-0.51%"
+        },
+        {
+          "name": "纳斯达克",
+          "value": "26506.99",
+          "changePct": "-0.29%"
+        },
+        {
+          "name": "标普500",
+          "value": "7718.60",
+          "changePct": "-0.38%"
+        }
+      ]
+    },
+    "aShare": {
+      "overview": "三大指数集体收跌，上证跌0.30%深成指跌0.79%创业板跌0.78%，美联储加息预期扰动市场情绪。",
+      "sectors": [
+        "圣邦股份光模块收入大增引270家机构调研，AI硬件受关注",
+        "百亿私募调仓，减仓泛科技加仓低位赛道，资金高低切换",
+        "七部门部署人工智能与算力设施，政策利好AI算力链",
+        "社保基金去年大赚3906亿，81%散户亏损形成鲜明对比",
+        "存储周期景气持续，经济日报发声看好存储赛道"
+      ],
+      "spoken": "A股三大指数集体收跌，上证指数收于3930点跌0.30%，深成指跌0.79%，创业板指跌0.78%，美联储加息预期扰动市场情绪。板块方面，AI算力方向受关注，圣邦股份光模块收入大增吸引超270家机构扎堆调研，七部门最新部署人工智能与算力设施政策利好。资金面，百亿私募调仓减持泛科技加仓低位赛道，高低切换明显。社保基金去年大赚3906亿元，而八成散户亏损形成鲜明对比。存储周期景气持续，经济日报发声看好。美联储加息预期突变，华尔街巨头出现重大分歧，整体情绪偏谨慎。",
+      "meta": {
+        "source": "东方财富",
+        "crossCheck": "新浪行情",
+        "date": "2026-09-07"
+      },
+      "indices": [
+        {
+          "name": "上证指数",
+          "value": "3930.12",
+          "changePct": "-0.30%"
+        },
+        {
+          "name": "深证成指",
+          "value": "13516.97",
+          "changePct": "-0.79%"
+        },
+        {
+          "name": "创业板指",
+          "value": "3286.55",
+          "changePct": "-0.78%"
+        }
+      ]
+    },
+    "hk": {
+      "overview": "恒生指数收报25650.87点（+1.74%）；恒生科技收报4569.80点（+2.27%）。",
+      "sectors": [
+        "恒生指数涨1.74%",
+        "恒生科技指数涨2.27%",
+        "科网股普涨",
+        "AI应用股走强",
+        "联想涨超6%"
+      ],
+      "meta": {
+        "source": "新浪财经·港股",
+        "crossCheck": "新浪行情",
+        "date": "2026-09-04"
+      },
+      "sourceReport": {
+        "title": "港股收评：恒指涨1.74% 科指涨2.27% 科网股普涨 AI应用股走强 联想涨超6%",
+        "url": "https://finance.sina.com.cn/stock/hkstock/marketalerts/2026-09-04/doc-iniqryes4153297.shtml"
+      },
+      "indices": [
+        {
+          "name": "恒生指数",
+          "value": "25650.87",
+          "changePct": "+1.74%"
+        },
+        {
+          "name": "恒生科技",
+          "value": "4569.80",
+          "changePct": "+2.27%"
+        }
+      ]
+    },
+    "quoteChannel": "新浪行情",
+    "quoteDate": "2026-09-04",
+    "marketStatus": {
+      "isMarketClosed": true,
+      "reportDate": "2026-09-07",
+      "dataDate": "2026-09-04",
+      "note": "周末及周一休市时段，以下行情为上一交易日（9月4日 周五）收盘数据",
+      "spokenNote": "当前为休市时段，以下行情为上一交易日，9月4日 周五的收盘情况"
+    }
+  },
+  "stock_news": [
+    {
+      "url": "https://finance.eastmoney.com/a/202609063866110630.html",
+      "title_cn": "9月6日晚间沪深上市公司重大事项公告最新快递",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "09/06",
+      "summary": "9月6日晚间，沪深上市公司集中发布重大事项公告，涵盖业绩、重组、增减持等多类公司动态。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "公告",
+        "A股"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202609063866052140.html",
+      "title_cn": "震惊粉丝！网红作家负债超80亿元！",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "09/06",
+      "summary": "一位网红作家被曝负债超过80亿元，引发市场关注。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "个人债务",
+        "舆情"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202609063866073991.html",
+      "title_cn": "周末要闻汇总：事关人工智能、算力设施等七部门最新部署",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "09/06",
+      "summary": "七部门发布周末要闻汇总，涉及人工智能、算力设施等领域的最新政策部署。",
+      "importance": 3,
+      "rank": 0,
+      "tags": [
+        "AI",
+        "算力",
+        "政策"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202609063866053718.html",
+      "title_cn": "圣邦股份突然火了！光模块收入大幅增长迎超270家机构调研",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "09/06",
+      "summary": "圣邦股份因光模块收入大幅增长引发关注，迎来超过270家机构调研。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "半导体",
+        "光模块",
+        "机构调研"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202609063866056539.html",
+      "title_cn": "会见超3小时俄方介绍普京与美总统特使会谈成果",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "09/06",
+      "summary": "俄罗斯方面介绍普京与美国总统特使的会谈成果，会见时长超过3小时。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "国际政治",
+        "美俄关系"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/09/05/trump-warsh-fed-september-rate-hike.html",
+      "title_cn": "Trump turns up the heat on Warsh as Fed rate hike looms",
+      "source": "CNBC Top Stories",
+      "source_type": "media",
+      "date": "09/05",
+      "summary": "美联储加息预期临近，特朗普加大对美联储候选人Warsh的施压力度。",
+      "importance": 3,
+      "rank": 0,
+      "tags": [
+        "美联储",
+        "加息",
+        "美国政治"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/09/06/sugar-is-outperforming-the-stock-market-this-year-whats-driving-it.html",
+      "title_cn": "Sugar is outperforming the stock market this year. Here's what's driving it, and where it can go from here",
+      "source": "CNBC Top Stories",
+      "source_type": "media",
+      "date": "09/06",
+      "summary": "今年糖价表现优于股市，原文分析上涨驱动因素及未来可能走势。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "大宗商品",
+        "农产品"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    }
+  ]
+}
