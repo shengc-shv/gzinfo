@@ -1,41 +1,116 @@
 {
   "date": "2026-09-06",
-  "hero_line": "今日分行焦点：证监会：着力打造“三个过硬”监管铁军",
+  "hero_line": "APEC中小企业部长会议在穗落地叠加北交所新质生产力企业批量申报，广州跨境与科创客群迎来政银合作窗口期，建议分行零售与对公联动作业抢入口。",
   "must_read": [
     {
-      "title": "非农爆了！9月加息预期升温特朗普喊话：降息！降息！美联储必须“聪明”起来",
-      "why": "国家核心监管新政（信贷/财富/跨境）：建议分行评估对客与产品影响",
+      "title": "证监会：着力打造“三个过硬”监管铁军",
+      "why": "国家核心监管新政（信贷）：建议分行评估对客与产品影响",
+      "url": "https://www.stcn.com/article/detail/4173461.html"
+    },
+    {
+      "title": "央行等量续作逆回购 跨季中性",
+      "why": "跨季流动性态度中性，9月MLF与LPR是下一步观察重点，对负债成本与按揭定价节奏有直接传导，分行需提前预判定价窗口。",
+      "url": "https://www.stcn.com/article/detail/4173448.html"
+    },
+    {
+      "title": "北交所新股量质齐升 新质赛道",
+      "why": "新质生产力赛道企业集中登陆北交所，科创客群股权激励贷、并购撮合与代发场景密集出现，分行需盯紧受理至问询节奏提前介入。",
+      "url": "https://www.stcn.com/article/detail/4173453.html"
+    },
+    {
+      "title": "中信金控净利增22% 协同提速",
+      "why": "同业综合金融打法加速，私行及高净值客群竞争加码，本行私行端产品组合与服务体系需对照同业节奏补短板。",
+      "url": "https://m.21jingji.com/article/20260905/herald/e8e248e93a298e057ecdd93461ca8cbb.html"
+    },
+    {
+      "title": "美非农爆表 9月加息预期升温",
+      "why": "美元资产与外币理财收益波动加大，结售汇客户面临预期重定价，外汇条线需主动向高净值客户提示窗口与对冲思路。",
       "url": "https://finance.eastmoney.com/a/202609053865951116.html"
-    },
-    {
-      "title": "打新阵营扩容 “两创板”新股中签率持续走低",
-      "why": "市场信号（财富/私行）：直击财富/私行业务",
-      "url": "https://www.stcn.com/article/detail/4173452.html"
-    },
-    {
-      "title": "监管出手！事关券商开户、基金销售“跳转”合作",
-      "why": "市场信号（客群/财富）：直击客群/财富业务",
-      "url": "https://www.stcn.com/article/detail/4173643.html"
     }
   ],
   "insights": [
     {
-      "topic": "北交所新股量质齐升 新质生产力",
-      "tags": [],
-      "impact": "对广州分行客群/财富业务有潜在影响",
-      "action": "建议分行关注客群动向并评估动作"
+      "topic": "APEC中小企业会议 跨境政银窗口",
+      "tags": [
+        "政银合作",
+        "客群"
+      ],
+      "impact": "APEC中小企业部长会议在穗召开，跨境结算、外资园区中小企业融资需求集中释放，是分行机构与零售联动获客的稀缺入口。",
+      "action": "本周可联动市工信局与南沙外资园区，梳理参会中小企业名单，由公司部牵头、零售部配合做跨境结算与代发产品组合触达。",
+      "sources": [
+        {
+          "title": "第32次APEC中小企业部长会议在广州举行 贡献“中国方案” 为中小企业发展注入新动能",
+          "url": "https://www.stcn.com/article/detail/4173447.html"
+        },
+        {
+          "title": "中小企业数智转型，亚太如何“抱团”？广州这场对接会探路",
+          "url": "https://news.dayoo.com/guangzhou/202609/05/139995_55000243.htm"
+        }
+      ]
     },
     {
-      "topic": "央行等量续作3个月期买断式逆回",
-      "tags": [],
-      "impact": "对广州分行信贷业务有潜在影响",
-      "action": "建议分行关注信贷动向并评估动作"
+      "topic": "北交所新质客群 股权激励贷",
+      "tags": [
+        "客群",
+        "信贷"
+      ],
+      "impact": "北交所新质生产力企业集中申报，辅导期企业股权激励、董监高增持与并购撮合需求显现，是高净值代发与对公联动的新客池。",
+      "action": "科创客群拓展团队可建立受理问询清单台账，对辅导期企业逐户对接股权激励贷与代发套餐，提前卡位上市后财富管理入口。",
+      "sources": [
+        {
+          "title": "北交所新股量质齐升 新质生产力赛道企业集中登场",
+          "url": "https://www.stcn.com/article/detail/4173453.html"
+        }
+      ]
     },
     {
-      "topic": "康欣新材：因定期报告涉嫌信披违",
-      "tags": [],
-      "impact": "对广州分行监管合规业务有潜在影响",
-      "action": "建议分行关注监管合规动向并评估动作"
+      "topic": "中行跨境发行广东省政府债",
+      "tags": [
+        "私行",
+        "政银合作"
+      ],
+      "impact": "中行协助在港发行75亿元广东省政府债，跨境机构与高净值客户的债券配置机会出现，可借鉴其政银合作打法对接本行私行客户。",
+      "action": "私行部可梳理跨境配置客户名单，对接香港分行落地广东省政府债与跨境理财通产品组合，本周内形成初步配置建议清单。",
+      "sources": [
+        {
+          "title": "中国银行协助在港发行75亿元广东省政府债",
+          "url": "https://www.cnr.cn/gd/xgyxgd/20260905/t20260905_527805618.shtml"
+        }
+      ]
+    },
+    {
+      "topic": "高净值可选消费疲软 资产再平衡",
+      "tags": [
+        "私行",
+        "财富"
+      ],
+      "impact": "Bernstein警示中国奢侈品消费复苏或再度落空，高净值客群可选消费疲软，私行端需主动引导资产配置再平衡与稳健类资产承接。",
+      "action": "私行客户经理本周可对持仓偏奢侈品与可选消费的客户做一轮资产检视，推介黄金与固收+稳健组合，缓释可选资产波动。",
+      "sources": [
+        {
+          "title": "Another false dawn? China’s luxury spending revival seems to be fading: Bernstein",
+          "url": "https://www.investing.com/news/economy-news/another-false-dawn-chinas-luxury-spending-revival-seems-to-be-fading-bernstein-4890177"
+        },
+        {
+          "title": "多重因素困扰 国际金价陷入震荡拉锯",
+          "url": "https://news.southcn.com/node_812903b83a/0d54a36e0a.shtml"
+        }
+      ]
+    },
+    {
+      "topic": "两创板打新 中签走低",
+      "tags": [
+        "财富",
+        "客群"
+      ],
+      "impact": "两创板打新中签率持续走低，公募基金等机构参与度提升，单账户打新收益边际下降，提示高净值客户向打新策略基金组合迁移。",
+      "action": "财富部可向高净值客户推介打新策略公募基金与专户组合，替代单一打新账户操作，本周内完成产品组合话术对齐。",
+      "sources": [
+        {
+          "title": "打新阵营扩容 “两创板”新股中签率持续走低",
+          "url": "https://www.stcn.com/article/detail/4173452.html"
+        }
+      ]
     }
   ],
   "sections": {
@@ -65,43 +140,20 @@
         "rank": 2,
         "tags": [],
         "locale": "gz"
-      },
-      {
-        "url": "https://www.cnr.cn/gd/xgyxgd/20260905/t20260905_527805618.shtml",
-        "title_cn": "中国银行协助在港发行75亿元广东省政府债",
-        "title_orig": "中国银行协助在港发行75亿元广东省政府债",
-        "source": "央广网·广东",
-        "source_type": "media",
-        "date": "09/05",
-        "summary": "中行落地75亿元广东省政府债（香港发行），政银合作模式再添案例，跨境机构与高净值客群债券配置机会值得关注。",
-        "importance": 2,
-        "rank": 1,
-        "tags": [
-          "粤",
-          "市场",
-          "政银合作",
-          "客群"
-        ],
-        "locale": "gz",
-        "locale_evidence": "中国银行协助在港发行75亿元广东省政府债"
       }
     ],
     "biz_insight": [
       {
-        "url": "https://m.21jingji.com/article/20260905/herald/3e3ec3ee1b9d73c40a07db7d1e2e2363.html",
-        "title_cn": "上市银行深耕科技金融精准赋能科创实体",
-        "title_orig": "上市银行深耕科技金融精准赋能科创实体",
-        "source": "21世纪经济报道·金融",
+        "url": "https://www.cnbc.com/2026/09/05/trump-warsh-fed-september-rate-hike.html",
+        "title_cn": "Trump turns up the heat on Warsh as Fed rate hike looms",
+        "source": "CNBC Top Stories",
         "source_type": "media",
-        "date": "09/05",
-        "summary": "上市行加码科技金融业务，科创客群成为零售对公交叉营销重点，分行可考虑梳理辖内科创小微名单做精准触达。",
+        "tier": "T2",
+        "date": "09/06",
+        "summary": "美9月加息预期升温叠加政治施压，美元资产与外币理财收益波动加大，结售汇窗口值得向客户提示。",
         "importance": 2,
-        "rank": 2,
-        "tags": [
-          "信贷",
-          "科技金融",
-          "竞对动态"
-        ],
+        "rank": 1,
+        "tags": [],
         "locale": "national"
       },
       {
@@ -113,7 +165,7 @@
         "date": "09/05",
         "summary": "Bernstein警示中国奢侈品消费复苏或再度落空，高净值客群可选消费疲软；私行端可关注客户资产配置再平衡需求。",
         "importance": 2,
-        "rank": 3,
+        "rank": 2,
         "tags": [],
         "locale": "national"
       },
@@ -126,7 +178,7 @@
         "date": "09/05",
         "summary": "国际金价陷入震荡拉锯，多空因素交织；黄金客群短期观望情绪上升，配置类客户可节奏放缓。",
         "importance": 2,
-        "rank": 4,
+        "rank": 3,
         "tags": [],
         "locale": "national"
       },
@@ -139,7 +191,7 @@
         "date": "09/05",
         "summary": "北交所新股\"量质齐升\"，新质生产力赛道企业集中申报。提示科创客群拓展团队盯紧受理-问询节奏，提前介入辅导期企业做股权激励贷与并购撮合。",
         "importance": 2,
-        "rank": 5,
+        "rank": 4,
         "tags": [],
         "locale": "national"
       },
@@ -152,7 +204,7 @@
         "date": "09/05",
         "summary": "央行等量续作3个月期买断式逆回购，跨季流动性态度中性。下一步观察9月中MLF与LPR报价，对分行负债成本与按揭定价节奏有直接传导。",
         "importance": 2,
-        "rank": 6,
+        "rank": 5,
         "tags": [],
         "locale": "national"
       },
@@ -165,7 +217,7 @@
         "date": "09/05",
         "summary": "中信金控上半年净利656亿元、同比+22%，综合金融协同提速；私行及高净值客群竞争加码，可关注其产品组合打法。",
         "importance": 2,
-        "rank": 7,
+        "rank": 6,
         "tags": [],
         "locale": "national"
       },
@@ -178,93 +230,27 @@
         "date": "09/05",
         "summary": "网点从扩规模转向价值重估，社区/财富型定位分化；可作为本行广州网点功能优化的同业参考。",
         "importance": 2,
-        "rank": 8,
+        "rank": 7,
         "tags": [
           "客群"
         ],
+        "locale": "national"
+      },
+      {
+        "url": "https://news.dayoo.com/guangzhou/202609/05/139995_55000050.htm",
+        "title_cn": "广州市政府召开常务会议",
+        "source": "广州日报·大洋网",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "09/05",
+        "summary": "广州市政府9/5召开常务会议，具体议题待公布；提示相关部门跟踪议题方向，捕捉与零售业务的关联点。",
+        "importance": 2,
+        "rank": 8,
+        "tags": [],
         "locale": "national"
       }
     ],
     "policy_market": [
-      {
-        "url": "https://finance.sina.com.cn/roll/2026-09-05/doc-iniquyir0549163.shtml",
-        "title_cn": "银行、保险、信托信息披露标准将\"大一统\"",
-        "title_orig": "银行、保险、信托信息披露标准将\"大一统\"",
-        "source": "新浪财经·理财保险",
-        "source_type": "media",
-        "date": "09/05",
-        "summary": "理财信披统一标准落地在即，分行客户经理产品话术与合规流程将面临调整，关注新规细则以提前对齐展业口径。",
-        "importance": 3,
-        "rank": 1,
-        "tags": [
-          "财富",
-          "监管合规"
-        ],
-        "locale": "national"
-      },
-      {
-        "url": "https://www.cnbc.com/2026/09/05/trump-warsh-fed-september-rate-hike.html",
-        "title_cn": "特朗普向沃什施压，美联储9月加息预期升温",
-        "title_orig": "Trump turns up the heat on Warsh as Fed rate hke looms",
-        "source": "CNBC Top Stories",
-        "source_type": "media",
-        "date": "09/05",
-        "summary": "美9月加息预期升温叠加政治施压，美元资产与外币理财收益波动加大，结售汇窗口值得向客户提示。",
-        "importance": 2,
-        "rank": 2,
-        "tags": [
-          "市场",
-          "客群"
-        ],
-        "locale": "national"
-      },
-      {
-        "url": "https://m.21jingji.com/article/20260905/herald/3668b11f0558439524e79b671b15eca4.html",
-        "title_cn": "最快下周到账！上市银行超2600亿中期分红来袭",
-        "title_orig": "最快下周到账！上市银行超2600亿中期分红来袭",
-        "source": "21世纪经济报道·金融",
-        "source_type": "media",
-        "date": "09/05",
-        "summary": "上市行超2600亿中期分红下周到账，高股息银行股再受关注，可结合零售客户持仓做再配置沟通。",
-        "importance": 2,
-        "rank": 3,
-        "tags": [
-          "市场",
-          "客群"
-        ],
-        "locale": "national"
-      },
-      {
-        "url": "https://m.21jingji.com/article/20260905/herald/6d7e76e560fcdb35f0192b95b1db99f0.html",
-        "title_cn": "银行理财透明化改革带来了什么",
-        "title_orig": "银行理财透明化改革带来了什么",
-        "source": "21世纪经济报道·金融",
-        "source_type": "media",
-        "date": "09/05",
-        "summary": "理财透明化改革进入实操阶段，净值披露与费率展示更细化，客户经理需准备产品对比话术回应客户疑问。",
-        "importance": 2,
-        "rank": 4,
-        "tags": [
-          "财富",
-          "监管合规"
-        ],
-        "locale": "national"
-      },
-      {
-        "url": "https://m.21jingji.com/article/20260905/herald/fd5290bd5f9d54f83be10be05409b8be.html",
-        "title_cn": "银行信息披露拟出新规：有银行年报\"锁\"起来要密码，多年不更新",
-        "title_orig": "银行信息披露拟出新规，记者发现：有银行年报\"锁\"起来要密码，有的多年不更新",
-        "source": "21世纪经济报道·金融",
-        "source_type": "media",
-        "date": "09/05",
-        "summary": "信披新规剑指年报\"加密\"与长期不更新，分行内控与年报公开渠道或将同步整改，提示合规部门提前排查。",
-        "importance": 2,
-        "rank": 5,
-        "tags": [
-          "监管合规"
-        ],
-        "locale": "national"
-      },
       {
         "url": "https://www.stcn.com/article/detail/4173452.html",
         "title_cn": "打新阵营扩容 “两创板”新股中签率持续走低",
@@ -274,7 +260,7 @@
         "date": "09/05",
         "summary": "\"两创板\"打新中签率走低，公募基金等机构参与度提升。提示高净值客户打新策略需与公募产品组合搭配，单账户打新收益边际下降。",
         "importance": 2,
-        "rank": 6,
+        "rank": 1,
         "tags": [],
         "locale": "national"
       },
@@ -287,7 +273,46 @@
         "date": "09/05",
         "summary": "证监会强调\"三个过硬\"监管铁军建设，关注后续代销、个贷合规检查力度变化，对分行一线营销话术与档案管理提出更严要求。",
         "importance": 2,
-        "rank": 7,
+        "rank": 2,
+        "tags": [],
+        "locale": "national"
+      },
+      {
+        "url": "https://finance.eastmoney.com/a/202609053865951116.html",
+        "title_cn": "非农爆了！9月加息预期升温特朗普喊话：降息！降息！美联储必须“聪明”起来",
+        "source": "东方财富",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "09/05",
+        "summary": "美国非农超预期推升9月加息预期；外汇与黄金客户面临预期重定价，结售汇窗口可主动提示。",
+        "importance": 2,
+        "rank": 3,
+        "tags": [],
+        "locale": "national"
+      },
+      {
+        "url": "https://www.cnr.cn/gd/xgyxgd/20260905/t20260905_527805618.shtml",
+        "title_cn": "中国银行协助在港发行75亿元广东省政府债",
+        "source": "央广网·广东",
+        "source_type": "official",
+        "tier": "T1.5",
+        "date": "09/05",
+        "summary": "中行落地75亿元广东省政府债（香港发行），政银合作模式再添案例，跨境机构与高净值客群债券配置机会值得关注。",
+        "importance": 2,
+        "rank": 4,
+        "tags": [],
+        "locale": "national"
+      },
+      {
+        "url": "https://m.21jingji.com/article/20260905/herald/fd5290bd5f9d54f83be10be05409b8be.html",
+        "title_cn": "银行信息披露拟出新规，记者发现：有银行年报“锁”起来要密码，有的多年不更新",
+        "source": "21世纪经济报道·金融",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "09/05",
+        "summary": "信披新规剑指年报\"加密\"与长期不更新，分行内控与年报公开渠道或将同步整改，提示合规部门提前排查。",
+        "importance": 2,
+        "rank": 5,
         "tags": [],
         "locale": "national"
       }
@@ -312,41 +337,44 @@
       {
         "url": "https://data.eastmoney.com/xg/xg/#A24052",
         "title_cn": "广东邦泽创科电器：IPO提交注册（拟北交所）",
-        "title_orig": "广东邦泽创科电器：IPO提交注册（拟北交所）",
         "source": "东财IPO在审(广东)",
-        "source_type": "media",
+        "source_type": "official",
+        "tier": "T1.5",
         "date": "09/01",
-        "summary": "广东邦泽已提交注册，拟登陆北交所，分行可关注其后续募资及零售代销/托管合作机会。",
-        "importance": 1,
+        "summary": "注册地：广东｜保荐：东莞证券股份有限公司｜更新：2026-09-01",
+        "importance": 2,
         "rank": 2,
         "tags": [
-          "粤",
-          "市场",
-          "客群"
+          "粤"
         ],
-        "locale": "gz",
-        "locale_evidence": "注册地：广东"
+        "locale": "national"
       }
     ]
   },
   "risk": {
-    "topic": "2.3884亿元！中国证监会对",
-    "evidence": "2.3884亿元！中国证监会对元道通信开出巨额罚单",
-    "impact": "对分行相关条线需关注合规与风险敞口",
-    "action": "建议对应条线评估并制定应对",
-    "url": "https://finance.eastmoney.com/a/202609053865869121.html"
+    "topic": "证监会重罚 元道通信2.39亿",
+    "evidence": "证监会9月5日对元道通信开出2.3884亿元罚单，信息披露与中介机构责任边界监管震慑信号明显。",
+    "impact": "个贷端：合作的中介渠道合规审查趋严；财富与私行端：代销产品底层信息披露需重检；公司部：通信及关联行业客户尽调合规权重上调；风控部：需排查中介合作链条与代销档案合规漏洞。",
+    "action": "合规部牵头本周内排查中介合作链条与代销档案；公司部对通信及关联行业客户尽调提级；个贷部复核合作渠道合规资质；风控部将信息披露合规纳入授信前置审查项。",
+    "source": "T1",
+    "sources": [
+      {
+        "title": "2.3884亿元！中国证监会对元道通信开出巨额罚单",
+        "url": "https://finance.eastmoney.com/a/202609053865869121.html"
+      }
+    ]
   },
   "stock_recap": {
     "us": {
-      "overview": "三大指数集体收跌，道指跌0.51%、纳指跌0.29%、标普500跌0.38%，美伊海上交火与Fed加息预期主导情绪。",
+      "overview": "美股集体收跌，道指跌0.51%纳指跌0.29%，伊朗海域交火与Fed人事施压成主因。",
       "sectors": [
-        "能源：美方袭击三艘伊朗油轮，海军舰艇遭导弹威胁，原油供应担忧推升板块关注度。",
-        "国防/汽车：GM与Ford竞标国防能源订单，传统车企百年竞争延伸至军工新赛道。",
-        "零售配送：沃尔玛跨界外卖，对标DoorDash与Uber Eats，挤压平台型配送公司估值。",
-        "AI数据中心：货运业抱怨AI基建未带来实惠，相关卡车运输股情绪受抑。",
-        "高等教育：Trump政府瞄准私立大学免税地位，捐赠税务优惠面临取消风险。"
+        "伊朗海域美伊互射船只，地缘升级压制能源与航运预期，原油资产承压。",
+        "Fed加息预期升温叠加Trump施压Warsh人选，金融板块利率敏感性走弱。",
+        "Trump与委内瑞拉达成国家资本式协议，重塑油气格局，GM与Ford防务+能源竞争升温。",
+        "Walmart跨界进军外卖配送，剑指DoorDash与Uber Eats，配送平台估值承压。",
+        "卡车运输受益AI数据中心基建热潮，相关运输股景气延续。"
       ],
-      "spoken": "美股三大指数集体收跌，道指跌0.51%，纳指跌0.29%，标普500跌0.38%。美伊在伊朗海域互射，袭击三艘油轮，地缘紧张推升能源与国防板块关注度，GM与Ford争夺军工订单。零售端沃尔玛跨界外卖，挤压DoorDash与Uber Eats。AI数据中心方面，货运业坦言未享红利，相关股票承压。私立大学免税地位遭政府瞄准，捐赠税务优惠面临调整。",
+      "spoken": "美股周五集体收跌，道指下挫0.51%，纳指回落0.29%，标普500收跌0.38%。美伊在伊朗海域互射船只，地缘紧张拖累能源与航运预期。美联储加息预期升温，叠加Trump对Warsh施压，金融板块承压。委内瑞拉国家资本式协议落地，GM与Ford在防务与能源领域竞争升温。Walmart跨界进军外卖，配送平台股价承压，AI数据中心基建热潮则继续利好卡车运输板块。整体呈防御回踩态势收盘。",
       "meta": {
         "source": "CNBC Top Stories",
         "crossCheck": "新浪行情",
@@ -443,65 +471,17 @@
   },
   "stock_news": [
     {
-      "url": "https://finance.eastmoney.com/a/202609053865951116.html",
-      "title_cn": "非农爆了！9月加息预期升温特朗普喊话：降息！降息！美联储必须“聪明”起来",
-      "source": "东方财富",
-      "source_type": "media",
-      "date": "09/05",
-      "summary": "美国非农就业数据超预期，市场对美联储9月加息的预期升温；特朗普公开喊话要求美联储降息，敦促其\"必须聪明起来\"。",
-      "importance": 3,
-      "rank": 0,
-      "tags": [
-        "宏观",
-        "美联储",
-        "非农"
-      ],
-      "locale": "national",
-      "market": "a-share"
-    },
-    {
-      "url": "https://finance.eastmoney.com/a/202609053865803661.html",
-      "title_cn": "超6000次密集调研！财报季私募全力掘金百亿机构调研方向曝光",
-      "source": "东方财富",
-      "source_type": "media",
-      "date": "09/05",
-      "summary": "财报季期间私募机构调研次数超过6000次，百亿级私募重点调研方向曝光。",
-      "importance": 1,
-      "rank": 0,
-      "tags": [
-        "私募",
-        "财报"
-      ],
-      "locale": "national",
-      "market": "a-share"
-    },
-    {
-      "url": "https://finance.eastmoney.com/a/202609053865803463.html",
-      "title_cn": "17万亿空单恐引爆踩踏！摩根大通火线预警日元逼近“红线”",
-      "source": "东方财富",
-      "source_type": "media",
-      "date": "09/05",
-      "summary": "摩根大通发出预警，日元空头头寸达17万亿日元规模，逼近关键\"红线\"，引发踩踏担忧。",
-      "importance": 2,
-      "rank": 0,
-      "tags": [
-        "外汇",
-        "日元"
-      ],
-      "locale": "national",
-      "market": "a-share"
-    },
-    {
       "url": "https://finance.eastmoney.com/a/202609053865943351.html",
       "title_cn": "牛股兴业科技因信披问题遭证监会立案此前宣布跨界“追光”",
       "source": "东方财富",
       "source_type": "media",
       "date": "09/05",
-      "summary": "A股牛股兴业科技因信息披露问题被中国证监会立案调查，此前公司宣布跨界进入光伏领域\"追光\"。",
+      "summary": "牛股兴业科技因信息披露问题被证监会立案调查，公司此前宣布跨界进入光伏（\"追光\"）领域。",
       "importance": 2,
       "rank": 0,
       "tags": [
         "监管",
+        "信披违规",
         "光伏"
       ],
       "locale": "national",
@@ -513,11 +493,61 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "09/05",
-      "summary": "中盐化工、中海达、凡拓数创、合力科技四家公司被中国证监会采取监管措施。",
-      "importance": 1,
+      "summary": "中盐化工、中海达、凡拓数创、合力科技四家公司被监管机构采取监管措施。",
+      "importance": 2,
       "rank": 0,
       "tags": [
-        "监管"
+        "监管",
+        "信披违规"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202609053865974233.html",
+      "title_cn": "“经济血液”高烧！美国柴油价格创历史新高会吓坏美联储吗？",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "09/05",
+      "summary": "美国柴油价格创历史新高，市场担忧能源价格压力或影响美联储政策决策。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "能源",
+        "美联储",
+        "宏观经济"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202609053865974196.html",
+      "title_cn": "康欣新材：因定期报告涉嫌信披违法违规被证监会立案",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "09/05",
+      "summary": "康欣新材因定期报告涉嫌信披违法违规，被证监会立案调查。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "监管",
+        "信披违规"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202609053865974749.html",
+      "title_cn": "280个银行账户被冻结富煌钢构9月8日起“戴帽”",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "09/05",
+      "summary": "富煌钢构因280个银行账户被冻结，公司股票将于9月8日起被实施风险警示（\"戴帽\"）。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "监管",
+        "ST风险警示"
       ],
       "locale": "national",
       "market": "a-share"
@@ -528,12 +558,13 @@
       "source": "新浪财经·港股",
       "source_type": "media",
       "date": "09/04",
-      "summary": "9月4日港股收市，恒生指数上涨1.74%，恒生科技指数上涨2.27%；科网股普涨，AI应用股走强，联想涨超6%。",
+      "summary": "9月4日港股恒生指数收涨1.74%，恒生科技指数涨2.27%，科网股普涨，AI应用股走强，联想涨超6%。",
       "importance": 2,
       "rank": 0,
       "tags": [
         "港股",
-        "AI"
+        "AI",
+        "科技"
       ],
       "locale": "national",
       "market": "hk"
@@ -544,7 +575,7 @@
       "source": "新浪财经·港股",
       "source_type": "media",
       "date": "09/04",
-      "summary": "年内港股回购金额已逾千亿元，板块层面涉及科技、医药及金融三大板块获重要股东增持。",
+      "summary": "港股年内回购金额累计逾千亿元，三个板块获得重要股东增持。",
       "importance": 2,
       "rank": 0,
       "tags": [
@@ -555,33 +586,18 @@
       "market": "hk"
     },
     {
-      "url": "https://finance.sina.com.cn/stock/s/2026-09-04/doc-iniqsenu1236236.shtml",
-      "title_cn": "账上躺着36亿二闯港股，陷解约风波的星宇股份在急什么？",
-      "source": "新浪财经·港股",
-      "source_type": "media",
-      "date": "09/04",
-      "summary": "陷解约风波的星宇股份手持约36亿元资金再度冲刺港股IPO上市。",
-      "importance": 1,
-      "rank": 0,
-      "tags": [
-        "港股",
-        "IPO"
-      ],
-      "locale": "national",
-      "market": "hk"
-    },
-    {
       "url": "https://finance.sina.com.cn/wm/2026-09-04/doc-iniqriie6339091.shtml",
       "title_cn": "香港证监：零售基金投资私募资产需做明确披露",
       "source": "新浪财经·港股",
       "source_type": "media",
       "date": "09/04",
-      "summary": "香港证监会表示，零售基金投资私募资产时需做明确披露要求。",
+      "summary": "香港证监会要求零售基金投资私募资产时需做出明确披露。",
       "importance": 1,
       "rank": 0,
       "tags": [
+        "港股",
         "监管",
-        "港股"
+        "基金"
       ],
       "locale": "national",
       "market": "hk"
@@ -592,12 +608,28 @@
       "source": "新浪财经·港股",
       "source_type": "media",
       "date": "09/04",
-      "summary": "高盛将华润置地（01109.HK）目标价上调至38.8港元，维持\"买入\"评级。",
+      "summary": "高盛上调华润置地（01109）目标价至38.8港元，维持\"买入\"评级。",
       "importance": 1,
       "rank": 0,
       "tags": [
         "地产",
-        "券商研报"
+        "研报"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://finance.sina.com.cn/stock/hkstock/hkgg/2026-09-04/doc-iniqsenu1271255.shtml",
+      "title_cn": "大摩：升富卫集团(01828)目标价至41.9港元 上调2026至2028财年新业务价值预测",
+      "source": "新浪财经·港股",
+      "source_type": "media",
+      "date": "09/04",
+      "summary": "摩根士丹利上调富卫集团（01828）目标价至41.9港元，并上调2026至2028财年新业务价值预测。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "保险",
+        "研报"
       ],
       "locale": "national",
       "market": "hk"
@@ -608,12 +640,13 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "09/05",
-      "summary": "美联储加息预期升温之际，特朗普向美联储候选人Warsh施压，公开敦促降息。",
+      "summary": "特朗普就美联储加息前景向美联储理事沃什（Warsh）施压。",
       "importance": 3,
       "rank": 0,
       "tags": [
         "美联储",
-        "宏观"
+        "美国政治",
+        "货币政策"
       ],
       "locale": "overseas",
       "market": "us"
