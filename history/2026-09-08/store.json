@@ -1,0 +1,795 @@
+{
+  "date": "2026-09-08",
+  "updatedAt": "2026-09-07T10:58:46.009Z",
+  "executive": {
+    "hero_line": "上半年银行业“强对公、弱零售”格局成型，15家大行利息支出同比减2100亿；分行零售条线须加快财富中收转型，压降高成本负债依赖。",
+    "spoken_hero": "先看今天的定调。上半年银行业出现明显的强对公、弱零售格局，对公利润碾压零售条线，同时十五家国有行和股份行的利息支出同比减少2100亿元，负债成本管控成效显著。这两件事指向同一方向：存款定价下行仍将持续，靠息差撑零售利润的老路越走越窄，分行必须加快向财富管理中收转型。",
+    "must_read": [
+      {
+        "title": "对公利润碾压零售，银行业上半年“强对公、弱零售”格局成型",
+        "why": "零售条线利润被对公反超，分行须尽快检视财富中收与存款成本结构，避免全年目标被动。",
+        "url": "https://finance.sina.com.cn/jjxw/2026-09-06/doc-iniqwwyq4062261.shtml"
+      },
+      {
+        "title": "15家国有行和股份行的利息省钱账单",
+        "why": "大行负债成本同比少付2100亿元，存款定价下行仍将延续，高成本存款留存压力加大。",
+        "url": "https://finance.cctv.com/2026/09/07/ARTISAOy2LVqeaGPdK7a5kKP260907.shtml"
+      },
+      {
+        "title": "中国8月末外汇储备34383亿美元 连续22个月增持黄金",
+        "why": "央行连续22个月增持黄金，贵金属长期配置逻辑再确认，是客户沟通最有力的中性素材。",
+        "url": "https://finance.sina.com.cn/stock/estate/integration/2026-09-07/doc-iniqyzxu6379476.shtml"
+      },
+      {
+        "title": "多项增量金融政策落地 助力扩内需稳经济",
+        "why": "扩内需政策集中落地，消费贷与经营贷投放窗口打开，需提前备好目标客群名单。",
+        "url": "https://finance.sina.com.cn/money/gzqh/futuresyspzx/2026-09-07/doc-iniqxpwr0863560.shtml"
+      },
+      {
+        "title": "工行、农行亮出2026-2028年股东回报蓝图，“补血”方案同日落地",
+        "why": "大行股东回报规划与资本补充同步落地，股息策略产品与银行股配置沟通口径需更新。",
+        "url": "https://finance.sina.com.cn/jinrong/yh/2026-09-07/doc-iniqyzxu6350583.shtml"
+      }
+    ],
+    "spoken_must_read": "必读有五条。第一，上半年银行业强对公、弱零售格局成型，零售条线利润被对公反超，需要尽快检视财富中收与存款成本结构。第二，十五家国有行和股份行利息支出同比减少2100亿元，存款定价下行仍将延续，高成本存款的留存压力加大。第三，八月末外汇储备34383亿美元，央行连续22个月增持黄金，贵金属长期配置逻辑再次得到确认。第四，多项增量金融政策集中落地助力扩内需，消费贷与经营贷的投放窗口正在打开。第五，工行、农行同日亮出2026到2028年股东回报蓝图与资本补充方案，股息策略产品的沟通口径需要同步更新。",
+    "insights": [
+      {
+        "topic": "强对公弱零售下的财富中收突围",
+        "impact": "上半年银行业对公利润碾压零售，零售条线利润占比下滑，中间业务收入已成撑住零售利润的关键变量。",
+        "action": "本周由零售分管行长牵头，按网点盘点基金、保险、信托代销中收完成率，对缺口网点追加一周专项推动。",
+        "tag": [
+          "财富",
+          "客群"
+        ],
+        "sources": [
+          {
+            "title": "对公利润碾压零售，银行业上半年“强对公、弱零售”格局成型",
+            "url": "https://finance.sina.com.cn/jjxw/2026-09-06/doc-iniqwwyq4062261.shtml"
+          }
+        ]
+      },
+      {
+        "topic": "央行连续增持黄金强化贵金属配置逻辑",
+        "impact": "8月末外汇储备34383亿美元、央行连续22个月增持黄金，中长期贵金属配置逻辑进一步夯实。",
+        "action": "建议财富条线本周内梳理积存金与贵金属持仓客户名单，对空仓客户做一次配置比例沟通。",
+        "tag": [
+          "财富"
+        ],
+        "sources": [
+          {
+            "title": "中国8月末外汇储备34383亿美元 连续22个月增持黄金",
+            "url": "https://finance.sina.com.cn/stock/estate/integration/2026-09-07/doc-iniqyzxu6379476.shtml"
+          }
+        ]
+      },
+      {
+        "topic": "离岸信托个税新规触发私行架构复核",
+        "impact": "离岸信托个人所得税新规落地，存量离岸架构客户的税务申报义务与合规成本上升。",
+        "action": "建议私行中心本周内完成存量离岸信托客户名单梳理，联合外部税务顾问安排一轮一对一沟通。",
+        "tag": [
+          "私行"
+        ],
+        "sources": [
+          {
+            "title": "光大兴陇信托协办“离岸信托个人所得税新规与财富管理新格局”线下活动",
+            "url": "https://finance.sina.com.cn/trust/2026-09-07/doc-iniqyzxw5464168.shtml"
+          }
+        ]
+      },
+      {
+        "topic": "车企账期规范化打开供应链金融空间",
+        "impact": "两部门要求车企规范供应商账款支付，产业链上游中小供应商现金流改善可期，融资需求结构生变。",
+        "action": "建议公司条线本周梳理本地汽车产业链供应商白名单，配套应收账款融资与保理方案上门对接。",
+        "tag": [
+          "信贷"
+        ],
+        "sources": [
+          {
+            "title": "两部门发文推动车企规范供应商账款支付优化账期管理",
+            "url": "https://www.cnfin.com/yw-lb/detail/20260907/4466256_1.html"
+          }
+        ]
+      },
+      {
+        "topic": "消费金融转向质量经营的分层策略",
+        "impact": "消费金融告别规模扩张，定价与风控能力成为竞争焦点，优质客群争夺将更为激烈。",
+        "action": "建议消费信贷条线本周按客群分层复核定价策略，优先锁定公积金与代发薪客群份额。",
+        "tag": [
+          "信贷",
+          "客群"
+        ],
+        "sources": [
+          {
+            "title": "消费金融2026：告别规模狂奔，消金下半场拼什么？",
+            "url": "https://m.21jingji.com/article/20260907/herald/e07dcc3cf74e87edd1713027a58ec206.html"
+          }
+        ]
+      }
+    ]
+  },
+  "stock_recap": {
+    "us": {
+      "overview": "美股三大指数集体收跌，道指跌0.51%纳指跌0.29%，美债收益率上行与财政风险预期压制风险偏好。",
+      "sectors": [
+        "中国拟向银行保险注资540亿美元，但相关中资金融股仍下跌",
+        "美债收益率面临4.8%关口考验，财政风险外溢担忧升温",
+        "日本8月外汇储备创纪录下降800亿美元，日元干预效应显现",
+        "OPEC+预计维持10月产量政策不变，油价高位震荡",
+        "UBS认为大宗商品可对冲通胀与地缘风险，配置价值上升"
+      ],
+      "spoken": "美股方面，三大指数集体收跌，道琼斯跌0.51%，纳斯达克跌0.29%，标普500跌0.38%，美债收益率上行与财政风险预期是主要压制因素。消息面上，中国宣布向银行保险体系注资540亿美元，但相关中资金融股仍然下跌，说明市场更关注盈利与摊薄影响。日本8月外汇储备创纪录下降800亿美元，日元干预效应持续显现。商品端，OPEC+预计维持10月产量政策不变，油价高位震荡，UBS认为大宗商品在对冲通胀与地缘风险上的配置价值上升。",
+      "meta": {
+        "source": "CNBC Top Stories",
+        "crossCheck": "新浪行情",
+        "date": "2026-09-04"
+      },
+      "indices": [
+        {
+          "name": "道琼斯",
+          "value": "53414.25",
+          "changePct": "-0.51%"
+        },
+        {
+          "name": "纳斯达克",
+          "value": "26506.99",
+          "changePct": "-0.29%"
+        },
+        {
+          "name": "标普500",
+          "value": "7718.60",
+          "changePct": "-0.38%"
+        }
+      ]
+    },
+    "aShare": {
+      "overview": "三大指数表现分化，创业板指涨3.41%领涨，算力硬件与光模块方向强势，上证仅微涨0.07%。",
+      "sectors": [
+        "创业板指涨3.41%，算力硬件股集体走强",
+        "光模块“易中天”单日市值增超1600亿元，高景气周期获机构热议",
+        "CPO概念股爆发，PCB概念同步活跃",
+        "厄尔尼诺预期升温，农牧渔板块再掀涨停潮",
+        "783只个股缺席两年牛市，昔日大白马分化加剧"
+      ],
+      "spoken": "A股方面，三大指数表现分化，上证指数微涨0.07%收于3932点，深证成指涨1.91%，创业板指涨3.41%领涨全场，算力硬件与光模块方向是主要拉动。盘面上，光模块龙头单日市值增超1600亿元，CPO与PCB概念同步爆发，机构热议算力高景气周期的持续性。另一边，厄尔尼诺预期升温带动种植链，农牧渔板块再掀涨停潮。值得注意的是，仍有783只个股缺席这轮两年牛市，包括多只昔日大白马，结构分化非常明显。",
+      "meta": {
+        "source": "东方财富",
+        "crossCheck": "新浪行情",
+        "date": "2026-09-07"
+      },
+      "indices": [
+        {
+          "name": "上证指数",
+          "value": "3932.70",
+          "changePct": "+0.07%"
+        },
+        {
+          "name": "深证成指",
+          "value": "13774.92",
+          "changePct": "+1.91%"
+        },
+        {
+          "name": "创业板指",
+          "value": "3398.68",
+          "changePct": "+3.41%"
+        }
+      ]
+    },
+    "hk": {
+      "overview": "恒生指数收报25413.12点（跌0.93%）；恒生科技收报4527.71点（跌0.92%）。",
+      "sectors": [
+        "恒生指数跌0.93%",
+        "恒生科技指数跌0.92%",
+        "科网股跌多涨少，内银股普跌",
+        "PCB概念股、存储半导体股逆势走强",
+        "年内港股IPO募资已超3500亿港元"
+      ],
+      "meta": {
+        "source": "新浪财经·港股",
+        "crossCheck": "新浪行情",
+        "date": "2026-09-07"
+      },
+      "sourceReport": {
+        "title": "港股收评：恒指跌0.93% 科指跌0.92% 科网股跌多涨少 内银股普跌 PCB概念股、存储半导体股逆势走强",
+        "url": "https://finance.sina.com.cn/stock/hkstock/marketalerts/2026-09-07/doc-iniqyvrw6364937.shtml"
+      },
+      "indices": [
+        {
+          "name": "恒生指数",
+          "value": "25413.12",
+          "changePct": "-0.93%"
+        },
+        {
+          "name": "恒生科技",
+          "value": "4527.71",
+          "changePct": "-0.92%"
+        }
+      ]
+    },
+    "quoteChannel": "新浪行情",
+    "quoteDate": "2026-09-07",
+    "marketStatus": {
+      "isMarketClosed": true,
+      "reportDate": "2026-09-08",
+      "dataDate": "2026-09-07",
+      "note": "以下 A股/港股行情为上一交易日（9月7日 周一）收盘数据；美股为美东 9月4日（周五）收盘，9月7日为美国劳动节休市",
+      "spokenNote": "以下A股与港股行情为上一交易日，9月7日周一的收盘情况；美股为美东9月4日周五收盘，9月7日美国劳动节休市。"
+    }
+  },
+  "stock_news": [
+    {
+      "url": "https://finance.eastmoney.com/a/202609063866110630.html",
+      "title_cn": "9月6日晚间沪深上市公司重大事项公告最新快递",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "09/06",
+      "summary": "9月6日晚间沪深上市公司集中发布重大事项公告，覆盖业绩、重组与增减持等多类动态。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "公告",
+        "A股"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202609073866639128.html",
+      "title_cn": "A股三大指数走势分化创业板指涨超3%CPO概念股爆发",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "09/07",
+      "summary": "A股三大指数走势分化，创业板指涨超3%，CPO概念股集体爆发。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "A股",
+        "CPO"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202609063866127011.html",
+      "title_cn": "A股市场下方支撑已形成？投资主线有哪些？十大券商策略来了",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "09/07",
+      "summary": "十大券商集中发布9月策略，普遍认为市场下方支撑已形成但主线仍有分歧。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "券商策略",
+        "A股"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202609063866066053.html",
+      "title_cn": "申万宏源：9月反弹可期但大波段行情重建需更长时间",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "09/07",
+      "summary": "申万宏源认为9月存在反弹窗口，但大级别行情的重建仍需更长时间。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "券商策略",
+        "A股"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202609063866124441.html",
+      "title_cn": "“高中签率”新股来了！本周将有3只新股开启申购",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "09/07",
+      "summary": "本周3只新股开启申购，高中签率吸引打新资金关注。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "新股",
+        "A股"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202609073866730827.html",
+      "title_cn": "中国证监会原副主席王建军一审被判无期徒刑",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "09/07",
+      "summary": "证监会原副主席王建军一审被判无期徒刑，金融反腐持续推进。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "监管",
+        "反腐"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202609063866073991.html",
+      "title_cn": "周末要闻汇总：事关人工智能、算力设施等七部门最新部署",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "09/07",
+      "summary": "七部门就人工智能与算力设施作出最新部署，相关政策信号集中释放。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "政策",
+        "算力"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202609063866123039.html",
+      "title_cn": "“上市即巅峰”源于过度炒新",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "09/07",
+      "summary": "评论指出部分新股“上市即巅峰”源于过度炒新，定价机制问题受关注。",
+      "importance": 3,
+      "rank": 0,
+      "tags": [
+        "新股",
+        "评论"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.sina.com.cn/money/fund/etf/2026-09-06/doc-iniqwwyq4050442.shtml",
+      "title_cn": "非农避险升温，A股盘中跳水，“软科技”涨势亮眼，农牧渔再掀涨停潮",
+      "source": "新浪财经",
+      "source_type": "media",
+      "date": "09/07",
+      "summary": "非农数据扰动避险情绪升温，A股盘中跳水，软科技与农牧渔方向逆势走强。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "A股",
+        "板块"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.sina.com.cn/wm/2026-09-06/doc-iniqwssv0027987.shtml",
+      "title_cn": "783只个股缺席两年牛市，万科、五粮液、迈瑞医疗等昔日大白马在列",
+      "source": "新浪财经",
+      "source_type": "media",
+      "date": "09/07",
+      "summary": "783只个股缺席本轮两年牛市，多只昔日大白马在列，结构分化明显。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "A股",
+        "结构分化"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.sina.com.cn/stock/hyyj/2026-09-07/doc-iniqyzxu6385432.shtml",
+      "title_cn": "“光”又回来了？ “易中天”单日市值增超1600亿元！机构热议高景气周期",
+      "source": "新浪财经",
+      "source_type": "media",
+      "date": "09/07",
+      "summary": "光模块龙头单日市值增超1600亿元，机构热议算力高景气周期的持续性。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "光模块",
+        "算力"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.sina.com.cn/money/fund/etf/2026-09-07/doc-iniqyeui0613461.shtml",
+      "title_cn": "全球极端天气预警升级！厄尔尼诺引爆种植链，农牧渔板块再掀涨停潮！",
+      "source": "新浪财经",
+      "source_type": "media",
+      "date": "09/07",
+      "summary": "厄尔尼诺预期升温引爆种植链，农牧渔板块再现涨停潮。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "农牧渔",
+        "板块"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.sina.com.cn/stock/roll/2026-09-07/doc-iniqxiqq6649995.shtml",
+      "title_cn": "年内港股IPO募资超3500亿港元",
+      "source": "新浪财经",
+      "source_type": "media",
+      "date": "09/07",
+      "summary": "年内港股IPO募资规模已超3500亿港元，一级市场活跃度维持高位。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "港股",
+        "IPO"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://finance.sina.com.cn/stock/hkstock/ggscyd/2026-09-07/doc-iniqyriw9580952.shtml",
+      "title_cn": "潼关黄金获纳入港股通的证券名单",
+      "source": "新浪财经",
+      "source_type": "media",
+      "date": "09/07",
+      "summary": "潼关黄金获纳入港股通标的，南向资金可交易范围继续扩容。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "港股通",
+        "黄金"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://finance.sina.com.cn/roll/2026-09-06/doc-iniqwwys9973087.shtml",
+      "title_cn": "港股IPO周报：信立泰等多家公司递表 两只新股首周双双破发",
+      "source": "新浪财经",
+      "source_type": "media",
+      "date": "09/07",
+      "summary": "港股IPO递表保持密集，两只新股上市首周双双破发，打新情绪转弱。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "港股",
+        "IPO"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://finance.sina.com.cn/roll/2026-09-07/doc-iniqxynm0683415.shtml",
+      "title_cn": "港股早报｜美伊互袭油轮中东局势再度升级 美联储9月加息押注升温",
+      "source": "新浪财经",
+      "source_type": "media",
+      "date": "09/07",
+      "summary": "中东局势升级叠加美联储9月加息押注升温，港股开盘情绪偏谨慎。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "港股",
+        "美联储"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://finance.sina.com.cn/stock/hkstock/marketalerts/2026-09-07/doc-iniqyvrw6364937.shtml",
+      "title_cn": "港股收评：恒指跌0.93% 科指跌0.92% 科网股跌多涨少 内银股普跌 PCB概念股、存储半导体股逆势走强",
+      "source": "新浪财经",
+      "source_type": "media",
+      "date": "09/07",
+      "summary": "恒指与科指双双收跌，科网股与内银股普跌，PCB与存储半导体逆势走强。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "港股",
+        "收盘"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://finance.sina.com.cn/roll/2026-09-07/doc-iniqxynm0681995.shtml",
+      "title_cn": "复星医药宣布拟以不超过10亿港元回购H股，持续回馈股东",
+      "source": "新浪财经",
+      "source_type": "media",
+      "date": "09/07",
+      "summary": "复星医药拟以不超10亿港元回购H股，延续股东回报动作。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "港股",
+        "回购"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://finance.sina.com.cn/stock/stockzmt/2026-09-07/doc-iniqxynk5851177.shtml",
+      "title_cn": "华泰 | 港股策略：用确定性趋势给持仓降波",
+      "source": "新浪财经",
+      "source_type": "media",
+      "date": "09/07",
+      "summary": "华泰建议以确定性趋势降低港股持仓波动，强调结构胜于仓位。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "港股",
+        "策略"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://finance.sina.com.cn/stock/hkstock/hkgg/2026-09-07/doc-iniqyvry5519977.shtml",
+      "title_cn": "大摩：注资对工商银行(01398)摊薄较预期温和 农业银行(01288)股权稀释幅度符合预期",
+      "source": "新浪财经",
+      "source_type": "media",
+      "date": "09/07",
+      "summary": "大摩测算注资对工行、农行的股权摊薄幅度温和，符合市场预期。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "内银股",
+        "注资"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://finance.sina.com.cn/stock/hkstock/ggscyd/2026-09-07/doc-iniqyriw9580918.shtml",
+      "title_cn": "歌礼制药-B获纳入沪港通及深港通计划项下的港股通名单",
+      "source": "新浪财经",
+      "source_type": "media",
+      "date": "09/07",
+      "summary": "歌礼制药-B获纳入港股通标的名单，南向资金可交易范围扩大。",
+      "importance": 3,
+      "rank": 0,
+      "tags": [
+        "港股通",
+        "医药"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://finance.sina.com.cn/stock/hkstock/ggscyd/2026-09-07/doc-iniqymaf0545251.shtml",
+      "title_cn": "海光芯正获纳入港股通股票名单",
+      "source": "新浪财经",
+      "source_type": "media",
+      "date": "09/07",
+      "summary": "海光芯正获纳入港股通股票名单，半导体标的受南向资金关注。",
+      "importance": 3,
+      "rank": 0,
+      "tags": [
+        "港股通",
+        "半导体"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://finance.sina.com.cn/stock/hkstock/ggscyd/2026-09-07/doc-iniqymaf0544733.shtml",
+      "title_cn": "哔哩哔哩-W于9月4日斥资7.84亿港元回购679.55万股",
+      "source": "新浪财经",
+      "source_type": "media",
+      "date": "09/07",
+      "summary": "哔哩哔哩斥资7.84亿港元回购679.55万股，回购力度持续。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "港股",
+        "回购"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://finance.sina.com.cn/stock/hkstock/hkzmt/2026-09-07/doc-iniqymaa6355243.shtml",
+      "title_cn": "群核科技上涨超30%、正式纳入港股通：「空间智能卖水人」价值愈发凸显",
+      "source": "新浪财经",
+      "source_type": "media",
+      "date": "09/07",
+      "summary": "群核科技纳入港股通后单日涨超30%，空间智能赛道关注度提升。",
+      "importance": 3,
+      "rank": 0,
+      "tags": [
+        "港股通",
+        "AI"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/09/07/china-state-banks-lenders-insurers-capital-solvency-bankrupt-nim-.html",
+      "title_cn": "China says it will pump $54 billion into banks and insurers — but their stocks still fell",
+      "source": "CNBC Top Stories",
+      "source_type": "media",
+      "date": "09/07",
+      "summary": "中国宣布向银行与保险体系注资540亿美元，但相关中资金融股当日仍然下跌。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "中资金融",
+        "注资"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/09/07/japan-foreign-reserves-yen-intervention.html",
+      "title_cn": "Japan's foreign reserves drop by a record $80 billion in August following yen intervention",
+      "source": "CNBC Top Stories",
+      "source_type": "media",
+      "date": "09/07",
+      "summary": "日本8月外汇储备创纪录下降800亿美元，日元干预的影响持续显现。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "外汇",
+        "日元"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/09/07/us-treasury-yields-markets-scott-bessent.html",
+      "title_cn": "Treasury yields face 4.8% test as fiscal risks threaten to spill into other assets",
+      "source": "CNBC Top Stories",
+      "source_type": "media",
+      "date": "09/07",
+      "summary": "美债收益率面临4.8%关口考验，财政风险存在向其他资产外溢的担忧。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "美债",
+        "利率"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.investing.com/news/economy-news/how-china-became-a-more-powerful-force-in-global-gold-demand-4890273",
+      "title_cn": "How China became a more powerful force in global gold demand",
+      "source": "Investing.com News",
+      "source_type": "media",
+      "date": "09/07",
+      "summary": "分析指出中国在全球黄金需求中的影响力持续增强，央行购金是主要推手。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "黄金",
+        "需求"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.investing.com/news/economy-news/opec-set-to-hold-oil-output-policy-steady-for-october--reuters-4890270",
+      "title_cn": "OPEC+ set to hold oil output policy steady for October - Reuters",
+      "source": "Investing.com News",
+      "source_type": "media",
+      "date": "09/07",
+      "summary": "OPEC+预计维持10月产量政策不变，油价高位震荡格局延续。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "原油",
+        "OPEC"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.investing.com/news/stock-market-news/ubs-commodities-can-add-diversification-as-inflation-geopolitical-risks-rise-4890234",
+      "title_cn": "UBS: Commodities can add diversification as inflation, geopolitical risks rise",
+      "source": "Investing.com News",
+      "source_type": "media",
+      "date": "09/07",
+      "summary": "UBS认为在通胀与地缘风险上升环境中，大宗商品可提升组合分散度。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "大宗商品",
+        "配置"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.investing.com/news/stock-market-news/ubs-sees-better-bond-carry-in-35-year-debt-after-global-selloff-4890225",
+      "title_cn": "UBS sees better bond carry in 3-5 year debt after global selloff",
+      "source": "Investing.com News",
+      "source_type": "media",
+      "date": "09/07",
+      "summary": "UBS认为全球债市抛售后，3至5年期债券的票息吸引力相对更优。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "债券",
+        "配置"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.investing.com/news/stock-market-news/what-is-driving-europes-yield-decoupling-4890276",
+      "title_cn": "What is driving Europe’s yield decoupling?",
+      "source": "Investing.com News",
+      "source_type": "media",
+      "date": "09/07",
+      "summary": "分析聚焦欧洲收益率与美债脱钩的驱动因素，跨市场利差交易受关注。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "欧债",
+        "利率"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.investing.com/news/forex-news/is-the-latest-rebound-in-the-japanese-yen-real-4890244",
+      "title_cn": "Is the latest rebound in the Japanese yen real?",
+      "source": "Investing.com News",
+      "source_type": "media",
+      "date": "09/07",
+      "summary": "分析质疑近期日元反弹的可持续性，干预与利差仍是关键变量。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "外汇",
+        "日元"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.investing.com/news/stock-market-news/russia-stocks-lower-at-close-of-trade-moex-russia-index-unchanged-4890240",
+      "title_cn": "Russia stocks lower at close of trade; MOEX Russia Index unchanged",
+      "source": "Investing.com News",
+      "source_type": "media",
+      "date": "09/07",
+      "summary": "俄罗斯股市收盘走低，MOEX俄罗斯指数基本持平。",
+      "importance": 3,
+      "rank": 0,
+      "tags": [
+        "海外市场"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.investing.com/news/economy-news/trump-administration-focuses-on-boosting-oil-output-wright-says-93CH-4890315",
+      "title_cn": "Trump administration focuses on boosting oil output, Wright says",
+      "source": "Investing.com News",
+      "source_type": "media",
+      "date": "09/07",
+      "summary": "美国能源部长表示本届政府聚焦提升原油产量，供给端政策取向明确。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "原油",
+        "政策"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/09/06/sec-iss-proxy-adviser-subpoena.html",
+      "title_cn": "SEC sues ISS as Trump administration ramps up scrutiny of proxy advisers",
+      "source": "CNBC Top Stories",
+      "source_type": "media",
+      "date": "09/07",
+      "summary": "SEC起诉代理投票顾问机构ISS，代理顾问行业监管明显收紧。",
+      "importance": 3,
+      "rank": 0,
+      "tags": [
+        "监管",
+        "SEC"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    }
+  ]
+}
