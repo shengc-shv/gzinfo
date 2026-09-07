@@ -1145,6 +1145,10 @@ export const THEME_CSS = `
   .brief h3 { margin: 0; font-size: 0.98rem; line-height: 1.5; }
   .brief .sum { margin: 0.35rem 0 0; font-size: 0.92rem; color: var(--fg-soft); line-height: 1.65; }
   .brief .sum b { color: var(--fg); }
+  /* 2026-09-07 IPO 双链接：主链接（东财列表）+ 交易所官方源入口（人工核查） */
+  .brief .official-src { margin: 0.3rem 0 0; font-size: 0.78rem; color: var(--muted); line-height: 1.5; }
+  .brief .official-src a { color: var(--accent-cmb, #b45309); text-decoration: none; border-bottom: 1px dashed currentColor; }
+  .brief .official-src a:hover { color: var(--fg); }
   .brief.more { display: none; }
   .panel.expanded .brief.more { display: block; }
   .expand-btn { width: 100%; margin: 0.2rem 0 0.4rem; padding: 0.6rem; border: 1px dashed var(--rule); border-radius: 10px; background: var(--bg-elevated, var(--card)); color: var(--muted); font-size: 0.88rem; font-family: inherit; cursor: pointer; }

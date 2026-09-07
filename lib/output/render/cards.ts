@@ -223,11 +223,17 @@ export function renderArticleHtml(a: ArticleInput, showSource = false): string {
   const time = formatDate(a.publishedAt ?? a.fetchedAt);
   const badge = srcBadgeOf(a);
   const srcName = showSource && a.source ? escapeHtml(a.source) : "";
-  const bm = [badge.label, srcName, time].filter(Boolean);
+  // 2026-09-07 用户要求：IPO 条目同时展现东财列表链接（主 url）与交易所官方源入口
+  // （officialUrl，人工核查用，交易所级栏目不做公司级反查）。仅 IPO 板块展示，其余类别忽略。
+  const official =
+    a.officialUrl && (a.category === "ipo" || a.category === "gd-ipo")
+      ? `<p class="official-src">交易所官方源：<a href="${escapeHtml(a.officialUrl)}" target="_blank" rel="noopener noreferrer">${escapeHtml(a.officialLabel || a.officialUrl)}</a></p>`
+      : "";
   return `<article class="brief">
   <div class="bm"><span class="src-badge ${badge.cls}">${badge.label}</span>${srcName ? `<span>${srcName}</span>` : ""}${time ? `<span>${time}</span>` : ""}</div>
   <h3><a href="${url}" target="_blank" rel="noopener noreferrer">${title}</a></h3>
   ${summary ? `<p class="sum">${summary}</p>` : ""}
+  ${official}
 </article>`;
 }
 

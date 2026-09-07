@@ -1,4 +1,5 @@
 import { BaseCrawler, type CrawlerResult } from "../base-crawler";
+import { exchangeSourceFor } from "../../exchange-source";
 
 /**
  * 东方财富 - IPO 在审企业申报表爬虫（RPT_IPO_DECORGNEWEST）
@@ -112,6 +113,9 @@ export class EastMoneyDeclareCrawler extends BaseCrawler {
       // 共用会被 fetchCrawledArticles 的 dedupeByUrl 合并成 1 条 → 多家广东企业被压成 1 家。
       // 用「列表页 + #企业简称/代码」锚点保证每条唯一且仍可点击跳转列表页。
       const anchor = encodeURIComponent(code || short);
+      // 交易所官方源（2026-09-07 用户要求）：东财对在审企业无精准详情页，
+      // 附一条交易所级审核栏目供人工核查（不做公司级反查，东财无交易所主键）。
+      const ex = exchangeSourceFor(market);
       out.push({
         title,
         url: `https://data.eastmoney.com/xg/xg/#${anchor}`,
@@ -120,6 +124,7 @@ export class EastMoneyDeclareCrawler extends BaseCrawler {
         sourceId: "em-declare",
         region: "gd",
         registeredProvince: "广东",
+        ...(ex ? { officialUrl: ex.url, officialLabel: ex.label } : {}),
       });
     }
     return out;

@@ -32,6 +32,10 @@ export type CrawlerResult = {
   // 见 merge.ts CrawledArticle 同名字段；无状态源红线：仅作采集元数据透传，不驱动分类）
   registeredProvince?: string;
   stockCode?: string;
+  // 2026-09-07 用户要求：IPO 条目同时给出东财列表链接 + 交易所官方源入口（人工核查用）。
+  // 交易所级栏目即可，不做公司级反查（东财在审企业无交易所主键）。仅展示，不参与分类/过滤。
+  officialUrl?: string;
+  officialLabel?: string;
 };
 
 export interface CrawlerOptions {
@@ -190,6 +194,9 @@ export class BaseCrawler {
       // 2026-08-30：在审/辅导企业注册地省份 + 证券代码透传（merge 归一化用）
       ...(item.registeredProvince ? { registeredProvince: item.registeredProvince } : {}),
       ...(item.stockCode ? { stockCode: item.stockCode } : {}),
+      // 2026-09-07：交易所官方源入口透传（IPO 条目双链接展现，仅展示用）
+      ...(item.officialUrl ? { officialUrl: item.officialUrl } : {}),
+      ...(item.officialLabel ? { officialLabel: item.officialLabel } : {}),
     }));
   }
 }

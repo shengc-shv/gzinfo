@@ -68,6 +68,13 @@ export interface CrawledArticle {
   registeredProvince?: string;
   /** 已知股票代码（可选，供广东判定离线精确匹配）。 */
   stockCode?: string;
+  /**
+   * 交易所/监管官方源链接（2026-09-07）：爬虫按拟上市板写入，透传到渲染层展示。
+   * 与 CrawledArticle.officialUrl 同源，见 lib/sources/exchange-source.ts。
+   */
+  officialUrl?: string;
+  /** 官方源展示名。 */
+  officialLabel?: string;
 }
 
 /** 爬虫数据的两条进入路径：IPO/新股（mode=ipo）与广州商机（mode=gz）。 */
@@ -88,6 +95,10 @@ export interface MergeArticle {
   registeredProvince?: string;
   /** 已知股票代码（透传，供广东判定离线精确匹配）。 */
   stockCode?: string;
+  /** 交易所/监管官方源链接（透传，渲染层展示，2026-09-07）。 */
+  officialUrl?: string;
+  /** 官方源展示名（透传）。 */
+  officialLabel?: string;
   /**
    * IPO 内容态（2026-08-31 3漏斗整改 commit②，红线：过滤行为不得依赖源分类字符串）。
    * routeRegion 解析出 category=gd-ipo/ipo 时为真；过滤层据此豁免单机构/相似度/
@@ -156,6 +167,9 @@ export function toMergeArticle(
     ...(item.tier ? { tier: item.tier } : {}),
     ...(item.registeredProvince ? { registeredProvince: item.registeredProvince } : {}),
     ...(item.stockCode ? { stockCode: item.stockCode } : {}),
+    // 交易所官方源（2026-09-07）：IPO 条目同时展示东财列表 + 交易所权威入口
+    ...(item.officialUrl ? { officialUrl: item.officialUrl } : {}),
+    ...(item.officialLabel ? { officialLabel: item.officialLabel } : {}),
   };
 }
 

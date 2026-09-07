@@ -80,6 +80,41 @@ test("parseArticle: 非法 JSON / 无数据 → 空数组（不崩溃）", async
   assert.deepEqual(await crawler.parseArticle(JSON.stringify({ result: {} })), []);
 });
 
+test("parseArticle: 拟上市板块 → 交易所官方源链接（2026-09-07 IPO 双链接）", async () => {
+  const crawler = new EastMoneyDeclareCrawler();
+  const d = new Date().toISOString().slice(0, 10);
+  const payload = JSON.stringify({
+    result: {
+      data: [
+        // 创业板 → 深交所
+        { DECLARE_ORG: "深企股份", STATE: "已问询", END_DATE: `${d} 00:00:00`, REG_ADDRESS: "广东", PREDICT_LISTING_MARKET: "创业板" },
+        // 科创板 → 上交所
+        { DECLARE_ORG: "沪企股份", STATE: "已受理", END_DATE: `${d} 00:00:00`, REG_ADDRESS: "广东", PREDICT_LISTING_MARKET: "科创板" },
+        // 北交所
+        { DECLARE_ORG: "北企股份", STATE: "已受理", END_DATE: `${d} 00:00:00`, REG_ADDRESS: "广东", PREDICT_LISTING_MARKET: "北交所" },
+        // 香港
+        { DECLARE_ORG: "港企股份", STATE: "已受理", END_DATE: `${d} 00:00:00`, REG_ADDRESS: "广东", PREDICT_LISTING_MARKET: "香港主板" },
+        // 美股
+        { DECLARE_ORG: "美企股份", STATE: "已受理", END_DATE: `${d} 00:00:00`, REG_ADDRESS: "广东", PREDICT_LISTING_MARKET: "美国纳斯达克" },
+        // 无法识别板块 → 不加官方源（宁缺毋滥）
+        { DECLARE_ORG: "未知板块股份", STATE: "已受理", END_DATE: `${d} 00:00:00`, REG_ADDRESS: "广东", PREDICT_LISTING_MARKET: "其他" },
+      ],
+    },
+  });
+  const out = await crawler.parseArticle(payload);
+  assert.equal(out.length, 6);
+  const by = (s: string) => out.find((o) => o.title?.startsWith(s))!;
+  assert.equal(by("深企").officialUrl, "https://www.szse.cn/listing/projectdynamic/ipo");
+  assert.equal(by("深企").officialLabel, "深交所 · 审核项目动态");
+  assert.equal(by("沪企").officialUrl, "https://www.sse.com.cn/listing/renewal/ipo");
+  assert.equal(by("北企").officialUrl, "https://www.bse.cn/audit/project_news.html");
+  assert.equal(by("港企").officialUrl, "https://www2.hkexnews.hk/New-Listings/Application-Proof-and-PHIP");
+  assert.equal(by("美企").officialUrl, "https://www.sec.gov/edgar/search/");
+  assert.equal(by("未知板块").officialUrl, undefined, "无法识别板块 → 不加官方源");
+  // 主链接仍是东财列表页（保证可点击跳转）
+  assert.ok(by("深企").url!.includes("data.eastmoney.com/xg/xg/#"));
+});
+
 test("getUrls: 广东过滤 + 5 页分页", async () => {
   const crawler = new EastMoneyDeclareCrawler();
   const urls = await crawler.getUrls();

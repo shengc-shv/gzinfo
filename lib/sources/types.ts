@@ -89,6 +89,14 @@ export interface RawArticle {
    */
   meta?: string;
   /**
+   * 交易所/监管官方源链接（2026-09-07 用户要求：IPO 条目同时给出东财列表与交易所源）。
+   * 客户端点开主 url 是第三方列表页，本字段提供可人工核查的权威入口（交易所级栏目）。
+   * 仅展示用，不参与分类/过滤/打分。
+   */
+  officialUrl?: string;
+  /** 官方源展示名，如「深交所 · 审核项目动态」。缺省时渲染层用 URL 兜底。 */
+  officialLabel?: string;
+  /**
    * Set by the report entrypoint (daily.ts / dry-run.ts) after merging the
    * rolling 30-day history. `true` = fetched in the current run (shown under
    * the "当天" tab); absent/false = carried from previous runs' history
