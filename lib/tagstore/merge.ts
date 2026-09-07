@@ -87,6 +87,12 @@ export interface HarvestOptions {
    * **仅当 LLM 成功返回时才能传 true**——失败时标 false 会永久误杀（最严重的漏损）。
    */
   markDroppedAsIrrelevant: boolean;
+  /**
+   * PASS1 执行失败（重试+拆半耗尽）的 url 集合。这些属于 LLM 抖动 / 单条毒丸，
+   * **不是** AI 判定无价值。命中集合的条目即使 `markDroppedAsIrrelevant=true` 也
+   * **保持未打标并打告警**，绝不标 `aiRelevant=false`（否则一次抖动被固化为永久误杀）。
+   */
+  failedUrls?: Set<string>;
 }
 
 /**
@@ -111,7 +117,14 @@ export function harvestFromReport(
     if (!publishedAt || Number.isNaN(Date.parse(publishedAt))) continue;
 
     const hit = kept.get(url);
-    if (!hit && !opts.markDroppedAsIrrelevant) continue;
+    if (!hit) {
+      // PASS1 执行失败条目：保持未打标（不误杀），仅告警
+      if (opts.failedUrls?.has(url)) {
+        console.warn(`[tagstore] ⚠️ PASS1 执行失败，保持未打标（不误标无价值）: ${url}`);
+        continue;
+      }
+      if (!opts.markDroppedAsIrrelevant) continue;
+    }
 
     const rec = buildRecord({
       url,

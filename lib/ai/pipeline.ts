@@ -141,6 +141,11 @@ export interface PipelineOptions {
   runner?: LlmRunner;
   /** 回炉次数上限（文档 MAX_PASS2_RETRY=2）。 */
   maxPass2Retry?: number;
+  /**
+   * 收集合并后仍未被 PASS1 LLM 返回（重试+拆半耗尽）的 url，
+   * 供缓存管线区分「执行失败」与「AI 判定无价值」，避免把抖动固化为永久无价值。
+   */
+  pass1FailedCollector?: Set<string>;
 }
 
 /** 把 block 问题清单格式化为回炉 prompt 片段。 */
@@ -346,7 +351,7 @@ export async function generateDaily(
   }
 
   // 空输入（PASS1 全丢弃）→ 合法空报告，不抛异常
-  const kept = await runPass1(pre.kept, runner);
+  const kept = await runPass1(pre.kept, runner, { failedUrls: opts.pass1FailedCollector });
   if (kept.length === 0) {
     return {
       date,

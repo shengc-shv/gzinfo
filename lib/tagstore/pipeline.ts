@@ -8,11 +8,13 @@
  *     └─ 未命中             → fresh 组 → generateDaily(真 LLM)
  *   两组报告合并 → 回灌 store → 落盘
  *
- * **不漏损设计（三道防线）**
+ * **不漏损设计（四道防线）**
  *   1. miss 组 LLM 失败 → 默认**回退全量重跑**（TAG_FALLBACK_FULL=1，默认开），
  *      即把 hit 组也一起送进 LLM，保证任何条目都不会因为缓存路径而消失；
  *      全量也失败 → 才用 cached-only 降级并告警（CI 可见）。
  *   2. LLM 失败时**不回写** store（避免把网络抖动固化为「无价值」永久误杀）。
+ *   2b. 部分批 PASS1 失败但报告非空（软失败检测漏检）→ 失败条目**保持未打标 + 告警**，
+ *       绝不随 markDroppedAsIrrelevant 被标成永久无价值（把当次漏损升级为不可逆漏损）。
  *   3. 全过程计数对账并打印，条数异常一眼可见。
  *
  * **空 store 等价现状**：store 为空 → 全部 miss → 与改造前完全一致（全量 LLM）。
@@ -128,13 +130,16 @@ export async function runCachedAiPipeline(
   let llmFailed = false;
   let fallbackFull = false;
   let freshReport: DailyReport = emptyReport(date);
+  // PASS1 执行失败（重试+拆半耗尽）的 url 集合——这些不是「AI 判定无价值」，
+  // 回灌时必须保持未打标、打告警，绝不标 aiRelevant=false（防永久误杀）。
+  const missFailed = new Set<string>();
 
   if (split.miss.length > 0) {
     try {
       freshReport = await generateDaily(
         split.miss.map((m) => m),
         date,
-        { runner: opts.missRunner },
+        { runner: opts.missRunner, pass1FailedCollector: missFailed },
       );
       // 软失败检测（关键）：runPass1/runPass2 在 LLM 异常时会吞掉异常、降级为空报告，
       // 不会向上抛。所以「未命中组非空但产出 0 条」才是 LLM 真实失败的信号——
@@ -145,7 +150,7 @@ export async function runCachedAiPipeline(
         if (fallbackFullEnabled()) {
           ctx.log.info("tagstore", "↩️ 回退：全量重跑（含已命中组），保证不漏损");
           try {
-            freshReport = await generateDaily(all, date, { runner: opts.missRunner });
+            freshReport = await generateDaily(all, date, { runner: opts.missRunner, pass1FailedCollector: missFailed });
             fallbackFull = true;
             // 全量仍空 → 仍失败（否则会落选误标）；成功才把它当真实结果
             llmFailed = countItems(freshReport) === 0;
@@ -164,7 +169,7 @@ export async function runCachedAiPipeline(
       if (fallbackFullEnabled()) {
         ctx.log.info("tagstore", "↩️ 回退：全量重跑（含已命中组），保证不漏损");
         try {
-          freshReport = await generateDaily(all, date, { runner: opts.missRunner });
+          freshReport = await generateDaily(all, date, { runner: opts.missRunner, pass1FailedCollector: missFailed });
           fallbackFull = true;
           llmFailed = countItems(freshReport) === 0;
           if (!llmFailed) split.hit = [];
@@ -201,6 +206,7 @@ export async function runCachedAiPipeline(
       articlesByUrl,
       tagger: "pipeline",
       markDroppedAsIrrelevant: true,
+      failedUrls: missFailed,
     });
     writeback = upsertRecords(store, records);
     const removed = pruneStore(store);

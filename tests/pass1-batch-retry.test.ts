@@ -114,3 +114,22 @@ test("PASS1 首次即成功 → 不额外调用 LLM（成功路径零成本）",
   assert.equal(calls, 1, "成功时不应重试");
   assert.equal(kept.length, 1);
 });
+
+test("PASS1 透出失败 url：LLM 漏返回某条 → 进 failedUrls（不误判为无价值）", async () => {
+  const inputs = [mkInput(1), mkInput(2), mkInput(3)];
+  const runner = async () => JSON.stringify({ items: [okItem(1), okItem(2)] });
+  const failed = new Set<string>();
+  const kept = await runPass1(inputs, runner, { failedUrls: failed });
+  assert.equal(kept.length, 2, "LLM 返回 1、2 两条");
+  assert.ok(!failed.has("https://example.com/1") && !failed.has("https://example.com/2"), "成功返回的条目不计入失败");
+  assert.ok(failed.has("https://example.com/3"), "漏返回的 url=3 必须进 failedUrls（供上游保持未打标）");
+});
+
+test("PASS1 透出失败 url：整批全坏 → 所有 url 进 failedUrls", async () => {
+  const inputs = [mkInput(1), mkInput(2), mkInput(3)];
+  const runner = async () => "not json at all";
+  const failed = new Set<string>();
+  const kept = await runPass1(inputs, runner, { failedUrls: failed });
+  assert.equal(kept.length, 0);
+  assert.equal(failed.size, 3, "全部失败 → 全部进 failedUrls，供上游区分于「判定无价值」");
+});

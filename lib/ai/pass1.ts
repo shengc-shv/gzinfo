@@ -216,6 +216,15 @@ async function runPass1Batch(
   return new Map();
 }
 
+export interface RunPass1Options {
+  /**
+   * 收集合并后仍未被 LLM 返回（重试+拆半递归耗尽）的 url 集合。
+   * 这些属于「PASS1 执行失败」（网络抖动 / 单条毒丸），**不是**「AI 判定无价值」。
+   * 上游应据此把条目保持未打标，绝不能固化为永久无价值（否则一次抖动 = 最严重漏损）。
+   */
+  failedUrls?: Set<string>;
+}
+
 /**
  * 运行 Pass 1：分批并行（默认 30/批），AI 只给判断；早期校验 fail-fast；
  * 保留条目按原输入池顺序稳定排序后返回（保证可复现）。
@@ -223,6 +232,7 @@ async function runPass1Batch(
 export async function runPass1(
   inputs: Pass1Input[],
   runner: LlmRunner = defaultRunner,
+  opts: RunPass1Options = {},
 ): Promise<Pass1Item[]> {
   if (inputs.length === 0) return [];
   const pool = new Map(inputs.map((a) => [a.url, a]));
@@ -235,6 +245,14 @@ export async function runPass1(
   const batchMaps = await Promise.all(
     batches.map((b) => runPass1Batch(b, runner)),
   );
+
+  // 收集 PASS1 失败 url：不在任何 batch 产出里 = LLM 重试+拆半后仍未能返回该条。
+  // （注意：keep=false / 违禁词早筛被丢弃的条目**在** batch 产出里，不计入此处——它们是判定结果。）
+  if (opts.failedUrls) {
+    const returned = new Set<string>();
+    for (const m of batchMaps) for (const k of m.keys()) returned.add(k);
+    for (const a of inputs) if (!returned.has(a.url)) opts.failedUrls.add(a.url);
+  }
 
   const kept: Pass1Item[] = [];
   for (const a of inputs) {

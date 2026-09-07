@@ -310,6 +310,34 @@ test("harvestFromReport: 无发布时间的条目不回灌（时间真实性红�
   assert.equal(records.length, 0);
 });
 
+test("harvestFromReport: PASS1 失败条目（failedUrls）保持未打标、不误杀", () => {
+  // /1 进成稿（真相关）；/2 是 PASS1 执行失败（毒丸/抖动）；/3 是 LLM 判定无价值
+  const r = report([{ url: "https://x.com/1", section: "biz_insight" }]);
+  const urls = ["https://x.com/1", "https://x.com/2", "https://x.com/3"];
+  const byUrl = new Map(urls.map((u) => [u, article(u)]));
+  const records = harvestFromReport(r, {
+    urls,
+    articlesByUrl: byUrl,
+    tagger: "pipeline",
+    markDroppedAsIrrelevant: true, // 即便开启「落选标无价值」
+    failedUrls: new Set(["https://x.com/2"]), // /2 属 PASS1 执行失败
+  });
+  // 只应回写 /1（有价值）与 /3（判定无价值）；/2 必须保持未打标，绝不进 store
+  assert.equal(records.length, 2, "失败条目 /2 不应被回写");
+  assert.equal(records.find((x) => x.url === "https://x.com/1")!.aiRelevant, true);
+  assert.equal(records.find((x) => x.url === "https://x.com/3")!.aiRelevant, false);
+  assert.equal(records.some((x) => x.url === "https://x.com/2"), false, "PASS1 失败条目不得被误标无价值");
+});
+
+test("harvestFromReport: 无 failedUrls 时行为不变（落选仍标无价值）", () => {
+  const r = report([{ url: "https://x.com/1", section: "biz_insight" }]);
+  const urls = ["https://x.com/1", "https://x.com/2"];
+  const byUrl = new Map(urls.map((u) => [u, article(u)]));
+  const records = harvestFromReport(r, { urls, articlesByUrl: byUrl, tagger: "pipeline", markDroppedAsIrrelevant: true });
+  assert.equal(records.length, 2, "无 failedUrls 时维持既有逻辑");
+  assert.equal(records.find((x) => x.url === "https://x.com/2")!.aiRelevant, false);
+});
+
 test("storeStats: 统计有价值条目与打标者分布", () => {
   const store = emptyStore();
   upsertRecords(store, [
