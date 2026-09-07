@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-01",
+  "updatedAt": "2026-09-07",
   "note": "广东地区企业单一真相源：企业名/别名(含英文名)/股票代码/注册城市。A股由东方财富F10校验省份；港股中概人工标注。匹配逻辑见 lib/sources/guangdong.mjs。",
   "companies": [
     {
