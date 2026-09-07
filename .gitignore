@@ -19,6 +19,11 @@
 /data/ai-assets/
 /data/metrics/
 
+# M4 TagStore 运行期产物（本地工作文件，不随代码提交；真缓存由 pre-analyze workflow 强制提交）
+/data/tag-queue.json
+/data/tag-incoming.json
+/data/tag-store.json
+
 # Claude Code local state (skills + commands ARE committed; cache/state aren't)
 /.claude/state/
 /.claude/cache/

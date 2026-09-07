@@ -5,6 +5,7 @@
   "scripts": {
     "dry-run": "tsx scripts/dry-run.ts",
     "daily": "tsx scripts/daily.ts",
+    "pre-analyze": "tsx scripts/pre-analyze.ts",
     "render": "tsx scripts/render.ts",
     "regen-trading": "tsx scripts/regen-trading.ts",
     "regen-enrich": "tsx scripts/regen-enrich.ts",
