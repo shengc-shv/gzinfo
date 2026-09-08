@@ -132,7 +132,13 @@ test("IPO 池：7 天窗口，且不被并入 finance/gz", () => {
   ];
   const res = buildTwoDayExecPool({
     history: mkHistory(),
-    articles: arts,
+    // 生产实况：articles 包含 report.sections 的 tf/tg 来源条目（均带真实发布时间），
+    // 此处一并补齐，避免依赖已移除的 todayUrls 旁路。
+    articles: [
+      ...arts,
+      { url: "tf", publishedAt: `${TODAY}T09:00:00+08:00`, category: "finance" },
+      { url: "tg", publishedAt: `${TODAY}T09:30:00+08:00`, category: "gz" },
+    ],
     report,
     today: TODAY,
   });
@@ -163,7 +169,13 @@ test("无 publishedAt 的条目被跳过", () => {
   const hist: Record<string, ExecPoolHistoryEntry> = {
     noDate: { category: "finance", ai_relevant: true, summary: "有摘要但无日期", title: "无日期", url: "noDate" },
   };
-  const res = buildTwoDayExecPool({ history: hist, articles: [], report: mkReport(), today: TODAY });
-  assert.equal(res.finance.length, 1, "今日 report.sections 仍贡献 tf");
-  assert.ok(!res.finance.map((i) => i.url).includes("noDate"));
+  // 今日实际抓取的文章均带真实发布时间，与 report.sections 的 tf/tg 对应（生产实况：
+  // ingest 已保证 articles 一律有 publishedAt，不会有无日期条目流入）。
+  const todayArts = [
+    { url: "tf", publishedAt: `${TODAY}T09:00:00+08:00`, category: "finance" },
+    { url: "tg", publishedAt: `${TODAY}T09:30:00+08:00`, category: "gz" },
+  ];
+  const res = buildTwoDayExecPool({ history: hist, articles: todayArts, report: mkReport(), today: TODAY });
+  assert.equal(res.finance.length, 1, "今日 report.sections 的 tf 带发布时间，仍贡献");
+  assert.ok(!res.finance.map((i) => i.url).includes("noDate"), "无发布时间的 noDate 必须被跳过");
 });

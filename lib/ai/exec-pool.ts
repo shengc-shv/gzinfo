@@ -145,9 +145,6 @@ export function buildTwoDayExecPool(opts: BuildTwoDayExecPoolOpts): ExecPoolResu
     string,
     { title: string; summary: string; cat: "finance" | "gz"; subcategory?: string }
   >();
-  // 今日 sections 来源 url 集合：这些条目天然属于「今天」，窗口判定时即使
-  // pubByUrl 查不到 publishedAt 也视为在窗口内（避免今日条目被误跳过）。
-  const todayUrls = new Set<string>();
 
   // 今日：report.sections（PASS2 已富集摘要）
   for (const sec of Object.keys(opts.report.sections) as ReportSectionKey[]) {
@@ -155,7 +152,6 @@ export function buildTwoDayExecPool(opts: BuildTwoDayExecPoolOpts): ExecPoolResu
     if (!cat) continue;
     for (const it of opts.report.sections[sec]) {
       if (!it.summary?.trim()) continue;
-      todayUrls.add(it.url);
       items.set(it.url, {
         title: it.title_cn || it.title_orig || "",
         summary: it.summary,
@@ -183,13 +179,9 @@ export function buildTwoDayExecPool(opts: BuildTwoDayExecPoolOpts): ExecPoolResu
   const finance: ExecPoolItem[] = [];
   const gz: ExecPoolItem[] = [];
   for (const [url, info] of items) {
+    // 必须有真实发布时间且落在两天窗口内；缺发布时间一律排除（遵守时间红线）。
     const p = pubByUrl.get(url);
-    if (p) {
-      if (!inWindow(p)) continue;
-    } else if (!todayUrls.has(url)) {
-      // 无 publishedAt 且非今日 sections 来源（多来自 history）→ 无法判定窗口，跳过
-      continue;
-    }
+    if (!p || !inWindow(p)) continue;
     const entry: ExecPoolItem = { title: info.title, summary: info.summary, url };
     if (info.subcategory) entry.subcategory = info.subcategory;
     (info.cat === "finance" ? finance : gz).push(entry);
@@ -256,9 +248,8 @@ function buildRelaxedTwoDayPool(
       publishedAt?: string | Date;
       ai_relevant?: boolean;
     },
-    /** true=今日抓取条目（天然属"今天"，仅在有发布时间且超窗口时排除）；
-     *  false=历史库条目（走严格窗口 + 硬排除）。今日旁路对应 report.sections 的
-     *  todayUrls：避免"无发布时间"被 inWindow 误杀导致 2 天池静默落空。 */
+    /** true=今日抓取条目（须有真实发布时间且落在两天窗口内）；
+     *  false=历史库条目（硬排除已判不相关 + 两天窗口）。缺发布时间一律排除（时间红线）。 */
     fromToday: boolean,
   ): void => {
     const url = raw.url;
@@ -266,15 +257,12 @@ function buildRelaxedTwoDayPool(
     const cat = RELEVANT_CAT.has(raw.category ?? "") ? (raw.category as "finance" | "gz") : null;
     if (!cat) return;
     if (fromToday) {
-      // 今日抓取：有发布时间但超 2 天窗口才排除；无发布时间（时间红线不允许补抓取日）
-      // 一律按"今天"纳入，与 todayUrls 旁路口径一致，杜绝"今日抓取内容被静默丢弃"。
-      if (raw.publishedAt) {
-        const k = dateKeyOf(raw.publishedAt, tz);
-        if (k !== tk && k !== yk) return;
-      }
+      // 今日抓取：必须有真实发布时间且落在两天窗口内（遵守时间红线：缺发布时间一律不要）。
+      const k = dateKeyOf(raw.publishedAt, tz);
+      if (k !== tk && k !== yk) return;
     } else {
       if (raw.ai_relevant === false) return; // 硬排除（历史已判为不相关）
-      if (!inWindow(raw.publishedAt)) return; // 只看今天 + 昨天
+      if (!inWindow(raw.publishedAt)) return; // 只看今天 + 昨天（缺发布时间 → 不在窗口）
     }
     const summary = (raw.summary ?? "").trim();
     const scored = scoreBranchRelevance({
@@ -299,7 +287,7 @@ function buildRelaxedTwoDayPool(
     });
   };
 
-  // 今天：本次抓取（经 9 道过滤后保留的条目）—— 按"今日"纳入（见 consider 的 fromToday 旁路）
+  // 今天：本次抓取（经 9 道过滤后保留的条目，均有真实发布时间）—— 按两天窗口纳入
   for (const a of opts.articles) {
     const x = a as unknown as { subcategory?: string };
     consider(
@@ -355,9 +343,10 @@ function buildRelaxedTwoDayPool(
 function buildIpoPool(opts: BuildTwoDayExecPoolOpts): ExecPoolItem[] {
   const cutoff = Date.now() - 7 * 86_400_000;
   const inIpoWindow = (iso: string | Date | undefined): boolean => {
-    if (!iso) return true; // 无 publishedAt：今日 sections/本次抓取的条目不因此丢
+    if (!iso) return false; // 无发布时间：遵守时间红线，一律排除
     const t = new Date(iso).getTime();
-    return Number.isNaN(t) || t >= cutoff;
+    if (Number.isNaN(t)) return false; // 无效日期排除
+    return t >= cutoff;
   };
   const out = new Map<string, ExecPoolItem>();
 
@@ -420,12 +409,11 @@ export function collectTwoDayArticles(opts: {
     return k === tk || k === yk;
   };
 
-  // 今天：本次抓取（经窗口/判重后的保留条目）
-  // 今日抓取条目天然属"今天"：有发布时间且超 2 天窗口才排除；无发布时间按"今天"纳入
-  // （时间红线不补抓取日，但也不能因缺发布时间被静默丢弃，否则 SKIP_AI 兜底池随之落空）。
+  // 今天：本次抓取（经窗口/判重后的保留条目）。
+  // 必须有真实发布时间且落在两天窗口内；缺发布时间一律排除（遵守时间红线）。
   for (const a of opts.articles ?? []) {
     if (!a.url) continue;
-    if (a.publishedAt && !inWindow(a.publishedAt)) continue;
+    if (!inWindow(a.publishedAt)) continue;
     const x = a as unknown as { subcategory?: string; source?: string; sourceId?: string; locale?: string };
     out.set(a.url, {
       title: a.title ?? "",
