@@ -1,8 +1,8 @@
 /**
  * ArticleInput → Pass1Input 归一化。
  *
- * 从 lib/pipeline/ai.ts 抽出为独立模块（M4）：tagstore/pipeline.ts 与 ai.ts
- * 都要用它，放原处会形成 ai.ts ↔ tagstore/pipeline.ts 的循环依赖。
+ * 从 lib/pipeline/ai.ts 抽出为独立模块：lib/ai/pipeline.ts 与 lib/pipeline/ai.ts
+ * 都要用它，放原处会形成 ai.ts ↔ lib/ai/pipeline.ts 的循环依赖。
  */
 
 import type { ArticleInput } from "../types";
