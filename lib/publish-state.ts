@@ -7,17 +7,21 @@
  * 「今天已发布」而跳过正式首发（漏洞 A/B/E：无来源、无优先级、存在性≠一致性）。
  *
  * 方案：main 分支维护 data/publish-state.json，显式记录每天**最后一次发布**的来源：
- *   - source=schedule → schedule 正式首发；published-check 只认它 → 当天后续 schedule 跳过
- *   - source=manual  → dispatch publish=true 的人工发布/覆盖；**不阻断同日 schedule 首发**
- *     （首次 schedule 命中会再发一次正式版覆盖测试版，today 落盘随之回到正式 run）
+ *   - source=schedule    → schedule 正式首发；cron 跳过判据认它
+ *   - source=manual-final→ 手动触发且 release_mode=final（用户确认当天正式终版）；
+ *                           **阻断同日 cron 重复发布**（避免用户手动版被 cron 覆盖，2026-09-08 P0 修复）
+ *   - source=manual-test → 手动触发且 release_mode=test（验证/抢跑）；
+ *                           **不阻断同日 cron 首发**（保留 09-03「凌晨测试不吞正式首发」）
+ *   - source=manual      → 历史兼容（09-03..09-06 旧记录）；视为非终版，不阻断 cron
  *
- * 写入方：daily.yml 在 gh-pages publish **成功后** record（因果序：先发布成功，后记账）。
+ * 写入方：daily.yml 在 gh-pages publish **成功后** record（因果序：先发布成功，后记账），
+ *   SOURCE 由 workflow 计算：schedule→schedule；manual+final→manual-final；manual+test→manual-test。
  * 读取方：daily.yml published-check（daily 之前，产出 should-publish / PUBLISH_RUN）。
  *
- * 记录为「最后一次发布」而非「当天首次」：同日多次发布自然覆盖（manual 覆盖 schedule
- * 后，次日已翻页无影响；schedule 覆盖 manual 是期望的「正式首发找回」）。
+ * 记录为「最后一次发布」而非「当天首次」：同日多次发布自然覆盖。
+ * cron 跳过判据（isSchedulePublishedOn）= 当天存在 schedule 或 manual-final。
  */
-export type PublishSource = "schedule" | "manual";
+export type PublishSource = "schedule" | "manual" | "manual-final" | "manual-test";
 
 /** 一次 gh-pages 发布的留痕。 */
 export interface PublishEntry {
@@ -54,18 +58,18 @@ export function recordPublish(
 }
 
 /**
- * 当天是否已有 schedule 正式首发（published-check 唯一判据）。
+ * cron 是否应跳过当天发布（published-check 唯一判据）。
  *
- * 只认 source=schedule：manual 覆盖（含凌晨测试抢占 gh-pages）不构成「已正式首发」，
- * 首次 schedule 命中仍会发布正式版。undefined/null state（文件缺失/损坏容错）→ false
- * （视为未发布，宁重复发布一次同源报告，不吞掉正式首发）。
+ * 当天已有 schedule 正式首发，或手动终版（manual-final）→ cron 跳过，不重复发布。
+ * 手动验证（manual-test）与历史裸 manual 不阻断 —— 保留 09-03「凌晨测试不吞正式首发」。
+ * undefined/null/结构损坏 → false（视为未发布，宁重复发布一次，不吞掉正式首发）。
  */
 export function isSchedulePublishedOn(
   state: PublishState | undefined | null,
   date: string
 ): boolean {
   const e = state && state.reports && state.reports[date];
-  return !!e && e.source === "schedule";
+  return !!e && (e.source === "schedule" || e.source === "manual-final");
 }
 
 /**

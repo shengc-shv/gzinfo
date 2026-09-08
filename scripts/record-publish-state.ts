@@ -22,6 +22,7 @@ import {
   prunePublishState,
   recordPublish,
   type PublishState,
+  type PublishSource,
 } from "../lib/publish-state";
 import { formatBroadcastAt, memoryTimeZone } from "../lib/memory/broadcast-time";
 
@@ -62,9 +63,9 @@ function main(): void {
     day: "2-digit",
   }).format(new Date());
 
-  const source = process.env.SOURCE as "schedule" | "manual" | undefined;
-  if (source !== "schedule" && source !== "manual") {
-    log(`SOURCE 缺失或非法（got: ${String(source)}）— 期望 schedule|manual，退出 1`);
+  const source = process.env.SOURCE as PublishSource | undefined;
+  if (source !== "schedule" && source !== "manual" && source !== "manual-final" && source !== "manual-test") {
+    log(`SOURCE 缺失或非法（got: ${String(source)}）— 期望 schedule|manual-final|manual-test，退出 1`);
     process.exit(1);
   }
 
@@ -83,8 +84,10 @@ function main(): void {
   );
   log(
     source === "schedule"
-      ? "次日/后续 schedule 命中将据此跳过重复发布（manual 记录不阻断同日 schedule 首发）。"
-      : "manual 记录不阻断同日 schedule 首发；首次 schedule 命中仍会发布正式版覆盖。"
+      ? "次日/后续 schedule 命中将据此跳过重复发布。"
+      : source === "manual-final"
+        ? "manual-final（手动终版）记录将阻断同日 schedule 重复发布 —— cron 不再覆盖你的手动版。"
+        : "manual-test（手动验证）记录不阻断同日 schedule 首发；首次 schedule 命中仍会发布正式版。"
   );
 }
 

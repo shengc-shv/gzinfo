@@ -11,11 +11,13 @@ name: Daily Brief
 #   - 窗口内每次命中都跑 build（全 AI 标新数据）；「一天最多发布一次」由 publish 步骤把控
 #   - 并发检查：同 workflow 前一 run 仍在 in_progress 则本次直接跳过
 #     （用 Actions API 而非 concurrency —— concurrency 是 QUEUE 延迟，不是 SKIP）
-# workflow_dispatch 手动触发有三个开关（2026-09-03：notify_wechat / notify_serverchan
+# workflow_dispatch 手动触发有四个开关（2026-09-03：notify_wechat / notify_serverchan
 # 已删除 —— 微信推送改为手动触发，见独立 workflow notify.yml）：
 #   - skip_ai: 跳过全部 LLM 调用（复用 data/article-history.json 里的 AI 摘要，
 #     等价原 test2 失败恢复 / 无 AI 验证，零 LLM 成本）
 #   - publish: 是否发布 gh-pages（false = 仅验证 + 上传 artifact，等价原 test1）
+#   - release_mode: 手动发布性质（2026-09-08 P0 修复）—— final=当天正式终版，
+#     阻断同日 cron 重复发布；test=验证/抢跑，不阻断 cron（保留凌晨测试不吞正式首发）
 # cron（schedule）触发固定为全 AI + 发布；外发推送一律由 notify.yml 人工触发
 # （发布后核对 gh-pages → 手动 Run workflow）。
 
@@ -29,7 +31,7 @@ on:
     - cron: '*/15 * * * *'
   workflow_dispatch:
     inputs:
-      # 2026-08-28 用户需求：3 个开关独立可选，手动选的优先级最高
+      # 2026-08-28 用户需求：开关独立可选，手动选的优先级最高
       # （即显式 false/true 覆盖 schedule 默认）。
       skip_ai:
         description: '跳过全部 LLM 调用（复用历史缓存摘要，零 AI 成本；等价原 test2/无 AI 验证）'
@@ -43,6 +45,13 @@ on:
         description: '发布到 gh-pages（false = 仅验证 + 上传 artifact，不发布；等价原 test1）。微信推送不再随本工作流自动执行，发布后请核对 gh-pages 并手动触发 notify.yml。'
         type: boolean
         default: true
+      release_mode:
+        description: '手动发布性质（仅手动触发生效）：final=当天正式终版，阻断同日 cron 重复发布（避免手动版被 cron 覆盖，2026-09-08 P0 修复）；test=验证/抢跑，不阻断 cron（保留凌晨测试不吞正式首发）。'
+        type: choice
+        options:
+          - final
+          - test
+        default: final
 
 permissions:
   contents: write  # needed to push to gh-pages branch
@@ -282,7 +291,7 @@ jobs:
           TODAY=$(TZ="${REPORT_TZ:-Asia/Shanghai}" date +%Y-%m-%d)
           echo "Checking publish state for date=${TODAY} (tz=${REPORT_TZ:-Asia/Shanghai})"
           if [ -f data/publish-state.json ]; then
-            SCHEDULED=$(node -e "const s=JSON.parse(require('fs').readFileSync('data/publish-state.json','utf8'));const e=(s.reports||{})[process.argv[1]];process.stdout.write(e&&e.source==='schedule'?'yes':'no')" "$TODAY")
+            SCHEDULED=$(node -e "const s=JSON.parse(require('fs').readFileSync('data/publish-state.json','utf8'));const e=(s.reports||{})[process.argv[1]];process.stdout.write(e&&(e.source==='schedule'||e.source==='manual-final')?'yes':'no')" "$TODAY")
           else
             SCHEDULED=no
           fi
@@ -441,7 +450,7 @@ jobs:
         if: steps.publish-gh-pages.outcome == 'success'
         env:
           REPORT_TZ: ${{ vars.REPORT_TZ }}
-          SOURCE: ${{ github.event_name == 'schedule' && 'schedule' || 'manual' }}
+          SOURCE: ${{ github.event_name == 'schedule' && 'schedule' || (inputs.release_mode == 'test' && 'manual-test' || 'manual-final') }}
         run: |
           npm run record-publish --silent
           git config user.name "github-actions[bot]"

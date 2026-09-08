@@ -53,6 +53,18 @@ test("isSchedulePublishedOn：只认 source=schedule 的正式首发", () => {
   assert.equal(isSchedulePublishedOn(s, "2026-09-03"), false, "无记录 → 未首发");
 });
 
+test("isSchedulePublishedOn：manual-final 终版阻断 cron 重复发布（2026-09-08 P0 修复）", () => {
+  let s = emptyPublishState();
+  s = recordPublish(s, "2026-09-08", { source: "manual-final", runId: "r1", publishedAt: "2026-09-08T07:10:00+08:00" });
+  assert.equal(isSchedulePublishedOn(s, "2026-09-08"), true, "手动终版 → cron 应跳过，不覆盖用户手动版");
+});
+
+test("isSchedulePublishedOn：manual-test 验证不阻断 cron 首发（保留 09-03 凌晨测试不吞正式首发）", () => {
+  let s = emptyPublishState();
+  s = recordPublish(s, "2026-09-08", { source: "manual-test", runId: "r1", publishedAt: "2026-09-08T23:10:00+08:00" });
+  assert.equal(isSchedulePublishedOn(s, "2026-09-08"), false, "手动验证 → cron 仍应发布正式版");
+});
+
 test("isSchedulePublishedOn：容错——null / 结构缺失一律视为未发布", () => {
   assert.equal(isSchedulePublishedOn(undefined, "2026-09-03"), false);
   assert.equal(isSchedulePublishedOn(null, "2026-09-03"), false);
