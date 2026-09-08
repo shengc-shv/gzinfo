@@ -17,7 +17,7 @@ import path from "node:path";
  * 每天一次 LLM 调用，基于当日 宏观政策(finance) + 广州商机(gz) 的高信号条目
  * 与市场点评，产出：
  *  - must_read：今日必读 3-5 条（高影响事件 + 对分行意味着什么）
- *  - insights：商机提示 3-5 条（对广州分行零售/对公的潜在影响 + 建议动作）
+ *  - insights：商机提示 5-8 条（对广州分行零售/对公的潜在影响 + 建议动作；每客群段≤2、其他≤1）
  * 把「看新闻」升级为「看结论」。任何失败 → 返回 null，页面不渲染该板块。
  */
 
@@ -110,14 +110,14 @@ const RULES = `你是股份行广州分行零售决策简报的主编。系统�
    ；并为今日必读整体配套口播稿 spoken_must_read（"主播解读感"：5 条左右，每条 = 事件一句话 + 对分行经营规划的启示（各 30-50 字），独立成句、句号收尾、换行分隔形成气口停顿；总字数≤300 字；严禁逐条照读标题与全文，不念链接与来源名）。
 
   **客户客群聚焦（极重要）**：分行当前最关注的三类客群商机须优先覆盖——① 零售AUM（财富管理/理财/基金/存款/资产配置等零售管理资产）；② 中高端客群(过亿资产)（私行/家族信托/企业主/超高净值）；③ 普惠小微贷款客户（普惠金融/小微企业/个体工商户/经营贷）。生成 insights 时，若输入中存在这三类客群的高信号，应优先选取并分别打上对应 segments 标签，确保三条客群线索在「商机洞察」中都有呈现；不要只堆房贷/宏观而漏掉普惠小微与私行客群。
-2. insights（商机提示，3-5 条）— **偏落地、可执行**：具体可落地的获客/产品/客户线索（"哪个客户/产品/动作该做"）。**不放宏观大信号**（宏观归 must_read）；**不放监管威胁**（威胁归 risk）。每条：
+2. insights（商机提示，5-8 条）— **偏落地、可执行**：具体可落地的获客/产品/客户线索（"哪个客户/产品/动作该做"）。**不放宏观大信号**（宏观归 must_read）；**不放监管威胁**（威胁归 risk）。每条：
    - topic：主题（15 字内）
    - impact：对广州分行零售/对公业务的潜在影响（40-60 字）
    - action：建议动作——具体可执行、带时限感（获客方向/产品配置/风险提示，40-60 字），如"本周走访医疗企业客群、今日起推荐放开限购绩优基金"
    - tag：业务线标签数组，从词表选 1-2 个（词表：竞对动态/信贷/代发/私行/政银合作/住房金融/财富/客群/监管/科技金融）
-   - segments：客户客群段数组，从固定集合选（可多段）："零售AUM" / "中高端客群(过亿资产)" / "普惠小微贷款客户"。一条商机同时利好多类客群时各填其一；若都沾不上则省略本字段（渲染时归入"其他业务线"折叠区）。可参考输入条目的 subcategory 作先验：gz-wealth/cn-wealth 偏零售AUM，gz-private/cn-private 偏中高端客群(过亿资产)，gz-credit 中普惠/小微/经营贷类偏普惠小微贷款客户。
+   - segments：客户客群段数组，从固定集合选（可多段）："零售AUM" / "中高端客群(过亿资产)" / "普惠小微贷款客户"。**配额（极重要）**：零售AUM、中高端客群(过亿资产)、普惠小微贷款客户 三类**各最多出现 2 条**，其余（未命中优先段的"其他业务线"）最多 1 条；请在生成 insights 时主动控制数量，同类商机不要堆超过 2 条（必要时合并）。一条商机同时利好多类客群时各填其一（多标签按其优先级归口、各标签配额独立计数，互不挤占）；若都沾不上则省略本字段（渲染时作为"其他业务线"处理）。可参考输入条目的 subcategory 作先验：gz-wealth/cn-wealth 偏零售AUM，gz-private/cn-private 偏中高端客群(过亿资产)，gz-credit 中普惠/小微/经营贷类偏普惠小微贷款客户。
    - sources：来源链接数组（1-3 条，必填优先）。每条为输入中直接支撑该洞察的源文章，原样复制其 {title,url}（url 从输入对应条目复制，不得编造）。若洞察由多条输入综合得出，列最权威的 1-3 条；若确实无任何输入支撑则该字段省略。
-   ；并为商机洞察整体配套口播稿 spoken_insights（每条 = 事件一句话 + 处置动作一句话（各 30-45 字），多条各占一行、句号收尾换行分隔形成气口停顿；每条≤60 字、总字数≤260 字；讲清"机会在哪+本周怎么落"，不要铺陈成段落，不念表格）。若某条商机命中多个客群段（segments 含多个），口播要点明它覆盖了哪些商机视角（如"对零售AUM与私行客户均是机会"），帮助领导一眼识别跨客群机会。
+   ；并为商机洞察整体配套口播稿 spoken_insights（每条 = 事件一句话 + 处置动作一句话（各 30-45 字），多条各占一行、句号收尾换行分隔形成气口停顿；每条≤60 字、总字数≤300 字）。**客群商机口播规则（极重要，务必自然丝滑、像主播口播，切勿机械念标签）**：若某条 insights 带 segments 标签，口播要**自然点明它属于哪类客群商机**，可直接用「具备{段}商机」的说法嵌入句中，例如「具备零售AUM的商机这条，值得留意……」「这条同时具备零售AUM和高端客户的商机……」；**多标签用『和』连接**（口语化段名为「零售AUM / 高端客户 / 普惠小微」），**不要加【】括号、不要干瘪罗列**；未命中优先段的"其他业务线"不加任何客群前缀。语气顺滑口语化，帮助领导一听就懂这是哪类客群的机会。
 
 3. risk（M 层：今日风险，1 条或 null）— **偏监管/合规威胁**：今天最值得警惕的 1 件事。**与 must_read/insights 严格错开**：
    - must_read 是宏观机会/趋势，insights 是落地动作，**risk 是"威胁/红线"**（监管处罚/合规风险/系统性风险事件/窗口指导等）
@@ -258,7 +258,7 @@ export async function generateExecutiveSummary(
     `当日信息（JSON）：`,
     JSON.stringify(payload),
     "",
-    '请输出 {"hero_line":"...","spoken_hero":"...","must_read":[...],"spoken_must_read":"...","insights":[...],"spoken_insights":"...","guangdong_ipo":{...} 或 null}，hero_line 1 句、must_read 3-5 条、insights 3-5 条；spoken_* 与 guangdong_ipo.spoken 按要求字数返回纯口语文本。',
+    '请输出 {"hero_line":"...","spoken_hero":"...","must_read":[...],"spoken_must_read":"...","insights":[...],"spoken_insights":"...","guangdong_ipo":{...} 或 null}，hero_line 1 句、must_read 3-5 条、insights 5-8 条；spoken_* 与 guangdong_ipo.spoken 按要求字数返回纯口语文本。',
   ].join("\n");
   try {
     const { text } = await runLlm({ systemPrompt: SYSTEM_PROMPT, userPrompt, timeoutMs: 240_000 }, { stage: "executive" });
@@ -339,7 +339,7 @@ export async function generateExecutiveSummary(
         url: m.url || resolveUrl(m.title),
       })),
       spoken_must_read: typeof parsed.spoken_must_read === "string" && parsed.spoken_must_read.trim() ? parsed.spoken_must_read.trim() : undefined,
-      insights: parsed.insights.slice(0, 5).map((it) => {
+      insights: parsed.insights.slice(0, 8).map((it) => {
         // sources：优先用 LLM 显式引源；否则用生成时看到的 inputs（finance+gz，含真实 URL）
         // 按相似度回链 1-3 条来源，保证「商机洞察」卡片有可信溯源入口（不依赖 LLM 吐 url 格式）。
         const explicit = Array.isArray(it.sources) && it.sources.length > 0
@@ -351,6 +351,7 @@ export async function generateExecutiveSummary(
           impact: it.impact,
           action: it.action,
           ...(Array.isArray(it.tag) && it.tag.length > 0 ? { tag: it.tag.slice(0, 2) } : {}),
+          ...(Array.isArray(it.segments) && it.segments.length > 0 ? { segments: it.segments } : {}),
           ...(sources.length > 0 ? { sources } : {}),
         };
       }),

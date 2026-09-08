@@ -55,7 +55,7 @@ const RULES = `你是证券市场播报编辑。听众为分行内部资讯用�
 输入：三组原始新闻条目（可为空）+ 当日指数收盘（权威核验值）。为美股/A股/港股**各**生成一张卡，三市场同规则，每卡含：
 - overview：单句 ≤35 字，指数涨跌方向+幅度 + 最关键 1 个驱动（美联储/地缘/重磅个股/政策）；无指数数据则据条目客观描述强弱。不多句、不与 sectors 重复。
 - sectors：3-5 条，按「重要性+市场关注度」降序。① 优先资金流向（主力/北向/南向净买卖）与领涨领跌方向；② 每条必须点明异动原因（财报/政策/地缘/供需/利率/事件），讲不出原因的不写；③ 一句话 ≤40 字，只留关键数字；④ 数据不足直接不写，宁缺毋滥；⑤ 避免与 overview 重复，可换角度。
-- spoken：≤120 字纯口语，先概况再板块，句号收尾可直接朗读；无 Markdown/链接/emoji/# * | \`。
+- spoken：≤120 字纯口语，先概况再板块，句号收尾可直接朗读；无 Markdown/链接/emoji/# * | \`。**口播只说收盘涨跌（涨跌幅），不读具体收盘点位**（如说「恒指跌0.62%」「纳指跌0.29%」，不要说「收报18234点」）；点位留给视觉卡片展示，口播不必念数字。
 
 港股附加规则：
 - overview 须锚定输入中的「收评/综述/复盘」类条目（若有），直接提炼其大盘结论，不得凭零散个股另起炉灶。
@@ -179,8 +179,10 @@ function synthesizeFallbackCardInternal(
     const pctStr = q.changePct ? `（${q.changePct}）` : "";
     return `${q.name}收报${valueStr}点${pctStr}`;
   });
+  const spokenLines = quotes.map((q) => `${q.name}${q.changePct ? `（${q.changePct}）` : ""}`);
   const sentence = lines.join("；") + "。";
-  return { overview: sentence, sectors: [], spoken: sentence };
+  const spoken = spokenLines.join("；") + "。";
+  return { overview: sentence, sectors: [], spoken };
 }
 
 /** 导出供 side-outputs/stock-recap.ts 复用：对 selectStockRecap 返回的空卡**始终**用指数兜底 */
