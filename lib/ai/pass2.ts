@@ -74,9 +74,67 @@ export async function runPass2(
   kept: import("./pass1").Pass1Item[],
   runner: LlmRunner = defaultRunner,
   feedback?: string,
+  prefill?: Map<string, string>,
 ): Promise<DailyReport> {
   const byUrl = new Map(kept.map((k) => [k.url, k]));
-  const payload = kept.map((k) => ({
+
+  // 预分析缓存复用（全 AI 模式下由上游传入 prefillCache）：
+  // 命中 pre1 打标（ai_relevant=true 且已有 summary）的条目直接确定性组装，
+  // 不进 LLM payload —— 省 token + 保证 summary 一致性；LLM 失败时也保留，不丢缓存成果。
+  const cached = prefill ? kept.filter((k) => prefill.has(k.url)) : [];
+  const cachedUrls = new Set(cached.map((k) => k.url));
+  const fresh = kept.filter((k) => !cachedUrls.has(k.url));
+
+  const emptySections = (): DailyReport["sections"] => ({
+    gz_local: [],
+    biz_insight: [],
+    policy_market: [],
+    tech: [],
+    ipo: [],
+  });
+
+  // 确定性组装缓存命中条目（section 沿用 PASS1 已判定的 base.section）
+  const buildCachedSections = (): DailyReport["sections"] => {
+    const sections = emptySections();
+    for (const k of cached) {
+      const summary = (prefill!.get(k.url) ?? "").trim();
+      if (!summary) continue;
+      const item: ReportItem = {
+        url: k.url,
+        title_cn: (k.title_cn || k.title || "").trim() || k.title,
+        title_orig: k.title_orig,
+        source: k.source,
+        source_type: k.source_type,
+        date: k.date,
+        summary,
+        importance: 2,
+        rank: 0,
+        tags: rollUpTags({ tags: normalizeTags(k.tags) }),
+        locale: k.locale,
+        locale_evidence: k.locale_evidence,
+      };
+      if (SECTIONS.includes(k.section)) sections[k.section].push(item);
+    }
+    return sections;
+  };
+
+  const heroFallback = (): string =>
+    cached[0]
+      ? `今日关注：${cached[0].title_cn || cached[0].title_orig || ""}`.slice(0, 70)
+      : "";
+
+  // 全部命中缓存 → 完全跳过 LLM 调用（省一整次 PASS2）
+  if (fresh.length === 0) {
+    return {
+      date: "",
+      hero_line: heroFallback(),
+      must_read: [],
+      insights: [],
+      sections: buildCachedSections(),
+    };
+  }
+
+  const payload = fresh.map((k) => ({
     url: k.url,
     title_cn: k.title_cn,
     title_orig: k.title_orig,
@@ -102,27 +160,33 @@ export async function runPass2(
     }
   } catch (e) {
     const msg = e instanceof Error ? e.message : String(e);
-    console.warn(`[pass2] 调用失败，回退空报告: ${msg}`);
-    parsed = {};
+    // LLM 失败 → 回退仅保留缓存命中条目（不丢预分析成果）
+    console.warn(`[pass2] 调用失败，回退仅缓存条目（${cached.length} 条）: ${msg}`);
+    return {
+      date: "",
+      hero_line: heroFallback(),
+      must_read: [],
+      insights: [],
+      sections: buildCachedSections(),
+    };
   }
 
-  const sections: DailyReport["sections"] = {
-    gz_local: [],
-    biz_insight: [],
-    policy_market: [],
-    tech: [],
-    ipo: [],
-  };
+  const sections = emptySections();
   for (const sec of SECTIONS) {
     const arr = parsed?.sections?.[sec];
     if (!Array.isArray(arr)) continue;
     for (const ai of arr) {
       if (!ai || typeof ai.url !== "string") continue;
+      if (cachedUrls.has(ai.url)) continue; // 防御：LLM 不应返回缓存命中条目
       const base = byUrl.get(ai.url);
       if (!base) continue; // 池外 url 不纳入（R1 兜底）
       sections[sec].push(assembleItem({ base }, ai));
     }
   }
+  // 合并缓存命中条目（无论 LLM 成败都保留）
+  const cachedSections = buildCachedSections();
+  for (const sec of SECTIONS) sections[sec].push(...cachedSections[sec]);
+
   // 扎口：跨板块去重（2026-08-29）——同一事件只在一个板块出现，
   // 避免房贷40年这类政策同时出现在政策/商机/股市等多个板块。
   dedupeSections(sections);

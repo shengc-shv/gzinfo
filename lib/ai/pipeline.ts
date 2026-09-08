@@ -146,6 +146,12 @@ export interface PipelineOptions {
    * 供缓存管线区分「执行失败」与「AI 判定无价值」，避免把抖动固化为永久无价值。
    */
   pass1FailedCollector?: Set<string>;
+  /**
+   * 预分析缓存（全 AI 模式复用）：url→已分析的 summary。
+   * 命中条目在 PASS2 直接确定性复用，不进 LLM payload，降低调用费用。
+   * 由 AI 入口从 article-history 构建后传入；SKIP_AI 模式不依赖此字段。
+   */
+  prefillCache?: Map<string, string>;
 }
 
 /** 把 block 问题清单格式化为回炉 prompt 片段。 */
@@ -374,7 +380,7 @@ export async function generateDaily(
   // PASS2 重试循环（首次 + maxRetry 次回炉）；全部失败则进入降级
   for (let attempt = 1; attempt <= maxRetry + 1; attempt++) {
     const feedback = blockers.length ? formatFeedback(blockers) : "";
-    report = await runPass2(kept, runner!, feedback);
+    report = await runPass2(kept, runner!, feedback, opts.prefillCache);
     report.date = date;
     ensureSchema(report);
     finalizeRanks(report);
