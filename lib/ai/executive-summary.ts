@@ -1,5 +1,6 @@
 import { runLlm } from "./llm";
 import { extractJson } from "./json-util";
+import { mapSubcategoryToSegments } from "../classify/customer-segment";
 import { titleSimilarityDice } from "../ingest/dedup-similar";
 import {
   rankByRelevance,
@@ -29,6 +30,9 @@ export interface ExecInsight {
   action: string;
   /** 业务线标签（2026-08-21 重构）：从词表选 1-2 个，如 竞对动态/信贷/代发/私行/政银合作/住房金融/财富/客群 */
   tag?: string[];
+  /** 客户客群段（2026-09-08 商机洞察三维细分）：零售AUM / 中高端客群(过亿资产) / 普惠小微贷款客户。
+   *  可多段归属（一条商机同时影响多类客群时各填一个）；不属任何优先段则省略本字段。 */
+  segments?: string[];
   /** 来源链接（可选，1-3 条）：引用输入中相关源文章（title+url 原样复制），供读者溯源 */
   sources?: Array<{ title: string; url: string }>;
 }
@@ -105,13 +109,15 @@ const RULES = `你是股份行广州分行零售决策简报的主编。系统�
    - url：源链接，从下方输入对应条目的 url 字段原样复制（若对不上可省略，留空）
    ；并为今日必读整体配套口播稿 spoken_must_read（"主播解读感"：5 条左右，每条 = 事件一句话 + 对分行经营规划的启示（各 30-50 字），独立成句、句号收尾、换行分隔形成气口停顿；总字数≤300 字；严禁逐条照读标题与全文，不念链接与来源名）。
 
+  **客户客群聚焦（极重要）**：分行当前最关注的三类客群商机须优先覆盖——① 零售AUM（财富管理/理财/基金/存款/资产配置等零售管理资产）；② 中高端客群(过亿资产)（私行/家族信托/企业主/超高净值）；③ 普惠小微贷款客户（普惠金融/小微企业/个体工商户/经营贷）。生成 insights 时，若输入中存在这三类客群的高信号，应优先选取并分别打上对应 segments 标签，确保三条客群线索在「商机洞察」中都有呈现；不要只堆房贷/宏观而漏掉普惠小微与私行客群。
 2. insights（商机提示，3-5 条）— **偏落地、可执行**：具体可落地的获客/产品/客户线索（"哪个客户/产品/动作该做"）。**不放宏观大信号**（宏观归 must_read）；**不放监管威胁**（威胁归 risk）。每条：
    - topic：主题（15 字内）
    - impact：对广州分行零售/对公业务的潜在影响（40-60 字）
    - action：建议动作——具体可执行、带时限感（获客方向/产品配置/风险提示，40-60 字），如"本周走访医疗企业客群、今日起推荐放开限购绩优基金"
    - tag：业务线标签数组，从词表选 1-2 个（词表：竞对动态/信贷/代发/私行/政银合作/住房金融/财富/客群/监管/科技金融）
+   - segments：客户客群段数组，从固定集合选（可多段）："零售AUM" / "中高端客群(过亿资产)" / "普惠小微贷款客户"。一条商机同时利好多类客群时各填其一；若都沾不上则省略本字段（渲染时归入"其他业务线"折叠区）。可参考输入条目的 subcategory 作先验：gz-wealth/cn-wealth 偏零售AUM，gz-private/cn-private 偏中高端客群(过亿资产)，gz-credit 中普惠/小微/经营贷类偏普惠小微贷款客户。
    - sources：来源链接数组（1-3 条，必填优先）。每条为输入中直接支撑该洞察的源文章，原样复制其 {title,url}（url 从输入对应条目复制，不得编造）。若洞察由多条输入综合得出，列最权威的 1-3 条；若确实无任何输入支撑则该字段省略。
-   ；并为商机洞察整体配套口播稿 spoken_insights（每条 = 事件一句话 + 处置动作一句话（各 30-45 字），多条各占一行、句号收尾换行分隔形成气口停顿；每条≤60 字、总字数≤260 字；讲清"机会在哪+本周怎么落"，不要铺陈成段落，不念表格）。
+   ；并为商机洞察整体配套口播稿 spoken_insights（每条 = 事件一句话 + 处置动作一句话（各 30-45 字），多条各占一行、句号收尾换行分隔形成气口停顿；每条≤60 字、总字数≤260 字；讲清"机会在哪+本周怎么落"，不要铺陈成段落，不念表格）。若某条商机命中多个客群段（segments 含多个），口播要点明它覆盖了哪些商机视角（如"对零售AUM与私行客户均是机会"），帮助领导一眼识别跨客群机会。
 
 3. risk（M 层：今日风险，1 条或 null）— **偏监管/合规威胁**：今天最值得警惕的 1 件事。**与 must_read/insights 严格错开**：
    - must_read 是宏观机会/趋势，insights 是落地动作，**risk 是"威胁/红线"**（监管处罚/合规风险/系统性风险事件/窗口指导等）
@@ -146,7 +152,7 @@ const RULES = `你是股份行广州分行零售决策简报的主编。系统�
   - 目标：行长听口播时不会觉得"每条都是"建议分行""这种机械感
 - spoken_* 口播稿均为纯文本：无 Markdown、无链接、无 emoji、无 # * | \` 等符号，可直接朗读；口播稿是"二次提炼的主播语态"，严禁把 hero_line/must_read/insights/risk 原文整段照读，要浓缩成口语（定调/必读/洞察/风险均为"事件+应对建议"式完整句，每条独立成句、句号收尾、换行分隔形成气口停顿；总口播约 700 字、时长约 2.5 分钟）
 - 输出 STRICTLY 一个 JSON 对象（无 markdown 代码块）：
-{"hero_line":"...","spoken_hero":"...","must_read":[{"title":"...","why":"...","url":"..."}],"spoken_must_read":"...","insights":[{"topic":"...","impact":"...","action":"...","tag":["..."],"sources":[{"title":"...","url":"..."}]}],"spoken_insights":"...","risk":{"topic":"...","evidence":"...","impact":"...","action":"...","source":"T1","sources":[{"title":"...","url":"..."}]} 或 null,"spoken_risk":"...","guangdong_ipo":{"spoken":"..."} 或 null}
+{"hero_line":"...","spoken_hero":"...","must_read":[{"title":"...","why":"...","url":"..."}],"spoken_must_read":"...","insights":[{"topic":"...","impact":"...","action":"...","tag":["..."],"segments":["零售AUM"],"sources":[{"title":"...","url":"..."}]}],"spoken_insights":"...","risk":{"topic":"...","evidence":"...","impact":"...","action":"...","source":"T1","sources":[{"title":"...","url":"..."}]} 或 null,"spoken_risk":"...","guangdong_ipo":{"spoken":"..."} 或 null}
 注意：字符串内引号用单引号或中文引号，禁止裸双引号；url 字段原样复制输入中的链接。`;
 
 /**
@@ -589,6 +595,7 @@ export function buildExecutiveFromScores(
     topic: r.article.title.slice(0, 15),
     impact: `对广州分行${r.relevance.businessLines.join("/")}业务有潜在影响`,
     action: `建议分行关注${r.relevance.businessLines[0] ?? "相关"}动向并评估动作`,
+    segments: mapSubcategoryToSegments(r.article.subcategory, r.article.title),
   }));
   const risk = rk
     ? {

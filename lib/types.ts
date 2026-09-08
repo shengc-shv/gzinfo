@@ -71,6 +71,8 @@ export interface ReportInsight {
   tags: string[];
   impact: string;
   action: string;
+  /** 客户客群段（商机洞察三维细分）：零售AUM / 中高端客群(过亿资产) / 普惠小微贷款客户。多段归属；缺省归「其他业务线」。 */
+  segments?: string[];
   /** 来源链接（1-多个）：①/②/③ 标记点击打开。来自 LLM 引源或按相似度回链报告内真实文章 URL。 */
   sources?: Array<{ title: string; url: string }>;
   related_url?: string;

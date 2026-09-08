@@ -13,6 +13,7 @@ import { REPORT_LOCALE,loadAllSources  } from "../sources/registry";
 import { STR, SUBCATEGORY_ORDER, SUBCATEGORY_LABELS } from "./render/i18n";
 import { SECTIONS, BANNED_WORDS } from "../ai/validator";
 import { rollUpTags } from "../classify/tag-rollup";
+import { PRIORITY_SEGMENTS, OTHER_SEGMENT, mapTagsToSegments } from "../classify/customer-segment";
 import { titleSimilarityDice } from "../ingest/dedup-similar";
 import {
   renderRawCategoryPanel,
@@ -1042,27 +1043,63 @@ function renderReportExec(report: DailyReport): string {
       return `<li class="${cls}" data-audio-section="must" ${isTop ? 'data-top-must="true"' : ""}><span class="must-index">${i + 1}</span>${inner}${topBadge}</li>`;
     })
     .join("");
-  const insights = report.insights
-    .map((it) => {
-      const srcMarks = (it.sources && it.sources.length > 0)
-        ? ` <span class="insight-srcs">${it.sources.slice(0, 3).map((s, i) =>
-            `<a class="insight-src" href="${escapeHtml(s.url)}" target="_blank" rel="noopener" title="${escapeHtml(s.title || "来源" + (i + 1))}" aria-label="来源${i + 1}">${["①","②","③","④","⑤"][i]}</a>`
-          ).join("")}</span>`
-        : "";
-      // 用 topic 作为 feedback key（insights 没有 url 字段；topic 在 insight 列表内唯一性靠 .sources[0].url 兜底）
-      const fbKey = (it.sources && it.sources[0]?.url) || `insight:${it.topic}`;
-      return `<article class="insight" data-audio-section="insight">
-        ${(it.tags ?? []).length > 0
-          ? `<div class="insight-tags">${(it.tags ?? [])
-              .map((t) => `<span class="tag ${tagClsOf(t)}">${escapeHtml(t)}</span>`)
-              .join("")}</div>`
-          : ""}
-        <h3>${escapeHtml(it.topic)}${srcMarks}</h3>
-        ${it.impact ? `<p><b>影响：</b>${escapeHtml(it.impact)}</p>` : ""}
-        ${it.action ? `<p><b>建议：</b>${escapeHtml(it.action)}</p>` : ""}
-      </article>`;
-    })
-    .join("");
+  const renderInsightCard = (it: ReportInsight): string => {
+    const srcMarks = (it.sources && it.sources.length > 0)
+      ? ` <span class="insight-srcs">${it.sources.slice(0, 3).map((s, i) =>
+          `<a class="insight-src" href="${escapeHtml(s.url)}" target="_blank" rel="noopener" title="${escapeHtml(s.title || "来源" + (i + 1))}" aria-label="来源${i + 1}">${["①","②","③","④","⑤"][i]}</a>`
+        ).join("")}</span>`
+      : "";
+    return `<article class="insight" data-audio-section="insight">
+      ${(it.tags ?? []).length > 0
+        ? `<div class="insight-tags">${(it.tags ?? [])
+            .map((t) => `<span class="tag ${tagClsOf(t)}">${escapeHtml(t)}</span>`)
+            .join("")}</div>`
+        : ""}
+      <h3>${escapeHtml(it.topic)}${srcMarks}</h3>
+      ${it.impact ? `<p><b>影响：</b>${escapeHtml(it.impact)}</p>` : ""}
+      ${it.action ? `<p><b>建议：</b>${escapeHtml(it.action)}</p>` : ""}
+    </article>`;
+  };
+  // 商机洞察按客户客群段分组（零售AUM / 中高端客群(过亿资产) / 普惠小微贷款客户 / 其他业务线折叠）
+  // 单条命中多客群时，按 AUM > 中高端 > 普惠小微 优先级归属到唯一一组（避免重复展示）；
+  // 每组最多展示 3 条（用户 2026-09-08 要求）。
+  const SEG_LIST = PRIORITY_SEGMENTS as readonly string[];
+  const primaryOf = (it: ReportInsight): string => {
+    let best: string | null = null;
+    let bestIdx = Number.POSITIVE_INFINITY;
+    for (const s of it.segments ?? []) {
+      const idx = SEG_LIST.indexOf(s);
+      if (idx >= 0 && idx < bestIdx) {
+        bestIdx = idx;
+        best = s;
+      }
+    }
+    return best ?? OTHER_SEGMENT;
+  };
+  const grouped: Record<string, ReportInsight[]> = {};
+  for (const seg of [...SEG_LIST, OTHER_SEGMENT]) grouped[seg] = [];
+  for (const it of report.insights) grouped[primaryOf(it)].push(it);
+  const MAX_PER_GROUP = 3;
+  const insightSections: string[] = [];
+  for (const seg of SEG_LIST) {
+    const cards = grouped[seg].slice(0, MAX_PER_GROUP).map(renderInsightCard).join("");
+    if (cards) {
+      const more =
+        grouped[seg].length > MAX_PER_GROUP
+          ? `<div class="insight-more">其余 ${grouped[seg].length - MAX_PER_GROUP} 条商机详见 AI 简报</div>`
+          : "";
+      insightSections.push(
+        `<div class="insight-group"><h4 class="insight-group-title">${escapeHtml(seg)}<span class="insight-count">${grouped[seg].length}</span></h4><div class="insight-scroller">${cards}</div>${more}</div>`,
+      );
+    }
+  }
+  const otherCards = grouped[OTHER_SEGMENT].map(renderInsightCard).join("");
+  if (otherCards) {
+    insightSections.push(
+      `<details class="insight-group insight-group--other"><summary class="insight-group-title">${escapeHtml(OTHER_SEGMENT)}<span class="insight-count">${grouped[OTHER_SEGMENT].length}</span></summary><div class="insight-scroller">${otherCards}</div></details>`,
+    );
+  }
+  const insightsHtml = insightSections.join("");
   // M 层：风险卡片（与 insights 同样的卡片样式；M 关键特征：红/警示色 + 部门影响拆解）
   const riskCard = (() => {
     const r = report.risk;
@@ -1090,7 +1127,7 @@ function renderReportExec(report: DailyReport): string {
       <span class="exec-sub">今日必读 · 商机洞察 · 风险预警（AI 生成）</span>
     </div>
     ${must ? `<div class="exec-must"><h3 class="exec-col-title">📌 今日必读<span class="must-hint-inline" aria-hidden="true">← 左右滑动查看 →</span></h3><ul class="must-scroller">${must}</ul></div>` : ""}
-    ${insights ? `<div class="exec-insights"><h3 class="exec-col-title">💡 商机洞察<span class="insight-hint-inline" aria-hidden="true">← 左右滑动查看 →</span></h3><div class="insight-scroller">${insights}</div></div>` : ""}
+    ${insightsHtml ? `<div class="exec-insights"><h3 class="exec-col-title">💡 商机洞察</h3>${insightsHtml}</div>` : ""}
     ${riskCard ? `<div class="exec-risk"><h3 class="exec-col-title">⚠️ 风险预警<span class="risk-hint-inline" aria-hidden="true">← 左右滑动查看 →</span></h3><div class="risk-scroller">${riskCard}</div></div>` : ""}
   </section>`;
 }
@@ -1389,7 +1426,7 @@ export function mergeStoredExecutive(
   exec: {
     hero_line?: string;
     must_read: Array<{ title: string; why: string; url?: string }>;
-    insights: Array<{ topic: string; impact: string; action: string; tag?: string[]; sources?: Array<{ title: string; url: string }> }>;
+    insights: Array<{ topic: string; impact: string; action: string; tag?: string[]; segments?: string[]; sources?: Array<{ title: string; url: string }> }>;
     // M 层：风险（M 阶段 SKIP_AI 复用 store 时透传）
     risk?: {
       topic: string;
@@ -1450,6 +1487,7 @@ export function mergeStoredExecutive(
       tags: Array.isArray(it.tag) ? it.tag.slice(0, 6) : [],
       impact: it.impact || "",
       action: it.action || "",
+      ...(Array.isArray(it.segments) && it.segments.length ? { segments: it.segments } : {}),
       ...(sources.length > 0 ? { sources } : {}),
     });
   }
@@ -1524,7 +1562,21 @@ export function renderHtml(
   };
 
   const gzLocal = dedupe(report.sections?.gz_local ?? []);
-  const bizInsight = dedupe(report.sections?.biz_insight ?? []);
+  const bizInsight = (() => {
+    const list = dedupe(report.sections?.biz_insight ?? []);
+    // 客户客群权重提升：命中零售AUM/中高端客群(过亿资产)/普惠小微贷款客户 的条目置顶
+    const segRank = (it: ReportItem): number =>
+      mapTagsToSegments(it.tags, it.title_cn || it.title_orig || "").some((s) =>
+        (PRIORITY_SEGMENTS as readonly string[]).includes(s),
+      )
+        ? 0
+        : 1;
+    // 稳定排序：优先段置顶，段内保持原序（原序已是 tier/时间序）
+    return list
+      .map((it, i) => ({ it, i }))
+      .sort((a, b) => segRank(a.it) - segRank(b.it) || a.i - b.i)
+      .map((x) => x.it);
+  })();
   const policyMarket = dedupe(report.sections?.policy_market ?? []);
   const techAll = dedupe(report.sections?.tech ?? []);
   const ipoAll = dedupe(report.sections?.ipo ?? []);
@@ -1592,6 +1644,21 @@ export function renderHtml(
 <style>
 ${THEME_CSS}
 ${AUDIO_HIGHLIGHT_CSS}
+  /* 商机洞察客群分组 (2026-09-08) */
+  .insight-group { margin: 12px 0 4px; }
+  .insight-group-title {
+    font-size: 13px; font-weight: 700; line-height: 1.4;
+    color: var(--c-biz, #b8860b);
+    margin: 4px 0 6px; padding-left: 8px;
+    border-left: 3px solid var(--c-biz, #b8860b);
+  }
+  .insight-group--other > summary { cursor: pointer; list-style: none; }
+  .insight-group--other > summary::-webkit-details-marker { display: none; }
+  .insight-group--other > summary .insight-group-title { display: inline-block; }
+  .insight-group--other[open] > summary .insight-group-title::after { content: " ▲"; }
+  .insight-group--other:not([open]) > summary .insight-group-title::after { content: " ▼"; }
+  .insight-count { font-size: 11px; font-weight: 600; color: #fff; background: var(--c-biz, #b8860b); border-radius: 9px; padding: 0 6px; margin-left: 6px; vertical-align: middle; }
+  .insight-more { font-size: 11px; color: #999; padding: 4px 8px 2px; }
   </style>
 </head>
 <body>

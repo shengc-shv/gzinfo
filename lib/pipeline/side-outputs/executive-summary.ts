@@ -276,6 +276,7 @@ export async function buildExecutiveSummary(
           tags: it.tag ?? [],
           impact: it.impact,
           action: it.action,
+          ...(it.segments && it.segments.length ? { segments: it.segments } : {}),
           ...(it.sources && it.sources.length ? { sources: it.sources } : {}),
         }));
       }
