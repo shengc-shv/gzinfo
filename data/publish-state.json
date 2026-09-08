@@ -28,9 +28,9 @@
       "publishedAt": "2026-09-07T07:02:20+08:00"
     },
     "2026-09-08": {
-      "source": "schedule",
-      "runId": "34169655667",
-      "publishedAt": "2026-09-08T07:27:35+08:00"
+      "source": "manual-test",
+      "runId": "34230904930",
+      "publishedAt": "2026-09-08T21:18:06+08:00"
     }
   }
 }
