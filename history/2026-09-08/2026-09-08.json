@@ -1,81 +1,76 @@
 {
   "date": "2026-09-08",
-  "hero_line": "首批主动ETF进入最后冲刺，券商代销已抢跑，零售财富新赛道开闸在即，本行货架与话术宜早准备。",
+  "hero_line": "理财站稳33.56万亿、黄金连增22个月，居民稳健配置双主线确立；券商抢跑主动ETF代销，财富与私行货架宜提前备战。",
   "must_read": [
     {
-      "title": "央行连续22个月增持黄金",
-      "why": "8月末外汇储备3.44万亿美元且央行连续增持黄金，大类资产配置的长期逻辑再获强化。分行在黄金客群沟通中可顺势引导长期持有与分批建仓。",
-      "url": "https://finance.sina.com.cn/stock/estate/integration/2026-09-07/doc-iniqyzxu6379476.shtml"
+      "url": "https://finance.sina.com.cn/roll/2026-09-07/doc-iniqyzxx0299636.shtml",
+      "why": "8月末外储3.44万亿美元且央行连续增持黄金，大类资产配置长期逻辑再强化，网点可顺势引导客户长期持有与分批建仓。",
+      "title": "央行连续22个月增持黄金"
     },
     {
-      "title": "六部门发文支持历史经典产业",
-      "why": "广东老字号与特色制造迎来新一轮政策支持。分行可沿名单跑动本地老字号企业，配套技改贷与品牌授信，并联动代发与零售客群经营。",
-      "url": "https://www.stcn.com/article/detail/4175193.html"
+      "url": "https://www.cnfin.com/hg-lb/detail/20260908/4466428_1.html",
+      "why": "居民稳健配置需求延续，固收与稳健类产品仍是零售资金基本盘，财富条线需守住供给并优化持有体验。",
+      "title": "8月末银行理财存续规模33.56万亿元"
     },
     {
-      "title": "8家中央金融企业获3600亿增资",
-      "why": "从普通储户与企业主视角看，存款安全与信贷可得性信心明显增强。本行网点可借此做客户信心沟通与存款承接，争取增量资金沉淀。",
-      "url": "https://news.southcn.com/node_812903b83a/4846fd3d86.shtml"
+      "url": "https://finance.sina.com.cn/roll/2026-09-07/doc-iniqznps5281250.shtml",
+      "why": "中小行逆市涨价，普惠小微定价明显分化，本行经营贷定价与客群策略需重新审视以防客群流失。",
+      "title": "经营贷利率突破4%"
     },
     {
-      "title": "银行理财存续规模33.56万亿",
-      "why": "居民稳健配置需求延续，固收与稳健类产品仍是零售资金基本盘。分行在推动权益类新品类的同时，要继续夯实稳健产品供给与客户持有体验。",
-      "url": "https://www.cnfin.com/hg-lb/detail/20260908/4466442_1.html"
+      "url": "https://www.stcn.com/article/detail/4175357.html",
+      "why": "红杉、腾讯加持的企业冲刺港股，Pre-IPO股东及高管团队存在股权激励托管与财富承接需求，私行可切入。",
+      "title": "云徙科技拟赴港IPO"
+    },
+    {
+      "url": "https://m.21jingji.com/article/20260908/herald/33f059adf49b8b32c591b8828826d330.html",
+      "why": "有望撬动10万亿投资增量，广东产业链小微获低成本资金活水，普惠与公司条线可联合走访链主企业。",
+      "title": "8000亿政策性金融工具启用"
     }
   ],
   "insights": [
     {
-      "topic": "主动ETF代销前哨战",
+      "topic": "理财黄金双主线确立",
       "tags": [
-        "竞对动态",
-        "财富"
+        "财富",
+        "客群"
       ],
-      "impact": "券商已抢先开打主动ETF代销，渠道竞争升温，将分流银行零售权益与稳健配置资金。",
-      "action": "财富团队可提前储备产品卖点与话术包，跟踪券商首发热度与费率打法，再做本行差异化排品。",
+      "impact": "理财规模站稳33.56万亿叠加央行连增22个月黄金，居民稳健配置需求延续，财富管理基本盘稳固但有被权益新品分流隐忧。",
+      "action": "财富团队本周内梳理稳健产品供给与黄金/大额存单话术包，跟踪券商主动ETF首发热度再做差异化排品。",
+      "segments": [
+        "零售AUM"
+      ],
       "sources": [
         {
-          "title": "券商打响主动ETF代销“前哨战”",
-          "url": "https://www.stcn.com/article/detail/4175797.html"
+          "title": "8月末银行理财存续规模达33.56万亿元",
+          "url": "https://www.cnfin.com/hg-lb/detail/20260908/4466428_1.html"
+        },
+        {
+          "title": "8月加速“扫货”65万盎司，中国央行连续22个月增持黄金",
+          "url": "https://finance.sina.com.cn/roll/2026-09-07/doc-iniqyzxx0299636.shtml"
+        },
+        {
+          "title": "从客群限定到区域专享 大额存单标签日趋多元",
+          "url": "https://finance.sina.com.cn/money/bank/bank_hydt/2026-09-08/doc-iniqzxch9405829.shtml"
         }
       ]
     },
     {
-      "topic": "一线城市二手房成交升温",
-      "tags": [
-        "住房金融"
-      ],
-      "impact": "二手房成交量环比回升，按揭与资金监管业务机会增加，中介渠道争夺将更激烈。",
-      "action": "今日起联动重点支行走访天河、荔湾主流中介，锁定过户客户与交易资金监管份额，优化面签时效。",
-      "sources": [
-        {
-          "title": "淡季不淡 一线城市二手房成交“升温”",
-          "url": "https://www.stcn.com/article/detail/4175232.html"
-        }
-      ]
-    },
-    {
-      "topic": "云徙科技拟赴港IPO",
+      "topic": "家族财富架构窗口打开",
       "tags": [
         "私行",
         "客群"
       ],
-      "impact": "红杉、腾讯加持的企业冲刺港股，Pre-IPO股东及高管团队存在股权激励托管与财富承接需求。",
-      "action": "私行团队可对接其股东与核心高管，切入股权激励账户开立、资金托管及上市前财富规划服务。",
+      "impact": "昆仑福寿养老信托16天落地、离岸信托个税新规升温，存量离岸架构客户的合规与架构调整需求上升，私行客群黏性机会显现。",
+      "action": "私行部本周梳理存量离岸架构客户名单，一对一提示新规并输出合规诊断与财富规划方案。",
+      "segments": [
+        "中高端客群(过亿资产)"
+      ],
       "sources": [
         {
-          "title": "红杉、腾讯等加持，云徙科技拟冲刺港股IPO",
-          "url": "https://www.stcn.com/article/detail/4175357.html"
-        }
-      ]
-    },
-    {
-      "topic": "离岸信托税务新规关注升温",
-      "tags": [
-        "私行"
-      ],
-      "impact": "离岸信托个人所得税新规引发行业讨论，存量离岸架构客户的税务合规与架构调整需求将上升。",
-      "action": "私行部可梳理存量离岸架构客户名单，一对一提示税务申报新规，并输出合规诊断与架构调整方案。",
-      "sources": [
+          "title": "养老服务信托 |16天落地！昆仑福寿养老 056 号签约",
+          "url": "https://finance.sina.com.cn/trust/roll/2026-09-08/doc-inircmeq9287346.shtml"
+        },
         {
           "title": "光大兴陇信托协办“离岸信托个人所得税新规与财富管理新格局”线下活动",
           "url": "https://finance.sina.com.cn/trust/2026-09-07/doc-iniqyzxw5464168.shtml"
@@ -83,17 +78,50 @@
       ]
     },
     {
-      "topic": "广州港完成绿色甲醇首单加注",
+      "topic": "普惠小微定价重构",
       "tags": [
         "信贷",
-        "代发"
+        "普惠"
       ],
-      "impact": "绿色航运产业链热度提升，港口及上下游企业存在绿色信贷、设备更新与跨境结算综合需求。",
-      "action": "公司条线可联合交易银行走访广州港绿色航运链主体，配套绿色信贷与跨境结算产品，叠加船员代发场景。",
+      "impact": "经营贷利率逆市破4%显示中小行定价分化，小贷回归本源挤压民间融资，普惠客群资金成本与获客逻辑面临重估。",
+      "action": "普惠条线本月重检经营贷定价与白名单，沿政策性金融加码窗口对接粤东西北小微首贷户。",
+      "segments": [
+        "普惠小微贷款客户"
+      ],
       "sources": [
         {
-          "title": "中集安瑞科助力广州港完成国内首单国际航行散货船绿色甲醇加注",
-          "url": "https://www.stcn.com/article/detail/4175365.html"
+          "title": "经营贷利率突破4% 中小行为何能逆市扛起涨价大旗",
+          "url": "https://finance.sina.com.cn/roll/2026-09-07/doc-iniqznps5281250.shtml"
+        },
+        {
+          "title": "小贷行业加速“洗牌”回归本源",
+          "url": "https://www.cnfin.com/hg-lb/detail/20260908/4466459_1.html"
+        },
+        {
+          "title": "8000亿政策性金融工具启用 有望撬动10万亿投资增量",
+          "url": "https://m.21jingji.com/article/20260908/herald/33f059adf49b8b32c591b8828826d330.html"
+        }
+      ]
+    },
+    {
+      "topic": "零售客群负债端生变",
+      "tags": [
+        "信用卡",
+        "住房金融"
+      ],
+      "impact": "信用卡行业加快瘦身提质、15家房贷半年缩水超6000亿，零售客群负债结构与交叉销售场景正在重塑。",
+      "action": "个金条线可借势优化客群分层，对缩表客群推存款与财富承接，对优质客群做交叉销售提频。",
+      "segments": [
+        "零售AUM"
+      ],
+      "sources": [
+        {
+          "title": "信用卡行业加快“瘦身”提质",
+          "url": "https://finance.sina.com.cn/money/bank/bank_hydt/2026-09-08/doc-iniqzsvn6196562.shtml"
+        },
+        {
+          "title": "15家房贷半年缩水超6000亿",
+          "url": "https://finance.sina.com.cn/money/bank/bank_hydt/2026-09-08/doc-iniqzsvq5184662.shtml"
         }
       ]
     }
@@ -102,18 +130,47 @@
     "gz_local": [],
     "biz_insight": [
       {
-        "url": "https://www.stcn.com/article/detail/4175797.html",
-        "title_cn": "券商打响主动ETF代销“前哨战”",
-        "title_orig": "券商打响主动ETF代销“前哨战”",
-        "source": "证券时报",
-        "source_type": "media",
-        "date": "09/07",
-        "summary": "券商已抢跑主动ETF代销，渠道竞争升温；本行可提前储备主动产品卖点与员工话术。",
-        "importance": 3,
+        "url": "https://www.cnfin.com/hg-lb/detail/20260908/4466442_1.html",
+        "title_cn": "信用卡行业加快“瘦身”提质",
+        "source": "新华财经",
+        "source_type": "official",
+        "tier": "T1.5",
+        "date": "09/08",
+        "summary": "银行理财存续规模33.56万亿元，显示居民稳健配置需求延续；零售端可继续夯实稳健类产品供给。",
+        "importance": 2,
         "rank": 1,
         "tags": [
-          "财富",
-          "竞对动态"
+          "客群"
+        ],
+        "locale": "national"
+      },
+      {
+        "url": "https://www.stcn.com/article/detail/4175799.html",
+        "title_cn": "首批主动ETF冲刺“最后一公里”",
+        "source": "证券时报",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "09/08",
+        "summary": "主动ETF问世进入倒计时，零售权益货架迎新品类；值得前瞻研判引入节奏与投顾配套。",
+        "importance": 2,
+        "rank": 3,
+        "tags": [
+          "财富"
+        ],
+        "locale": "national"
+      },
+      {
+        "url": "https://www.stcn.com/article/detail/4175797.html",
+        "title_cn": "券商打响主动ETF代销“前哨战”",
+        "source": "证券时报",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "09/08",
+        "summary": "券商已抢跑主动ETF代销，渠道竞争升温；本行可提前储备主动产品卖点与员工话术。",
+        "importance": 2,
+        "rank": 4,
+        "tags": [
+          "财富"
         ],
         "locale": "national"
       },
@@ -126,7 +183,7 @@
         "date": "09/07",
         "summary": "With a bigger capital cushion, financial institutions may also be asked to do more to mobi",
         "importance": 2,
-        "rank": 8,
+        "rank": 11,
         "tags": [],
         "locale": "national"
       },
@@ -139,7 +196,7 @@
         "date": "09/07",
         "summary": "Finance ministry data showed that Japan's official foreign reserves stand at $1.207 trilli",
         "importance": 2,
-        "rank": 9,
+        "rank": 12,
         "tags": [],
         "locale": "national"
       },
@@ -152,7 +209,7 @@
         "date": "09/07",
         "summary": "8家中央金融企业获3600亿元增资，普通储户关注存款安全与信贷可得性；分行可用此素材做网点客户信心沟通与存款承接。",
         "importance": 2,
-        "rank": 10,
+        "rank": 13,
         "tags": [],
         "locale": "national"
       },
@@ -165,7 +222,7 @@
         "date": "09/07",
         "summary": "Treasury yields face a test at 4.8%, with a sustained move above that potentially creating",
         "importance": 2,
-        "rank": 11,
+        "rank": 14,
         "tags": [],
         "locale": "national"
       },
@@ -178,91 +235,14 @@
         "date": "09/07",
         "summary": "全球老龄化加速推动养老产业需求增长；分行可加快养老金融产品布局，围绕个人养老金账户与康养场景做客户渗透。",
         "importance": 2,
-        "rank": 12,
+        "rank": 15,
         "tags": [
           "客群"
         ],
-        "locale": "national"
-      },
-      {
-        "url": "https://finance.sina.com.cn/roll/2026-09-07/doc-iniqxpwr0867704.shtml",
-        "title_cn": "行情从科技转向多元 基金经理热议均衡配置",
-        "source": "新浪财经·理财保险",
-        "source_type": "media",
-        "tier": "T2",
-        "date": "09/07",
-        "summary": "基金经理热议从科技向多元均衡配置切换，风格再平衡成共识；分行可借势向权益客户推介均衡型组合，降低单一赛道集中度风险。",
-        "importance": 2,
-        "rank": 13,
-        "tags": [
-          "财富"
-        ],
-        "locale": "national"
-      },
-      {
-        "url": "https://m.21jingji.com/article/20260907/herald/64c988e0683489f5fb6efb05b523745d.html",
-        "title_cn": "8家中央金融企业迎来增资，有何考量",
-        "source": "21世纪经济报道·金融",
-        "source_type": "media",
-        "tier": "T2",
-        "date": "09/07",
-        "summary": "8家中央金融企业增资方案落地，特别国债成为主要支持工具；资本补充将提升国有金融机构信贷投放能力，利好分行项目储备对接。",
-        "importance": 2,
-        "rank": 14,
-        "tags": [],
         "locale": "national"
       }
     ],
     "policy_market": [
-      {
-        "url": "https://www.stcn.com/article/detail/4175799.html",
-        "title_cn": "首批主动ETF冲刺“最后一公里”",
-        "title_orig": "首批主动ETF冲刺“最后一公里”",
-        "source": "证券时报",
-        "source_type": "media",
-        "date": "09/07",
-        "summary": "主动ETF问世进入倒计时，零售权益货架迎新品类；值得前瞻研判引入节奏与投顾配套。",
-        "importance": 3,
-        "rank": 1,
-        "tags": [
-          "财富",
-          "市场",
-          "客群"
-        ],
-        "locale": "national"
-      },
-      {
-        "url": "https://www.cnfin.com/hg-lb/detail/20260908/4466442_1.html",
-        "title_cn": "8月末银行理财存续规模达33.56万亿元",
-        "title_orig": "8月末银行理财存续规模达33.56万亿元",
-        "source": "新华财经",
-        "source_type": "media",
-        "date": "09/08",
-        "summary": "银行理财存续规模33.56万亿元，显示居民稳健配置需求延续；零售端可继续夯实稳健类产品供给。",
-        "importance": 2,
-        "rank": 2,
-        "tags": [
-          "财富",
-          "市场",
-          "客群"
-        ],
-        "locale": "national"
-      },
-      {
-        "url": "https://www.stcn.com/article/detail/4175817.html",
-        "title_cn": "三部门启动2026年金融教育宣传周活动 各界共同参与金融网络环境治理",
-        "title_orig": "三部门启动2026年金融教育宣传周活动 各界共同参与金融网络环境治理",
-        "source": "证券时报",
-        "source_type": "media",
-        "date": "09/07",
-        "summary": "三部门启动2026金融教育宣传周，强调金融网络环境协同共治；消保条线可策划网点与线上宣教活动。",
-        "importance": 2,
-        "rank": 3,
-        "tags": [
-          "监管合规"
-        ],
-        "locale": "national"
-      },
       {
         "url": "https://www.stcn.com/article/detail/4175193.html",
         "title_cn": "历史经典产业，利好！六部门联合印发",
@@ -272,7 +252,7 @@
         "date": "09/07",
         "summary": "六部门联合印发支持历史经典产业文件；分行可对接广东本地老字号与特色制造企业，配套技改贷与品牌授信方案。",
         "importance": 2,
-        "rank": 4,
+        "rank": 1,
         "tags": [],
         "locale": "national"
       },
@@ -285,7 +265,7 @@
         "date": "09/07",
         "summary": "8月末外汇储备34383亿美元，规模保持稳定；跨境客户资产配置中美元资产比例可维持中性，无需因储备数据调整。",
         "importance": 2,
-        "rank": 5,
+        "rank": 2,
         "tags": [],
         "locale": "national"
       },
@@ -298,7 +278,7 @@
         "date": "09/07",
         "summary": "离岸信托个人所得税新规引发行业关注，财富管理格局生变；分行私行条线须梳理存量离岸架构客户，提示税务合规申报要求。",
         "importance": 2,
-        "rank": 6,
+        "rank": 3,
         "tags": [
           "财富"
         ],
@@ -313,7 +293,7 @@
         "date": "09/07",
         "summary": "非农落地后市场焦点转向CPI，黄金周初维持震荡；分行贵金属客户沟通宜淡化点位预测，强化配置比例与分批建仓纪律。",
         "importance": 2,
-        "rank": 7,
+        "rank": 4,
         "tags": [
           "财富"
         ],
@@ -328,7 +308,7 @@
         "date": "09/07",
         "summary": "低利率环境下十年国债配置价值受关注；分行稳健型客户可关注久期匹配的债券型产品，同时提示利率反弹带来的净值回撤。",
         "importance": 2,
-        "rank": 9,
+        "rank": 6,
         "tags": [
           "财富",
           "信贷"
@@ -344,7 +324,7 @@
         "date": "09/07",
         "summary": "外汇局公布8月末外汇储备34383亿美元，规模保持稳定；人民币汇率预期平稳，分行可据此稳定跨境客户结售汇节奏安排。",
         "importance": 2,
-        "rank": 10,
+        "rank": 7,
         "tags": [],
         "locale": "national"
       },
@@ -357,7 +337,7 @@
         "date": "09/07",
         "summary": "两部门要求车企规范供应商账款支付、优化账期；分行可围绕汽车产业链上游供应商推应收账款融资，抢抓账期规范化机遇。",
         "importance": 2,
-        "rank": 11,
+        "rank": 8,
         "tags": [
           "客群"
         ],
@@ -372,7 +352,20 @@
         "date": "09/07",
         "summary": "发布会明确推动历史经典产业高质量发展的支持举措；分行可对广东本地老字号企业做专项走访，配套品牌升级授信方案。",
         "importance": 2,
-        "rank": 12,
+        "rank": 9,
+        "tags": [],
+        "locale": "national"
+      },
+      {
+        "url": "https://www.cnfin.com/yw-lb/detail/20260907/4466285_1.html",
+        "title_cn": "【环球财经】日元兑美元汇率升至半年多来高位",
+        "source": "新华财经",
+        "source_type": "official",
+        "tier": "T1.5",
+        "date": "09/07",
+        "summary": "日元兑美元升至半年高位，日本央行干预效应显现；分行有日元收付与留学需求的客户可关注汇率窗口，提前锁定结汇价格。",
+        "importance": 2,
+        "rank": 10,
         "tags": [],
         "locale": "national"
       },
@@ -385,7 +378,33 @@
         "date": "09/07",
         "summary": "工行、农行同步发布2026-2028年股东回报规划与资本补充方案；银行股分红确定性提升，分行可据此服务偏好股息的客户。",
         "importance": 2,
-        "rank": 14,
+        "rank": 11,
+        "tags": [],
+        "locale": "national"
+      },
+      {
+        "url": "https://finance.sina.com.cn/money/gzqh/futuresyspzx/2026-09-07/doc-iniqxpwr0863560.shtml",
+        "title_cn": "多项增量金融政策落地 助力扩内需稳经济",
+        "source": "新浪财经·银行频道",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "09/07",
+        "summary": "多项增量金融政策集中落地，聚焦扩内需稳经济；分行可围绕消费信贷与经营贷投放窗口，加快优质客群触达节奏。",
+        "importance": 2,
+        "rank": 12,
+        "tags": [],
+        "locale": "national"
+      },
+      {
+        "url": "https://news.dayoo.com/guangzhou/202609/07/139995_55000774.htm",
+        "title_cn": "入选国家医疗健康领域数据标注试点城市，广州再添“国字号”试点名片",
+        "source": "广州日报·大洋网",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "09/07",
+        "summary": "广州入选国家医疗健康数据标注试点城市，再添国家级试点；分行可对接试点医疗数据企业，配套科创授信与结算服务。",
+        "importance": 2,
+        "rank": 13,
         "tags": [],
         "locale": "national"
       }
@@ -395,16 +414,14 @@
       {
         "url": "https://data.eastmoney.com/xg/xg/#A25250",
         "title_cn": "东莞四维材料科技：IPO问询中（拟北交所）",
+        "title_orig": "",
         "source": "东财IPO在审(广东)",
-        "source_type": "official",
-        "tier": "T1.5",
+        "source_type": "media",
         "date": "09/03",
-        "summary": "注册地：广东｜保荐：东莞证券股份有限公司｜更新：2026-09-03",
+        "summary": "东莞四维材料科技：IPO问询中（拟北交所）",
         "importance": 2,
         "rank": 1,
-        "tags": [
-          "粤"
-        ],
+        "tags": [],
         "locale": "national"
       }
     ]
@@ -491,8 +508,8 @@
         "date": "2026-09-07"
       },
       "sourceReport": {
-        "title": "港股收评：恒指跌0.93% 科指跌0.92% 科网股跌多涨少 内银股普跌 PCB概念股、存储半导体股逆势走强",
-        "url": "https://finance.sina.com.cn/stock/hkstock/marketalerts/2026-09-07/doc-iniqyvrw6364937.shtml"
+        "title": "港股收评：恒指跌0.38% 科指跌1.61% 科网股跌多涨少 石油股持续走高 江波龙上市首日破发",
+        "url": "https://finance.sina.com.cn/stock/hkstock/marketalerts/2026-09-08/doc-inirceww9421481.shtml"
       },
       "indices": [
         {
