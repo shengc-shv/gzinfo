@@ -24,7 +24,11 @@ import { formatCnDate, formatCnDateShort } from "../pipeline/side-outputs/stock-
 // 2026-08-30：广东IPO 口播改为确定性拼装（免 LLM）。原因：相关性 LLM 会把 gd-ipo 条目
 // 整体丢弃（CI run 33315502473 line 828-829 实证），exec.guangdong_ipo.spoken 恒为空；
 // 板块改为 side-output 直接构建后，口播必须能脱离 LLM 独立产出，否则「广东IPO=无」。
-import { buildGdIpoSpoken } from "../pipeline/side-outputs/gd-ipo";
+import { buildGdIpoSpoken, pickGdIpoCompanies, companyNameOf } from "../pipeline/side-outputs/gd-ipo";
+// 2026-09-09：IPO 同一企业口播 2 天去重——复用事件记忆库（同一份 event-memory.json），
+// 但走隔离的 ipoVoicing 命名空间，与 insights/must_read/risk 的事件指纹去重互不干扰。
+import { isEventMemoryEnabled, loadEventMemory, saveEventMemory } from "../memory/store";
+import { recordIpoVoicing, ipoShouldSkip } from "../memory/event-memory";
 // 2026-09-03：股市口播改为「整体行情—结构分化—重点板块」确定性拼装，
 // 把卡片里已提炼的细分板块要点纳入口播（详见 lib/audio/stock-spoken.ts 头部注释）。
 import { buildStockSpoken, type MarketKey } from "./stock-spoken";
@@ -73,7 +77,9 @@ export interface AudioSegment {
 export const AUDIO_SPEAK_LIMITS = {
   hero: 90,
   must_read: 250,
-  insights: 190,
+  // 2026-09-09 上调：商机洞察配额扩至 7-8 条（AUM/高端/普惠各≤2 + 其他≤1），
+  // 旧值 190 会在句界截断到约 5 条，与卡面条数分叉。提至 340 使全量口播不被截断。
+  insights: 340,
   ipo: 100,
   risk: 90,
   stock: 520,
@@ -318,15 +324,32 @@ export async function assembleAudioScript(
 
   // —— 广东 IPO：上游优先，正则兜底 ——
   // 2026-08-30 用户：IPO 播报放在「股市情况」之前（先讲本地商机，再讲行情）。
+  // 2026-09-09 同一企业口播 2 天去重：从事件记忆库（ipoVoicing）算出今日应跳过的企业，
+  //   确定性拼装路径按企业跳过；展示卡面（buildGdIpo，7 天窗口）不受影响。
   let ipo = exec.guangdong_ipo?.spoken ? sanitize(exec.guangdong_ipo.spoken) : "";
+  const ipoMem = isEventMemoryEnabled() ? loadEventMemory() : null;
+  const skipCompanies = new Set<string>();
+  if (ipoMem && ipoItems.length) {
+    for (const it of ipoItems) {
+      const c = companyNameOf(it.title_cn || "");
+      if (c && ipoShouldSkip(ipoMem, c, date)) skipCompanies.add(c);
+    }
+  }
+  const voicedCompanies: string[] = [];
   if (ipo) {
     console.log("✅ 广东IPO条目：取上游产出");
+    // 上游 LLM 路径（罕见，CI 实证常为空）：尽力从口播文本反查已念企业写回记忆
+    for (const it of ipoItems) {
+      const c = companyNameOf(it.title_cn || "");
+      if (c && ipo.includes(c)) voicedCompanies.push(c);
+    }
   } else {
     // ① 确定性拼装（免 LLM，AI / SKIP_AI 双模式可用）：IPO 板块由 side-output 直接构建，
     //    结构化 gd-ipo 条目带「粤」标，直接取前 2 条企业名拼口播，一句不依赖 LLM。
-    const spoken = buildGdIpoSpoken(ipoItems);
+    const spoken = buildGdIpoSpoken(ipoItems, { skipCompanies });
     if (spoken) {
       ipo = sanitize(spoken);
+      voicedCompanies.push(...pickGdIpoCompanies(ipoItems, { skipCompanies }));
       console.log("✅ 广东IPO条目：确定性拼装（side-output 板块，免 LLM）");
     } else {
       // ② 媒体源线索 → LLM 兜底（仅在确实有线索且非 SKIP_AI 时）
@@ -340,6 +363,10 @@ export async function assembleAudioScript(
         }
       }
     }
+  }
+  // 写回 IPO 口播记忆（仅正式发布 run，与 events persistMemory 同闸门，防测试污染）
+  if (voicedCompanies.length && process.env.PUBLISH_RUN === "true" && ipoMem) {
+    saveEventMemory(recordIpoVoicing(ipoMem, voicedCompanies, date), { today: date });
   }
   if (ipo) {
     // 兜底/上游口播稿若已自带「另外，关注…广东IPO…」过渡语，先剥离避免与固定过渡语重复。

@@ -220,7 +220,34 @@ export interface EventMemoryStore {
    * 可选字段：旧版本文件无此字段 → 按「无任何交付」处理（向下兼容）。
    */
   deliveries?: DeliveryRecord[];
+
+  /**
+   * IPO 口播去重命名空间（2026-09-09 新增，与 events 隔离）。
+   *
+   * 背景：IPO 板块是「参考/结构板块」，展示窗口独立于商机洞察（展示仍按
+   * 7 天滚动窗口，见 buildGdIpo），但口播不应把同一家在审企业每天重复念——
+   * 东财在审表条目会在表中停留数周，导致同一企业被日更口播。
+   * 用户要求「同一企业口播 2 天就够了」。
+   *
+   * 设计：复用同一份 event-memory.json（共享持久化 + 交付闸门语义），但用
+   * 独立的命名空间，避免与 insights/must_read/risk 的事件指纹去重逻辑纠缠。
+   *  - 键：企业名（buildGdIpoSpoken 的 companyNameOf 归一化结果）
+   *  - 值：该企业被口播过的日期数组（YYYY-MM-DD），只保留最近 IPO_VOICE_PRUNE_DAYS 天
+   *  - 判定：滚动窗口内（最近 IPO_VOICE_WINDOW_DAYS 天，含今天）已口播 ≥
+   *    IPO_VOICE_MAX_IN_WINDOW 天 → 今天跳过（自然形成「约 2 天播、1 天歇」
+   *    的节奏，杜绝数周连播；展示卡面不受影响）。
+   *  - 写回受 PUBLISH_RUN 闸门约束（与 events 的 persistMemory 同口径），
+   *    测试/本地运行不污染正式口播记忆。
+   */
+  ipoVoicing?: Record<string, string[]>;
 }
+
+/** IPO 口播去重窗口（天）：统计「最近多少天内的口播天数」。 */
+export const IPO_VOICE_WINDOW_DAYS = 2;
+/** 窗口内口播天数上限：达到即今天跳过（默认 2 → 约「2 天播、1 天歇」）。 */
+export const IPO_VOICE_MAX_IN_WINDOW = 2;
+/** ipoVoicing 日期数组保留天数（超出丢弃，防无限膨胀）。 */
+export const IPO_VOICE_PRUNE_DAYS = 7;
 
 /**
  * 一次人工确认交付的留痕（date + 推送成功时刻 + 被推送版本指纹）。
@@ -1212,6 +1239,7 @@ export function beginDay(store: EventMemoryStore, today: string): EventMemorySto
     events,
     today: { date: today, entries: [] },
     ...(store.deliveries ? { deliveries: store.deliveries } : {}),
+    ...(store.ipoVoicing ? { ipoVoicing: store.ipoVoicing } : {}),
   };
 }
 
@@ -1370,6 +1398,51 @@ export function appendDelivery(
   return { ...store, deliveries };
 }
 
+// ---------------------------------------------------------------------------
+// 11) IPO 口播去重命名空间（与 events 隔离，2026-09-09）
+// ---------------------------------------------------------------------------
+
+/**
+ * 记录若干企业今日被口播（追加日期到各自数组，并裁剪超期条目）。
+ * 返回新 store，不改入参。受 PUBLISH_RUN 闸门约束的写盘见 store.saveEventMemory。
+ */
+export function recordIpoVoicing(
+  store: EventMemoryStore,
+  companies: string[],
+  date: string,
+): EventMemoryStore {
+  if (companies.length === 0) return store;
+  const prev = store.ipoVoicing ?? {};
+  const next: Record<string, string[]> = {};
+  for (const [c, ds] of Object.entries(prev)) {
+    const kept = (ds ?? []).filter((d) => diffDays(d, date) <= IPO_VOICE_PRUNE_DAYS);
+    if (kept.length > 0) next[c] = kept;
+  }
+  for (const c of companies) {
+    if (!c) continue;
+    const arr = next[c] ?? [];
+    if (!arr.includes(date)) arr.push(date);
+    arr.sort();
+    next[c] = arr;
+  }
+  return { ...store, ipoVoicing: next };
+}
+
+/**
+ * 该企业今天是否应跳过口播：滚动窗口（最近 IPO_VOICE_WINDOW_DAYS 天，含今天）
+ * 内已口播天数 ≥ IPO_VOICE_MAX_IN_WINDOW → 跳过。
+ */
+export function ipoShouldSkip(
+  store: EventMemoryStore,
+  company: string,
+  today: string,
+): boolean {
+  const ds = store.ipoVoicing?.[company];
+  if (!ds || ds.length === 0) return false;
+  const recent = ds.filter((d) => diffDays(d, today) >= 0 && diffDays(d, today) <= IPO_VOICE_WINDOW_DAYS);
+  return recent.length >= IPO_VOICE_MAX_IN_WINDOW;
+}
+
 /** 简易字符串 hash（事件 id 兜底，无锚点时使用）。 */
 function hash(s: string): string {
   let h = 0;
@@ -1415,9 +1488,9 @@ export function pruneMemory(
   if (list.length > maxEvents) {
     const trimmed: Record<string, EventRecord> = {};
     for (const [id, rec] of list.slice(list.length - maxEvents)) trimmed[id] = rec;
-    return { version: 1, updatedAt: today, events: trimmed, ...(store.today ? { today: store.today } : {}), ...(store.deliveries ? { deliveries: store.deliveries } : {}) };
+    return { version: 1, updatedAt: today, events: trimmed, ...(store.today ? { today: store.today } : {}), ...(store.deliveries ? { deliveries: store.deliveries } : {}), ...(store.ipoVoicing ? { ipoVoicing: store.ipoVoicing } : {}) };
   }
-  return { version: 1, updatedAt: today, events, ...(store.today ? { today: store.today } : {}), ...(store.deliveries ? { deliveries: store.deliveries } : {}) };
+  return { version: 1, updatedAt: today, events, ...(store.today ? { today: store.today } : {}), ...(store.deliveries ? { deliveries: store.deliveries } : {}), ...(store.ipoVoicing ? { ipoVoicing: store.ipoVoicing } : {}) };
 }
 
 /** 空记忆库。 */

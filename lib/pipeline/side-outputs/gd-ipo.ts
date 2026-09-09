@@ -99,8 +99,8 @@ export function buildGdIpo(
  *  - 进展：title「：」后 / summary「状态：」后（IPO已受理 / 问询中 / 注册生效 …）
  */
 
-/** 公司名（去掉「（拟XX）」「[派出机构]」等修饰）。 */
-function companyNameOf(title: string): string {
+/** 公司名（去掉「（拟XX）」「[派出机构]」等修饰）。导出供口播去重按企业归并。 */
+export function companyNameOf(title: string): string {
   const head = title.split("：")[0] || title;
   return head
     .replace(/[（(][^）)]*[)）]/g, "")
@@ -170,11 +170,15 @@ function progressOf(title: string, summary: string): string {
  * 取前 2 条，每条带出 注册地 / 行业 / 上市地 / 最新进展，拼成口播。
  * 口播字数上限交由 audio.ts 的 AUDIO_SPEAK_LIMITS.ipo 统一截断（含属性后放宽到 ~100 字）。
  * audio.ts 在 exec.guangdong_ipo.spoken 缺失时调用，保证 AI / SKIP_AI 两种模式口播都能覆盖。
+ *
+ * @param opts.skipCompanies 同一企业口播去重（2026-09-09）：命中者跳过，
+ *   由 audio.ts 从事件记忆库（ipoVoicing）按「2 天窗口」算出。展示卡面不受影响。
  */
-export function buildGdIpoSpoken(items: ReportItem[]): string {
-  const cand = items.filter(
-    (it) => it.tags?.includes("粤") || isGdIpoCandidate(it.title_cn || "", it.summary || ""),
-  );
+export function buildGdIpoSpoken(
+  items: ReportItem[],
+  opts?: { skipCompanies?: Set<string> },
+): string {
+  const cand = gdIpoCandidates(items, opts?.skipCompanies);
   if (cand.length === 0) return "";
   const head = cand.slice(0, 2);
   const clauses = head.map((it) => {
@@ -196,4 +200,26 @@ export function buildGdIpoSpoken(items: ReportItem[]): string {
   // 多于 2 家时收尾「等N家」，避免口播听起来像只有这两家
   if (cand.length > 2) s += `；等${cand.length}家`;
   return s;
+}
+
+/** 广东 IPO 候选（「粤」标或 isGdIpoCandidate），并按 skipCompanies 过滤。 */
+function gdIpoCandidates(items: ReportItem[], skip?: Set<string>): ReportItem[] {
+  return items.filter(
+    (it) =>
+      (it.tags?.includes("粤") || isGdIpoCandidate(it.title_cn || "", it.summary || "")) &&
+      !(skip && skip.has(companyNameOf(it.title_cn || ""))),
+  );
+}
+
+/**
+ * 口播实际选中的企业名（前 2 家广东企业，经 skipCompanies 过滤后）。
+ * 供 audio.ts 把「今日已口播企业」写回事件记忆库（ipoVoicing），实现跨天去重。
+ */
+export function pickGdIpoCompanies(
+  items: ReportItem[],
+  opts?: { skipCompanies?: Set<string> },
+): string[] {
+  return gdIpoCandidates(items, opts?.skipCompanies)
+    .slice(0, 2)
+    .map((it) => companyNameOf(it.title_cn || ""));
 }

@@ -31,6 +31,65 @@ import { applyMemoryGuard } from "../../memory/exec-guard";
 import { loadEventMemory, saveEventMemory, isEventMemoryEnabled } from "../../memory/store";
 
 /**
+ * 口播记忆对齐（2026-09-09）：去重之后、写盘之前，把 spoken_* 整块文本改为
+ * 「由去重后的卡面数组确定性派生」，保证「几条卡面 → 几句口播」1:1 由构造保证，
+ * 杜绝 HTML 卡面与音频条数分叉；同时修复 risk 被去重后口播仍念的孤儿口播。
+ * 纯函数、零 LLM；connectors 轮换衔接缓解逐条拼接的生硬感。
+ */
+const INSIGHT_CONNECTORS = ["此外，", "同时，", "另一条值得关注，", "另外，"];
+const MR_CONNECTORS = ["其次，", "此外，", "还有，", "另外，"];
+/** 客群段 → 口播友好短标签（存储值是完整业务词，朗读需精简）。 */
+const SEG_SPEAK_LABEL: Record<string, string> = {
+  // 零售AUM：TTS 默认会把 "AUM" 当一个音节读（如 ao-mu），用户要求按字母发音
+  // → 用空格把 A/U/M 拆开，强制逐字母朗读（展示 chip 仍写「零售AUM」）。
+  零售AUM: "零售 A U M",
+  "中高端客群(过亿资产)": "高端客户",
+  普惠小微贷款客户: "普惠小微",
+};
+function segSpeak(s: string): string {
+  return SEG_SPEAK_LABEL[s] ?? s;
+}
+function segPhrase(segments?: string[]): string {
+  if (!segments || segments.length === 0) return "";
+  if (segments.length === 1) return `具备${segSpeak(segments[0])}商机的，`;
+  return `具备${segSpeak(segments[0])}和${segSpeak(segments[1])}商机的，`;
+}
+export function syncNarration(exec: ExecutiveSummary): ExecutiveSummary {
+  const out: ExecutiveSummary = { ...exec };
+
+  const ins = exec.insights ?? [];
+  out.spoken_insights = ins.length
+    ? ins
+        .map((it, i) => {
+          const conn =
+            i === 0 ? "" : i === ins.length - 1 ? "最后，" : INSIGHT_CONNECTORS[(i - 1) % INSIGHT_CONNECTORS.length];
+          const body = `${it.impact ?? ""}。${it.action ?? ""}。`;
+          return `${conn}${segPhrase(it.segments)}${it.topic ?? ""}，${body}`;
+        })
+        .join("")
+    : undefined;
+
+  const mr = exec.must_read ?? [];
+  out.spoken_must_read = mr.length
+    ? mr
+        .map((m, i) => {
+          const conn = i === 0 ? "" : MR_CONNECTORS[(i - 1) % MR_CONNECTORS.length];
+          return `${conn}${m.title ?? ""}。${m.why ?? ""}。`;
+        })
+        .join("")
+    : undefined;
+
+  // risk 1:1（去重清空则口播同步清空，消除孤儿口播）
+  if (exec.risk) {
+    out.spoken_risk = `今天有 1 个需要警惕：${exec.risk.topic ?? ""}，${exec.risk.impact ?? ""}。${exec.risk.action ?? ""}。`;
+  } else {
+    out.spoken_risk = undefined;
+  }
+
+  return out;
+}
+
+/**
  * B-1：从 keyword-funnel 的 filterResults 提取 risk_tracker 命中的条目，
  * 作为 LLM risk 段的"已识别候选"输入。
  * 取最高 priority（风险 S > A > B）作为条目的 priority 字段。
@@ -115,7 +174,8 @@ export async function buildExecutiveSummary(
   };
   /** 对一份 ExecutiveSummary 跑记忆去重 + 兜底；失败一律放行原产出。 */
   const guard = (ex: ExecutiveSummary): ExecutiveSummary => {
-    if (!memoryOn || !memStore) return ex;
+    // 去重后统一对齐口播（1:1 由卡面派生，零 LLM）——记忆关闭时也不放过，保证预览一致
+    if (!memoryOn || !memStore) return syncNarration(ex);
     try {
       const g = applyMemoryGuard({
         exec: ex,
@@ -125,11 +185,11 @@ export async function buildExecutiveSummary(
       });
       memStore = g.store;
       for (const line of g.log) ctx.log.info("exec", line);
-      return g.exec;
+      return syncNarration(g.exec);
     } catch (e) {
       const msg = e instanceof Error ? e.message : String(e);
       ctx.log.warn("exec", `⚠️ 内容记忆去重异常（放行原产出）: ${msg}`);
-      return ex;
+      return syncNarration(ex);
     }
   };
 

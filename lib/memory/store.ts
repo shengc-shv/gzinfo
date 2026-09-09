@@ -77,6 +77,18 @@ export function loadEventMemory(opts: EventMemoryStoreOpts = {}): EventMemorySto
           (d: unknown) => !!d && typeof d === "object" && typeof (d as any).date === "string",
         ) as DeliveryRecord[])
       : undefined;
+    // IPO 口播去重命名空间（2026-09-09）：企业名 → 已口播日期数组；损坏（非对象 /
+    // 值非数组）逐条丢弃，至少保留结构完整者，不影响 events / deliveries 读取。
+    const ivRaw = (raw as EventMemoryStore).ipoVoicing;
+    const ipoVoicing: Record<string, string[]> | undefined = ivRaw && typeof ivRaw === "object" && !Array.isArray(ivRaw)
+      ? Object.fromEntries(
+          Object.entries(ivRaw)
+            .filter(
+              ([, v]) => Array.isArray(v) && (v as unknown[]).every((x) => typeof x === "string"),
+            )
+            .map(([k, v]) => [k, v as string[]]),
+        )
+      : undefined;
     return {
       version: 1,
       updatedAt: (raw as EventMemoryStore).updatedAt,
@@ -86,6 +98,7 @@ export function loadEventMemory(opts: EventMemoryStoreOpts = {}): EventMemorySto
       events: sanitizeEvents(events as Record<string, EventRecord>),
       ...(today ? { today } : {}),
       ...(deliveries ? { deliveries } : {}),
+      ...(ipoVoicing && Object.keys(ipoVoicing).length > 0 ? { ipoVoicing } : {}),
     };
   } catch {
     return emptyMemory();
