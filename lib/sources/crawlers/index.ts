@@ -11,6 +11,7 @@ import type { CrawledArticle } from "../../ingest/merge";
 import { BaseCrawler } from "./base-crawler";
 import { EastMoneyDeclareCrawler } from "./sources/eastmoney-declare";
 import { EastMoneyIPOCrawler } from "./sources/eastmoney-ipo";
+import { CsrcCoachCrawler } from "./sources/csrcfd";
 import { GzStatsCrawler } from "./sources/gz-stats";
 import { GzGovCrawler } from "./sources/gz-gov";
 import { CnfinCrawler } from "./sources/cnfin-web";
@@ -63,6 +64,8 @@ export async function fetchCrawledArticles(): Promise<CrawledBundle> {
   //      REG_ADDRESS="广东" 过滤 → 覆盖【受理→问询→过会→提交注册→注册生效】整段在审生命周期
   //      （旧源全部漏掉粤芯这类在审/注册企业），region='gd' 进「广东地区IPO」。
   //   ✅ EastMoneyIPOCrawler（恢复）：东财辅导备案表，广东关键词过滤，region='gd' 进辅导栏。
+  //   ✅ CsrcCoachCrawler（2026-09-09 新增）：证监会权威辅导库 csrcfd，倒序早停增量抓（今昨窗口），
+  //      补东财「全国前100条」上限漏掉的非近期广东企业；复用 em-ipo 路由进辅导栏。
   //   ⏸ 停用（文件保留）：HKEXCrawler（港股披露易，对 A 股在审无意义）/ SSEAPI·SZSEAPI
   //      （巨潮 cninfo 只能检索**已上市**证券，对在审企业无效）/ BSEAPICrawler（北交所发行期）。
   //   ⏸ 证监会「同意注册批复」栏目（csrc.gov.cn）：官方注册生效即时源，但 Tengine WAF
@@ -71,6 +74,7 @@ export async function fetchCrawledArticles(): Promise<CrawledBundle> {
   const ipoCrawlers: BaseCrawler[] = [
     new EastMoneyDeclareCrawler(),
     new EastMoneyIPOCrawler(),
+    new CsrcCoachCrawler(),
   ];
 
   const ipo: CrawledArticle[] = [];
