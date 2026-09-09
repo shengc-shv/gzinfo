@@ -8,7 +8,10 @@ name: Daily Brief
 #   - REPORT_TIMES（默认 "7:00"，北京时间 HH:MM 逗号列表）+ WINDOW_MIN 容差窗口
 #     （默认 60 分钟）：目标点 ±60 分钟内触发均放行（7:00 → 北京时间 6:00-8:00）
 #     —— 即 6-8 点之间任意一次 cron 触发都会构建报告（2026-08-29 用户定）
-#   - 窗口内每次命中都跑 build（全 AI 标新数据）；「一天最多发布一次」由 publish 步骤把控
+#   - 窗口内命中会跑 build（全 AI 标新数据），**除非今日 full AI 已正式生效**
+#     （gate 额外前置 publish-state 的 in-effect 判据：source=schedule 或 manual-final）；
+#     已生效则直接跳过 build，避免全 AI 被重复执行（2026-09-09 修复）。
+#     「一天最多发布一次」由 publish 步骤把控。
 #   - 并发检查：同 workflow 前一 run 仍在 in_progress 则本次直接跳过
 #     （用 Actions API 而非 concurrency —— concurrency 是 QUEUE 延迟，不是 SKIP）
 # workflow_dispatch 手动触发有四个开关（2026-09-03：notify_wechat / notify_serverchan
@@ -63,6 +66,8 @@ jobs:
     outputs:
       should-build: ${{ steps.check.outputs.should-build }}
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
       - name: Check schedule
         id: check
         env:
@@ -74,12 +79,41 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           REPO: ${{ github.repository }}
           RUN_ID: ${{ github.run_id }}
+          RELEASE_MODE: ${{ inputs.release_mode }}
         run: |
           set -euo pipefail
 
-          # Manual triggers always run — user clicked Run workflow.
+          TZ_VAL="${REPORT_TZ:-Asia/Shanghai}"
+          TODAY=$(TZ="$TZ_VAL" date +%Y-%m-%d)
+          echo "Report date (tz=${TZ_VAL}): ${TODAY}"
+
+          # 今日 full AI 是否已「正式生效」：复用 publish-state.json 的 in-effect 判据
+          # （source=schedule 或 manual-final；manual-test / 历史裸 manual 不计）。
+          # 该判据此前只喂给 build 阶段的 published-check 去拦截「重复 publish」，导致
+          # 「当日已正式生效」仍会被 schedule 再次触发 full AI build（2026-09-09 实锤：
+          # 手动 final → 自动 cron 又跑一遍全 AI）。现前置到 gate：已生效则禁止再次触发
+          # （手动 / 自动两种触发皆拦截），避免重复全 AI 被重复执行。
+          publish_state_in_effect() {
+            if [ ! -f data/publish-state.json ]; then echo "no"; return; fi
+            node -e "const s=JSON.parse(require('fs').readFileSync('data/publish-state.json','utf8'));const e=(s.reports||{})[process.argv[1]];process.stdout.write(e&&(e.source==='schedule'||e.source==='manual-final')?'yes':'no')" "$TODAY" 2>/dev/null || echo "no"
+          }
+
+          # 手动触发：release_mode=test 视为显式调试/抢跑，永不阻断（也不写 in-effect marker），
+          # 始终放行（用作强制重跑通道）；release_mode=final（默认）则尊重 in-effect marker，已生效则拦截。
           if [ "$EVENT_NAME" = "workflow_dispatch" ]; then
-            echo "Manual trigger — bypassing gate"
+            if [ "${RELEASE_MODE:-final}" = "test" ]; then
+              echo "Manual trigger (release_mode=test) — bypassing gate (debug re-run, never sets in-effect marker)"
+              echo "should-build=true" >> "$GITHUB_OUTPUT"
+              exit 0
+            fi
+            IN_EFFECT=$(publish_state_in_effect)
+            echo "Manual trigger (release_mode=${RELEASE_MODE:-final}) — in-effect=${IN_EFFECT}"
+            if [ "$IN_EFFECT" = "yes" ]; then
+              echo "→ Today's full AI already in effect (publish-state: schedule/manual-final) — manual re-run blocked"
+              echo "should-build=false" >> "$GITHUB_OUTPUT"
+              exit 0
+            fi
+            echo "→ No in-effect marker yet — proceeding to build"
             echo "should-build=true" >> "$GITHUB_OUTPUT"
             exit 0
           fi
@@ -93,6 +127,15 @@ jobs:
           echo "Other running runs of daily.yml: $RUNNING"
           if [ "$RUNNING" -gt 0 ]; then
             echo "→ Previous run still in progress — skipping this trigger"
+            echo "should-build=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          # 今日 full AI 已正式生效 → 禁止再次触发（核心修复：避免全 AI 被重复执行）
+          IN_EFFECT=$(publish_state_in_effect)
+          echo "Schedule trigger — in-effect=${IN_EFFECT}"
+          if [ "$IN_EFFECT" = "yes" ]; then
+            echo "→ Today's full AI already in effect (publish-state: schedule/manual-final) — skipping build (no duplicate full AI)"
             echo "should-build=false" >> "$GITHUB_OUTPUT"
             exit 0
           fi
@@ -154,12 +197,10 @@ jobs:
             done
           fi
 
-          # 2026-08-27 改：gate 只看 time+day match，不再检查「当日已发布」——
-          # build 每次时间窗触发都跑（全 AI 标 fresh data）。
-          # 「一天最多发布一次」挪到 publish 步骤（不影响 build）：
-          #   窗口内首次命中（北京 6:00-8:00 间某次 15 分钟触发）：build（AI）+ publish（如未发）
-          #   窗口内后续命中：build（AI，标新抓数据）+ publish 跳过（如当天已发）
-          # 这保证：无论 SKIP_AI 何时发布，新抓数据都保证被全 AI 标过。
+          # gate 综合判定（2026-09-09 调整）：time+day 命中 且 今日 full AI 尚未正式生效
+          # 才放行 build；in-effect 已由本 run 早段检查并在生效时直接 should-build=false 跳出，
+          # 故此处仅据 time/day 收口。保留「窗口内每次命中都 build（标 fresh 数据）」语义，
+          # 但「已生效」情况已在上方被拦，不会重复跑全 AI。
           if [ "$time_match" = "true" ] && [ "$day_match" = "true" ]; then
             echo "✓ Time & day match — proceeding to build (full AI)"
             echo "should-build=true" >> "$GITHUB_OUTPUT"
