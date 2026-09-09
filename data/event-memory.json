@@ -676,7 +676,7 @@
         "facts": [
           "!落地"
         ],
-        "broadcastAt": "2026-09-09T07:16:15+08:00",
+        "broadcastAt": "2026-09-09T23:59:33+08:00",
         "score": 69,
         "novelty": 1
       },
@@ -688,7 +688,7 @@
         "facts": [
           "!落地"
         ],
-        "broadcastAt": "2026-09-09T07:16:15+08:00",
+        "broadcastAt": "2026-09-09T23:59:33+08:00",
         "url": "https://finance.sina.com.cn/jjxw/2026-09-08/doc-inircmes6068626.shtml",
         "score": 69,
         "novelty": 0.7615384615384615,
@@ -700,7 +700,7 @@
         "title": "信用卡转向挖价值",
         "text": "信用卡转向挖价值 信用卡从规模竞争转向价值经营，分行需从发卡、提额转向促活、分期与场景深耕，提升客户经营效率。",
         "facts": [],
-        "broadcastAt": "2026-09-09T07:16:15+08:00",
+        "broadcastAt": "2026-09-09T23:59:33+08:00",
         "url": "https://finance.sina.com.cn/money/bank/bank_hydt/2026-09-08/doc-iniqzsvn6196562.shtml",
         "score": 52,
         "novelty": 1
@@ -713,22 +713,10 @@
         "facts": [
           "#15家"
         ],
-        "broadcastAt": "2026-09-09T07:16:15+08:00",
+        "broadcastAt": "2026-09-09T23:59:33+08:00",
         "url": "https://finance.sina.com.cn/money/bank/bank_hydt/2026-09-08/doc-iniqzsvq5184662.shtml",
         "score": 66,
         "novelty": 1
-      },
-      {
-        "date": "2026-09-09",
-        "section": "must_read",
-        "title": "主动ETF冲刺代销战",
-        "text": "主动ETF冲刺代销战 主动ETF新品类上市在即，或将重构零售权益销售模式，同业券商已提前抢跑，银行渠道竞争压力上升。",
-        "facts": [],
-        "broadcastAt": "2026-09-09T07:16:15+08:00",
-        "url": "https://www.stcn.com/article/detail/4175799.html",
-        "score": 61,
-        "novelty": 0.2989583333333333,
-        "angle": "政策变化"
       },
       {
         "date": "2026-09-09",
@@ -738,7 +726,7 @@
         "facts": [
           "!落地"
         ],
-        "broadcastAt": "2026-09-09T07:16:15+08:00",
+        "broadcastAt": "2026-09-09T23:59:33+08:00",
         "url": "https://finance.sina.com.cn/jjxw/2026-09-08/doc-inircmes6068626.shtml",
         "novelty": 0.26119402985074625,
         "angle": "市场反应"
@@ -751,10 +739,10 @@
         "facts": [
           "!批复"
         ],
-        "broadcastAt": "2026-09-09T07:16:15+08:00",
+        "broadcastAt": "2026-09-09T23:59:33+08:00",
         "url": "https://www.stcn.com/article/detail/4175799.html",
-        "novelty": 0.926056338028169,
-        "angle": "市场反应"
+        "novelty": 0.9753521126760563,
+        "angle": "政策变化"
       },
       {
         "date": "2026-09-09",
@@ -762,7 +750,7 @@
         "title": "大额存单细分，客群定制留客",
         "text": "大额存单细分，客群定制留客 大额存单从价格竞争走向客群/区域专享，差异化产品利于稳定零售AUM和储蓄留存。 针对代发工资、养老等客群设计专属存单，结合“区域专享”思路防止存款流失。",
         "facts": [],
-        "broadcastAt": "2026-09-09T07:16:15+08:00",
+        "broadcastAt": "2026-09-09T23:59:33+08:00",
         "url": "https://finance.sina.com.cn/money/bank/bank_hydt/2026-09-08/doc-iniqzxch9405829.shtml",
         "novelty": 1
       },
@@ -772,10 +760,9 @@
         "title": "港股分红潮，跨境配置新抓手",
         "text": "港股分红潮，跨境配置新抓手 港股上市公司超9000亿港元分红，高股息优势显现，中高端客户跨境配置意愿增强。 本周可向偏好持有港股/跨境理财通的客户推荐高股息组合，借分红季增加配置。",
         "facts": [],
-        "broadcastAt": "2026-09-09T07:16:15+08:00",
+        "broadcastAt": "2026-09-09T23:59:33+08:00",
         "url": "https://www.stcn.com/article/detail/4177110.html",
-        "novelty": 0.3343283582089552,
-        "angle": "受影响人群"
+        "novelty": 1
       },
       {
         "date": "2026-09-09",
@@ -783,7 +770,7 @@
         "title": "时令消费升温，商户联动拓客",
         "text": "时令消费升温，商户联动拓客 节气消费成市场增长点，小微商户交易活跃，带动收单、结算和短期经营贷需求。 结合中秋前节点，联合商圈与本地生活平台开展收单满减，并向活跃小微商户推送经营快贷。",
         "facts": [],
-        "broadcastAt": "2026-09-09T07:16:15+08:00",
+        "broadcastAt": "2026-09-09T23:59:33+08:00",
         "url": "https://www.cnfin.com/hg-lb/detail/20260908/4466973_1.html",
         "novelty": 1
       },
@@ -793,7 +780,7 @@
         "title": "政策工具投粤北，小微拓面",
         "text": "政策工具投粤北，小微拓面 粤东西北新型政策性金融工具投放，带动县域产业及链上小微主体融资需求，可批量获客。 建议普惠部结合政策工具清单梳理粤东西北园区/商户，联动政银合作探索批量授信。",
         "facts": [],
-        "broadcastAt": "2026-09-09T07:16:15+08:00",
+        "broadcastAt": "2026-09-09T23:59:33+08:00",
         "url": "https://www.cnr.cn/gd/guangdongyaowen/20260908/t20260908_527807495.shtml",
         "novelty": 1
       },
@@ -806,7 +793,7 @@
           "!落地",
           "!试点"
         ],
-        "broadcastAt": "2026-09-09T07:16:15+08:00",
+        "broadcastAt": "2026-09-09T23:59:33+08:00",
         "url": "https://m.21jingji.com/article/20260908/herald/1cddea9c1ccc387676e7b57adc37dc85.html",
         "novelty": 0.7648550724637682,
         "angle": "政策变化"
@@ -819,13 +806,13 @@
         "facts": [
           "!处罚"
         ],
-        "broadcastAt": "2026-09-09T07:16:15+08:00",
+        "broadcastAt": "2026-09-09T23:59:33+08:00",
         "score": 69,
         "novelty": 0.615,
         "angle": "政策变化"
       }
     ],
-    "runId": "34289399876"
+    "runId": "34373673142"
   },
   "deliveries": [
     {
@@ -856,5 +843,10 @@
       "reportRunId": "34289399876",
       "reportSha": "e7f0c533e1a8427d69936d25444883f9384779d5"
     }
-  ]
+  ],
+  "ipoVoicing": {
+    "东莞四维材料科技": [
+      "2026-09-09"
+    ]
+  }
 }

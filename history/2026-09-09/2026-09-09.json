@@ -3,19 +3,19 @@
   "hero_line": "全球资产跳水叠加QDII与主动ETF新品落地，配置逻辑生变，零售需深耕再配置与跨境服务窗口。",
   "must_read": [
     {
-      "title": "QDII出海密集落地",
+      "url": "https://finance.sina.com.cn/jjxw/2026-09-08/doc-inircmes6068626.shtml",
       "why": "理财公司投资“出海”提速，资产端突破单一境内市场，分行零售需完善跨境产品货架，承接客户全球配置需求。",
-      "url": "https://finance.sina.com.cn/jjxw/2026-09-08/doc-inircmes6068626.shtml"
+      "title": "QDII出海密集落地"
     },
     {
-      "title": "信用卡转向挖价值",
+      "url": "https://finance.sina.com.cn/money/bank/bank_hydt/2026-09-08/doc-iniqzsvn6196562.shtml",
       "why": "信用卡从规模竞争转向价值经营，分行需从发卡、提额转向促活、分期与场景深耕，提升客户经营效率。",
-      "url": "https://finance.sina.com.cn/money/bank/bank_hydt/2026-09-08/doc-iniqzsvn6196562.shtml"
+      "title": "信用卡转向挖价值"
     },
     {
-      "title": "房贷半年缩水超6000亿",
+      "url": "https://finance.sina.com.cn/money/bank/bank_hydt/2026-09-08/doc-iniqzsvq5184662.shtml",
       "why": "15家大行房贷余额半年缩超6000亿，按揭进入存量博弈；分行住房金融应关注提前还贷与改善型再融资需求。",
-      "url": "https://finance.sina.com.cn/money/bank/bank_hydt/2026-09-08/doc-iniqzsvq5184662.shtml"
+      "title": "房贷半年缩水超6000亿"
     }
   ],
   "insights": [
@@ -151,24 +151,6 @@
     "gz_local": [],
     "biz_insight": [
       {
-        "url": "https://www.cnfin.com/yw-lb/detail/20260909/4467042_1.html",
-        "title_cn": "【读财报】国有六大行中报：中行利润增速高 工行贷款总额率先突破30万亿元",
-        "title_orig": "【读财报】国有六大行中报：中行利润增速高 工行贷款总额率先突破30万亿元",
-        "source": "新华财经",
-        "source_type": "media",
-        "date": "09/09",
-        "summary": "大行中报规模排位更新：工行贷款总额率先破30万亿元，中行利润增速居前，可纳入信贷业务对标。",
-        "importance": 2,
-        "rank": 1,
-        "tags": [
-          "竞对动态",
-          "信贷",
-          "市场",
-          "客群"
-        ],
-        "locale": "national"
-      },
-      {
         "url": "https://www.stcn.com/article/detail/4177110.html",
         "title_cn": "大手笔分红！超9000亿港元红包雨来了",
         "source": "证券时报",
@@ -177,7 +159,7 @@
         "date": "09/08",
         "summary": "港股上市公司大手笔分红超9000亿港元红包将至；分行可关注高股息主题对中高端客户权益配置的吸引力，结合跨境理财通做产品推介。",
         "importance": 2,
-        "rank": 2,
+        "rank": 1,
         "tags": [],
         "locale": "national"
       },
@@ -190,7 +172,7 @@
         "date": "09/08",
         "summary": "银行理财存续规模33.56万亿元，显示居民稳健配置需求延续；零售端可继续夯实稳健类产品供给。",
         "importance": 2,
-        "rank": 3,
+        "rank": 2,
         "tags": [
           "客群"
         ],
@@ -205,7 +187,7 @@
         "date": "09/08",
         "summary": "数字人民币跨境服务亮相投洽会，覆盖留学缴费等场景；分行可跟踪数币跨境试点在粤落地进展，服务留学及跨境商务客群的支付需求。",
         "importance": 2,
-        "rank": 4,
+        "rank": 3,
         "tags": [],
         "locale": "national"
       },
@@ -218,7 +200,7 @@
         "date": "09/08",
         "summary": "三部门牵头、多地联动启动2026年金融教育宣传周；分行可借消保宣传节点进社区进网点，强化反诈提示与合规服务形象。",
         "importance": 2,
-        "rank": 5,
+        "rank": 4,
         "tags": [],
         "locale": "national"
       },
@@ -231,7 +213,7 @@
         "date": "09/08",
         "summary": "节气经济升温，时令消费成细分市场新增长点；分行零售可结合节令节点做消费场景营销与商户联动，撬动小额高频交易。",
         "importance": 2,
-        "rank": 6,
+        "rank": 5,
         "tags": [],
         "locale": "national"
       },
@@ -244,7 +226,7 @@
         "date": "09/08",
         "summary": "银行陆续拧紧个人贵金属业务风险阀门，贵金属代销监管趋严；分行财富条线应复核贵金属产品适当性与风险揭示流程，避免销售合规风险。",
         "importance": 2,
-        "rank": 7,
+        "rank": 6,
         "tags": [
           "财富"
         ],
@@ -259,6 +241,19 @@
         "date": "09/08",
         "summary": "20家上市银行超2600亿中期分红将至、多家首次参与；高股息逻辑强化，可关注银行板块景气对理财与基金配置需求的传导。",
         "importance": 2,
+        "rank": 7,
+        "tags": [],
+        "locale": "national"
+      },
+      {
+        "url": "https://www.stcn.com/article/detail/4175817.html",
+        "title_cn": "三部门启动2026年金融教育宣传周活动 各界共同参与金融网络环境治理",
+        "source": "证券时报",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "09/08",
+        "summary": "三部门启动2026金融教育宣传周，强调金融网络环境协同共治；消保条线可策划网点与线上宣教活动。",
+        "importance": 2,
         "rank": 8,
         "tags": [],
         "locale": "national"
@@ -266,21 +261,31 @@
     ],
     "policy_market": [
       {
-        "url": "https://www.stcn.com/article/detail/4177276.html",
-        "title_cn": "新政效应持续释放 深圳楼市“金九”开局向好",
-        "title_orig": "新政效应持续释放 深圳楼市“金九”开局向好",
-        "source": "证券时报",
-        "source_type": "media",
+        "url": "https://www.cnfin.com/yw-lb/detail/20260909/4467042_1.html",
+        "title_cn": "【读财报】国有六大行中报：中行利润增速高 工行贷款总额率先突破30万亿元",
+        "source": "新华财经",
+        "source_type": "official",
+        "tier": "T1.5",
         "date": "09/09",
-        "summary": "深圳金九开局向好，住房金融条线可跟踪新政效应持续性，作为按揭经营参考。",
-        "importance": 3,
+        "summary": "大行中报规模排位更新：工行贷款总额率先破30万亿元，中行利润增速居前，可纳入信贷业务对标。",
+        "importance": 2,
         "rank": 1,
         "tags": [
-          "住房金融",
-          "市场",
-          "信贷",
-          "客群"
+          "信贷"
         ],
+        "locale": "national"
+      },
+      {
+        "url": "https://www.stcn.com/article/detail/4177276.html",
+        "title_cn": "新政效应持续释放 深圳楼市“金九”开局向好",
+        "source": "证券时报",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "09/09",
+        "summary": "深圳金九开局向好，住房金融条线可跟踪新政效应持续性，作为按揭经营参考。",
+        "importance": 2,
+        "rank": 2,
+        "tags": [],
         "locale": "national"
       },
       {
@@ -292,7 +297,7 @@
         "date": "09/08",
         "summary": "9只QDII产品密集落地、额度扩容，理财公司投资“出海”提速；分行财富条线可关注QDII货架供给，向有海外配置需求的中高端客户推介，抢先占位。",
         "importance": 2,
-        "rank": 2,
+        "rank": 3,
         "tags": [
           "财富"
         ],
@@ -407,8 +412,8 @@
         "date": "2026-09-08"
       },
       "sourceReport": {
-        "title": "港股收评：恒指跌0.38% 科指跌1.61% 科网股跌多涨少 石油股持续走高 江波龙上市首日破发",
-        "url": "https://finance.sina.com.cn/stock/hkstock/marketalerts/2026-09-08/doc-inirceww9421481.shtml"
+        "title": "港股收评：恒指跌0.17% 科指跌0.76% 煤炭股活跃 餐饮股走低 海底捞跌超9%",
+        "url": "https://finance.sina.com.cn/stock/hkstock/marketalerts/2026-09-09/doc-inirfivs8944892.shtml"
       },
       "indices": [
         {
