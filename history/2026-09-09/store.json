@@ -1,0 +1,888 @@
+{
+  "date": "2026-09-09",
+  "updatedAt": "2026-09-08T23:17:17.057Z",
+  "executive": {
+    "hero_line": "全球资产跳水叠加QDII与主动ETF新品落地，配置逻辑生变，零售需深耕再配置与跨境服务窗口。",
+    "spoken_hero": "眼下全球资产集体跳水，客户避险情绪升温，同时QDII和主动ETF扎堆上新，配置再平衡窗口随之打开，可考虑加快跨境与新品布局以抢占先机。",
+    "must_read": [
+      {
+        "title": "QDII出海密集落地",
+        "why": "理财公司投资“出海”提速，资产端突破单一境内市场，分行零售需完善跨境产品货架，承接客户全球配置需求。",
+        "url": "https://finance.sina.com.cn/jjxw/2026-09-08/doc-inircmes6068626.shtml"
+      },
+      {
+        "title": "信用卡转向挖价值",
+        "why": "信用卡从规模竞争转向价值经营，分行需从发卡、提额转向促活、分期与场景深耕，提升客户经营效率。",
+        "url": "https://finance.sina.com.cn/money/bank/bank_hydt/2026-09-08/doc-iniqzsvn6196562.shtml"
+      },
+      {
+        "title": "房贷半年缩水超6000亿",
+        "why": "15家大行房贷余额半年缩超6000亿，按揭进入存量博弈；分行住房金融应关注提前还贷与改善型再融资需求。",
+        "url": "https://finance.sina.com.cn/money/bank/bank_hydt/2026-09-08/doc-iniqzsvq5184662.shtml"
+      }
+    ],
+    "spoken_must_read": "QDII密集落地，理财出海提速，跨境配置需求起来了，产品货架值得快速跟上。\n主动ETF问世倒计时，券商已先跑，银行渠道可提前储备卖点和话术。\n信用卡行业从拼发卡转向挖价值，后续重心放在存量活跃与分期渗透。\n十五家大行房贷半年缩水超六千亿，按揭增量陡降，盘活存量客户更现实。\n全球股市、黄金、白银齐跳水，客户避险情绪升温，主动规划再配置会更有主动权。",
+    "insights": [
+      {
+        "topic": "QDII出海提速，私行抢先配",
+        "impact": "QDII密集落地，中高端客户海外配置需求集中释放，若货架不足或流失至同业。",
+        "action": "可向理财子公司确认额度和档期，优先面向中高端客户开展海外配置路演。",
+        "tag": [
+          "财富",
+          "私行"
+        ],
+        "segments": [
+          "中高端客群(过亿资产)"
+        ],
+        "sources": [
+          {
+            "title": "额度扩容，9只QDII产品密集落地！理财公司投资“出海”提速",
+            "url": "https://finance.sina.com.cn/jjxw/2026-09-08/doc-inircmes6068626.shtml"
+          }
+        ]
+      },
+      {
+        "topic": "主动ETF前哨，代销备战先行",
+        "impact": "主动ETF或重塑权益货架，券商已抢跑，银行若不提前布点可能分流零售AUM。",
+        "action": "财富部门可调研品类特征、培训一线话术，待批复后第一时间上线销售。",
+        "tag": [
+          "财富",
+          "竞对动态"
+        ],
+        "segments": [
+          "零售AUM"
+        ],
+        "sources": [
+          {
+            "title": "首批主动ETF冲刺“最后一公里”",
+            "url": "https://www.stcn.com/article/detail/4175799.html"
+          },
+          {
+            "title": "券商打响主动ETF代销“前哨战”",
+            "url": "https://www.stcn.com/article/detail/4175797.html"
+          }
+        ]
+      },
+      {
+        "topic": "大额存单细分，客群定制留客",
+        "impact": "大额存单从价格竞争走向客群/区域专享，差异化产品利于稳定零售AUM和储蓄留存。",
+        "action": "针对代发工资、养老等客群设计专属存单，结合“区域专享”思路防止存款流失。",
+        "tag": [
+          "客群",
+          "财富"
+        ],
+        "segments": [
+          "零售AUM"
+        ],
+        "sources": [
+          {
+            "title": "从客群限定到区域专享 大额存单标签日趋多元",
+            "url": "https://finance.sina.com.cn/money/bank/bank_hydt/2026-09-08/doc-iniqzxch9405829.shtml"
+          }
+        ]
+      },
+      {
+        "topic": "港股分红潮，跨境配置新抓手",
+        "impact": "港股上市公司超9000亿港元分红，高股息优势显现，中高端客户跨境配置意愿增强。",
+        "action": "本周可向偏好持有港股/跨境理财通的客户推荐高股息组合，借分红季增加配置。",
+        "tag": [
+          "私行",
+          "财富"
+        ],
+        "segments": [
+          "中高端客群(过亿资产)"
+        ],
+        "sources": [
+          {
+            "title": "大手笔分红！超9000亿港元红包雨来了",
+            "url": "https://www.stcn.com/article/detail/4177110.html"
+          }
+        ]
+      },
+      {
+        "topic": "时令消费升温，商户联动拓客",
+        "impact": "节气消费成市场增长点，小微商户交易活跃，带动收单、结算和短期经营贷需求。",
+        "action": "结合中秋前节点，联合商圈与本地生活平台开展收单满减，并向活跃小微商户推送经营快贷。",
+        "tag": [
+          "信贷",
+          "客群"
+        ],
+        "segments": [
+          "普惠小微贷款客户"
+        ],
+        "sources": [
+          {
+            "title": "节气经济升温 时令消费成细分市场新增长点",
+            "url": "https://www.cnfin.com/hg-lb/detail/20260908/4466973_1.html"
+          }
+        ]
+      },
+      {
+        "topic": "政策工具投粤北，小微拓面",
+        "impact": "粤东西北新型政策性金融工具投放，带动县域产业及链上小微主体融资需求，可批量获客。",
+        "action": "建议普惠部结合政策工具清单梳理粤东西北园区/商户，联动政银合作探索批量授信。",
+        "tag": [
+          "政银合作",
+          "信贷"
+        ],
+        "segments": [
+          "普惠小微贷款客户"
+        ],
+        "sources": [
+          {
+            "title": "粤东西北2026年新型政策性金融工具投放",
+            "url": "https://www.cnr.cn/gd/guangdongyaowen/20260908/t20260908_527807495.shtml"
+          }
+        ]
+      },
+      {
+        "topic": "数币跨境留学缴费，场景获客",
+        "impact": "数字人民币跨境支付延伸至留学缴费，是接触跨境家庭客群、叠加结售汇和信用卡权益的好入口。",
+        "action": "可关注数币跨境试点在粤落地名单，围绕留学缴费联动营销，转化跨境商机。",
+        "tag": [
+          "科技金融",
+          "客群"
+        ],
+        "sources": [
+          {
+            "title": "从“数币达”到留学缴费，数字人民币跨境服务亮相投洽会",
+            "url": "https://m.21jingji.com/article/20260908/herald/1cddea9c1ccc387676e7b57adc37dc85.html"
+          }
+        ]
+      }
+    ],
+    "spoken_insights": "QDII密集落地，这条具备高端客户商机，可联手理财子公司做海外配置专场，抢在同行前头。\n主动ETF冲刺，券商已在抢跑，具备零售AUM商机，可提前备好卖点和话术。\n大额存单开始按客群细分，零售AUM商机明显，可试点代发和养老专属存单。\n港股九千亿分红来袭，高端客户商机突出，可借跨境理财通推高股息配置。\n时令消费升温，具备普惠小微商机，联动商圈商户做收单和经营快贷。\n粤东西北政策性工具投放，普惠小微可批量对接，政银联动拓面更高效。\n数币跨境留学缴费落地，可作为其他场景获客入口，关注广东试点抢先联动。",
+    "risk": {
+      "topic": "贵金属代销监管趋严",
+      "evidence": "银行陆续拧紧个人贵金属业务风险阀门，代销要求升级。",
+      "impact": "财富、私行条线代销流程约束加强，贵金属收入短期承压；若适当性管理不到位，可能面临监管处罚，也易引发客户投诉。",
+      "action": "财富部可先行复查在售贵金属产品的风险揭示与客户测评；私行部同步排查超风险等级购买，及时完善话术与流程。",
+      "source": "T2",
+      "sources": [
+        {
+          "title": "银行陆续拧紧个人贵金属业务风险阀门",
+          "url": "https://m.21jingji.com/article/20260908/herald/f5274fc28fa6eb35216cc4862b34b8be.html"
+        }
+      ]
+    },
+    "spoken_risk": "今天有1个需要警惕：银行密集收紧个人贵金属业务阀门，代销监管趋严。财富条线需复查适当性和风险揭示，避免销售违规带来合规处罚。",
+    "guangdong_ipo": {
+      "spoken": "东莞四维材料科技是广东企业，正冲刺北交所，目前已进入IPO问询阶段，保荐人为东莞证券，后续审核动态可继续关注。"
+    }
+  },
+  "stock_recap": {
+    "us": {
+      "overview": "三大指数集体收跌，道指-1.18%，标普-0.58%，纳指-0.32%，中东地缘紧张推升油价。",
+      "sectors": [
+        "能源板块走强，美军摧毁伊朗油轮并制裁其航空，供应风险升级。",
+        "AI基建股走高，高通与康宁交易公告形成催化。",
+        "医药股承压，美国关税威胁及胆固醇药研发挫折带来扰动。",
+        "汽车股聚焦福特，白宫对其中国关联表达深度关切。"
+      ],
+      "spoken": "美股三大指数集体收跌，道指下跌1.18%，标普500跌0.58%，纳指跌0.32%。中东地缘紧张推升油价，能源板块走强，AI基建股受高通和康宁交易消息带动上涨，医药板块则受到关税威胁和研发挫折拖累。",
+      "meta": {
+        "source": "CNBC Top Stories",
+        "crossCheck": "新浪行情",
+        "date": "2026-09-08"
+      },
+      "indices": [
+        {
+          "name": "道琼斯",
+          "value": "52786.07",
+          "changePct": "-1.18%"
+        },
+        {
+          "name": "纳斯达克",
+          "value": "26421.41",
+          "changePct": "-0.32%"
+        },
+        {
+          "name": "标普500",
+          "value": "7673.52",
+          "changePct": "-0.58%"
+        }
+      ]
+    },
+    "aShare": {
+      "overview": "双创业板指数均跌超1%。",
+      "sectors": [
+        "双创业板指数均跌超1%",
+        "农业、化肥板块爆发"
+      ],
+      "meta": {
+        "source": "东方财富",
+        "crossCheck": "新浪行情",
+        "date": "2026-09-09"
+      },
+      "indices": [
+        {
+          "name": "上证指数",
+          "value": "3940.55",
+          "changePct": "+0.20%"
+        },
+        {
+          "name": "深证成指",
+          "value": "13703.21",
+          "changePct": "-0.52%"
+        },
+        {
+          "name": "创业板指",
+          "value": "3359.72",
+          "changePct": "-1.15%"
+        }
+      ]
+    },
+    "hk": {
+      "overview": "恒生指数收报25317.18点（-0.38%）；恒生科技收报4454.85点（-1.61%）。",
+      "sectors": [
+        "恒生指数跌0.38%",
+        "恒生科技指数跌1.61%",
+        "石油股持续走高",
+        "江波龙上市首日破发"
+      ],
+      "meta": {
+        "source": "新浪财经·港股",
+        "crossCheck": "新浪行情",
+        "date": "2026-09-08"
+      },
+      "sourceReport": {
+        "title": "港股收评：恒指跌0.38% 科指跌1.61% 科网股跌多涨少 石油股持续走高 江波龙上市首日破发",
+        "url": "https://finance.sina.com.cn/stock/hkstock/marketalerts/2026-09-08/doc-inirceww9421481.shtml"
+      },
+      "indices": [
+        {
+          "name": "恒生指数",
+          "value": "25317.18",
+          "changePct": "-0.38%"
+        },
+        {
+          "name": "恒生科技",
+          "value": "4454.85",
+          "changePct": "-1.61%"
+        }
+      ]
+    },
+    "quoteChannel": "新浪行情",
+    "quoteDate": "2026-09-08",
+    "marketStatus": {
+      "isMarketClosed": false,
+      "reportDate": "2026-09-09",
+      "dataDate": "2026-09-08",
+      "note": "",
+      "spokenNote": "以下行情为上一交易日，9月8日 周二的收盘情况"
+    }
+  },
+  "stock_news": [
+    {
+      "url": "https://finance.eastmoney.com/a/202609083868023122.html",
+      "title_cn": "中东突发！沙特多处能源设施遭袭胡塞武装：沙特“没有安全之地”！油价大涨",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "09/08",
+      "summary": "沙特多处能源设施遭袭，胡塞武装称沙特“没有安全之地”，国际油价大涨。",
+      "importance": 3,
+      "rank": 0,
+      "tags": [
+        "地缘政治",
+        "能源",
+        "原油"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202609083867184697.html",
+      "title_cn": "“黑天鹅”突袭！市场猛烈抛售！德国传来大消息",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "09/08",
+      "summary": "报道称市场出现“黑天鹅”事件并遭猛烈抛售，同时德国传来重大消息。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "市场波动",
+        "海外宏观"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202609083867596139.html",
+      "title_cn": "适时启动6G商用！信息通信行业重磅规划发布多股业绩倍增可期(名单)",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "09/08",
+      "summary": "信息通信行业发布重磅规划，提出适时启动6G商用；报道并梳理了相关公司名单。",
+      "importance": 3,
+      "rank": 0,
+      "tags": [
+        "6G",
+        "通信",
+        "政策"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202609083867894969.html",
+      "title_cn": "日元突破“心理防线”！全球美元敞口风险飙升！",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "09/08",
+      "summary": "日元汇率突破关键心理关口，市场担忧全球美元敞口风险上升。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "外汇",
+        "日元",
+        "风险"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202609083868219691.html",
+      "title_cn": "9月8日晚间沪深上市公司重大事项公告最新快递",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "09/08",
+      "summary": "9月8日晚间沪深上市公司发布多项重大事项公告的汇总。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "公告",
+        "A股"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202609083867283029.html",
+      "title_cn": "概率超90%！这一警报拉响A股“黑马板块”迎来爆发窗口",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "09/08",
+      "summary": "报道称某指标发出概率超90%的警报，A股“黑马板块”迎来爆发窗口。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "A股",
+        "市场策略",
+        "板块"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202609083867881279.html",
+      "title_cn": "龙头品种价格回升！农药股爆发主力押中多只牛股",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "09/08",
+      "summary": "农药龙头品种价格回升，农药股爆发，主力资金布局多只相关个股。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "农药",
+        "化工",
+        "市场"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202609083868000213.html",
+      "title_cn": "A股三大指数涨跌不一农化制品与石油石化板块大涨",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "09/08",
+      "summary": "A股三大指数当日涨跌不一，农化制品与石油石化板块大涨。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "A股",
+        "农化",
+        "石油石化"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202609083868179745.html",
+      "title_cn": "江波龙首日破发！年内“A+H”股已达34只募资超前五年总和",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "09/08",
+      "summary": "江波龙上市首日破发；年内“A+H”股已达34只，募资额超过此前五年总和。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "IPO",
+        "A+H股",
+        "港股"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202609083868158312.html",
+      "title_cn": "又一电子特气火了！二氯二氢硅相关个股梳理",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "09/08",
+      "summary": "电子特气二氯二氢硅概念受到关注，报道梳理了相关个股。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "电子特气",
+        "半导体",
+        "化工"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202609083867990030.html",
+      "title_cn": "人民锐评：车辆最重要的“智能”是保障安全的能力",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "09/08",
+      "summary": "人民锐评指出，车辆最重要的“智能”是保障安全的能力。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "汽车",
+        "智能驾驶",
+        "评论"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202609083867407697.html",
+      "title_cn": "华泰证券：全球1.2万家公司，何为真AI？",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "09/08",
+      "summary": "华泰证券研究报告探讨全球1.2万家公司中何为真正的AI公司。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "AI",
+        "研究",
+        "策略"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.sina.com.cn/stock/hkstock/marketalerts/2026-09-08/doc-inirceww9421481.shtml",
+      "title_cn": "港股收评：恒指跌0.38% 科指跌1.61% 科网股跌多涨少 石油股持续走高 江波龙上市首日破发",
+      "source": "新浪财经·港股",
+      "source_type": "media",
+      "date": "09/08",
+      "summary": "港股收评：恒指跌0.38%，恒生科技指数跌1.61%，科网股跌多涨少，石油股走高，江波龙上市首日破发。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "港股",
+        "恒指",
+        "石油",
+        "IPO"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://finance.sina.com.cn/roll/2026-09-08/doc-iniraita9250131.shtml",
+      "title_cn": "港股早报｜LME期铜创下历史新高 中国AI大模型调用量连续十九周领跑",
+      "source": "新浪财经·港股",
+      "source_type": "media",
+      "date": "09/08",
+      "summary": "港股早报显示，LME期铜创历史新高；中国AI大模型调用量连续十九周领跑。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "大宗商品",
+        "铜",
+        "AI",
+        "港股"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://finance.sina.com.cn/roll/2026-09-08/doc-iniqzsvk9420729.shtml",
+      "title_cn": "港股上演“冰火两重天”：硬科技狂飙，科网大金融却“拖后腿”",
+      "source": "新浪财经·港股",
+      "source_type": "media",
+      "date": "09/08",
+      "summary": "港股市场表现分化，硬科技股上涨，科网与大金融板块走势较弱。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "港股",
+        "科技股",
+        "金融"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://finance.sina.com.cn/stock/hkstock/marketalerts/2026-09-08/doc-iniraith9728084.shtml",
+      "title_cn": "港股概念追踪|猪周期大拐点临近 机构布局养殖板块（附概念股）",
+      "source": "新浪财经·港股",
+      "source_type": "media",
+      "date": "09/08",
+      "summary": "报道称猪周期大拐点临近，机构开始布局养殖板块，并梳理相关概念股。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "猪肉",
+        "养殖",
+        "周期"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://finance.sina.com.cn/roll/2026-09-08/doc-iniraith4897142.shtml",
+      "title_cn": "滨会生物获港股IPO备案 拟发行不超3810.26万股",
+      "source": "新浪财经·港股",
+      "source_type": "media",
+      "date": "09/08",
+      "summary": "滨会生物获港股IPO备案，拟发行不超过3810.26万股。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "IPO",
+        "港股",
+        "生物医药"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://finance.sina.com.cn/stock/hkstock/hkgg/2026-09-08/doc-inirceww9464231.shtml",
+      "title_cn": "中银国际：哔哩哔哩-W维持“买入”评级 目标价224港元",
+      "source": "新浪财经·港股",
+      "source_type": "media",
+      "date": "09/08",
+      "summary": "中银国际维持哔哩哔哩-W“买入”评级，目标价224港元。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "券商评级",
+        "中概股",
+        "互联网"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://finance.sina.com.cn/stock/hkstock/hkgg/2026-09-08/doc-inircews9250788.shtml",
+      "title_cn": "大摩：重申小米集团-W(01810)“增持”评级 目标价33港元",
+      "source": "新浪财经·港股",
+      "source_type": "media",
+      "date": "09/08",
+      "summary": "摩根士丹利重申小米集团-W“增持”评级，目标价33港元。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "券商评级",
+        "科技",
+        "港股"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://finance.sina.com.cn/stock/hkstock/hkgg/2026-09-08/doc-inirceww4608408.shtml",
+      "title_cn": "瑞银：资本补充方案消除不确定因素 工商银行(01398)农业银行(01288)盈利及派息提升可抵销股权稀释",
+      "source": "新浪财经·港股",
+      "source_type": "media",
+      "date": "09/08",
+      "summary": "瑞银认为资本补充方案消除不确定因素，工商银行和农业银行盈利及派息提升可抵销股权稀释影响。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "银行",
+        "券商评级",
+        "港股"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://finance.sina.com.cn/stock/hkstock/hkgg/2026-09-08/doc-inirceww4610518.shtml",
+      "title_cn": "高盛：维持新意网(01686)“中性”评级 目标价上调至6港元",
+      "source": "新浪财经·港股",
+      "source_type": "media",
+      "date": "09/08",
+      "summary": "高盛维持新意网“中性”评级，目标价上调至6港元。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "券商评级",
+        "数据中心",
+        "港股"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://finance.sina.com.cn/stock/hkstock/hkgg/2026-09-08/doc-inirceww4606030.shtml",
+      "title_cn": "小摩：锂价短期面临下行压力 ESS需求支持中期展望 维持赣锋锂业(01772)“增持”",
+      "source": "新浪财经·港股",
+      "source_type": "media",
+      "date": "09/08",
+      "summary": "摩根大通认为锂价短期面临下行压力，ESS需求支持中期展望，维持赣锋锂业“增持”评级。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "锂",
+        "券商评级",
+        "新能源"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://finance.sina.com.cn/stock/hkstock/hkgg/2026-09-08/doc-inirceww4597404.shtml",
+      "title_cn": "大摩：维持万洲国际(00288)“增持”评级 目标价下调至10.6港元",
+      "source": "新浪财经·港股",
+      "source_type": "media",
+      "date": "09/08",
+      "summary": "摩根士丹利维持万洲国际“增持”评级，目标价下调至10.6港元。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "券商评级",
+        "消费",
+        "港股"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://finance.sina.com.cn/stock/hkstock/hkgg/2026-09-08/doc-inirceww9423039.shtml",
+      "title_cn": "美银证券：上调华电国际电力股份(01071)目标价至3.7港元 重申“跑输大市”评级",
+      "source": "新浪财经·港股",
+      "source_type": "media",
+      "date": "09/08",
+      "summary": "美银证券将华电国际电力目标价上调至3.7港元，重申“跑输大市”评级。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "券商评级",
+        "电力",
+        "港股"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/09/08/iran-us-sub-strait-hormuz.html",
+      "title_cn": "U.S. military destroys five Iranian oil tankers after attempted attack on American warship, Centcom says",
+      "source": "CNBC Top Stories",
+      "source_type": "media",
+      "date": "09/08",
+      "summary": "美国中央司令部称，美军在伊朗船只试图攻击美舰后摧毁了五艘伊朗油轮。",
+      "importance": 3,
+      "rank": 0,
+      "tags": [
+        "地缘政治",
+        "中东",
+        "原油",
+        "军事"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/09/07/trump-bombardier-cant-sell-in-us-unless-canada-aerospace-giant-builds-there.html",
+      "title_cn": "Bombardier points out U.S. footprint after Trump says aerospace giant must build in America",
+      "source": "CNBC Top Stories",
+      "source_type": "media",
+      "date": "09/08",
+      "summary": "特朗普称庞巴迪必须在美国生产，庞巴迪回应强调其在美国的业务布局。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "航空航天",
+        "贸易政策"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/09/08/ai-infrastructure-stocks-rally-on-deal-from-qualcomm-and-corning.html",
+      "title_cn": "AI infrastructure stocks rally on deal announcements from Qualcomm, Corning",
+      "source": "CNBC Top Stories",
+      "source_type": "media",
+      "date": "09/08",
+      "summary": "高通和康宁宣布交易消息后，AI基础设施类股票上涨。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "AI",
+        "科技",
+        "美股"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/09/08/ford-china-dot-sean-duffy.html",
+      "title_cn": "Trump administration expresses 'profound concern' over Ford's ties to China",
+      "source": "CNBC Top Stories",
+      "source_type": "media",
+      "date": "09/08",
+      "summary": "特朗普政府对福特汽车与中国的关系表示“深切关注”。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "汽车",
+        "中美关系",
+        "政策"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/09/08/bloom-energy-is-trading-more-options-than-spacex.html",
+      "title_cn": "This alternative energy stock is more popular than SpaceX in the options pits. Here's why",
+      "source": "CNBC Top Stories",
+      "source_type": "media",
+      "date": "09/08",
+      "summary": "报道称一只替代能源股票在期权市场的热度超过SpaceX，并分析了原因。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "期权",
+        "新能源",
+        "美股"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/09/08/liv-golf-chapter-11-bankruptcy.html",
+      "title_cn": "LIV Golf files for Chapter 11 bankruptcy protection",
+      "source": "CNBC Top Stories",
+      "source_type": "media",
+      "date": "09/08",
+      "summary": "LIV Golf申请第11章破产保护。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "破产",
+        "体育"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/09/08/new-hampshire-primary-senate-scott-brown-john-sununu-chris-pappas-karishma-manzur.html",
+      "title_cn": "New Hampshire goes to the polls in primary for key open Senate seat",
+      "source": "CNBC Top Stories",
+      "source_type": "media",
+      "date": "09/08",
+      "summary": "美国新罕布什尔州举行初选，角逐关键的开放参议院席位。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "美国政治",
+        "选举"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/09/08/pharma-tariffs-trump-generic-drugs-sandoz-cmd-stock.html",
+      "title_cn": "'Patients pay the tariff': Swiss pharma CEO warns of Trump's generic drug tariff threat",
+      "source": "CNBC Top Stories",
+      "source_type": "media",
+      "date": "09/08",
+      "summary": "瑞士制药公司CEO警告，特朗普对仿制药加征关税的威胁最终将由患者承担。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "医药",
+        "关税",
+        "贸易政策"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/09/08/novartis-cholesterol-setback-drug-race-eli-lilly-amgen.html",
+      "title_cn": "Cholesterol drug setback casts doubt over multibillion-dollar race",
+      "source": "CNBC Top Stories",
+      "source_type": "media",
+      "date": "09/08",
+      "summary": "胆固醇药物研发受挫，给相关数十亿美元规模的市场竞争前景带来不确定性。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "医药",
+        "研发",
+        "市场"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/09/08/us-sanctions-iran-airlines-oil-economy-war.html",
+      "title_cn": "U.S. sanctions Iranian airlines in aim to tighten economic squeeze as war spreads, oil rises",
+      "source": "CNBC Top Stories",
+      "source_type": "media",
+      "date": "09/08",
+      "summary": "美国制裁伊朗航空公司以加大经济施压；随着战争蔓延，油价上涨。",
+      "importance": 3,
+      "rank": 0,
+      "tags": [
+        "制裁",
+        "伊朗",
+        "原油",
+        "地缘政治"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.investing.com/news/insider-trading-news/paypals-pres-keller-sells-255655-in-shares-93CH-4892589",
+      "title_cn": "PayPal’s pres. Keller sells $255,655 in shares",
+      "source": "Investing.com News",
+      "source_type": "media",
+      "date": "09/08",
+      "summary": "PayPal总裁Keller出售了价值255,655美元的公司股票。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "高管减持",
+        "美股",
+        "支付"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.investing.com/news/insider-trading-news/lemonade-cbo-maya-prosor-sells-56815-in-common-stock-93CH-4892588",
+      "title_cn": "Lemonade CBO Maya Prosor sells $56,815 in common stock",
+      "source": "Investing.com News",
+      "source_type": "media",
+      "date": "09/08",
+      "summary": "Lemonade首席商务官Maya Prosor出售了56,815美元普通股。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "高管减持",
+        "美股",
+        "保险科技"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    }
+  ]
+}
