@@ -33,9 +33,9 @@
       "publishedAt": "2026-09-08T21:18:06+08:00"
     },
     "2026-09-09": {
-      "source": "manual-final",
-      "runId": "34289399876",
-      "publishedAt": "2026-09-09T07:17:38+08:00"
+      "source": "manual-test",
+      "runId": "34373673142",
+      "publishedAt": "2026-09-09T23:59:58+08:00"
     }
   }
 }
