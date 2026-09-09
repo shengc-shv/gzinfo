@@ -1,12 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-09",
+  "updatedAt": "2026-09-10",
   "reports": {
-    "2026-09-03": {
-      "source": "manual",
-      "runId": "33760511899",
-      "publishedAt": "2026-09-03T21:25:37+08:00"
-    },
     "2026-09-04": {
       "source": "manual",
       "runId": "33816487317",
@@ -36,6 +31,11 @@
       "source": "manual-test",
       "runId": "34373673142",
       "publishedAt": "2026-09-09T23:59:58+08:00"
+    },
+    "2026-09-10": {
+      "source": "manual-final",
+      "runId": "34416733509",
+      "publishedAt": "2026-09-10T07:35:26+08:00"
     }
   }
 }
