@@ -1246,8 +1246,39 @@ export function beginDay(store: EventMemoryStore, today: string): EventMemorySto
   };
 }
 
-/** 把一批播报留痕结算进长期记忆（跨天时调用）。 */
-function settleIntoEvents(
+/**
+ * 把当日「暂存区」直接结算进长期记忆（Fix A，2026-09-10）。
+ *
+ * 取代「次日跨天 beginDay + deliverySettlementGate 指纹对账」旧链路：旧链路在
+ * 「同日重推终版」这种正常操作下，会因暂存 runId ≠ 推送 runId 而误杀已发微信内容
+ * （2026-09-09 / 09-10 复盘：这两天口播因此从未进长期记忆，09-08 已彻底丢失）。
+ *
+ * 新语义：**微信推送成功即结算**——发微信本身就是最权威的「已交付」信号，
+ * 不再做二次版本对账。结算后清空当日暂存区，避免次日 beginDay 重复结算
+ * （beginDay 仍保留为兜底：若某天跳过了 mark-delivered，次日 run 的 beginDay
+ * 仍会按 deliveries 闸门结算）。
+ *
+ * @param store 当前记忆库
+ * @param date  目标日期（默认取 store.today.date）。仅当 store.today.date === date 时才结算。
+ * @returns 新 store；无可结算内容时返回原引用（便于调用方用 `===` 判等跳过写盘）。
+ */
+export function settleTodayIntoEvents(
+  store: EventMemoryStore,
+  date?: string,
+): EventMemoryStore {
+  const today = store.today;
+  if (!today || today.entries.length === 0) return store;
+  if (date && today.date !== date) return store;
+  const events = settleIntoEvents(store.events ?? {}, today.entries);
+  return {
+    ...store,
+    events,
+    today: { date: today.date, entries: [] },
+  };
+}
+
+/** 把一批播报留痕结算进长期记忆（跨天时调用，亦供 reconcile 复用）。 */
+export function settleIntoEvents(
   events: Record<string, EventRecord>,
   entries: BroadcastSample[],
 ): Record<string, EventRecord> {

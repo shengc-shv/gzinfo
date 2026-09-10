@@ -3,17 +3,17 @@
  *
  * 由 .github/workflows/notify.yml 在**微信推送成功**后调用：把 {date, pushedAt,
  * runId, reportRunId, reportSha} 追加进 data/event-memory.json 的 deliveries
- * （同日重复推送 → 覆盖 pushedAt）。
+ * （同日重复推送 → 覆盖 pushedAt，即「重复推送的重复打标」），**并立即把当日
+ * 暂存区（today）结算进长期记忆（events）**——Fix A（2026-09-10）。
  *
- * deliveries 是内容记忆 beginDay 的结算闸门：只有被人工推送过的日期，其播报
- * 才会在跨天时结算进长期记忆（9:00 启发式已退役）。
  * ⚠️ 生效判据 = **触达即生效**：推送全量送达（目标 ≥1 且全成功）即视为正式
- * 交付——模板消息渠道无「客户已读」回执，已读不可观测（用户 2026-09-03 拍板）。
+ * 交付——模板消息渠道无「客户已读」回执，已读不可观测（用户 2026-09-03 拍板）；
+ * 公众号 / 企业号任一成功即视为交付（notify.yml 合并推送，任一成功 → 本步执行）。
  *
  * 版本指纹（reportRunId / reportSha）：从 gh-pages 当天 html 的最新 commit
  * （daily publish 步骤的 commit message 含 `run <id>`）反查被推送版本对应的
- * 发布 run 与 commit sha，供次日结算前与 today.runId 对账（deliverySettlementGate）：
- * 反查失败 → 无指纹 → 照常记录交付（宁缺指纹不阻断交付），结算按信任交付走。
+ * 发布 run 与 commit sha，仅作溯源留存；**不再参与结算闸门**（旧版
+ * deliverySettlementGate 指纹对账会在「同日重推终版」时误杀已发微信内容，已退役）。
  *
  * env：
  *   REPORT_TZ 可选 报告时区（默认 Asia/Shanghai，决定「今天」是哪一天）
@@ -24,7 +24,7 @@
  * 用法：npm run mark-delivered
  */
 import { loadEventMemory, saveEventMemory } from "../lib/memory/store";
-import { appendDelivery } from "../lib/memory/event-memory";
+import { appendDelivery, settleTodayIntoEvents } from "../lib/memory/event-memory";
 import { extractReportRunId } from "../lib/memory/publish-run-id";
 import { formatBroadcastAt, memoryTimeZone } from "../lib/memory/broadcast-time";
 
@@ -95,19 +95,31 @@ async function main(): Promise<void> {
   const runId = process.env.GITHUB_RUN_ID ?? "";
   const fp = await resolvePushedVersion(dateStr);
   const store = loadEventMemory();
-  const next = appendDelivery(store, {
+  let next = appendDelivery(store, {
     date: dateStr,
     pushedAt,
     ...(runId ? { runId } : {}),
     ...(fp.reportRunId ? { reportRunId: fp.reportRunId } : {}),
     ...(fp.reportSha ? { reportSha: fp.reportSha } : {}),
   });
+  // Fix A（2026-09-10）：微信推送成功即把当日暂存结算进长期记忆，
+  // 取代「次日跨天 beginDay + deliverySettlementGate 指纹对账」旧链路——
+  // 旧链路在「同日重推终版」正常操作下会因 run id 不一致误杀已发微信内容
+  // （2026-09-09 / 09-10 复盘：这两天口播因此从未进长期记忆，09-08 已彻底丢失）。
+  // 发微信本身就是最权威的「已交付」信号，不再二次对账；结算后清空暂存区避免重复结算。
+  const stagedBefore = next.today?.entries.length ?? 0;
+  next = settleTodayIntoEvents(next, dateStr);
+  const settledNow = (next.today?.entries.length ?? 0) === 0 && stagedBefore > 0;
   saveEventMemory(next, { today: dateStr });
   log(
-    `✅ 已记录交付：${dateStr} @ ${pushedAt}${runId ? `（notify run ${runId}）` : ""}` +
+    `✅ 已记录交付并结算：${dateStr} @ ${pushedAt}${runId ? `（notify run ${runId}）` : ""}` +
       (fp.reportRunId ? `｜被推送版本 = gh-pages run ${fp.reportRunId}` : "｜⚠️ 无发布 run 指纹"),
   );
-  log(`明日 beginDay 将据此结算 ${dateStr} 的播报进长期记忆（无交付则不结算；版本指纹不一致也不结算）。`);
+  if (settledNow) {
+    log(`🧠 当日 ${stagedBefore} 条口播已结算进长期记忆（events 现 ${Object.keys(next.events).length} 条）；同日后续重推若无新内容则不重复结算。`);
+  } else {
+    log(`🧠 当日暂存区为空（已结算或尚未落盘），未触发结算；如需补结算历史日期请用 npm run memory:settle <date>。`);
+  }
 }
 
 main().catch((e) => {

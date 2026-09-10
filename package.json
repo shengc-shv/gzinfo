@@ -23,7 +23,8 @@
     "open": "node scripts/open-report.mjs",
     "tts-fallback": "tsx scripts/tts-fallback.ts",
     "tts:probe": "tsx scripts/tts-probe.ts",
-    "memory:backfill": "tsx scripts/backfill-broadcast-at.ts"
+    "memory:backfill": "tsx scripts/backfill-broadcast-at.ts",
+    "memory:settle": "tsx scripts/backfill-event-memory.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.96.0",

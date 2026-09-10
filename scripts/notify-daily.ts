@@ -1,24 +1,31 @@
 /**
- * 日报外发：微信测试号模板消息（2026-09-03 起仅微信渠道 —— Server酱已按用户要求整体废弃删除）。
+ * 日报外发：公众号（微信测试号模板消息）+ 企业号（企业微信）**合并为一条流程**。
  *
  * 用法：npm run notify（由 .github/workflows/notify.yml 人工触发调用）
  *
+ * 推送顺序（用户 2026-09-10 拍板）：① 公众号先推；② 企业号后推。
+ * 任一渠道成功送达即视为正式交付（notify 退出 0）→ notify.yml 据此写当日交付信号
+ * 并**立即结算**进长期记忆（Fix A；见 mark-delivered.ts）。两渠道均失败才退出 1。
+ *
+ * 渠道选择：默认 `both`（两渠道都推）；可用 NOTIFY_CHANNEL=wechat|wecom 单独指定
+ * （仅单测 / 兜底用）。各渠道缺配置则跳过该渠道（不影响另一渠道）。
+ *
  * env（CI secrets / vars）：
- *   WX_APP_ID       必填 测试号 appID
- *   WX_APP_SECRET   必填 测试号 appsecret
- *   WX_TEMPLATE_ID  必填 模板 ID（非敏感，亦可硬编码进 workflow）
- *   WX_USER_ID      可选 显式目标 openid（逗号分隔；关注者列表之外补发，如给自己发）
+ *   公众号：
+ *     WX_APP_ID       必填 测试号 appID
+ *     WX_APP_SECRET   必填 测试号 appsecret
+ *     WX_TEMPLATE_ID  必填 模板 ID
+ *     WX_USER_ID      可选 显式目标 openid（逗号分隔；关注者列表之外补发）
+ *   企业号：
+ *     WECOM_WEBHOOK         可选 群机器人 Webhook（自带 key 鉴权，不受企业可信 IP 限制，推荐）
+ *     WECOM_CORP_ID / _AGENT_ID / _CORP_SECRET / _USER_IDS  可选 自建应用 message/send
  *   公共：
  *     REPORT_BASE_URL 可选 报告根 URL，默认 https://shengc-shv.github.io/gzinfo
- *     REPORT_TZ       可选 报告时区，默认 Asia/Shanghai（决定取哪天的 store.json 与报告 URL）
+ *     REPORT_TZ       可选 报告时区，默认 Asia/Shanghai
  *
- * 数据源：history/<date>/store.json → executive.hero_line（模板消息内容）
+ * 数据源：history/<date>/store.json → executive.hero_line（+ guangdong_ipo.spoken 一行）
  *
- * 退出码（2026-09-03 新增语义）：微信真正送达（目标 ≥1 且全部成功）→ 0；
- * 缺配置 / 无发送目标 / 任一失败 → 1。
- * notify.yml 据此决定是否写当日「交付信号」（event-memory.json deliveries）——
- * 只有「人工确认过、微信真正送达」的版本才作为内容记忆 beginDay 的结算闸门。
- * 失败不抛未捕获异常（结果与退出码即最终信号）。
+ * 退出码：任一渠道真正送达 → 0；两渠道均缺配置或失败 → 1。
  */
 import fs from "node:fs";
 import path from "node:path";
@@ -176,49 +183,55 @@ async function main(): Promise<void> {
   const base = (process.env.REPORT_BASE_URL || "https://shengc-shv.github.io/gzinfo").replace(/\/+$/, "");
   const reportUrl = `${base}/${dateStr}/${dateStr}.html`;
 
-  // 企业微信（群机器人 Webhook 优先；否则自建应用 message/send）
-  const channel = (process.env.NOTIFY_CHANNEL || "wechat").toLowerCase();
-  if (channel === "wecom") {
-    // 群机器人 Webhook：自带 key 鉴权，不受企业可信 IP 限制，从 CI 直发（推荐，绕过 errcode 60020）
-    const webhookUrl = process.env.WECOM_WEBHOOK ?? "";
-    if (webhookUrl) {
-      const ok = await pushWecomViaWebhook({ webhookUrl, heroLine, ipoLine, dateStr, reportUrl });
-      if (!ok) process.exitCode = 1;
-      log(`报告链接: ${reportUrl}`);
-      return;
+  // 渠道选择：默认 both（公众号 + 企业号合并推送）；NOTIFY_CHANNEL 可单测/兜底指定单一渠道。
+  const channel = (process.env.NOTIFY_CHANNEL || "both").toLowerCase();
+
+  let okWechat = false;
+  let okWecom = false;
+
+  // ① 公众号（微信测试号模板消息）—— 顺序在前
+  if (channel === "both" || channel === "wechat") {
+    const appId = process.env.WX_APP_ID ?? "";
+    const appSecret = process.env.WX_APP_SECRET ?? "";
+    const templateId = process.env.WX_TEMPLATE_ID ?? "";
+    if (!appId || !appSecret || !templateId) {
+      log("⚠️ 公众号未配置（缺 WX_APP_ID / WX_APP_SECRET / WX_TEMPLATE_ID），跳过");
+    } else {
+      const extraOpenIds = (process.env.WX_USER_ID ?? "")
+        .split(",")
+        .map((s) => s.trim())
+        .filter(Boolean);
+      okWechat = await pushWechat({ appId, appSecret, templateId, baseUrl: base, extraOpenIds, heroLine, dateStr, reportUrl });
     }
-    // 自建应用 message/send：需在后台把调用方公网 IP 加进「企业可信 IP」
-    const corpId = process.env.WECOM_CORP_ID ?? "";
-    const agentId = process.env.WECOM_AGENT_ID ?? "";
-    const corpSecret = process.env.WECOM_CORP_SECRET ?? "";
-    const userIds = (process.env.WECOM_USER_IDS ?? "").split(",").map((s) => s.trim()).filter(Boolean);
-    if (!corpId || !agentId || !corpSecret || userIds.length === 0) {
-      log("缺少 WECOM_WEBHOOK 或 WECOM_CORP_ID / WECOM_AGENT_ID / WECOM_CORP_SECRET / WECOM_USER_IDS，跳过企业微信推送 → 未交付");
-      process.exitCode = 1;
-      return;
-    }
-    const ok = await pushWecom({ corpId, agentId, corpSecret, userIds, heroLine, ipoLine, dateStr, reportUrl });
-    if (!ok) process.exitCode = 1;
-    log(`报告链接: ${reportUrl}`);
-    return;
   }
 
-  // 微信测试号模板消息（公众号渠道，2026-09-03 起保留，默认 NOTIFY_CHANNEL=wechat）
-  const appId = process.env.WX_APP_ID ?? "";
-  const appSecret = process.env.WX_APP_SECRET ?? "";
-  const templateId = process.env.WX_TEMPLATE_ID ?? "";
-  if (!appId || !appSecret || !templateId) {
-    log("缺少 WX_APP_ID / WX_APP_SECRET / WX_TEMPLATE_ID，跳过微信推送 → 未交付");
-    process.exitCode = 1;
-    return;
+  // ② 企业号（群机器人 Webhook 优先；否则自建应用 message/send）—— 顺序在后
+  if (channel === "both" || channel === "wecom") {
+    const webhookUrl = process.env.WECOM_WEBHOOK ?? "";
+    if (webhookUrl) {
+      okWecom = await pushWecomViaWebhook({ webhookUrl, heroLine, ipoLine, dateStr, reportUrl });
+    } else {
+      const corpId = process.env.WECOM_CORP_ID ?? "";
+      const agentId = process.env.WECOM_AGENT_ID ?? "";
+      const corpSecret = process.env.WECOM_CORP_SECRET ?? "";
+      const userIds = (process.env.WECOM_USER_IDS ?? "").split(",").map((s) => s.trim()).filter(Boolean);
+      if (!corpId || !agentId || !corpSecret || userIds.length === 0) {
+        log("⚠️ 企业号未配置（缺 WECOM_WEBHOOK 或 WECOM_CORP_ID/Agent/Secret/UserIds），跳过");
+      } else {
+        okWecom = await pushWecom({ corpId, agentId, corpSecret, userIds, heroLine, ipoLine, dateStr, reportUrl });
+      }
+    }
   }
-  const extraOpenIds = (process.env.WX_USER_ID ?? "")
-    .split(",")
-    .map((s) => s.trim())
-    .filter(Boolean);
-  const ok = await pushWechat({ appId, appSecret, templateId, baseUrl: base, extraOpenIds, heroLine, dateStr, reportUrl });
-  if (!ok) process.exitCode = 1;
+
   log(`报告链接: ${reportUrl}`);
+
+  // 任一渠道成功即视为正式交付（触发 notify.yml 写交付信号 + 结算）；两渠道均失败才未交付。
+  if (okWechat || okWecom) {
+    log(`✅ 交付达成：公众号=${okWechat} 企业号=${okWecom} → notify 退出 0，notify.yml 将写交付信号并结算`);
+  } else {
+    log("❌ 公众号与企业号均未成功送达（缺配置或推送失败）→ 未交付，notify 退出 1");
+    process.exitCode = 1;
+  }
 }
 
 main().catch((e) => {
