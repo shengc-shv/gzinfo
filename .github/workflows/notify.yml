@@ -1,4 +1,4 @@
-name: WeChat Notify (Manual)
+name: WeChat & WeCom Notify (Manual)
 
 # 2026-09-03：微信推送从 daily.yml 拆出，改为**人工触发**。
 # 2026-09-10：公众号 + 企业号**合并为一条流程**（先公众号、后企业号，任一成功即交付）；
@@ -35,7 +35,7 @@ permissions:
 
 jobs:
   notify:
-    name: Push WeChat & mark delivered
+    name: Push WeChat & WeCom & mark delivered
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
