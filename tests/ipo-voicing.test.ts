@@ -8,6 +8,12 @@ import {
 import { recordIpoVoicing, ipoShouldSkip, emptyMemory } from "../lib/memory/event-memory";
 import type { ReportItem } from "../lib/types";
 
+/** 今天的 MM/DD：口播候选有「2 天窗」，硬编码日期会随真实日期漂移而失败。 */
+function todayMmdd(): string {
+  const d = new Date();
+  return `${String(d.getMonth() + 1).padStart(2, "0")}/${String(d.getDate()).padStart(2, "0")}`;
+}
+
 function item(title: string, opts: { tags?: string[]; summary?: string } = {}): ReportItem {
   return {
     url: "https://example.com/" + encodeURIComponent(title),
@@ -15,7 +21,7 @@ function item(title: string, opts: { tags?: string[]; summary?: string } = {}): 
     source: "test",
     source_type: "official",
     tier: "T1",
-    date: "09/09",
+    date: todayMmdd(),
     summary: opts.summary ?? "",
     importance: 2,
     rank: 0,

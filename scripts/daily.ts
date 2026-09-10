@@ -15,6 +15,8 @@ import type { HistoryStore } from "../lib/output/history";
 import type { CrawledArticle } from "../lib/ingest/merge";
 import type { FilterResult } from "../lib/filters/types";
 import type { DailyContext } from "../lib/pipeline/context";
+import { dayGap } from "../lib/sources/crawlers/sources/staleness";
+import { todayKey } from "../lib/utils";
 
 /**
  * 可注入依赖（e2e 测试用）：默认走真实函数；测试时替换网络/磁盘边界。
@@ -133,6 +135,42 @@ export async function runDaily(
     cappedReport = applyDisplayCaps(finalReport, ctx);
   } catch (e) {
     stageError("display-cap", e);
+  }
+
+  // ⑦.5 广东IPO 健康度检查（2026-09-10 回检 P0-3）：让「抓不到」与「真没动态」在 CI 可见。
+  //   - 打印分类计数 + 每源条数（一眼看出哪个源当天是暗的）；
+  //   - 广东条目 0 条 / 最新条目滞后 > 3 天 → ::warning::（GitHub Actions 会高亮并在注解区展示）。
+  try {
+    const ipoItems = finalReport.sections?.ipo ?? [];
+    const gdItems = ipoItems.filter((it) => (it.tags ?? []).includes("粤"));
+    const bySource = new Map<string, number>();
+    for (const it of gdItems) {
+      const k = it.source || "未知源";
+      bySource.set(k, (bySource.get(k) ?? 0) + 1);
+    }
+    const breakdown = [...bySource.entries()].map(([s, n]) => `${s} ${n}`).join(" / ") || "（无）";
+    console.log(
+      `[daily] 🏦 广东IPO：板块 ${ipoItems.length} 条 → 广东 ${gdItems.length} 条（${breakdown}）`,
+    );
+    if (gdItems.length === 0) {
+      console.warn(
+        "::warning:: [daily] 广东IPO 今日 0 条（7 天窗口）：可能确无动态，也可能是源抓取失败/字段改版 —— " +
+          "请对照上方各源输出的「新鲜度告警」定位",
+      );
+    } else {
+      const newest = gdItems.reduce((a, b) => (b.date > a ? b.date : a), "");
+      if (/^\d{2}\/\d{2}$/.test(newest)) {
+        const year = todayKey().slice(0, 4);
+        const gap = dayGap(`${year}-${newest.replace("/", "-")}`, todayKey());
+        if (gap > 3) {
+          console.warn(
+            `::warning:: [daily] 广东IPO 最新条目 ${newest} 已滞后 ${gap} 天：窗口内可能只剩历史存量，建议核查各源`,
+          );
+        }
+      }
+    }
+  } catch (e) {
+    stageError("ipo-health", e);
   }
 
   // ⑧ 语音播报（PR5；失败/缺失不阻断发布；AUDIO_ENABLED=false 直接跳过）

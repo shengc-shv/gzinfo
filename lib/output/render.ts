@@ -27,6 +27,9 @@ import {
   isPolicyMarketCandidate,
   renderCardList,
   escapeHtml,
+  GD_IPO_STAGE_BIZ,
+  IPO_CAPITAL_ACT_RE,
+  IPO_FLOW_RE,
   type SourceGroup,
   type SubGroup,
   type RawByCategory,
@@ -56,7 +59,14 @@ import {
   ASSET_GROUP_ORDER,
   type AssetGroup,
 } from "../trading/watchlist";
-import { classifyGdIpo, inferStage, type GdIssuerRegistry } from "../classify/gdIpo";
+import {
+  classifyGdIpo,
+  inferStage,
+  isGdStage,
+  type GdIssuerRegistry,
+  type GdStage,
+} from "../classify/gdIpo";
+import { topGdIpo, gdIpoStageOf, companyNameOf, IPO_LIST_WINDOW_DAYS } from "../pipeline/side-outputs/gd-ipo";
 
 
 // ----- types -----
@@ -453,8 +463,10 @@ export function groupRaw(
         financeExtra.push(a);
         continue;
       }
-      // 按上市阶段归栏（任务二：看已上市 / 准备IPO 两类），不再按交易所来源分栏
-      const stage = inferStage(a.title, a.excerpt);
+      // P4-② gdBasis 落库：把广东判定依据写回条目，便于审计与历史溯源
+      if (res.basis) a.gdBasis = res.basis;
+      // P4-① 结构化旁路：爬虫已给官方 ipoStage 时优先采用，否则回退关键词推断
+      const stage: GdStage = isGdStage(a.ipoStage) ? a.ipoStage : inferStage(a.title, a.excerpt);
       let b = gdSubs.get(stage);
       if (!b) {
         b = { sourceName: SUBCATEGORY_LABELS[stage] ?? stage, items: [] };
@@ -836,14 +848,47 @@ function capSummary(s: string, max = 50): string {
   return (lastPunct > 4 ? cut.slice(0, lastPunct + 1) : cut) + "…";
 }
 
+/**
+ * MM/DD → 「今天 / 昨天 / N 天前」（报告时区；P2 呈现）。
+ *
+ * 动机：卡片只印 `09/03`，读者容易把 7 天窗里的旧条目读成「今日动态」。
+ * 跨年边界按「今年 → 去年」两次尝试（MM/DD 无年份）；>30 天或无法解析返回空串。
+ */
+export function relativeDayLabel(mmdd: string, today: string = todayKey()): string {
+  const m = /^(\d{2})\/(\d{2})$/.exec(mmdd || "");
+  if (!m) return "";
+  const [ty, tm, td] = today.split("-").map(Number);
+  if (!ty || !tm || !td) return "";
+  const base = Date.UTC(ty, tm - 1, td);
+  for (const y of [ty, ty - 1]) {
+    const gap = Math.round((base - Date.UTC(y, Number(m[1]) - 1, Number(m[2]))) / 86400000);
+    if (gap >= 0 && gap <= 30) return gap === 0 ? "今天" : gap === 1 ? "昨天" : `${gap} 天前`;
+  }
+  return "";
+}
+
+/**
+ * 板块卡渲染。
+ *
+ * @param stage 可选：**仅广东IPO 面板传入**其阶段值（经 gdIpoStageOf 判定）。传入时启用
+ *   IPO 专属呈现——`data-stage`（供阶段筛选条过滤）、结构化副信息 `ipoMeta`
+ *   （保荐/拟板块/受理日，避免被 50 字通用截断吞掉）、相对时距、交易所官方源双链接。
+ * @param progressHtml 可选：同企业阶段进展条（P2-6），仅 IPO 面板对该企业最新一条传入。
+ */
 export function renderReportItemHtml(
   item: ReportItem,
   showSource = true,
+  stage?: string,
+  progressHtml?: string,
 ): string {
   const title = escapeHtml(item.title_cn || item.title_orig || "");
   const url = escapeHtml(item.url);
-  const summary = item.summary ? escapeHtml(capSummary(item.summary)) : "";
-  const time = item.date ? escapeHtml(item.date) : "";
+  const isIpo = stage !== undefined;
+  // IPO 卡优先用结构化 ipoMeta（爬虫字段平铺），其余卡片沿用「摘要首句 ≤50 字」
+  const bodyText = isIpo && item.ipoMeta ? item.ipoMeta : item.summary || "";
+  const summary = bodyText ? escapeHtml(isIpo && item.ipoMeta ? bodyText : capSummary(bodyText)) : "";
+  const rel = isIpo ? relativeDayLabel(item.date) : "";
+  const time = item.date ? escapeHtml(rel ? `${item.date} · ${rel}` : item.date) : "";
   const official = item.source_type === "official";
   const badge = official ? { label: "官方", cls: "src-official" } : { label: "媒体", cls: "src-media" };
   const tags = (item.tags ?? [])
@@ -851,10 +896,17 @@ export function renderReportItemHtml(
     .join("");
   const mkt = item.market ? MARKET_BADGE[item.market] : undefined;
   const mktBadge = mkt ? `<span class="mkt-badge ${mkt.cls}">${mkt.label}</span>` : "";
-  return `<article class="brief${item.importance === 3 ? " must" : ""}" data-source="${item.source_type}" data-tags="${(item.tags ?? []).join(" ")}" data-market="${escapeHtml(item.market ?? "")}">
+  // P2-2 双链接：主链接（列表页）+ 交易所/监管官方源入口（人工核查用）
+  const officialSrc =
+    isIpo && item.officialUrl
+      ? `<p class="official-src">官方源：<a href="${escapeHtml(item.officialUrl)}" target="_blank" rel="noopener noreferrer">${escapeHtml(item.officialLabel || item.officialUrl)}</a></p>`
+      : "";
+  return `<article class="brief${item.importance === 3 ? " must" : ""}" data-source="${item.source_type}" data-tags="${(item.tags ?? []).join(" ")}" data-market="${escapeHtml(item.market ?? "")}" data-stage="${escapeHtml(stage ?? "")}">
   <div class="bm">${mktBadge}<span class="src-badge ${badge.cls}">${badge.label}</span>${showSource && item.source ? `<span>${escapeHtml(item.source)}</span>` : ""}${time ? `<span>${time}</span>` : ""}${item.importance === 3 ? `<span class="imp-badge">必知</span>` : ""}</div>
   <h3><a href="${url}" target="_blank" rel="noopener noreferrer">${title}</a></h3>
   ${summary ? `<p class="sum">${summary}</p>` : ""}
+  ${progressHtml ?? ""}
+  ${officialSrc}
   ${tags ? `<div class="tags">${tags}</div>` : ""}
 </article>`;
 }
@@ -1005,6 +1057,124 @@ export function renderStockFilterBar(): string {
   </div>`;
 }
 
+/**
+ * 广东 IPO 阶段展示顺序 —— 与 `BIZ_VALUE_RANK`（商机价值优先）**同序**：
+ * 辅导备案（Pre-IPO，最佳商机）→ 注册发行（募资在即）→ 在审 → 已上市（已兑现）。
+ * 刻意与顶部横滑卡保持同一顺序，避免同一份数据在页面里出现两种读法。
+ */
+export const IPO_STAGE_ORDER: GdStage[] = [
+  "stage-tutoring",
+  "stage-registered",
+  "stage-reviewing",
+  "stage-listed",
+];
+
+/** 阶段组标题（「阶段待定」= 无阶段信号的条目，有数据才渲染）。 */
+function ipoStageGroupLabel(s: GdStage | ""): string {
+  return s === "" ? "阶段待定" : GD_IPO_STAGE_LABEL[s] || "IPO";
+}
+
+/**
+ * 广东IPO 面板筛选条（2026-09-10 用户）——**复用同级板块既有过滤机制**
+ * （`renderFilterBar` + 卡片 `data-*` 属性 + 客户端 `applyFilter`）：
+ *   - 维度「来源」：官方 / 媒体（与业务板块完全一致）；
+ *   - 维度「阶段」：四阶段 + 阶段待定，**只渲染当前面板实际有数据的阶段**；
+ *   - 维度内 OR、维度间 AND；全不选/全选 = 全部显示（既有语义）。
+ */
+export function renderIpoFilterBar(items: ReportItem[]): string {
+  const groups: FilterGroupDef[] = [
+    {
+      title: "来源",
+      chips: [
+        { label: "官方", value: "official", group: "src" },
+        { label: "媒体", value: "media", group: "src" },
+      ],
+    },
+  ];
+  const present = new Set<string>(items.map((it) => gdIpoStageOf(it)));
+  const stageChips: FilterChipDef[] = IPO_STAGE_ORDER.filter((s) => present.has(s)).map((s) => ({
+    label: GD_IPO_STAGE_LABEL[s],
+    value: s,
+    group: "stage",
+  }));
+  if (present.has("")) stageChips.push({ label: "阶段待定", value: "__none__", group: "stage" });
+  if (stageChips.length > 0) groups.push({ title: "阶段", chips: stageChips });
+  return renderFilterBar(groups);
+}
+
+/**
+ * 广东IPO 面板正文：**四阶段分栏**（2026-09-10 用户决策③落地）。
+ *
+ * - 组顺序 = `IPO_STAGE_ORDER`（商机价值优先，与横滑同序）；
+ * - 空阶段整组不渲染（不出现「辅导备案 0 家」这类空标题）；
+ * - 组内卡片由 `renderReportItemHtml(it, true, stage)` 渲染，带 `data-stage` 供筛选条过滤；
+ * - 组头带阶段色点 + 家数，便于「哪家在哪个阶段」一眼可读。
+ */
+/**
+ * 同企业阶段进展链（P2-6，2026-09-10 回检收尾）。
+ *
+ * 底部列表用 `uniqueCompany:false` 刻意保留了同企业的多阶段条目（「已问询」与
+ * 「注册生效」各占一条 URL），但此前只是各渲染一张卡，读者看不出这是**同一家的推进过程**。
+ * 此处把同企业条目按日期升序连成「09/03 在审 → 09/07 注册发行」，只在**该企业最新一条**
+ * 卡上渲染（避免每张卡重复整条链）；同阶段多次更新合并为一步（保留最新日期）。
+ *
+ * 少于 2 个不同阶段 → 返回空串（单阶段企业不显示进展条）。
+ */
+export function renderIpoProgress(item: ReportItem, all: ReportItem[]): string {
+  const company = companyNameOf(item.title_cn || "");
+  if (!company) return "";
+  const chain = all
+    .filter((it) => companyNameOf(it.title_cn || "") === company)
+    .map((it) => ({ date: it.date, stage: gdIpoStageOf(it) }))
+    .sort((a, b) => (a.date < b.date ? -1 : a.date > b.date ? 1 : 0));
+  const steps: Array<{ date: string; stage: GdStage | "" }> = [];
+  for (const c of chain) {
+    const last = steps[steps.length - 1];
+    if (last && last.stage === c.stage) {
+      last.date = c.date; // 同阶段多次更新 → 合并为一步，保留最新日期
+      continue;
+    }
+    steps.push({ ...c });
+  }
+  if (steps.length < 2) return "";
+  const latest = steps[steps.length - 1];
+  // 仅最新一条卡承载进展条（stage+date 双匹配，避免同日多条重复渲染）
+  if (item.date !== latest.date || gdIpoStageOf(item) !== latest.stage) return "";
+  const body = steps
+    .map((s, i) => {
+      const label = s.stage === "" ? "阶段待定" : GD_IPO_STAGE_LABEL[s.stage] || "IPO";
+      const cls =
+        i === steps.length - 1 ? "ipo-progress-step ipo-progress-step--cur" : "ipo-progress-step";
+      const d = s.date ? `${escapeHtml(s.date)} ` : "";
+      return `<span class="${cls}">${d}${escapeHtml(label)}</span>`;
+    })
+    .join('<span class="ipo-progress-arrow">→</span>');
+  return `<div class="ipo-progress"><span class="ipo-progress-label">进展</span>${body}</div>`;
+}
+
+export function renderIpoPanelHtml(items: ReportItem[]): string {
+  const byStage = new Map<string, ReportItem[]>();
+  for (const it of items) {
+    const s = gdIpoStageOf(it);
+    const arr = byStage.get(s);
+    if (arr) arr.push(it);
+    else byStage.set(s, [it]);
+  }
+  const order: Array<GdStage | ""> = [...IPO_STAGE_ORDER, ""];
+  return order
+    .filter((s) => (byStage.get(s)?.length ?? 0) > 0)
+    .map((s) => {
+      const list = byStage.get(s)!;
+      return `<section class="ipo-group" data-stage="${s}">
+    <h4 class="ipo-group-head"><span class="ipo-group-dot ipo-stage--${s || "none"}"></span>${escapeHtml(
+      ipoStageGroupLabel(s),
+    )}<span class="ipo-group-n">${list.length}</span></h4>
+    ${list.map((it) => renderReportItemHtml(it, true, s, renderIpoProgress(it, items))).join("\n")}
+  </section>`;
+    })
+    .join("\n");
+}
+
 /** 构造 url → 中文标题 映射（供 must_read 回写标题）。 */
 function resolveTitleMap(report: DailyReport): Map<string, string> {
   const m = new Map<string, string>();
@@ -1138,11 +1308,12 @@ function renderReportExec(report: DailyReport): string {
   return `<section class="exec-summary">
     <div class="exec-head">
       <h2 class="exec-title">执行摘要</h2>
-      <span class="exec-sub">今日必读 · 商机洞察 · 风险预警（AI 生成）</span>
+      <span class="exec-sub">今日必读 · 商机洞察 · 风险预警（AI 生成）· 广东IPO（交易所/证监会官方源）</span>
     </div>
     ${must ? `<div class="exec-must"><h3 class="exec-col-title">📌 今日必读<span class="must-hint-inline" aria-hidden="true">← 左右滑动查看 →</span></h3><ul class="must-scroller">${must}</ul></div>` : ""}
     ${insightsHtml ? `<div class="exec-insights"><h3 class="exec-col-title">💡 商机洞察<span class="insight-hint-inline" aria-hidden="true">← 左右滑动查看 →</span></h3><div class="insight-scroller">${insightsHtml}</div></div>` : ""}
     ${riskCard ? `<div class="exec-risk"><h3 class="exec-col-title">⚠️ 风险预警<span class="risk-hint-inline" aria-hidden="true">← 左右滑动查看 →</span></h3><div class="risk-scroller">${riskCard}</div></div>` : ""}
+    ${renderGdIpoStrip(report.sections?.ipo ?? [], { section: "must" })}
   </section>`;
 }
 
@@ -1241,6 +1412,60 @@ function renderStockRecap(report: DailyReport): string {
   </section>`;
 }
 
+/**
+ * 广东 IPO 阶段 → 展示文案（**唯一**来源：横滑徽章、底部四阶段分栏组头、筛选条 chips 共用）。
+ *
+ * ⚠️ 2026-09-10 用户拍板口径：**「注册生效」归「注册发行」**，不归「已上市」
+ * （注册生效 = 待发行，语义上未必已挂牌）。此前官方源把它判 stage-listed、
+ * 关键词表判 stage-registered → 同卡分栏与徽章自相矛盾（P0-1），现已统一。
+ */
+const GD_IPO_STAGE_LABEL: Record<string, string> = {
+  "stage-tutoring": "辅导备案",
+  "stage-registered": "注册发行",
+  "stage-reviewing": "在审",
+  "stage-listed": "已上市",
+  "": "IPO",
+};
+
+/**
+ * 广东 IPO 横滑卡（任务六）：在「今日必读」与「股市播报」各插一行，最多 3 条最有机会
+ * （商机价值优先：辅导备案 > 注册生效·过会 > 在审·受理 > 已上市），带「股份行广州分行商机
+ * 线索」文案，左右滑动。口播由 buildGdIpoSpoken 同序同量生成，确保展示卡与口播一致。
+ * 无广东 IPO 命中（report.sections.ipo 无「粤」标条目）→ 返回空串，不渲染。
+ */
+export function renderGdIpoStrip(items: ReportItem[], opts?: { section?: "must" | "stock" }): string {
+  const picks = topGdIpo(items, undefined, 3, undefined, { uniqueCompany: true });
+  if (picks.length === 0) return "";
+  const cards = picks
+    .map((it) => {
+      const stage = gdIpoStageOf(it);
+      const company = companyNameOf(it.title_cn || "");
+      const biz = GD_IPO_STAGE_BIZ[stage] || "";
+      const url = it.url || "";
+      const src = it.source ? escapeHtml(it.source) : "交易所";
+      // P2 呈现：相对时距，避免「09/03」被读成今日动态
+      const rel = relativeDayLabel(it.date);
+      const date = it.date ? escapeHtml(rel ? `${it.date} · ${rel}` : it.date) : "";
+      const link = url
+        ? `<a class="ipo-src" href="${escapeHtml(url)}" target="_blank" rel="noopener">来源 · ${src}</a>`
+        : `<span class="ipo-src">${src}</span>`;
+      return `<li class="ipo-card" data-audio-section="ipo">
+        <div class="ipo-card-head">
+          <span class="ipo-name">${escapeHtml(company)}</span>
+          <span class="ipo-stage ipo-stage--${stage}">${escapeHtml(GD_IPO_STAGE_LABEL[stage] || "IPO")}</span>
+        </div>
+        ${biz ? `<p class="ipo-biz">${escapeHtml(biz)}</p>` : ""}
+        <div class="ipo-foot"><span class="ipo-date">${date}</span>${link}</div>
+      </li>`;
+    })
+    .join("");
+  const sec = opts?.section === "stock" ? "stock" : "must";
+  return `<div class="exec-ipo exec-ipo--${sec}">
+    <h3 class="exec-col-title">🏦 广东IPO<span class="ipo-hint-inline" aria-hidden="true">← 左右滑动查看 →</span></h3>
+    <ul class="ipo-scroller">${cards}</ul>
+  </div>`;
+}
+
 // ----- top-level renderer -----
 
 /**
@@ -1255,12 +1480,12 @@ const FOREIGN_REGION_RE =
 const GD_ENTERPRISE_RE =
   /(广东|广州)(省|市)?[一-鿿]{0,3}(企业|公司|科技|集团)/;
 
-/** 已上市公司资本运作公告词（2026-08-23 IPO 桶分流）：命中且非 IPO 流程 → 转财经要点，
- *  避免定增/审核问询/购买资产/解禁等「已上市公司公告」污染 IPO 动态板块。 */
-const IPO_CAPITAL_ACT_RE =
-  /(定增|增发|可转债|解禁|限售|回购|减持|增持|特定对象|发行股份购买资产|重大资产重组|资产重组|并购|审核问询|问询函|问询回复|年报|中报|季报|财报|分红|派息|业绩快报|澄清|停牌|复牌|诉讼|质押|担保|员工持股)/i;
-const IPO_FLOW_RE =
-  /(受理|辅导|备案|招股|过会|上市委|注册生效|提交注册|询价|申购|路演|拟登陆|pre-?ipo|新股上市|上市公告|发行结果|中签|已受理)/i;
+/**
+ * 已上市公司资本运作公告词 / IPO 流程词已上移至 `lib/output/render/cards.ts`
+ * （2026-09-10 P0-1 同源治理：render 的板块分流与 side-output 的入池判定必须共用
+ * 同一份词表，否则同一篇稿子在两处的归属会不一致）。
+ * 本文件经顶部 import 使用 `IPO_CAPITAL_ACT_RE` / `IPO_FLOW_RE`。
+ */
 
 /**
  * subcategory → 部门中文 tag 的双标构造已统一移至 lib/classify/tag-rollup.ts 的
@@ -1593,7 +1818,13 @@ export function renderHtml(
   })();
   const policyMarket = dedupe(report.sections?.policy_market ?? []);
   const techAll = dedupe(report.sections?.tech ?? []);
-  const ipoAll = dedupe(report.sections?.ipo ?? []);
+  // 底部「广东IPO动态」tab：只展示广东企业（「粤」标或 isGdIpoCandidate，与顶部横滑同一套判定），
+  // 不再混入港交所全国递表（浙江/湖南/广西等）。展示近 7 天（用户 2026-09-10：口播 2 天 / 列表 7 天）。
+  // uniqueCompany:false —— 完整列表保留「同企业不同阶段」（进展视角），
+  // 企业级去重只作用于 3 个稀缺的横滑位与口播（P1-4）。
+  const ipoAll = topGdIpo(report.sections?.ipo ?? [], undefined, 9999, IPO_LIST_WINDOW_DAYS, {
+    uniqueCompany: false,
+  });
   // 股市动态（底部消息清单，非 AI 生成）：直接来自 report.stock_news（三市场原始新闻）
   const stockNews = (report.stock_news ?? []).filter((it) => it.url);
 
@@ -1614,8 +1845,8 @@ export function renderHtml(
     { id: "p-pol", label: "政策与市场", section: "policy_market", cls: "var(--c-pol)", count: policyMarket.length, items: policyMarket, alwaysShow: false, emptyHint: "今日暂无政策与市场动态" },
     { id: "p-tech", label: "科技前沿", section: "tech", cls: "var(--c-tech)", count: techAll.length, items: techAll, alwaysShow: false, emptyHint: "今日暂无科技前沿" },
     // 2026-08-30 重启（D-009）：广东 IPO 板块由 buildGdIpo side-output 直接构建（绕过 LLM），
-    // sections['ipo'] 非空即展示；空则不显示（与其它板块同取舍）。
-    { id: "p-ipo", label: "IPO动态", section: "ipo", cls: "var(--c-ipo)", count: ipoAll.length, items: ipoAll, alwaysShow: false, emptyHint: "今日暂无广东IPO动态" },
+    // 2026-09-10 用户拍板：底部 tab 只展示广东（过滤全国递表），标签改为「广东IPO动态」。
+    { id: "p-ipo", label: "广东IPO动态", section: "ipo", cls: "var(--c-ipo)", count: ipoAll.length, items: ipoAll, alwaysShow: false, emptyHint: "今日暂无广东IPO动态" },
   ].filter((t) => t.count > 0 || t.alwaysShow);
 
   const totalItems = gzLocal.length + bizInsight.length + policyMarket.length + techAll.length;
@@ -1692,8 +1923,20 @@ ${AUDIO_HIGHLIGHT_CSS}
   </nav>
 
   ${tabs.map((t, i) => `<section class="panel${i === 0 ? " active" : ""}" id="${t.id}">
-    ${t.id === "p-stock" ? renderStockFilterBar() : renderFilterBarForPanel(t.items)}
-    ${t.items.length ? renderReportCardList(t.items, true) : `<p class="empty-hint">${escapeHtml(t.emptyHint || "今日暂无相关内容")}</p>`}
+    ${
+      t.id === "p-stock"
+        ? renderStockFilterBar()
+        : t.id === "p-ipo"
+          ? renderIpoFilterBar(t.items)
+          : renderFilterBarForPanel(t.items)
+    }
+    ${
+      t.items.length
+        ? t.id === "p-ipo"
+          ? renderIpoPanelHtml(t.items)
+          : renderReportCardList(t.items, true)
+        : `<p class="empty-hint">${escapeHtml(t.emptyHint || "今日暂无相关内容")}</p>`
+    }
   </section>`).join("")}
 
   <footer>
@@ -1747,11 +1990,19 @@ ${AUDIO_HIGHLIGHT_CSS}
     var chips = bar.querySelectorAll('.filter-chip');
     var active = Array.prototype.filter.call(chips, function (c) { return c.classList.contains('active'); });
     var btn = panel.querySelector('.expand-btn');
+    // 广东IPO 四阶段分栏：过滤后隐藏「无可见卡片」的整组（否则会留下空组标题）
+    function syncGroups() {
+      panel.querySelectorAll('.ipo-group').forEach(function (grp) {
+        var visible = grp.querySelectorAll('.brief:not(.filtered-out)').length;
+        grp.classList.toggle('filtered-out', visible === 0);
+      });
+    }
     // 全不选（重置）或全选 → 全部显示，并恢复「前 5 展示 + 其余折叠」的默认布局
     if (active.length === 0 || active.length === chips.length) {
       panel.classList.remove('expanded');
       if (btn) btn.style.display = '';
       panel.querySelectorAll('.brief').forEach(function (card) { card.classList.remove('filtered-out'); });
+      syncGroups();
       return;
     }
     // 筛选生效：自动展开折叠区——命中项（含原折叠区内）无需再点「展开」即可见，
@@ -1768,6 +2019,7 @@ ${AUDIO_HIGHLIGHT_CSS}
       var src = card.getAttribute('data-source');
       var tags = (card.getAttribute('data-tags') || '').split(' ').filter(Boolean);
       var market = card.getAttribute('data-market');
+      var stage = card.getAttribute('data-stage') || '';
       var ok = true;
       for (var g in selByGroup) {
         var sel = selByGroup[g];
@@ -1777,6 +2029,10 @@ ${AUDIO_HIGHLIGHT_CSS}
         } else if (g === 'market') {
           // 股市动态面板：按 A股 / 港股 / 美股 过滤（维度内 OR）
           if (sel.indexOf(market) < 0) { ok = false; break; }
+        } else if (g === 'stage') {
+          // 广东IPO 面板：按四阶段过滤（维度内 OR）；「__none__」= 阶段待定（无阶段信号）
+          var stageHit = sel.some(function (f) { return f === '__none__' ? stage === '' : stage === f; });
+          if (!stageHit) { ok = false; break; }
         } else {
           // 维度内 OR：命中业务线其一即满足；「__none__」（其他）命中空标签卡片
           var hit = sel.some(function (f) {
@@ -1788,6 +2044,7 @@ ${AUDIO_HIGHLIGHT_CSS}
       }
       card.classList.toggle('filtered-out', !ok);
     });
+    syncGroups();
   }
 </script>
 ${opts.audio?.segments && opts.audio.segments.length ? `<script>
@@ -1824,7 +2081,7 @@ export function renderMarkdown(report: DailyReport, date: string): string {
     ["业务启示", "biz_insight"],
     ["政策与市场", "policy_market"],
     ["科技前沿", "tech"],
-    ["IPO动态", "ipo"],
+    ["广东IPO动态", "ipo"],
   ];
   for (const [label, key] of secMap) {
     const items = report.sections?.[key] ?? [];

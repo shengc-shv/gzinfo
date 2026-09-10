@@ -64,6 +64,23 @@ export interface ReportItem {
   tier?: SourceTier;
   /** 股市消息清单维度（底部「股市动态」面板用）：a-share / hk / us，供筛选条过滤。 */
   market?: "a-share" | "hk" | "us";
+  /**
+   * IPO 阶段（2026-09-10 P0-1 结构透传）：爬虫按官方审核状态给出的**权威阶段**，
+   * 经 merge → side-output（toReportItem）一路带到渲染层。缺省时回退 `inferStage` 关键词。
+   * 渲染层的分栏、徽章、排序必须统一经 `gdIpoStageOf()` 读取，**不得**再各自维护词表
+   * （历史缺陷：分栏读结构化字段、徽章读标题正则 → 同卡自相矛盾）。
+   */
+  ipoStage?: string;
+  /** 已上市企业的真实挂牌日（YYYY-MM-DD，P3 listed-check），与审核更新日区分。 */
+  listedDate?: string;
+  /** 交易所/监管官方源入口（IPO 卡「双链接」的第二个链接，人工核查用）。 */
+  officialUrl?: string;
+  /** 官方源展示名，如「深交所 · 审核项目动态」。缺省时渲染层用 URL 兜底。 */
+  officialLabel?: string;
+  /** 广东判定依据（P4 落库）："regloc=广东" / "深圳证监局" / "代码命中注册表" / "地名命中"。 */
+  gdBasis?: string;
+  /** IPO 卡专用结构化副信息（保荐 / 拟上市板块 / 受理日），避免被 90→50 字截断吞掉关键字段。 */
+  ipoMeta?: string;
 }
 
 export interface ReportInsight {

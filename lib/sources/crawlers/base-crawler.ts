@@ -36,6 +36,12 @@ export type CrawlerResult = {
   // 交易所级栏目即可，不做公司级反查（东财在审企业无交易所主键）。仅展示，不参与分类/过滤。
   officialUrl?: string;
   officialLabel?: string;
+  // 2026-09-10 IPO 体系重设计 P4：官方审核状态直接给出的阶段（绕过 inferStage 关键词反推）。
+  // 取值 stage-listed / stage-registered / stage-reviewing / stage-tutoring。render 优先采用，
+  // 否则回退 gdIpo.inferStage。无状态源红线：仅作分栏 hint，不驱动地域/相关性过滤。
+  ipoStage?: string;
+  // 2026-09-10 P3 listed-check：已上市企业的真实上市日期（LIST_DATE），用于「已上市」卡片展示。
+  listedDate?: string;
 };
 
 export interface CrawlerOptions {
@@ -52,6 +58,14 @@ export class BaseCrawler {
   retries: number;
   userAgent: string;
   results: CrawlerResult[];
+  /**
+   * 本爬虫**可能产出**的 sourceId 清单（声明式，2026-09-10 P1-6 引入）。
+   *
+   * 用途：注册一致性测试遍历本清单，校验「每个产出 id ∈ sources.config.json
+   * 白名单 且 ∈ SOURCE_ROUTE」—— render 的 knownSourceIds 白名单会**静默丢弃**
+   * 未注册 id（em-ipo 整源消失就是这样发生的）。默认空数组，非 IPO 源可忽略。
+   */
+  sourceIds: string[] = [];
 
   constructor(options: CrawlerOptions = {}) {
     this.name = options.name || "unknown";
@@ -197,6 +211,10 @@ export class BaseCrawler {
       // 2026-09-07：交易所官方源入口透传（IPO 条目双链接展现，仅展示用）
       ...(item.officialUrl ? { officialUrl: item.officialUrl } : {}),
       ...(item.officialLabel ? { officialLabel: item.officialLabel } : {}),
+      // 2026-09-10：官方审核状态直接给出的阶段（P4 render 旁路用）
+      ...(item.ipoStage ? { ipoStage: item.ipoStage } : {}),
+      // 2026-09-10：已上市真实上市日期（P3 listed-check）
+      ...(item.listedDate ? { listedDate: item.listedDate } : {}),
     }));
   }
 }

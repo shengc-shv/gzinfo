@@ -146,6 +146,16 @@ describe("run (倒序早停 + 广东过滤)", () => {
     assert.ok(res.every((r) => r.region === "gd"));
   });
 
+  test("sourceId=gd-csrc-tutoring（IPO 体系重设计，弃用 em-ipo 防 render 白名单静默丢弃）", async () => {
+    const crawler = new MockCrawler([
+      pageHtml([coachTr({ company: "广州A", disclosure: TODAY })]),
+    ]);
+    const res = await crawler.run();
+    assert.equal(res.length, 1);
+    assert.equal(res[0].sourceId, "gd-csrc-tutoring");
+    assert.notEqual(res[0].sourceId, "em-ipo");
+  });
+
   test("页内最早=昨天 → 续抓第 2 页（第2页含前天→停）", async () => {
     const crawler = new MockCrawler([
       pageHtml([

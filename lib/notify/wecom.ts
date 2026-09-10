@@ -83,18 +83,35 @@ export async function sendWecomMarkdown(
 }
 
 /**
+ * 广东IPO 摘要行（可选，2026-09-10 回检 P2）：此前推送正文**完全不含 IPO 信息**，
+ * 领导必须点开报告才知道当天有没有可跟进的商机。现把当日「广东IPO」口播稿（store.json
+ * 的 executive.guangdong_ipo.spoken）压缩成一行随推送发出。
+ */
+function ipoLineOf(ipoLine?: string): string {
+  const t = (ipoLine || "").replace(/\s+/g, " ").trim();
+  if (!t) return "";
+  return `🏦 广东IPO｜${t.length > 80 ? `${t.slice(0, 80)}…` : t}`;
+}
+
+/**
  * 组装 markdown 正文（不被 40 字截断；完整定调 + 跳转链接）。
  * 企业微信 markdown 语法有限：# 标题 / **加粗** / [链接](url) / > 引用 / <font color>。
  */
-export function buildWecomMarkdown(heroLine: string, dateStr: string, url: string): string {
+export function buildWecomMarkdown(
+  heroLine: string,
+  dateStr: string,
+  url: string,
+  ipoLine?: string,
+): string {
   const weekday = WEEKDAY_CN[new Date(`${dateStr}T12:00:00+08:00`).getDay()] ?? "";
   const title = "# 📢 广州分行今日日报已生成";
   const dateLine = `📅 ${dateStr}（${weekday}）`;
   const hero = heroLine
     ? `> **【今日定调】** ${heroLine}`
     : "> ⚠️ 今日暂无定调，点击查看完整日报";
+  const ipo = ipoLineOf(ipoLine);
   const link = `[点击查看完整日报 →](${url})`;
-  return [title, dateLine, "", hero, "", link].join("\n");
+  return [title, dateLine, "", hero, ...(ipo ? ["", ipo] : []), "", link].join("\n");
 }
 
 /**
@@ -111,12 +128,27 @@ export function buildWecomMarkdown(heroLine: string, dateStr: string, url: strin
  *   - URL 单独一行**明文**给出 → 微信/企业微信都会自动识别为可点链接
  *   - emoji 与全角标点在两端都能正常渲染，用于保留可读性
  */
-export function buildWecomText(heroLine: string, dateStr: string, url: string): string {
+export function buildWecomText(
+  heroLine: string,
+  dateStr: string,
+  url: string,
+  ipoLine?: string,
+): string {
   const weekday = WEEKDAY_CN[new Date(`${dateStr}T12:00:00+08:00`).getDay()] ?? "";
   const title = "📢 广州分行今日日报已生成";
   const dateLine = `📅 ${dateStr}（${weekday}）`;
   const hero = heroLine ? `【今日定调】${heroLine}` : "【今日定调】今日暂无定调，请点击下方链接查看完整日报";
-  return [title, dateLine, "", hero, "", "👉 点击查看完整日报：", url].join("\n");
+  const ipo = ipoLineOf(ipoLine);
+  return [
+    title,
+    dateLine,
+    "",
+    hero,
+    ...(ipo ? ["", ipo] : []),
+    "",
+    "👉 点击查看完整日报：",
+    url,
+  ].join("\n");
 }
 
 /**

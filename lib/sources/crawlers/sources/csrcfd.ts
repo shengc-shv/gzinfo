@@ -1,4 +1,7 @@
 import { BaseCrawler, CrawlerResult } from "../base-crawler";
+import { warnIfStale } from "./staleness";
+// P2-3 收敛（2026-09-10）：早停窗口改引全链路唯一来源 lib/ipo-config.ts。
+import { IPO_SOURCE_WINDOW_DAYS } from "../../../ipo-config";
 
 /**
  * 证监会资本市场电子化信息披露平台 —— 辅导企业（csrcfd）爬虫
@@ -10,13 +13,15 @@ import { BaseCrawler, CrawlerResult } from "../base-crawler";
  *   - 8 列表格：序号 / 辅导对象 / 辅导机构 / 备案时间 / 辅导状态 / 派出机构 / 报告类型 / 报告标题。
  *   - 报告披露日期需从行内 `downloadPdf1('.../pre_ipo/YYYY/M/D/xxx.pdf')` 路径提取。
  *
- * 增量策略（2026-09-09 用户设计 + 修正）：**倒序早停**——
+ * 增量策略（2026-09-09 用户设计 + 修正；2026-09-10 窗口由「今昨」放宽到近 7 天）：**倒序早停**——
  *   逐页抓（整页 HTML 为最小粒度，非单条），看页内最早一条的披露日期：
- *     早于「昨天」→ 越过今昨窗口，停止抓取；
- *     等于「昨天」→ 再抓下一页（后面可能还有今/昨披露）；
+ *     早于「今天-7 天」→ 越过 7 天展示窗口，停止抓取；
+ *     否则 → 再抓下一页（后面可能还有窗口内披露）；
  *   取到的全国数据再过滤广东（派出机构广东/深圳证监局 + 企业名/备案时间含广东城市）。
  *
- * ⚠️ 与全量 diff 的取舍：本策略只能捕获「今昨新披露」事件，捕获不了「老企业近期状态变更」
+ * ⚠️ 窗口修正动机（2026-09-10 用户拍板）：口播/今日必读 = 2 天窗、底部「广东IPO动态」
+ *   列表 = 7 天窗。原「今昨」早停会让列表只有 1 天量，与 7 天展示窗脱节。
+ * ⚠️ 与全量 diff 的取舍：本策略只能捕获「窗口内新披露」事件，捕获不了「老企业近期状态变更」
  * （如某企 3 天前改聘保荐人，披露日期老会被早停跳过）。如需状态变更，需全量快照 diff（另建）。
  *
  * 红线：本文件非红线 7 文件；接入点 `lib/sources/crawlers/index.ts`（非红线）已注册本爬虫。
@@ -25,6 +30,8 @@ import { BaseCrawler, CrawlerResult } from "../base-crawler";
 const SOURCE_BASE = "http://eid.csrc.gov.cn/csrcfd";
 const MAX_PAGES = 10; // 兜底：最多抓 10 页（约 2000 条），防死循环
 const CONSECUTIVE_STALE_LIMIT = 2; // 兜底：连续 2 页无有效披露日期即停
+/** 早停窗口（日差，含今天）：与底部「广东IPO动态」7 天展示窗对齐（2026-09-10 用户拍板）。 */
+const CSRC_WINDOW_DAYS = IPO_SOURCE_WINDOW_DAYS;
 
 // 广东口径（参考文件第五节）：派出机构单列深圳证监局，必须合并统计
 const GD_DISPATCH_ORGS = ["广东证监局", "深圳证监局"];
@@ -87,25 +94,28 @@ export function isGuangdong(row: CoachRow): boolean {
 /**
  * 单页早停决策（纯函数，便于测试）：
  *   - 取页内**最后一个有效披露日期**作为该页最早边界（倒序，最后一行最早；容忍末几行无 PDF 路径）。
- *   - 早于 yesterday → 停止；无有效日期 → 记一次 stale（交由连续 stale 计数兜底）；否则继续。
+ *   - 早于 floor（近 7 天窗下界）→ 停止；无有效日期 → 记一次 stale（交由连续 stale 计数兜底）；否则继续。
  */
 export function decidePage(
   rows: CoachRow[],
-  yesterday: string,
+  floor: string,
 ): { stop: boolean; staleHit: boolean } {
   const pageEarliest = [...rows].reverse().find((r) => extractDisclosureDate(r) !== null);
   const d = pageEarliest ? extractDisclosureDate(pageEarliest) : null;
   if (d === null) return { stop: false, staleHit: true };
-  if (d < yesterday) return { stop: true, staleHit: false };
+  if (d < floor) return { stop: true, staleHit: false };
   return { stop: false, staleHit: false };
 }
 
-/** 计算「昨天」（Asia/Shanghai），作为早停窗口下界。 */
-function yesterdayStr(): string {
+/**
+ * 早停窗口下界 = 今天 - 7 天（Asia/Shanghai，即近 7 天 = 日差 ≤ 7），
+ * 与底部「广东IPO动态」7 天展示窗一致（2026-09-10 用户拍板：口播 2 天 / 列表 7 天）。
+ */
+function windowFloorStr(): string {
   const parts = new Date().toLocaleString("en-US", { timeZone: "Asia/Shanghai" }).split(", ");
   const [mdy] = parts;
   const [m, d, y] = mdy.split("/").map(Number);
-  const dt = new Date(y, m - 1, d - 1);
+  const dt = new Date(y, m - 1, d - CSRC_WINDOW_DAYS);
   const yy = dt.getFullYear();
   const mm = String(dt.getMonth() + 1).padStart(2, "0");
   const dd = String(dt.getDate()).padStart(2, "0");
@@ -113,6 +123,9 @@ function yesterdayStr(): string {
 }
 
 export class CsrcCoachCrawler extends BaseCrawler {
+  /** 产出 sourceId（P1-6 注册一致性测试遍历本字段）。 */
+  override sourceIds = ["gd-csrc-tutoring"];
+
   constructor() {
     super({ name: "证监会辅导企业(csrcfd)", timeout: 20000, retries: 3 });
   }
@@ -151,9 +164,10 @@ export class CsrcCoachCrawler extends BaseCrawler {
 
   /** override 基类 run：倒序早停多页抓取 + 广东过滤，结果写入 this.results。 */
   override async run(): Promise<CrawlerResult[]> {
-    const yesterday = yesterdayStr();
+    const floor = windowFloorStr();
     let page = 1;
     let consecutiveStale = 0;
+    const allDates: string[] = []; // 新鲜度哨兵输入（含窗口外日期）
 
     while (page <= MAX_PAGES) {
       let html = "";
@@ -167,16 +181,20 @@ export class CsrcCoachCrawler extends BaseCrawler {
       const rows = parseCoachRows(html);
       if (rows.length === 0) break;
 
-      // 先收集当前页广东企业（整页粒度抓取：早于窗口的条目由下游 7 天展示窗口控制，
-      // 不在此处硬性丢弃，避免漏掉"页内前段今/昨 + 末段前天"混合页的有效企业）。
+      // 先收集当前页广东企业（整页粒度抓取：早于 7 天窗口的条目由下游展示窗口控制，
+      // 不在此处硬性丢弃，避免漏掉"页内前段新披露 + 末段旧披露"混合页的有效企业）。
       for (const r of rows) {
+        const rowDate = extractDisclosureDate(r) || r.recordDate;
+        if (rowDate) allDates.push(rowDate);
         if (!isGuangdong(r)) continue;
         // 时间真实性红线：优先披露日期，次选备案时间（源真实字段，非伪造）；皆无则废弃。
         const disclosure = extractDisclosureDate(r) || r.recordDate;
         if (!disclosure) continue;
         this.results.push({
           title: `${r.company}${r.status ? ` (${r.status})` : ""}${r.dispatchOrg ? ` [${r.dispatchOrg}]` : ""}`,
-          url: r.pdfPath ? `${SOURCE_BASE}${r.pdfPath}` : "",
+          // PDF 存储根在 http://eid.csrc.gov.cn/mnt/storage/...（不含 /csrcfd 路径段）；
+          // SOURCE_BASE 的 /csrcfd 仅用于列表页抓取，拼接 PDF 路径会 404，故此处直连根域。
+          url: r.pdfPath ? `http://eid.csrc.gov.cn${r.pdfPath}` : "",
           excerpt: [
             "IPO辅导备案",
             r.tutorOrg ? `辅导机构: ${r.tutorOrg}` : "",
@@ -186,16 +204,19 @@ export class CsrcCoachCrawler extends BaseCrawler {
             `披露: ${disclosure}`,
           ].filter(Boolean).join(" | "),
           publishedAt: disclosure,
-          sourceId: "em-ipo", // 复用辅导栏路由（constants.ts: em-ipo → ipo-tutoring）
+          sourceId: "gd-csrc-tutoring", // IPO 体系重设计（2026-09-09）：官方辅导源专用 id；
+          // 弃用 em-ipo（config 未注册 em-ipo → render knownSourceIds 白名单静默丢弃 → 历史 em-ipo=0 条铁证）。
           region: "gd",
           registeredProvince: "广东",
+          // P4 结构化旁路：本源全部为「辅导备案 / 辅导验收」阶段（回检 P0-1 补齐——此前完全没给）
+          ipoStage: "stage-tutoring",
         });
       }
 
-      // 再判是否继续翻页（倒序早停：页内最早一条越过今昨窗口则不再抓下一页；当前页已收）。
-      const dec = decidePage(rows, yesterday);
+      // 再判是否继续翻页（倒序早停：页内最早一条越过 7 天窗口则不再抓下一页；当前页已收）。
+      const dec = decidePage(rows, floor);
       if (dec.stop) {
-        console.log(`[${this.name}] 第 ${page} 页最早披露已越过今昨窗口，早停（不再翻页）`);
+        console.log(`[${this.name}] 第 ${page} 页最早披露已越过 7 天窗口（${floor}），早停（不再翻页）`);
         break;
       }
       if (dec.staleHit) {
@@ -209,6 +230,7 @@ export class CsrcCoachCrawler extends BaseCrawler {
       page++;
     }
 
+    warnIfStale(this, allDates);
     console.log(`[${this.name}] 完成，抓取 ${page - 1} 页，广东企业 ${this.results.length} 条`);
     return this.results;
   }

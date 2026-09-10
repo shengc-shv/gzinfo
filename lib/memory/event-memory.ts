@@ -20,6 +20,9 @@
  */
 
 import { eventFingerprint, dice, titleBigrams } from "../ingest/dedup-similar";
+// P2-3 收敛（2026-09-10）：口播窗常量改引全链路唯一来源（此前本文件与
+// pipeline/side-outputs/gd-ipo.ts 各定义一份，值相同但是真隐患——改一处不生效）。
+import { IPO_VOICE_WINDOW_DAYS } from "../ipo-config";
 // 仅引入运行时函数；broadcast-time 对本文件只做 `import type`，无循环依赖
 // 2026-09-03：isTestBroadcastAt（9:00 启发式）已从结算路径退役 —— 结算闸门改为
 // 「交付信号」（deliveries：人工确认推送过才算正式交付），broadcastAt 仅用于溯源/人工分区。
@@ -242,8 +245,8 @@ export interface EventMemoryStore {
   ipoVoicing?: Record<string, string[]>;
 }
 
-/** IPO 口播去重窗口（天）：统计「最近多少天内的口播天数」。 */
-export const IPO_VOICE_WINDOW_DAYS = 2;
+/** IPO 口播去重窗口（天）：统计「最近多少天内的口播天数」（值来源 lib/ipo-config.ts）。 */
+export { IPO_VOICE_WINDOW_DAYS };
 /** 窗口内口播天数上限：达到即今天跳过（默认 2 → 约「2 天播、1 天歇」）。 */
 export const IPO_VOICE_MAX_IN_WINDOW = 2;
 /** ipoVoicing 日期数组保留天数（超出丢弃，防无限膨胀）。 */

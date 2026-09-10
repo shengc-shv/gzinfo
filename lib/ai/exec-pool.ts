@@ -17,6 +17,8 @@
 import { getReportTz, todayKey } from "../utils";
 import type { DailyReport, ReportSectionKey } from "../types";
 import { scoreBranchRelevance } from "./relevance-score";
+// 广东 IPO 内容判定（与渲染/side-output 同一口径，避免三处判定漂移）
+import { isGdIpoCandidate } from "../output/render/cards";
 
 /** 持久化历史库条目（article-history.json 单条子集）。 */
 export interface ExecPoolHistoryEntry {
@@ -349,12 +351,19 @@ function buildIpoPool(opts: BuildTwoDayExecPoolOpts): ExecPoolItem[] {
     return t >= cutoff;
   };
   const out = new Map<string, ExecPoolItem>();
+  /** 广东口径（P1-1）：横滑/口播只面向广东企业，外省 IPO 不得进 LLM 的 guangdong_ipo 槽位。 */
+  const isGd = (title: string, summary: string, tags?: string[]): boolean =>
+    (tags ?? []).includes("粤") || isGdIpoCandidate(title, summary);
 
   for (const it of opts.report.sections.ipo ?? []) {
     if (!it.url) continue;
     const summary = (it.summary || "").trim();
     if (!summary) continue;
-    out.set(it.url, { title: it.title_cn || it.title_orig || "", summary, url: it.url });
+    const title = it.title_cn || it.title_orig || "";
+    // ⚠️ 2026-09-10 回检 P1-1：此前把 sections.ipo **不预过滤**整块喂 LLM，而
+    // sections.ipo 里含港交所「全国递表」条目（外省企业）→ 可能被写进「广东IPO」口播。
+    if (!isGd(title, summary, it.tags)) continue;
+    out.set(it.url, { title, summary, url: it.url });
   }
   // 今日抓取的 gd-ipo/ipo 条目（sections 里可能还没有 —— 取决于 side-output 执行顺序）
   for (const a of opts.articles) {
@@ -362,11 +371,10 @@ function buildIpoPool(opts: BuildTwoDayExecPoolOpts): ExecPoolItem[] {
     if (cat !== "gd-ipo" && cat !== "ipo") continue;
     if (!a.url || out.has(a.url)) continue;
     if (!inIpoWindow(a.publishedAt)) continue;
-    out.set(a.url, {
-      title: a.title_cn || a.title || "",
-      summary: (a.summary || a.excerpt || "").slice(0, 120),
-      url: a.url,
-    });
+    const title = a.title_cn || a.title || "";
+    const summary = (a.summary || a.excerpt || "").slice(0, 120);
+    if (!isGd(title, summary)) continue; // 同上：全国 ipo 条目不进广东IPO 口播
+    out.set(a.url, { title, summary, url: a.url });
   }
   return [...out.values()].slice(0, 20);
 }

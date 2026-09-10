@@ -128,4 +128,20 @@ export interface RawArticle {
    * 源等级（T6）：由采集层声明、归一化层透传。渲染层据此差异化标识来源权威性。
    */
   tier?: SourceTier;
+  /**
+   * IPO 阶段（2026-09-10 P4 结构化旁路）：爬虫按官方审核状态直接给出，render/side-output
+   * 优先采用，否则回退 gdIpo.inferStage 关键词推断。无状态源红线：仅作分栏/排序 hint，
+   * 不驱动地域/相关性过滤。
+   */
+  ipoStage?: string;
+  /**
+   * 已上市企业的真实上市日期（2026-09-10 P3 listed-check）：由 B1/B2/B3 上市列表复核得到，
+   * 与爬虫 updateDate 区分（updateDate=审核状态更新日，listedDate=挂牌上市日）。
+   */
+  listedDate?: string;
+  /**
+   * 广东判定依据（2026-09-10 P4 落库）："regloc=广东" / "深圳证监局" / "代码命中注册表" /
+   * "地名命中" 等，便于审计与去重溯源。
+   */
+  gdBasis?: string;
 }

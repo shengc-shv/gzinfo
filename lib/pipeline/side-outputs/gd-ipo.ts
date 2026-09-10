@@ -16,13 +16,85 @@
 import type { ArticleInput, DailyReport, ReportItem } from "../../types";
 import type { DailyContext } from "../context";
 // 复用渲染侧广东IPO 内容判定（单一口径，避免两套正则漂移）
-import { isGdIpoCandidate } from "../../output/render/cards";
+import { isGdIpoCandidate, IPO_CAPITAL_ACT_RE, IPO_FLOW_RE } from "../../output/render/cards";
+import { inferStage, isGdStage, type GdStage } from "../../classify/gdIpo";
+import { todayKey } from "../../utils";
+// P2-3 收敛（2026-09-10）：窗口常量统一来自 lib/ipo-config.ts（此前本文件与
+// memory/event-memory.ts 各定义一份 IPO_VOICE_WINDOW_DAYS，改一处不生效）。
+import { IPO_VOICE_WINDOW_DAYS, IPO_LIST_WINDOW_DAYS } from "../../ipo-config";
 
 /** IPO 类目（结构化爬虫产物：东财在审表 → gd-ipo；辅导备案/交易所权威源 → ipo）。 */
 const IPO_CAT = new Set(["gd-ipo", "ipo"]);
 
+/**
+ * 是否属于「广东 IPO 事件」——本板块的**内容判定**入口（无状态源红线）：
+ *  ① 结构化类目命中（官方爬虫产物）；或
+ *  ② 内容判定命中（媒体源即时报道的「证监会同意粤芯半导体IPO注册」等，官方源漏抓时补位）。
+ * 两种来源都必须排除「已上市公司资本运作公告」（定增/解禁/回购…），否则会污染 IPO 板块。
+ */
+function isIpoArticle(a: ArticleInput): boolean {
+  const title = a.title_cn || a.title || "";
+  const text = `${title} ${a.excerpt || ""}`;
+  if (IPO_CAPITAL_ACT_RE.test(text) && !IPO_FLOW_RE.test(text)) return false;
+  if (IPO_CAT.has(a.category ?? "")) return true;
+  return isGdIpoCandidate(title, a.excerpt || "");
+}
+
+/** 本条是否应打「粤」标（广东商机身份；口播识别与横滑候选依赖它）。 */
+function isGdIpoArticle(a: ArticleInput): boolean {
+  if (a.category === "gd-ipo") return true; // 官方广东源（region=gd 路由产物）
+  return isGdIpoCandidate(a.title_cn || a.title || "", a.excerpt || "");
+}
+
 function pad(n: number): string {
   return String(n).padStart(2, "0");
+}
+
+/**
+ * 展示/口播窗口（日差，含今天）——2026-09-10 用户拍板口径：
+ *   - **口播 + 今日必读横滑 = 2 天**（`IPO_VOICE_WINDOW_DAYS`）：只播最新动向；
+ *   - **底部「广东IPO动态」列表 = 7 天**（`IPO_LIST_WINDOW_DAYS`）：与源层 7 天窗对齐
+ *     （szse-audit.IPO_SOURCE_WINDOW_DAYS / csrcfd.CSRC_WINDOW_DAYS / sse-audit）。
+ *
+ * 口径 = **日差 ≤ N**（今天往前 N 天，即今天-N ~ 今天）。用户实锤：上交所主板
+ * 「广东龙行天下」（updateDate 09-03，相对 09-10 日差恰为 7）必须在列表内 —— 旧的
+ * 「含今天共 N 个日历日」（今天-N+1 起）会把它卡在窗外。
+ */
+// 常量定义已迁至 lib/ipo-config.ts（P2-3 收敛）；此处 re-export 保持既有 import 路径可用。
+export { IPO_VOICE_WINDOW_DAYS, IPO_LIST_WINDOW_DAYS };
+
+/**
+ * 近 N 天（日差 ≤ N，含今天，按报告时区 REPORT_TZ）的 MM/DD 集合 → N+1 个日历日。
+ * ReportItem.date 只有 MM/DD（无年份），故按 MM/DD 判定；跨元旦的边界日可能多算 1 天，
+ * 属可接受近似（与既有 dateValue 排序同源口径）。
+ */
+function recentMmddSet(days: number): Set<string> {
+  const out = new Set<string>();
+  const base = new Date(`${todayKey()}T00:00:00Z`);
+  for (let i = 0; i <= days; i++) {
+    const d = new Date(base.getTime() - i * 86_400_000);
+    out.add(`${pad(d.getUTCMonth() + 1)}/${pad(d.getUTCDate())}`);
+  }
+  return out;
+}
+
+/**
+ * IPO 卡结构化副信息（P2-5）：保荐 / 拟上市板块 / 受理日。
+ *
+ * 动机：`summary` 走板块卡通用 90 字截断（渲染再截到 50 字），而爬虫 excerpt 是
+ * 「注册地｜保荐｜受理｜状态｜更新｜行业」的长串 → **更新日与后段字段必被吞掉**
+ * （实测：钶锐锶卡片看不到「更新：2026-09-07」）。故把需要展示的字段单独拎出来，
+ * 不依赖截断；`summary` 保持原样（口播的 `parseRegisteredProvince`/`progressOf` 依赖它）。
+ */
+export function buildIpoMeta(title: string, excerpt: string): string {
+  const parts: string[] = [];
+  const sponsor = excerpt.match(/保荐[:：]\s*([^｜|]+)/)?.[1]?.trim();
+  if (sponsor) parts.push(`保荐 ${sponsor}`);
+  const board = parseBoard(title);
+  if (board) parts.push(`拟上市${board}`);
+  const accept = excerpt.match(/受理[:：]\s*([^｜|]+)/)?.[1]?.trim();
+  if (accept) parts.push(`受理 ${accept}`);
+  return parts.join(" ｜ ");
 }
 
 /** ArticleInput（gd-ipo/ipo）→ ReportItem（字段对齐板块卡渲染）。 */
@@ -31,7 +103,8 @@ function toReportItem(a: ArticleInput): ReportItem {
   const mmdd = pub ? `${pad(pub.getMonth() + 1)}/${pad(pub.getDate())}` : "";
   const title = a.title_cn || a.title || "无标题";
   // IPO 是事实参考：summary 取爬虫 excerpt（已带「注册地/保荐/更新」）或标题占位
-  const summary = (a.summary || a.excerpt || title).slice(0, 90).trim() || title;
+  const source = a.summary || a.excerpt || title;
+  const summary = source.slice(0, 90).trim() || title;
   const tier = a.tier;
   return {
     url: a.url || "",
@@ -42,10 +115,17 @@ function toReportItem(a: ArticleInput): ReportItem {
     tier,
     date: mmdd,
     summary,
+    // P0-1 结构透传（此前在 side-output 边界丢失 → 渲染退回标题正则，同卡自相矛盾）
+    ...(isGdStage(a.ipoStage) ? { ipoStage: a.ipoStage } : {}),
+    ...(a.listedDate ? { listedDate: a.listedDate } : {}),
+    ...(a.officialUrl ? { officialUrl: a.officialUrl } : {}),
+    ...(a.officialLabel ? { officialLabel: a.officialLabel } : {}),
+    ...(a.gdBasis ? { gdBasis: a.gdBasis } : {}),
+    ...(a.excerpt ? { ipoMeta: buildIpoMeta(title, a.excerpt) } : {}),
     importance: 2,
     rank: 0,
     // 广东 IPO 打「粤」标（渲染徽章；口播识别用），全国 ipo 不打
-    tags: a.category === "gd-ipo" ? ["粤"] : [],
+    tags: isGdIpoArticle(a) ? ["粤"] : [],
     locale: "national",
   };
 }
@@ -57,21 +137,72 @@ function dateValue(it: ReportItem): number {
 }
 
 /**
- * 把今日 filteredArticles 中的 gd-ipo / ipo 文章直接构建进 report.sections['ipo']，
+ * IPO 阶段**进度**排序权重（P4-④）：越接近上市越靠前（与 BIZ_VALUE_RANK 的商机优先序相反）。
+ * 阶段值一律经 `gdIpoStageOf` / `inferStage` 单一判定取得，本表只做权重映射。
+ */
+const STAGE_RANK: Record<string, number> = {
+  "stage-listed": 4,
+  "stage-registered": 3,
+  "stage-reviewing": 2,
+  "stage-tutoring": 1,
+};
+
+/** ArticleInput 的阶段进度权重（结构化字段优先，回退 inferStage 单一词表）。 */
+function stageRankOfArticle(a: ArticleInput): number {
+  const stage = isGdStage(a.ipoStage)
+    ? a.ipoStage
+    : inferStage(a.title_cn || a.title || "", a.excerpt || "");
+  return STAGE_RANK[stage] ?? 0;
+}
+
+/** ReportItem 的阶段进度权重（经 gdIpoStageOf，与分栏/徽章同一判定）。 */
+function stageRankOfItem(it: ReportItem): number {
+  return STAGE_RANK[gdIpoStageOf(it)] ?? 0;
+}
+
+/**
+ * 把今日 filteredArticles 中的广东 IPO 文章直接构建进 report.sections['ipo']，
  * 与 mergeRollingIntoReport 已并入的滚动历史 IPO 条目按 url 去重合并且今日优先。
  * 返回新 report（不 mutate）。无当日 IPO 命中 → 原样返回（保留滚动并入的）。
+ *
+ * 入池口径（P1-3 修复，2026-09-10 回检）：**不再只看 category**——媒体源即时报道的
+ * 「证监会同意粤芯半导体IPO注册」这类事件走 `isGdIpoCandidate` 内容判定补位
+ * （东财/交易所状态滞后时的官方漏抓兜底）。已上市公司资本运作公告仍被排除。
+ *
+ * P4-④ 企业级去重：今日多源（如 SSE 审核 + 辅导备案）可能报同一家企业，按「归一化企业名」
+ * 归并，保留阶段最靠前（最该跟进）或最新的一条，避免一家企业重复占卡。
+ * P4-① 结构化阶段：排序优先按阶段进度（gdIpoStageOf 单一判定），其次按日期。
  */
 export function buildGdIpo(
   report: DailyReport,
   filteredArticles: ArticleInput[],
   ctx: DailyContext,
 ): DailyReport {
-  const today = filteredArticles.filter((a) => IPO_CAT.has(a.category ?? ""));
+  const today = filteredArticles.filter(isIpoArticle);
   if (today.length === 0) {
     ctx.log.info("gd-ipo", "ℹ️ 今日 filteredArticles 无 gd-ipo/ipo 命中，保留滚动并入的 IPO 板块");
     return report;
   }
-  const newItems = today.map(toReportItem).sort((x, y) => dateValue(y) - dateValue(x));
+
+  // 企业级去重：归一化企业名 → 保留阶段最前 / 最新的一条
+  const byCompany = new Map<string, ArticleInput>();
+  for (const a of today) {
+    const key = companyNameOf(a.title_cn || a.title || "") || a.url || "";
+    const prev = byCompany.get(key);
+    if (
+      !prev ||
+      stageRankOfArticle(a) > stageRankOfArticle(prev) ||
+      (stageRankOfArticle(a) === stageRankOfArticle(prev) &&
+        dateValue(toReportItem(a)) > dateValue(toReportItem(prev)))
+    ) {
+      byCompany.set(key, a);
+    }
+  }
+
+  const newItems = [...byCompany.values()]
+    .map(toReportItem)
+    .sort((x, y) => dateValue(y) - dateValue(x));
+
   const existing = report.sections?.ipo ?? [];
   const seen = new Set(existing.map((i) => i.url));
   const merged: ReportItem[] = [...existing];
@@ -81,11 +212,15 @@ export function buildGdIpo(
       if (it.url) seen.add(it.url);
     }
   }
-  merged.sort((x, y) => dateValue(y) - dateValue(x));
+  // P4-① 阶段进度优先 + 日期倒序：同一企业不同阶段（url 含 @状态）均保留且最前阶段置顶
+  merged.sort((x, y) => {
+    const rx = stageRankOfItem(x) - stageRankOfItem(y);
+    return rx !== 0 ? rx : dateValue(y) - dateValue(x);
+  });
   merged.forEach((it, i) => (it.rank = i + 1));
   ctx.log.info(
     "gd-ipo",
-    `🏦 广东IPO板块构建：${newItems.length} 条今日 + ${existing.length} 条滚动 = ${merged.length} 条（绕过相关性 LLM）`,
+    `🏦 广东IPO板块构建：${newItems.length} 条今日(去重前${today.length}) + ${existing.length} 条滚动 = ${merged.length} 条（绕过相关性 LLM）`,
   );
   return { ...report, sections: { ...report.sections, ipo: merged } };
 }
@@ -167,20 +302,27 @@ function progressOf(title: string, summary: string): string {
 
 /**
  * 确定性口播稿（免 LLM）：从 IPO 板块条目中挑广东企业（「粤」标或 isGdIpoCandidate），
- * 取前 2 条，每条带出 注册地 / 行业 / 上市地 / 最新进展，拼成口播。
+ * 取前 3 条（商机价值优先，与展示横滑卡同序同量），每条带出 注册地 / 行业 / 上市地 / 最新进展，拼成口播。
  * 口播字数上限交由 audio.ts 的 AUDIO_SPEAK_LIMITS.ipo 统一截断（含属性后放宽到 ~100 字）。
  * audio.ts 在 exec.guangdong_ipo.spoken 缺失时调用，保证 AI / SKIP_AI 两种模式口播都能覆盖。
  *
  * @param opts.skipCompanies 同一企业口播去重（2026-09-09）：命中者跳过，
  *   由 audio.ts 从事件记忆库（ipoVoicing）按「2 天窗口」算出。展示卡面不受影响。
+ * @param opts.withinDays 口播候选窗口（日历日，含今天），默认 `IPO_VOICE_WINDOW_DAYS`=2
+ *   （用户 2026-09-10：进入口播只播 2 天内）。
  */
 export function buildGdIpoSpoken(
   items: ReportItem[],
-  opts?: { skipCompanies?: Set<string> },
+  opts?: { skipCompanies?: Set<string>; withinDays?: number },
 ): string {
-  const cand = gdIpoCandidates(items, opts?.skipCompanies);
+  const cand = gdIpoCandidates(
+    items,
+    opts?.skipCompanies,
+    opts?.withinDays ?? IPO_VOICE_WINDOW_DAYS,
+    { uniqueCompany: true }, // 口播不把同一家企业念两遍（P1-4）
+  );
   if (cand.length === 0) return "";
-  const head = cand.slice(0, 2);
+  const head = cand.slice(0, 3);
   const clauses = head.map((it) => {
     const title = it.title_cn || "";
     const summary = it.summary || "";
@@ -197,29 +339,115 @@ export function buildGdIpoSpoken(
     return parts.join("，");
   });
   let s = clauses.join("；");
-  // 多于 2 家时收尾「等N家」，避免口播听起来像只有这两家
-  if (cand.length > 2) s += `；等${cand.length}家`;
+  // 多于 3 家时收尾「等N家」，避免口播听起来像只有这 3 家
+  if (cand.length > 3) s += `；等${cand.length}家`;
   return s;
 }
 
-/** 广东 IPO 候选（「粤」标或 isGdIpoCandidate），并按 skipCompanies 过滤。 */
-function gdIpoCandidates(items: ReportItem[], skip?: Set<string>): ReportItem[] {
-  return items.filter(
-    (it) =>
-      (it.tags?.includes("粤") || isGdIpoCandidate(it.title_cn || "", it.summary || "")) &&
-      !(skip && skip.has(companyNameOf(it.title_cn || ""))),
-  );
+/**
+ * IPO 阶段 → 商机价值权重（任务六·广东IPO商机优先排序）：
+ * 辅导备案/Pre-IPO（最佳商机）> 注册生效/过会 > 在审/受理 > 已上市（已兑现，商机偏后）。
+ * render 横滑卡与 audio 口播共用此序，确保「展示卡片」与「口播」完全一致。
+ */
+export const BIZ_VALUE_RANK: Record<string, number> = {
+  "stage-tutoring": 4,
+  "stage-registered": 3,
+  "stage-reviewing": 2,
+  "stage-listed": 1,
+  "": 0,
+};
+
+/** 「是否存在阶段信号」的粗筛词表：只判有无，不判归属（归属唯一由 inferStage 决定）。 */
+const STAGE_HINT_RE =
+  /注册|过会|核准|受理|问询|上会|审核|上市委|辅导|备案|招股|发行|申购|中签|挂牌|上市|pre-?ipo/i;
+
+/**
+ * ReportItem → IPO 阶段（**全链路唯一判定入口**，P0-1 收敛）。
+ *
+ * 优先级：
+ *   ① 官方结构化字段 `it.ipoStage`（爬虫按交易所审核状态直接给出，最权威）；
+ *   ② 否则回退 `inferStage` 关键词词表（与官方源同一张表，不再各维护一份）。
+ *
+ * 返回 `""` 表示「无阶段信号的 IPO 条目」——刻意**不**让 inferStage 的兜底值
+ * （stage-tutoring）参与排序，否则无阶段信息的条目会被当成「最佳商机」顶到横滑前 3。
+ * 此时分栏里归入「阶段待定」组（有数据才渲染）。
+ *
+ * 导出供渲染层（分栏 / 徽章 / 排序 / 筛选条）与测试共用。
+ */
+export function gdIpoStageOf(it: ReportItem): GdStage | "" {
+  if (isGdStage(it.ipoStage)) return it.ipoStage;
+  const title = it.title_cn || "";
+  const summary = it.summary || "";
+  if (!STAGE_HINT_RE.test(`${title} ${summary}`)) return "";
+  return inferStage(title, summary);
 }
 
 /**
- * 口播实际选中的企业名（前 2 家广东企业，经 skipCompanies 过滤后）。
+ * 广东 IPO 候选（「粤」标或 isGdIpoCandidate），按 skipCompanies 过滤，
+ * 可选按 withinDays 限定「近 N 天」（含今天）——口播/今日必读传 2，底部列表传 7。
+ * 按 商机价值优先 + 日期倒序 排序（不截断，供口播「等N家」计数）。
+ *
+ * @param opts.uniqueCompany 同企业只保留**商机价值最高**的一条（P1-4）。用于顶部 3 个
+ *   稀缺横滑位与口播（避免同一企业两个阶段占 2 张卡 / 被念两遍）；底部完整列表传 false
+ *   以保留「同企业不同阶段」的进展视角（用户既有口径）。
+ */
+export function gdIpoCandidates(
+  items: ReportItem[],
+  skip?: Set<string>,
+  withinDays?: number,
+  opts?: { uniqueCompany?: boolean },
+): ReportItem[] {
+  const allowed = withinDays && withinDays > 0 ? recentMmddSet(withinDays) : null;
+  const sorted = items
+    .filter(
+      (it) =>
+        (it.tags?.includes("粤") || isGdIpoCandidate(it.title_cn || "", it.summary || "")) &&
+        !(skip && skip.has(companyNameOf(it.title_cn || ""))) &&
+        (!allowed || allowed.has(it.date)),
+    )
+    .sort((x, y) => {
+      const bx = BIZ_VALUE_RANK[gdIpoStageOf(y)] - BIZ_VALUE_RANK[gdIpoStageOf(x)];
+      return bx !== 0 ? bx : dateValue(y) - dateValue(x);
+    });
+  if (!opts?.uniqueCompany) return sorted;
+  const seenCompany = new Set<string>();
+  return sorted.filter((it) => {
+    const key = companyNameOf(it.title_cn || "") || it.url || "";
+    if (seenCompany.has(key)) return false;
+    seenCompany.add(key);
+    return true;
+  });
+}
+
+/**
+ * 广东 IPO 展示/口播选中的 top-N（商机价值优先）；render 与 audio 共用确保一致。
+ * 默认窗口 = 2 天（用户 2026-09-10：「进入口播是 2 天」）；底部列表显式传 `IPO_LIST_WINDOW_DAYS`。
+ * @param opts.uniqueCompany 默认 true（3 个横滑位不被同企业占满，P1-4）。
+ */
+export function topGdIpo(
+  items: ReportItem[],
+  skip?: Set<string>,
+  n = 3,
+  withinDays: number = IPO_VOICE_WINDOW_DAYS,
+  opts?: { uniqueCompany?: boolean },
+): ReportItem[] {
+  return gdIpoCandidates(items, skip, withinDays, {
+    uniqueCompany: opts?.uniqueCompany ?? true,
+  }).slice(0, n);
+}
+
+/**
+ * 口播实际选中的企业名（前 3 家广东企业，经 skipCompanies 过滤后）。
  * 供 audio.ts 把「今日已口播企业」写回事件记忆库（ipoVoicing），实现跨天去重。
  */
 export function pickGdIpoCompanies(
   items: ReportItem[],
-  opts?: { skipCompanies?: Set<string> },
+  opts?: { skipCompanies?: Set<string>; withinDays?: number },
 ): string[] {
-  return gdIpoCandidates(items, opts?.skipCompanies)
-    .slice(0, 2)
-    .map((it) => companyNameOf(it.title_cn || ""));
+  return topGdIpo(
+    items,
+    opts?.skipCompanies,
+    3,
+    opts?.withinDays ?? IPO_VOICE_WINDOW_DAYS,
+  ).map((it) => companyNameOf(it.title_cn || ""));
 }

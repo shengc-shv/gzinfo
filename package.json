@@ -22,6 +22,7 @@
     "test:plan": "tsx scripts/affected-test.ts --plan",
     "open": "node scripts/open-report.mjs",
     "tts-fallback": "tsx scripts/tts-fallback.ts",
+    "tts:probe": "tsx scripts/tts-probe.ts",
     "memory:backfill": "tsx scripts/backfill-broadcast-at.ts"
   },
   "dependencies": {

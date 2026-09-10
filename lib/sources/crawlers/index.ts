@@ -9,9 +9,14 @@
  */
 import type { CrawledArticle } from "../../ingest/merge";
 import { BaseCrawler } from "./base-crawler";
-import { EastMoneyDeclareCrawler } from "./sources/eastmoney-declare";
-import { EastMoneyIPOCrawler } from "./sources/eastmoney-ipo";
+// 2026-09-09 IPO 体系重设计：东财双代理（在审/辅导）退役，改用官方三所审核动态 + csrcfd 辅导。
+// eastmoney-declare.ts / eastmoney-ipo.ts 文件保留便于恢复（同 hkex 先例），此处不再 import/实例化。
 import { CsrcCoachCrawler } from "./sources/csrcfd";
+import { SzseAuditCrawler } from "./sources/szse-audit";
+import { SseAuditCrawler } from "./sources/sse-audit";
+import { BseAuditCrawler } from "./sources/bse-audit";
+import { ListedChecker } from "./sources/listed-check";
+import { HkFilingCrawler } from "./sources/hk-filing";
 import { GzStatsCrawler } from "./sources/gz-stats";
 import { GzGovCrawler } from "./sources/gz-gov";
 import { CnfinCrawler } from "./sources/cnfin-web";
@@ -57,25 +62,51 @@ function dedupeByUrl<T extends { url?: string }>(items: T[]): T[] {
   return out;
 }
 
+/**
+ * 启用的 IPO 源清单（P1-6，2026-09-10）：抽为导出函数，供注册一致性测试遍历
+ * （`tests/ipo-source-registry.test.ts` 读每个实例的 `sourceIds`，校验
+ * 「产出的 sourceId ∈ sources.config.json 白名单 且 ∈ SOURCE_ROUTE」）。
+ * 此前测试硬编码 5 个 gd-* id，新增 hk-filing / hk-filing-gd 时完全没被覆盖到。
+ */
+export function buildIpoCrawlers(): BaseCrawler[] {
+  return [
+    new CsrcCoachCrawler(),
+    new SzseAuditCrawler(),
+    new SseAuditCrawler(),
+    new BseAuditCrawler(),
+    new HkFilingCrawler(),
+  ];
+}
+
+/** listed-check 是 IPO 候选的 post-process（非 BaseCrawler 子类），单独导出供测试遍历。 */
+export function buildListedChecker(): ListedChecker {
+  return new ListedChecker();
+}
+
 export async function fetchCrawledArticles(): Promise<CrawledBundle> {
-  // —— IPO / 新股（2026-08-30 重新激活，方案见 ai-workspace/log/2026-08-29-*-gz-sources-research.md）——
-  // 2026-08-25 曾全部停用（数据太老/方案要重设计）；08-30 数据源检视后按新方案恢复：
-  //   ✅ EastMoneyDeclareCrawler（新增，主源）：东财在审企业表 RPT_IPO_DECORGNEWEST，
-  //      REG_ADDRESS="广东" 过滤 → 覆盖【受理→问询→过会→提交注册→注册生效】整段在审生命周期
-  //      （旧源全部漏掉粤芯这类在审/注册企业），region='gd' 进「广东地区IPO」。
-  //   ✅ EastMoneyIPOCrawler（恢复）：东财辅导备案表，广东关键词过滤，region='gd' 进辅导栏。
+  // —— IPO / 新股（2026-09-09 IPO 体系重设计：东财双代理退役 → 官方源优先）——
+  // 2026-08-25 曾全部停用（数据太老/方案要重设计）；08-30 数据源检视后按新方案恢复；
+  // 2026-09-09 用户拍板整套重设计（旧体系一周 1 条、sourceId 错位被渲染静默丢弃）：
   //   ✅ CsrcCoachCrawler（2026-09-09 新增）：证监会权威辅导库 csrcfd，倒序早停增量抓（今昨窗口），
-  //      补东财「全国前100条」上限漏掉的非近期广东企业；复用 em-ipo 路由进辅导栏。
+  //      sourceId=gd-csrc-tutoring（弃用 em-ipo——config 无注册 → render 白名单丢弃），region='gd' 进「广东地区IPO」。
+  //   ⏸ 退役（文件保留便于恢复，同 hkex 先例）：EastMoneyDeclareCrawler（东财在审代理，源稀疏近7天广东仅1条）
+  //      / EastMoneyIPOCrawler（东财辅导代理，全国前100条上限漏广东）。
+  //   ✅ SzseAuditCrawler（2026-09-09 P1）：深交所审核项目动态 projectrends/query（GET），
+  //      updtdt 严格倒序 → 窗口内过滤 + 倒序早停（发 1~2 请求），sourceId=gd-szse-audit，
+  //      官方 regloc 字段判定广东（替代东财在审代理，源稀疏根因）。region='gd' 进「广东地区IPO」。
+  //   ✅ SseAuditCrawler（2026-09-10 P2a）：上交所审核项目动态 commonSoaQuery.do（sqlId=SH_XM_LB），
+  //      currStatus 1~9 分批（防漂移丢主板）+ 各状态内 updateDate 倒序早停，sourceId=gd-sse-audit，
+  //      官方 s_province 判定广东。region='gd' 进「广东地区IPO」。
+  //   ✅ BseAuditCrawler（2026-09-10 P2b）：北交所审核项目动态 infoSelectResult.do（cookie 预热），
+  //      registerAddress 前缀"广东省"判定，updateDate 倒序早停，sourceId=gd-bse-audit。region='gd'。
+  //   🔜 P3：listed-check（候选复核，不拉全量）将作为 post-process 挂接在 ipo 候选上。
   //   ⏸ 停用（文件保留）：HKEXCrawler（港股披露易，对 A 股在审无意义）/ SSEAPI·SZSEAPI
   //      （巨潮 cninfo 只能检索**已上市**证券，对在审企业无效）/ BSEAPICrawler（北交所发行期）。
-  //   ⏸ 证监会「同意注册批复」栏目（csrc.gov.cn）：官方注册生效即时源，但 Tengine WAF
-  //      （acw_tc 校验）本地 curl 302 被拦，暂不可达；注册生效动态由「东财状态更新 + 媒体源
-  //      内容判定 isGdIpoCandidate」双保险覆盖，待 WAF 绕过方案（local-acquire）再接入。
-  const ipoCrawlers: BaseCrawler[] = [
-    new EastMoneyDeclareCrawler(),
-    new EastMoneyIPOCrawler(),
-    new CsrcCoachCrawler(),
-  ];
+  //   ✅ HkFilingCrawler（2026-09-10 batch 5）：港交所披露易「处理中申请」JSON 接口
+  //      （主板 appactive_app_sehk_c / GEM appactive_app_gem_c），与官网综合索引 xlsx 同源、
+  //      结构化、零解析依赖。繁体申请人名识别广东企业 → hk-filing-gd（gd-ipo 跨境融资商机），
+  //      其余 → hk-filing（ipo 全国参考）。窗口 365d + 上限 40 条音量控制。
+  const ipoCrawlers = buildIpoCrawlers();
 
   const ipo: CrawledArticle[] = [];
   for (const crawler of ipoCrawlers) {
@@ -85,6 +116,15 @@ export async function fetchCrawledArticles(): Promise<CrawledBundle> {
     } catch (err) {
       console.error(`[${crawler.name}] 爬虫异常:`, (err as Error).message);
     }
+  }
+
+  // P3 listed-check（候选复核，不拉全量）：拉近期广东上市字典 → 发现已上市卡片 + 复核候选升级 stage-listed
+  // 单源失败由 ListedChecker 内部兜底，不连坐。
+  try {
+    const listed = await buildListedChecker().run(ipo);
+    if (listed.length) ipo.push(...(listed as CrawledArticle[]));
+  } catch (err) {
+    console.error(`[listed-check] 复核异常:`, (err as Error).message);
   }
 
   // —— 广州商机 + 财经媒体（2026-08-20 起南沙停用；nfra/pbc/cls 已本地化停用）→ 取原始 results（保留 category/subcategory/region/sourceId）——

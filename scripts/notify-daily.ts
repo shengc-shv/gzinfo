@@ -34,18 +34,29 @@ function log(msg: string) {
   console.log(`[notify] ${msg}`);
 }
 
-/** 读 store.json 的 hero_line（宽松解析，缺字段返回空，绝不抛错）。 */
-function loadHeroLine(storePath: string): string {
+/**
+ * 读 store.json 的执行摘要（宽松解析，缺字段返回空，绝不抛错）。
+ * - heroLine：今日定调（模板消息 / markdown 正文主体）；
+ * - ipoLine：当日「广东IPO」口播稿（2026-09-10 回检 P2：推送正文补一行广东IPO，
+ *   此前领导必须点开报告才知道当天有没有可跟进的 IPO 商机）。
+ */
+function loadExecSummary(storePath: string): { heroLine: string; ipoLine: string } {
+  const empty = { heroLine: "", ipoLine: "" };
   if (!fs.existsSync(storePath)) {
     log(`未找到 ${storePath}，使用默认数据`);
-    return "";
+    return empty;
   }
   try {
-    const store = JSON.parse(fs.readFileSync(storePath, "utf8")) as { executive?: { hero_line?: string } };
-    return store.executive?.hero_line ?? "";
+    const store = JSON.parse(fs.readFileSync(storePath, "utf8")) as {
+      executive?: { hero_line?: string; guangdong_ipo?: { spoken?: string } };
+    };
+    return {
+      heroLine: store.executive?.hero_line ?? "",
+      ipoLine: store.executive?.guangdong_ipo?.spoken ?? "",
+    };
   } catch (e) {
     log(`store.json 解析失败，使用默认数据: ${e instanceof Error ? e.message : String(e)}`);
-    return "";
+    return empty;
   }
 }
 
@@ -88,10 +99,11 @@ async function pushWecom(cfg: {
   corpSecret: string;
   userIds: string[];
   heroLine: string;
+  ipoLine?: string;
   dateStr: string;
   reportUrl: string;
 }): Promise<boolean> {
-  const markdown = buildWecomMarkdown(cfg.heroLine, cfg.dateStr, cfg.reportUrl);
+  const markdown = buildWecomMarkdown(cfg.heroLine, cfg.dateStr, cfg.reportUrl, cfg.ipoLine);
   const result = await pushWecomDaily(
     { corpId: cfg.corpId, agentId: cfg.agentId, corpSecret: cfg.corpSecret, userIds: cfg.userIds },
     markdown,
@@ -117,6 +129,7 @@ async function pushWecom(cfg: {
 async function pushWecomViaWebhook(cfg: {
   webhookUrl: string;
   heroLine: string;
+  ipoLine?: string;
   dateStr: string;
   reportUrl: string;
 }): Promise<boolean> {
@@ -126,8 +139,8 @@ async function pushWecomViaWebhook(cfg: {
   const msgtype = (process.env.WECOM_WEBHOOK_MSGTYPE || "text").toLowerCase() === "markdown" ? "markdown" : "text";
   const content =
     msgtype === "markdown"
-      ? buildWecomMarkdown(cfg.heroLine, cfg.dateStr, cfg.reportUrl)
-      : buildWecomText(cfg.heroLine, cfg.dateStr, cfg.reportUrl);
+      ? buildWecomMarkdown(cfg.heroLine, cfg.dateStr, cfg.reportUrl, cfg.ipoLine)
+      : buildWecomText(cfg.heroLine, cfg.dateStr, cfg.reportUrl, cfg.ipoLine);
   const result = await pushWecomWebhook(cfg.webhookUrl, content, cfg.reportUrl, undefined, msgtype);
   log(`消息格式: ${msgtype}`);
   if (result.error) {
@@ -152,9 +165,12 @@ async function main(): Promise<void> {
     day: "2-digit",
   }).format(new Date());
 
-  const heroLine = loadHeroLine(path.join("history", dateStr, "store.json"));
+  const { heroLine, ipoLine } = loadExecSummary(path.join("history", dateStr, "store.json"));
   if (heroLine) {
     log(`读取定调: ${heroLine.slice(0, 40)}${heroLine.length > 40 ? "…" : ""}`);
+  }
+  if (ipoLine) {
+    log(`读取广东IPO: ${ipoLine.slice(0, 40)}${ipoLine.length > 40 ? "…" : ""}`);
   }
 
   const base = (process.env.REPORT_BASE_URL || "https://shengc-shv.github.io/gzinfo").replace(/\/+$/, "");
@@ -166,7 +182,7 @@ async function main(): Promise<void> {
     // 群机器人 Webhook：自带 key 鉴权，不受企业可信 IP 限制，从 CI 直发（推荐，绕过 errcode 60020）
     const webhookUrl = process.env.WECOM_WEBHOOK ?? "";
     if (webhookUrl) {
-      const ok = await pushWecomViaWebhook({ webhookUrl, heroLine, dateStr, reportUrl });
+      const ok = await pushWecomViaWebhook({ webhookUrl, heroLine, ipoLine, dateStr, reportUrl });
       if (!ok) process.exitCode = 1;
       log(`报告链接: ${reportUrl}`);
       return;
@@ -181,7 +197,7 @@ async function main(): Promise<void> {
       process.exitCode = 1;
       return;
     }
-    const ok = await pushWecom({ corpId, agentId, corpSecret, userIds, heroLine, dateStr, reportUrl });
+    const ok = await pushWecom({ corpId, agentId, corpSecret, userIds, heroLine, ipoLine, dateStr, reportUrl });
     if (!ok) process.exitCode = 1;
     log(`报告链接: ${reportUrl}`);
     return;

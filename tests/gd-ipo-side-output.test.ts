@@ -15,16 +15,35 @@
  */
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { buildGdIpo, buildGdIpoSpoken } from "../lib/pipeline/side-outputs/gd-ipo";
+import {
+  buildGdIpo,
+  buildGdIpoSpoken,
+  topGdIpo,
+  gdIpoStageOf,
+  companyNameOf,
+} from "../lib/pipeline/side-outputs/gd-ipo";
 import { detectGdIpo } from "../lib/audio/audio";
 import { isGdIpoCandidate } from "../lib/output/render/cards";
-import type { ArticleInput, DailyReport } from "../lib/types";
+import { renderGdIpoStrip } from "../lib/output/render";
+import type { ArticleInput, DailyReport, ReportItem } from "../lib/types";
 import type { DailyContext } from "../lib/pipeline/context";
 
 const ctx = {
   date: "2026-08-30",
   log: { info: () => {}, warn: () => {}, error: () => {} },
 } as unknown as DailyContext;
+
+/**
+ * 动态 MM/DD：口播/今日必读有「2 天窗」（IPO_VOICE_WINDOW_DAYS=2）、底部列表 7 天窗，
+ * 故测试卡面日期必须相对今天生成（硬编码日期会随真实日期漂移而失败）。
+ */
+function mmdd(offset: number): string {
+  const d = new Date();
+  d.setDate(d.getDate() + offset);
+  return `${String(d.getMonth() + 1).padStart(2, "0")}/${String(d.getDate()).padStart(2, "0")}`;
+}
+const TODAY_MMDD = mmdd(0);
+const YESTERDAY_MMDD = mmdd(-1);
 
 const emptyReport = (): DailyReport =>
   ({
@@ -130,7 +149,7 @@ test("detectGdIpo / buildGdIpoSpoken：靠「粤」标识别，不被 IPO_PROGRE
       title_cn: "尚睿科技：IPO已受理（拟北交所）",
       source: "东财在审表",
       source_type: "official" as const,
-      date: "08/28",
+      date: YESTERDAY_MMDD,
       summary: "注册地：广东｜更新：2026-08-28",
       importance: 2 as const,
       rank: 1,
@@ -164,13 +183,13 @@ test("IPO_PROGRESS_RE：覆盖 IPO受理 / IPO问询 两种在审高频状态", 
   );
 });
 
-test("buildGdIpoSpoken：带出属性 + 超过 2 家收尾「等N家」", () => {
+test("buildGdIpoSpoken：带出属性 + 超过 3 家收尾「等N家」", () => {
   const items = ["A", "B", "C", "D"].map((n, i) => ({
     url: `u${i}`,
     title_cn: `${n}科技：IPO已受理（拟北交所）`,
     source: "",
     source_type: "official" as const,
-    date: "08/28",
+    date: YESTERDAY_MMDD,
     summary: "注册地：广东",
     importance: 2 as const,
     rank: i + 1,
@@ -181,7 +200,94 @@ test("buildGdIpoSpoken：带出属性 + 超过 2 家收尾「等N家」", () => 
   assert.ok(spoken.includes("注册地广东"), "应带出注册地");
   assert.ok(spoken.includes("拟在北交所IPO"), "应带出上市地（北交）");
   assert.ok(spoken.includes("科技行业"), "应带出行业（公司名推断）");
-  assert.ok(spoken.endsWith("等4家"), "多于2家收尾「等N家」");
-  // 上限交由 audio.ts 的 AUDIO_SPEAK_LIMITS.ipo（100）统一截断，此处只验证不超长失控
-  assert.ok(spoken.length <= 100);
+  assert.ok(spoken.endsWith("等4家"), "多于3家收尾「等N家」");
+  // 3 家公司带属性口播约 102 字；audio.ts 的 AUDIO_SPEAK_LIMITS.ipo（150）统一截断，此处只验证不超长失控
+  assert.ok(spoken.length <= 150);
+});
+
+// —— 任务六：广东 IPO 横滑卡（今日必读 / 股市播报）+ 商机价值优先排序 ——
+
+/** 构造一条带「粤」标的广东 IPO ReportItem（标题自带阶段词，供 gdIpoStageOf 反推）。 */
+const mkGdIpo = (name: string, title: string, date: string): ReportItem => ({
+  url: `u-${name}`,
+  title_cn: `${name}：${title}`,
+  source: "东财在审表",
+  source_type: "official",
+  date,
+  summary: "注册地：广东",
+  importance: 2,
+  rank: 0,
+  tags: ["粤"],
+  locale: "national",
+});
+
+test("gdIpoStageOf：按标题/摘要反推阶段 key", () => {
+  assert.equal(gdIpoStageOf({ title_cn: "X：IPO注册生效（拟创业板）", summary: "" } as ReportItem), "stage-registered");
+  assert.equal(gdIpoStageOf({ title_cn: "X：IPO已受理（拟北交所）", summary: "" } as ReportItem), "stage-reviewing");
+  assert.equal(gdIpoStageOf({ title_cn: "X：IPO辅导备案", summary: "" } as ReportItem), "stage-tutoring");
+  assert.equal(gdIpoStageOf({ title_cn: "X上市", summary: "" } as ReportItem), "stage-listed");
+  assert.equal(gdIpoStageOf({ title_cn: "无关标题", summary: "" } as ReportItem), "");
+});
+
+test("topGdIpo：商机价值优先排序且最多 3 条（与口播/展示卡同序同量）", () => {
+  const items = [
+    mkGdIpo("粤芯", "IPO注册生效（拟科创板）", YESTERDAY_MMDD), // registered → #2
+    mkGdIpo("友宝", "IPO辅导备案", YESTERDAY_MMDD), // tutoring → #1（最佳商机）
+    mkGdIpo("尚睿", "IPO已受理（拟北交所）", YESTERDAY_MMDD), // reviewing
+    mkGdIpo("飞驰", "IPO上市", YESTERDAY_MMDD), // listed → 被 3 条上限挤出
+    mkGdIpo("广汽", "IPO问询中", TODAY_MMDD), // reviewing（日期更近，排在尚睿前）
+  ];
+  const top = topGdIpo(items, undefined, 3);
+  assert.equal(top.length, 3, "最多 3 条");
+  assert.equal(companyNameOf(top[0].title_cn || ""), "友宝", "辅导备案（最佳商机）排第一");
+  assert.equal(companyNameOf(top[1].title_cn || ""), "粤芯", "注册生效排第二");
+  assert.equal(companyNameOf(top[2].title_cn || ""), "广汽", "在审按日期倒序取更近的广汽");
+});
+
+test("topGdIpo 窗口：默认 2 天（口播）→ 3 天前被排除；显式 7 天（列表）→ 保留", () => {
+  const items = [
+    mkGdIpo("新企业", "IPO已受理（拟北交所）", TODAY_MMDD),
+    mkGdIpo("三天前", "IPO辅导备案", mmdd(-3)),
+  ];
+  const voice = topGdIpo(items, undefined, 3);
+  assert.deepEqual(voice.map((it) => companyNameOf(it.title_cn || "")), ["新企业"], "口播 2 天窗排除 3 天前");
+  const list = topGdIpo(items, undefined, 3, 7);
+  assert.deepEqual(
+    list.map((it) => companyNameOf(it.title_cn || "")),
+    ["三天前", "新企业"],
+    "列表 7 天窗保留 3 天前（辅导备案商机价值更高）",
+  );
+});
+
+test("renderGdIpoStrip：产出横滑卡 + 商机线索文案 + 企业名（must 上下文）", () => {
+  const items = [
+    mkGdIpo("友宝", "IPO辅导备案", YESTERDAY_MMDD),
+    mkGdIpo("粤芯", "IPO注册生效（拟科创板）", YESTERDAY_MMDD),
+    mkGdIpo("尚睿", "IPO已受理（拟北交所）", YESTERDAY_MMDD),
+  ];
+  const html = renderGdIpoStrip(items, { section: "must" });
+  assert.ok(html.includes("ipo-scroller"), "应有横滑容器");
+  assert.ok(html.includes("ipo-card"), "应有卡片");
+  assert.ok(html.includes("友宝") && html.includes("粤芯"), "应含企业名");
+  assert.ok(html.includes("辅导备案"), "应含阶段徽标");
+  assert.ok(html.includes("最佳商机"), "应含商机线索文案（GD_IPO_STAGE_BIZ）");
+  assert.ok(html.includes("exec-ipo--must"), "must 上下文标记");
+});
+
+test("renderGdIpoStrip：无广东 IPO（无「粤」标）→ 空串，不渲染", () => {
+  const items: ReportItem[] = [
+    {
+      url: "u",
+      title_cn: "某外省公司IPO上市",
+      source: "",
+      source_type: "media",
+      date: "08/01",
+      summary: "注册地：江苏",
+      importance: 2,
+      rank: 0,
+      tags: [],
+      locale: "national",
+    },
+  ];
+  assert.equal(renderGdIpoStrip(items, { section: "must" }), "", "无粤标 → 不渲染");
 });

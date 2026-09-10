@@ -341,6 +341,58 @@ export const THEME_CSS = `
     .risk-hint-inline { display: none; }
   }
 
+  /* —— 广东 IPO 横滑卡（任务六）：与「今日必读/商机洞察/风险预警」同款 —— */
+  .exec-ipo { position: relative; margin-top: 0.5rem; }
+  .ipo-hint-inline {
+    display: inline-block; margin-left: 0.45rem; vertical-align: middle;
+    font-size: 0.68rem; font-weight: 500; color: var(--c-gdipo);
+    white-space: nowrap;
+  }
+  .ipo-hint-inline .hint-arrow { display: inline-block; animation: nudge 1.1s ease-in-out infinite; }
+  .ipo-scroller {
+    list-style: none; margin: 0; padding: 0 0.75rem 0.5rem 0;
+    display: flex; flex-direction: row; gap: 0.5rem;
+    overflow-x: auto; -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: thin; scrollbar-color: var(--rule) transparent;
+  }
+  .ipo-scroller::-webkit-scrollbar { height: 5px; }
+  .ipo-scroller::-webkit-scrollbar-thumb { background: var(--rule); border-radius: 4px; }
+  .ipo-card {
+    flex: 0 0 auto; width: 82vw; max-width: 320px;
+    box-sizing: border-box;
+    border: 1px solid color-mix(in srgb, var(--c-gdipo) 30%, var(--rule));
+    border-left: 3px solid var(--c-gdipo);
+    border-radius: 12px; padding: 0.6rem 0.75rem;
+    background: color-mix(in srgb, var(--c-gdipo) 4%, var(--card));
+    box-shadow: var(--shadow-sm);
+  }
+  .ipo-card-head { display: flex; align-items: center; gap: 0.4rem; margin-bottom: 0.3rem; }
+  .ipo-name { font-size: 0.86rem; font-weight: 700; color: var(--fg); line-height: 1.3; }
+  .ipo-stage {
+    flex: none; font-size: 0.64rem; font-weight: 600; padding: 1px 6px; border-radius: 3px;
+    color: #fff; background: var(--c-gdipo);
+  }
+  .ipo-stage--stage-listed { background: #0ea5e9; }
+  .ipo-stage--stage-registered { background: #16a34a; }
+  .ipo-stage--stage-reviewing { background: #d97706; }
+  .ipo-stage--stage-tutoring { background: var(--c-gdipo); }
+  .ipo-biz { margin: 0.2rem 0 0.35rem; font-size: 0.74rem; color: var(--fg-soft); line-height: 1.5; }
+  .ipo-foot { display: flex; align-items: center; justify-content: space-between; gap: 0.4rem; font-size: 0.68rem; color: var(--muted); }
+  .ipo-src { color: var(--c-gdipo); text-decoration: none; }
+  .ipo-src:hover { text-decoration: underline; }
+  .exec-ipo::after {
+    content: ""; position: absolute; top: 1.7rem; right: 0; bottom: 0.5rem;
+    width: 3.25rem; pointer-events: none; z-index: 3;
+    background: linear-gradient(to left, color-mix(in srgb, var(--c-gdipo) 16%, var(--bg)) 0%, color-mix(in srgb, var(--c-gdipo) 4%, transparent) 55%, transparent 100%);
+  }
+  @media (min-width: 720px) {
+    .ipo-scroller { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); overflow: visible; padding-bottom: 0; padding-right: 0; scroll-snap-type: none; }
+    .ipo-card { width: auto; max-width: none; }
+    .exec-ipo::after { display: none; }
+    .ipo-hint-inline { display: none; }
+  }
+
   /* —— 昨日股市复盘三卡（参考区）：横向滑动卡片，与「今日必读」同款 —— */
   .stock-recap { margin-top: 0.5rem; }
   .stock-must { position: relative; margin-bottom: 0.3rem; }
@@ -1165,6 +1217,34 @@ export const THEME_CSS = `
   .filter-reset { margin-left: auto; border: 1px solid var(--rule); background: transparent; color: var(--fg-soft, var(--muted)); border-radius: 999px; padding: 0.28rem 0.8rem; font-size: 0.84rem; cursor: pointer; font-family: inherit; }
   .filter-reset:hover { border-color: var(--accent-cmb); color: var(--accent-cmb); }
   .brief.filtered-out { display: none !important; }
+  /* 广东IPO 四阶段分栏（2026-09-10 用户决策③）：组头带阶段色点 + 家数，空组整组隐藏 */
+  .ipo-group { margin: 0 0 0.9rem; }
+  .ipo-group.filtered-out { display: none !important; }
+  .ipo-group-head {
+    display: flex; align-items: center; gap: 0.4rem;
+    margin: 0 0 0.45rem; padding-bottom: 0.25rem;
+    font-size: 0.86rem; font-weight: 700; color: var(--fg);
+    border-bottom: 1px dashed var(--rule);
+  }
+  .ipo-group-dot { width: 8px; height: 8px; border-radius: 50%; flex: none; display: inline-block; }
+  .ipo-group-dot.ipo-stage--none { background: var(--muted); }
+  .ipo-group-n {
+    font-size: 0.72rem; font-weight: 600; color: var(--muted);
+    background: var(--bg-elevated, var(--card)); border: 1px solid var(--rule);
+    border-radius: 999px; padding: 0 0.4rem; line-height: 1.5;
+  }
+  /* 同企业阶段进展条（P2-6）：09/03 在审 → 09/07 注册发行 */
+  .ipo-progress {
+    display: flex; flex-wrap: wrap; align-items: center; gap: 0.3rem;
+    margin: 0.4rem 0 0; font-size: 0.76rem; color: var(--fg-soft);
+  }
+  .ipo-progress-label {
+    flex: none; font-weight: 700; color: var(--muted);
+    border: 1px solid var(--rule); border-radius: 999px; padding: 0 0.4rem; line-height: 1.5;
+  }
+  .ipo-progress-step { white-space: nowrap; }
+  .ipo-progress-step--cur { font-weight: 700; color: var(--fg); }
+  .ipo-progress-arrow { color: var(--muted); }
 
   /* 市场总览 bullet（#17/#18/#19） */
   .market-card .bm { margin-bottom: 0.35rem; }

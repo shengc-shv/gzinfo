@@ -988,5 +988,110 @@
       "zh"
     ],
     "notes": "2026-08-30 重新激活 gd-ipo：东财在审企业表 RPT_IPO_DECORGNEWEST（REG_ADDRESS=广东 660家）爬虫产物路由源；覆盖受理→问询→过会→提交注册→注册生效整段在审生命周期（旧源漏网）。"
+  },
+  {
+    "id": "gd-csrc-tutoring",
+    "role": "crawled-input",
+    "tier": "T1",
+    "name": "证监会辅导备案(官方csrcfd)",
+    "type": "api",
+    "url": "file://./data/crawled-articles.json",
+    "category": "gd-ipo",
+    "subcategory": "ipo-tutoring",
+    "enabled": false,
+    "locales": [
+      "zh"
+    ],
+    "note": "官方权威辅导库 csrcfd 爬虫产物注册源（2026-09-09 IPO 体系重设计：替代东财辅导代理 em-ipo，修复 render 白名单静默丢弃）。category/subcategory 仅采集元数据，渲染归属经内容判定。"
+  },
+  {
+    "id": "gd-sse-audit",
+    "role": "crawled-input",
+    "tier": "T1",
+    "name": "上交所审核项目动态(官方)",
+    "type": "api",
+    "url": "file://./data/crawled-articles.json",
+    "category": "gd-ipo",
+    "subcategory": "ipo-audit",
+    "enabled": false,
+    "locales": [
+      "zh"
+    ],
+    "note": "上交所 IPO 审核项目动态（commonSoaQuery.do，currStatus 1~9 分批）官方源注册（IPO 体系重设计）。category/subcategory 仅采集元数据。"
+  },
+  {
+    "id": "gd-szse-audit",
+    "role": "crawled-input",
+    "tier": "T1",
+    "name": "深交所审核项目动态(官方)",
+    "type": "api",
+    "url": "file://./data/crawled-articles.json",
+    "category": "gd-ipo",
+    "subcategory": "ipo-audit",
+    "enabled": false,
+    "locales": [
+      "zh"
+    ],
+    "note": "深交所 IPO 审核项目动态（projectrends/query，GET + 倒序早停）官方源注册（IPO 体系重设计）。category/subcategory 仅采集元数据。"
+  },
+  {
+    "id": "gd-bse-audit",
+    "role": "crawled-input",
+    "tier": "T1",
+    "name": "北交所审核项目动态(官方)",
+    "type": "api",
+    "url": "file://./data/crawled-articles.json",
+    "category": "gd-ipo",
+    "subcategory": "ipo-audit",
+    "enabled": false,
+    "locales": [
+      "zh"
+    ],
+    "note": "北交所 IPO 审核项目动态（projectNewsController，C3VK cookie）官方源注册（IPO 体系重设计）。category/subcategory 仅采集元数据。"
+  },
+  {
+    "id": "gd-listed-check",
+    "role": "crawled-input",
+    "tier": "T1.5",
+    "name": "上市日期复核(候选复核)",
+    "type": "api",
+    "url": "file://./data/crawled-articles.json",
+    "category": "gd-ipo",
+    "subcategory": "stage-listed",
+    "enabled": false,
+    "locales": [
+      "zh"
+    ],
+    "note": "上市日期候选复核产出（B1~B3 点查 LIST_DATE，注册生效候选→确认已上市，归 stage-listed）。不拉全量。"
+  },
+  {
+    "id": "hk-filing",
+    "role": "crawled-input",
+    "tier": "T1",
+    "name": "港交所新股递表(主板/GEM·全国参考)",
+    "type": "api",
+    "url": "file://./data/crawled-articles.json",
+    "category": "ipo",
+    "subcategory": "hkex",
+    "enabled": false,
+    "locales": [
+      "zh"
+    ],
+    "note": "港交所披露易「处理中申请」JSON 接口（主板 appactive_app_sehk_c / GEM appactive_app_gem_c），与官网综合索引 xlsx 同源。全国参考递表，归 ipo/hkex。"
+  },
+  {
+    "id": "hk-filing-gd",
+    "role": "crawled-input",
+    "tier": "T1",
+    "name": "港交所新股递表(广东企业赴港)",
+    "type": "api",
+    "url": "file://./data/crawled-articles.json",
+    "category": "gd-ipo",
+    "subcategory": "ipo-hk",
+    "enabled": false,
+    "locales": [
+      "zh"
+    ],
+    "note": "同上接口，按繁体申请人名识别广东企业（廣東/深圳/廣州/東莞等），归 gd-ipo 作为跨境融资商机。category/subcategory 仅采集元数据，渲染归属经内容判定。"
   }
 ]

@@ -40,3 +40,6 @@ ai-workspace/
 
 # WorkBuddy 本地协作记忆（不入公开仓库）
 .workbuddy/
+
+# TTS 发音试听包产物（本地试听用，不提交）
+/outputs/tts-probe/

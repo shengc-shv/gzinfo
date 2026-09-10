@@ -31,6 +31,9 @@ import path from "node:path";
 import os from "node:os";
 import { spawnSync } from "node:child_process";
 import crypto from "node:crypto";
+// 2026-09-10：口播发音规范化（AUM 逐字母读）。改写放在「送 TTS 之前」的边界上，
+// 一次覆盖全稿（hero/must_read/insights/risk/IPO/股市），与上游文本模板解耦。
+import { isPronounceMode, isSsmlMode, toSpeechText, type PronounceMode } from "./pronounce";
 
 // ---------- 腾讯云 ----------
 const TCE_SECRET_ID = process.env.TENCENTCLOUD_SECRET_ID || "";
@@ -43,6 +46,33 @@ const TCE_VERSION = "2019-08-23";
 const VOICE_TYPE = parseInt(process.env.TTS_VOICE_TYPE || "501001", 10);
 const SPEED = parseInt(process.env.TTS_SPEED || "1", 10);
 const CHUNK_LIMIT = 120; // 腾讯单次上限 150 个汉字，按 120 字分片留余量
+
+/**
+ * 口播发音改写策略（`TTS_PRONOUNCE` 环境变量）。
+ *
+ * **默认 `ssml-say-as`（2026-09-10 用户试听定案）**：走腾讯云官方 SSML 的
+ * `<say-as interpret-as="characters">`，把 `AUM` 逐字符读成「A U M」。
+ *
+ * 定案过程：上游原先把 AUM 拆成「A U M」（空格）送过去，腾讯云仍连读（09-10 口播稿实证）；
+ * 遂用 `npm run tts:probe` 合成 8 种候选逐一试听，用户选定第 6 种（即本项）。
+ * SSML 分片若合成失败，`synthTencent` 会自动退回 `translit`（汉字音译）重试并 `::warning::`，
+ * 不会整篇掉到 Piper 音色。
+ */
+const PRONOUNCE_MODE_ENV = process.env.TTS_PRONOUNCE ?? "";
+
+/** 默认发音策略（试听定案）：SSML 逐字符读。 */
+export const DEFAULT_PRONOUNCE_MODE: PronounceMode = "ssml-say-as";
+
+/** 解析生效的发音策略；`TTS_PRONOUNCE` 未设或非法时用默认策略。 */
+export function resolvePronounceMode(): PronounceMode {
+  if (isPronounceMode(PRONOUNCE_MODE_ENV)) return PRONOUNCE_MODE_ENV;
+  if (PRONOUNCE_MODE_ENV) {
+    console.warn(
+      `⚠️ TTS_PRONOUNCE=${PRONOUNCE_MODE_ENV} 不是合法策略，按默认 ${DEFAULT_PRONOUNCE_MODE} 处理`,
+    );
+  }
+  return DEFAULT_PRONOUNCE_MODE;
+}
 
 // ---------- Piper 兜底 ----------
 const VOICE = "zh_CN-huayan-medium";
@@ -99,7 +129,7 @@ function splitText(t: string, limit: number): string[] {
 }
 
 /** ffmpeg concat 拼接多个 mp3 分片：重编码拼接，避免 -codec copy 的位储备/帧对齐边界噪声。 */
-function mergeMp3(parts: Buffer[], outPath: string): void {
+export function mergeMp3(parts: Buffer[], outPath: string): void {
   if (parts.length === 1) {
     fs.writeFileSync(outPath, parts[0]);
     return;
@@ -171,26 +201,53 @@ async function tencentTextToVoice(payloadJson: string): Promise<Buffer> {
   return Buffer.from(data.Response.Audio, "base64");
 }
 
-/** 腾讯云合成整篇口播稿（分片 + 拼接）。 */
-async function synthTencent(text: string, outPath: string, date: string): Promise<void> {
-  const chunks = splitText(text, CHUNK_LIMIT);
-  console.log(`ℹ️ 腾讯云 TTS：共 ${text.length} 字，分 ${chunks.length} 片合成`);
+/** 单次腾讯云合成一片（已含发音改写）。抽出来便于「SSML 失败 → 退回纯文本」重试。 */
+async function tencentSynthChunk(spoken: string, date: string, index: number): Promise<Buffer> {
+  const payload = JSON.stringify({
+    // Text 直接传原文（UTF-8），不要 base64（2026-08-24 官方文档核实 + 实测）
+    Text: spoken,
+    SessionId: `${date}-${index}-${crypto.randomBytes(4).toString("hex")}`,
+    VoiceType: VOICE_TYPE,
+    Codec: "mp3",
+    SampleRate: 16000,
+    Speed: SPEED,
+  });
+  const audio = await tencentTextToVoice(payload);
+  if (audio.length < 1000) {
+    throw new Error(`腾讯第 ${index} 片返回异常偏小：${audio.length} bytes`);
+  }
+  return audio;
+}
+
+/** 腾讯云合成整篇口播稿（分片 + 逐片发音改写 + 拼接）。导出供试听脚本 scripts/tts-probe.ts 复用。 */
+export async function synthTencent(text: string, outPath: string, date: string): Promise<void> {
+  const mode = resolvePronounceMode();
+  // SSML 标签本身虽不计入 150 汉字上限，但保守压低分片粒度，避免超限报错
+  const limit = isSsmlMode(mode) ? Math.min(CHUNK_LIMIT, 110) : CHUNK_LIMIT;
+  const chunks = splitText(text, limit);
+  console.log(
+    `ℹ️ 腾讯云 TTS：共 ${text.length} 字，分 ${chunks.length} 片合成（发音策略 ${mode}）`,
+  );
   const parts: Buffer[] = [];
+  let ssmlFallback = 0;
   for (let i = 0; i < chunks.length; i++) {
-    const payload = JSON.stringify({
-      // Text 直接传原文（UTF-8），不要 base64（2026-08-24 官方文档核实 + 实测）
-      Text: chunks[i],
-      SessionId: `${date}-${i}-${crypto.randomBytes(4).toString("hex")}`,
-      VoiceType: VOICE_TYPE,
-      Codec: "mp3",
-      SampleRate: 16000,
-      Speed: SPEED,
-    });
-    const audio = await tencentTextToVoice(payload);
-    if (audio.length < 1000) {
-      throw new Error(`腾讯第 ${i} 片返回异常偏小：${audio.length} bytes`);
+    // 关键：**先分片、再逐片改写**，保证 SSML 标签不会被分片截断
+    const spoken = toSpeechText(chunks[i], mode);
+    try {
+      parts.push(await tencentSynthChunk(spoken, date, i));
+    } catch (e) {
+      const msg = e instanceof Error ? e.message : String(e);
+      if (!isSsmlMode(mode)) throw e;
+      // SSML 分片失败 → 退回汉字音译纯文本重试（宁可换种读法，也不能整篇降级到 Piper 音色）
+      console.warn(`⚠️ 腾讯第 ${i} 片 SSML 合成失败，退回汉字音译重试：${msg}`);
+      parts.push(await tencentSynthChunk(toSpeechText(chunks[i], "translit"), date, i));
+      ssmlFallback++;
     }
-    parts.push(audio);
+  }
+  if (ssmlFallback > 0) {
+    console.warn(
+      `::warning::TTS 发音 SSML 有 ${ssmlFallback}/${chunks.length} 片退回汉字音译，请检查腾讯云 SSML 支持情况`,
+    );
   }
   mergeMp3(parts, outPath);
 }

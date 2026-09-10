@@ -38,9 +38,9 @@ export type GdSub =
   | "overseas";
 
 export type GdClassifyResult =
-  | { action: "keep"; sub: GdSub }
-  | { action: "finance" } // 广东公司但非IPO类 → 财经要点
-  | { action: "drop" }; // 非广东 → 丢弃
+  | { action: "keep"; sub: GdSub; basis?: string } // 广东 IPO 候选 → 对应子标签（含判定依据）
+  | { action: "finance"; basis?: string } // 广东公司但非IPO类 → 财经要点
+  | { action: "drop"; basis?: string }; // 非广东 → 丢弃
 
 // 交易所代码前缀
 function exchangeOfCode(code: string): "szse" | "sse" | "bse" | null {
@@ -73,19 +73,22 @@ export function parseStockCode(text: string): string | null {
 function isGuangdong(
   a: ClassifyArticle,
   registry?: GdIssuerRegistry,
-): boolean {
+): { gd: boolean; basis?: string } {
   // 1) 爬虫直接给的结构化省份
   if (a.registeredProvince) {
-    if (/^广东|^GD$|guangdong/i.test(a.registeredProvince)) return true;
-    return false; // 明确给了其他省份 → 非广东
+    if (/^广东|^GD$|guangdong/i.test(a.registeredProvince))
+      return { gd: true, basis: `regloc=${a.registeredProvince}` };
+    return { gd: false }; // 明确给了其他省份 → 非广东
   }
   // 2) 股票代码查注册表（结构化）
   const code = a.stockCode ?? parseStockCode(`${a.title} ${a.excerpt || ""}`);
-  if (code && registry?.byCode?.[code]) return true;
+  if (code && registry?.byCode?.[code])
+    return { gd: true, basis: `代码命中注册表(${code})` };
   // 3) 关键词兜底（非首选；2026-08-23 移除 sourceId gd- 前缀判定——
   //    前缀与实际覆盖范围脱节曾导致北交所全国公告被误判广东）
   const text = `${a.title} ${a.excerpt || ""} ${a.url || ""}`;
-  return GD_REGION_KEYWORDS.test(text);
+  if (GD_REGION_KEYWORDS.test(text)) return { gd: true, basis: "地名命中" };
+  return { gd: false };
 }
 
 export function classifyGdIpo(
@@ -93,25 +96,26 @@ export function classifyGdIpo(
   opts?: { gdIssuers?: GdIssuerRegistry },
 ): GdClassifyResult {
   const text = `${a.title} ${a.excerpt || ""} ${a.url || ""}`;
-  const isGd = isGuangdong(a, opts?.gdIssuers);
-  if (!isGd) return { action: "drop" };
+  const gdRes = isGuangdong(a, opts?.gdIssuers);
+  if (!gdRes.gd) return { action: "drop", basis: gdRes.basis };
 
   const isTutoring = TUTORING_RE.test(text) && !FINANCE_ONLY_RE.test(text);
   const isExchangeEvent = EXCHANGE_EVENT_RE.test(text);
   const isFinanceOnly =
     FINANCE_ONLY_RE.test(text) && !isTutoring && !isExchangeEvent;
 
+  const basis = gdRes.basis;
   // 境外源：广东企业出海上市
   if (OVERSEAS_SOURCE_RE.test(a.sourceId)) {
-    if (isTutoring) return { action: "keep", sub: "ipo-tutoring" };
-    if (isFinanceOnly) return { action: "finance" };
-    return { action: "keep", sub: "overseas" };
+    if (isTutoring) return { action: "keep", sub: "ipo-tutoring", basis };
+    if (isFinanceOnly) return { action: "finance", basis };
+    return { action: "keep", sub: "overseas", basis };
   }
   // 港交所源
   if (HK_SOURCE_RE.test(a.sourceId)) {
-    if (isTutoring) return { action: "keep", sub: "ipo-tutoring" };
-    if (isFinanceOnly) return { action: "finance" };
-    return { action: "keep", sub: "hkex" };
+    if (isTutoring) return { action: "keep", sub: "ipo-tutoring", basis };
+    if (isFinanceOnly) return { action: "finance", basis };
+    return { action: "keep", sub: "hkex", basis };
   }
 
   // A 股：按股票代码定市场
@@ -119,17 +123,17 @@ export function classifyGdIpo(
   if (code) {
     const ex = exchangeOfCode(code);
     if (ex) {
-      if (isTutoring) return { action: "keep", sub: "ipo-tutoring" };
-      if (isFinanceOnly) return { action: "finance" };
-      return { action: "keep", sub: ex };
+      if (isTutoring) return { action: "keep", sub: "ipo-tutoring", basis };
+      if (isFinanceOnly) return { action: "finance", basis };
+      return { action: "keep", sub: ex, basis };
     }
   }
 
   // 无代码：预备上市类 → 辅导；其余非IPO → 财经
-  if (isTutoring) return { action: "keep", sub: "ipo-tutoring" };
-  if (isFinanceOnly) return { action: "finance" };
+  if (isTutoring) return { action: "keep", sub: "ipo-tutoring", basis };
+  if (isFinanceOnly) return { action: "finance", basis };
   // 既无代码又非明确类型：保守归财经（避免把无关公告塞进IPO）
-  return { action: "finance" };
+  return { action: "finance", basis };
 }
 
 /**
@@ -151,15 +155,43 @@ export type GdStage =
   | "stage-reviewing"
   | "stage-tutoring";
 
+/**
+ * 合法阶段集合（**唯一**定义处）。
+ *
+ * P0-1（2026-09-10 回检）：此前 render.ts 与 gd-ipo.ts 各自维护一份阶段词表/集合，
+ * 官方源给出的结构化阶段又在 side-output 边界丢失 → 同一张卡的分栏与徽章会打架
+ * （实锤：上交所「注册生效」被判 stage-listed 进「已上市」，徽章却写「注册生效·过会」）。
+ * 现在阶段判定只走 `inferStage` 一张词表 + 官方 `ipoStage` 结构化字段，本集合供两处共用。
+ */
+export const GD_STAGES: ReadonlySet<string> = new Set<GdStage>([
+  "stage-listed",
+  "stage-registered",
+  "stage-reviewing",
+  "stage-tutoring",
+]);
+
+/** 是否为合法阶段值（外部透传字段校验用）。 */
+export function isGdStage(v: unknown): v is GdStage {
+  return typeof v === "string" && GD_STAGES.has(v);
+}
+
+/**
+ * 阶段词表（**唯一**实现，P0-1 收敛）。
+ *
+ * ⚠️ 与旧版的两处修正（2026-09-10 用户拍板口径：「注册生效」进「注册发行」而非「已上市」）：
+ *  - `提交注册`：原判 stage-reviewing，改判 **stage-registered**（过会后的注册环节，
+ *    与官方源 SSE_STATUS[4]/BSE_STATUS.P06 口径统一）；
+ *  - `注册生效`：原判 stage-registered，官方源曾误判 stage-listed → **官方源已对齐到本条**。
+ */
 export function inferStage(title: string, excerpt?: string): GdStage {
   const text = `${title} ${excerpt || ""}`;
   // 1) 注册生效 / 同意注册 / 注册结果 / 注册批准 / 注册完成 / 注册通过（即将发行）
   if (/(注册生效|注册获准|同意注册|注册结果|注册批准|注册完成|注册通过)/.test(text))
     return "stage-registered";
-  // 2) 过会 / 核准（注册前最后一步，接近发行）
-  if (/(过会|核准)/.test(text)) return "stage-registered";
-  // 3) 在审 / 已受理：受理 / 问询 / 上会 / 提交注册 / 审核 / 上市委 / 反馈意见 / 问询函 / 问询回复
-  if (/(受理|问询|上会|提交注册|审核|上市委|反馈意见|问询函|问询回复)/.test(text))
+  // 2) 过会 / 核准 / 提交注册 / 上市委会议通过（注册前最后一步，接近发行）
+  if (/(过会|核准|提交注册|上市委会议通过)/.test(text)) return "stage-registered";
+  // 3) 在审 / 已受理：受理 / 问询 / 上会 / 审核 / 上市委 / 反馈意见 / 问询函 / 问询回复 / 暂缓审议
+  if (/(受理|问询|上会|审核|上市委|反馈意见|问询函|问询回复|暂缓审议)/.test(text))
     return "stage-reviewing";
   // 4) 辅导备案 / Pre-IPO：辅导备案 / 辅导验收 / IPO辅导 / 辅导机构 / 辅导协议 / 股份制改造 / 备案登记
   if (/(辅导备案|辅导验收|IPO辅导|辅导机构|辅导协议|股份制改造|备案登记|pre-?ipo)/i.test(text))

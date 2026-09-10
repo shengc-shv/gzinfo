@@ -87,9 +87,20 @@ export const SOURCE_ROUTE: Record<string, { category: Category; subcategory?: st
   "gd-local-scraper": { category: "ipo", subcategory: "news" },
   "szse": { category: "ipo", subcategory: "szse" },
   "hkex": { category: "ipo", subcategory: "hkex" },
-  "em-ipo": { category: "ipo", subcategory: "ipo-tutoring" },
+  "hk-filing": { category: "ipo", subcategory: "hkex" },
   "sse": { category: "ipo", subcategory: "sse" },
   "bse": { category: "ipo", subcategory: "bse" },
+  // —— 广东 IPO 官方源（2026-09-09 IPO 体系重设计；em-ipo 已退役）——
+  // 路由仅作采集元数据兜底；region='gd' 由 routeRegion 归 gd-ipo，渲染归属经内容判定（无状态源红线）。
+  "gd-csrc-tutoring": { category: "gd-ipo", subcategory: "ipo-tutoring" },
+  "gd-sse-audit": { category: "gd-ipo", subcategory: "ipo-audit" },
+  "gd-szse-audit": { category: "gd-ipo", subcategory: "ipo-audit" },
+  "gd-bse-audit": { category: "gd-ipo", subcategory: "ipo-audit" },
+  "gd-listed-check": { category: "gd-ipo", subcategory: "stage-listed" },
+  // 港股递表（2026-09-10 batch 5）：主板/GEM 两索引 JSON 接口（与官网综合索引 xlsx 同源）。
+  // 广东企业赴港 → gd-ipo（跨境融资商机）；其余 → ipo 全国参考。category 仅作采集元数据兜底，
+  // 实际路由由 routeRegion 按 region 决定（gd→gd-ipo，其它→ipo），渲染归属经内容判定（无状态源红线）。
+  "hk-filing-gd": { category: "gd-ipo", subcategory: "ipo-hk" },
 };
 
 /** 爬虫产物源 id 集合（供 dispatch 白名单 / 路由判断）。 */

@@ -80,7 +80,9 @@ export const AUDIO_SPEAK_LIMITS = {
   // 2026-09-09 上调：商机洞察配额扩至 7-8 条（AUM/高端/普惠各≤2 + 其他≤1），
   // 旧值 190 会在句界截断到约 5 条，与卡面条数分叉。提至 340 使全量口播不被截断。
   insights: 340,
-  ipo: 100,
+  // 2026-09-10 上调：广东IPO 横滑卡/口播扩至 3 家（商机价值优先），
+  // 3 家带属性口播约 102 字，旧值 100 会在第 3 家句界截断。提至 150 使全量口播不被截断。
+  ipo: 150,
   risk: 90,
   stock: 520,
 } as const;
@@ -92,7 +94,14 @@ export const AUDIO_DURATION_MAX_SEC = 210;
 // v2（I-A 用户要求）：去掉"行长"等称呼；最后用"今天播报结束"作为收尾，不下命令。
 const OPENER = "早上好。";
 const CLOSER = "今天播报结束。";
-const IPO_TRANSITION = "最近一周有IPO动态的广东企业。";
+/**
+ * 广东IPO 段过渡语。
+ * ⚠️ 2026-09-10 修正：原文案是「最近一周有IPO动态的广东企业。」，但进入口播的
+ * 窗口实际只有 **2 天**（`IPO_VOICE_WINDOW_DAYS`，用户 2026-09-10 拍板
+ * 「口播/今日必读横滑 = 2 天、底部列表 = 7 天」）——承诺「一周」却只念两天，
+ * 属口径不符（回检 P1-5）。改为「近两日」，与卡面/候选窗口一致。
+ */
+const IPO_TRANSITION = "近两日有IPO动态的广东企业。";
 /** 股市解读段：开场语同时承担「IPO→股市」链接词 + 点明交易日（用户 2026-08-31 要求：
  *  「下面是8月28日股市收盘信息」），与下方每市场时区标注并存。具体文案在拼装时按 dataDate 动态生成。 */
 /** 中文 TTS 语速估算（字/秒）：腾讯 Speed=1（1.2 倍）实测约 5.3 字/秒，取 5.2 便于徽标时长贴近实际（2026-08-24 校准）。 */
@@ -322,11 +331,16 @@ export async function assembleAudioScript(
     return null;
   }
 
-  // —— 广东 IPO：上游优先，正则兜底 ——
+  // —— 广东 IPO：**确定性拼装优先**，LLM 槽位降为最后兜底（P1-3 口径统一，2026-09-10）——
   // 2026-08-30 用户：IPO 播报放在「股市情况」之前（先讲本地商机，再讲行情）。
   // 2026-09-09 同一企业口播 2 天去重：从事件记忆库（ipoVoicing）算出今日应跳过的企业，
   //   确定性拼装路径按企业跳过；展示卡面（buildGdIpo，7 天窗口）不受影响。
-  let ipo = exec.guangdong_ipo?.spoken ? sanitize(exec.guangdong_ipo.spoken) : "";
+  // 2026-09-10 回检 P1-3：原先「上游 LLM 优先」导致口径分叉 —— 提示词要求 LLM 槽位
+  //   「≤90 字 / 1 条」，而展示横滑卡是「3 家」，LLM 有产出时口播只说 1 家、卡面 3 张。
+  //   改为确定性拼装优先：与横滑卡同一候选池 / 同一排序 / 同一企业级去重，家数由构造保证
+  //   一致；LLM 槽位仅在「确定性为空且线索兜底也为空」时使用（罕见路径，不浪费已有产出）。
+  const llmIpo = exec.guangdong_ipo?.spoken ? sanitize(exec.guangdong_ipo.spoken) : "";
+  let ipo = "";
   const ipoMem = isEventMemoryEnabled() ? loadEventMemory() : null;
   const skipCompanies = new Set<string>();
   if (ipoMem && ipoItems.length) {
@@ -336,31 +350,32 @@ export async function assembleAudioScript(
     }
   }
   const voicedCompanies: string[] = [];
-  if (ipo) {
-    console.log("✅ 广东IPO条目：取上游产出");
-    // 上游 LLM 路径（罕见，CI 实证常为空）：尽力从口播文本反查已念企业写回记忆
-    for (const it of ipoItems) {
-      const c = companyNameOf(it.title_cn || "");
-      if (c && ipo.includes(c)) voicedCompanies.push(c);
-    }
+  // ① 确定性拼装（免 LLM，AI / SKIP_AI 双模式可用）：IPO 板块由 side-output 直接构建，
+  //    结构化 gd-ipo 条目带「粤」标，取前 3 家（与横滑卡同序同量）拼口播，一句不依赖 LLM。
+  const spoken = buildGdIpoSpoken(ipoItems, { skipCompanies });
+  if (spoken) {
+    ipo = sanitize(spoken);
+    voicedCompanies.push(...pickGdIpoCompanies(ipoItems, { skipCompanies }));
+    console.log("✅ 广东IPO条目：确定性拼装（side-output 板块，免 LLM）");
   } else {
-    // ① 确定性拼装（免 LLM，AI / SKIP_AI 双模式可用）：IPO 板块由 side-output 直接构建，
-    //    结构化 gd-ipo 条目带「粤」标，直接取前 2 条企业名拼口播，一句不依赖 LLM。
-    const spoken = buildGdIpoSpoken(ipoItems, { skipCompanies });
-    if (spoken) {
-      ipo = sanitize(spoken);
-      voicedCompanies.push(...pickGdIpoCompanies(ipoItems, { skipCompanies }));
-      console.log("✅ 广东IPO条目：确定性拼装（side-output 板块，免 LLM）");
-    } else {
-      // ② 媒体源线索 → LLM 兜底（仅在确实有线索且非 SKIP_AI 时）
-      const clues = detectGdIpo(ipoItems);
-      if (clues.length) {
-        console.warn("::warning:: 上游未产出广东IPO口播稿，但检测到相关线索，触发兜底生成");
-        const fb = await fallbackGdIpo(clues);
-        if (fb) {
-          ipo = sanitize(fb);
-          console.log("✅ 广东IPO条目：兜底生成成功");
-        }
+    // ② 媒体源线索 → LLM 兜底（仅在确实有线索且非 SKIP_AI 时）
+    const clues = detectGdIpo(ipoItems);
+    if (clues.length) {
+      console.warn("::warning:: 上游未产出广东IPO口播稿，但检测到相关线索，触发兜底生成");
+      const fb = await fallbackGdIpo(clues);
+      if (fb) {
+        ipo = sanitize(fb);
+        console.log("✅ 广东IPO条目：兜底生成成功");
+      }
+    }
+    // ③ 最后兜底：exec 的上游 LLM 槽位（≤90 字 / 1 条口径；仅 ①② 皆空时使用，罕见路径）
+    if (!ipo && llmIpo) {
+      ipo = llmIpo;
+      console.log("✅ 广东IPO条目：取上游 LLM 槽位（确定性拼装与线索兜底均为空）");
+      // 上游 LLM 路径：尽力从口播文本反查已念企业写回记忆
+      for (const it of ipoItems) {
+        const c = companyNameOf(it.title_cn || "");
+        if (c && ipo.includes(c)) voicedCompanies.push(c);
       }
     }
   }

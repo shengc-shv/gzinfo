@@ -75,6 +75,17 @@ export interface CrawledArticle {
   officialUrl?: string;
   /** 官方源展示名。 */
   officialLabel?: string;
+  /**
+   * IPO 阶段（2026-09-10 IPO 体系重设计 P4）：爬虫按官方审核状态直接给出，render 优先采用，
+   * 否则回退 gdIpo.inferStage 关键词推断。无状态源红线：仍经漏斗+内容判定，
+   * 此字段仅作分栏 hint，不驱动地域/相关性过滤。
+   */
+  ipoStage?: string;
+  /**
+   * 已上市企业的真实上市日期（2026-09-10 P3 listed-check）：由 B1/B2/B3 上市列表复核得到，
+   * 与爬虫 updateDate 区分（updateDate=审核状态更新日，listedDate=挂牌上市日）。
+   */
+  listedDate?: string;
 }
 
 /** 爬虫数据的两条进入路径：IPO/新股（mode=ipo）与广州商机（mode=gz）。 */
@@ -99,6 +110,19 @@ export interface MergeArticle {
   officialUrl?: string;
   /** 官方源展示名（透传）。 */
   officialLabel?: string;
+  /**
+   * IPO 阶段（2026-09-10 P4 结构化旁路）：爬虫按官方审核状态直接给出，render 优先采用。
+   * 透传自 CrawledArticle。
+   */
+  ipoStage?: string;
+  /**
+   * 已上市企业的真实上市日期（2026-09-10 P3 listed-check），透传自 CrawledArticle。
+   */
+  listedDate?: string;
+  /**
+   * 广东判定依据（2026-09-10 P4 落库），透传自 CrawledArticle（爬虫侧已给出时）。
+   */
+  gdBasis?: string;
   /**
    * IPO 内容态（2026-08-31 3漏斗整改 commit②，红线：过滤行为不得依赖源分类字符串）。
    * routeRegion 解析出 category=gd-ipo/ipo 时为真；过滤层据此豁免单机构/相似度/
@@ -170,6 +194,10 @@ export function toMergeArticle(
     // 交易所官方源（2026-09-07）：IPO 条目同时展示东财列表 + 交易所权威入口
     ...(item.officialUrl ? { officialUrl: item.officialUrl } : {}),
     ...(item.officialLabel ? { officialLabel: item.officialLabel } : {}),
+    // P4 结构化旁路 + P3 上市日期（2026-09-10）：爬虫侧直接给出的字段透传到渲染层。
+    // gdBasis 由渲染层 classifyGdIpo 判定后写回（见 render.ts），此处不从 CrawledArticle 取。
+    ...(item.ipoStage ? { ipoStage: item.ipoStage } : {}),
+    ...(item.listedDate ? { listedDate: item.listedDate } : {}),
   };
 }
 
