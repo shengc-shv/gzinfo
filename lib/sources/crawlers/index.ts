@@ -17,6 +17,9 @@ import { SseAuditCrawler } from "./sources/sse-audit";
 import { BseAuditCrawler } from "./sources/bse-audit";
 import { ListedChecker } from "./sources/listed-check";
 import { HkFilingCrawler } from "./sources/hk-filing";
+// 本地专供 IPO 补数桥（2026-09-11）：把 CI 不可达源（csrcfd / 深交所）的本地抓取产物
+// 从 `data/local-ipo.json` 读回来，与在线产物在**同一接入层**汇合。
+import { selectLocalIpoItems } from "../local-ipo";
 import { GzStatsCrawler } from "./sources/gz-stats";
 import { GzGovCrawler } from "./sources/gz-gov";
 import { CnfinCrawler } from "./sources/cnfin-web";
@@ -67,15 +70,59 @@ function dedupeByUrl<T extends { url?: string }>(items: T[]): T[] {
  * （`tests/ipo-source-registry.test.ts` 读每个实例的 `sourceIds`，校验
  * 「产出的 sourceId ∈ sources.config.json 白名单 且 ∈ SOURCE_ROUTE」）。
  * 此前测试硬编码 5 个 gd-* id，新增 hk-filing / hk-filing-gd 时完全没被覆盖到。
+ *
+ * 2026-09-11 拆分：本函数**恒返回全量**（注册一致性测试必须覆盖每一个源，不随环境变化，
+ * 否则 CI 下漏注册的新源会静默逃过校验）。「哪些源只能本地抓」= `buildLocalOnlyIpoCrawlers()`，
+ * 「本次 run 实际抓哪些」= `selectIpoCrawlersForRun()`（CI 跳过本地专供源）。
  */
 export function buildIpoCrawlers(): BaseCrawler[] {
-  return [
-    new CsrcCoachCrawler(),
-    new SzseAuditCrawler(),
-    new SseAuditCrawler(),
-    new BseAuditCrawler(),
-    new HkFilingCrawler(),
-  ];
+  return [...buildLocalOnlyIpoCrawlers(), ...buildOnlineIpoCrawlers()];
+}
+
+/**
+ * **只能本地抓取**的官方 IPO 源（2026-09-11 用户拍板 + 实锤）。
+ *
+ * 铁证：这两个源被站点 CDN/WAF 拦 GitHub runner 的海外出口 IP ——
+ *   - `csrcfd`（证监会辅导备案）：CI 恒 **405**（阿里云 Tengine/云盾），自 09-09 接入起从未成功；
+ *   - **深交所** `www.szse.cn`（审核项目动态；listed-check 的 B2 腿同域同样挂）：CI 恒 `fetch failed`；
+ * 本地（国内网络，同版本 Node + 同 headers）实测完全可达（csrcfd 3 条深圳企业 / 深交所 2 条拟创业板）。
+ *
+ * 产物由本地 skill `local-ipo-sync`（`npm run ipo:local`）写入 `data/local-ipo.json` 入库，
+ * 远端 `selectLocalIpoItems()` 从该文件补数 —— **两个源的数据照旧进日报，只是抓取地换到本地**。
+ *
+ * ⚠️ 白名单一致性红线：`LOCAL_ONLY_IPO_SOURCE_IDS`（`lib/sources/local-ipo.ts`）必须与本清单
+ * 一一对应（本地文件的 sourceId 白名单据此校验），由 `tests/local-ipo.test.ts` 断言。
+ */
+export function buildLocalOnlyIpoCrawlers(): BaseCrawler[] {
+  return [new CsrcCoachCrawler(), new SzseAuditCrawler()];
+}
+
+/** CI 可达的在线 IPO 源（与本地专供源互补；两集合互斥且并集 = `buildIpoCrawlers()`）。 */
+export function buildOnlineIpoCrawlers(): BaseCrawler[] {
+  return [new SseAuditCrawler(), new BseAuditCrawler(), new HkFilingCrawler()];
+}
+
+/**
+ * 「本次 run 实际要跑的 IPO 源」= 在线源 +（**非 CI 环境**才跑本地专供源）。
+ *
+ * 为什么 CI 要跳过本地专供源：它们从未在 CI 成功过（三次 run 逐字复现），继续跑只是
+ * 白等 ~20s 重试退避 + 刷一屏误导性报错；数据已由 `data/local-ipo.json` 补齐。
+ * 逃生口：若将来站点放开海外访问，设 `IPO_LOCAL_ONLY_IN_REMOTE=1` 让远端重新尝试。
+ */
+export function selectIpoCrawlersForRun(): BaseCrawler[] {
+  const forceRemoteTry = process.env.IPO_LOCAL_ONLY_IN_REMOTE === "1";
+  const isCi = process.env.CI === "true" || process.env.CI === "1";
+  const online = buildOnlineIpoCrawlers();
+  if (isCi && !forceRemoteTry) {
+    const names = buildLocalOnlyIpoCrawlers()
+      .map((c) => c.name)
+      .join(" / ");
+    console.log(
+      `[daily] ⏭ CI 环境跳过本地专供 IPO 源（${names}）→ 由 data/local-ipo.json 补数（本地 skill local-ipo-sync 产出）`,
+    );
+    return online;
+  }
+  return [...buildLocalOnlyIpoCrawlers(), ...online];
 }
 
 /** listed-check 是 IPO 候选的 post-process（非 BaseCrawler 子类），单独导出供测试遍历。 */
@@ -106,7 +153,8 @@ export async function fetchCrawledArticles(): Promise<CrawledBundle> {
   //      （主板 appactive_app_sehk_c / GEM appactive_app_gem_c），与官网综合索引 xlsx 同源、
   //      结构化、零解析依赖。繁体申请人名识别广东企业 → hk-filing-gd（gd-ipo 跨境融资商机），
   //      其余 → hk-filing（ipo 全国参考）。窗口 365d + 上限 40 条音量控制。
-  const ipoCrawlers = buildIpoCrawlers();
+  // 2026-09-11：源集合二分（在线 / 本地专供）见 selectIpoCrawlersForRun 注释。
+  const ipoCrawlers = selectIpoCrawlersForRun();
 
   const ipo: CrawledArticle[] = [];
   for (const crawler of ipoCrawlers) {
@@ -117,6 +165,11 @@ export async function fetchCrawledArticles(): Promise<CrawledBundle> {
       console.error(`[${crawler.name}] 爬虫异常:`, (err as Error).message);
     }
   }
+
+  // 本地专供源补数（2026-09-11）：与上面在线爬虫产物汇入**同一个 ipo 批次**，
+  // 之后仍走 mergeCrawledBatch(..., "ipo") 归一化 —— 下游（漏斗 / gdIpo / render）
+  // 完全无法也不需要区分条目来自本地还是在线。见 lib/sources/local-ipo.ts。
+  ipo.push(...selectLocalIpoItems(ipo));
 
   // P3 listed-check（候选复核，不拉全量）：拉近期广东上市字典 → 发现已上市卡片 + 复核候选升级 stage-listed
   // 单源失败由 ListedChecker 内部兜底，不连坐。

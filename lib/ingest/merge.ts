@@ -18,6 +18,9 @@ import {
   rewriteGzPrefix,
 } from "../sources/constants";
 import { extractDateFromUrl, isWithinCalendarDays } from "../utils";
+// IPO 窗口常量唯一来源（`lib/ipo-config.ts` 零依赖）：本地专供 IPO 补数（2026-09-11）
+// 与远端在线源走同一窗口口径，避免两套数字漂移。
+import { IPO_SOURCE_WINDOW_DAYS } from "../ipo-config";
 
 /**
  * 国内/香港源（+08:00）的裸时间字符串按北京时间解释（2026-08-31 修复时区偏移 bug）。
@@ -232,4 +235,58 @@ export function filterByWindow<T extends { publishedAt?: Date | string }>(
   // 日历日窗口（2026-08-31 修复）：发布日期(报告时区)∈ 最近 days 个日历日，替代 48h 滑动。
   // 时间红线：无真实发布时间 → 丢弃（isWithinCalendarDays 内部处理）。
   return articles.filter((a) => isWithinCalendarDays(a.publishedAt, days));
+}
+
+/**
+ * 本地专供 IPO 条目的统一后处理（2026-09-11）。
+ *
+ * **为什么必须有这一个函数**：`csrcfd`（证监会辅导）与**深交所**两个官方源被站点
+ * CDN/WAF 拦 GitHub runner 的海外出口 IP（CI 恒 405 / fetch failed），只能在本地
+ * （国内网络）抓到；本地脚本产出 `data/local-ipo.json` 入库，远端 CI 读取并入。
+ * 若两边各写一套「丢无日期 / 裁窗口 / 按 URL 去重」，必然漂移 —— 因此本地脚本与
+ * 远端接入层**共用本函数**（归一化层 = 接入层唯一处理点，与 filterByWindow 同源同义）。
+ *
+ * 处理三件事（顺序固定，与远端在线爬虫产物走的下游语义一致）：
+ *  1. **时间红线**：无 `publishedAt` 一律丢弃（绝不回退抓取时间兜底）。
+ *  2. **窗口裁剪**：`publishedAt` 不在最近 windowDays 个日历日（报告时区）→ 丢弃。
+ *     本地文件会长期留在仓库里，读时再裁一次保证「旧文件不会把过期条目灌进日报」。
+ *  3. **URL 去重**：同一 URL 只留首条；无 URL 的条目退化为 `sourceId|title` 内容键
+ *     （避免多条空 URL 条目被误并成一条 —— csrcfd 的 PDF 路径缺失时会出现空 URL）。
+ *
+ * 纯函数（`now` 可注入），无 IO，便于单测。
+ */
+export function normalizeLocalIpoItems(
+  items: CrawledArticle[],
+  opts: { windowDays?: number; now?: Date } = {},
+): {
+  items: CrawledArticle[];
+  droppedNoDate: number;
+  droppedOutOfWindow: number;
+  droppedDuplicate: number;
+} {
+  const days = opts.windowDays ?? IPO_SOURCE_WINDOW_DAYS;
+  const now = opts.now ?? new Date();
+  let droppedNoDate = 0;
+  let droppedOutOfWindow = 0;
+  let droppedDuplicate = 0;
+  const seen = new Set<string>();
+  const out: CrawledArticle[] = [];
+  for (const it of items) {
+    if (!it.publishedAt) {
+      droppedNoDate++;
+      continue;
+    }
+    if (!isWithinCalendarDays(it.publishedAt, days, now)) {
+      droppedOutOfWindow++;
+      continue;
+    }
+    const key = it.url?.trim() || `${it.sourceId ?? ""}|${it.title ?? ""}`;
+    if (seen.has(key)) {
+      droppedDuplicate++;
+      continue;
+    }
+    seen.add(key);
+    out.push(it);
+  }
+  return { items: out, droppedNoDate, droppedOutOfWindow, droppedDuplicate };
 }

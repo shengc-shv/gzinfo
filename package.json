@@ -11,6 +11,7 @@
     "quota-report": "tsx scripts/quota-report.ts",
     "sources": "tsx scripts/sources.ts",
     "sources:check": "tsx scripts/sources.ts check",
+    "ipo:local": "tsx scripts/local-ipo-sync.ts",
     "analyze:dirty": "tsx scripts/analyze-dirty-data.ts",
     "deploy": "node scripts/deploy.mjs",
     "build-site": "node scripts/build-site.mjs",

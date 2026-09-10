@@ -10,6 +10,9 @@ import {
   type HistoryEntry,
   type HistoryStore,
 } from "../lib/output/history";
+// 2026-09-11：夹具必须用「报告时区」的日期键（与生产侧 todayKey() 同口径）构造 lastSeenAt，
+// 不能用 new Date().toISOString()（UTC）——见下方 buildRolling 用例注释。
+import { todayKey } from "../lib/utils";
 
 const DAY = 86_400_000;
 const iso = (ms: number) => new Date(ms).toISOString();
@@ -134,7 +137,14 @@ test("buildRolling: 历史中重复 URL 只保留一条", () => {
 });
 
 test("buildRolling: 历史条目 lastSeenAt=今天 → 标记 fetchedToday=true（预分析/当天早跑内容当天展示）", () => {
-  const dayAgo = iso(Date.now() - 86_400_000);
+  // ⚠️ 夹具口径修复（2026-09-11）：原来 lastSeenAt 用 `new Date().toISOString()`（**UTC**），
+  //    而 `buildRolling` 用 `todayKey()`（**报告时区/本地**）比对 lastSeenAt 前缀 →
+  //    北京时间 00:00–07:59 之间 UTC 日期比本地日期小一天，夹具表达的其实是「昨天」，
+  //    该用例每天凌晨必红（实锤：UTC=2026-09-10T16:5xZ，todayKey()=2026-09-11）。
+  //    history.ts 生产侧读写 lastSeenAt 均用 todayKey()，故属夹具口径问题，非产品缺陷。
+  //    现显式用 todayKey() 生成「今天/昨天」锚点，任何时刻运行都表达同一语义。
+  const todayLocal = todayKey();
+  const yesterdayLocal = todayKey(new Date(Date.now() - 86_400_000));
   const h: HistoryStore = {
     // 预分析/今天早跑写入：lastSeenAt 今天，publishedAt 1 天前（在 2 天抓取窗口内）
     pre: mk("https://x/pre", {
@@ -142,10 +152,11 @@ test("buildRolling: 历史条目 lastSeenAt=今天 → 标记 fetchedToday=true�
       ai_relevant: true,
       summary: "公积金政策解读",
       publishedAt: iso(Date.now() - 1 * 86_400_000),
+      lastSeenAt: `${todayLocal}T09:00:00`,
     }),
     // 昨天写入：lastSeenAt 昨天 → 不标记当天（publishedAt 仍在窗口内）
     old: mk("https://x/old", {
-      lastSeenAt: dayAgo,
+      lastSeenAt: `${yesterdayLocal}T09:00:00`,
       publishedAt: iso(Date.now() - 1 * 86_400_000),
     }),
   };

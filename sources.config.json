@@ -1002,7 +1002,7 @@
     "locales": [
       "zh"
     ],
-    "note": "官方权威辅导库 csrcfd 爬虫产物注册源（2026-09-09 IPO 体系重设计：替代东财辅导代理 em-ipo，修复 render 白名单静默丢弃）。category/subcategory 仅采集元数据，渲染归属经内容判定。"
+    "note": "官方权威辅导库 csrcfd 爬虫产物注册源（2026-09-09 IPO 体系重设计：替代东财辅导代理 em-ipo，修复 render 白名单静默丢弃）。category/subcategory 仅采集元数据，渲染归属经内容判定。⚠️ 2026-09-11：站点 CDN/WAF（阿里云 Tengine）拦 GitHub runner 海外 IP → **CI 恒 405、仅本地可达**；改由本地 skill local-ipo-sync（npm run ipo:local）抓取写入 data/local-ipo.json，远端经 selectLocalIpoItems() 补数，CI 侧跳过该源（selectIpoCrawlersForRun）。"
   },
   {
     "id": "gd-sse-audit",
@@ -1032,7 +1032,7 @@
     "locales": [
       "zh"
     ],
-    "note": "深交所 IPO 审核项目动态（projectrends/query，GET + 倒序早停）官方源注册（IPO 体系重设计）。category/subcategory 仅采集元数据。"
+    "note": "深交所 IPO 审核项目动态（projectrends/query，GET + 倒序早停）官方源注册（IPO 体系重设计）。category/subcategory 仅采集元数据。⚠️ 2026-09-11：www.szse.cn 域级拦 GitHub runner 海外 IP → **CI 恒 fetch failed、仅本地可达**（listed-check 的 B2 深交所腿同域同样挂）；改由本地 skill local-ipo-sync 抓取写入 data/local-ipo.json，远端经 selectLocalIpoItems() 补数。"
   },
   {
     "id": "gd-bse-audit",

@@ -261,7 +261,9 @@ export async function buildExecutiveSummary(
     let memoryBrief: string | undefined;
     if (memoryOn && memStore) {
       try {
-        const brief = buildMemoryBrief(memStore, date, { lookbackDays: 10, limit: 8 });
+        // limit 8 → 20（2026-09-11 用户要求）：库内近 10 天已播报事件达 27 条，
+        // 原上限 8 只覆盖最近 8 条（09-10 当天 11 条里都进不全），去重提示覆盖面不足。
+        const brief = buildMemoryBrief(memStore, date, { lookbackDays: 10, limit: 20 });
         memoryBrief = formatMemoryBrief(brief);
         if (brief.length > 0) {
           ctx.log.info("exec", `🧠 记忆提示：${brief.length} 个近期已播报事件已告知 LLM`);
