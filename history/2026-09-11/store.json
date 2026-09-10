@@ -1,32 +1,59 @@
 {
   "date": "2026-09-11",
-  "updatedAt": "2026-09-10T16:15:20.448Z",
+  "updatedAt": "2026-09-10T23:37:04.716Z",
   "executive": {
-    "hero_line": "金融强国「十五五」蓝图与证监会五年定调同日落地，财富、养老、普惠三条零售主线进入梳排窗口。",
-    "spoken_hero": "金融强国十五五蓝图和证监会未来五年资本市场定调同一天落地，中长期资金入市、财富管理和养老金融都被点名，可对照这三条主线，把产品货架和客户沟通方案先梳理一遍。",
+    "hero_line": "金融强国'十五五'规划落地，财富、养老、普惠、科技金融四条线路径明确，分行可对照校准零售布局。",
+    "spoken_hero": "金融强国十五五规划今天出台，四部门把财富管理、养老金融、普惠和科技金融的方向都点明了。资源大概率会顺着这个方向走，我们可以先把这几条线的客户名单和产品货架梳理一遍，提前卡位。",
     "must_read": [
       {
-        "title": "证监会定调五年资本市场",
-        "why": "八大方向明确、中长期资金入市受关注，权益产品配置逻辑变化，财富条线客户沟通口径需同步更新。",
-        "url": "https://finance.cctv.com/2026/09/10/ARTIYL6c0oIdVm8MAR4qbgdh260910.shtml"
+        "title": "金融强国'十五五'规划出台",
+        "why": "顶层设计明确财富管理、养老金融、普惠金融与科技金融四条主线，分行零售三年规划与资源投放可对照校准。",
+        "url": "https://www.cnfin.com/yw-lb/detail/20260911/4468401_1.html"
       },
       {
-        "title": "央行启用隔夜逆回购",
-        "why": "9月14日至17日每日操作量不超6000亿元，跨节资金面有望平稳，存款与短期理财定价可据此微调。",
-        "url": "https://finance.sina.com.cn/jryx/bank/2026-09-10/doc-iniritaq8598483.shtml"
+        "title": "国办发文治理中小企业回款难",
+        "why": "账期与票据规范趋严，小微客群现金流节奏改变，普惠条线需提前排查续贷与还款安排。",
+        "url": "https://www.gov.cn/zhengce/content/202609/content_7080627.htm"
       },
       {
-        "title": "A股缩量银行股抗跌",
-        "why": "成交不足1.7万亿、风险偏好走低而银行板块逆市走强，存款回流与低波稳健产品需求可能升温。",
-        "url": "https://finance.eastmoney.com/a/202609103870510049.html"
+        "title": "美联储下周加息概率升至70%",
+        "why": "美元资产波动加大，有外币资产与结售汇需求的客户预期将变，跨境客群需提前做一轮沟通与预案。",
+        "url": "https://www.cnbc.com/2026/09/10/the-likelihood-of-a-fed-interest-rate-hike-next-week-just-got-a-lot-higher.html"
+      },
+      {
+        "title": "境外持有境内人民币资产超11万亿",
+        "why": "人民币资产吸引力提升，跨境客户资金留存出现观察窗口，可据此梳理境外关联客户的回流路径。",
+        "url": "https://news.southcn.com/node_812903b83a/a50fd2a56a.shtml"
       }
     ],
-    "spoken_must_read": "证监会定调五年资本市场。八大方向明确、中长期资金入市受关注，权益产品配置逻辑变化，财富条线客户沟通口径需同步更新。。其次，央行启用隔夜逆回购。9月14日至17日每日操作量不超6000亿元，跨节资金面有望平稳，存款与短期理财定价可据此微调。。此外，A股缩量银行股抗跌。成交不足1.7万亿、风险偏好走低而银行板块逆市走强，存款回流与低波稳健产品需求可能升温。。",
+    "spoken_must_read": "金融强国'十五五'规划出台。顶层设计明确财富管理、养老金融、普惠金融与科技金融四条主线，分行零售三年规划与资源投放可对照校准。。其次，国办发文治理中小企业回款难。账期与票据规范趋严，小微客群现金流节奏改变，普惠条线需提前排查续贷与还款安排。。此外，美联储下周加息概率升至70%。美元资产波动加大，有外币资产与结售汇需求的客户预期将变，跨境客群需提前做一轮沟通与预案。。还有，境外持有境内人民币资产超11万亿。人民币资产吸引力提升，跨境客户资金留存出现观察窗口，可据此梳理境外关联客户的回流路径。。",
     "insights": [
       {
-        "topic": "存款保险答疑稳存",
-        "impact": "央行明确存款保险保费不由储户承担，部分客户此前存在误解，网点若应答口径不一容易引发存款搬家。",
-        "action": "网点可本周统一答疑话术，对到期及大额存款客户主动澄清存款保险非商业保险，顺带推介分层存款与稳健理财。",
+        "topic": "理财信披口径统一",
+        "impact": "渠道披露存在温差，客户比价更直接；叠加理财公司争补外汇与衍生品资格，产品线扩容的同时风险适配要求上升。",
+        "action": "财富条线本周先统一净值与费率的披露口径和解释话术，同步梳理代销准入与客户风险测评的匹配流程。",
+        "tag": [
+          "财富",
+          "监管"
+        ],
+        "segments": [
+          "零售AUM"
+        ],
+        "sources": [
+          {
+            "title": "银行理财信披新规落地调研：渠道披露存在“温差”",
+            "url": "https://www.cnfin.com/hg-lb/detail/20260911/4468415_1.html"
+          },
+          {
+            "title": "资格空缺待补，收益焦虑下理财公司亟需外汇及衍生品“入场券”",
+            "url": "https://finance.sina.com.cn/roll/2026-09-10/doc-inirkcsq7549369.shtml"
+          }
+        ]
+      },
+      {
+        "topic": "贵金属客户浮盈回吐",
+        "impact": "黄金白银与铜价同步跳水，前期追高贵金属的客户浮盈快速回吐，持仓体验与投诉风险同步上升。",
+        "action": "本周对贵金属持仓客户做一轮主动回访，引导部分资金转向稳健理财与定投组合，压降单一资产敞口。",
         "tag": [
           "财富",
           "客群"
@@ -36,55 +63,77 @@
         ],
         "sources": [
           {
-            "title": "央行：存款保险不是商业保险 保费无需储户承担",
-            "url": "https://finance.cctv.com/2026/09/10/ARTIGDptCrIuRUyRh5jy9k2o260910.shtml"
+            "title": "全线跳水！黄金、白银突变，铜价大跌！发生了什么？",
+            "url": "https://www.stcn.com/article/detail/4180419.html"
           }
         ]
       },
       {
-        "topic": "美联储下周议息",
-        "impact": "交易员把下周美联储加息概率推高至70%，美元资产波动加大，持有美元存款与外币理财的中高端客户配置需再平衡。",
-        "action": "私行团队这几天可主动联系有外币资产的客户，提示结售汇窗口与汇率风险，配套短久期美元产品与对冲方案。",
+        "topic": "跨境资金留存窗口",
+        "impact": "境外主体持有境内人民币资产超11万亿，叠加数字服务出海提速，企业主跨境结算与资金沉淀需求上行。",
+        "action": "私行与跨境团队本月梳理出海企业主名单，跟进跨境结算、汇兑避险与家族信托的一站式方案。",
         "tag": [
           "私行",
-          "财富"
+          "客群"
         ],
         "segments": [
           "中高端客群(过亿资产)"
         ],
         "sources": [
           {
-            "title": "美联储下周加息概率大幅上升",
+            "title": "境外主体持有境内人民币金融资产超11万亿元",
+            "url": "https://news.southcn.com/node_812903b83a/a50fd2a56a.shtml"
+          },
+          {
+            "title": "加速出海中！我国数字服务进出口5年扩大近3倍",
+            "url": "https://news.southcn.com/node_812903b83a/17e9f40fc8.shtml"
+          }
+        ]
+      },
+      {
+        "topic": "重大产业项目代发",
+        "impact": "广州全力推进重大产业项目建设，项目方与上下游企业的代发、供应链融资及员工综合金融需求集中释放。",
+        "action": "本周对接发改与重点园区项目名单，锁定新开工项目的代发与员工开卡，同步跟进核心企业上下游客群。",
+        "tag": [
+          "政银合作",
+          "代发"
+        ],
+        "segments": [
+          "中高端客群(过亿资产)"
+        ],
+        "sources": [
+          {
+            "title": "广州全力推进重大产业项目建设（“十五五”开好局起好步）",
+            "url": "https://news.dayoo.com/guangzhou/202609/10/139995_55002121.htm"
+          }
+        ]
+      },
+      {
+        "topic": "外贸小微成本对冲",
+        "impact": "美原油再破100美元、美联储下周加息概率升至70%，外贸与航运类小微客户的成本与汇兑敞口同时放大。",
+        "action": "本周对外贸类小微客户逐户提示汇率锁价与远期结售汇，续贷方案前置报批，避免到期集中。",
+        "tag": [
+          "信贷",
+          "客群"
+        ],
+        "segments": [
+          "普惠小微贷款客户"
+        ],
+        "sources": [
+          {
+            "title": "U.S. crude oil tops $100 again – last seen in May – as market braces for prolonged Iran war",
+            "url": "https://www.cnbc.com/2026/09/10/iran-us-oil-hormuz-supply-trump-military-brent-wti.html"
+          },
+          {
+            "title": "The likelihood of a Fed interest rate hike next week just got a lot higher",
             "url": "https://www.cnbc.com/2026/09/10/the-likelihood-of-a-fed-interest-rate-hike-next-week-just-got-a-lot-higher.html"
           }
         ]
       },
       {
-        "topic": "外贸客群跨境结算",
-        "impact": "中美就300亿美元对等降税框架磋商、人民币国际化推进，广州外贸企业主对结汇节奏与跨境结算工具需求上升。",
-        "action": "本周梳理外贸企业主名单，逐户沟通跨境人民币结算与贸易融资方案，并顺势跟进其家庭财富与代发需求。",
-        "tag": [
-          "客群",
-          "政银合作"
-        ],
-        "segments": [
-          "中高端客群(过亿资产)"
-        ],
-        "sources": [
-          {
-            "title": "商务部：中美正就300亿美元对等降税框架安排进行磋商",
-            "url": "https://finance.eastmoney.com/a/202609103870513919.html"
-          },
-          {
-            "title": "央行副行长陆磊：总体看，人民币国际化是一个持续稳步的发展过程，是不可逆的大势",
-            "url": "https://finance.sina.com.cn/jryx/bank/2026-09-10/doc-iniritau7688251.shtml"
-          }
-        ]
-      },
-      {
-        "topic": "小微回款治理落地",
-        "impact": "国办发文治理中小企业回款难，账期与票据规范趋严，广州小微与个体工商户现金流或阶段性缓解，续贷需求上升。",
-        "action": "本周排查存量小微客群的账期与票据情况，对回款改善客户提前安排续贷与额度调整，同步提示应付端资金安排。",
+        "topic": "本地同业资产质量分化",
+        "impact": "广州农商行、东莞农商行中报不良率偏高，区域零售与小微信贷客群的风险暴露可能加快显性化。",
+        "action": "风控与普惠团队本月对存量经营贷做一轮行业集中度排查，对高风险行业提前调整定价与额度。",
         "tag": [
           "信贷",
           "监管"
@@ -94,36 +143,32 @@
         ],
         "sources": [
           {
-            "title": "国务院办公厅关于加强中小企业回款难问题治理有关工作的通知",
-            "url": "https://www.gov.cn/zhengce/content/202609/content_7080627.htm"
+            "title": "【读财报】上市农商行中报：渝农商行、沪农商行利润领跑，广州农商行、东莞农商行不良率偏高",
+            "url": "https://www.cnfin.com/yw-lb/detail/20260911/4468386_1.html"
           }
         ]
       },
       {
-        "topic": "广州产业项目融资",
-        "impact": "广州全力推进重大产业项目建设，项目融资与配套需求上行，上下游供应商与运营团队带来代发和经营贷机会。",
-        "action": "可提前梳理辖区项目及供应链名单，联合对公团队走访，主攻代发落地与上下游小微经营贷，本月完成首批对接。",
+        "topic": "核心区小地块升温",
+        "impact": "7家房企257轮竞价、溢价125%抢下迷你宅地，核心区小地块热度回升，按揭与开发贷机会随之跟进。",
+        "action": "住房金融团队跟踪后续出让地块与中标房企，提前准备按揭合作方案与开发贷授信预案。",
         "tag": [
-          "政银合作",
-          "代发"
-        ],
-        "segments": [
-          "普惠小微贷款客户"
+          "住房金融"
         ],
         "sources": [
           {
-            "title": "广州全力推进重大产业项目建设（“十五五”开好局起好步）",
-            "url": "https://news.dayoo.com/guangzhou/202609/10/139995_55002121.htm"
+            "title": "溢价125%，7家房企抢257轮！“迷你宅地”成土拍市场新顶流丨地产观潮",
+            "url": "https://www.stcn.com/article/detail/4180551.html"
           }
         ]
       }
     ],
-    "spoken_insights": "具备零售 A U M商机的，存款保险答疑稳存，央行明确存款保险保费不由储户承担，部分客户此前存在误解，网点若应答口径不一容易引发存款搬家。。网点可本周统一答疑话术，对到期及大额存款客户主动澄清存款保险非商业保险，顺带推介分层存款与稳健理财。。此外，具备高端客户商机的，美联储下周议息，交易员把下周美联储加息概率推高至70%，美元资产波动加大，持有美元存款与外币理财的中高端客户配置需再平衡。。私行团队这几天可主动联系有外币资产的客户，提示结售汇窗口与汇率风险，配套短久期美元产品与对冲方案。。同时，具备高端客户商机的，外贸客群跨境结算，中美就300亿美元对等降税框架磋商、人民币国际化推进，广州外贸企业主对结汇节奏与跨境结算工具需求上升。。本周梳理外贸企业主名单，逐户沟通跨境人民币结算与贸易融资方案，并顺势跟进其家庭财富与代发需求。。另一条值得关注，具备普惠小微商机的，小微回款治理落地，国办发文治理中小企业回款难，账期与票据规范趋严，广州小微与个体工商户现金流或阶段性缓解，续贷需求上升。。本周排查存量小微客群的账期与票据情况，对回款改善客户提前安排续贷与额度调整，同步提示应付端资金安排。。最后，具备普惠小微商机的，广州产业项目融资，广州全力推进重大产业项目建设，项目融资与配套需求上行，上下游供应商与运营团队带来代发和经营贷机会。。可提前梳理辖区项目及供应链名单，联合对公团队走访，主攻代发落地与上下游小微经营贷，本月完成首批对接。。",
+    "spoken_insights": "具备零售 A U M商机的，理财信披口径统一，渠道披露存在温差，客户比价更直接；叠加理财公司争补外汇与衍生品资格，产品线扩容的同时风险适配要求上升。。财富条线本周先统一净值与费率的披露口径和解释话术，同步梳理代销准入与客户风险测评的匹配流程。。此外，具备零售 A U M商机的，贵金属客户浮盈回吐，黄金白银与铜价同步跳水，前期追高贵金属的客户浮盈快速回吐，持仓体验与投诉风险同步上升。。本周对贵金属持仓客户做一轮主动回访，引导部分资金转向稳健理财与定投组合，压降单一资产敞口。。同时，具备高端客户商机的，跨境资金留存窗口，境外主体持有境内人民币资产超11万亿，叠加数字服务出海提速，企业主跨境结算与资金沉淀需求上行。。私行与跨境团队本月梳理出海企业主名单，跟进跨境结算、汇兑避险与家族信托的一站式方案。。另一条值得关注，具备高端客户商机的，重大产业项目代发，广州全力推进重大产业项目建设，项目方与上下游企业的代发、供应链融资及员工综合金融需求集中释放。。本周对接发改与重点园区项目名单，锁定新开工项目的代发与员工开卡，同步跟进核心企业上下游客群。。另外，具备普惠小微商机的，外贸小微成本对冲，美原油再破100美元、美联储下周加息概率升至70%，外贸与航运类小微客户的成本与汇兑敞口同时放大。。本周对外贸类小微客户逐户提示汇率锁价与远期结售汇，续贷方案前置报批，避免到期集中。。此外，具备普惠小微商机的，本地同业资产质量分化，广州农商行、东莞农商行中报不良率偏高，区域零售与小微信贷客群的风险暴露可能加快显性化。。风控与普惠团队本月对存量经营贷做一轮行业集中度排查，对高风险行业提前调整定价与额度。。最后，核心区小地块升温，7家房企257轮竞价、溢价125%抢下迷你宅地，核心区小地块热度回升，按揭与开发贷机会随之跟进。。住房金融团队跟踪后续出让地块与中标房企，提前准备按揭合作方案与开发贷授信预案。。",
     "risk": {
       "topic": "监管整治高息高返",
-      "evidence": "金融监管总局丛林明确大力整治价格战、违规返佣与「高息高返」，信用卡与消费贷营销模式受到约束。",
-      "impact": "信用卡分期、消费贷返佣与财富代销费率面临复核，个贷与财富条线的营销成本口径可能抬升，靠返佣冲量的团队需改打法。",
-      "action": "建议零售与信用卡条线本周复核渠道返佣条款，风控与合规同步排查高息高返话术，对存量分期活动做一次定价自查。",
+      "evidence": "金融监管总局丛林明确大力整治“价格战”、违规返佣与“高息高返”，信用卡与消费贷的营销模式受到直接约束。",
+      "impact": "信用卡分期与消费贷的返佣、权益补贴模式面临调整，财富代销的销售激励与费用列支也需同步复核。",
+      "action": "零售与信用卡部门本周复核营销方案中的返佣和费用条款，风控部把高息高返列入常态化检查清单。",
       "source": "T1",
       "sources": [
         {
@@ -132,22 +177,22 @@
         }
       ]
     },
-    "spoken_risk": "今天有 1 个需要警惕：监管整治高息高返，信用卡分期、消费贷返佣与财富代销费率面临复核，个贷与财富条线的营销成本口径可能抬升，靠返佣冲量的团队需改打法。。建议零售与信用卡条线本周复核渠道返佣条款，风控与合规同步排查高息高返话术，对存量分期活动做一次定价自查。。",
+    "spoken_risk": "今天有 1 个需要警惕：监管整治高息高返，信用卡分期与消费贷的返佣、权益补贴模式面临调整，财富代销的销售激励与费用列支也需同步复核。。零售与信用卡部门本周复核营销方案中的返佣和费用条款，风控部把高息高返列入常态化检查清单。。",
     "guangdong_ipo": {
-      "spoken": "广东微电新能源股份有限公司昨日向港交所递交主板上市申请，属广东本土新能源电池企业，若顺利推进将是又一家赴港融资的粤企，员工股权激励与境外资金安排可以提前跟踪。"
+      "spoken": "广东微电新能源递交港交所主板上市申请，这家广东新能源电池企业境外融资步伐加快，跨境结算、员工股权激励和资金归集值得纳入私行与公司联动名单。"
     }
   },
   "stock_recap": {
     "us": {
-      "overview": "三大指数集体收跌，道指跌0.63%，油价破百与联储加息预期施压。",
+      "overview": "三大股指集体收跌，道指跌0.60%，CPI前加息押注升温压制盘面。",
       "sectors": [
-        "能源股走强，美油重回100美元上方，伊朗战事或延长推升油价。",
-        "利率敏感板块承压，联储下周加息概率上升，美债抛售压制估值。",
-        "苹果调整iPhone发布节奏，为七年来最大变动，市场关注CEO首秀。",
-        "AI概念波动，OpenAI、Anthropic研究人员呼吁放缓AI，警告声升温。",
-        "生物科技受关注，Arcturus称后续有数据催化剂待公布。"
+        "甲骨文云基础设施收入同比翻倍以上、业绩超预期，股价小幅走高，成科技股少数亮点。",
+        "CPI通胀报告公布在即，市场聚焦数据对下周美联储利率决议的指引。",
+        "比特币跌至7.71万美元，PPI数据推升加息押注，油价同步跳涨。",
+        "债市遭抛售、股市走强，再平衡策略被机构视为当前合适选择。",
+        "德州证券交易所从纽交所手中拿下首批主板股票上市，交易格局生变。"
       ],
-      "spoken": "美股三大指数集体收跌，道指跌0.63%，纳指跌0.56%，标普跌0.54%。油价重回100美元上方，能源股走强；联储加息预期升温，利率敏感板块承压；苹果调整iPhone发布节奏，AI放缓呼声升温。",
+      "spoken": "美股三大指数集体收跌，道指跌0.60%，纳指跌0.65%，标普跌0.58%。关键压力来自加息预期，PPI数据推升了市场对下周美联储加息的押注。板块上，甲骨文因云基础设施收入翻倍以上、业绩超预期，股价小幅走高，是科技股里少见的亮点。比特币跌到7.71万美元，油价跳涨。市场正等待周五CPI通胀报告。",
       "meta": {
         "source": "CNBC Top Stories",
         "crossCheck": "新浪行情",
@@ -156,18 +201,18 @@
       "indices": [
         {
           "name": "道琼斯",
-          "value": "52049.48",
-          "changePct": "-0.63%"
+          "value": "52064.10",
+          "changePct": "-0.60%"
         },
         {
           "name": "纳斯达克",
-          "value": "26105.47",
-          "changePct": "-0.56%"
+          "value": "26081.72",
+          "changePct": "-0.65%"
         },
         {
           "name": "标普500",
-          "value": "7594.76",
-          "changePct": "-0.54%"
+          "value": "7591.70",
+          "changePct": "-0.58%"
         }
       ]
     },
@@ -180,7 +225,7 @@
       "meta": {
         "source": "东方财富",
         "crossCheck": "新浪行情",
-        "date": "2026-09-10"
+        "date": "2026-09-11"
       },
       "indices": [
         {
@@ -211,7 +256,7 @@
       "meta": {
         "source": "新浪财经·港股",
         "crossCheck": "新浪行情",
-        "date": "2026-09-10"
+        "date": "2026-09-11"
       },
       "sourceReport": {
         "title": "港股收评：恒指跌1.27% 科指跌2.04% 科网股普跌 智谱跌超10%",
@@ -247,13 +292,14 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "09/10",
-      "summary": "国新办举行新闻发布会，央行、证监会等部门就最新政策发声，媒体对其内容进行了梳理。",
+      "summary": "国新办举行新闻发布会，央行、证监会等部门官员出席并就相关问题作出表态，东方财富对发布会要点进行了梳理。",
       "importance": 2,
       "rank": 0,
       "tags": [
         "政策",
         "监管",
-        "A股"
+        "央行",
+        "宏观"
       ],
       "locale": "national",
       "market": "a-share"
@@ -264,30 +310,13 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "09/10",
-      "summary": "《金融强国建设“十五五”规划》正式出台，属于金融领域的中长期顶层规划文件。",
+      "summary": "《金融强国建设“十五五”规划》正式出台。",
       "importance": 3,
       "rank": 0,
       "tags": [
         "政策",
-        "金融改革",
-        "A股"
-      ],
-      "locale": "national",
-      "market": "a-share"
-    },
-    {
-      "url": "https://finance.eastmoney.com/a/202609103869727256.html",
-      "title_cn": "15999元起售！苹果首款折叠屏手机iPhoneDuo亮相10月下旬开卖",
-      "source": "东方财富",
-      "source_type": "media",
-      "date": "09/10",
-      "summary": "苹果首款折叠屏手机iPhone Duo亮相，起售价15999元，计划于10月下旬开卖。",
-      "importance": 2,
-      "rank": 0,
-      "tags": [
-        "消费电子",
-        "苹果",
-        "折叠屏"
+        "金融监管",
+        "十五五"
       ],
       "locale": "national",
       "market": "a-share"
@@ -298,30 +327,46 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "09/10",
-      "summary": "北京发布文件支持商业航天发展，相关概念股受到机构关注。",
+      "summary": "北京发布相关文件，商业航天迎来政策利好，报道称机构关注多只超跌概念股。",
       "importance": 2,
       "rank": 0,
       "tags": [
-        "商业航天",
         "政策",
-        "A股"
+        "商业航天",
+        "航天"
       ],
       "locale": "national",
       "market": "a-share"
     },
     {
-      "url": "https://finance.eastmoney.com/a/202609103870027784.html",
-      "title_cn": "贝森特亮出的“救市底牌”如何成了一张惊吓市场的“烂牌”？",
+      "url": "https://finance.eastmoney.com/a/202609103870749051.html",
+      "title_cn": "全线跳水！欧洲央行重大宣布加息25个基点！",
       "source": "东方财富",
       "source_type": "media",
       "date": "09/10",
-      "summary": "有报道评论称，美国财长贝森特推出的稳市举措未获市场认可，反而引发市场担忧情绪。",
+      "summary": "欧洲央行宣布加息25个基点，市场随之出现全线跳水。",
+      "importance": 3,
+      "rank": 0,
+      "tags": [
+        "欧洲央行",
+        "货币政策",
+        "海外"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202609103870719357.html",
+      "title_cn": "9月10日晚间沪深上市公司重大事项公告最新快递",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "09/10",
+      "summary": "汇总9月10日晚间沪深两市上市公司披露的重大事项公告。",
       "importance": 1,
       "rank": 0,
       "tags": [
-        "美股",
-        "宏观",
-        "市场情绪"
+        "公告",
+        "上市公司"
       ],
       "locale": "national",
       "market": "a-share"
@@ -332,7 +377,7 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "09/10",
-      "summary": "A股三大指数集体收跌，全市场成交额不足1.7万亿元，银行板块逆市走强。",
+      "summary": "A股三大指数收跌，全市场成交额不足1.7万亿元，银行板块逆市走强。",
       "importance": 2,
       "rank": 0,
       "tags": [
@@ -344,51 +389,53 @@
       "market": "a-share"
     },
     {
+      "url": "https://finance.eastmoney.com/a/202609103870027784.html",
+      "title_cn": "贝森特亮出的“救市底牌”如何成了一张惊吓市场的“烂牌”？",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "09/10",
+      "summary": "文章讨论贝森特提出的“救市底牌”未能安抚市场、反而加剧市场担忧的情况。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "美国财政",
+        "市场情绪",
+        "海外"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
       "url": "https://finance.eastmoney.com/a/202609103869944186.html",
       "title_cn": "重磅发布会今日举行央行、金融监管总局、证监会、外汇局等出席",
       "source": "东方财富",
       "source_type": "media",
       "date": "09/10",
-      "summary": "央行、金融监管总局、证监会、外汇局等出席的重磅发布会于当日举行。",
+      "summary": "重磅发布会于当日举行，央行、金融监管总局、证监会、外汇局等部门出席。",
       "importance": 2,
       "rank": 0,
       "tags": [
         "政策",
         "监管",
-        "A股"
+        "发布会"
       ],
       "locale": "national",
       "market": "a-share"
     },
     {
-      "url": "https://finance.eastmoney.com/a/202609103870719357.html",
-      "title_cn": "9月10日晚间沪深上市公司重大事项公告最新快递",
+      "url": "https://finance.eastmoney.com/a/202609103870757564.html",
+      "title_cn": "能源价格重新“点火”美国8月PPI略超预期加剧市场焦虑情绪",
       "source": "东方财富",
       "source_type": "media",
       "date": "09/10",
-      "summary": "汇总9月10日晚间沪深两市上市公司发布的重大事项公告。",
-      "importance": 1,
-      "rank": 0,
-      "tags": [
-        "公告",
-        "A股"
-      ],
-      "locale": "national",
-      "market": "a-share"
-    },
-    {
-      "url": "https://finance.eastmoney.com/a/202609103870749051.html",
-      "title_cn": "全线跳水！欧洲央行重大宣布加息25个基点！",
-      "source": "东方财富",
-      "source_type": "media",
-      "date": "09/10",
-      "summary": "欧洲央行宣布加息25个基点，消息公布后市场出现全线跳水行情。",
+      "summary": "美国8月PPI略超市场预期，能源价格重新上涨，市场焦虑情绪有所加剧。",
       "importance": 2,
       "rank": 0,
       "tags": [
-        "欧央行",
-        "加息",
-        "海外市场"
+        "美国经济",
+        "通胀",
+        "PPI",
+        "能源"
       ],
       "locale": "national",
       "market": "a-share"
@@ -399,13 +446,13 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "09/10",
-      "summary": "商务部表示，中美正就300亿美元规模的对等降税框架安排进行磋商。",
+      "summary": "商务部表示，中美正就300亿美元对等降税框架安排进行磋商。",
       "importance": 3,
       "rank": 0,
       "tags": [
         "中美关系",
         "关税",
-        "贸易"
+        "政策"
       ],
       "locale": "national",
       "market": "a-share"
@@ -416,13 +463,14 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "09/10",
-      "summary": "美国存储类股票逆势大涨，高盛称行业最坏时期已过去，资金或正重新进场。",
+      "summary": "美国存储类股票逆势大涨，高盛表示行业最坏时期已过去，资金可能正在重新进场。",
       "importance": 2,
       "rank": 0,
       "tags": [
-        "存储",
         "半导体",
-        "美股"
+        "存储",
+        "美股",
+        "机构观点"
       ],
       "locale": "national",
       "market": "a-share"
@@ -433,7 +481,7 @@
       "source": "东方财富",
       "source_type": "media",
       "date": "09/10",
-      "summary": "华尔街机构讨论美股年底走势，有观点认为有望挑战“8000大关”，但短期风险上升。",
+      "summary": "华尔街机构对美股年底走势发表看法，认为指数有望迈上8000点，但短期风险上升。",
       "importance": 1,
       "rank": 0,
       "tags": [
@@ -462,81 +510,147 @@
       "market": "hk"
     },
     {
-      "url": "https://finance.sina.com.cn/stock/hkstock/hshknews/2026-09-10/doc-inirkcsq2704929.shtml",
-      "title_cn": "资金复盘 | 北水加仓腾讯超7亿港元！大举抛售智谱近10亿港元",
+      "url": "https://finance.sina.com.cn/stock/hkstock/ggscyd/2026-09-11/doc-inirkywm2211311.shtml",
+      "title_cn": "天安获主席李成辉增持9.8万股 每股作价约3.35港元",
       "source": "新浪财经·港股",
       "source_type": "media",
-      "date": "09/10",
-      "summary": "资金复盘显示，南向资金当日加仓腾讯超7亿港元，同时抛售智谱近10亿港元。",
-      "importance": 2,
-      "rank": 0,
-      "tags": [
-        "港股",
-        "南向资金",
-        "腾讯"
-      ],
-      "locale": "national",
-      "market": "hk"
-    },
-    {
-      "url": "https://finance.sina.com.cn/stock/hkstock/2026-09-10/doc-iniriaey5368929.shtml",
-      "title_cn": "地缘冲突推升油价！港股石油股盘初短线拉升 中海油涨超2%",
-      "source": "新浪财经·港股",
-      "source_type": "media",
-      "date": "09/10",
-      "summary": "受地缘冲突推升油价影响，港股石油股盘初短线拉升，中国海洋石油涨超2%。",
-      "importance": 2,
-      "rank": 0,
-      "tags": [
-        "能源",
-        "石油",
-        "港股"
-      ],
-      "locale": "national",
-      "market": "hk"
-    },
-    {
-      "url": "https://finance.sina.com.cn/stock/hkstock/2026-09-10/doc-iniriaey5374566.shtml",
-      "title_cn": "裁员风波，如何影响星宇股份的港股上市与全球化进程？",
-      "source": "新浪财经·港股",
-      "source_type": "media",
-      "date": "09/10",
-      "summary": "报道关注星宇股份裁员风波对公司港股上市进程与全球化布局的影响。",
-      "importance": 1,
-      "rank": 0,
-      "tags": [
-        "汽车零部件",
-        "港股IPO",
-        "公司治理"
-      ],
-      "locale": "national",
-      "market": "hk"
-    },
-    {
-      "url": "https://finance.sina.com.cn/roll/2026-09-10/doc-inirhezh8793109.shtml",
-      "title_cn": "港股何时迎来大行情？上市公司高管、资管人士共论估值提升、南向资金与AI机遇",
-      "source": "新浪财经·港股",
-      "source_type": "media",
-      "date": "09/10",
-      "summary": "上市公司高管与资管人士就港股估值提升、南向资金与AI机遇等话题展开讨论。",
+      "date": "09/11",
+      "summary": "天安获主席李成辉增持9.8万股，每股作价约3.35港元。",
       "importance": 1,
       "rank": 0,
       "tags": [
         "港股",
-        "估值",
-        "AI"
+        "股东增持"
       ],
       "locale": "national",
       "market": "hk"
     },
     {
-      "url": "https://finance.sina.com.cn/stock/observe/2026-09-10/doc-inirixkq5309073.shtml",
-      "title_cn": "创始人家族减持27.5亿港元 海底捞股价发酵两日跌近13% 增长命题再遭拷问",
+      "url": "https://finance.sina.com.cn/stock/hkstock/ggscyd/2026-09-11/doc-inirkywe7180255.shtml",
+      "title_cn": "中国建筑国际遭执行董事孔祥兆减持11万股 每股作价8.4港元",
       "source": "新浪财经·港股",
       "source_type": "media",
-      "date": "09/10",
-      "summary": "海底捞创始人家族减持27.5亿港元，公司股价两日内累计下跌近13%，市场关注其增长前景。",
+      "date": "09/11",
+      "summary": "中国建筑国际遭执行董事孔祥兆减持11万股，每股作价8.4港元。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "港股",
+        "股东减持",
+        "建筑"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://finance.sina.com.cn/stock/hkstock/ggscyd/2026-09-11/doc-inirkywi5437065.shtml",
+      "title_cn": "海底捞遭SP NP LTD减持2.59亿股 每股作价10.62港元",
+      "source": "新浪财经·港股",
+      "source_type": "media",
+      "date": "09/11",
+      "summary": "海底捞遭SP NP LTD减持2.59亿股，每股作价10.62港元。",
       "importance": 2,
+      "rank": 0,
+      "tags": [
+        "港股",
+        "股东减持",
+        "餐饮"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://finance.sina.com.cn/stock/hkstock/ggscyd/2026-09-11/doc-inirkywe7180707.shtml",
+      "title_cn": "汇彩控股获董事会主席陈捷三日增持196.8万股 涉资约181.11万港元",
+      "source": "新浪财经·港股",
+      "source_type": "media",
+      "date": "09/11",
+      "summary": "汇彩控股获董事会主席陈捷连续三日增持196.8万股，涉资约181.11万港元。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "港股",
+        "股东增持"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://finance.sina.com.cn/stock/hkstock/ggscyd/2026-09-11/doc-inirkywe7180021.shtml",
+      "title_cn": "申万宏源遭易方达基金减持619.04万股 每股作价约2.55港元",
+      "source": "新浪财经·港股",
+      "source_type": "media",
+      "date": "09/11",
+      "summary": "申万宏源遭易方达基金减持619.04万股，每股作价约2.55港元。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "港股",
+        "券商",
+        "股东减持"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://finance.sina.com.cn/stock/hkstock/ggscyd/2026-09-11/doc-inirkywi5436567.shtml",
+      "title_cn": "郑州银行遭弘康人寿保险减持260万股 每股作价约0.92港元",
+      "source": "新浪财经·港股",
+      "source_type": "media",
+      "date": "09/11",
+      "summary": "郑州银行遭弘康人寿保险减持260万股，每股作价约0.92港元。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "港股",
+        "银行",
+        "股东减持"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://finance.sina.com.cn/stock/hkstock/ggscyd/2026-09-11/doc-inirkywm2208629.shtml",
+      "title_cn": "凯莱英遭南方基金减持1.67万股 每股作价约134.09港元",
+      "source": "新浪财经·港股",
+      "source_type": "media",
+      "date": "09/11",
+      "summary": "凯莱英遭南方基金减持1.67万股，每股作价约134.09港元。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "港股",
+        "医药",
+        "股东减持"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://finance.sina.com.cn/stock/hkstock/ggscyd/2026-09-11/doc-inirkywe2346952.shtml",
+      "title_cn": "太平洋航运遭Pzena Investment Management, LLC减持771.2万股 每股作价4.28港元",
+      "source": "新浪财经·港股",
+      "source_type": "media",
+      "date": "09/11",
+      "summary": "太平洋航运遭Pzena Investment Management减持771.2万股，每股作价4.28港元。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "港股",
+        "航运",
+        "股东减持"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://finance.sina.com.cn/stock/hkstock/ggscyd/2026-09-11/doc-inirkywm2207623.shtml",
+      "title_cn": "东鹏饮料遭BlackRock, Inc.减持约32.27万股 每股作价约107.03港元",
+      "source": "新浪财经·港股",
+      "source_type": "media",
+      "date": "09/11",
+      "summary": "东鹏饮料遭贝莱德减持约32.27万股，每股作价约107.03港元。",
+      "importance": 1,
       "rank": 0,
       "tags": [
         "港股",
@@ -547,137 +661,72 @@
       "market": "hk"
     },
     {
-      "url": "https://finance.sina.com.cn/stock/hkstock/hkgg/2026-09-10/doc-iniritaq8599312.shtml",
-      "title_cn": "里昂：中国快递业进入成熟阶段 极兔速递-W(01519)为行业首选",
+      "url": "https://finance.sina.com.cn/stock/hkstock/ggscyd/2026-09-11/doc-inirkywi5434485.shtml",
+      "title_cn": "宁德时代遭BlackRock, Inc.减持约49.35万股 每股作价约570.14港元",
       "source": "新浪财经·港股",
       "source_type": "media",
-      "date": "09/10",
-      "summary": "里昂报告认为中国快递业已进入成熟阶段，将极兔速递-W列为行业首选。",
-      "importance": 1,
-      "rank": 0,
-      "tags": [
-        "快递",
-        "券商研报",
-        "港股"
-      ],
-      "locale": "national",
-      "market": "hk"
-    },
-    {
-      "url": "https://finance.sina.com.cn/stock/hkstock/hkgg/2026-09-10/doc-iniritas5346024.shtml",
-      "title_cn": "花旗：维持百度集团-SW(09888)“买入”评级 估值目前具有吸引力",
-      "source": "新浪财经·港股",
-      "source_type": "media",
-      "date": "09/10",
-      "summary": "花旗维持百度集团-SW“买入”评级，认为其当前估值具有吸引力。",
-      "importance": 1,
-      "rank": 0,
-      "tags": [
-        "券商研报",
-        "百度",
-        "港股"
-      ],
-      "locale": "national",
-      "market": "hk"
-    },
-    {
-      "url": "https://finance.sina.com.cn/stock/hkstock/hkgg/2026-09-10/doc-iniritaq8573461.shtml",
-      "title_cn": "小摩：料申洲国际(02313)下半年订单恢复 降目标价至60港元",
-      "source": "新浪财经·港股",
-      "source_type": "media",
-      "date": "09/10",
-      "summary": "摩根大通预计申洲国际下半年订单恢复，同时将目标价下调至60港元。",
-      "importance": 1,
-      "rank": 0,
-      "tags": [
-        "券商研报",
-        "纺织服装",
-        "港股"
-      ],
-      "locale": "national",
-      "market": "hk"
-    },
-    {
-      "url": "https://finance.sina.com.cn/stock/hkstock/hkgg/2026-09-10/doc-iniritas5322758.shtml",
-      "title_cn": "美银证券：领展房产基金(00823)估值吸引兼具潜在催化剂 维持“买入”评级",
-      "source": "新浪财经·港股",
-      "source_type": "media",
-      "date": "09/10",
-      "summary": "美银证券认为领展房产基金估值具吸引力且存在潜在催化剂，维持“买入”评级。",
-      "importance": 1,
-      "rank": 0,
-      "tags": [
-        "券商研报",
-        "REITs",
-        "港股"
-      ],
-      "locale": "national",
-      "market": "hk"
-    },
-    {
-      "url": "https://finance.sina.com.cn/stock/hkstock/hkgg/2026-09-10/doc-iniritau7658657.shtml",
-      "title_cn": "花旗：对京东集团-SW(09618)物理AI策略持乐观态度 维持“买入”评级",
-      "source": "新浪财经·港股",
-      "source_type": "media",
-      "date": "09/10",
-      "summary": "花旗对京东集团-SW的物理AI策略持乐观态度，维持“买入”评级。",
-      "importance": 1,
-      "rank": 0,
-      "tags": [
-        "券商研报",
-        "京东",
-        "AI"
-      ],
-      "locale": "national",
-      "market": "hk"
-    },
-    {
-      "url": "https://finance.sina.com.cn/stock/hkstock/hkgg/2026-09-10/doc-iniritaq8528552.shtml",
-      "title_cn": "花旗：维持五矿资源(01208)“买入”评级 目标价上调至12港元",
-      "source": "新浪财经·港股",
-      "source_type": "media",
-      "date": "09/10",
-      "summary": "花旗维持五矿资源“买入”评级，并将目标价上调至12港元。",
-      "importance": 1,
-      "rank": 0,
-      "tags": [
-        "券商研报",
-        "有色金属",
-        "港股"
-      ],
-      "locale": "national",
-      "market": "hk"
-    },
-    {
-      "url": "https://www.cnbc.com/2026/09/10/apple-makes-biggest-change-to-iphone-release-cadence-in-7-years.html",
-      "title_cn": "Apple makes biggest change to iPhone release cadence in 7 years in Ternus' first showcase as CEO",
-      "source": "CNBC Top Stories",
-      "source_type": "media",
-      "date": "09/10",
-      "summary": "苹果在Ternus首次以CEO身份主持的发布会上调整iPhone发布节奏，为七年来最大变化。",
+      "date": "09/11",
+      "summary": "宁德时代遭贝莱德减持约49.35万股，每股作价约570.14港元。",
       "importance": 2,
       "rank": 0,
       "tags": [
-        "苹果",
-        "消费电子",
-        "美股"
+        "港股",
+        "锂电池",
+        "股东减持"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://finance.sina.com.cn/stock/hkstock/2026-09-10/doc-iniriaey5368929.shtml",
+      "title_cn": "地缘冲突推升油价！港股石油股盘初短线拉升 中海油涨超2%",
+      "source": "新浪财经·港股",
+      "source_type": "media",
+      "date": "09/10",
+      "summary": "受地缘冲突推升油价影响，港股石油股盘初短线拉升，中海油涨超2%。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "港股",
+        "能源",
+        "石油",
+        "地缘"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/09/10/oracle-orcl-q1-earnings-report-2027.html",
+      "title_cn": "Oracle's stock edges up on earnings beat as cloud infrastructure revenue more than doubles",
+      "source": "CNBC Top Stories",
+      "source_type": "media",
+      "date": "09/10",
+      "summary": "甲骨文财报超预期，云基础设施营收同比翻倍以上，股价小幅上涨。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "美股",
+        "财报",
+        "云计算",
+        "AI"
       ],
       "locale": "overseas",
       "market": "us"
     },
     {
-      "url": "https://www.cnbc.com/2026/09/10/the-likelihood-of-a-fed-interest-rate-hike-next-week-just-got-a-lot-higher.html",
-      "title_cn": "The likelihood of a Fed interest rate hike next week just got a lot higher",
+      "url": "https://www.cnbc.com/2026/09/10/fridays-cpi-inflation-report-is-even-more-important-than-usual-heres-what-to-expect.html",
+      "title_cn": "Friday's CPI inflation report is even more important than usual. Here's what to expect",
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "09/10",
-      "summary": "市场对美联储下周加息的预期概率大幅上升。",
+      "summary": "报道称周五公布的CPI通胀数据重要性高于往常，并给出市场预期要点。",
       "importance": 2,
       "rank": 0,
       "tags": [
-        "美联储",
-        "利率",
-        "宏观"
+        "美股",
+        "通胀",
+        "CPI",
+        "美联储"
       ],
       "locale": "overseas",
       "market": "us"
@@ -688,13 +737,30 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "09/10",
-      "summary": "特朗普提出的逾1万亿美元“分红”计划遭到两党议员立即反对。",
+      "summary": "特朗普提出的逾1万亿美元“分红”计划遭到两党立即反对。",
       "importance": 2,
       "rank": 0,
       "tags": [
-        "美国财政",
-        "政策",
-        "关税"
+        "美国政策",
+        "财政",
+        "政治"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/09/10/the-likelihood-of-a-fed-interest-rate-hike-next-week-just-got-a-lot-higher.html",
+      "title_cn": "The likelihood of a Fed interest rate hike next week just got a lot higher",
+      "source": "CNBC Top Stories",
+      "source_type": "media",
+      "date": "09/10",
+      "summary": "报道称市场对下周美联储加息的预期概率大幅上升。",
+      "importance": 3,
+      "rank": 0,
+      "tags": [
+        "美联储",
+        "货币政策",
+        "利率"
       ],
       "locale": "overseas",
       "market": "us"
@@ -705,62 +771,48 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "09/10",
-      "summary": "主持人Kimmel表示，因FCC施压，其与参议员候选人Talarico的采访不会在ABC播出。",
+      "summary": "Kimmel表示，因FCC发出威胁，其对参议院候选人Talarico的采访将不会在ABC播出。",
       "importance": 1,
       "rank": 0,
       "tags": [
-        "传媒",
-        "监管",
-        "美国"
+        "美国",
+        "媒体",
+        "监管"
       ],
       "locale": "overseas",
       "market": "us"
     },
     {
-      "url": "https://www.cnbc.com/2026/09/10/north-carolina-senate-race-affordability-cooper-whatley.html",
-      "title_cn": "Affordability takes center stage in North Carolina’s pivotal Senate race",
+      "url": "https://www.cnbc.com/2026/09/10/elon-musk-boring-co-uae-valuation.html",
+      "title_cn": "Elon Musk's Boring Co. turns to Middle East for expansion in reaching $23 billion valuation",
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "09/10",
-      "summary": "生活成本可负担性成为北卡罗来纳州关键参议院选战的核心议题。",
+      "summary": "马斯克旗下Boring Co.转向中东扩张，公司估值达230亿美元。",
       "importance": 1,
       "rank": 0,
       "tags": [
-        "美国政治",
-        "选举"
+        "美股",
+        "公司",
+        "中东",
+        "估值"
       ],
       "locale": "overseas",
       "market": "us"
     },
     {
-      "url": "https://www.cnbc.com/2026/09/10/goldman-sachs-communacopia-technology-conference-ai-tech.html",
-      "title_cn": "Humans need to 'surf the wave' of AI rather than get swallowed by it, Chesky says at Communacopia",
+      "url": "https://www.cnbc.com/2026/09/10/openai-chatgpt-for-financial-services-targets-work-of-junior-bankers.html",
+      "title_cn": "OpenAI targets work of Wall Street junior bankers with new ChatGPT for Financial Services",
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "09/10",
-      "summary": "在Communacopia会议上，Chesky表示人类应“冲浪”AI浪潮而非被其吞没。",
-      "importance": 1,
-      "rank": 0,
-      "tags": [
-        "AI",
-        "科技会议"
-      ],
-      "locale": "overseas",
-      "market": "us"
-    },
-    {
-      "url": "https://www.cnbc.com/2026/09/10/ppi-inflation-report-august-2026.html",
-      "title_cn": "Wholesale prices rose 0.4% in August, as expected",
-      "source": "CNBC Top Stories",
-      "source_type": "media",
-      "date": "09/10",
-      "summary": "美国8月生产者价格指数（PPI）环比上涨0.4%，与市场预期一致。",
+      "summary": "OpenAI推出面向金融服务的ChatGPT产品，目标指向华尔街初级银行家的工作。",
       "importance": 2,
       "rank": 0,
       "tags": [
-        "通胀",
-        "宏观",
-        "美股"
+        "AI",
+        "OpenAI",
+        "金融科技"
       ],
       "locale": "overseas",
       "market": "us"
@@ -771,8 +823,8 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "09/10",
-      "summary": "随着更多OpenAI、Anthropic研究人员加入呼吁，关于AI放缓的“灭绝”风险警告升温。",
-      "importance": 1,
+      "summary": "随着更多OpenAI、Anthropic研究人员加入呼吁，关于AI发展放缓及“灭绝”风险的警告升温。",
+      "importance": 2,
       "rank": 0,
       "tags": [
         "AI",
@@ -788,64 +840,66 @@
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "09/09",
-      "summary": "报道分析在债券抛售、股市走强的背景下，资产再平衡策略当前受到关注。",
+      "summary": "文章讨论在债券抛售与股市上涨并存背景下，资产再平衡策略的合理性。",
       "importance": 1,
       "rank": 0,
       "tags": [
+        "美股",
         "债券",
         "资产配置",
-        "美股"
+        "机构观点"
       ],
       "locale": "overseas",
       "market": "us"
     },
     {
-      "url": "https://www.cnbc.com/2026/09/10/iran-us-oil-hormuz-supply-trump-military-brent-wti.html",
-      "title_cn": "U.S. crude oil tops $100 again – last seen in May – as market braces for prolonged Iran war",
+      "url": "https://www.cnbc.com/2026/09/10/jim-cramer-key-force-driving-stocks-right-now.html",
+      "title_cn": "Jim Cramer says this is the key force driving stocks right now",
       "source": "CNBC Top Stories",
       "source_type": "media",
       "date": "09/10",
-      "summary": "美国原油价格再度突破100美元/桶，为5月以来首次，市场为伊朗战争长期化做准备。",
-      "importance": 3,
+      "summary": "Jim Cramer就当前推动股市运行的关键力量发表看法。",
+      "importance": 1,
       "rank": 0,
       "tags": [
-        "原油",
-        "能源",
-        "地缘冲突"
+        "美股",
+        "机构观点",
+        "大盘"
       ],
       "locale": "overseas",
       "market": "us"
     },
     {
-      "url": "https://www.investing.com/news/economic-indicators/crude-oil-inventories-decline-less-than-expected-signaling-demand-shift-93CH-4896486",
-      "title_cn": "Crude oil inventories decline less than expected, signaling demand shift",
+      "url": "https://www.investing.com/news/stock-market-news/texas-stock-exchange-captures-first-primary-equity-market-listings-from-nyse-4897004",
+      "title_cn": "Texas Stock Exchange captures first primary equity market listings from NYSE",
       "source": "Investing.com News",
       "source_type": "media",
       "date": "09/10",
-      "summary": "美国原油库存降幅小于预期，被解读为需求端出现变化。",
-      "importance": 1,
+      "summary": "德克萨斯证券交易所获得首批从纽交所转来的主要股票上市。",
+      "importance": 2,
       "rank": 0,
       "tags": [
-        "原油",
-        "库存",
-        "能源"
+        "美股",
+        "交易所",
+        "上市"
       ],
       "locale": "overseas",
       "market": "us"
     },
     {
-      "url": "https://www.investing.com/news/transcripts/arcturus-therapeutics-at-cantoral-global-healthcare-conference-data-catalysts-ahead-93CH-4896485",
-      "title_cn": "Arcturus Therapeutics at cantoral global healthcare conference: data catalysts ahead",
+      "url": "https://www.investing.com/news/cryptocurrency-news/bitcoin-down-to-783k-on-iran-jitters-higher-yields-4894954",
+      "title_cn": "Bitcoin dips to $77.1k as PPI data boosts Fed rate hike bets, oil prices jump",
       "source": "Investing.com News",
       "source_type": "media",
       "date": "09/10",
-      "summary": "Arcturus Therapeutics在Cantor全球医疗健康会议上介绍了后续数据催化剂安排。",
-      "importance": 1,
+      "summary": "比特币跌至7.71万美元，PPI数据推升美联储加息押注，同时油价跳涨。",
+      "importance": 2,
       "rank": 0,
       "tags": [
-        "医药",
-        "生物科技",
-        "美股"
+        "加密货币",
+        "比特币",
+        "美联储",
+        "通胀"
       ],
       "locale": "overseas",
       "market": "us"
