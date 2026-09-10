@@ -14,6 +14,8 @@ name: Daily Brief
 #     「一天最多发布一次」由 publish 步骤把控。
 #   - 并发检查：同 workflow 前一 run 仍在 in_progress 则本次直接跳过
 #     （用 Actions API 而非 concurrency —— concurrency 是 QUEUE 延迟，不是 SKIP）
+#   - workflow 级 concurrency（2026-09-10 增）：仅用于「串行化对 main 的收尾 push」，
+#     避免两个 run 同时 commit+push 互踩；skip 语义仍由上面的 API 检查负责。
 # workflow_dispatch 手动触发有四个开关（2026-09-03：notify_wechat / notify_serverchan
 # 已删除 —— 微信推送改为手动触发，见独立 workflow notify.yml）：
 #   - skip_ai: 跳过全部 LLM 调用（复用 data/article-history.json 里的 AI 摘要，
@@ -58,6 +60,13 @@ on:
 
 permissions:
   contents: write  # needed to push to gh-pages branch
+
+# 串行化整个 workflow：防止两个 run 同时修改 main（历史库/归档/publish-state）后
+# 收尾 push 互相踩踏（2026-09-10 #201 实锤：运行期间远端被推进 → 收尾 push 被拒）。
+# 注意 cancel-in-progress=false：不打断正在跑的 run（尤其不能打断手动触发的发布）。
+concurrency:
+  group: daily-brief
+  cancel-in-progress: false
 
 jobs:
   gate:
@@ -456,7 +465,21 @@ jobs:
             echo "历史文件与报告归档无变化，跳过提交"
           else
             git commit -m "chore: 更新历史缓存并归档报告 ($(date -u +%Y-%m-%d))"
-            git push
+            # 3) 推送（免疫并发，2026-09-10 #201 教训）：运行期间远端可能被人工 push
+            #    或其他 workflow 推进，checkout 是 fetch-depth: 1 → 裸 push 必被拒。
+            #    先 fetch + merge -X ours（冲突时保住本 run 生成的新产物），失败重试 3 次。
+            pushed=0
+            for i in 1 2 3; do
+              git fetch origin main --depth=200 || true
+              git merge -X ours --no-edit -m "chore: 合并远端 main（CI 收尾）" origin/main || true
+              if git push; then pushed=1; break; fi
+              echo "::warning::归档 push 第 $i 次失败，3s 后重试"
+              sleep 3
+            done
+            if [ "$pushed" != "1" ]; then
+              echo "::error::归档 push 连续 3 次失败"
+              exit 1
+            fi
           fi
 
       # 发布步骤：schedule 固定发布；手动触发按 publish input（false = 仅验证不发布）
@@ -501,7 +524,19 @@ jobs:
             echo "publish-state 无变化，跳过提交"
           else
             git commit -m "chore: 记录发布来源 (publish-state.json)"
-            git push
+            # 与归档步骤同样的并发免疫：先 fetch + merge -X ours，再 push，失败重试 3 次。
+            pushed=0
+            for i in 1 2 3; do
+              git fetch origin main --depth=200 || true
+              git merge -X ours --no-edit -m "chore: 合并远端 main（CI 收尾）" origin/main || true
+              if git push; then pushed=1; break; fi
+              echo "::warning::publish-state push 第 $i 次失败，3s 后重试"
+              sleep 3
+            done
+            if [ "$pushed" != "1" ]; then
+              echo "::error::publish-state push 连续 3 次失败"
+              exit 1
+            fi
           fi
 
       # ---------- 外发渠道已移除（2026-09-03，微信推送改为手动触发）----------
