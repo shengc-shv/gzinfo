@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "fetchedAt": "2026-09-11T01:01:23+08:00",
+  "generator": "local-ipo-sync",
+  "windowDays": 7,
+  "sourceCounts": {
+    "gd-csrc-tutoring": 2,
+    "gd-szse-audit": 2
+  },
+  "items": [
+    {
+      "title": "深圳硕日新能科技股份有限公司 (辅导备案) [深圳证监局]",
+      "url": "http://eid.csrc.gov.cn/mnt/storage/stock/pre_ipo/2026/9/11/PREIPO_F0101_V01_20260911_36475_Q/DD35B58BBA0C480484A834CBEF8E3C9A/关于深圳硕日新能科技股份有限公司首次公开发行股票并上市辅导备案报告.pdf",
+      "excerpt": "IPO辅导备案 | 辅导机构: 国泰海通证券股份有限公司 | 备案时间: 2026-01-23 | 状态: 辅导备案 | 报告: 辅导备案报告 | 披露: 2026-09-11",
+      "publishedAt": "2026-09-11",
+      "source": "证监会辅导企业(csrcfd)",
+      "sourceId": "gd-csrc-tutoring",
+      "region": "gd",
+      "registeredProvince": "广东",
+      "ipoStage": "stage-tutoring"
+    },
+    {
+      "title": "云英谷科技股份有限公司 (辅导备案) [深圳证监局]",
+      "url": "http://eid.csrc.gov.cn/mnt/storage/stock/pre_ipo/2026/9/11/PREIPO_F0101_V01_20260911_36477_Q/EEACC7A920D84847AAF437EAF633DEA6/关于云英谷科技股份有限公司首次公开发行股票并上市辅导备案报告.pdf",
+      "excerpt": "IPO辅导备案 | 辅导机构: 广发证券股份有限公司 | 备案时间: 2026-09-10 | 状态: 辅导备案 | 报告: 辅导备案报告 | 披露: 2026-09-11",
+      "publishedAt": "2026-09-11",
+      "source": "证监会辅导企业(csrcfd)",
+      "sourceId": "gd-csrc-tutoring",
+      "region": "gd",
+      "registeredProvince": "广东",
+      "ipoStage": "stage-tutoring"
+    },
+    {
+      "title": "博迈医疗：IPO问询中（拟创业板）",
+      "url": "https://www.szse.cn/listing/projectdynamic/ipo/index.html#prj1004223",
+      "excerpt": "注册地：广东｜保荐：中金公司｜受理：2025-12-24｜状态：已问询｜更新：2026-09-09",
+      "publishedAt": "2026-09-09",
+      "source": "深交所IPO审核动态",
+      "sourceId": "gd-szse-audit",
+      "region": "gd",
+      "registeredProvince": "广东",
+      "ipoStage": "stage-reviewing"
+    },
+    {
+      "title": "傲雷科技：IPO问询中（拟创业板）",
+      "url": "https://www.szse.cn/listing/projectdynamic/ipo/index.html#prj1004420",
+      "excerpt": "注册地：广东｜保荐：广发证券｜受理：2026-06-09｜状态：已问询｜更新：2026-09-07",
+      "publishedAt": "2026-09-07",
+      "source": "深交所IPO审核动态",
+      "sourceId": "gd-szse-audit",
+      "region": "gd",
+      "registeredProvince": "广东",
+      "ipoStage": "stage-reviewing"
+    }
+  ]
+}
