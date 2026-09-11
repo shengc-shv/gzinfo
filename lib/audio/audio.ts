@@ -65,21 +65,22 @@ export interface AudioSegment {
 }
 
 /**
- * 各章节口播字数上限（2026-09-03 用户拍板：总时长 3 分 00 秒 ~ 3 分 30 秒）。
+ * 各章节口播字数上限（2026-09-03 用户拍板 3:00~3:30；2026-09-11 上调上限至 4:10，为 7 条洞察 + 股市段并存腾预算）。
  *
  * 口径变化：
- *  - 原「全稿 ≤900 字 ≈ 3 分钟」→ 现「≤1092 字 ≈ 3 分 30 秒」（SCRIPT_MAX_CHARS）。
+ *  - 原「全稿 ≤900 字 ≈ 3 分钟」→「≤1092 字 ≈ 3 分 30 秒」→ 现「≤1300 字 ≈ 4 分 10 秒」（SCRIPT_MAX_CHARS = 250s × 5.2）。
  *  - stock 从 200 提到 520：原预算下三市场每家只摊到 66 字，卡片已提炼好的细分板块
  *    要点（涨跌表现/资金流向/异动原因）几乎全被截断，只剩一句大盘。
  *  - stock 520 是**硬上限**，实际额度由 assembleAudioScript 按「总目标 - 已用 - 收尾」
- *    自适应分配（非股市内容饱满时股市自动让位，保证整体不超 3 分 30 秒）。
+ *    自适应分配（非股市内容饱满时股市自动让位，保证整体不超 4 分 10 秒）。
  */
 export const AUDIO_SPEAK_LIMITS = {
   hero: 90,
   must_read: 250,
-  // 2026-09-09 上调：商机洞察配额扩至 7-8 条（AUM/高端/普惠各≤2 + 其他≤1），
-  // 旧值 190 会在句界截断到约 5 条，与卡面条数分叉。提至 340 使全量口播不被截断。
-  insights: 340,
+  // 2026-09-11 二次上调：渲染侧 SEG_CAP 已放宽到 2+2+2+1=7 条（AUM/高端/普惠各≤2 + 其他≤1），
+  // 实测旧值 340 字只能口播约 5 条（~68 字/条时），与卡面 7 条分叉。提至 520 字使典型 7 条全量口播；
+  // 冗长日（~120 字/条）仍按句界优雅截断尾部，不再出现稳定丢 2 条。
+  insights: 520,
   // 2026-09-10 上调：广东IPO 横滑卡/口播扩至 3 家（商机价值优先），
   // 3 家带属性口播约 102 字，旧值 100 会在第 3 家句界截断。提至 150 使全量口播不被截断。
   ipo: 150,
@@ -87,9 +88,9 @@ export const AUDIO_SPEAK_LIMITS = {
   stock: 520,
 } as const;
 
-/** 总时长目标窗口（秒）：3 分 00 秒 ~ 3 分 30 秒（2026-09-03 用户拍板）。 */
+/** 总时长目标窗口（秒）：3 分 00 秒 ~ 4 分 10 秒（2026-09-03 拍板 3:00~3:30；2026-09-11 上限扩至 4:10）。 */
 export const AUDIO_DURATION_MIN_SEC = 180;
-export const AUDIO_DURATION_MAX_SEC = 210;
+export const AUDIO_DURATION_MAX_SEC = 250; // 2026-09-11 上调：4 分 10 秒（原 3:30），为 7 条洞察 + 股市段并存腾出预算
 
 // v2（I-A 用户要求）：去掉"行长"等称呼；最后用"今天播报结束"作为收尾，不下命令。
 const OPENER = "早上好。";
@@ -107,8 +108,8 @@ const IPO_TRANSITION = "近两日有IPO动态的广东企业。";
 /** 中文 TTS 语速估算（字/秒）：腾讯 Speed=1（1.2 倍）实测约 5.3 字/秒，取 5.2 便于徽标时长贴近实际（2026-08-24 校准）。 */
 const CHARS_PER_SEC = 5.2;
 /**
- * 全稿字数硬上限 = 时长上限 × 语速（210s × 5.2 ≈ 1092 字）。
- * 股市段按「本上限 − 已拼内容 − 收尾语」的剩余额度自适应，故整稿不会超 3 分 30 秒。
+ * 全稿字数硬上限 = 时长上限 × 语速（250s × 5.2 ≈ 1300 字）。
+ * 股市段按「本上限 − 已拼内容 − 收尾语」的剩余额度自适应，故整稿不会超 4 分 10 秒。
  */
 export const SCRIPT_MAX_CHARS = Math.round(AUDIO_DURATION_MAX_SEC * CHARS_PER_SEC);
 /** 提示窗口：低于 2 分 50 秒或高于 3 分 35 秒才告警（给目标窗口留 10s 容差）。 */
@@ -428,7 +429,7 @@ export async function assembleAudioScript(
 
     // 预算：股市段是最后一个内容段，吃到「总时长上限 − 已拼内容 − 收尾语」的剩余额度，
     // 但不超过 AUDIO_SPEAK_LIMITS.stock。这样非股市内容饱满时股市自动让位，
-    // 整稿始终 ≤3 分 30 秒（2026-09-03 用户拍板）。
+    // 整稿始终 ≤4 分 10 秒（2026-09-03 拍板 3:30；2026-09-11 上限扩至 4:10）。
     const usedChars = parts.join("").length + stockIntro.length;
     const stockBudget = Math.max(
       0,
@@ -501,12 +502,12 @@ export async function assembleAudioScript(
 
   if (script.length > SCRIPT_MAX_CHARS) {
     console.warn(
-      `::warning:: 口播稿 ${script.length} 字，超出 ${SCRIPT_MAX_CHARS} 字上限（对应 3 分 30 秒）`,
+      `::warning:: 口播稿 ${script.length} 字，超出 ${SCRIPT_MAX_CHARS} 字上限（对应 4 分 10 秒）`,
     );
   }
   if (durationSec < DURATION_WARN_MIN_SEC || durationSec > DURATION_WARN_MAX_SEC) {
     console.warn(
-      `::warning:: 估算音频时长 ${durationSec}s 落在 ${AUDIO_DURATION_MIN_SEC}~${AUDIO_DURATION_MAX_SEC}s 目标窗口（3:00~3:30）之外，请检查口播稿字数`,
+      `::warning:: 估算音频时长 ${durationSec}s 落在 ${AUDIO_DURATION_MIN_SEC}~${AUDIO_DURATION_MAX_SEC}s 目标窗口（3:00~4:10）之外，请检查口播稿字数`,
     );
   }
 

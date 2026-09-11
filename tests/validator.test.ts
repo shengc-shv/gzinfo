@@ -183,8 +183,8 @@ test("R11 商机结构完整性：impact 为空 → block", () => {
   assert.ok(bs.some((i) => i.msg.includes("R11")));
 });
 
-test("R11 商机结构完整性：insights 超过 5 条 → block", () => {
-  const insights: ReportInsight[] = Array.from({ length: 6 }, (_, i) => ({
+test("R11 商机结构完整性：insights 超过 7 条 → block", () => {
+  const insights: ReportInsight[] = Array.from({ length: 8 }, (_, i) => ({
     topic: `话题${i}`,
     tags: ["信贷"],
     impact: "影响",
@@ -192,7 +192,7 @@ test("R11 商机结构完整性：insights 超过 5 条 → block", () => {
   }));
   const r = reportWith("biz_insight", [mk()], { insights });
   const bs = blocksOf(r, pool({ "https://x/a": RAW }));
-  assert.ok(bs.some((i) => i.msg.includes("R11") && i.msg.includes("上限 5")));
+  assert.ok(bs.some((i) => i.msg.includes("R11") && i.msg.includes("上限 7")));
 });
 
 test("R12 hero_line：缺失 → block", () => {

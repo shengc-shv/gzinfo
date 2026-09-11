@@ -306,11 +306,11 @@ function checkR10(report: DailyReport): Issue[] {
 function checkR11(report: DailyReport): Issue[] {
   const issues: Issue[] = [];
   const allowed = new Set<string>(ALLOWED_TAGS);
-  if (report.insights.length > 5) {
+  if (report.insights.length > 7) {
     issues.push({
       level: "block",
       where: "insights",
-      msg: `R11 商机结构完整性：insights 共 ${report.insights.length} 条（上限 5）`,
+      msg: `R11 商机结构完整性：insights 共 ${report.insights.length} 条（上限 7，与渲染侧 SEG_CAP 2+2+2+1 对齐）`,
     });
   }
   report.insights.forEach((it, i) => {
