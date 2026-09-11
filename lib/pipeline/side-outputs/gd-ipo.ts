@@ -122,6 +122,8 @@ function toReportItem(a: ArticleInput): ReportItem {
     ...(a.officialLabel ? { officialLabel: a.officialLabel } : {}),
     ...(a.gdBasis ? { gdBasis: a.gdBasis } : {}),
     ...(a.excerpt ? { ipoMeta: buildIpoMeta(title, a.excerpt) } : {}),
+    // IPO 卡片地域标记：注册城市（替代「粤」展示，不影响 tags）
+    ...(isGdIpoArticle(a) ? { ipoCity: ipoCityOf(a) } : {}),
     importance: 2,
     rank: 0,
     // 广东 IPO 打「粤」标（渲染徽章；口播识别用），全国 ipo 不打
@@ -248,6 +250,25 @@ export function companyNameOf(title: string): string {
 function parseRegisteredProvince(summary: string): string {
   const m = summary.match(/注册地[:：]\s*([^｜|]+)/);
   return m ? m[1].trim() : "";
+}
+
+/**
+ * 注册城市：从 excerpt/summary 的「注册地：XX」提取城市（如 深圳市 / 广州市），
+ * 供 IPO 卡片地域标记替代「粤」展示（2026-09-11）。
+ *  - 全地址「注册地：广东深圳市」→ 深圳市；「注册地：广东省广州市番禺区」→ 广州市；
+ *  - 仅省名（无城市）或缺失 → 回退「广东」。
+ * 注意：只取展示用城市文案，不动 `tags:["粤"]`（音频识别 / 过滤 / exec-pool 仍依赖它）。
+ */
+function ipoCityOf(a: ArticleInput): string {
+  const registered = parseRegisteredProvince(a.excerpt || a.summary || "");
+  if (registered) {
+    // 先去掉省前缀（「广东深圳市」→「深圳市」），避免贪心把「广东深圳」一并吞入
+    const cleaned = registered.replace(/^广东省?/, "");
+    const city = cleaned.match(/([\u4e00-\u9fa5]{2,4}市)/);
+    if (city) return city[1];
+    if (registered.includes("广东")) return "广东";
+  }
+  return "广东";
 }
 
 /** 拟上市板块：title「（拟创业板）」→ "创业板"。 */

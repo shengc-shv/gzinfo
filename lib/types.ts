@@ -81,6 +81,8 @@ export interface ReportItem {
   gdBasis?: string;
   /** IPO 卡专用结构化副信息（保荐 / 拟上市板块 / 受理日），避免被 90→50 字截断吞掉关键字段。 */
   ipoMeta?: string;
+  /** IPO 卡地域标记：注册城市（如 深圳市/广州市），用于替代「粤」标展示；缺省回退「广东」。 */
+  ipoCity?: string;
 }
 
 export interface ReportInsight {

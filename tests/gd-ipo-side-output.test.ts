@@ -88,6 +88,33 @@ test("buildGdIpo：gd-ipo 条目绕过 LLM 直接进入 sections.ipo", () => {
   assert.equal(out.sections.ipo![0].source_type, "official", "T1.5 → 官方徽章");
 });
 
+test("buildGdIpo：注册地含城市 → ipoCity 提取城市（替代「粤」标展示，粤标保留）", () => {
+  const arts: ArticleInput[] = [
+    makeIpo({
+      title: "钶锐锶：IPO注册生效（拟科创板）",
+      url: "https://data.eastmoney.com/xg/xg/#A00001",
+      excerpt: "注册地：广东深圳市｜保荐：国泰海通｜更新：2026-09-07",
+    }),
+    makeIpo({
+      title: "某穗企：IPO已问询（拟创业板）",
+      url: "https://data.eastmoney.com/xg/xg/#A00002",
+      excerpt: "注册地：广东省广州市番禺区｜保荐：广发证券｜更新：2026-09-06",
+    }),
+    makeIpo({
+      title: "某粤企：IPO已受理（拟北交所）",
+      url: "https://data.eastmoney.com/xg/xg/#A00003",
+      excerpt: "注册地：广东｜保荐：中信｜更新：2026-09-05", // 仅省名，无城市
+    }),
+  ];
+  const out = buildGdIpo(emptyReport(), arts, ctx);
+  const byTitle = Object.fromEntries(out.sections.ipo!.map((i) => [i.title_cn, i]));
+  assert.equal(byTitle["钶锐锶：IPO注册生效（拟科创板）"].ipoCity, "深圳市", "广东深圳市 → 深圳市");
+  assert.equal(byTitle["某穗企：IPO已问询（拟创业板）"].ipoCity, "广州市", "广东省广州市番禺区 → 广州市");
+  assert.equal(byTitle["某粤企：IPO已受理（拟北交所）"].ipoCity, "广东", "仅省名 → 回退广东");
+  // tags 仍保留「粤」标（音频识别 / 过滤 / exec-pool 依赖它，本次只改显示文案）
+  assert.ok(out.sections.ipo!.every((i) => i.tags?.includes("粤")), "粤标仍在");
+});
+
 test("buildGdIpo：与滚动并入的历史条目按 url 去重，不覆盖已有板块", () => {
   const base = emptyReport();
   base.sections.ipo = [

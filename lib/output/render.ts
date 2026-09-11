@@ -892,7 +892,12 @@ export function renderReportItemHtml(
   const official = item.source_type === "official";
   const badge = official ? { label: "官方", cls: "src-official" } : { label: "媒体", cls: "src-media" };
   const tags = (item.tags ?? [])
-    .map((t) => `<span class="tag ${tagClsOf(t)}">${escapeHtml(t)}</span>`)
+    .map((t) => {
+      // IPO 卡片：把「粤」地域标记的显示文案替换为注册城市（ipoCity），保留 t-gd 样式；
+      // 其它板块（gz_local 等）的「粤」标无 ipoCity 字段，原样展示，不受影响。
+      const label = t === "粤" && item.ipoCity ? item.ipoCity : t;
+      return `<span class="tag ${tagClsOf(t)}">${escapeHtml(label)}</span>`;
+    })
     .join("");
   const mkt = item.market ? MARKET_BADGE[item.market] : undefined;
   const mktBadge = mkt ? `<span class="mkt-badge ${mkt.cls}">${mkt.label}</span>` : "";
