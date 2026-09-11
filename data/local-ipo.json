@@ -1,11 +1,11 @@
 {
   "version": 1,
-  "fetchedAt": "2026-09-11T01:01:23+08:00",
+  "fetchedAt": "2026-09-11T23:29:59+08:00",
   "generator": "local-ipo-sync",
   "windowDays": 7,
   "sourceCounts": {
     "gd-csrc-tutoring": 2,
-    "gd-szse-audit": 2
+    "gd-szse-audit": 3
   },
   "items": [
     {
@@ -29,6 +29,17 @@
       "region": "gd",
       "registeredProvince": "广东",
       "ipoStage": "stage-tutoring"
+    },
+    {
+      "title": "优邦科技：IPO注册生效（拟创业板）",
+      "url": "https://www.szse.cn/listing/projectdynamic/ipo/index.html#prj1004225",
+      "excerpt": "注册地：广东｜保荐：申万宏源承销保荐｜受理：2025-12-27｜状态：注册生效｜更新：2026-09-11",
+      "publishedAt": "2026-09-11",
+      "source": "深交所IPO审核动态",
+      "sourceId": "gd-szse-audit",
+      "region": "gd",
+      "registeredProvince": "广东",
+      "ipoStage": "stage-registered"
     },
     {
       "title": "博迈医疗：IPO问询中（拟创业板）",
