@@ -3,17 +3,17 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>每日简报 · 2026-09-05</title>
-<meta name="description" content="今日定调：APEC中小企业部长会议在穗召开，跨境政商窗口叠加非农爆表推升加息预期，今日主线是抢抓中小外贸客群与高净值再平衡。">
+<title>每日简报 · 2026-09-13</title>
+<meta name="description" content="今日定调：消费贷贴息提额至5000元并扩围，消费信贷价格战升温，贴息口径与家装场景客户名单宜尽早排布。">
 <meta property="og:type" content="website">
-<meta property="og:title" content="每日简报 · 2026-09-05">
-<meta property="og:description" content="今日定调：APEC中小企业部长会议在穗召开，跨境政商窗口叠加非农爆表推升加息预期，今日主线是抢抓中小外贸客群与高净值再平衡。">
+<meta property="og:title" content="每日简报 · 2026-09-13">
+<meta property="og:description" content="今日定调：消费贷贴息提额至5000元并扩围，消费信贷价格战升温，贴息口径与家装场景客户名单宜尽早排布。">
 <meta property="og:image" content="https://shengc-shv.github.io/gzinfo/og-image.png">
 <meta property="og:image:width" content="240">
 <meta property="og:image:height" content="240">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="每日简报 · 2026-09-05">
-<meta name="twitter:description" content="今日定调：APEC中小企业部长会议在穗召开，跨境政商窗口叠加非农爆表推升加息预期，今日主线是抢抓中小外贸客群与高净值再平衡。">
+<meta name="twitter:title" content="每日简报 · 2026-09-13">
+<meta name="twitter:description" content="今日定调：消费贷贴息提额至5000元并扩围，消费信贷价格战升温，贴息口径与家装场景客户名单宜尽早排布。">
 <meta name="twitter:image" content="https://shengc-shv.github.io/gzinfo/og-image.png">
 <style>
 
@@ -344,6 +344,58 @@
     .risk-scroller .risk-card { width: auto; max-width: none; }
     .exec-risk::after { display: none; }
     .risk-hint-inline { display: none; }
+  }
+
+  /* —— 广东 IPO 横滑卡（任务六）：与「今日必读/商机洞察/风险预警」同款 —— */
+  .exec-ipo { position: relative; margin-top: 0.5rem; }
+  .ipo-hint-inline {
+    display: inline-block; margin-left: 0.45rem; vertical-align: middle;
+    font-size: 0.68rem; font-weight: 500; color: var(--c-gdipo);
+    white-space: nowrap;
+  }
+  .ipo-hint-inline .hint-arrow { display: inline-block; animation: nudge 1.1s ease-in-out infinite; }
+  .ipo-scroller {
+    list-style: none; margin: 0; padding: 0 0.75rem 0.5rem 0;
+    display: flex; flex-direction: row; gap: 0.5rem;
+    overflow-x: auto; -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: thin; scrollbar-color: var(--rule) transparent;
+  }
+  .ipo-scroller::-webkit-scrollbar { height: 5px; }
+  .ipo-scroller::-webkit-scrollbar-thumb { background: var(--rule); border-radius: 4px; }
+  .ipo-card {
+    flex: 0 0 auto; width: 82vw; max-width: 320px;
+    box-sizing: border-box;
+    border: 1px solid color-mix(in srgb, var(--c-gdipo) 30%, var(--rule));
+    border-left: 3px solid var(--c-gdipo);
+    border-radius: 12px; padding: 0.6rem 0.75rem;
+    background: color-mix(in srgb, var(--c-gdipo) 4%, var(--card));
+    box-shadow: var(--shadow-sm);
+  }
+  .ipo-card-head { display: flex; align-items: center; gap: 0.4rem; margin-bottom: 0.3rem; }
+  .ipo-name { font-size: 0.86rem; font-weight: 700; color: var(--fg); line-height: 1.3; }
+  .ipo-stage {
+    flex: none; font-size: 0.64rem; font-weight: 600; padding: 1px 6px; border-radius: 3px;
+    color: #fff; background: var(--c-gdipo);
+  }
+  .ipo-stage--stage-listed { background: #0ea5e9; }
+  .ipo-stage--stage-registered { background: #16a34a; }
+  .ipo-stage--stage-reviewing { background: #d97706; }
+  .ipo-stage--stage-tutoring { background: var(--c-gdipo); }
+  .ipo-biz { margin: 0.2rem 0 0.35rem; font-size: 0.74rem; color: var(--fg-soft); line-height: 1.5; }
+  .ipo-foot { display: flex; align-items: center; justify-content: space-between; gap: 0.4rem; font-size: 0.68rem; color: var(--muted); }
+  .ipo-src { color: var(--c-gdipo); text-decoration: none; }
+  .ipo-src:hover { text-decoration: underline; }
+  .exec-ipo::after {
+    content: ""; position: absolute; top: 1.7rem; right: 0; bottom: 0.5rem;
+    width: 3.25rem; pointer-events: none; z-index: 3;
+    background: linear-gradient(to left, color-mix(in srgb, var(--c-gdipo) 16%, var(--bg)) 0%, color-mix(in srgb, var(--c-gdipo) 4%, transparent) 55%, transparent 100%);
+  }
+  @media (min-width: 720px) {
+    .ipo-scroller { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); overflow: visible; padding-bottom: 0; padding-right: 0; scroll-snap-type: none; }
+    .ipo-card { width: auto; max-width: none; }
+    .exec-ipo::after { display: none; }
+    .ipo-hint-inline { display: none; }
   }
 
   /* —— 昨日股市复盘三卡（参考区）：横向滑动卡片，与「今日必读」同款 —— */
@@ -1150,6 +1202,10 @@
   .brief h3 { margin: 0; font-size: 0.98rem; line-height: 1.5; }
   .brief .sum { margin: 0.35rem 0 0; font-size: 0.92rem; color: var(--fg-soft); line-height: 1.65; }
   .brief .sum b { color: var(--fg); }
+  /* 2026-09-07 IPO 双链接：主链接（东财列表）+ 交易所官方源入口（人工核查） */
+  .brief .official-src { margin: 0.3rem 0 0; font-size: 0.78rem; color: var(--muted); line-height: 1.5; }
+  .brief .official-src a { color: var(--accent-cmb, #b45309); text-decoration: none; border-bottom: 1px dashed currentColor; }
+  .brief .official-src a:hover { color: var(--fg); }
   .brief.more { display: none; }
   .panel.expanded .brief.more { display: block; }
   .expand-btn { width: 100%; margin: 0.2rem 0 0.4rem; padding: 0.6rem; border: 1px dashed var(--rule); border-radius: 10px; background: var(--bg-elevated, var(--card)); color: var(--muted); font-size: 0.88rem; font-family: inherit; cursor: pointer; }
@@ -1166,6 +1222,34 @@
   .filter-reset { margin-left: auto; border: 1px solid var(--rule); background: transparent; color: var(--fg-soft, var(--muted)); border-radius: 999px; padding: 0.28rem 0.8rem; font-size: 0.84rem; cursor: pointer; font-family: inherit; }
   .filter-reset:hover { border-color: var(--accent-cmb); color: var(--accent-cmb); }
   .brief.filtered-out { display: none !important; }
+  /* 广东IPO 四阶段分栏（2026-09-10 用户决策③）：组头带阶段色点 + 家数，空组整组隐藏 */
+  .ipo-group { margin: 0 0 0.9rem; }
+  .ipo-group.filtered-out { display: none !important; }
+  .ipo-group-head {
+    display: flex; align-items: center; gap: 0.4rem;
+    margin: 0 0 0.45rem; padding-bottom: 0.25rem;
+    font-size: 0.86rem; font-weight: 700; color: var(--fg);
+    border-bottom: 1px dashed var(--rule);
+  }
+  .ipo-group-dot { width: 8px; height: 8px; border-radius: 50%; flex: none; display: inline-block; }
+  .ipo-group-dot.ipo-stage--none { background: var(--muted); }
+  .ipo-group-n {
+    font-size: 0.72rem; font-weight: 600; color: var(--muted);
+    background: var(--bg-elevated, var(--card)); border: 1px solid var(--rule);
+    border-radius: 999px; padding: 0 0.4rem; line-height: 1.5;
+  }
+  /* 同企业阶段进展条（P2-6）：09/03 在审 → 09/07 注册发行 */
+  .ipo-progress {
+    display: flex; flex-wrap: wrap; align-items: center; gap: 0.3rem;
+    margin: 0.4rem 0 0; font-size: 0.76rem; color: var(--fg-soft);
+  }
+  .ipo-progress-label {
+    flex: none; font-weight: 700; color: var(--muted);
+    border: 1px solid var(--rule); border-radius: 999px; padding: 0 0.4rem; line-height: 1.5;
+  }
+  .ipo-progress-step { white-space: nowrap; }
+  .ipo-progress-step--cur { font-weight: 700; color: var(--fg); }
+  .ipo-progress-arrow { color: var(--muted); }
 
   /* 市场总览 bullet（#17/#18/#19） */
   .market-card .bm { margin-bottom: 0.35rem; }
@@ -1177,96 +1261,133 @@
 /* v2 音频联动高亮（I-A 实施）：当前段对应的卡片淡蓝边框 + 浅蓝背景 */
 .audio-highlight { box-shadow: 0 0 0 3px rgba(64,158,255,0.45); background: rgba(64,158,255,0.06); border-radius: 8px; transition: box-shadow 0.2s, background 0.2s; }
 .must-card.audio-highlight, .insight.audio-highlight, .stock-card.audio-highlight { transform: translateZ(0); }
+  /* 商机洞察客户客群标签 (2026-09-08) */
+  .insight-segs { margin: 4px 0 6px; display: flex; flex-wrap: wrap; gap: 5px; }
+  .seg-chip { font-size: 11px; font-weight: 600; border-radius: 9px; padding: 1px 8px; line-height: 1.7; white-space: nowrap; }
+  .seg-chip.seg-aum { color: #fff; background: #b8860b; }
+  .seg-chip.seg-private { color: #fff; background: #8e44ad; }
+  .seg-chip.seg-inclusive { color: #fff; background: #1e7e34; }
+  .seg-chip.seg-other { color: #555; background: #ececec; }
   </style>
 </head>
 <body>
 <main>
     <div class="player-card">
-    <div class="player-title"><span class="ic">🎧</span> 今日语音简报 <span class="player-dur">约 3 分 31 秒</span><span class="player-badge player-badge-tencent">腾讯合成</span></div>
-    <audio controls preload="none" src="audio/briefing-2026-09-05.mp3" id="audio-player"></audio>
-    <script type="application/json" id="audio-segments">[{&quot;id&quot;:&quot;intro&quot;,&quot;startSec&quot;:0,&quot;durationSec&quot;:1,&quot;refs&quot;:[],&quot;text&quot;:&quot;早上好。&quot;},{&quot;id&quot;:&quot;hero&quot;,&quot;startSec&quot;:1,&quot;durationSec&quot;:19,&quot;refs&quot;:[],&quot;text&quot;:&quot;先看今日定调。APEC中小企业部长会议今天在广州开幕，跨境政商资源窗口叠加美非农爆表、九月份加息预期升温，主线一句话：抢抓中小外贸客群跨境结算，同时盯紧高净值客户的资产再平衡需求，分行两条线同时发力。&quot;},{&quot;id&quot;:&quot;must&quot;,&quot;startSec&quot;:20,&quot;durationSec&quot;:45,&quot;refs&quot;:[&quot;https://www.stcn.com/article/detail/4173448.html&quot;,&quot;https://www.stcn.com/article/detail/4173447.html&quot;,&quot;https://www.investing.com/news/economy-news/another-false-dawn-chinas-luxury-spending-revival-seems-to-be-fading-bernstein-4890177&quot;,&quot;https://finance.eastmoney.com/a/202609053865951116.html&quot;,&quot;https://m.21jingji.com/article/20260905/herald/e8e248e93a298e057ecdd93461ca8cbb.html&quot;],&quot;text&quot;:&quot;接下去看今日必读。APEC中小企业部长会议在穗召开，跨境结算与中小外贸客群入口集中打开，分行可联动对公同步落地。\n美非农爆表、九月份加息预期升温，私行端主动管理外汇与黄金客户的预期重定价窗口。\n央行等量续作三月期逆回购，跨季流动性中性，九月中MLF与LPR是下一步观察重点，直接影响按揭与负债定价。\n中信金控净利同比增22%、综合金融提速，私行产品组合打法需尽快对标同业。\nBernstein警示中国奢侈品消费复苏或再落空，高净值可选消费疲软，资产再平衡需求提前介入。&quot;},{&quot;id&quot;:&quot;insight&quot;,&quot;startSec&quot;:65,&quot;durationSec&quot;:39,&quot;refs&quot;:[&quot;https://www.stcn.com/article/detail/4173447.html&quot;,&quot;https://news.dayoo.com/guangzhou/202609/04/139995_54999938.htm&quot;,&quot;https://finance.eastmoney.com/a/202609053865951116.html&quot;,&quot;https://www.investing.com/news/economy-news/another-false-dawn-chinas-luxury-spending-revival-seems-to-be-fading-bernstein-4890177&quot;,&quot;https://www.stcn.com/article/detail/4173453.html&quot;,&quot;https://data.eastmoney.com/xg/xg/#A24052&quot;,&quot;https://www.stcn.com/article/detail/4171713.html&quot;,&quot;https://www.cnr.cn/gd/guangdongyaowen/20260904/t20260904_527804117.shtml&quot;],&quot;text&quot;:&quot;接下去是商机洞察。APEC中小企业部长会议在穗召开，本周公司部牵头联动零售，对接与会中小外贸客群推跨境结算与小微外贸贷组合。\n非农超预期推升加息预期，私行端主动触达外汇与黄金客户，推结售汇窗口与打新基金组合对冲。\n北交所新质企业量质齐升，广东储备标的进入注册与问询，科创团队本周优先介入科技e贷与股权激励撮合。\n第二批零售创新试点城市落地，零售银行部排查广州商圈支行，推商户收单优惠与联名卡切入消费场景。&quot;},{&quot;id&quot;:&quot;risk&quot;,&quot;startSec&quot;:104,&quot;durationSec&quot;:16,&quot;refs&quot;:[&quot;https://finance.eastmoney.com/a/202609053865869121.html&quot;],&quot;text&quot;:&quot;接下去是风险预警。今天有1个需要警惕：证监会对元道通信开出2.39亿元罚单。\n个贷、财富、对公、风控四条线都要上调相关客户的尽调合规权重，重点核查中介机构连带责任。&quot;},{&quot;id&quot;:&quot;ipo&quot;,&quot;startSec&quot;:120,&quot;durationSec&quot;:20,&quot;refs&quot;:[],&quot;text&quot;:&quot;最近一周有IPO动态的广东企业。广东邦泽创科电器已提交注册，拟登陆北交所，主营电器制造，由东莞证券保荐；东莞四维材料科技处于问询中、同样拟北交所，两家粤企均为新质生产力方向，建议科创客群团队本周优先接触。&quot;},{&quot;id&quot;:&quot;stock&quot;,&quot;startSec&quot;:140,&quot;durationSec&quot;:69,&quot;refs&quot;:[],&quot;text&quot;:&quot;下面是9月4日股市收盘信息。A股（北京时间9月4日 周五收盘）：上证指数收报3930.12点（-0.30%）；深证成指收报13516.97点（-0.79%）。拖累盘面的主要是：科创50指数高开低走跌2.10%；算力产业链持续下挫。港股（北京时间9月4日 周五收盘）：恒生指数收报25650.87点（+1.74%）；恒生科技收报4569.80点（+2.27%）。板块层面：恒生科技指数涨2.27%；恒生指数涨1.74%。美股（美东时间9月4日 周五收盘）：美股三大指数集体收跌，道指跌0.51%、纳指跌0.29%、标普500跌0.38%，特朗普施压美联储降息抑制风险偏好。各板块情况是：汽车股受关注，GM与福特因国防与能源业务竞争加剧，百年 rivalry 再升温；AI需求强劲，鸿海富士康预计第三季度业绩超市场预期。&quot;},{&quot;id&quot;:&quot;closing&quot;,&quot;startSec&quot;:209,&quot;durationSec&quot;:1,&quot;refs&quot;:[],&quot;text&quot;:&quot;今天播报结束。&quot;}]</script>
+    <div class="player-title"><span class="ic">🎧</span> 今日语音简报 <span class="player-dur">约 4 分 11 秒</span><span class="player-badge player-badge-tencent">腾讯合成</span></div>
+    <audio controls preload="none" src="audio/briefing-2026-09-13.mp3" id="audio-player"></audio>
+    <script type="application/json" id="audio-segments">[{&quot;id&quot;:&quot;intro&quot;,&quot;startSec&quot;:0,&quot;durationSec&quot;:1,&quot;refs&quot;:[],&quot;text&quot;:&quot;早上好。&quot;},{&quot;id&quot;:&quot;hero&quot;,&quot;startSec&quot;:1,&quot;durationSec&quot;:17,&quot;refs&quot;:[],&quot;text&quot;:&quot;先看今日定调。个人消费贷贴息额度提到五千元、覆盖面也扩大了，消费信贷价格战会进一步升温。信贷和财富条线可先统一贴息产品口径，把家装、家电场景的客户名单排出来，抢这一波投放窗口。&quot;},{&quot;id&quot;:&quot;must&quot;,&quot;startSec&quot;:18,&quot;durationSec&quot;:38,&quot;refs&quot;:[&quot;https://finance.sina.com.cn/jjxw/2026-09-12/doc-inirpkcn5368144.html&quot;,&quot;https://news.dayoo.com/guangzhou/202609/12/139995_55002783.htm&quot;,&quot;https://finance.sina.com.cn/roll/2026-09-12/doc-inirntfr2046727.shtml&quot;],&quot;text&quot;:&quot;接下去看今日必读。美联储9月议息临近。花旗等投行转向预计9月加息、明年降息，汇率与结售汇窗口变化，需提前与外币资产客户沟通锁汇与配置节奏。。其次，穗一手住宅增速居前。前8个月广州一手住宅成交增速居一线城市第二，按揭投放窗口延续，合作楼盘与置换客群跟进节奏值得保持。。此外，宽基ETF成交放量。市场调整中资金借道宽基ETF入市，权益产品咨询与配置意愿可能回暖，财富条线可备好指数化与定投陪伴方案。。&quot;},{&quot;id&quot;:&quot;insight&quot;,&quot;startSec&quot;:56,&quot;durationSec&quot;:101,&quot;refs&quot;:[&quot;https://finance.sina.com.cn/money/bank/bank_hydt/2026-09-12/doc-inirpqmk5295352.shtml&quot;,&quot;https://www.cnfin.com/yw-lb/detail/20260912/4469064_1.html&quot;,&quot;https://news.dayoo.com/guangzhou/202609/12/139995_55002868.htm&quot;,&quot;https://www.szse.cn/listing/projectdynamic/ipo/index.html#prj1004225&quot;,&quot;https://www1.hkexnews.hk/app/sehk/2026/108867/2026091001722_c.htm&quot;,&quot;https://www.szse.cn/listing/projectdynamic/ipo/index.html#prj1004420&quot;,&quot;https://news.dayoo.com/guangzhou/202609/12/139995_55002792.htm&quot;,&quot;https://news.dayoo.com/guangzhou/202609/12/139995_55002868.htm&quot;,&quot;https://m.21jingji.com/article/20260912/herald/7a87eb7b47aade78931299f3f172c03d.html&quot;],&quot;text&quot;:&quot;接下去是商机洞察。具备零售 A U M商机的，理财货架需比价排查，平安理财等同业同日发布精选货架，叠加银行加码债券投资，理财资产端与收益竞争力更受客户比价，AUM留存承压。。今日对照同期限在售产品做竞争力排查，本周调整主推货架；对到期客户提前安排续接方案，留意比价赎回动向。。此外，具备零售 A U M商机的，回迁交付承接补偿款，白云小坪村一期回迁房交付，拆迁补偿资金进入安置期，安置户存款、理财与家装分期需求集中释放，是AUM增量入口。。本周在安置片区布点驻点服务，梳理补偿款到账名单，配套大额存单、稳健理财与家装分期组合方案。。同时，具备高端客户商机的，粤企上市 股东承接，优邦科技注册生效、广东微电新能源递表港股、傲雷科技进入问询，粤企创始股东与高管股权变现临近，私行承接窗口打开。。本周梳理在审粤企股东与高管名单，提前对接股权变现、家族信托与跨境配置方案，避免被同业先手。。另一条值得关注，具备普惠小微商机的，城改动迁 代发与小微，天河凌塘东片区今日开拆、小坪村回迁交付，动迁补偿款与村集体代发集中落地，家装建材、搬家等周边小微订单同步走高。。本周走访片区内家装建材商户，主推经营贷加聚合收单；同步跟进补偿款代发与家装分期承接，做实资金闭环。。&quot;},{&quot;id&quot;:&quot;risk&quot;,&quot;startSec&quot;:157,&quot;durationSec&quot;:17,&quot;refs&quot;:[&quot;https://finance.eastmoney.com/a/202609123872513967.html&quot;,&quot;https://www.stcn.com/article/detail/4182943.html&quot;],&quot;text&quot;:&quot;接下去是风险预警。今天有 1 个需要警惕：证监会处罚税率谣言，财富条线或遇客户因谣言咨询赎回、调仓，网点一线易被误传；个贷与私行客户也可能借机质询费率，风控与合规需前置统一口径。。&quot;},{&quot;id&quot;:&quot;ipo&quot;,&quot;startSec&quot;:174,&quot;durationSec&quot;:17,&quot;refs&quot;:[],&quot;text&quot;:&quot;近两日有IPO动态的广东企业。深圳市楠菲微电子，科技行业，目前IPO辅导验收；深圳硕日新能科技，新能源行业，目前IPO辅导备案；云英谷科技，科技行业，目前IPO辅导备案；等5家&quot;},{&quot;id&quot;:&quot;stock&quot;,&quot;startSec&quot;:191,&quot;durationSec&quot;:57,&quot;refs&quot;:[],&quot;text&quot;:&quot;下面是9月11日股市收盘信息。A股（北京时间9月11日 周五收盘）：上证指数收报3888.11点（-1.18%）；深证成指收报13471.26点（-1.08%）。分板块看：创业板指探底回升跌0.49%；下跌个股超4800只。港股（北京时间9月11日 周五收盘）：恒生指数收报24805.63点（-0.60%）；恒生科技收报4320.57点（-0.23%）。板块层面：恒生科技指数跌0.23%；恒生指数跌0.6%。美股（美东时间9月11日 周五收盘）：三大指数集体收涨，道指涨0.98%，市场消化地缘与AI多重消息。涨得比较突出的是：埃里森放弃减持至多75亿美元甲骨文股票，甲骨文股价获提振。&quot;},{&quot;id&quot;:&quot;closing&quot;,&quot;startSec&quot;:248,&quot;durationSec&quot;:1,&quot;refs&quot;:[],&quot;text&quot;:&quot;今天播报结束。&quot;}]</script>
   </div>
   <!-- 报头：今日定调 + 数据截至 -->
   <header class="masthead">
     <div class="eyebrow">广州地区 · 零售业务每日资信（个人整理，非本行立场）</div>
-    <h1>9月5日 星期六</h1>
-    <p class="hero-line">今日定调：APEC中小企业部长会议在穗召开，跨境政商窗口叠加非农爆表推升加息预期，今日主线是抢抓中小外贸客群与高净值再平衡。</p>
-    <p class="meta-line">数据截至 20:39 · 去重后资讯 25 条 · 商机 5 条 · <a class="archive" href="../archive.html">← 历史归档</a></p>
+    <h1>9月13日 星期日</h1>
+    <p class="hero-line">今日定调：消费贷贴息提额至5000元并扩围，消费信贷价格战升温，贴息口径与家装场景客户名单宜尽早排布。</p>
+    <p class="meta-line">数据截至 07:42 · 去重后资讯 15 条 · 商机 5 条 · <a class="archive" href="../archive.html">← 历史归档</a></p>
   </header>
 
   <section class="exec-summary">
     <div class="exec-head">
       <h2 class="exec-title">执行摘要</h2>
-      <span class="exec-sub">今日必读 · 商机洞察 · 风险预警（AI 生成）</span>
+      <span class="exec-sub">今日必读 · 商机洞察 · 风险预警（AI 生成）· 广东IPO（交易所/证监会官方源）</span>
     </div>
-    <div class="exec-must"><h3 class="exec-col-title">📌 今日必读<span class="must-hint-inline" aria-hidden="true">← 左右滑动查看 →</span></h3><ul class="must-scroller"><li class="must-card must-top" data-audio-section="must" data-top-must="true"><span class="must-index">1</span><a class="must-body must-link" href="https://www.stcn.com/article/detail/4173448.html" target="_blank" rel="noopener"><strong>央行等量续作三月期逆回购</strong><span class="must-why">跨季流动性中性，下一步观察九月MLF与LPR报价，直接传导分行负债成本与按揭定价节奏，影响产品定价策略。</span></a><span class="must-top-badge" title="今日三件事：行长音频重点">三件事</span></li><li class="must-card must-top" data-audio-section="must" data-top-must="true"><span class="must-index">2</span><a class="must-body must-link" href="https://www.stcn.com/article/detail/4173447.html" target="_blank" rel="noopener"><strong>APEC中小企业部长会议在穗召开</strong><span class="must-why">国际政商资源齐聚广州，跨境结算、外贸融资、中小科创客群三条业务线同时出现入口窗口，分行零售与对公可联动切入。</span></a><span class="must-top-badge" title="今日三件事：行长音频重点">三件事</span></li><li class="must-card must-top" data-audio-section="must" data-top-must="true"><span class="must-index">3</span><a class="must-body must-link" href="https://www.investing.com/news/economy-news/another-false-dawn-chinas-luxury-spending-revival-seems-to-be-fading-bernstein-4890177" target="_blank" rel="noopener"><strong>奢侈品消费复苏或再落空</strong><span class="must-why">高净值可选消费疲软信号显现，私行端需关注客户资产再平衡需求，提前调整大额配置类产品推介节奏。</span></a><span class="must-top-badge" title="今日三件事：行长音频重点">三件事</span></li><li class="must-card" data-audio-section="must" ><span class="must-index">4</span><a class="must-body must-link" href="https://finance.eastmoney.com/a/202609053865951116.html" target="_blank" rel="noopener"><strong>美非农爆表加息预期升温</strong><span class="must-why">外汇与黄金客户面临预期重定价，结售汇窗口期叠加跨境配置需求，私行端需主动管理客户预期与产品节奏。</span></a></li><li class="must-card" data-audio-section="must" ><span class="must-index">5</span><a class="must-body must-link" href="https://m.21jingji.com/article/20260905/herald/e8e248e93a298e057ecdd93461ca8cbb.html" target="_blank" rel="noopener"><strong>中信金控净利增22%综合金融提速</strong><span class="must-why">同业综合金融打法加速，私行高净值客群竞争加码，本行私行产品组合与协同打法需尽快对标响应。</span></a></li></ul></div>
+    <div class="exec-must"><h3 class="exec-col-title">📌 今日必读<span class="must-hint-inline" aria-hidden="true">← 左右滑动查看 →</span></h3><ul class="must-scroller"><li class="must-card must-top" data-audio-section="must" data-top-must="true"><span class="must-index">1</span><a class="must-body must-link" href="https://finance.sina.com.cn/jjxw/2026-09-12/doc-inirpkcn5368144.html" target="_blank" rel="noopener"><strong>美联储9月议息临近</strong><span class="must-why">花旗等投行转向预计9月加息、明年降息，汇率与结售汇窗口变化，需提前与外币资产客户沟通锁汇与配置节奏。</span></a><span class="must-top-badge" title="今日三件事：行长音频重点">三件事</span></li><li class="must-card must-top" data-audio-section="must" data-top-must="true"><span class="must-index">2</span><a class="must-body must-link" href="https://news.dayoo.com/guangzhou/202609/12/139995_55002783.htm" target="_blank" rel="noopener"><strong>穗一手住宅增速居前</strong><span class="must-why">前8个月广州一手住宅成交增速居一线城市第二，按揭投放窗口延续，合作楼盘与置换客群跟进节奏值得保持。</span></a><span class="must-top-badge" title="今日三件事：行长音频重点">三件事</span></li><li class="must-card must-top" data-audio-section="must" data-top-must="true"><span class="must-index">3</span><a class="must-body must-link" href="https://finance.sina.com.cn/roll/2026-09-12/doc-inirntfr2046727.shtml" target="_blank" rel="noopener"><strong>宽基ETF成交放量</strong><span class="must-why">市场调整中资金借道宽基ETF入市，权益产品咨询与配置意愿可能回暖，财富条线可备好指数化与定投陪伴方案。</span></a><span class="must-top-badge" title="今日三件事：行长音频重点">三件事</span></li></ul></div>
     <div class="exec-insights"><h3 class="exec-col-title">💡 商机洞察<span class="insight-hint-inline" aria-hidden="true">← 左右滑动查看 →</span></h3><div class="insight-scroller"><article class="insight" data-audio-section="insight">
-        <div class="insight-tags"><span class="tag t-mass">客群</span><span class="tag t-mass">代发</span></div>
-        <h3>抢抓APEC中小外贸客群 <span class="insight-srcs"><a class="insight-src" href="https://www.stcn.com/article/detail/4173447.html" target="_blank" rel="noopener" title="第32次APEC中小企业部长会议在广州举行" aria-label="来源1">①</a><a class="insight-src" href="https://news.dayoo.com/guangzhou/202609/04/139995_54999938.htm" target="_blank" rel="noopener" title="广州海关保障中国国际中小企业博览会开展" aria-label="来源2">②</a></span></h3>
-        <p><b>影响：</b>跨境政商资源齐聚广州，中小外贸、科创、跨境结算三类客户同时出现批量获客入口，对零售获客与对公联动均有直接增量。</p>
-        <p><b>建议：</b>本周由公司部牵头联动零售条线，对接市工信局、外资园区与会名单，推跨境结算、关税保函与小微外贸贷组合方案落地。</p>
-      </article><article class="insight" data-audio-section="insight">
-        <div class="insight-tags"><span class="tag t-wealth">私行</span><span class="tag t-wealth">财富</span></div>
-        <h3>高净值资产再平衡与外汇窗口 <span class="insight-srcs"><a class="insight-src" href="https://finance.eastmoney.com/a/202609053865951116.html" target="_blank" rel="noopener" title="非农爆了！9月加息预期升温特朗普喊话：降息！降息！美联储必须“聪明”起来" aria-label="来源1">①</a><a class="insight-src" href="https://www.investing.com/news/economy-news/another-false-dawn-chinas-luxury-spending-revival-seems-to-be-fading-bernstein-4890177" target="_blank" rel="noopener" title="Another false dawn? China&#39;s luxury spending revival seems to be fading: Bernstein" aria-label="来源2">②</a></span></h3>
-        <p><b>影响：</b>非农超预期叠加加息预期升温，高净值客户面临外汇、黄金、可选消费类资产的重定价压力，私行产品组合可顺势切入。</p>
-        <p><b>建议：</b>本周私行端主动触达外汇与黄金客户，推结售汇窗口提示并调整大额配置节奏，配合打新基金与公募组合对冲。</p>
-      </article><article class="insight" data-audio-section="insight">
-        <div class="insight-tags"><span class="tag ">信贷</span><span class="tag t-mass">客群</span></div>
-        <h3>北交所储备标的提前介入 <span class="insight-srcs"><a class="insight-src" href="https://www.stcn.com/article/detail/4173453.html" target="_blank" rel="noopener" title="北交所新股量质齐升 新质生产力赛道企业集中登场" aria-label="来源1">①</a><a class="insight-src" href="https://data.eastmoney.com/xg/xg/#A24052" target="_blank" rel="noopener" title="广东邦泽创科电器：IPO提交注册（拟北交所）" aria-label="来源2">②</a></span></h3>
-        <p><b>影响：</b>北交所新质生产力企业量质齐升，广东两家在审企业进入注册与问询阶段，提前介入辅导期可锁定股权激励贷、并购撮合与代发机会。</p>
-        <p><b>建议：</b>科创客群团队本周梳理辖内新三板与北交所储备清单，对提交注册及问询企业优先接触，配套科技e贷与员工持股计划贷款。</p>
-      </article><article class="insight" data-audio-section="insight">
-        <div class="insight-tags"><span class="tag t-policy">住房金融</span><span class="tag t-wealth">财富</span></div>
-        <h3>零售创新试点城市收单联名卡 <span class="insight-srcs"><a class="insight-src" href="https://www.stcn.com/article/detail/4171713.html" target="_blank" rel="noopener" title="时报数说 第二批32个全国零售业创新提升试点城市名单公布" aria-label="来源1">①</a></span></h3>
-        <p><b>影响：</b>第二批32个零售创新试点城市名单落地，广州在列概率高，商圈改造与消费场景升级带来商户收单、联名卡与消费贷批量获客入口。</p>
-        <p><b>建议：</b>本周零售银行部排查辖内试点商圈支行名单，推商户收单费率优惠与联名卡方案，联动消费信贷切入高频场景。</p>
-      </article><article class="insight" data-audio-section="insight">
-        <div class="insight-tags"><span class="tag t-mass">客群</span><span class="tag ">信贷</span></div>
-        <h3>广东车船税优惠调整前置营销 <span class="insight-srcs"><a class="insight-src" href="https://www.cnr.cn/gd/guangdongyaowen/20260904/t20260904_527804117.shtml" target="_blank" rel="noopener" title="明年起广东车船税优惠政策将调整" aria-label="来源1">①</a></span></h3>
-        <p><b>影响：</b>明年起广东车船税优惠政策调整，私车客户面临税务与保险支出预期变化，分行可联动车险分期与信用卡分期做客户挽留与交叉销售。</p>
-        <p><b>建议：</b>本周客群经理梳理辖内私车客户清单，由信用卡部联动做车险分期、税务联动沟通与账单分期组合触达。</p>
-      </article></div></div>
+      <div class="insight-tags"><span class="tag t-wealth">财富</span><span class="tag ">竞对动态</span></div>
+      <div class="insight-segs"><span class="seg-chip seg-aum">零售AUM</span></div>
+      <h3>理财货架需比价排查 <span class="insight-srcs"><a class="insight-src" href="https://finance.sina.com.cn/money/bank/bank_hydt/2026-09-12/doc-inirpqmk5295352.shtml" target="_blank" rel="noopener" title="平安理财精选理财一览（2026年9月12日）" aria-label="来源1">①</a><a class="insight-src" href="https://www.cnfin.com/yw-lb/detail/20260912/4469064_1.html" target="_blank" rel="noopener" title="【中经社信号】银行加码债券投资 拓展盈利增长多元空间" aria-label="来源2">②</a></span></h3>
+      <p><b>影响：</b>平安理财等同业同日发布精选货架，叠加银行加码债券投资，理财资产端与收益竞争力更受客户比价，AUM留存承压。</p>
+      <p><b>建议：</b>今日对照同期限在售产品做竞争力排查，本周调整主推货架；对到期客户提前安排续接方案，留意比价赎回动向。</p>
+    </article><article class="insight" data-audio-section="insight">
+      <div class="insight-tags"><span class="tag t-mass">客群</span><span class="tag t-policy">住房金融</span></div>
+      <div class="insight-segs"><span class="seg-chip seg-aum">零售AUM</span></div>
+      <h3>回迁交付承接补偿款 <span class="insight-srcs"><a class="insight-src" href="https://news.dayoo.com/guangzhou/202609/12/139995_55002868.htm" target="_blank" rel="noopener" title="广州白云新市街小坪村改造一期回迁安置房交付" aria-label="来源1">①</a></span></h3>
+      <p><b>影响：</b>白云小坪村一期回迁房交付，拆迁补偿资金进入安置期，安置户存款、理财与家装分期需求集中释放，是AUM增量入口。</p>
+      <p><b>建议：</b>本周在安置片区布点驻点服务，梳理补偿款到账名单，配套大额存单、稳健理财与家装分期组合方案。</p>
+    </article><article class="insight" data-audio-section="insight">
+      <div class="insight-tags"><span class="tag t-wealth">私行</span><span class="tag ">科技金融</span></div>
+      <div class="insight-segs"><span class="seg-chip seg-private">高端客户</span></div>
+      <h3>粤企上市 股东承接 <span class="insight-srcs"><a class="insight-src" href="https://www.szse.cn/listing/projectdynamic/ipo/index.html#prj1004225" target="_blank" rel="noopener" title="优邦科技：IPO注册生效（拟创业板）" aria-label="来源1">①</a><a class="insight-src" href="https://www1.hkexnews.hk/app/sehk/2026/108867/2026091001722_c.htm" target="_blank" rel="noopener" title="广东微电新能源股份有限公司（主板递表·广东企业）" aria-label="来源2">②</a><a class="insight-src" href="https://www.szse.cn/listing/projectdynamic/ipo/index.html#prj1004420" target="_blank" rel="noopener" title="傲雷科技：IPO问询中（拟创业板）" aria-label="来源3">③</a></span></h3>
+      <p><b>影响：</b>优邦科技注册生效、广东微电新能源递表港股、傲雷科技进入问询，粤企创始股东与高管股权变现临近，私行承接窗口打开。</p>
+      <p><b>建议：</b>本周梳理在审粤企股东与高管名单，提前对接股权变现、家族信托与跨境配置方案，避免被同业先手。</p>
+    </article><article class="insight" data-audio-section="insight">
+      <div class="insight-tags"><span class="tag t-mass">代发</span><span class="tag ">信贷</span></div>
+      <div class="insight-segs"><span class="seg-chip seg-inclusive">普惠小微</span></div>
+      <h3>城改动迁 代发与小微 <span class="insight-srcs"><a class="insight-src" href="https://news.dayoo.com/guangzhou/202609/12/139995_55002792.htm" target="_blank" rel="noopener" title="城改提速！广州天河凌塘东片区今日开拆" aria-label="来源1">①</a><a class="insight-src" href="https://news.dayoo.com/guangzhou/202609/12/139995_55002868.htm" target="_blank" rel="noopener" title="广州白云新市街小坪村改造一期回迁安置房交付" aria-label="来源2">②</a></span></h3>
+      <p><b>影响：</b>天河凌塘东片区今日开拆、小坪村回迁交付，动迁补偿款与村集体代发集中落地，家装建材、搬家等周边小微订单同步走高。</p>
+      <p><b>建议：</b>本周走访片区内家装建材商户，主推经营贷加聚合收单；同步跟进补偿款代发与家装分期承接，做实资金闭环。</p>
+    </article><article class="insight" data-audio-section="insight">
+      <div class="insight-tags"><span class="tag ">信贷</span><span class="tag t-mass">客群</span></div>
+      <div class="insight-segs"><span class="seg-chip seg-inclusive">普惠小微</span></div>
+      <h3>跨境电商卖家经营贷 <span class="insight-srcs"><a class="insight-src" href="https://m.21jingji.com/article/20260912/herald/7a87eb7b47aade78931299f3f172c03d.html" target="_blank" rel="noopener" title="（经济观察）中国金融业界稳步推进跨境服务" aria-label="来源1">①</a></span></h3>
+      <p><b>影响：</b>跨境金融服务稳步推进，广州跨境电商与外贸卖家收款、结汇需求集中，是小微经营贷与结算账户的新增长点。</p>
+      <p><b>建议：</b>本月梳理跨境电商卖家名单，配套跨境收款账户、结汇优惠与小额经营贷，留意配套细则落地节奏。</p>
+    </article></div></div>
     <div class="exec-risk"><h3 class="exec-col-title">⚠️ 风险预警<span class="risk-hint-inline" aria-hidden="true">← 左右滑动查看 →</span></h3><div class="risk-scroller"><article class="risk-card" data-audio-section="risk">
-        <div class="risk-header">⚠️ 风险预警<span class="risk-source-badge risk-source-t1">官方</span> <span class="risk-srcs"><a class="risk-src" href="https://finance.eastmoney.com/a/202609053865869121.html" target="_blank" rel="noopener" title="2.3884亿元！中国证监会对元道通信开出巨额罚单" aria-label="来源1">①</a></span></div>
-        <h3>证监会对元道通信开出2.39亿罚单</h3>
-        <p><b>依据：</b>证监会9月5日对元道通信开出2.3884亿元罚单，震慑信息披露违规与中介责任边界。</p>
-        <p><b>影响：</b>个贷端对相关行业客户的尽调合规权重须上调；财富端代销产品底层尽调须收紧；对公端涉及该客户的授信与供应链业务须排查披露真实性；风控端需重点核查中介机构连带责任。</p>
-        <p><b>建议：</b>公司部本周排查涉元道通信及关联方的授信与供应链敞口；零售部对相关行业客户尽调上调合规权重；风控部同步核查中介机构连带责任并更新准入名单。</p>
+        <div class="risk-header">⚠️ 风险预警<span class="risk-source-badge risk-source-t1">官方</span> <span class="risk-srcs"><a class="risk-src" href="https://finance.eastmoney.com/a/202609123872513967.html" target="_blank" rel="noopener" title="编造、传播“税率调整”虚假信息四人被证监会处罚" aria-label="来源1">①</a><a class="risk-src" href="https://www.stcn.com/article/detail/4182943.html" target="_blank" rel="noopener" title="罚单" aria-label="来源2">②</a></span></div>
+        <h3>证监会处罚税率谣言</h3>
+        <p><b>依据：</b>证监会披露，四名人员因编造、传播“税率调整”虚假信息被处罚；今日另有一则监管罚单信息发布。</p>
+        <p><b>影响：</b>财富条线或遇客户因谣言咨询赎回、调仓，网点一线易被误传；个贷与私行客户也可能借机质询费率，风控与合规需前置统一口径。</p>
+        <p><b>建议：</b>提示财富部与各支行统一对外澄清口径，客户咨询即时用官方信息回应；风控部今日下发谣言识别与应对话术。</p>
       </article></div></div>
+    <div class="exec-ipo exec-ipo--must">
+    <h3 class="exec-col-title">🏦 广东IPO<span class="ipo-hint-inline" aria-hidden="true">← 左右滑动查看 →</span></h3>
+    <ul class="ipo-scroller"><li class="ipo-card" data-audio-section="ipo">
+        <div class="ipo-card-head">
+          <span class="ipo-name">深圳市楠菲微电子</span>
+          <span class="ipo-stage ipo-stage--stage-tutoring">辅导备案</span>
+        </div>
+        <p class="ipo-biz">商机线索 · 辅导备案·Pre-IPO（最佳商机）：Pre-IPO 授信、投贷联动、代发工资、高管私行、员工持股托管</p>
+        <div class="ipo-foot"><span class="ipo-date">09/12 · 昨天</span><a class="ipo-src" href="http://eid.csrc.gov.cn/mnt/storage/stock/pre_ipo/2026/9/12/PREIPO_F0101_V01_20260912_36481_Q/7915790F23BE4FB5A28AF6780C8AE295/关于深圳市楠菲微电子股份有限公司首次公开发行股票并上市辅导工作完成报告.pdf" target="_blank" rel="noopener">来源 · 证监会辅导企业(csrcfd)</a></div>
+      </li><li class="ipo-card" data-audio-section="ipo">
+        <div class="ipo-card-head">
+          <span class="ipo-name">深圳硕日新能科技</span>
+          <span class="ipo-stage ipo-stage--stage-tutoring">辅导备案</span>
+        </div>
+        <p class="ipo-biz">商机线索 · 辅导备案·Pre-IPO（最佳商机）：Pre-IPO 授信、投贷联动、代发工资、高管私行、员工持股托管</p>
+        <div class="ipo-foot"><span class="ipo-date">09/11 · 2 天前</span><a class="ipo-src" href="http://eid.csrc.gov.cn/mnt/storage/stock/pre_ipo/2026/9/11/PREIPO_F0101_V01_20260911_36475_Q/DD35B58BBA0C480484A834CBEF8E3C9A/关于深圳硕日新能科技股份有限公司首次公开发行股票并上市辅导备案报告.pdf" target="_blank" rel="noopener">来源 · 证监会辅导企业(csrcfd)</a></div>
+      </li><li class="ipo-card" data-audio-section="ipo">
+        <div class="ipo-card-head">
+          <span class="ipo-name">云英谷科技</span>
+          <span class="ipo-stage ipo-stage--stage-tutoring">辅导备案</span>
+        </div>
+        <p class="ipo-biz">商机线索 · 辅导备案·Pre-IPO（最佳商机）：Pre-IPO 授信、投贷联动、代发工资、高管私行、员工持股托管</p>
+        <div class="ipo-foot"><span class="ipo-date">09/11 · 2 天前</span><a class="ipo-src" href="http://eid.csrc.gov.cn/mnt/storage/stock/pre_ipo/2026/9/11/PREIPO_F0101_V01_20260911_36477_Q/EEACC7A920D84847AAF437EAF633DEA6/关于云英谷科技股份有限公司首次公开发行股票并上市辅导备案报告.pdf" target="_blank" rel="noopener">来源 · 证监会辅导企业(csrcfd)</a></div>
+      </li></ul>
+  </div>
   </section>
 
   <section class="stock-recap">
     <div class="stock-must">
       <h3 class="exec-col-title">📊 股市解读<span class="stock-hint-inline" aria-hidden="true">← 左右滑动查看 →</span></h3>
-      <p class="stock-note stock-note--closed" style="color:#c8842a;font-weight:600">⚠️ 周末及周一休市时段，以下行情为上一交易日（9月4日 周五）收盘数据</p>
+      <p class="stock-note stock-note--closed" style="color:#c8842a;font-weight:600">⚠️ 周末及周一休市时段，以下行情为上一交易日（9月11日 周五）收盘数据</p>
       <ul class="stock-scroller"><li class="stock-card stock-card--a" data-audio-section="stock">
         <header class="stock-card-head">A股</header>
-        <div class="stock-indices"><span class="stock-idx-cap">收盘点位</span><div class="stock-idx-list"><span class="stock-idx">上证指数 <b>3930.12</b> <em class="stock-idx-pct down">-0.30%</em></span><span class="stock-idx">深证成指 <b>13516.97</b> <em class="stock-idx-pct down">-0.79%</em></span><span class="stock-idx">创业板指 <b>3286.55</b> <em class="stock-idx-pct down">-0.78%</em></span></div><span class="stock-idx-src">新浪行情 · 取值于 2026-09-04 收盘</span></div>
-        <p class="stock-overview"><span class="stock-sec-label">大盘一句话总结</span>上证指数收报3930.12点（-0.30%）；深证成指收报13516.97点（-0.79%）；创业板指收报3286.55点（-0.78%）。</p>
+        <div class="stock-indices"><span class="stock-idx-cap">收盘点位</span><div class="stock-idx-list"><span class="stock-idx">上证指数 <b>3888.11</b> <em class="stock-idx-pct down">-1.18%</em></span><span class="stock-idx">深证成指 <b>13471.26</b> <em class="stock-idx-pct down">-1.08%</em></span><span class="stock-idx">创业板指 <b>3322.04</b> <em class="stock-idx-pct down">-0.49%</em></span></div><span class="stock-idx-src">新浪行情 · 取值于 2026-09-11 收盘</span></div>
+        <p class="stock-overview"><span class="stock-sec-label">大盘一句话总结</span>上证指数收报3888.11点（-1.18%）；深证成指收报13471.26点（-1.08%）；创业板指收报3322.04点（-0.49%）。</p>
         
-        <div class="stock-sectors"><span class="stock-sec-label">关键板块总结</span><ul><li>科创50指数高开低走跌2.10%</li><li>算力产业链持续下挫</li><li>猪肉板块逆势走强</li></ul></div>
-        <p class="stock-meta">渠道：东方财富 · 发布时间：2026-09-05 · 交叉验证：新浪行情</p>
+        <div class="stock-sectors"><span class="stock-sec-label">关键板块总结</span><ul><li>创业板指探底回升跌0.49%</li><li>下跌个股超4800只</li></ul></div>
+        <p class="stock-meta">渠道：东方财富 · 发布时间：2026-09-13 · 交叉验证：新浪行情</p>
       </li><li class="stock-card stock-card--hk" data-audio-section="stock">
         <header class="stock-card-head">港股</header>
-        <div class="stock-indices"><span class="stock-idx-cap">收盘点位</span><div class="stock-idx-list"><span class="stock-idx">恒生指数 <b>25650.87</b> <em class="stock-idx-pct up">+1.74%</em></span><span class="stock-idx">恒生科技 <b>4569.80</b> <em class="stock-idx-pct up">+2.27%</em></span></div><span class="stock-idx-src">新浪行情 · 取值于 2026-09-04 收盘</span></div>
-        <p class="stock-overview"><span class="stock-sec-label">大盘一句话总结</span>恒生指数收报25650.87点（+1.74%）；恒生科技收报4569.80点（+2.27%）。</p>
-        <a class="stock-source-report" href="https://finance.sina.com.cn/stock/hkstock/marketalerts/2026-09-04/doc-iniqryes4153297.shtml" target="_blank" rel="noopener">📄 原报告：港股收评：恒指涨1.74% 科指涨2.27% 科网股普涨 AI应用股走强 联想涨超6%</a>
-        <div class="stock-sectors"><span class="stock-sec-label">关键板块总结</span><ul><li>恒生指数涨1.74%</li><li>恒生科技指数涨2.27%</li><li>科网股普涨</li></ul></div>
-        <p class="stock-meta">渠道：新浪财经·港股 · 发布时间：2026-09-04 · 交叉验证：新浪行情</p>
+        <div class="stock-indices"><span class="stock-idx-cap">收盘点位</span><div class="stock-idx-list"><span class="stock-idx">恒生指数 <b>24805.63</b> <em class="stock-idx-pct down">-0.60%</em></span><span class="stock-idx">恒生科技 <b>4320.57</b> <em class="stock-idx-pct down">-0.23%</em></span></div><span class="stock-idx-src">新浪行情 · 取值于 2026-09-11 收盘</span></div>
+        <p class="stock-overview"><span class="stock-sec-label">大盘一句话总结</span>恒生指数收报24805.63点（-0.60%）；恒生科技收报4320.57点（-0.23%）。</p>
+        <a class="stock-source-report" href="https://finance.sina.com.cn/stock/hkstock/marketalerts/2026-09-11/doc-inirmvzx5419345.shtml" target="_blank" rel="noopener">📄 原报告：港股收评：恒指跌0.6% 科指跌0.23% 有色金属板块走弱 光通信板块逆市活跃</a>
+        <div class="stock-sectors"><span class="stock-sec-label">关键板块总结</span><ul><li>恒生指数跌0.6%</li><li>恒生科技指数跌0.23%</li><li>有色金属板块走弱</li></ul></div>
+        <p class="stock-meta">渠道：新浪财经·港股 · 发布时间：2026-09-11 · 交叉验证：新浪行情</p>
       </li><li class="stock-card stock-card--us" data-audio-section="stock">
         <header class="stock-card-head">美股</header>
-        <div class="stock-indices"><span class="stock-idx-cap">收盘点位</span><div class="stock-idx-list"><span class="stock-idx">道琼斯 <b>53414.25</b> <em class="stock-idx-pct down">-0.51%</em></span><span class="stock-idx">纳斯达克 <b>26506.99</b> <em class="stock-idx-pct down">-0.29%</em></span><span class="stock-idx">标普500 <b>7718.60</b> <em class="stock-idx-pct down">-0.38%</em></span></div><span class="stock-idx-src">新浪行情 · 取值于 2026-09-04 收盘</span></div>
-        <p class="stock-overview"><span class="stock-sec-label">大盘一句话总结</span>美股三大指数集体收跌，道指跌0.51%、纳指跌0.29%、标普500跌0.38%，特朗普施压美联储降息抑制风险偏好。</p>
+        <div class="stock-indices"><span class="stock-idx-cap">收盘点位</span><div class="stock-idx-list"><span class="stock-idx">道琼斯 <b>52573.29</b> <em class="stock-idx-pct up">+0.98%</em></span><span class="stock-idx">纳斯达克 <b>26333.04</b> <em class="stock-idx-pct up">+0.96%</em></span><span class="stock-idx">标普500 <b>7656.98</b> <em class="stock-idx-pct up">+0.86%</em></span></div><span class="stock-idx-src">新浪行情 · 取值于 2026-09-11 收盘</span></div>
+        <p class="stock-overview"><span class="stock-sec-label">大盘一句话总结</span>三大指数集体收涨，道指涨0.98%，市场消化地缘与AI多重消息。</p>
         
-        <div class="stock-sectors"><span class="stock-sec-label">关键板块总结</span><ul><li>汽车股受关注，GM与福特因国防与能源业务竞争加剧，百年 rivalry 再升温。</li><li>AI需求强劲，鸿海富士康预计第三季度业绩超市场预期。</li><li>特朗普对委内瑞拉达成史无前例协议，国家资本主义延伸至石油行业。</li></ul></div>
-        <p class="stock-meta">渠道：CNBC Top Stories · 发布时间：2026-09-05 · 交叉验证：新浪行情</p>
+        <div class="stock-sectors"><span class="stock-sec-label">关键板块总结</span><ul><li>油价重回100美元，沙特关停输油管道、胡塞收紧红海航运，能源股获支撑。</li><li>埃里森放弃减持至多75亿美元甲骨文股票，甲骨文股价获提振。</li><li>OpenAI排除年内IPO，奥特曼警告AI推进过快，AI概念股承压。</li></ul></div>
+        <p class="stock-meta">渠道：CNBC Top Stories · 发布时间：2026-09-12 · 交叉验证：新浪行情</p>
       </li></ul>
     </div>
   </section>
 
   <!-- 板块导航：单层 tab，移动端横滑不折行 -->
   <nav class="tabs">
-    <button class="tab active" data-target="p-gz" style="--cat:var(--c-gz)">广州本地<span class="n">5</span></button><button class="tab" data-target="p-stock" style="--cat:var(--c-trading)">股市动态<span class="n">10</span></button><button class="tab" data-target="p-biz" style="--cat:var(--c-biz)">业务启示<span class="n">8</span></button><button class="tab" data-target="p-pol" style="--cat:var(--c-pol)">政策与市场<span class="n">12</span></button><button class="tab" data-target="p-ipo" style="--cat:var(--c-ipo)">IPO动态<span class="n">2</span></button>
+    <button class="tab active" data-target="p-gz" style="--cat:var(--c-gz)">广州本地<span class="n">3</span></button><button class="tab" data-target="p-stock" style="--cat:var(--c-trading)">股市动态<span class="n">10</span></button><button class="tab" data-target="p-biz" style="--cat:var(--c-biz)">业务启示<span class="n">7</span></button><button class="tab" data-target="p-pol" style="--cat:var(--c-pol)">政策与市场<span class="n">5</span></button><button class="tab" data-target="p-ipo" style="--cat:var(--c-ipo)">广东IPO动态<span class="n">9</span></button>
   </nav>
 
   <section class="panel active" id="p-gz">
@@ -1277,39 +1398,33 @@
         <button type="button" class="filter-chip" data-group="src" data-filter="official">官方</button><button type="button" class="filter-chip" data-group="src" data-filter="media">媒体</button>
       </div><div class="filter-group">
         <span class="filter-gtitle">业务线</span>
-        <button type="button" class="filter-chip" data-group="tag" data-filter="__none__">其他</button>
+        <button type="button" class="filter-chip" data-group="tag" data-filter="客群">客群</button><button type="button" class="filter-chip" data-group="tag" data-filter="信贷">信贷</button>
       </div>
     <button type="button" class="filter-reset">重置</button>
   </div>
-    <article class="brief" data-source="media" data-tags="" data-market="">
-  <div class="bm"><span class="src-badge src-media">媒体</span><span>证券时报</span><span>09/05</span></div>
-  <h3><a href="https://www.stcn.com/article/detail/4173447.html" target="_blank" rel="noopener noreferrer">第32次APEC中小企业部长会议在广州举行 贡献“中国方案” 为中小企业发展注入新动能</a></h3>
-  <p class="sum">第32次APEC中小企业部长会议在广州召开，国际政银合作窗口期叠加&quot;中国方案&quot;输出。…</p>
+    <article class="brief must" data-source="media" data-tags="客群 代发 住房金融 信贷" data-market="" data-stage="">
+  <div class="bm"><span class="src-badge src-media">媒体</span><span>广州日报·大洋网</span><span>09/12</span><span class="imp-badge">必知</span></div>
+  <h3><a href="https://news.dayoo.com/guangzhou/202609/12/139995_55002868.htm" target="_blank" rel="noopener noreferrer">广州白云新市街小坪村改造一期回迁安置房交付</a></h3>
+  <p class="sum">白云小坪村一期回迁房交付，拆迁补偿资金进入安置期，存款与家装分期是承接窗口，可提前布点对接。</p>
   
+  
+  <div class="tags"><span class="tag t-mass">客群</span><span class="tag t-mass">代发</span><span class="tag t-policy">住房金融</span><span class="tag ">信贷</span></div>
 </article>
-<article class="brief" data-source="media" data-tags="" data-market="">
-  <div class="bm"><span class="src-badge src-media">媒体</span><span>广州日报·大洋网</span><span>09/05</span></div>
-  <h3><a href="https://news.dayoo.com/guangzhou/202609/05/139995_55000243.htm" target="_blank" rel="noopener noreferrer">中小企业数智转型，亚太如何“抱团”？广州这场对接会探路</a></h3>
-  <p class="sum">亚太中小企业在穗对接数智转型合作机会，提示分行可借势对接会梳理本地中小科创客群的合作入口。</p>
+<article class="brief" data-source="media" data-tags="客群 代发" data-market="" data-stage="">
+  <div class="bm"><span class="src-badge src-media">媒体</span><span>广州日报·大洋网</span><span>09/12</span></div>
+  <h3><a href="https://news.dayoo.com/guangzhou/202609/12/139995_55002792.htm" target="_blank" rel="noopener noreferrer">城改提速！广州天河凌塘东片区今日开拆</a></h3>
+  <p class="sum">天河凌塘东片区今日开拆，动迁提速释放代发与按揭、消费贷需求，可关注补偿款落地节奏。</p>
   
+  
+  <div class="tags"><span class="tag t-mass">客群</span><span class="tag t-mass">代发</span></div>
 </article>
-<article class="brief" data-source="media" data-tags="" data-market="">
-  <div class="bm"><span class="src-badge src-media">媒体</span><span>证券时报</span><span>09/04</span></div>
-  <h3><a href="https://www.stcn.com/article/detail/4172850.html" target="_blank" rel="noopener noreferrer">第32次亚太经合组织中小企业部长会议在广州举行</a></h3>
-  <p class="sum">APEC中小企业部长会议在穗举行，跨境政商资源汇聚。…</p>
+<article class="brief" data-source="media" data-tags="住房金融 市场 信贷 客群" data-market="" data-stage="">
+  <div class="bm"><span class="src-badge src-media">媒体</span><span>广州日报·大洋网</span><span>09/12</span></div>
+  <h3><a href="https://news.dayoo.com/guangzhou/202609/12/139995_55002783.htm" target="_blank" rel="noopener noreferrer">今年前8个月广州一手住宅成交增速居一线城市第二</a></h3>
+  <p class="sum">前8个月广州一手住宅成交增速居一线城市第二，按揭投放窗口延续，可跟进合作楼盘与置换客群。</p>
   
-</article>
-<article class="brief" data-source="media" data-tags="" data-market="">
-  <div class="bm"><span class="src-badge src-media">媒体</span><span>广州日报·大洋网</span><span>09/04</span></div>
-  <h3><a href="https://news.dayoo.com/guangzhou/202609/04/139995_54999938.htm" target="_blank" rel="noopener noreferrer">广州海关保障中国国际中小企业博览会开展</a></h3>
-  <p class="sum">广州海关保障中博会顺利开展，进出口通关效率有保障。…</p>
   
-</article>
-<article class="brief" data-source="media" data-tags="" data-market="">
-  <div class="bm"><span class="src-badge src-media">媒体</span><span>广州日报·大洋网</span><span>09/04</span></div>
-  <h3><a href="https://news.dayoo.com/guangzhou/202609/04/139995_54999745.htm" target="_blank" rel="noopener noreferrer">2026APEC中小企业部长会之广州企业观察⑪｜康方生物：广州原研药硬核崛起</a></h3>
-  <p class="sum">康方生物作为广州原研药代表亮相APEC观察。…</p>
-  
+  <div class="tags"><span class="tag t-policy">住房金融</span><span class="tag ">市场</span><span class="tag ">信贷</span><span class="tag t-mass">客群</span></div>
 </article>
   </section><section class="panel" id="p-stock">
     <div class="filter-bar">
@@ -1317,64 +1432,84 @@
     <button type="button" class="filter-chip" data-group="market" data-filter="a-share">A股</button><button type="button" class="filter-chip" data-group="market" data-filter="hk">港股</button><button type="button" class="filter-chip" data-group="market" data-filter="us">美股</button>
     <button type="button" class="filter-reset">重置</button>
   </div>
-    <article class="brief" data-source="media" data-tags="" data-market="a-share">
-  <div class="bm"><span class="mkt-badge mkt-a">A股</span><span class="src-badge src-media">媒体</span><span>东方财富</span><span>09/05</span></div>
-  <h3><a href="https://finance.eastmoney.com/a/202609053865803661.html" target="_blank" rel="noopener noreferrer">超6000次密集调研！财报季私募全力掘金百亿机构调研方向曝光</a></h3>
-  <p class="sum">超6000次密集调研！财报季私募全力掘金百亿机构调研方向曝光</p>
+    <article class="brief" data-source="media" data-tags="汽车 豪华车 销量 中国市场" data-market="a-share" data-stage="">
+  <div class="bm"><span class="mkt-badge mkt-a">A股</span><span class="src-badge src-media">媒体</span><span>东方财富</span><span>09/12</span></div>
+  <h3><a href="https://finance.eastmoney.com/a/202609123872679895.html" target="_blank" rel="noopener noreferrer">保时捷青岛女销冠暂居“全球第一”但欧美豪车在中国卖不动了：保时捷4年销量腰斩BBA上半年少卖20万台</a></h3>
+  <p class="sum">报道称欧美豪华车在中国市场销售承压：保时捷在华销量四年间腰斩，BBA上半年合计少卖约20万台；…</p>
   
+  
+  <div class="tags"><span class="tag ">汽车</span><span class="tag ">豪华车</span><span class="tag ">销量</span><span class="tag ">中国市场</span></div>
 </article>
-<article class="brief" data-source="media" data-tags="" data-market="a-share">
-  <div class="bm"><span class="mkt-badge mkt-a">A股</span><span class="src-badge src-media">媒体</span><span>东方财富</span><span>09/05</span></div>
-  <h3><a href="https://finance.eastmoney.com/a/202609053865790228.html" target="_blank" rel="noopener noreferrer">全球市场：美股三大指数收跌存储、光通信板块走强特斯拉跌近6%</a></h3>
-  <p class="sum">全球市场：美股三大指数收跌存储、光通信板块走强特斯拉跌近6%</p>
+<article class="brief" data-source="media" data-tags="光模块 通信 机构观点 A股" data-market="a-share" data-stage="">
+  <div class="bm"><span class="mkt-badge mkt-a">A股</span><span class="src-badge src-media">媒体</span><span>东方财富</span><span>09/12</span></div>
+  <h3><a href="https://finance.eastmoney.com/a/202609123872680024.html" target="_blank" rel="noopener noreferrer">机构力挺光模块龙头强势涨停！13只绩优潜力股曝光</a></h3>
+  <p class="sum">报道称光模块龙头获机构力挺并强势涨停，同时列出13只被机构关注的绩优潜力股。</p>
   
+  
+  <div class="tags"><span class="tag ">光模块</span><span class="tag ">通信</span><span class="tag ">机构观点</span><span class="tag ">A股</span></div>
 </article>
-<article class="brief" data-source="media" data-tags="" data-market="a-share">
-  <div class="bm"><span class="mkt-badge mkt-a">A股</span><span class="src-badge src-media">媒体</span><span>东方财富</span><span>09/05</span></div>
-  <h3><a href="https://finance.eastmoney.com/a/202609053865803463.html" target="_blank" rel="noopener noreferrer">17万亿空单恐引爆踩踏！摩根大通火线预警日元逼近“红线”</a></h3>
-  <p class="sum">17万亿空单恐引爆踩踏！摩根大通火线预警日元逼近“红线”</p>
+<article class="brief" data-source="media" data-tags="停牌核查 复牌 A股" data-market="a-share" data-stage="">
+  <div class="bm"><span class="mkt-badge mkt-a">A股</span><span class="src-badge src-media">媒体</span><span>东方财富</span><span>09/12</span></div>
+  <h3><a href="https://finance.eastmoney.com/a/202609123872678161.html" target="_blank" rel="noopener noreferrer">核查完成！7天6板大牛股，下周一复牌</a></h3>
+  <p class="sum">一只7天6板的股票完成核查，将于下周一复牌。</p>
   
+  
+  <div class="tags"><span class="tag ">停牌核查</span><span class="tag ">复牌</span><span class="tag ">A股</span></div>
 </article>
-<article class="brief" data-source="media" data-tags="" data-market="a-share">
-  <div class="bm"><span class="mkt-badge mkt-a">A股</span><span class="src-badge src-media">媒体</span><span>东方财富</span><span>09/05</span></div>
-  <h3><a href="https://finance.eastmoney.com/a/202609053865789438.html" target="_blank" rel="noopener noreferrer">特朗普：美特使将向俄罗斯提交俄乌冲突“终战方案”</a></h3>
-  <p class="sum">特朗普：美特使将向俄罗斯提交俄乌冲突“终战方案”</p>
+<article class="brief must" data-source="media" data-tags="能源 原油 地缘政治" data-market="a-share" data-stage="">
+  <div class="bm"><span class="mkt-badge mkt-a">A股</span><span class="src-badge src-media">媒体</span><span>东方财富</span><span>09/12</span><span class="imp-badge">必知</span></div>
+  <h3><a href="https://finance.eastmoney.com/a/202609123872686984.html" target="_blank" rel="noopener noreferrer">能源危机骤然升级！沙特关键输油管道遇袭后预防性关闭</a></h3>
+  <p class="sum">沙特一条关键输油管道遇袭后被预防性关闭，报道称能源危机骤然升级。</p>
   
+  
+  <div class="tags"><span class="tag ">能源</span><span class="tag ">原油</span><span class="tag ">地缘政治</span></div>
 </article>
-<article class="brief" data-source="media" data-tags="" data-market="a-share">
-  <div class="bm"><span class="mkt-badge mkt-a">A股</span><span class="src-badge src-media">媒体</span><span>东方财富</span><span>09/05</span></div>
-  <h3><a href="https://finance.eastmoney.com/a/202609053865943351.html" target="_blank" rel="noopener noreferrer">牛股兴业科技因信披问题遭证监会立案此前宣布跨界“追光”</a></h3>
-  <p class="sum">牛股兴业科技因信披问题遭证监会立案此前宣布跨界“追光”</p>
+<article class="brief" data-source="media" data-tags="华为 消费电子 折叠屏" data-market="a-share" data-stage="">
+  <div class="bm"><span class="mkt-badge mkt-a">A股</span><span class="src-badge src-media">媒体</span><span>东方财富</span><span>09/12</span></div>
+  <h3><a href="https://finance.eastmoney.com/a/202609123872714070.html" target="_blank" rel="noopener noreferrer">华为全新三折叠开售秒空！二手市场溢价数千元优购码被倒卖</a></h3>
+  <p class="sum">华为全新三折叠手机开售即售罄，二手市场出现数千元溢价，优购码被倒卖。</p>
   
-</article><article class="brief more" data-source="media" data-tags="" data-market="hk">
-  <div class="bm"><span class="mkt-badge mkt-hk">港股</span><span class="src-badge src-media">媒体</span><span>新浪财经·港股</span><span>09/04</span></div>
-  <h3><a href="https://finance.sina.com.cn/stock/hkstock/marketalerts/2026-09-04/doc-iniqryes4153297.shtml" target="_blank" rel="noopener noreferrer">港股收评：恒指涨1.74% 科指涨2.27% 科网股普涨 AI应用股走强 联想涨超6%</a></h3>
-  <p class="sum">港股收评：恒指涨1.74% 科指涨2.27% 科网股普涨 AI应用股走强 联想涨超6%</p>
   
+  <div class="tags"><span class="tag ">华为</span><span class="tag ">消费电子</span><span class="tag ">折叠屏</span></div>
+</article><article class="brief more" data-source="media" data-tags="港股 恒指 光通信 有色金属" data-market="hk" data-stage="">
+  <div class="bm"><span class="mkt-badge mkt-hk">港股</span><span class="src-badge src-media">媒体</span><span>新浪财经·港股</span><span>09/11</span></div>
+  <h3><a href="https://finance.sina.com.cn/stock/hkstock/marketalerts/2026-09-11/doc-inirmvzx5419345.shtml" target="_blank" rel="noopener noreferrer">港股收评：恒指跌0.6% 科指跌0.23% 有色金属板块走弱 光通信板块逆市活跃</a></h3>
+  <p class="sum">港股收评：恒指跌0.6%，恒生科技指数跌0.23%，有色金属板块走弱，光通信板块逆市活跃。</p>
+  
+  
+  <div class="tags"><span class="tag ">港股</span><span class="tag ">恒指</span><span class="tag ">光通信</span><span class="tag ">有色金属</span></div>
 </article>
-<article class="brief more" data-source="media" data-tags="" data-market="hk">
-  <div class="bm"><span class="mkt-badge mkt-hk">港股</span><span class="src-badge src-media">媒体</span><span>新浪财经·港股</span><span>09/04</span></div>
-  <h3><a href="https://finance.sina.com.cn/roll/2026-09-04/doc-iniqqsmk1005837.shtml" target="_blank" rel="noopener noreferrer">港股年内回购逾千亿元 三板块获重要股东增持</a></h3>
-  <p class="sum">港股年内回购逾千亿元 三板块获重要股东增持</p>
+<article class="brief more" data-source="media" data-tags="港股 市场走势" data-market="hk" data-stage="">
+  <div class="bm"><span class="mkt-badge mkt-hk">港股</span><span class="src-badge src-media">媒体</span><span>新浪财经·港股</span><span>09/11</span></div>
+  <h3><a href="https://finance.sina.com.cn/roll/2026-09-11/doc-inirmmnc5347122.shtml" target="_blank" rel="noopener noreferrer">早盘持续低迷 港股遭遇五连跌 行情反转就在九月？</a></h3>
+  <p class="sum">港股早盘持续低迷并录得五连跌，报道讨论9月行情是否会出现反转。</p>
   
+  
+  <div class="tags"><span class="tag ">港股</span><span class="tag ">市场走势</span></div>
 </article>
-<article class="brief more" data-source="media" data-tags="" data-market="hk">
-  <div class="bm"><span class="mkt-badge mkt-hk">港股</span><span class="src-badge src-media">媒体</span><span>新浪财经·港股</span><span>09/04</span></div>
-  <h3><a href="https://finance.sina.com.cn/wm/2026-09-04/doc-iniqriie6339091.shtml" target="_blank" rel="noopener noreferrer">香港证监：零售基金投资私募资产需做明确披露</a></h3>
-  <p class="sum">香港证监：零售基金投资私募资产需做明确披露</p>
+<article class="brief more" data-source="media" data-tags="港股 停牌 IPO 监管" data-market="hk" data-stage="">
+  <div class="bm"><span class="mkt-badge mkt-hk">港股</span><span class="src-badge src-media">媒体</span><span>新浪财经·港股</span><span>09/11</span></div>
+  <h3><a href="https://finance.sina.com.cn/jjxw/2026-09-11/doc-inirkiyn2637637.shtml" target="_blank" rel="noopener noreferrer">这家港股公司被强制停牌，涉嫌操纵IPO！上市前国际发售仅0.89倍认购，上市当天盘中就跌了40%</a></h3>
+  <p class="sum">一家港股公司因涉嫌操纵IPO被强制停牌，其上市前国际发售仅获0.89倍认购，上市首日盘中跌幅达40%…</p>
   
+  
+  <div class="tags"><span class="tag ">港股</span><span class="tag ">停牌</span><span class="tag ">IPO</span><span class="tag t-policy">监管</span></div>
 </article>
-<article class="brief more" data-source="media" data-tags="" data-market="hk">
-  <div class="bm"><span class="mkt-badge mkt-hk">港股</span><span class="src-badge src-media">媒体</span><span>新浪财经·港股</span><span>09/04</span></div>
-  <h3><a href="https://finance.sina.com.cn/stock/hkstock/hkgg/2026-09-04/doc-iniqsens0879632.shtml" target="_blank" rel="noopener noreferrer">高盛：升华润置地(01109)目标价至38.8港元 维持“买入”评级</a></h3>
-  <p class="sum">高盛：升华润置地(01109)目标价至38.8港元 维持“买入”评级</p>
+<article class="brief more" data-source="media" data-tags="有色金属 铜 港股 关税" data-market="hk" data-stage="">
+  <div class="bm"><span class="mkt-badge mkt-hk">港股</span><span class="src-badge src-media">媒体</span><span>新浪财经·港股</span><span>09/11</span></div>
+  <h3><a href="https://finance.sina.com.cn/stock/hkstock/2026-09-11/doc-inirmmnf2106651.shtml" target="_blank" rel="noopener noreferrer">白宫铜关税计划陷停滞叠加加息预期升温，港股铜业股全线重挫，江西铜业跌超10%</a></h3>
+  <p class="sum">受白宫铜关税计划陷入停滞及加息预期升温影响，港股铜业股全线重挫，江西铜业跌超10%。</p>
   
+  
+  <div class="tags"><span class="tag ">有色金属</span><span class="tag ">铜</span><span class="tag ">港股</span><span class="tag ">关税</span></div>
 </article>
-<article class="brief more" data-source="media" data-tags="" data-market="hk">
-  <div class="bm"><span class="mkt-badge mkt-hk">港股</span><span class="src-badge src-media">媒体</span><span>新浪财经·港股</span><span>09/04</span></div>
-  <h3><a href="https://finance.sina.com.cn/stock/hkstock/hkgg/2026-09-04/doc-iniqsenu1271255.shtml" target="_blank" rel="noopener noreferrer">大摩：升富卫集团(01828)目标价至41.9港元 上调2026至2028财年新业务价值预测</a></h3>
-  <p class="sum">大摩：升富卫集团(01828)目标价至41.9港元 上调2026至2028财年新业务价值预测</p>
+<article class="brief more" data-source="media" data-tags="券商研报 港股 机械设备" data-market="hk" data-stage="">
+  <div class="bm"><span class="mkt-badge mkt-hk">港股</span><span class="src-badge src-media">媒体</span><span>新浪财经·港股</span><span>09/11</span></div>
+  <h3><a href="https://finance.sina.com.cn/stock/hkstock/hkgg/2026-09-11/doc-inirmvzx5380885.shtml" target="_blank" rel="noopener noreferrer">花旗：维持大族数控(03200)“买入”评级 目标价189港元</a></h3>
+  <p class="sum">花旗维持大族数控（03200）「买入」评级，目标价189港元。</p>
   
+  
+  <div class="tags"><span class="tag ">券商研报</span><span class="tag ">港股</span><span class="tag ">机械设备</span></div>
 </article><button class="expand-btn" type="button">展开其余 5 条</button>
   </section><section class="panel" id="p-biz">
     <div class="filter-bar">
@@ -1384,57 +1519,65 @@
         <button type="button" class="filter-chip" data-group="src" data-filter="official">官方</button><button type="button" class="filter-chip" data-group="src" data-filter="media">媒体</button>
       </div><div class="filter-group">
         <span class="filter-gtitle">业务线</span>
-        <button type="button" class="filter-chip" data-group="tag" data-filter="客群">客群</button><button type="button" class="filter-chip" data-group="tag" data-filter="__none__">其他</button>
+        <button type="button" class="filter-chip" data-group="tag" data-filter="客群">客群</button><button type="button" class="filter-chip" data-group="tag" data-filter="私行">私行</button><button type="button" class="filter-chip" data-group="tag" data-filter="财富">财富</button><button type="button" class="filter-chip" data-group="tag" data-filter="__none__">其他</button>
       </div>
     <button type="button" class="filter-reset">重置</button>
   </div>
-    <article class="brief" data-source="media" data-tags="客群" data-market="">
-  <div class="bm"><span class="src-badge src-media">媒体</span><span>21世纪经济报道·金融</span><span>09/05</span></div>
-  <h3><a href="https://m.21jingji.com/article/20260905/herald/56e12caff5389c7f1ab48bfd920c73bf.html" target="_blank" rel="noopener noreferrer">银行网点“变形记”——从规模增减到价值重估</a></h3>
-  <p class="sum">网点从扩规模转向价值重估，社区/财富型定位分化；可作为本行广州网点功能优化的同业参考。</p>
-  <div class="tags"><span class="tag t-mass">客群</span></div>
+    <article class="brief" data-source="media" data-tags="跨境 财富" data-market="" data-stage="">
+  <div class="bm"><span class="src-badge src-media">媒体</span><span>21世纪经济报道·金融</span><span>09/12</span></div>
+  <h3><a href="https://m.21jingji.com/article/20260912/herald/7a87eb7b47aade78931299f3f172c03d.html" target="_blank" rel="noopener noreferrer">（经济观察）中国金融业界稳步推进跨境服务</a></h3>
+  <p class="sum">业界稳步推进跨境金融服务，跨境结算与账户服务是零售跨境客群切入点，可留意配套细则落地。</p>
+  
+  
+  <div class="tags"><span class="tag ">跨境</span><span class="tag t-wealth">财富</span></div>
 </article>
-<article class="brief" data-source="media" data-tags="客群" data-market="">
-  <div class="bm"><span class="src-badge src-media">媒体</span><span>证券时报</span><span>09/04</span></div>
-  <h3><a href="https://www.stcn.com/article/detail/4173370.html" target="_blank" rel="noopener noreferrer">守正笃行，养老为民——以正确政绩观做好养老金融大文章</a></h3>
-  <p class="sum">媒体解读养老金融大文章的政策导向。所以呢：分行零售端可借势推动个人养老账户与适老财富产品组合营销。</p>
-  <div class="tags"><span class="tag t-mass">客群</span></div>
+<article class="brief" data-source="media" data-tags="私行 财富 竞对动态" data-market="" data-stage="">
+  <div class="bm"><span class="src-badge src-media">媒体</span><span>21世纪经济报道·金融</span><span>09/12</span></div>
+  <h3><a href="https://m.21jingji.com/article/20260912/herald/eece812a61e56765e13b76975fb6ee60.html" target="_blank" rel="noopener noreferrer">交行私人银行部副总经理黄大海：用专业能力守护客户价值</a></h3>
+  <p class="sum">交行私行强调以专业能力守护客户价值，高净值客群服务竞争加剧，可检视本行投顾陪伴动作。</p>
+  
+  
+  <div class="tags"><span class="tag t-wealth">私行</span><span class="tag t-wealth">财富</span><span class="tag ">竞对动态</span></div>
 </article>
-<article class="brief" data-source="media" data-tags="" data-market="">
-  <div class="bm"><span class="src-badge src-media">媒体</span><span>Investing.com News</span><span>09/05</span></div>
-  <h3><a href="https://www.investing.com/news/economy-news/another-false-dawn-chinas-luxury-spending-revival-seems-to-be-fading-bernstein-4890177" target="_blank" rel="noopener noreferrer">Another false dawn? China’s luxury spending revival seems to be fading: Bernstein</a></h3>
-  <p class="sum">Bernstein警示中国奢侈品消费复苏或再度落空，高净值客群可选消费疲软；…</p>
+<article class="brief" data-source="media" data-tags="市场 竞对动态 客群" data-market="" data-stage="">
+  <div class="bm"><span class="src-badge src-media">媒体</span><span>新华财经</span><span>09/12</span></div>
+  <h3><a href="https://www.cnfin.com/yw-lb/detail/20260912/4469064_1.html" target="_blank" rel="noopener noreferrer">【中经社信号】银行加码债券投资 拓展盈利增长多元空间</a></h3>
+  <p class="sum">银行加码债券投资拓展盈利空间，或影响理财资产端配置与产品供给，可跟踪后续投向变化。</p>
+  
+  
+  <div class="tags"><span class="tag ">市场</span><span class="tag ">竞对动态</span><span class="tag t-mass">客群</span></div>
+</article>
+<article class="brief" data-source="media" data-tags="财富" data-market="" data-stage="">
+  <div class="bm"><span class="src-badge src-media">媒体</span><span>新浪财经·理财保险</span><span>09/12</span></div>
+  <h3><a href="https://finance.sina.com.cn/money/bank/bank_hydt/2026-09-12/doc-inirpqmk5295352.shtml" target="_blank" rel="noopener noreferrer">平安理财精选理财一览（2026年9月12日）</a></h3>
+  <p class="sum">平安理财9月12日精选产品一览发布，可对照同期限在售货架做竞争力排查，留意客户比价动向。</p>
+  
+  
+  <div class="tags"><span class="tag t-wealth">财富</span></div>
+</article>
+<article class="brief" data-source="media" data-tags="监管合规 市场 客群" data-market="" data-stage="">
+  <div class="bm"><span class="src-badge src-media">媒体</span><span>证券时报</span><span>09/12</span></div>
+  <h3><a href="https://www.stcn.com/article/detail/4182914.html" target="_blank" rel="noopener noreferrer">【财闻联播】1.8元即可伪造上亿转账截图，支付宝回应！国家超算互联网用户突破170万</a></h3>
+  <p class="sum">1.8元即可伪造上亿转账截图、支付宝已回应，转账凭证核验提示值得前置到一线，防范客户受骗。</p>
+  
+  
+  <div class="tags"><span class="tag t-policy">监管合规</span><span class="tag ">市场</span><span class="tag t-mass">客群</span></div>
+</article><article class="brief more" data-source="media" data-tags="" data-market="" data-stage="">
+  <div class="bm"><span class="src-badge src-media">媒体</span><span>CNBC Top Stories</span><span>09/13</span></div>
+  <h3><a href="https://www.cnbc.com/2026/09/12/anthropics-amodei-proposes-plan-to-slow-the-pace-of-advancing-ai-capabilities.html" target="_blank" rel="noopener noreferrer">OpenAI rules out IPO this year as Altman, Musk &amp; Amodei warn AI is moving too fast</a></h3>
+  <p class="sum">Altman&#39;s IPO comments and Amodei&#39;s public call for…</p>
+  
+  
   
 </article>
-<article class="brief" data-source="media" data-tags="" data-market="">
-  <div class="bm"><span class="src-badge src-media">媒体</span><span>南方网·经济</span><span>09/05</span></div>
-  <h3><a href="https://news.southcn.com/node_812903b83a/0d54a36e0a.shtml" target="_blank" rel="noopener noreferrer">多重因素困扰 国际金价陷入震荡拉锯</a></h3>
-  <p class="sum">国际金价陷入震荡拉锯，多空因素交织；黄金客群短期观望情绪上升，配置类客户可节奏放缓。</p>
+<article class="brief more" data-source="media" data-tags="" data-market="" data-stage="">
+  <div class="bm"><span class="src-badge src-media">媒体</span><span>东方财富</span><span>09/12</span></div>
+  <h3><a href="https://finance.eastmoney.com/a/202609123872504413.html" target="_blank" rel="noopener noreferrer">英伟达据悉正就向Anthropic的IPO项目投资高达100亿美元进行谈判</a></h3>
+  <p class="sum">英伟达据悉拟向Anthropic的IPO投资至多100亿美元，AI资本热度延续，科技客群融资需求值得…</p>
   
-</article>
-<article class="brief" data-source="media" data-tags="" data-market="">
-  <div class="bm"><span class="src-badge src-media">媒体</span><span>证券时报</span><span>09/05</span></div>
-  <h3><a href="https://www.stcn.com/article/detail/4173453.html" target="_blank" rel="noopener noreferrer">北交所新股量质齐升 新质生产力赛道企业集中登场</a></h3>
-  <p class="sum">北交所新股&quot;量质齐升&quot;，新质生产力赛道企业集中申报。…</p>
   
-</article><article class="brief more" data-source="media" data-tags="" data-market="">
-  <div class="bm"><span class="src-badge src-media">媒体</span><span>证券时报</span><span>09/05</span></div>
-  <h3><a href="https://www.stcn.com/article/detail/4173448.html" target="_blank" rel="noopener noreferrer">央行等量续作3个月期买断式逆回购</a></h3>
-  <p class="sum">央行等量续作3个月期买断式逆回购，跨季流动性态度中性。…</p>
   
-</article>
-<article class="brief more" data-source="media" data-tags="" data-market="">
-  <div class="bm"><span class="src-badge src-media">媒体</span><span>21世纪经济报道·金融</span><span>09/05</span></div>
-  <h3><a href="https://m.21jingji.com/article/20260905/herald/e8e248e93a298e057ecdd93461ca8cbb.html" target="_blank" rel="noopener noreferrer">中信金控详解综合金融协同价值，上半年净利增22%至656亿元</a></h3>
-  <p class="sum">中信金控上半年净利656亿元、同比+22%，综合金融协同提速；…</p>
-  
-</article>
-<article class="brief more" data-source="media" data-tags="" data-market="">
-  <div class="bm"><span class="src-badge src-media">媒体</span><span>广州日报·大洋网</span><span>09/05</span></div>
-  <h3><a href="https://news.dayoo.com/guangzhou/202609/05/139995_55000050.htm" target="_blank" rel="noopener noreferrer">广州市政府召开常务会议</a></h3>
-  <p class="sum">广州市政府9/5召开常务会议，具体议题待公布；提示相关部门跟踪议题方向，捕捉与零售业务的关联点。</p>
-  
-</article><button class="expand-btn" type="button">展开其余 3 条</button>
+</article><button class="expand-btn" type="button">展开其余 2 条</button>
   </section><section class="panel" id="p-pol">
     <div class="filter-bar">
     <span class="filter-label">筛选</span>
@@ -1443,81 +1586,50 @@
         <button type="button" class="filter-chip" data-group="src" data-filter="official">官方</button><button type="button" class="filter-chip" data-group="src" data-filter="media">媒体</button>
       </div><div class="filter-group">
         <span class="filter-gtitle">业务线</span>
-        <button type="button" class="filter-chip" data-group="tag" data-filter="客群">客群</button><button type="button" class="filter-chip" data-group="tag" data-filter="__none__">其他</button>
+        <button type="button" class="filter-chip" data-group="tag" data-filter="客群">客群</button><button type="button" class="filter-chip" data-group="tag" data-filter="财富">财富</button><button type="button" class="filter-chip" data-group="tag" data-filter="信贷">信贷</button><button type="button" class="filter-chip" data-group="tag" data-filter="__none__">其他</button>
       </div>
     <button type="button" class="filter-reset">重置</button>
   </div>
-    <article class="brief" data-source="media" data-tags="客群" data-market="">
-  <div class="bm"><span class="src-badge src-media">媒体</span><span>证券时报</span><span>09/04</span></div>
-  <h3><a href="https://www.stcn.com/article/detail/4171713.html" target="_blank" rel="noopener noreferrer">时报数说 第二批32个全国零售业创新提升试点城市名单公布</a></h3>
-  <p class="sum">第二批32个零售创新试点城市落地，零售银行部可排查名单内城市支行，围绕商圈改造和消费场景做商户收单与…</p>
-  <div class="tags"><span class="tag t-mass">客群</span></div>
+    <article class="brief must" data-source="media" data-tags="消费贷 信贷" data-market="" data-stage="">
+  <div class="bm"><span class="src-badge src-media">媒体</span><span>21世纪经济报道·金融</span><span>09/12</span><span class="imp-badge">必知</span></div>
+  <h3><a href="https://m.21jingji.com/article/20260912/herald/e1e04d9012d1eb922dcf6c950a06ad8e.html" target="_blank" rel="noopener noreferrer">提高至5000元！个人消费贷贴息政策提额扩围</a></h3>
+  <p class="sum">个人消费贷贴息提额扩围至5000元，直接利好消费信贷投放，可梳理贴息产品与客户触达口径。</p>
+  
+  
+  <div class="tags"><span class="tag ">消费贷</span><span class="tag ">信贷</span></div>
 </article>
-<article class="brief must" data-source="media" data-tags="监管合规" data-market="">
-  <div class="bm"><span class="src-badge src-media">媒体</span><span>东方财富</span><span>09/05</span><span class="imp-badge">必知</span></div>
-  <h3><a href="https://finance.eastmoney.com/a/202609053865869121.html" target="_blank" rel="noopener noreferrer">2.3884亿元！中国证监会对元道通信开出巨额罚单</a></h3>
-  <p class="sum">证监会开出2.3884亿元罚单震慑信号明显，所以呢：相关行业客户尽调时合规权重应上调，提示客户关注信…</p>
-  <div class="tags"><span class="tag t-policy">监管合规</span></div>
+<article class="brief" data-source="media" data-tags="市场 跨境 客群 财富" data-market="" data-stage="">
+  <div class="bm"><span class="src-badge src-media">媒体</span><span>东方财富</span><span>09/12</span></div>
+  <h3><a href="https://finance.eastmoney.com/a/202609123872757916.html" target="_blank" rel="noopener noreferrer">下周美联储将召开9月议息会议！多项数据支持加息，多家投行开始转向</a></h3>
+  <p class="sum">美联储9月议息会议下周召开、多家投行转向，汇率与结售汇窗口值得向客户提示关注。</p>
+  
+  
+  <div class="tags"><span class="tag ">市场</span><span class="tag ">跨境</span><span class="tag t-mass">客群</span><span class="tag t-wealth">财富</span></div>
 </article>
-<article class="brief" data-source="media" data-tags="" data-market="">
-  <div class="bm"><span class="src-badge src-media">媒体</span><span>证券时报</span><span>09/05</span></div>
-  <h3><a href="https://www.stcn.com/article/detail/4173452.html" target="_blank" rel="noopener noreferrer">打新阵营扩容 “两创板”新股中签率持续走低</a></h3>
-  <p class="sum">&quot;两创板&quot;打新中签率走低，公募基金等机构参与度提升。…</p>
+<article class="brief" data-source="media" data-tags="财富 市场 客群" data-market="" data-stage="">
+  <div class="bm"><span class="src-badge src-media">媒体</span><span>新浪财经·A股</span><span>09/12</span></div>
+  <h3><a href="https://finance.sina.com.cn/roll/2026-09-12/doc-inirntfr2046727.shtml" target="_blank" rel="noopener noreferrer">多只宽基ETF成交放量，市场调整中资金借道积极入市</a></h3>
+  <p class="sum">多只宽基ETF成交放量、资金借道入市，可留意客户对权益类产品的咨询与配置意愿变化。</p>
+  
+  
+  <div class="tags"><span class="tag t-wealth">财富</span><span class="tag ">市场</span><span class="tag t-mass">客群</span></div>
+</article>
+<article class="brief" data-source="media" data-tags="信贷" data-market="" data-stage="">
+  <div class="bm"><span class="src-badge src-media">媒体</span><span>新浪财经·理财保险</span><span>09/12</span></div>
+  <h3><a href="https://finance.sina.com.cn/jjxw/2026-09-12/doc-inirpkcn5368144.shtml" target="_blank" rel="noopener noreferrer">花旗调整美联储利率预期：预计9月加息，明年启动降息</a></h3>
+  <p class="sum">花旗预计9月加息、明年启动降息，客户外币资产配置与锁汇节奏值得提前沟通。</p>
+  
+  
+  <div class="tags"><span class="tag ">信贷</span></div>
+</article>
+<article class="brief" data-source="media" data-tags="" data-market="" data-stage="">
+  <div class="bm"><span class="src-badge src-media">媒体</span><span>东方财富</span><span>09/12</span></div>
+  <h3><a href="https://finance.eastmoney.com/a/202609123872513967.html" target="_blank" rel="noopener noreferrer">编造、传播“税率调整”虚假信息四人被证监会处罚</a></h3>
+  <p class="sum">四人编造传播“税率调整”虚假信息被罚，网点需防范客户受谣言影响而咨询或赎回。</p>
+  
+  
   
 </article>
-<article class="brief" data-source="media" data-tags="" data-market="">
-  <div class="bm"><span class="src-badge src-media">媒体</span><span>证券时报</span><span>09/05</span></div>
-  <h3><a href="https://www.stcn.com/article/detail/4173461.html" target="_blank" rel="noopener noreferrer">证监会：着力打造“三个过硬”监管铁军</a></h3>
-  <p class="sum">证监会强调&quot;三个过硬&quot;监管铁军建设，关注后续代销、个贷合规检查力度变化，对分行一线营销话术与档案管理…</p>
-  
-</article>
-<article class="brief" data-source="media" data-tags="" data-market="">
-  <div class="bm"><span class="src-badge src-media">媒体</span><span>东方财富</span><span>09/05</span></div>
-  <h3><a href="https://finance.eastmoney.com/a/202609053865951116.html" target="_blank" rel="noopener noreferrer">非农爆了！9月加息预期升温特朗普喊话：降息！降息！美联储必须“聪明”起来</a></h3>
-  <p class="sum">美国非农超预期推升9月加息预期；外汇与黄金客户面临预期重定价，结售汇窗口可主动提示。</p>
-  
-</article><article class="brief more" data-source="media" data-tags="" data-market="">
-  <div class="bm"><span class="src-badge src-media">媒体</span><span>南方网·经济</span><span>09/04</span></div>
-  <h3><a href="https://news.southcn.com/node_812903b83a/f5ce420c3d.shtml" target="_blank" rel="noopener noreferrer">中国银行协助在港发行75亿元广东省政府债券 畅通湾区金融市场互联互通</a></h3>
-  <p class="sum">中行协助在港发行75亿元广东省政府债。…</p>
-  
-</article>
-<article class="brief more" data-source="media" data-tags="" data-market="">
-  <div class="bm"><span class="src-badge src-media">媒体</span><span>证券时报</span><span>09/04</span></div>
-  <h3><a href="https://www.stcn.com/article/detail/4171707.html" target="_blank" rel="noopener noreferrer">十部门联合印发《促进中小企业发展“十五五”规划》 2030年专精特新“小巨人”企业达到2.2万家</a></h3>
-  <p class="sum">2030年专精特新小巨人目标2.2万家，零售对公可提前对接辖内培育库企业，布局科技e贷等专属产品。</p>
-  
-</article>
-<article class="brief more" data-source="official" data-tags="" data-market="">
-  <div class="bm"><span class="src-badge src-official">官方</span><span>央视财经</span><span>09/04</span></div>
-  <h3><a href="https://finance.cctv.com/2026/09/04/ARTIXloWBP22n8ocIwuPMNAA260904.shtml" target="_blank" rel="noopener noreferrer">楼市预售制30年之后</a></h3>
-  <p class="sum">媒体回顾楼市预售制运行30年历程。…</p>
-  
-</article>
-<article class="brief more" data-source="official" data-tags="" data-market="">
-  <div class="bm"><span class="src-badge src-official">官方</span><span>新华财经</span><span>09/04</span></div>
-  <h3><a href="https://www.cnfin.com/hg-lb/detail/20260904/4465543_1.html" target="_blank" rel="noopener noreferrer">历时五年修订，金融监管总局公开征求意见</a></h3>
-  <p class="sum">信息披露管理办法修订征求意见，五年一大改。…</p>
-  
-</article>
-<article class="brief more" data-source="official" data-tags="" data-market="">
-  <div class="bm"><span class="src-badge src-official">官方</span><span>央广网·广东</span><span>09/04</span></div>
-  <h3><a href="https://www.cnr.cn/gd/guangdongyaowen/20260904/t20260904_527804117.shtml" target="_blank" rel="noopener noreferrer">明年起广东车船税优惠政策将调整</a></h3>
-  <p class="sum">明年起广东车船税优惠政策将调整。…</p>
-  
-</article>
-<article class="brief more" data-source="media" data-tags="" data-market="">
-  <div class="bm"><span class="src-badge src-media">媒体</span><span>东方财富</span><span>09/04</span></div>
-  <h3><a href="https://finance.eastmoney.com/a/202609043864710182.html" target="_blank" rel="noopener noreferrer">美联储9月会议悬念丛生！沃勒强力“放鸽”白宫加码施压降息</a></h3>
-  <p class="sum">美联储9月议息分歧加大，降息预期升温。…</p>
-  
-</article>
-<article class="brief more" data-source="media" data-tags="" data-market="">
-  <div class="bm"><span class="src-badge src-media">媒体</span><span>东方财富</span><span>09/04</span></div>
-  <h3><a href="https://finance.eastmoney.com/a/202609043865492096.html" target="_blank" rel="noopener noreferrer">首个针对私募募集的行业规范出台让违规成本大幅提升</a></h3>
-  <p class="sum">私募募集新规出台，违规成本显著提升。…</p>
-  
-</article><button class="expand-btn" type="button">展开其余 7 条</button>
   </section><section class="panel" id="p-ipo">
     <div class="filter-bar">
     <span class="filter-label">筛选</span>
@@ -1525,23 +1637,98 @@
         <span class="filter-gtitle">来源</span>
         <button type="button" class="filter-chip" data-group="src" data-filter="official">官方</button><button type="button" class="filter-chip" data-group="src" data-filter="media">媒体</button>
       </div><div class="filter-group">
-        <span class="filter-gtitle">业务线</span>
-        <button type="button" class="filter-chip" data-group="tag" data-filter="__none__">其他</button>
+        <span class="filter-gtitle">阶段</span>
+        <button type="button" class="filter-chip" data-group="stage" data-filter="stage-tutoring">辅导备案</button><button type="button" class="filter-chip" data-group="stage" data-filter="stage-registered">注册发行</button><button type="button" class="filter-chip" data-group="stage" data-filter="stage-reviewing">在审</button><button type="button" class="filter-chip" data-group="stage" data-filter="stage-listed">已上市</button><button type="button" class="filter-chip" data-group="stage" data-filter="__none__">阶段待定</button>
       </div>
     <button type="button" class="filter-reset">重置</button>
   </div>
-    <article class="brief" data-source="official" data-tags="粤" data-market="">
-  <div class="bm"><span class="src-badge src-official">官方</span><span>东财IPO在审(广东)</span><span>09/03</span></div>
-  <h3><a href="https://data.eastmoney.com/xg/xg/#A25250" target="_blank" rel="noopener noreferrer">东莞四维材料科技：IPO问询中（拟北交所）</a></h3>
-  <p class="sum">注册地：广东｜保荐：东莞证券股份有限公司｜更新：2026-09-03</p>
+    <section class="ipo-group" data-stage="stage-tutoring">
+    <h4 class="ipo-group-head"><span class="ipo-group-dot ipo-stage--stage-tutoring"></span>辅导备案<span class="ipo-group-n">3</span></h4>
+    <article class="brief" data-source="official" data-tags="粤 科技金融" data-market="" data-stage="stage-tutoring">
+  <div class="bm"><span class="src-badge src-official">官方</span><span>证监会辅导企业(csrcfd)</span><span>09/12 · 昨天</span></div>
+  <h3><a href="http://eid.csrc.gov.cn/mnt/storage/stock/pre_ipo/2026/9/12/PREIPO_F0101_V01_20260912_36481_Q/7915790F23BE4FB5A28AF6780C8AE295/关于深圳市楠菲微电子股份有限公司首次公开发行股票并上市辅导工作完成报告.pdf" target="_blank" rel="noopener noreferrer">深圳市楠菲微电子：IPO辅导验收</a></h3>
+  <p class="sum">IPO辅导验收完成，中信建投辅导，2026-02-09备案，可纳入科技金融跟踪名单。</p>
+  
+  
+  <div class="tags"><span class="tag t-gd">粤</span><span class="tag ">科技金融</span></div>
+</article>
+<article class="brief" data-source="official" data-tags="粤" data-market="" data-stage="stage-tutoring">
+  <div class="bm"><span class="src-badge src-official">官方</span><span>证监会辅导企业(csrcfd)</span><span>09/11 · 2 天前</span></div>
+  <h3><a href="http://eid.csrc.gov.cn/mnt/storage/stock/pre_ipo/2026/9/11/PREIPO_F0101_V01_20260911_36475_Q/DD35B58BBA0C480484A834CBEF8E3C9A/关于深圳硕日新能科技股份有限公司首次公开发行股票并上市辅导备案报告.pdf" target="_blank" rel="noopener noreferrer">深圳硕日新能科技：IPO辅导备案</a></h3>
+  <p class="sum">IPO辅导备案，2026-01-23备案、国泰海通辅导，处上市早期阶段，可纳入科创客群培育名单。</p>
+  
+  
   <div class="tags"><span class="tag t-gd">粤</span></div>
 </article>
-<article class="brief" data-source="media" data-tags="粤" data-market="">
-  <div class="bm"><span class="src-badge src-media">媒体</span><span>东财IPO在审(广东)</span><span>09/01</span></div>
-  <h3><a href="https://data.eastmoney.com/xg/xg/#A24052" target="_blank" rel="noopener noreferrer">广东邦泽创科电器：IPO提交注册（拟北交所）</a></h3>
-  <p class="sum">注册地广东、东莞证券保荐，IPO已提交注册。…</p>
+<article class="brief" data-source="official" data-tags="粤" data-market="" data-stage="stage-tutoring">
+  <div class="bm"><span class="src-badge src-official">官方</span><span>证监会辅导企业(csrcfd)</span><span>09/11 · 2 天前</span></div>
+  <h3><a href="http://eid.csrc.gov.cn/mnt/storage/stock/pre_ipo/2026/9/11/PREIPO_F0101_V01_20260911_36477_Q/EEACC7A920D84847AAF437EAF633DEA6/关于云英谷科技股份有限公司首次公开发行股票并上市辅导备案报告.pdf" target="_blank" rel="noopener noreferrer">云英谷科技：IPO辅导备案</a></h3>
+  <p class="sum">IPO辅导备案，2026-09-10备案、广发证券辅导，属上市早期项目，可作科技金融储备线索。</p>
+  
+  
   <div class="tags"><span class="tag t-gd">粤</span></div>
 </article>
+  </section>
+<section class="ipo-group" data-stage="stage-registered">
+    <h4 class="ipo-group-head"><span class="ipo-group-dot ipo-stage--stage-registered"></span>注册发行<span class="ipo-group-n">2</span></h4>
+    <article class="brief" data-source="official" data-tags="粤" data-market="" data-stage="stage-registered">
+  <div class="bm"><span class="src-badge src-official">官方</span><span>深交所IPO审核动态</span><span>09/11 · 2 天前</span></div>
+  <h3><a href="https://www.szse.cn/listing/projectdynamic/ipo/index.html#prj1004225" target="_blank" rel="noopener noreferrer">优邦科技：IPO注册生效（拟创业板）</a></h3>
+  <p class="sum">保荐 申万宏源承销保荐 ｜ 拟上市创业板 ｜ 受理 2025-12-27</p>
+  
+  
+  <div class="tags"><span class="tag t-gd">广东</span></div>
+</article>
+<article class="brief must" data-source="official" data-tags="粤 科技金融" data-market="" data-stage="stage-registered">
+  <div class="bm"><span class="src-badge src-official">官方</span><span>上交所IPO审核动态</span><span>09/07 · 6 天前</span><span class="imp-badge">必知</span></div>
+  <h3><a href="https://www.sse.com.cn/listing/renewal/ipo/#2099@5" target="_blank" rel="noopener noreferrer">钶锐锶：IPO注册生效（拟科创板）</a></h3>
+  <p class="sum">科创板IPO注册生效，2025-06-27受理、国泰海通保荐，临近发行，可纳入科创客群跟踪。</p>
+  
+  
+  <div class="tags"><span class="tag t-gd">粤</span><span class="tag ">科技金融</span></div>
+</article>
+  </section>
+<section class="ipo-group" data-stage="stage-reviewing">
+    <h4 class="ipo-group-head"><span class="ipo-group-dot ipo-stage--stage-reviewing"></span>在审<span class="ipo-group-n">2</span></h4>
+    <article class="brief" data-source="official" data-tags="粤" data-market="" data-stage="stage-reviewing">
+  <div class="bm"><span class="src-badge src-official">官方</span><span>深交所IPO审核动态</span><span>09/09 · 4 天前</span></div>
+  <h3><a href="https://www.szse.cn/listing/projectdynamic/ipo/index.html#prj1004223" target="_blank" rel="noopener noreferrer">博迈医疗：IPO问询中（拟创业板）</a></h3>
+  <p class="sum">创业板已问询，2025-12-24受理、中金公司保荐，审核推进中，可持续跟踪发行节点。</p>
+  
+  
+  <div class="tags"><span class="tag t-gd">粤</span></div>
+</article>
+<article class="brief" data-source="official" data-tags="粤" data-market="" data-stage="stage-reviewing">
+  <div class="bm"><span class="src-badge src-official">官方</span><span>深交所IPO审核动态</span><span>09/07 · 6 天前</span></div>
+  <h3><a href="https://www.szse.cn/listing/projectdynamic/ipo/index.html#prj1004420" target="_blank" rel="noopener noreferrer">傲雷科技：IPO问询中（拟创业板）</a></h3>
+  <p class="sum">保荐 广发证券 ｜ 拟上市创业板 ｜ 受理 2026-06-09</p>
+  
+  
+  <div class="tags"><span class="tag t-gd">广东</span></div>
+</article>
+  </section>
+<section class="ipo-group" data-stage="stage-listed">
+    <h4 class="ipo-group-head"><span class="ipo-group-dot ipo-stage--stage-listed"></span>已上市<span class="ipo-group-n">1</span></h4>
+    <article class="brief" data-source="official" data-tags="粤 跨境 财富" data-market="" data-stage="stage-listed">
+  <div class="bm"><span class="src-badge src-official">官方</span><span>港交所新股递表</span><span>09/10 · 3 天前</span></div>
+  <h3><a href="https://www1.hkexnews.hk/app/sehk/2026/108867/2026091001722_c.htm" target="_blank" rel="noopener noreferrer">广东微电新能源股份有限公司（主板递表·广东企业）</a></h3>
+  <p class="sum">9月10日主板递表、港股在审，跨境融资与上市配套需求可跟进，纳入跨境上市线索库。</p>
+  
+  
+  <div class="tags"><span class="tag t-gd">粤</span><span class="tag ">跨境</span><span class="tag t-wealth">财富</span></div>
+</article>
+  </section>
+<section class="ipo-group" data-stage="">
+    <h4 class="ipo-group-head"><span class="ipo-group-dot ipo-stage--none"></span>阶段待定<span class="ipo-group-n">1</span></h4>
+    <article class="brief" data-source="media" data-tags="粤" data-market="" data-stage="">
+  <div class="bm"><span class="src-badge src-media">媒体</span><span>Crunchbase News</span><span>09/11 · 2 天前</span></div>
+  <h3><a href="https://news.crunchbase.com/venture/doctor-turned-startup-founder-healthcare-staffing-crunch-abuzeid-incredible/" target="_blank" rel="noopener noreferrer">How This Doctor-Turned-Startup-Founder Decided To Fix The Healthcare Staffing Crunch: Make Employers Apply</a></h3>
+  <p class="sum">Iman Abuzeid left clinical medicine to tackle heal…</p>
+  
+  
+  <div class="tags"><span class="tag t-gd">广东</span></div>
+</article>
+  </section>
   </section>
 
   <footer>
@@ -1595,11 +1782,19 @@
     var chips = bar.querySelectorAll('.filter-chip');
     var active = Array.prototype.filter.call(chips, function (c) { return c.classList.contains('active'); });
     var btn = panel.querySelector('.expand-btn');
+    // 广东IPO 四阶段分栏：过滤后隐藏「无可见卡片」的整组（否则会留下空组标题）
+    function syncGroups() {
+      panel.querySelectorAll('.ipo-group').forEach(function (grp) {
+        var visible = grp.querySelectorAll('.brief:not(.filtered-out)').length;
+        grp.classList.toggle('filtered-out', visible === 0);
+      });
+    }
     // 全不选（重置）或全选 → 全部显示，并恢复「前 5 展示 + 其余折叠」的默认布局
     if (active.length === 0 || active.length === chips.length) {
       panel.classList.remove('expanded');
       if (btn) btn.style.display = '';
       panel.querySelectorAll('.brief').forEach(function (card) { card.classList.remove('filtered-out'); });
+      syncGroups();
       return;
     }
     // 筛选生效：自动展开折叠区——命中项（含原折叠区内）无需再点「展开」即可见，
@@ -1616,6 +1811,7 @@
       var src = card.getAttribute('data-source');
       var tags = (card.getAttribute('data-tags') || '').split(' ').filter(Boolean);
       var market = card.getAttribute('data-market');
+      var stage = card.getAttribute('data-stage') || '';
       var ok = true;
       for (var g in selByGroup) {
         var sel = selByGroup[g];
@@ -1625,6 +1821,10 @@
         } else if (g === 'market') {
           // 股市动态面板：按 A股 / 港股 / 美股 过滤（维度内 OR）
           if (sel.indexOf(market) < 0) { ok = false; break; }
+        } else if (g === 'stage') {
+          // 广东IPO 面板：按四阶段过滤（维度内 OR）；「__none__」= 阶段待定（无阶段信号）
+          var stageHit = sel.some(function (f) { return f === '__none__' ? stage === '' : stage === f; });
+          if (!stageHit) { ok = false; break; }
         } else {
           // 维度内 OR：命中业务线其一即满足；「__none__」（其他）命中空标签卡片
           var hit = sel.some(function (f) {
@@ -1636,6 +1836,7 @@
       }
       card.classList.toggle('filtered-out', !ok);
     });
+    syncGroups();
   }
 </script>
 <script>
