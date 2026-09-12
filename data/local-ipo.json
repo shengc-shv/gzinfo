@@ -1,13 +1,24 @@
 {
   "version": 1,
-  "fetchedAt": "2026-09-11T23:29:59+08:00",
+  "fetchedAt": "2026-09-12T22:52:22+08:00",
   "generator": "local-ipo-sync",
   "windowDays": 7,
   "sourceCounts": {
-    "gd-csrc-tutoring": 2,
+    "gd-csrc-tutoring": 3,
     "gd-szse-audit": 3
   },
   "items": [
+    {
+      "title": "深圳市楠菲微电子股份有限公司 (辅导验收) [深圳证监局]",
+      "url": "http://eid.csrc.gov.cn/mnt/storage/stock/pre_ipo/2026/9/12/PREIPO_F0101_V01_20260912_36481_Q/7915790F23BE4FB5A28AF6780C8AE295/关于深圳市楠菲微电子股份有限公司首次公开发行股票并上市辅导工作完成报告.pdf",
+      "excerpt": "IPO辅导备案 | 辅导机构: 中信建投证券股份有限公司 | 备案时间: 2026-02-09 | 状态: 辅导验收 | 报告: 辅导工作完成报告 | 披露: 2026-09-12",
+      "publishedAt": "2026-09-12",
+      "source": "证监会辅导企业(csrcfd)",
+      "sourceId": "gd-csrc-tutoring",
+      "region": "gd",
+      "registeredProvince": "广东",
+      "ipoStage": "stage-coach-done"
+    },
     {
       "title": "深圳硕日新能科技股份有限公司 (辅导备案) [深圳证监局]",
       "url": "http://eid.csrc.gov.cn/mnt/storage/stock/pre_ipo/2026/9/11/PREIPO_F0101_V01_20260911_36475_Q/DD35B58BBA0C480484A834CBEF8E3C9A/关于深圳硕日新能科技股份有限公司首次公开发行股票并上市辅导备案报告.pdf",
