@@ -1,0 +1,853 @@
+{
+  "date": "2026-09-13",
+  "hero_line": "消费贷贴息提额至5000元并扩围，消费信贷价格战升温，贴息口径与家装场景客户名单宜尽早排布。",
+  "must_read": [
+    {
+      "title": "美联储9月议息临近",
+      "why": "花旗等投行转向预计9月加息、明年降息，汇率与结售汇窗口变化，需提前与外币资产客户沟通锁汇与配置节奏。",
+      "url": "https://finance.sina.com.cn/jjxw/2026-09-12/doc-inirpkcn5368144.html"
+    },
+    {
+      "title": "穗一手住宅增速居前",
+      "why": "前8个月广州一手住宅成交增速居一线城市第二，按揭投放窗口延续，合作楼盘与置换客群跟进节奏值得保持。",
+      "url": "https://news.dayoo.com/guangzhou/202609/12/139995_55002783.htm"
+    },
+    {
+      "title": "宽基ETF成交放量",
+      "why": "市场调整中资金借道宽基ETF入市，权益产品咨询与配置意愿可能回暖，财富条线可备好指数化与定投陪伴方案。",
+      "url": "https://finance.sina.com.cn/roll/2026-09-12/doc-inirntfr2046727.shtml"
+    }
+  ],
+  "insights": [
+    {
+      "topic": "理财货架需比价排查",
+      "tags": [
+        "财富",
+        "竞对动态"
+      ],
+      "impact": "平安理财等同业同日发布精选货架，叠加银行加码债券投资，理财资产端与收益竞争力更受客户比价，AUM留存承压。",
+      "action": "今日对照同期限在售产品做竞争力排查，本周调整主推货架；对到期客户提前安排续接方案，留意比价赎回动向。",
+      "segments": [
+        "零售AUM"
+      ],
+      "sources": [
+        {
+          "title": "平安理财精选理财一览（2026年9月12日）",
+          "url": "https://finance.sina.com.cn/money/bank/bank_hydt/2026-09-12/doc-inirpqmk5295352.shtml"
+        },
+        {
+          "title": "【中经社信号】银行加码债券投资 拓展盈利增长多元空间",
+          "url": "https://www.cnfin.com/yw-lb/detail/20260912/4469064_1.html"
+        }
+      ]
+    },
+    {
+      "topic": "回迁交付承接补偿款",
+      "tags": [
+        "客群",
+        "住房金融"
+      ],
+      "impact": "白云小坪村一期回迁房交付，拆迁补偿资金进入安置期，安置户存款、理财与家装分期需求集中释放，是AUM增量入口。",
+      "action": "本周在安置片区布点驻点服务，梳理补偿款到账名单，配套大额存单、稳健理财与家装分期组合方案。",
+      "segments": [
+        "零售AUM"
+      ],
+      "sources": [
+        {
+          "title": "广州白云新市街小坪村改造一期回迁安置房交付",
+          "url": "https://news.dayoo.com/guangzhou/202609/12/139995_55002868.htm"
+        }
+      ]
+    },
+    {
+      "topic": "粤企上市 股东承接",
+      "tags": [
+        "私行",
+        "科技金融"
+      ],
+      "impact": "优邦科技注册生效、广东微电新能源递表港股、傲雷科技进入问询，粤企创始股东与高管股权变现临近，私行承接窗口打开。",
+      "action": "本周梳理在审粤企股东与高管名单，提前对接股权变现、家族信托与跨境配置方案，避免被同业先手。",
+      "segments": [
+        "中高端客群(过亿资产)"
+      ],
+      "sources": [
+        {
+          "title": "优邦科技：IPO注册生效（拟创业板）",
+          "url": "https://www.szse.cn/listing/projectdynamic/ipo/index.html#prj1004225"
+        },
+        {
+          "title": "广东微电新能源股份有限公司（主板递表·广东企业）",
+          "url": "https://www1.hkexnews.hk/app/sehk/2026/108867/2026091001722_c.htm"
+        },
+        {
+          "title": "傲雷科技：IPO问询中（拟创业板）",
+          "url": "https://www.szse.cn/listing/projectdynamic/ipo/index.html#prj1004420"
+        }
+      ]
+    },
+    {
+      "topic": "城改动迁 代发与小微",
+      "tags": [
+        "代发",
+        "信贷"
+      ],
+      "impact": "天河凌塘东片区今日开拆、小坪村回迁交付，动迁补偿款与村集体代发集中落地，家装建材、搬家等周边小微订单同步走高。",
+      "action": "本周走访片区内家装建材商户，主推经营贷加聚合收单；同步跟进补偿款代发与家装分期承接，做实资金闭环。",
+      "segments": [
+        "普惠小微贷款客户"
+      ],
+      "sources": [
+        {
+          "title": "城改提速！广州天河凌塘东片区今日开拆",
+          "url": "https://news.dayoo.com/guangzhou/202609/12/139995_55002792.htm"
+        },
+        {
+          "title": "广州白云新市街小坪村改造一期回迁安置房交付",
+          "url": "https://news.dayoo.com/guangzhou/202609/12/139995_55002868.htm"
+        }
+      ]
+    },
+    {
+      "topic": "跨境电商卖家经营贷",
+      "tags": [
+        "信贷",
+        "客群"
+      ],
+      "impact": "跨境金融服务稳步推进，广州跨境电商与外贸卖家收款、结汇需求集中，是小微经营贷与结算账户的新增长点。",
+      "action": "本月梳理跨境电商卖家名单，配套跨境收款账户、结汇优惠与小额经营贷，留意配套细则落地节奏。",
+      "segments": [
+        "普惠小微贷款客户"
+      ],
+      "sources": [
+        {
+          "title": "（经济观察）中国金融业界稳步推进跨境服务",
+          "url": "https://m.21jingji.com/article/20260912/herald/7a87eb7b47aade78931299f3f172c03d.html"
+        }
+      ]
+    }
+  ],
+  "sections": {
+    "gz_local": [
+      {
+        "url": "https://news.dayoo.com/guangzhou/202609/12/139995_55002868.htm",
+        "title_cn": "广州白云新市街小坪村改造一期回迁安置房交付",
+        "source": "广州日报·大洋网",
+        "source_type": "media",
+        "date": "09/12",
+        "summary": "白云小坪村一期回迁房交付，拆迁补偿资金进入安置期，存款与家装分期是承接窗口，可提前布点对接。",
+        "importance": 3,
+        "rank": 1,
+        "tags": [
+          "客群",
+          "代发",
+          "住房金融",
+          "信贷"
+        ],
+        "locale": "gz",
+        "locale_evidence": "广州白云新市街小坪村改造一期回迁安置房交付"
+      },
+      {
+        "url": "https://news.dayoo.com/guangzhou/202609/12/139995_55002792.htm",
+        "title_cn": "城改提速！广州天河凌塘东片区今日开拆",
+        "source": "广州日报·大洋网",
+        "source_type": "media",
+        "date": "09/12",
+        "summary": "天河凌塘东片区今日开拆，动迁提速释放代发与按揭、消费贷需求，可关注补偿款落地节奏。",
+        "importance": 2,
+        "rank": 2,
+        "tags": [
+          "客群",
+          "代发"
+        ],
+        "locale": "gz",
+        "locale_evidence": "城改提速！广州天河凌塘东片区今日开拆"
+      },
+      {
+        "url": "https://news.dayoo.com/guangzhou/202609/12/139995_55002783.htm",
+        "title_cn": "今年前8个月广州一手住宅成交增速居一线城市第二",
+        "source": "广州日报·大洋网",
+        "source_type": "media",
+        "date": "09/12",
+        "summary": "前8个月广州一手住宅成交增速居一线城市第二，按揭投放窗口延续，可跟进合作楼盘与置换客群。",
+        "importance": 2,
+        "rank": 3,
+        "tags": [
+          "住房金融",
+          "市场",
+          "信贷",
+          "客群"
+        ],
+        "locale": "gz",
+        "locale_evidence": "今年前8个月广州一手住宅成交增速居一线城市第二"
+      }
+    ],
+    "biz_insight": [
+      {
+        "url": "https://m.21jingji.com/article/20260912/herald/7a87eb7b47aade78931299f3f172c03d.html",
+        "title_cn": "（经济观察）中国金融业界稳步推进跨境服务",
+        "source": "21世纪经济报道·金融",
+        "source_type": "media",
+        "date": "09/12",
+        "summary": "业界稳步推进跨境金融服务，跨境结算与账户服务是零售跨境客群切入点，可留意配套细则落地。",
+        "importance": 2,
+        "rank": 1,
+        "tags": [
+          "跨境",
+          "财富"
+        ],
+        "locale": "national"
+      },
+      {
+        "url": "https://m.21jingji.com/article/20260912/herald/eece812a61e56765e13b76975fb6ee60.html",
+        "title_cn": "交行私人银行部副总经理黄大海：用专业能力守护客户价值",
+        "source": "21世纪经济报道·金融",
+        "source_type": "media",
+        "date": "09/12",
+        "summary": "交行私行强调以专业能力守护客户价值，高净值客群服务竞争加剧，可检视本行投顾陪伴动作。",
+        "importance": 2,
+        "rank": 2,
+        "tags": [
+          "私行",
+          "财富",
+          "竞对动态"
+        ],
+        "locale": "national"
+      },
+      {
+        "url": "https://www.cnfin.com/yw-lb/detail/20260912/4469064_1.html",
+        "title_cn": "【中经社信号】银行加码债券投资 拓展盈利增长多元空间",
+        "source": "新华财经",
+        "source_type": "media",
+        "date": "09/12",
+        "summary": "银行加码债券投资拓展盈利空间，或影响理财资产端配置与产品供给，可跟踪后续投向变化。",
+        "importance": 2,
+        "rank": 3,
+        "tags": [
+          "市场",
+          "竞对动态",
+          "客群"
+        ],
+        "locale": "national"
+      },
+      {
+        "url": "https://finance.sina.com.cn/money/bank/bank_hydt/2026-09-12/doc-inirpqmk5295352.shtml",
+        "title_cn": "平安理财精选理财一览（2026年9月12日）",
+        "source": "新浪财经·理财保险",
+        "source_type": "media",
+        "date": "09/12",
+        "summary": "平安理财9月12日精选产品一览发布，可对照同期限在售货架做竞争力排查，留意客户比价动向。",
+        "importance": 1,
+        "rank": 4,
+        "tags": [
+          "财富"
+        ],
+        "locale": "national"
+      },
+      {
+        "url": "https://www.stcn.com/article/detail/4182914.html",
+        "title_cn": "【财闻联播】1.8元即可伪造上亿转账截图，支付宝回应！国家超算互联网用户突破170万",
+        "source": "证券时报",
+        "source_type": "media",
+        "date": "09/12",
+        "summary": "1.8元即可伪造上亿转账截图、支付宝已回应，转账凭证核验提示值得前置到一线，防范客户受骗。",
+        "importance": 1,
+        "rank": 5,
+        "tags": [
+          "监管合规",
+          "市场",
+          "客群"
+        ],
+        "locale": "national"
+      },
+      {
+        "url": "https://www.cnbc.com/2026/09/12/anthropics-amodei-proposes-plan-to-slow-the-pace-of-advancing-ai-capabilities.html",
+        "title_cn": "OpenAI rules out IPO this year as Altman, Musk & Amodei warn AI is moving too fast",
+        "source": "CNBC Top Stories",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "09/13",
+        "summary": "Altman's IPO comments and Amodei's public call for more careful pacing of AI development c",
+        "importance": 2,
+        "rank": 6,
+        "tags": [],
+        "locale": "national"
+      },
+      {
+        "url": "https://finance.eastmoney.com/a/202609123872504413.html",
+        "title_cn": "英伟达据悉正就向Anthropic的IPO项目投资高达100亿美元进行谈判",
+        "source": "东方财富",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "09/12",
+        "summary": "英伟达据悉拟向Anthropic的IPO投资至多100亿美元，AI资本热度延续，科技客群融资需求值得关注。",
+        "importance": 2,
+        "rank": 7,
+        "tags": [],
+        "locale": "national"
+      }
+    ],
+    "policy_market": [
+      {
+        "url": "https://m.21jingji.com/article/20260912/herald/e1e04d9012d1eb922dcf6c950a06ad8e.html",
+        "title_cn": "提高至5000元！个人消费贷贴息政策提额扩围",
+        "source": "21世纪经济报道·金融",
+        "source_type": "media",
+        "date": "09/12",
+        "summary": "个人消费贷贴息提额扩围至5000元，直接利好消费信贷投放，可梳理贴息产品与客户触达口径。",
+        "importance": 3,
+        "rank": 1,
+        "tags": [
+          "消费贷",
+          "信贷"
+        ],
+        "locale": "national"
+      },
+      {
+        "url": "https://finance.eastmoney.com/a/202609123872757916.html",
+        "title_cn": "下周美联储将召开9月议息会议！多项数据支持加息，多家投行开始转向",
+        "source": "东方财富",
+        "source_type": "media",
+        "date": "09/12",
+        "summary": "美联储9月议息会议下周召开、多家投行转向，汇率与结售汇窗口值得向客户提示关注。",
+        "importance": 2,
+        "rank": 2,
+        "tags": [
+          "市场",
+          "跨境",
+          "客群",
+          "财富"
+        ],
+        "locale": "national"
+      },
+      {
+        "url": "https://finance.sina.com.cn/roll/2026-09-12/doc-inirntfr2046727.shtml",
+        "title_cn": "多只宽基ETF成交放量，市场调整中资金借道积极入市",
+        "source": "新浪财经·A股",
+        "source_type": "media",
+        "date": "09/12",
+        "summary": "多只宽基ETF成交放量、资金借道入市，可留意客户对权益类产品的咨询与配置意愿变化。",
+        "importance": 2,
+        "rank": 3,
+        "tags": [
+          "财富",
+          "市场",
+          "客群"
+        ],
+        "locale": "national"
+      },
+      {
+        "url": "https://finance.sina.com.cn/jjxw/2026-09-12/doc-inirpkcn5368144.shtml",
+        "title_cn": "花旗调整美联储利率预期：预计9月加息，明年启动降息",
+        "source": "新浪财经·理财保险",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "09/12",
+        "summary": "花旗预计9月加息、明年启动降息，客户外币资产配置与锁汇节奏值得提前沟通。",
+        "importance": 2,
+        "rank": 4,
+        "tags": [
+          "信贷"
+        ],
+        "locale": "national"
+      },
+      {
+        "url": "https://finance.eastmoney.com/a/202609123872513967.html",
+        "title_cn": "编造、传播“税率调整”虚假信息四人被证监会处罚",
+        "source": "东方财富",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "09/12",
+        "summary": "四人编造传播“税率调整”虚假信息被罚，网点需防范客户受谣言影响而咨询或赎回。",
+        "importance": 2,
+        "rank": 5,
+        "tags": [],
+        "locale": "national"
+      }
+    ],
+    "tech": [],
+    "ipo": [
+      {
+        "url": "https://news.crunchbase.com/venture/doctor-turned-startup-founder-healthcare-staffing-crunch-abuzeid-incredible/",
+        "title_cn": "How This Doctor-Turned-Startup-Founder Decided To Fix The Healthcare Staffing Crunch: Make Employers Apply",
+        "source": "Crunchbase News",
+        "source_type": "media",
+        "tier": "T2",
+        "date": "09/11",
+        "summary": "Iman Abuzeid left clinical medicine to tackle healthcare problems at scale, co-founding In",
+        "ipoMeta": "",
+        "ipoCity": "广东",
+        "importance": 2,
+        "rank": 1,
+        "tags": [
+          "粤"
+        ],
+        "locale": "national"
+      },
+      {
+        "url": "https://www1.hkexnews.hk/app/gem/2026/108866/2026091000823_c.htm",
+        "title_cn": "河北聯吉啟成產業園區運營管理股份有限公司（GEM递表）",
+        "source": "港交所新股递表",
+        "source_type": "official",
+        "date": "09/10",
+        "summary": "9月10日GEM递表、在审中，港股新股储备续增，可纳入线索库，暂无优先跟进动作。",
+        "importance": 1,
+        "rank": 2,
+        "tags": [
+          "跨境",
+          "财富"
+        ],
+        "locale": "national"
+      },
+      {
+        "url": "http://eid.csrc.gov.cn/mnt/storage/stock/pre_ipo/2026/9/12/PREIPO_F0101_V01_20260912_36481_Q/7915790F23BE4FB5A28AF6780C8AE295/关于深圳市楠菲微电子股份有限公司首次公开发行股票并上市辅导工作完成报告.pdf",
+        "title_cn": "深圳市楠菲微电子：IPO辅导验收",
+        "source": "证监会辅导企业(csrcfd)",
+        "source_type": "official",
+        "date": "09/12",
+        "summary": "IPO辅导验收完成，中信建投辅导，2026-02-09备案，可纳入科技金融跟踪名单。",
+        "importance": 2,
+        "rank": 3,
+        "tags": [
+          "粤",
+          "科技金融"
+        ],
+        "locale": "national"
+      },
+      {
+        "url": "http://eid.csrc.gov.cn/mnt/storage/stock/pre_ipo/2026/9/11/PREIPO_F0101_V01_20260911_36475_Q/DD35B58BBA0C480484A834CBEF8E3C9A/关于深圳硕日新能科技股份有限公司首次公开发行股票并上市辅导备案报告.pdf",
+        "title_cn": "深圳硕日新能科技：IPO辅导备案",
+        "source": "证监会辅导企业(csrcfd)",
+        "source_type": "official",
+        "date": "09/11",
+        "summary": "IPO辅导备案，2026-01-23备案、国泰海通辅导，处上市早期阶段，可纳入科创客群培育名单。",
+        "importance": 2,
+        "rank": 4,
+        "tags": [
+          "粤"
+        ],
+        "locale": "national"
+      },
+      {
+        "url": "http://eid.csrc.gov.cn/mnt/storage/stock/pre_ipo/2026/9/11/PREIPO_F0101_V01_20260911_36477_Q/EEACC7A920D84847AAF437EAF633DEA6/关于云英谷科技股份有限公司首次公开发行股票并上市辅导备案报告.pdf",
+        "title_cn": "云英谷科技：IPO辅导备案",
+        "source": "证监会辅导企业(csrcfd)",
+        "source_type": "official",
+        "date": "09/11",
+        "summary": "IPO辅导备案，2026-09-10备案、广发证券辅导，属上市早期项目，可作科技金融储备线索。",
+        "importance": 2,
+        "rank": 5,
+        "tags": [
+          "粤"
+        ],
+        "locale": "national"
+      },
+      {
+        "url": "https://www1.hkexnews.hk/app/sehk/2026/108868/2026091101554_c.htm",
+        "title_cn": "翱捷科技股份有限公司（主板递表）",
+        "source": "港交所新股递表",
+        "source_type": "official",
+        "date": "09/11",
+        "summary": "9月11日主板递表、在审中，可作为港股新股发行节奏的观察样本，暂列常规跟踪。",
+        "importance": 1,
+        "rank": 6,
+        "tags": [
+          "跨境",
+          "财富"
+        ],
+        "locale": "national"
+      },
+      {
+        "url": "https://www.szse.cn/listing/projectdynamic/ipo/index.html#prj1004223",
+        "title_cn": "博迈医疗：IPO问询中（拟创业板）",
+        "source": "深交所IPO审核动态",
+        "source_type": "official",
+        "date": "09/09",
+        "summary": "创业板已问询，2025-12-24受理、中金公司保荐，审核推进中，可持续跟踪发行节点。",
+        "importance": 2,
+        "rank": 7,
+        "tags": [
+          "粤"
+        ],
+        "locale": "national"
+      },
+      {
+        "url": "https://www.szse.cn/listing/projectdynamic/ipo/index.html#prj1004420",
+        "title_cn": "傲雷科技：IPO问询中（拟创业板）",
+        "source": "深交所IPO审核动态",
+        "source_type": "official",
+        "tier": "T1",
+        "date": "09/07",
+        "summary": "注册地：广东｜保荐：广发证券｜受理：2026-06-09｜状态：已问询｜更新：2026-09-07",
+        "ipoStage": "stage-reviewing",
+        "ipoMeta": "保荐 广发证券 ｜ 拟上市创业板 ｜ 受理 2026-06-09",
+        "ipoCity": "广东",
+        "importance": 2,
+        "rank": 8,
+        "tags": [
+          "粤"
+        ],
+        "locale": "national"
+      },
+      {
+        "url": "https://www.szse.cn/listing/projectdynamic/ipo/index.html#prj1004225",
+        "title_cn": "优邦科技：IPO注册生效（拟创业板）",
+        "source": "深交所IPO审核动态",
+        "source_type": "official",
+        "tier": "T1",
+        "date": "09/11",
+        "summary": "注册地：广东｜保荐：申万宏源承销保荐｜受理：2025-12-27｜状态：注册生效｜更新：2026-09-11",
+        "ipoStage": "stage-registered",
+        "ipoMeta": "保荐 申万宏源承销保荐 ｜ 拟上市创业板 ｜ 受理 2025-12-27",
+        "ipoCity": "广东",
+        "importance": 2,
+        "rank": 9,
+        "tags": [
+          "粤"
+        ],
+        "locale": "national"
+      },
+      {
+        "url": "https://www.sse.com.cn/listing/renewal/ipo/#2099@5",
+        "title_cn": "钶锐锶：IPO注册生效（拟科创板）",
+        "source": "上交所IPO审核动态",
+        "source_type": "official",
+        "date": "09/07",
+        "summary": "科创板IPO注册生效，2025-06-27受理、国泰海通保荐，临近发行，可纳入科创客群跟踪。",
+        "importance": 3,
+        "rank": 10,
+        "tags": [
+          "粤",
+          "科技金融"
+        ],
+        "locale": "national"
+      },
+      {
+        "url": "https://www1.hkexnews.hk/app/gem/2026/108869/2026091101852_c.htm",
+        "title_cn": "浙江和夏科技股份有限公司（GEM递表）",
+        "source": "港交所新股递表",
+        "source_type": "official",
+        "date": "09/11",
+        "summary": "9月11日GEM递表、在审中，属港股新股储备，可作为跨境上市服务线索补充。",
+        "importance": 1,
+        "rank": 11,
+        "tags": [
+          "跨境",
+          "财富"
+        ],
+        "locale": "national"
+      },
+      {
+        "url": "https://www1.hkexnews.hk/app/sehk/2026/108867/2026091001722_c.htm",
+        "title_cn": "广东微电新能源股份有限公司（主板递表·广东企业）",
+        "source": "港交所新股递表",
+        "source_type": "official",
+        "date": "09/10",
+        "summary": "9月10日主板递表、港股在审，跨境融资与上市配套需求可跟进，纳入跨境上市线索库。",
+        "importance": 2,
+        "rank": 12,
+        "tags": [
+          "粤",
+          "跨境",
+          "财富"
+        ],
+        "locale": "national"
+      }
+    ]
+  },
+  "risk": {
+    "topic": "证监会处罚税率谣言",
+    "evidence": "证监会披露，四名人员因编造、传播“税率调整”虚假信息被处罚；今日另有一则监管罚单信息发布。",
+    "impact": "财富条线或遇客户因谣言咨询赎回、调仓，网点一线易被误传；个贷与私行客户也可能借机质询费率，风控与合规需前置统一口径。",
+    "action": "提示财富部与各支行统一对外澄清口径，客户咨询即时用官方信息回应；风控部今日下发谣言识别与应对话术。",
+    "source": "T1",
+    "sources": [
+      {
+        "title": "编造、传播“税率调整”虚假信息四人被证监会处罚",
+        "url": "https://finance.eastmoney.com/a/202609123872513967.html"
+      },
+      {
+        "title": "罚单",
+        "url": "https://www.stcn.com/article/detail/4182943.html"
+      }
+    ]
+  },
+  "stock_recap": {
+    "us": {
+      "overview": "三大指数集体收涨，道指涨0.98%，市场消化地缘与AI多重消息。",
+      "sectors": [
+        "油价重回100美元，沙特关停输油管道、胡塞收紧红海航运，能源股获支撑。",
+        "埃里森放弃减持至多75亿美元甲骨文股票，甲骨文股价获提振。",
+        "OpenAI排除年内IPO，奥特曼警告AI推进过快，AI概念股承压。",
+        "通胀增速再度超过工资，居民购买力受挤压，消费板块承压。",
+        "GM拟美国本土开发电池，福特因中国关联遭抨击，本土供应链受关注。"
+      ],
+      "spoken": "美股三大指数集体收涨，道指涨0.98%，纳指涨0.96%，标普涨0.86%。沙特关停输油管道、红海航运收紧，油价重回100美元，能源板块获支撑。OpenAI排除年内IPO，AI概念情绪承压；埃里森放弃减持甲骨文，个股获提振。通胀超过工资增速，消费板块承压。",
+      "meta": {
+        "source": "CNBC Top Stories",
+        "crossCheck": "新浪行情",
+        "date": "2026-09-12"
+      },
+      "indices": [
+        {
+          "name": "道琼斯",
+          "value": "52573.29",
+          "changePct": "+0.98%"
+        },
+        {
+          "name": "纳斯达克",
+          "value": "26333.04",
+          "changePct": "+0.96%"
+        },
+        {
+          "name": "标普500",
+          "value": "7656.98",
+          "changePct": "+0.86%"
+        }
+      ]
+    },
+    "aShare": {
+      "overview": "上证指数收报3888.11点（-1.18%）；深证成指收报13471.26点（-1.08%）；创业板指收报3322.04点（-0.49%）。",
+      "sectors": [
+        "创业板指探底回升跌0.49%",
+        "下跌个股超4800只"
+      ],
+      "meta": {
+        "source": "东方财富",
+        "crossCheck": "新浪行情",
+        "date": "2026-09-13"
+      },
+      "indices": [
+        {
+          "name": "上证指数",
+          "value": "3888.11",
+          "changePct": "-1.18%"
+        },
+        {
+          "name": "深证成指",
+          "value": "13471.26",
+          "changePct": "-1.08%"
+        },
+        {
+          "name": "创业板指",
+          "value": "3322.04",
+          "changePct": "-0.49%"
+        }
+      ]
+    },
+    "hk": {
+      "overview": "恒生指数收报24805.63点（-0.60%）；恒生科技收报4320.57点（-0.23%）。",
+      "sectors": [
+        "恒生指数跌0.6%",
+        "恒生科技指数跌0.23%",
+        "有色金属板块走弱",
+        "光通信板块逆市活跃"
+      ],
+      "meta": {
+        "source": "新浪财经·港股",
+        "crossCheck": "新浪行情",
+        "date": "2026-09-11"
+      },
+      "sourceReport": {
+        "title": "港股收评：恒指跌0.6% 科指跌0.23% 有色金属板块走弱 光通信板块逆市活跃",
+        "url": "https://finance.sina.com.cn/stock/hkstock/marketalerts/2026-09-11/doc-inirmvzx5419345.shtml"
+      },
+      "indices": [
+        {
+          "name": "恒生指数",
+          "value": "24805.63",
+          "changePct": "-0.60%"
+        },
+        {
+          "name": "恒生科技",
+          "value": "4320.57",
+          "changePct": "-0.23%"
+        }
+      ]
+    },
+    "quoteChannel": "新浪行情",
+    "quoteDate": "2026-09-11",
+    "marketStatus": {
+      "isMarketClosed": true,
+      "reportDate": "2026-09-13",
+      "dataDate": "2026-09-11",
+      "note": "周末及周一休市时段，以下行情为上一交易日（9月11日 周五）收盘数据",
+      "spokenNote": "当前为休市时段，以下行情为上一交易日，9月11日 周五的收盘情况"
+    }
+  },
+  "stock_news": [
+    {
+      "url": "https://finance.eastmoney.com/a/202609123872679895.html",
+      "title_cn": "保时捷青岛女销冠暂居“全球第一”但欧美豪车在中国卖不动了：保时捷4年销量腰斩BBA上半年少卖20万台",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "09/12",
+      "summary": "报道称欧美豪华车在中国市场销售承压：保时捷在华销量四年间腰斩，BBA上半年合计少卖约20万台；同时一位青岛女销售暂居保时捷全球销量第一。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "汽车",
+        "豪华车",
+        "销量",
+        "中国市场"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202609123872680024.html",
+      "title_cn": "机构力挺光模块龙头强势涨停！13只绩优潜力股曝光",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "09/12",
+      "summary": "报道称光模块龙头获机构力挺并强势涨停，同时列出13只被机构关注的绩优潜力股。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "光模块",
+        "通信",
+        "机构观点",
+        "A股"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202609123872678161.html",
+      "title_cn": "核查完成！7天6板大牛股，下周一复牌",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "09/12",
+      "summary": "一只7天6板的股票完成核查，将于下周一复牌。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "停牌核查",
+        "复牌",
+        "A股"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202609123872686984.html",
+      "title_cn": "能源危机骤然升级！沙特关键输油管道遇袭后预防性关闭",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "09/12",
+      "summary": "沙特一条关键输油管道遇袭后被预防性关闭，报道称能源危机骤然升级。",
+      "importance": 3,
+      "rank": 0,
+      "tags": [
+        "能源",
+        "原油",
+        "地缘政治"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202609123872714070.html",
+      "title_cn": "华为全新三折叠开售秒空！二手市场溢价数千元优购码被倒卖",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "09/12",
+      "summary": "华为全新三折叠手机开售即售罄，二手市场出现数千元溢价，优购码被倒卖。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "华为",
+        "消费电子",
+        "折叠屏"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.sina.com.cn/stock/hkstock/marketalerts/2026-09-11/doc-inirmvzx5419345.shtml",
+      "title_cn": "港股收评：恒指跌0.6% 科指跌0.23% 有色金属板块走弱 光通信板块逆市活跃",
+      "source": "新浪财经·港股",
+      "source_type": "media",
+      "date": "09/11",
+      "summary": "港股收评：恒指跌0.6%，恒生科技指数跌0.23%，有色金属板块走弱，光通信板块逆市活跃。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "港股",
+        "恒指",
+        "光通信",
+        "有色金属"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://finance.sina.com.cn/roll/2026-09-11/doc-inirmmnc5347122.shtml",
+      "title_cn": "早盘持续低迷 港股遭遇五连跌 行情反转就在九月？",
+      "source": "新浪财经·港股",
+      "source_type": "media",
+      "date": "09/11",
+      "summary": "港股早盘持续低迷并录得五连跌，报道讨论9月行情是否会出现反转。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "港股",
+        "市场走势"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://finance.sina.com.cn/jjxw/2026-09-11/doc-inirkiyn2637637.shtml",
+      "title_cn": "这家港股公司被强制停牌，涉嫌操纵IPO！上市前国际发售仅0.89倍认购，上市当天盘中就跌了40%",
+      "source": "新浪财经·港股",
+      "source_type": "media",
+      "date": "09/11",
+      "summary": "一家港股公司因涉嫌操纵IPO被强制停牌，其上市前国际发售仅获0.89倍认购，上市首日盘中跌幅达40%。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "港股",
+        "停牌",
+        "IPO",
+        "监管"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://finance.sina.com.cn/stock/hkstock/2026-09-11/doc-inirmmnf2106651.shtml",
+      "title_cn": "白宫铜关税计划陷停滞叠加加息预期升温，港股铜业股全线重挫，江西铜业跌超10%",
+      "source": "新浪财经·港股",
+      "source_type": "media",
+      "date": "09/11",
+      "summary": "受白宫铜关税计划陷入停滞及加息预期升温影响，港股铜业股全线重挫，江西铜业跌超10%。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "有色金属",
+        "铜",
+        "港股",
+        "关税"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://finance.sina.com.cn/stock/hkstock/hkgg/2026-09-11/doc-inirmvzx5380885.shtml",
+      "title_cn": "花旗：维持大族数控(03200)“买入”评级 目标价189港元",
+      "source": "新浪财经·港股",
+      "source_type": "media",
+      "date": "09/11",
+      "summary": "花旗维持大族数控（03200）「买入」评级，目标价189港元。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "券商研报",
+        "港股",
+        "机械设备"
+      ],
+      "locale": "national",
+      "market": "hk"
+    }
+  ]
+}
