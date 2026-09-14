@@ -1,13 +1,24 @@
 {
   "version": 1,
-  "fetchedAt": "2026-09-13T19:57:59+08:00",
+  "fetchedAt": "2026-09-14T17:32:39+08:00",
   "generator": "local-ipo-sync",
   "windowDays": 7,
   "sourceCounts": {
     "gd-csrc-tutoring": 3,
-    "gd-szse-audit": 3
+    "gd-szse-audit": 2
   },
   "items": [
+    {
+      "title": "优邦科技：IPO注册生效（拟创业板）",
+      "url": "https://www.szse.cn/listing/projectdynamic/ipo/index.html#prj1004225",
+      "excerpt": "注册地：广东｜保荐：申万宏源承销保荐｜受理：2025-12-27｜状态：注册生效｜更新：2026-09-14",
+      "publishedAt": "2026-09-14",
+      "source": "深交所IPO审核动态",
+      "sourceId": "gd-szse-audit",
+      "region": "gd",
+      "registeredProvince": "广东",
+      "ipoStage": "stage-registered"
+    },
     {
       "title": "深圳市楠菲微电子股份有限公司 (辅导验收) [深圳证监局]",
       "url": "http://eid.csrc.gov.cn/mnt/storage/stock/pre_ipo/2026/9/12/PREIPO_F0101_V01_20260912_36481_Q/7915790F23BE4FB5A28AF6780C8AE295/关于深圳市楠菲微电子股份有限公司首次公开发行股票并上市辅导工作完成报告.pdf",
@@ -42,32 +53,10 @@
       "ipoStage": "stage-tutoring"
     },
     {
-      "title": "优邦科技：IPO注册生效（拟创业板）",
-      "url": "https://www.szse.cn/listing/projectdynamic/ipo/index.html#prj1004225",
-      "excerpt": "注册地：广东｜保荐：申万宏源承销保荐｜受理：2025-12-27｜状态：注册生效｜更新：2026-09-11",
-      "publishedAt": "2026-09-11",
-      "source": "深交所IPO审核动态",
-      "sourceId": "gd-szse-audit",
-      "region": "gd",
-      "registeredProvince": "广东",
-      "ipoStage": "stage-registered"
-    },
-    {
       "title": "博迈医疗：IPO问询中（拟创业板）",
       "url": "https://www.szse.cn/listing/projectdynamic/ipo/index.html#prj1004223",
       "excerpt": "注册地：广东｜保荐：中金公司｜受理：2025-12-24｜状态：已问询｜更新：2026-09-09",
       "publishedAt": "2026-09-09",
-      "source": "深交所IPO审核动态",
-      "sourceId": "gd-szse-audit",
-      "region": "gd",
-      "registeredProvince": "广东",
-      "ipoStage": "stage-reviewing"
-    },
-    {
-      "title": "傲雷科技：IPO问询中（拟创业板）",
-      "url": "https://www.szse.cn/listing/projectdynamic/ipo/index.html#prj1004420",
-      "excerpt": "注册地：广东｜保荐：广发证券｜受理：2026-06-09｜状态：已问询｜更新：2026-09-07",
-      "publishedAt": "2026-09-07",
       "source": "深交所IPO审核动态",
       "sourceId": "gd-szse-audit",
       "region": "gd",
