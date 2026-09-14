@@ -4,34 +4,14 @@
  * 供 npm run render / dry-run / render-preview 等**不调模型**的重渲染脚本使用：
  * 这些脚本只抓取/读历史，拿不到 AI 成稿的 summary / source_type / importance，
  * 所以用已有 summary（若为 render-preview 的历史库 AI 摘要）或 excerpt 兜底，
- * 并把采集分类映射到新管线的五个渲染板块。与 pipeline.ts 的 categoryToSection 保持一致。
+ * 板块映射统一走 lib/classify/section.ts 的 categoryToSection（2026-09-14 P0-4 收敛为单一真源，
+ * 原为与 pipeline.ts 漂移的私有副本）。
  */
-import type { ArticleInput, DailyReport, ReportItem, ReportSectionKey } from "../types";
+import type { ArticleInput, DailyReport, ReportItem } from "../types";
+import { categoryToSection } from "../classify/section";
 import { rollUpTags } from "../classify/tag-rollup";
 import { dedupeSections } from "./dedupe-sections";
-import {
-  isGdIpoCandidate,
-  isGzLocalCandidate,
-  isPolicyMarketCandidate,
-} from "./render/cards";
-
-/**
- * 旧采集分类 → 新管线渲染板块（无 AI 兜底映射）。
- * 无状态源架构红线（2026-08-29 用户）：板块归属一律由**内容判定**，数据源分类
- * 只是采集元数据。tech/ipo 是独立内容栏目按类别归栏；其余统一内容判定：
- *  广东企业 IPO 进展（名单+阶段词）→ ipo；广州锚+业务线 → gz_local；
- *  外地地名/政策动作/全国市场信号 → policy_market；否则 biz_insight。
- */
-export function categoryToSection(cat?: string, title = "", excerpt = ""): ReportSectionKey {
-  if (cat === "tech") return "tech";
-  if (cat === "ipo" || cat === "gd-ipo") return "ipo";
-  // 2026-08-30：媒体源报道的广东企业 IPO 动态（注册生效/辅导备案/过会等，
-  // 东财在审表状态滞后时由媒体报道补位）→ 内容判定归 IPO 动态板块。
-  if (isGdIpoCandidate(title, excerpt)) return "ipo";
-  if (isGzLocalCandidate(title, excerpt)) return "gz_local";
-  if (isPolicyMarketCandidate(title, excerpt)) return "policy_market";
-  return "biz_insight";
-}
+import { isGzLocalCandidate } from "./render/cards";
 
 function mmdd(d: Date | undefined): string {
   if (!d) return "";

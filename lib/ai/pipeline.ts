@@ -7,7 +7,8 @@
 import { runPass1, type LlmRunner, type Pass1Input } from "./pass1";
 import { runPass2, ensureSchema, finalizeRanks } from "./pass2";
 import { rollUpTags } from "../classify/tag-rollup";
-import { isGzLocalCandidate, isPolicyMarketCandidate } from "../output/render/cards";
+import { isGzLocalCandidate } from "../output/render/cards";
+import { categoryToSection } from "../classify/section";
 import {
   validateReport,
   ALLOWED_TAGS,
@@ -24,19 +25,7 @@ const MAX_PASS2_RETRY = 2;
 const R9_THRESHOLD = 0.8;
 const HERO_FALLBACK = "今日暂无可推送重点，详见各板块资讯。";
 
-/**
- * SKIP_AI 模式（无 LLM）下的文章原始分类 → 板块启发式映射。
- * 无状态源架构红线（2026-08-29 用户）：板块归属一律由**内容判定**，数据源分类只是
- * 采集元数据。tech/ipo 是独立内容栏目按类别归栏；其余统一内容判定：
- *  广州锚+业务线 → gz_local；外地地名/政策动作/全国市场信号 → policy_market；否则 biz_insight。
- */
-function categoryToSection(cat?: string, title = "", excerpt = ""): ReportSectionKey {
-  if (cat === "tech") return "tech";
-  if (cat === "ipo" || cat === "gd-ipo") return "ipo";
-  if (isGzLocalCandidate(title, excerpt)) return "gz_local";
-  if (isPolicyMarketCandidate(title, excerpt)) return "policy_market";
-  return "biz_insight";
-}
+// 板块映射单一真源见 lib/classify/section.ts（2026-09-14 P0-4 收敛，原为漂移的私有副本）。
 
 /**
  * SKIP_AI 确定性降级 runner 工厂：不调用任何 LLM，纯靠输入池字段构造合法 JSON。
