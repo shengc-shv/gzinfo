@@ -30,10 +30,12 @@ import {
   GD_IPO_STAGE_BIZ,
   IPO_CAPITAL_ACT_RE,
   IPO_FLOW_RE,
+  IPO_PROGRESS_RE,
   type SourceGroup,
   type SubGroup,
   type RawByCategory,
 } from "./render/cards";
+import { isGdProvince } from "../classify/gdIpo";
 import {
   renderTradingPanel,
   renderExecutiveSummary,
@@ -1064,11 +1066,12 @@ export function renderStockFilterBar(): string {
 
 /**
  * 广东 IPO 阶段展示顺序 —— 与 `BIZ_VALUE_RANK`（商机价值优先）**同序**：
- * 辅导备案（Pre-IPO，最佳商机）→ 注册发行（募资在即）→ 在审 → 已上市（已兑现）。
+ * 辅导备案（Pre-IPO，最佳商机）→ 辅导完成（临近申报）→ 注册发行（募资在即）→ 在审 → 已上市（已兑现）。
  * 刻意与顶部横滑卡保持同一顺序，避免同一份数据在页面里出现两种读法。
  */
 export const IPO_STAGE_ORDER: GdStage[] = [
   "stage-tutoring",
+  "stage-coach-done",
   "stage-registered",
   "stage-reviewing",
   "stage-listed",
@@ -1426,6 +1429,7 @@ function renderStockRecap(report: DailyReport): string {
  */
 const GD_IPO_STAGE_LABEL: Record<string, string> = {
   "stage-tutoring": "辅导备案",
+  "stage-coach-done": "辅导完成",
   "stage-registered": "注册发行",
   "stage-reviewing": "在审",
   "stage-listed": "已上市",
@@ -1525,15 +1529,18 @@ export function mergeRollingIntoReport(
     // 数据源的 category/subcategory 只是采集元数据，不得决定渲染分类。
     // tech/ipo 是独立内容栏目（科技前沿/IPO 动态），按内容类别归栏，其余全走内容判定。
     if (a.category === "tech") return "tech";
+    // 无状态源红线：板块归属由内容判定，不靠采集分类直通。但滚动历史条目在入库时即已归为
+    // IPO，仍按 category 归栏（保历史上下文）；仅加「确为 IPO 内容」兜底闸门——
+    // 防 Crunchbase 等英文创投 RSS 被误标 gd-ipo 后窜入广东 IPO 板块（2026-09-14 P0-3）。
+    // 注：本函数与 lib/classify/section.ts 的两处有意差异——isGzLocalCandidate 仅传标题、
+    // 以及此处 capital-act 排除——保留不变（见下方注释），不并入单一真源。
     if (a.category === "ipo" || a.category === "gd-ipo") {
       // 2026-08-23：已上市公司资本运作公告（定增/审核问询/购买资产/解禁等）不进 IPO 动态，
       // 与 PASS1/groupRaw 分流口径一致（诺思兰德「审核问询函」等不再污染 IPO 板块）。
-      if (
-        IPO_CAPITAL_ACT_RE.test(`${title} ${a.excerpt || ""}`) &&
-        !IPO_FLOW_RE.test(`${title} ${a.excerpt || ""}`)
-      ) {
-        return null;
-      }
+      const text = `${title} ${a.excerpt || ""}`;
+      if (IPO_CAPITAL_ACT_RE.test(text) && !IPO_FLOW_RE.test(text)) return null;
+      // 内容闸门：采集分类标 gd-ipo/ipo 的条目必须确含 IPO 阶段强词，否则视为误标（如英文创投 RSS），不进 IPO 板块
+      if (!IPO_PROGRESS_RE.test(text)) return null;
       return "ipo";
     }
     // 2026-08-30：媒体源报道的广东企业 IPO 动态（注册生效/辅导备案/过会等，

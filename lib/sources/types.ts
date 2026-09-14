@@ -144,4 +144,10 @@ export interface RawArticle {
    * "地名命中" 等，便于审计与去重溯源。
    */
   gdBasis?: string;
+  /**
+   * 注册省份（2026-09-10 P4 结构化旁路）：爬虫按官方/地区源给出的注册地省份
+   * （如「广东」）。render/side-output 用它做无状态源红线下的结构化地域信号
+   * （替代纯关键词判定）。由 base-crawler 归一化层透传，fetchers 不直接设置。
+   */
+  registeredProvince?: string;
 }

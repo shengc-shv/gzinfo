@@ -17,32 +17,38 @@ import type { ArticleInput, DailyReport, ReportItem } from "../../types";
 import type { DailyContext } from "../context";
 // 复用渲染侧广东IPO 内容判定（单一口径，避免两套正则漂移）
 import { isGdIpoCandidate, IPO_CAPITAL_ACT_RE, IPO_FLOW_RE } from "../../output/render/cards";
-import { inferStage, isGdStage, type GdStage } from "../../classify/gdIpo";
+import { inferStage, isGdStage, isGdProvince, type GdStage } from "../../classify/gdIpo";
 import { todayKey } from "../../utils";
 // P2-3 收敛（2026-09-10）：窗口常量统一来自 lib/ipo-config.ts（此前本文件与
 // memory/event-memory.ts 各定义一份 IPO_VOICE_WINDOW_DAYS，改一处不生效）。
 import { IPO_VOICE_WINDOW_DAYS, IPO_LIST_WINDOW_DAYS } from "../../ipo-config";
 
-/** IPO 类目（结构化爬虫产物：东财在审表 → gd-ipo；辅导备案/交易所权威源 → ipo）。 */
-const IPO_CAT = new Set(["gd-ipo", "ipo"]);
-
 /**
  * 是否属于「广东 IPO 事件」——本板块的**内容判定**入口（无状态源红线）：
- *  ① 结构化类目命中（官方爬虫产物）；或
+ *  ① 结构化信号（官方爬虫直给 ipoStage / 广东注册地）优先；或
  *  ② 内容判定命中（媒体源即时报道的「证监会同意粤芯半导体IPO注册」等，官方源漏抓时补位）。
  * 两种来源都必须排除「已上市公司资本运作公告」（定增/解禁/回购…），否则会污染 IPO 板块。
+ *
+ * 2026-09-14 P0-3 修复：不再单纯靠采集分类（category=gd-ipo）直通——Crunchbase 等英文创投
+ * RSS 被误标 gd-ipo 后会窜入广东 IPO 板块。改用结构化信号 + 内容判定（详见
+ * docs/gzinfo-fix-list-2026-09-14.md P0-3）。
  */
 function isIpoArticle(a: ArticleInput): boolean {
   const title = a.title_cn || a.title || "";
   const text = `${title} ${a.excerpt || ""}`;
   if (IPO_CAPITAL_ACT_RE.test(text) && !IPO_FLOW_RE.test(text)) return false;
-  if (IPO_CAT.has(a.category ?? "")) return true;
+  // 结构化信号（官方爬虫直给）优先，其次内容判定；不再靠采集分类直通
+  if (a.ipoStage || isGdProvince(a.registeredProvince)) return true;
   return isGdIpoCandidate(title, a.excerpt || "");
 }
 
-/** 本条是否应打「粤」标（广东商机身份；口播识别与横滑候选依赖它）。 */
+/**
+ * 本条是否应打「粤」标（广东商机身份；口播识别与横滑候选依赖它）。
+ * 同样不再靠采集分类直通，改按结构化信号（渲染期写回的 gdBasis / 广东注册地）或内容判定。
+ */
 function isGdIpoArticle(a: ArticleInput): boolean {
-  if (a.category === "gd-ipo") return true; // 官方广东源（region=gd 路由产物）
+  if (a.gdBasis) return true;
+  if (isGdProvince(a.registeredProvince)) return true;
   return isGdIpoCandidate(a.title_cn || a.title || "", a.excerpt || "");
 }
 

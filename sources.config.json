@@ -770,14 +770,14 @@
     "name": "Crunchbase News",
     "type": "rss",
     "url": "https://news.crunchbase.com/feed/",
-    "category": "gd-ipo",
+    "category": "finance",
     "subcategory": "overseas",
     "enabled": true,
     "locales": [
       "zh",
       "en"
     ],
-    "note": "已验证可用。全球私募市场/融资轮次/IPO 与上市动态；仅广东企业出海上市（境外子标签）才进广东IPO，其余丢弃。",
+    "note": "已验证可用。全球私募市场/融资轮次/IPO 与上市动态；归属一律由内容判定，不再预设 gd-ipo 分类（2026-09-14 修复：英文创投 RSS 误入广东IPO板块，见 docs/gzinfo-fix-list-2026-09-14.md P0-3）。",
     "disabledReason": "恢复：#45 CI 实测拉到 1 条（沙箱403仅为环境拦截，非源失效）"
   },
   {

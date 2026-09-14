@@ -70,6 +70,11 @@ export function parseStockCode(text: string): string | null {
   return m ? m[1] : null;
 }
 
+/** 注册省份是否为广东（结构化信号，优先于关键词；爬虫直给，最权威）。 */
+export function isGdProvince(province?: string): boolean {
+  return !!province && /^广东|^GD$|guangdong/i.test(province);
+}
+
 function isGuangdong(
   a: ClassifyArticle,
   registry?: GdIssuerRegistry,
@@ -140,11 +145,16 @@ export function classifyGdIpo(
  * 上市阶段推断（2026-08-21 任务二）：把广东 IPO 企业按「上市进度」归栏，
  * 对齐用户"看最近有哪些 IPO 企业（已上市）/ 最近有哪些准备 IPO 的企业（拟上市）"需求。
  *
- * 四阶段（展示顺序即进度由后往前）：
+ * 五阶段（展示顺序即进度由后往前）：
  *  - stage-listed     已上市·新股（打新/员工持股/股权激励理财商机）
  *  - stage-registered 注册生效·过会（即将发行，募资入账机构合作商机）
  *  - stage-reviewing  在审·已受理（Pre-IPO 授信/投贷联动储备商机）
+ *  - stage-coach-done 辅导完成·已验收（临近申报：授信落地窗口 / 股权激励托管）
  *  - stage-tutoring   辅导备案·Pre-IPO（最佳商机：Pre-IPO 授信/投贷联动/代发工资/高管私行/员工持股托管）
+ *
+ * 2026-09-11 新增 `stage-coach-done`：证监会辅导库列4「辅导状态」实测含「辅导验收 /
+ * 辅导工作完成」，与「辅导备案」是**两个进程节点**（刚起步 vs 已完成，距上市差约 12 个月），
+ * 此前 csrcfd 源一律硬编码 stage-tutoring 把二者抹平 → 商机分级失真。
  *
  * 判定优先级：未上市信号（注册生效 > 过会/核准 > 在审/受理 > 辅导备案）先于「已上市」，
  * 避免"注册生效 即将上市"这类标题被误判为已上市；无阶段词兜底归 Pre-IPO（预备上市）。
@@ -153,6 +163,7 @@ export type GdStage =
   | "stage-listed"
   | "stage-registered"
   | "stage-reviewing"
+  | "stage-coach-done"
   | "stage-tutoring";
 
 /**
@@ -167,6 +178,7 @@ export const GD_STAGES: ReadonlySet<string> = new Set<GdStage>([
   "stage-listed",
   "stage-registered",
   "stage-reviewing",
+  "stage-coach-done",
   "stage-tutoring",
 ]);
 
