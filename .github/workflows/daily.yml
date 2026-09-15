@@ -2,8 +2,8 @@ name: Daily Brief
 
 # Generate a fresh daily report and publish to GitHub Pages.
 #
-# Schedule: 每 15 分钟触发一次（UTC）——一是监测 cron 是否正常，二是提高命中放行窗口的概率
-#   （GitHub schedule 为 best-effort，实测丢触发率约 70%，窗口内多打几次才稳）。
+# Schedule: 已取消（2026-09-15 用户要求停止定时跑），仅保留 workflow_dispatch 手动触发。
+#   原定时：每天 UTC 23:30（北京时间 07:30）自动 build + 发布 gh-pages；现已移除 schedule 块。
 # 真正放行由 gate 决定：
 #   - REPORT_TIMES（默认 "7:00"，北京时间 HH:MM 逗号列表）+ WINDOW_MIN 容差窗口
 #     （默认 60 分钟）：目标点 ±60 分钟内触发均放行（7:00 → 北京时间 6:00-8:00）
@@ -27,10 +27,8 @@ name: Daily Brief
 # （发布后核对 gh-pages → 手动 Run workflow）。
 
 on:
-  schedule:
-    # 每 15 分钟一次（UTC）。
-    # 放行窗口为北京时间 北京时间每天早上7点30分
-    - cron: '30 23 * * *' 
+  # 2026-09-15 用户要求停止定时跑：已移除 schedule，仅保留手动触发（workflow_dispatch）。
+  # 原定时：每天 UTC 23:30（北京时间 07:30）自动 build + 发布 gh-pages。
   workflow_dispatch:
     inputs:
       # 2026-08-28 用户需求：开关独立可选，手动选的优先级最高

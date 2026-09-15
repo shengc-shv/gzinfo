@@ -4,8 +4,8 @@ name: Cleanup article history
 # - 定时：每周日 04:17 UTC 触发一次
 # - 手动：在 Actions 页面点 "Run workflow" 可立即执行，并可覆盖保留天数
 on:
-  schedule:
-    - cron: '17 4 * * 0'
+  # 2026-09-15 用户要求停止定时跑：已移除 schedule，仅保留手动触发（workflow_dispatch）。
+  # 原定时：每周日 UTC 04:17 清理 article-history.json 仅留 7 天。
   workflow_dispatch:
     inputs:
       retention_days:

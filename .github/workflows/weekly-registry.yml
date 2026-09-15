@@ -6,8 +6,8 @@ name: Weekly Guangdong Registry Refresh
 #   与日报流程解耦，见 2026-08-19 CI 收敛。）
 
 on:
-  schedule:
-    - cron: '30 1 * * 1'   # UTC 周一 01:30 = 北京时间 09:30
+  # 2026-09-15 用户要求停止定时跑：已移除 schedule，仅保留手动触发（workflow_dispatch）。
+  # 原定时：每周一 UTC 01:30（北京时间 09:30）刷新粤企注册表。
   workflow_dispatch:
 
 permissions:
