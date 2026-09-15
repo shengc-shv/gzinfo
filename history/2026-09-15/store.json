@@ -1,0 +1,834 @@
+{
+  "date": "2026-09-15",
+  "updatedAt": "2026-09-14T23:49:55.364Z",
+  "executive": {
+    "hero_line": "8月社融1.66万亿、直接融资占比超贷款，脱媒提速叠加理财含权化，货架与授信结构可同步重估。",
+    "spoken_hero": "八月社融新增一点六六万亿，债券股票融资占比超过贷款，企业脱媒在加速；理财含权产品净增近两万亿，客户偏好也在上移。货架和授信结构，可以趁这个窗口一起调整。",
+    "must_read": [
+      {
+        "title": "股份行零售贷款全面退潮",
+        "why": "上半年渤海缩水近一成，华夏、浙商降幅超6%，同业收缩期反而是本地投放与结构调整的窗口。",
+        "url": "https://finance.sina.com.cn/jinrong/yh/2026-09-14/doc-iniruxuw4017961.shtml"
+      },
+      {
+        "title": "五篇大文章贷款占比超七成",
+        "why": "8月末贷款余额同比增4.9%，普惠、养老、科技增量权重上行，投放结构直接关系明年考核位次。",
+        "url": "https://www.cnfin.com/yw-lb/detail/20260915/4469795_1.html"
+      },
+      {
+        "title": "理财含权产品净增近2万亿",
+        "why": "现金类压降超1800亿、含权产品放量，客户风险偏好上移，货架结构与投顾队伍需同步升级。",
+        "url": "https://finance.sina.com.cn/jjxw/2026-09-14/doc-iniruxuu7230451.shtml"
+      }
+    ],
+    "spoken_must_read": "股份行零售贷款全面退潮。上半年渤海缩水近一成，华夏、浙商降幅超6%，同业收缩期反而是本地投放与结构调整的窗口。。其次，五篇大文章贷款占比超七成。8月末贷款余额同比增4.9%，普惠、养老、科技增量权重上行，投放结构直接关系明年考核位次。。此外，理财含权产品净增近2万亿。现金类压降超1800亿、含权产品放量，客户风险偏好上移，货架结构与投顾队伍需同步升级。。",
+    "insights": [
+      {
+        "topic": "粤芯半导体发行在即",
+        "impact": "广东半导体企业粤芯半导体9月18日初步询价、24日网下申购，打新资金归集与中高端客户申购意愿在短期内集中释放。",
+        "action": "财富团队可自本周起梳理有打新习惯的客户名单，提前提示资金划转时点，同步跟踪网下配售客户的开户与验资需求。",
+        "tag": [
+          "财富"
+        ],
+        "segments": [
+          "零售AUM"
+        ],
+        "sources": [
+          {
+            "title": "粤芯半导体：初步询价日为9月18日 网下申购日为9月24日",
+            "url": "https://www.stcn.com/article/detail/4184784.html"
+          }
+        ]
+      },
+      {
+        "topic": "天河智慧城释放700亩",
+        "impact": "天河智慧城释放700亩土地，楼宇与总部经济稳居全国第一梯队，园区代发、高管私行与科创授信三重增量集中。",
+        "action": "可先摸清园区主体与在建项目名单，代发与私行团队联合走访，把高管开户与员工工资户一并落地。",
+        "tag": [
+          "代发",
+          "私行"
+        ],
+        "segments": [
+          "中高端客群(过亿资产)"
+        ],
+        "sources": [
+          {
+            "title": "天河智慧城将释放700亩土地",
+            "url": "https://www.cnr.cn/gd/guangdongyaowen/20260914/t20260914_527813024.shtml"
+          },
+          {
+            "title": "天河楼宇经济、总部经济持续稳居全国第一梯队",
+            "url": "https://news.dayoo.com/guangzhou/202609/14/139995_55003332.htm"
+          }
+        ]
+      },
+      {
+        "topic": "跨国公司资金池全国推广",
+        "impact": "资金池政策由试点扩至全国，跨境资金归集类企业主与高管成为可批量获取的中高端名单，跨境结算与私行配置可打包提供。",
+        "action": "公司条线可本周整理辖内跨境资金归集企业清单，零售端配合做企业主个人与家族账户的综合方案。",
+        "tag": [
+          "私行",
+          "政银合作"
+        ],
+        "segments": [
+          "中高端客群(过亿资产)"
+        ],
+        "sources": [
+          {
+            "title": "跨国公司资金池政策全国推广 惠及更多经营主体",
+            "url": "https://www.cnfin.com/yw-lb/detail/20260915/4469759_1.html"
+          }
+        ]
+      },
+      {
+        "topic": "养老金融政策落地提速",
+        "impact": "未来五年民生健康规划覆盖生育、养老、就医，交行颐享家园首批站点已启动，养老客群场景争夺进入落地比拼阶段。",
+        "action": "可对标同业把网点适老服务、养老账户与健康场景权益打包，先在老年客群集中的社区网点试点一家。",
+        "tag": [
+          "客群"
+        ],
+        "sources": [
+          {
+            "title": "生育、养老、就医全覆盖！未来五年民生健康重磅规划",
+            "url": "https://finance.cctv.com/2026/09/14/ARTIL4hi7tj0op00nAMQRqLz260914.shtml"
+          },
+          {
+            "title": "交通银行“沃德·颐享家园”首批站点启动",
+            "url": "https://m.21jingji.com/article/20260914/herald/0e8a690ab83f317f1c2dce36bffbd426.html"
+          }
+        ]
+      }
+    ],
+    "spoken_insights": "具备零售 A U M商机的，粤芯半导体发行在即，广东半导体企业粤芯半导体9月18日初步询价、24日网下申购，打新资金归集与中高端客户申购意愿在短期内集中释放。。财富团队可自本周起梳理有打新习惯的客户名单，提前提示资金划转时点，同步跟踪网下配售客户的开户与验资需求。。此外，具备高端客户商机的，天河智慧城释放700亩，天河智慧城释放700亩土地，楼宇与总部经济稳居全国第一梯队，园区代发、高管私行与科创授信三重增量集中。。可先摸清园区主体与在建项目名单，代发与私行团队联合走访，把高管开户与员工工资户一并落地。。同时，具备高端客户商机的，跨国公司资金池全国推广，资金池政策由试点扩至全国，跨境资金归集类企业主与高管成为可批量获取的中高端名单，跨境结算与私行配置可打包提供。。公司条线可本周整理辖内跨境资金归集企业清单，零售端配合做企业主个人与家族账户的综合方案。。最后，养老金融政策落地提速，未来五年民生健康规划覆盖生育、养老、就医，交行颐享家园首批站点已启动，养老客群场景争夺进入落地比拼阶段。。可对标同业把网点适老服务、养老账户与健康场景权益打包，先在老年客群集中的社区网点试点一家。。",
+    "risk": {
+      "topic": "信披新规扩至23类机构",
+      "evidence": "信披新规覆盖23类机构，信托等非银机构被纳入合规大考，代销方产品筛选与披露责任同步加重。",
+      "impact": "财富部代销的非银产品准入与存续披露需重核，私行客户持仓的信托类产品透明度要求提高，风控与合规需同步更新白名单。",
+      "action": "财富部可在两周内重估代销白名单与披露口径，风控部核对存续产品文件，私行团队提前备好客户解释话术。",
+      "source": "T2",
+      "sources": [
+        {
+          "title": "【信报】信披新规覆盖23类机构，信托等非银机构迎合规大考",
+          "url": "https://finance.sina.com.cn/trust/2026-09-14/doc-inirveas7267226.shtml"
+        }
+      ]
+    },
+    "spoken_risk": "今天有 1 个需要警惕：信披新规扩至23类机构，财富部代销的非银产品准入与存续披露需重核，私行客户持仓的信托类产品透明度要求提高，风控与合规需同步更新白名单。。财富部可在两周内重估代销白名单与披露口径，风控部核对存续产品文件，私行团队提前备好客户解释话术。。",
+    "guangdong_ipo": {
+      "spoken": "广州粤芯半导体启动发行，拟在境内上市，属集成电路制造行业，初步询价日9月18日、网下申购日9月24日。发行在即，客户打新与资金归集窗口临近。"
+    }
+  },
+  "stock_recap": {
+    "us": {
+      "overview": "三大指数集体收跌，纳指跌0.56%，AI放缓担忧施压芯片股。",
+      "sectors": [
+        "AI放缓呼声升温，芯片股集体走弱，直接拖累纳指跌0.56%。",
+        "10年期美债收益率盘中触及5%后回落，市场等待美联储议息。",
+        "沙特关闭绕行霍尔木兹海峡的关键输油管道，油价上涨，能源股获支撑。",
+        "特朗普抨击数据中心反对声浪并致电英伟达黄仁勋，AI监管扰动情绪。",
+        "市场预期美联储加息，Warsh提名面临艰难表决，紧缩预期压制估值。"
+      ],
+      "spoken": "美股三大指数集体收跌，道指跌0.29%，纳指跌0.56%，标普跌0.48%。AI放缓担忧打压芯片股，纳指领跌。十年期美债收益率盘中触及5%后回落，市场等待美联储议息。沙特关闭关键输油管道推升油价，能源板块相对抗跌。特朗普就数据中心监管发声，AI板块情绪继续承压。",
+      "meta": {
+        "source": "CNBC Top Stories",
+        "crossCheck": "新浪行情",
+        "date": "2026-09-14"
+      },
+      "indices": [
+        {
+          "name": "道琼斯",
+          "value": "52421.20",
+          "changePct": "-0.29%"
+        },
+        {
+          "name": "纳斯达克",
+          "value": "26186.41",
+          "changePct": "-0.56%"
+        },
+        {
+          "name": "标普500",
+          "value": "7619.98",
+          "changePct": "-0.48%"
+        }
+      ]
+    },
+    "aShare": {
+      "overview": "双创业板指数均跌超1%。",
+      "sectors": [
+        "双创业板指数均跌超1%",
+        "A股成交额续创年内次低记录"
+      ],
+      "meta": {
+        "source": "东方财富",
+        "crossCheck": "新浪行情",
+        "date": "2026-09-15"
+      },
+      "indices": [
+        {
+          "name": "上证指数",
+          "value": "3885.33",
+          "changePct": "-0.07%"
+        },
+        {
+          "name": "深证成指",
+          "value": "13384.57",
+          "changePct": "-0.64%"
+        },
+        {
+          "name": "创业板指",
+          "value": "3285.58",
+          "changePct": "-1.10%"
+        }
+      ]
+    },
+    "hk": {
+      "overview": "恒生指数收报24917.60点（+0.45%）；恒生科技收报4317.94点（-0.06%）。",
+      "sectors": [
+        "恒生指数涨0.45%",
+        "恒生科技指数跌0.06%",
+        "创新药概念股大涨",
+        "存储概念股下挫"
+      ],
+      "meta": {
+        "source": "新浪财经·港股",
+        "crossCheck": "新浪行情",
+        "date": "2026-09-15"
+      },
+      "sourceReport": {
+        "title": "港股收评：恒指涨0.45% 科指跌0.06% 创新药概念股大涨 存储概念股下挫",
+        "url": "https://finance.sina.com.cn/stock/hkstock/marketalerts/2026-09-14/doc-inirutny4042987.shtml"
+      },
+      "indices": [
+        {
+          "name": "恒生指数",
+          "value": "24917.60",
+          "changePct": "+0.45%"
+        },
+        {
+          "name": "恒生科技",
+          "value": "4317.94",
+          "changePct": "-0.06%"
+        }
+      ]
+    },
+    "quoteChannel": "新浪行情",
+    "quoteDate": "2026-09-14",
+    "marketStatus": {
+      "isMarketClosed": false,
+      "reportDate": "2026-09-15",
+      "dataDate": "2026-09-14",
+      "note": "",
+      "spokenNote": "以下行情为上一交易日，9月14日 周一的收盘情况"
+    }
+  },
+  "stock_news": [
+    {
+      "url": "https://finance.eastmoney.com/a/202609143873268388.html",
+      "title_cn": "重磅利好启动！10分钟直线涨停！两大引擎发起“反攻”",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "09/14",
+      "summary": "东方财富报道称，受重磅利好消息带动，市场两大板块发起「反攻」，有个股开盘后10分钟直线涨停。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "A股",
+        "市场行情",
+        "涨停"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202609143873370592.html",
+      "title_cn": "沪指震荡整理三市成交额1.64万亿医疗服务板块大涨",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "09/14",
+      "summary": "A股沪指当日震荡整理，沪深京三市成交额约1.64万亿元，医疗服务板块大幅上涨。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "A股",
+        "市场行情",
+        "医药"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202609143873379367.html",
+      "title_cn": "二十年一遇！美欧日三大央行将同步加息这意味着什么？",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "09/14",
+      "summary": "东方财富报道，美、欧、日三大央行将同步进行加息，被形容为「二十年一遇」的货币政策同步收紧。",
+      "importance": 3,
+      "rank": 0,
+      "tags": [
+        "央行",
+        "加息",
+        "宏观"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202609143872953521.html",
+      "title_cn": "美联储9月加息概率逼近90%！特朗普再度施压：美国利率应全球最低",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "09/14",
+      "summary": "市场对美联储9月加息的预期概率逼近90%；特朗普再度施压，称美国利率应为全球最低。",
+      "importance": 3,
+      "rank": 0,
+      "tags": [
+        "美联储",
+        "加息",
+        "政策"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202609143873236839.html",
+      "title_cn": "AI巨头罕见达成共识！网络安全“应声大涨”最新高增长潜力股名单出炉",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "09/14",
+      "summary": "报道称多家AI巨头就相关议题罕见达成共识，网络安全板块随之大涨，并列出相关高增长潜力股名单。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "AI",
+        "网络安全",
+        "A股"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202609143873569882.html",
+      "title_cn": "9月14日晚间沪深上市公司重大事项公告最新快递",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "09/14",
+      "summary": "东方财富汇总9月14日晚间沪深两市上市公司披露的重大事项公告。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "A股",
+        "公告"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202609143872947024.html",
+      "title_cn": "两只PCB大牛股双双澄清：未向英伟达供货无业务合作",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "09/14",
+      "summary": "两只PCB板块大涨个股双双发布澄清公告，称未向英伟达供货、与其无业务合作。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "A股",
+        "PCB",
+        "澄清公告"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202609143873264272.html",
+      "title_cn": "AI需求虹吸产能！MLCC迎“量价齐升”融资客提前布局这8股(名单)",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "09/14",
+      "summary": "报道称AI需求虹吸产能，MLCC（多层陶瓷电容）出现量价齐升，融资资金已提前布局8只相关个股。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "AI",
+        "被动元件",
+        "A股"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202609143873351697.html",
+      "title_cn": "商务部等8部门印发《促进智能家居消费行动方案》",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "09/14",
+      "summary": "商务部等8部门印发《促进智能家居消费行动方案》。",
+      "importance": 3,
+      "rank": 0,
+      "tags": [
+        "政策",
+        "智能家居",
+        "消费"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202609143873187663.html",
+      "title_cn": "全球陷入“抢钨大战”：美国、英国、津巴布韦、越南全有动作",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "09/14",
+      "summary": "报道称全球出现「抢钨大战」，美国、英国、津巴布韦、越南均有相关动作。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "有色金属",
+        "钨",
+        "大宗商品"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202609143873792552.html",
+      "title_cn": "10年期美债收益率逼近5%意味着什么？",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "09/14",
+      "summary": "10年期美国国债收益率逼近5%，报道讨论其市场含义。",
+      "importance": 3,
+      "rank": 0,
+      "tags": [
+        "美债",
+        "利率",
+        "宏观"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.eastmoney.com/a/202609143873298860.html",
+      "title_cn": "科技业锐评四巨头放缓AI发展言论：恐怕是为了垄断和卖货",
+      "source": "东方财富",
+      "source_type": "media",
+      "date": "09/14",
+      "summary": "科技业界有评论对四家巨头放缓AI发展的言论提出质疑，认为其动机或与垄断和销售产品有关。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "AI",
+        "科技巨头",
+        "行业动态"
+      ],
+      "locale": "national",
+      "market": "a-share"
+    },
+    {
+      "url": "https://finance.sina.com.cn/stock/hkstock/marketalerts/2026-09-14/doc-inirutny4042987.shtml",
+      "title_cn": "港股收评：恒指涨0.45% 科指跌0.06% 创新药概念股大涨 存储概念股下挫",
+      "source": "新浪财经·港股",
+      "source_type": "media",
+      "date": "09/14",
+      "summary": "港股当日收评：恒指涨0.45%，恒生科技指数跌0.06%，创新药概念股大涨，存储概念股下挫。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "港股",
+        "市场行情",
+        "创新药"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://finance.sina.com.cn/stock/hkstock/ggscyd/2026-09-15/doc-inirwfqh3658888.shtml",
+      "title_cn": "阳光纸业获王东兴增持36.2万股 每股作价约1.13港元",
+      "source": "新浪财经·港股",
+      "source_type": "media",
+      "date": "09/15",
+      "summary": "阳光纸业获王东兴增持36.2万股，每股作价约1.13港元。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "港股",
+        "股东增减持",
+        "造纸"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://finance.sina.com.cn/stock/hkstock/ggscyd/2026-09-15/doc-inirwfqe6885887.shtml",
+      "title_cn": "银诺医药-B获黄冰增持2400股 每股作价3.89港元",
+      "source": "新浪财经·港股",
+      "source_type": "media",
+      "date": "09/15",
+      "summary": "银诺医药-B获黄冰增持2400股，每股作价3.89港元。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "港股",
+        "股东增减持",
+        "医药"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://finance.sina.com.cn/stock/hkstock/ggscyd/2026-09-15/doc-inirwfqh3659329.shtml",
+      "title_cn": "汉港控股集团获董事会主席汪林冰增持768.4万股 每股作价0.062港元",
+      "source": "新浪财经·港股",
+      "source_type": "media",
+      "date": "09/15",
+      "summary": "汉港控股集团获董事会主席汪林冰增持768.4万股，每股作价0.062港元。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "港股",
+        "股东增减持"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://finance.sina.com.cn/stock/hkstock/ggscyd/2026-09-15/doc-inirwfqh3657919.shtml",
+      "title_cn": "远东宏信遭UBS Group AG减持68.9万股 每股作价约6.99港元",
+      "source": "新浪财经·港股",
+      "source_type": "media",
+      "date": "09/15",
+      "summary": "远东宏信遭UBS Group AG减持68.9万股，每股作价约6.99港元。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "港股",
+        "股东增减持",
+        "金融"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://finance.sina.com.cn/stock/zqgd/2026-09-14/doc-inirtwie9744093.shtml",
+      "title_cn": "A股、港股，重要调整！今日生效",
+      "source": "新浪财经·港股",
+      "source_type": "media",
+      "date": "09/14",
+      "summary": "A股与港股相关指数或机制的重要调整于当日生效。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "港股",
+        "A股",
+        "指数调整"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://finance.sina.com.cn/stock/hkstock/2026-09-14/doc-iniruark4825868.shtml",
+      "title_cn": "智谱港股盘中跌幅扩大逾10%，以零息+溢价转股形式融资50亿美元",
+      "source": "新浪财经·港股",
+      "source_type": "media",
+      "date": "09/14",
+      "summary": "智谱港股盘中跌幅扩大逾10%，公司以零息加溢价转股形式融资50亿美元。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "港股",
+        "AI",
+        "融资"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://finance.sina.com.cn/stock/stockzmt/2026-09-14/doc-inirtwih7343009.shtml",
+      "title_cn": "【中国银河策略】美联储加息预期升温，港股下一轮行情的主线何在？",
+      "source": "新浪财经·港股",
+      "source_type": "media",
+      "date": "09/14",
+      "summary": "中国银河策略发布报告，围绕美联储加息预期升温背景下港股下一轮行情主线进行讨论。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "港股",
+        "策略观点",
+        "美联储"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://finance.sina.com.cn/stock/hkstock/marketalerts/2026-09-14/doc-iniruarh4056350.shtml",
+      "title_cn": "快讯：恒指低开0.42% 科指跌0.69% 科网股低迷 存储概念股低开",
+      "source": "新浪财经·港股",
+      "source_type": "media",
+      "date": "09/14",
+      "summary": "港股开盘快讯：恒指低开0.42%，恒生科技指数跌0.69%，科网股表现低迷，存储概念股低开。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "港股",
+        "市场行情",
+        "科技股"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://finance.sina.com.cn/stock/stockzmt/2026-09-14/doc-inirtwih7318353.shtml",
+      "title_cn": "华泰 | 港股策略：控制美债波动率敏感敞口",
+      "source": "新浪财经·港股",
+      "source_type": "media",
+      "date": "09/14",
+      "summary": "华泰发布港股策略观点，提出控制对美债波动率敏感敞口。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "港股",
+        "策略观点",
+        "美债"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://finance.sina.com.cn/jjxw/2026-09-14/doc-inirtmtn7485456.shtml",
+      "title_cn": "深耕港股市场 “左手红利、右手成长”捕捉机遇",
+      "source": "新浪财经·港股",
+      "source_type": "media",
+      "date": "09/14",
+      "summary": "一篇港股投资策略文章提出以「左手红利、右手成长」的方式布局港股机遇。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "港股",
+        "策略观点",
+        "红利"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://finance.sina.com.cn/stock/hkstock/2026-09-14/doc-inirutny4103145.shtml",
+      "title_cn": "港股IPO火爆背后：香港证监会加强突击搜查，指导投行如何配合",
+      "source": "新浪财经·港股",
+      "source_type": "media",
+      "date": "09/14",
+      "summary": "在港股IPO市场火爆背景下，香港证监会加强突击搜查，并就投行如何配合作出指导。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "港股",
+        "IPO",
+        "监管"
+      ],
+      "locale": "national",
+      "market": "hk"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/09/14/trump-ai-data-centers-anthropic-dario-amodei.html",
+      "title_cn": "Trump goes scorched earth on AI warnings, raging about data center opposition and regulation",
+      "source": "CNBC Top Stories",
+      "source_type": "media",
+      "date": "09/14",
+      "summary": "CNBC报道，特朗普猛烈抨击有关AI风险的警告，并对数据中心遭遇的反对与监管表达强烈不满。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "美股",
+        "AI",
+        "政策"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/09/14/counting-the-votes-warsh-faces-tough-battle-as-fed-girds-for-expected-rate-hike.html",
+      "title_cn": "Counting the votes: Warsh faces a tough battle as the Fed girds for expected interest rate hike",
+      "source": "CNBC Top Stories",
+      "source_type": "media",
+      "date": "09/14",
+      "summary": "CNBC报道称，在美联储准备进行预期中的加息之际，Warsh面临一场艰难的表决之战。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "美股",
+        "美联储",
+        "加息"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/09/14/supreme-court-trump-mail-ballots-midterms.html",
+      "title_cn": "Supreme Court rejects Trump bid to lift block on mail-in ballots rule",
+      "source": "CNBC Top Stories",
+      "source_type": "media",
+      "date": "09/14",
+      "summary": "美国最高法院驳回特朗普提出的解除邮寄选票规则限制的请求。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "美股",
+        "政治",
+        "选举"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/09/14/trump-epa-carbon-dioxide-power-plant-climate-change.html",
+      "title_cn": "Trump administration repeals Biden era greenhouse gas requirements for power plants",
+      "source": "CNBC Top Stories",
+      "source_type": "media",
+      "date": "09/14",
+      "summary": "特朗普政府废除拜登时期针对发电厂的温室气体排放要求。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "美股",
+        "政策",
+        "能源"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/09/14/trump-phones-nvidia-huang-all-in-calls-data-center-opposition-hoax.html",
+      "title_cn": "Trump phones Nvidia’s Huang at All-In Summit, calls data center opposition a ‘hoax’",
+      "source": "CNBC Top Stories",
+      "source_type": "media",
+      "date": "09/14",
+      "summary": "特朗普在All-In峰会上致电英伟达CEO黄仁勋，称对数据中心的反对是「骗局」。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "美股",
+        "AI",
+        "英伟达"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/09/14/mitch-mcconnell-returns-senate-capitol-health-fall.html",
+      "title_cn": "Mitch McConnell returns to Senate after three-month health absence",
+      "source": "CNBC Top Stories",
+      "source_type": "media",
+      "date": "09/14",
+      "summary": "麦康奈尔在因健康原因缺席三个月后重返参议院。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "美股",
+        "政治"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/09/14/10-year-us-treasury-is-closing-in-on-5percent.html",
+      "title_cn": "10-year Treasury yield hits 5% before reversing as traders await Fed meeting",
+      "source": "CNBC Top Stories",
+      "source_type": "media",
+      "date": "09/14",
+      "summary": "10年期美债收益率一度触及5%后回落，交易员在等待美联储会议结果。",
+      "importance": 3,
+      "rank": 0,
+      "tags": [
+        "美股",
+        "美债",
+        "美联储"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/09/14/the-stock-market-could-do-something-strange-this-week-after-the-fed-decision.html",
+      "title_cn": "The stock market could do something strange this week after the Fed decision",
+      "source": "CNBC Top Stories",
+      "source_type": "media",
+      "date": "09/14",
+      "summary": "CNBC报道称，美联储决议公布后，本周股市可能出现异常走势。",
+      "importance": 2,
+      "rank": 0,
+      "tags": [
+        "美股",
+        "美联储",
+        "市场行情"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/09/13/oil-price-iran-war-strait-hormuz-saudi-pipeline.html",
+      "title_cn": "Oil prices rise after Saudi Arabia shuts down critical pipeline that bypasses Strait of Hormuz",
+      "source": "CNBC Top Stories",
+      "source_type": "media",
+      "date": "09/14",
+      "summary": "沙特关闭一条绕过霍尔木兹海峡的关键输油管道后，国际油价上涨。",
+      "importance": 3,
+      "rank": 0,
+      "tags": [
+        "能源",
+        "原油",
+        "地缘"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.cnbc.com/2026/09/14/as-the-oil-surge-continues-trader-mike-khouw-sees-more-upside-in-this-surging-name.html",
+      "title_cn": "As the oil surge continues, trader Mike Khouw sees more upside in this surging name",
+      "source": "CNBC Top Stories",
+      "source_type": "media",
+      "date": "09/14",
+      "summary": "在油价持续飙升背景下，交易员Mike Khouw表示看涨其中一只上涨标的的进一步上行空间。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "能源",
+        "原油",
+        "交易员观点"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.investing.com/news/economy-news/ai-warnings-knock-nasdaq-futures-pressure-tech-stocks-4898987",
+      "title_cn": "Wall Street ends down, calls for AI slowdown pummel chipmakers",
+      "source": "Investing.com News",
+      "source_type": "media",
+      "date": "09/14",
+      "summary": "美股收跌，市场对AI发展放缓的呼声打击芯片股表现。",
+      "importance": 3,
+      "rank": 0,
+      "tags": [
+        "美股",
+        "半导体",
+        "AI"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    },
+    {
+      "url": "https://www.investing.com/news/insider-trading-news/8x8-director-andrew-burton-sells-194241-of-company-stock-93CH-4900663",
+      "title_cn": "8x8 director Andrew Burton sells $194,241 of company stock",
+      "source": "Investing.com News",
+      "source_type": "media",
+      "date": "09/14",
+      "summary": "8x8公司董事Andrew Burton卖出价值194,241美元的公司股票。",
+      "importance": 1,
+      "rank": 0,
+      "tags": [
+        "美股",
+        "股东增减持"
+      ],
+      "locale": "overseas",
+      "market": "us"
+    }
+  ]
+}
