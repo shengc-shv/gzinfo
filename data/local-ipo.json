@@ -1,11 +1,11 @@
 {
   "version": 1,
-  "fetchedAt": "2026-09-15T18:30:42+08:00",
+  "fetchedAt": "2026-09-16T21:16:10+08:00",
   "generator": "local-ipo-sync",
   "windowDays": 7,
   "sourceCounts": {
     "gd-csrc-tutoring": 3,
-    "gd-szse-audit": 2
+    "gd-szse-audit": 1
   },
   "items": [
     {
@@ -51,17 +51,6 @@
       "region": "gd",
       "registeredProvince": "广东",
       "ipoStage": "stage-tutoring"
-    },
-    {
-      "title": "博迈医疗：IPO问询中（拟创业板）",
-      "url": "https://www.szse.cn/listing/projectdynamic/ipo/index.html#prj1004223",
-      "excerpt": "注册地：广东｜保荐：中金公司｜受理：2025-12-24｜状态：已问询｜更新：2026-09-09",
-      "publishedAt": "2026-09-09",
-      "source": "深交所IPO审核动态",
-      "sourceId": "gd-szse-audit",
-      "region": "gd",
-      "registeredProvince": "广东",
-      "ipoStage": "stage-reviewing"
     }
   ]
 }
